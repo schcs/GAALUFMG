@@ -1,0 +1,33 @@
+.reveal {
+  font-size: 120%; /* Adjust this percentage as needed */
+}
+
+.reveal .slides > section {
+  font-size: 120%; /* Adjust for slide content */
+}
+
+/* --- Color utilities for Quarto/Reveal.js --- */
+/* Text colors */
+.text-red { color: #d32f2f !important; }
+.text-blue { color: #1e88e5 !important; }
+.text-green { color: #2e7d32 !important; }
+.text-orange { color: #ef6c00 !important; }
+.text-purple { color: #6a1b9a !important; }
+.text-muted { color: #6b7280 !important; }
+
+/* Background highlights (inline-friendly) */
+.bg-yellow { background: #fff3b0; padding: 0 .25em; border-radius: .2em; }
+.bg-blue { background: #e3f2fd; padding: 0 .25em; border-radius: .2em; }
+.bg-green { background: #e8f5e9; padding: 0 .25em; border-radius: .2em; }
+.bg-pink { background: #fde2e4; padding: 0 .25em; border-radius: .2em; }
+
+/* Callout-style box */
+.box {
+  border-left: 4px solid var(--r-link-color, #1f77b4);
+  background: rgba(0, 0, 0, 0.03);
+  padding: .75em 1em;
+  border-radius: .25em;
+}
+
+/* Improve contrast inside boxes in dark themes if needed */
+.reveal.dark .box { background: rgba(255, 255, 255, 0.06); }
