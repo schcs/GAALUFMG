@@ -1,0 +1,36 @@
+project:
+  type: book
+
+execute: 
+  freeze: true
+
+book:
+  title: "Geometria Analítica e Álgebra Linear"
+  subtitle: Apostilas 
+  author: 
+    - name: "Csaba Schneider"
+    - affiliation: Universidade Federal de Minas Gerais
+  date: "Criado e atualizado 2025/II"
+
+  chapters:
+    - index.qmd
+    - semana1.qmd
+
+license: ""
+copyright: 
+  holder: Csaba Schneider
+  year: 2025
+format:
+  html:
+    theme: cosmo
+    css: style.css
+    toc: true
+    fontsize: 12pt
+    include-in-header:
+      - file: macros.html
+    grid:
+      sidebar-width: 200px
+      body-width: 800px
+      margin-width: 600px
+      gutter-width: 1.5rem
+
