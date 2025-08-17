@@ -1,0 +1,182 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Geometria Analítica e Álgebra Linear",
+    "section": "",
+    "text": "Some index",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html",
+    "href": "semana1.html",
+    "title": "2  Matrizes",
+    "section": "",
+    "text": "2.1 Definição de uma Matriz\nA \\(i\\)-ésima linha de \\(A\\) é: \\[\n\\begin{bmatrix}\na_{i1} & a_{i2} & \\ldots & a_{in}\n\\end{bmatrix}\n\\]\nA \\(j\\)-ésima coluna de \\(A\\) é: \\[\n\\begin{bmatrix}\na_{1j} \\\\\na_{2j} \\\\\n\\vdots \\\\\na_{mj}\n\\end{bmatrix}\n\\]\nNós também usamos a notação \\(A = \\left(a_{ij}\\right)_{m \\times n}\\). Aqui, \\(a_{ij}\\) ou \\([A]_{ij}\\) é o elemento ou entrada na posição \\((i, j)\\) da matriz \\(A\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#definição-de-uma-matriz",
+    "href": "semana1.html#definição-de-uma-matriz",
+    "title": "2  Matrizes",
+    "section": "",
+    "text": "Definition 2.1 Uma matriz \\(A\\), \\(m \\times n\\) (\\(m\\) por \\(n\\)), é uma tabela de \\(m \\cdot n\\) números dispostos em \\(m\\) linhas e \\(n\\) colunas:\n\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\ldots & a_{1n} \\\\\na_{21} & a_{22} & \\ldots & a_{2n} \\\\\n\\vdots &        & \\ldots & \\vdots \\\\\na_{m1} & a_{m2} & \\ldots & a_{mn}\n\\end{bmatrix}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#exemplos-de-matrizes",
+    "href": "semana1.html#exemplos-de-matrizes",
+    "title": "2  Matrizes",
+    "section": "2.2 Exemplos de Matrizes",
+    "text": "2.2 Exemplos de Matrizes\nConsidere as seguintes matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 \\\\\n3 & 4\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3\n\\end{bmatrix}, \\quad\nC = \\begin{bmatrix}\n1 & 3 & 0 \\\\\n2 & 4 & -2\n\\end{bmatrix},\n\\]\n\\[\nD = \\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}, \\quad\nE = \\begin{bmatrix}\n4 \\\\\n5 \\\\\n6\n\\end{bmatrix}.\n\\]\n\nAs matrizes \\(A\\) e \\(B\\) são \\(2 \\times 2\\) (2 linhas e 2 colunas, matriz quadrada).\nA matriz \\(C\\) é \\(2 \\times 3\\) (2 linhas e 3 colunas).\nA matriz \\(D\\) é \\(1 \\times 3\\) (1 linha e 3 colunas, matriz linha, vetor linha).\nA matriz \\(E\\) é \\(3 \\times 1\\) (3 linhas e 1 coluna, matriz coluna, vetor coluna).\n\nDuas matrizes \\(A=(a_{ij})\\) a \\(B=(b_{ij})\\) são iguais, se elas\n\ntêm o mesmo tamanho e\n\\(a_{ij}=b_{ij}\\) para todo \\(i,j\\) (têm as mesmas entradas)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#soma-de-matrizes",
+    "href": "semana1.html#soma-de-matrizes",
+    "title": "2  Matrizes",
+    "section": "2.3 Soma de Matrizes",
+    "text": "2.3 Soma de Matrizes\nA soma de duas matrizes do mesmo tamanho, \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) e \\(B = \\left(b_{ij}\\right)_{m \\times n}\\), é definida como:\n\\[\nC = A + B\n\\]\nonde:\n\n\\[\nc_{ij} = a_{ij} + b_{ij}.\n\\]\n\n\n2.3.1 Exemplo\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & -3 \\\\\n3 & 4 & 0\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 & 5 \\\\\n0 & 3 & -4\n\\end{bmatrix}.\n\\]\nA soma de \\(A\\) e \\(B\\) é:\n\\[\nC = A + B = \\begin{bmatrix}\n1 + (-2) & 2 + 1 & -3 + 5 \\\\\n3 + 0 & 4 + 3 & 0 + (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 3 & 2 \\\\\n3 & 7 & -4\n\\end{bmatrix}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#matriz-nula",
+    "href": "semana1.html#matriz-nula",
+    "title": "2  Matrizes",
+    "section": "2.4 Matriz Nula",
+    "text": "2.4 Matriz Nula\nA matriz nula (matriz zero) de tamanho \\(m \\times n\\), denotada por \\(0_{m\\times n}\\) (ou simplesmente \\(0\\) quando o tamanho é claro), é a matriz em que todas as entradas são zero:\n\\[\n0_{2\\times 3} = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix}.\n\\]\nPara qualquer matriz \\(A\\) de tamanho \\(m \\times n\\), vale \\(A + 0_{m\\times n} = A\\).\n\n2.4.1 Exemplo\nSe \\[\nA = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix}, \\quad 0 = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix},\n\\] então \\[\nA + 0 = \\begin{bmatrix}\n1+0 & -2+0 & 3+0 \\\\\n0+0 & 4+0 & -1+0\n\\end{bmatrix} = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix} = A.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#múltiplo-escalar-de-uma-matriz",
+    "href": "semana1.html#múltiplo-escalar-de-uma-matriz",
+    "title": "2  Matrizes",
+    "section": "2.5 Múltiplo Escalar de uma Matriz",
+    "text": "2.5 Múltiplo Escalar de uma Matriz\nO múltiplo escalar de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) por um escalar \\(\\alpha\\) é definido como:\n\\[\nB = \\alpha A\n\\]\nonde:\n\n\\[\nb_{ij} = \\alpha a_{ij}.\n\\]\n\n\n2.5.1 Exemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3 \\\\\n5 & -4\n\\end{bmatrix}.\n\\]\nO múltiplo de \\(A\\) pelo escalar \\(-3\\) é:\n\\[\n-3A = \\begin{bmatrix}\n(-3)(-2) & (-3)(1) \\\\\n(-3)(0) & (-3)(3) \\\\\n(-3)(5) & (-3)(-4)\n\\end{bmatrix} = \\begin{bmatrix}\n6 & -3 \\\\\n0 & -9 \\\\\n-15 & 12\n\\end{bmatrix}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#simétrica-de-uma-matriz",
+    "href": "semana1.html#simétrica-de-uma-matriz",
+    "title": "2  Matrizes",
+    "section": "2.6 Simétrica de uma Matriz",
+    "text": "2.6 Simétrica de uma Matriz\nA simétrica/negativa de uma matriz \\(A\\) é definida por \\(-A = (-1)A\\). Em particular, se \\(A = (a_{ij})\\), então \\(-A = (-a_{ij})\\).\n\n2.6.1 Exemplo\nConsidere \\[\nA = \\begin{bmatrix}\n2 & -3 \\\\\n1 & 4\n\\end{bmatrix} \\quad \\Rightarrow \\quad\n-A = (-1)A = \\begin{bmatrix}\n-2 & 3 \\\\\n-1 & -4\n\\end{bmatrix}.\n\\]\nAlém disso, vale a propriedade \\(A + (-A) = 0\\). No exemplo acima, \\[\nA + (-A) = \\begin{bmatrix}\n2+(-2) & -3+3 \\\\\n1+(-1) & 4+(-4)\n\\end{bmatrix} = \\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix} = 0_{2\\times 2}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#transposta-de-uma-matriz",
+    "href": "semana1.html#transposta-de-uma-matriz",
+    "title": "2  Matrizes",
+    "section": "2.7 Transposta de uma Matriz",
+    "text": "2.7 Transposta de uma Matriz\nA transposta de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) é a matriz \\(A^T = \\left(a_{ji}\\right)_{n \\times m}\\) obtida trocando as linhas por colunas.\n\n2.7.1 Exemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}.\n\\]\nA transposta de \\(A\\) é:\n\\[\nA^T = \\begin{bmatrix}\n1 & 4 \\\\\n2 & 5 \\\\\n3 & 6\n\\end{bmatrix}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#multiplicação-entre-matrizes",
+    "href": "semana1.html#multiplicação-entre-matrizes",
+    "title": "2  Matrizes",
+    "section": "2.8 Multiplicação entre Matrizes",
+    "text": "2.8 Multiplicação entre Matrizes\nO produto de duas matrizes \\(A = \\left(a_{ij}\\right)_{m \\times p}\\) e \\(B = \\left(b_{ij}\\right)_{p \\times n}\\) é definido como:\n\\[\nC = AB\n\\]\nonde a matriz resultante \\(C = \\left(c_{ij}\\right)_{m \\times n}\\) tem entradas dadas por:\n\n\\[\nc_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj} = \\sum_{k=1}^{p} a_{ik} b_{kj}.\n\\]\n\n\n2.8.1 Condições para Multiplicação de Matrizes\n\nO número de colunas de \\(A\\) deve ser igual ao número de linhas de \\(B\\).\nA matriz resultante \\(C\\) terá dimensões \\(m \\times n\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#exemplo-produto-de-matrizes",
+    "href": "semana1.html#exemplo-produto-de-matrizes",
+    "title": "2  Matrizes",
+    "section": "2.9 Exemplo: Produto de Matrizes",
+    "text": "2.9 Exemplo: Produto de Matrizes\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & {8} \\\\\n9 & {10} \\\\\n11 & {12}\n\\end{bmatrix}.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} c_{11} & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{11}\\), multiplicamos a primeira linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{11} = (\\color{red}{1})(\\color{blue}{7}) + (\\color{red}{2})(\\color{blue}{9}) + (\\color{red}{3})(\\color{blue}{11}) = 7 + 18 + 33 = 58.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{12}\\), multiplicamos a primeira linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{12} = (\\color{red}{1})(\\color{blue}{8}) + (\\color{red}{2})(\\color{blue}{10}) + (\\color{red}{3})(\\color{blue}{12}) = 8 + 20 + 36 = 64.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{21}\\), multiplicamos a segunda linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{21} = (\\color{red}{4})(\\color{blue}{7}) + (\\color{red}{5})(\\color{blue}{9}) + (\\color{red}{6})(\\color{blue}{11}) = 28 + 45 + 66 = 139.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{22}\\), multiplicamos a segunda linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{22} = (\\color{red}{4})(\\color{blue}{8}) + (\\color{red}{5})(\\color{blue}{10}) + (\\color{red}{6})(\\color{blue}{12}) = 32 + 50 + 72 = 154.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & 154 \\end{bmatrix}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#matriz-identidade",
+    "href": "semana1.html#matriz-identidade",
+    "title": "2  Matrizes",
+    "section": "2.10 Matriz Identidade",
+    "text": "2.10 Matriz Identidade\nA matriz identidade de ordem \\(n\\), denotada por \\(I_n\\) ou simplesmente por \\(I\\), é a matriz quadrada \\(n \\times n\\) com \\(1\\) na diagonal principal e \\(0\\) fora dela.\n\n2.10.1 Exemplo\n\n\\[\nI_3 = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}.\n\\]\n\n\n\n2.10.2 Propriedade\nPara qualquer matriz \\(A\\) \\({m\\times n}\\), a matriz identidade satisfaz:\n\n\\[\nI_m\\,A = A \\quad\\text{e}\\quad A\\,I_n = A.\n\\]\n\nExemplo (com \\(m=n=2\\)):\n\\[\nI_2 = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix},\\quad\nA = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]\n\\[\nI_2A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}\\!\n\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}\n= \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} = A,\\qquad\nA I_2 = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#propriedades-das-operações-com-matrizes",
+    "href": "semana1.html#propriedades-das-operações-com-matrizes",
+    "title": "2  Matrizes",
+    "section": "2.11 Propriedades das Operações com Matrizes",
+    "text": "2.11 Propriedades das Operações com Matrizes",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#adição-de-matrizes",
+    "href": "semana1.html#adição-de-matrizes",
+    "title": "2  Matrizes",
+    "section": "2.12 Adição de Matrizes",
+    "text": "2.12 Adição de Matrizes\n\nPropriedade Comutativa: \\(A + B = B + A\\)\nPropriedade Associativa: \\((A + B) + C = A + (B + C)\\)\nIdentidade Aditiva: \\(A + 0 = A\\), onde \\(0\\) é a matriz zero.\nInverso Aditivo: \\(A + (-A) = 0\\)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#multiplicação-escalar",
+    "href": "semana1.html#multiplicação-escalar",
+    "title": "2  Matrizes",
+    "section": "2.13 Multiplicação Escalar",
+    "text": "2.13 Multiplicação Escalar\n\nPropriedade Distributiva: \\(\\alpha(A + B) = \\alpha A + \\alpha B\\)\nPropriedade Associativa: \\((\\alpha \\beta)A = \\alpha(\\beta A)\\)\nIdentidade Multiplicativa: \\(1 \\cdot A = A\\)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#multiplicação-de-matrizes",
+    "href": "semana1.html#multiplicação-de-matrizes",
+    "title": "2  Matrizes",
+    "section": "2.14 Multiplicação de Matrizes",
+    "text": "2.14 Multiplicação de Matrizes\n\nPropriedade Associativa: \\((AB)C = A(BC)\\)\nPropriedade Distributiva: \\(A(B + C) = AB + AC\\) e \\((A + B)C = AC + BC\\)\nCompatibilidade da Multiplicação Escalar: \\(\\alpha(AB) = (\\alpha A)B = A(\\alpha B)\\)\nSe \\(A\\) é matriz \\(m\\times n\\), então \\(I_mA=AI_n=A\\)\nNão-Comutatividade: Em geral, \\(AB \\neq BA\\)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#multiplicação-não-comutativa",
+    "href": "semana1.html#multiplicação-não-comutativa",
+    "title": "2  Matrizes",
+    "section": "2.15 Multiplicação Não Comutativa",
+    "text": "2.15 Multiplicação Não Comutativa\nVamos ilustrar que, em geral, \\(AB \\neq BA\\).\nConsidere \\[\nA = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}.\n\\]\nCalculando \\(AB\\): \\[\nAB = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n         \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n     = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix}.\n\\]\nCalculando \\(BA\\): \\[\nBA = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n         \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n     = \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix}.\n\\]\nConclusão: \\(AB = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix} \\neq \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix} = BA\\)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  },
+  {
+    "objectID": "semana1.html#transposta",
+    "href": "semana1.html#transposta",
+    "title": "2  Matrizes",
+    "section": "2.16 Transposta",
+    "text": "2.16 Transposta\n\nDupla transposição: \\((A^T)^T = A\\).\nTransposição da soma (mesmas dimensões): \\((A + B)^T = A^T + B^T\\).\nTransposição do produto por escalar: \\((\\alpha A)^T = \\alpha A^T\\).\nTransposição do produto (dimensões compatíveis): \\((AB)^T = B^T A^T\\).\nSimetria: \\(A\\) é simétrica se \\(A^T = A\\) e antissimétrica se \\(A^T = -A\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Matrizes</span>"
+    ]
+  }
+]
