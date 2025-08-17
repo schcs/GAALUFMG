@@ -1,0 +1,9 @@
+---
+number-sections: true
+lang: pt
+---
+
+Geometria Analítica e Álgebra Linear 
+
+- [Matrizes](semana1.qmd)
+
