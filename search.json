@@ -110,19 +110,5 @@
     "title": "Matrizes",
     "section": "Transposta",
     "text": "Transposta\n\nDupla transposição: \\((A^T)^T = A\\).\nTransposição da soma (mesmas dimensões): \\((A + B)^T = A^T + B^T\\).\nTransposição do produto por escalar: \\((\\alpha A)^T = \\alpha A^T\\).\nTransposição do produto (dimensões compatíveis): \\((AB)^T = B^T A^T\\).\nSimetria: \\(A\\) é simétrica se \\(A^T = A\\) e antissimétrica se \\(A^T = -A\\)."
-  },
-  {
-    "objectID": "macros.html",
-    "href": "macros.html",
-    "title": "Geometria Analítica e Álgebra Linear",
-    "section": "",
-    "text": "Reusen/a"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Geometria Analítica e Álgebra Linear",
-    "section": "",
-    "text": "Geometria Analítica e Álgebra Linear\n\nMatrizes\n\n\n\n\nReuson/a"
   }
 ]
