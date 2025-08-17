@@ -16,13 +16,9 @@ copyright:
   holder: Csaba Schneider
   year: 2025
 
-# format:
-#  revealjs:
-#    css: style.css
-#    toc: true
-#    fontsize: 12pt
-#    include-in-header:
-#      - file: macros.html
+format:
+  revealjs:
+    css: styles.css
 
 navbar:
   left:
