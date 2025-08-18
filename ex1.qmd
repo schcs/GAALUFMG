@@ -1,0 +1,192 @@
+---
+title: "Exercícios sobre Matrizes"
+format: html
+lang: pt-br
+---
+
+
+:::{#exr-}
+Considere as seguintes matrizes
+$$
+A=\begin{bmatrix}2 & 0 \\ 6 & 7\end{bmatrix}, \quad B=\begin{bmatrix}0 & 4 \\ 2 & -8\end{bmatrix}, C=\begin{bmatrix}-6 & 9 & -7 \\ 7 & -3 & -2\end{bmatrix}, D=\begin{bmatrix}-6 & 4 & 0 \\ 1 & 1 & 4 \\ -6 & 0 & 6\end{bmatrix}, E=\begin{bmatrix}6 & 9 & -9 \\ -1 & 0 & -4 \\ -6 & 0 & -1\end{bmatrix}. 
+$$
+
+Se for possível calcule:
+
+1.  $A B-B A$,
+2.  $2 C-D$,
+3.  $\left(2 D^{T}-3 E^{T}\right)^{T}$,
+4.  $D^{2}-D E$.
+:::
+
+:::{#exr-}
+Conhecendo-se somente os produtos $A B$ e $A C$, como podemos calcular $A(B+C), B^{T} A^{T}, C^{T} A^{T}$ e $(A B A) C$?
+:::
+
+:::{#exr-}
+Considere as seguintes matrizes
+
+$$
+\begin{gathered}
+A=\begin{bmatrix}
+-3 & 2 & 1 \\
+1 & 2 & -1
+\end{bmatrix}, B=\begin{bmatrix}
+2 & -1 \\
+2 & 0 \\
+0 & 3
+\end{bmatrix} C=\begin{bmatrix}
+-2 & 1 & -1 \\
+0 & 1 & 1 \\
+-1 & 0 & 1
+\end{bmatrix}, D=\begin{bmatrix}
+d_{1} & 0 & 0 \\
+0 & d_{2} & 0 \\
+0 & 0 & d_{3}
+\end{bmatrix} \\
+E_{1}=\begin{bmatrix}
+1 \\
+0 \\
+0
+\end{bmatrix}, E_{2}=\begin{bmatrix}
+0 \\
+1 \\
+0
+\end{bmatrix}, E_{3}=\begin{bmatrix}
+0 \\
+0 \\
+1
+\end{bmatrix}
+\end{gathered}
+$$
+
+
+Verifique que:
+
+1. $A B$ é diferente de $B A$.
+2.  $A E_{j}$ é a $j$-ésima coluna de $A$, para $j=1,2,3$ e $E_{i}^{T} B$ é a $i$-ésima linha de $B$, para $i=1,2,3$ (o caso geral está no Exercício 1.1.16 na página 23).
+3. $C D=\begin{bmatrix} d_{1} C_{1} & d_{2} C_{2} & d_{3} C_{3}\end{bmatrix}$, em que $C_{1}=\begin{bmatrix}-2 \\ 0 \\ -1\end{bmatrix}, C_{2}=\begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix}$ e $C_{3}=\begin{bmatrix}-1 \\ 1 \\ 1\end{bmatrix}$, sấo as colunas de $C$ (o caso geral está no Exercício 1.1.17 (a) na página 24).
+4. $D C=\begin{bmatrix} d_{1} C_{1} \\ d_{2} C_{2} \\ d_{3} C_{3}\end{bmatrix}$, em que $C_{1}=\begin{bmatrix}-2 & 1 & -1\end{bmatrix}, C_{2}=\begin{bmatrix}0 & 1 & 1\end{bmatrix}$ e $C_{3}=\begin{bmatrix}-1 & 0 & 1\end{bmatrix}$ são as linhas de $C$ (o caso geral está no Exercício 1.1.17 (b) na página 24).
+5. Escrevendo $B$ em termos das suas colunas, $B=\begin{bmatrix}B_{1} & B_{2}\end{bmatrix}$, em que $B_{1}=\begin{bmatrix}2 \\ 2 \\ 0\end{bmatrix}$ e $B_{2}=\begin{bmatrix}-1 \\ 0 \\ 3\end{bmatrix}$, o produto $A B$ pode ser escrito como $A B=A\begin{bmatrix}B_{1} & B_{2}\end{bmatrix}=\begin{bmatrix}A B_{1} & A B_{2}\end{bmatrix}$ (o caso geral está no Exercício 1.1.18 (a) na página 25).
+6. escrevendo $A$ em termos das suas linhas, $A_{1}=\begin{bmatrix}-3 & 2 & 1\end{bmatrix}$ e $A_{2}=\begin{bmatrix}1 & 2 & -1\end{bmatrix}$, o produto $A B$ pode ser escrito como $A B=\begin{bmatrix}A_{1} \\ A_{2}\end{bmatrix} B=\begin{bmatrix}A_{1} B \\ A_{2} B\end{bmatrix}$ (o caso geral está no Exercício 1.1.18 (b) na página 25$)$.
+:::
+
+:::{#exr-}
+$$
+A=\begin{bmatrix}
+1 & -3 & 0 \\
+0 & 4 & -2
+\end{bmatrix} \quad \text { e } \quad X=\begin{bmatrix}
+x \\
+y \\
+z
+\end{bmatrix}
+$$
+
+Verifique que $x A_{1}+y A_{2}+z A_{3}=A X$, em que $A_{j}$ é a $j$-ésima coluna de $A$, para $j=1,2,3$ (o caso geral está no Exercício 1.1.19 na página 25).
+:::
+
+:::{#exr-}
+Encontre um valor de $x$ tal que $A B^{T}=0$, em que
+
+$$
+A=\begin{bmatrix}
+x & 4 & -2
+\end{bmatrix} \text { e } B=\begin{bmatrix}
+2 & -3 & 5
+\end{bmatrix} .
+$$
+:::
+
+:::{#exr-}
+Mostre que as matrizes $A=\begin{bmatrix}1 & \frac{1}{y} \\ y & 1\end{bmatrix}$, em que $y$ é uma número real não nulo, verificam a equação $X^{2}=2 X$.
+:::
+
+:::{#exr-}
+Mostre que se $A$ e $B$ são matrizes que comutam com a matriz $M=\begin{bmatrix}0 & 1 \\ -1 & 0\end{bmatrix}$, então $A B=B A$.
+:::
+
+:::{#exr-}
+
+1.  Determine todas as matrizes $A, 2 \times 2$, diagonais (os elementos que estão fora da diagonal são iguais a zero) que comutam com toda matriz $B, 2 \times 2$, ou seja, tais que $A B=B A$, para toda matriz $B, 2 \times 2$.
+2. Determine todas as matrizes $A, 2 \times 2$, que comutam com toda matriz $B, 2 \times 2$, ou seja, tais que $A B=B A$, para toda matriz $B, 2 \times 2$.
+1.1.9. Verifique que $A^{3}=\overline{0}$, para
+
+$$
+A=\begin{bmatrix}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+$$
+:::
+
+:::{#exr-}
+Se $A B=B A$ e $p$ é um inteiro positivo, mostre que $(A B)^{p}=A^{p} B^{p}$. Explique porque precisa usar que 
+$AB=BA$. 
+:::
+
+:::{#exr-}
+Sejam $A, B$ e $C$ matrizes $n \times n$.
+
+(a) $(A+B)^{2}=A^{2}+2 A B+B^{2}$? E se $A B=B A$? Justifique.
+(b) $(A B) C=C(A B)$? E se $A C=C A$ e $B C=C B$? Justifique.
+(Sugestão: Veja o Exemplo 1.8 na página 14.)
+:::
+
+:::{#exr-}
+
+(a) Se $A$ e $B$ são duas matrizes tais que $A B=\overline{0}$, então $A=\overline{0}$ ou $B=\overline{0}$? Justifique.
+(b) Se $A B=\overline{0}$, então $B A=\overline{0}$? Justifique.
+(c) Se $A$ é uma matriz tal que $A^{2}=\overline{0}$, então $A=\overline{0}$? Justifique.
+:::
+
+:::{#exr-}
+Dizemos que uma matriz $A, n \times n$, é simétrica se $A^{T}=A$ e é anti-simétrica se $A^{T}=-A$.
+
+(a) Mostre que se $A$ é simétrica, então $a_{i j}=a_{j i}$, para $i, j=1, \ldots n$ e que se $A$ é anti-simétrica, então $a_{i j}=-a_{j i}$, para $i, j=1, \ldots n$. Portanto, os elementos da diagonal principal de uma matriz antisimétrica são iguais a zero.
+(b) Mostre que se $A$ e $B$ são simétricas, então $A+B$ e $\alpha A$ são simétricas, para todo escalar $\alpha$.
+(c) Mostre que se $A$ e $B$ são simétricas, então $A B$ é simétrica se, e somente se, $A B=B A$.
+(d) Mostre que se $A$ e $B$ são anti-simétricas, então $A+B$ e $\alpha A$ são anti-simétricas, para todo escalar $\alpha$.
+(e) Mostre que para toda matriz $A, n \times n, A+A^{T}$ é simétrica e $A-A^{T}$ é anti-simétrica.
+(f) Mostre que toda matriz quadrada $A$ pode ser escrita como a soma de uma matriz simétrica e uma anti-simétrica. (Sugestão: Observe o resultado da soma de $A+A^{T}$ e $\operatorname{com} A-A^{T}$.)
+:::
+
+:::{#exr-}
+Para matrizes quadradas $A=\left(a_{i j}\right)_{n \times n}$ definimos o traço de $A$ como sendo a soma dos elementos da diagonal (principal) de $A$, ou seja, $\operatorname{tr}(A)=\sum_{i=1}^{n} a_{i i}$.
+
+(a) Mostre que $\operatorname{tr}(A+B)=\operatorname{tr}(A)+\operatorname{tr}(B)$.
+(b) Mostre que $\operatorname{tr}(\alpha A)=\alpha \operatorname{tr}(A)$.
+(c) Mostre que $\operatorname{tr}\left(A^{T}\right)=\operatorname{tr}(A)$.
+(d) Mostre que $\operatorname{tr}(A B)=\operatorname{tr}(B A)$. (Sugestão: Prove inicialmente para matrizes $2 \times 2$.)
+:::
+
+:::{#exr-}
+Seja $A$ uma matriz $n \times n$. Mostre que se $A A^{T}=\overline{0}$, então $A=\overline{0}$. (Sugestão: use o traço.) E se a matriz $A$ for $m \times n$, com $m \neq n$?
+:::
+
+:::{#exr-}
+Já vimos que o produto de matrizes não é comutativo. Entretanto, certos conjuntos de matrizes são comutativos. Mostre que:
+
+(a) Se $D_{1}$ e $D_{2}$ são matrizes diagonais $n \times n$, então $D_{1} D_{2}=D_{2} D_{1}$.
+(b) Se $A$ é uma matriz $n \times n$ e
+$$
+B=a_{0} I_{n}+a_{1} A+a_{2} A^{2}+\ldots+a_{k} A^{k}
+$$
+em que $a_{0}, \ldots, a_{k}$ sâo escalares, então $A B=B A$.
+:::
+
+:::{#exr-}
+Uma matriz $A$ é chamada nilpotente se $A^{k}=\overline{0}$, para algum inteiro positivo $k$. Verifique que a matriz
+
+$$
+A=\begin{bmatrix}
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1 \\
+0 & 0 & 0 & \cdots & 0
+\end{bmatrix}_{n \times n}
+$$
+é nilpotente.
+:::

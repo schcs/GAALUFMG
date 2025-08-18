@@ -1,5 +1,11 @@
 project: 
   type: website 
+  render:
+    - index.qmd
+    - semana1.qmd
+    - ex1.qmd
+
+render-on-save: false 
 
 execute:
   freeze: true
@@ -11,18 +17,14 @@ author:
     affiliation: Universidade Federal de Minas Gerais
 date: "Criado e atualizado 2025/II"
 
-license: "n/a"
-copyright:
-  holder: Csaba Schneider
-  year: 2025
+# license: "n/a"
+# copyright:
+#  holder: Csaba Schneider
+#   year: 2025
 
 format:
   revealjs:
     css: styles.css
+  html:
+    css: article.css
 
-navbar:
-  left:
-    - text: "Início"
-      file: index.qmd
-    - text: "Semana 1"
-      file: semana1.qmd

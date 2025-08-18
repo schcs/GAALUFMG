@@ -1,9 +1,11 @@
 ---
 number-sections: true
+format: html
 lang: pt
 ---
 
 Geometria Analítica e Álgebra Linear 
 
 - [Matrizes](semana1.qmd)
+- [Exercícios sobre matrizes](ex1.qmd)
 
