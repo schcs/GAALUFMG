@@ -6,6 +6,14 @@
   font-size: 120%; /* Adjust for slide content */
 }
 
+/* Hide author and affiliation in Revealjs title slide if present */
+.reveal .quarto-title-block .quarto-title-authors,
+.reveal .quarto-title-block .quarto-title-affiliations,
+.reveal .quarto-title-block .author,
+.reveal .quarto-title-block .affiliation {
+  display: none !important;
+}
+
 /* --- Color utilities for Quarto/Reveal.js --- */
 /* Text colors */
 .text-red { color: #d32f2f !important; }
