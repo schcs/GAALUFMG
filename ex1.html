@@ -153,9 +153,10 @@ window.Quarto = {
 
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 1</strong></span> Considere as seguintes matrizes <span class="math display">\[
-A=\begin{bmatrix}2 &amp; 0 \\ 6 &amp; 7\end{bmatrix}, \quad B=\begin{bmatrix}0 &amp; 4 \\ 2 &amp; -8\end{bmatrix}, C=\begin{bmatrix}-6 &amp; 9 &amp; -7 \\ 7 &amp; -3 &amp; -2\end{bmatrix}, D=\begin{bmatrix}-6 &amp; 4 &amp; 0 \\ 1 &amp; 1 &amp; 4 \\ -6 &amp; 0 &amp; 6\end{bmatrix}, E=\begin{bmatrix}6 &amp; 9 &amp; -9 \\ -1 &amp; 0 &amp; -4 \\ -6 &amp; 0 &amp; -1\end{bmatrix}.
-\]</span></p>
-<p>Se for possível calcule:</p>
+\begin{gathered}
+A=\begin{bmatrix}2 &amp; 0 \\ 6 &amp; 7\end{bmatrix}, \quad B=\begin{bmatrix}0 &amp; 4 \\ 2 &amp; -8\end{bmatrix},\quad C=\begin{bmatrix}-6 &amp; 9 &amp; -7 \\ 7 &amp; -3 &amp; -2\end{bmatrix}, \\ D=\begin{bmatrix}-6 &amp; 4 &amp; 0 \\ 1 &amp; 1 &amp; 4 \\ -6 &amp; 0 &amp; 6\end{bmatrix}, \quad E=\begin{bmatrix}6 &amp; 9 &amp; -9 \\ -1 &amp; 0 &amp; -4 \\ -6 &amp; 0 &amp; -1\end{bmatrix}.
+\end{gathered}
+\]</span> Se for possível calcule:</p>
 <ol type="1">
 <li><span class="math inline">\(A B-B A\)</span>,</li>
 <li><span class="math inline">\(2 C-D\)</span>,</li>
@@ -173,28 +174,28 @@ A=\begin{bmatrix}2 &amp; 0 \\ 6 &amp; 7\end{bmatrix}, \quad B=\begin{bmatrix}0 &
 A=\begin{bmatrix}
 -3 &amp; 2 &amp; 1 \\
 1 &amp; 2 &amp; -1
-\end{bmatrix}, B=\begin{bmatrix}
+\end{bmatrix},\quad B=\begin{bmatrix}
 2 &amp; -1 \\
 2 &amp; 0 \\
 0 &amp; 3
-\end{bmatrix} C=\begin{bmatrix}
+\end{bmatrix},\quad C=\begin{bmatrix}
 -2 &amp; 1 &amp; -1 \\
 0 &amp; 1 &amp; 1 \\
 -1 &amp; 0 &amp; 1
-\end{bmatrix}, D=\begin{bmatrix}
+\end{bmatrix}, \quad D=\begin{bmatrix}
 d_{1} &amp; 0 &amp; 0 \\
 0 &amp; d_{2} &amp; 0 \\
 0 &amp; 0 &amp; d_{3}
 \end{bmatrix} \\
-E_{1}=\begin{bmatrix}
+\quad E_{1}=\begin{bmatrix}
 1 \\
 0 \\
 0
-\end{bmatrix}, E_{2}=\begin{bmatrix}
+\end{bmatrix}, \quad E_{2}=\begin{bmatrix}
 0 \\
 1 \\
 0
-\end{bmatrix}, E_{3}=\begin{bmatrix}
+\end{bmatrix}, \quad E_{3}=\begin{bmatrix}
 0 \\
 0 \\
 1
@@ -204,11 +205,11 @@ E_{1}=\begin{bmatrix}
 <p>Verifique que:</p>
 <ol type="1">
 <li><span class="math inline">\(A B\)</span> é diferente de <span class="math inline">\(B A\)</span>.</li>
-<li><span class="math inline">\(A E_{j}\)</span> é a <span class="math inline">\(j\)</span>-ésima coluna de <span class="math inline">\(A\)</span>, para <span class="math inline">\(j=1,2,3\)</span> e <span class="math inline">\(E_{i}^{T} B\)</span> é a <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\(B\)</span>, para <span class="math inline">\(i=1,2,3\)</span> (o caso geral está no Exercício 1.1.16 na página 23).</li>
-<li><span class="math inline">\(C D=\begin{bmatrix} d_{1} C_{1} &amp; d_{2} C_{2} &amp; d_{3} C_{3}\end{bmatrix}\)</span>, em que <span class="math inline">\(C_{1}=\begin{bmatrix}-2 \\ 0 \\ -1\end{bmatrix}, C_{2}=\begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix}\)</span> e <span class="math inline">\(C_{3}=\begin{bmatrix}-1 \\ 1 \\ 1\end{bmatrix}\)</span>, sấo as colunas de <span class="math inline">\(C\)</span> (o caso geral está no Exercício 1.1.17 (a) na página 24).</li>
-<li><span class="math inline">\(D C=\begin{bmatrix} d_{1} C_{1} \\ d_{2} C_{2} \\ d_{3} C_{3}\end{bmatrix}\)</span>, em que <span class="math inline">\(C_{1}=\begin{bmatrix}-2 &amp; 1 &amp; -1\end{bmatrix}, C_{2}=\begin{bmatrix}0 &amp; 1 &amp; 1\end{bmatrix}\)</span> e <span class="math inline">\(C_{3}=\begin{bmatrix}-1 &amp; 0 &amp; 1\end{bmatrix}\)</span> são as linhas de <span class="math inline">\(C\)</span> (o caso geral está no Exercício 1.1.17 (b) na página 24).</li>
-<li>Escrevendo <span class="math inline">\(B\)</span> em termos das suas colunas, <span class="math inline">\(B=\begin{bmatrix}B_{1} &amp; B_{2}\end{bmatrix}\)</span>, em que <span class="math inline">\(B_{1}=\begin{bmatrix}2 \\ 2 \\ 0\end{bmatrix}\)</span> e <span class="math inline">\(B_{2}=\begin{bmatrix}-1 \\ 0 \\ 3\end{bmatrix}\)</span>, o produto <span class="math inline">\(A B\)</span> pode ser escrito como <span class="math inline">\(A B=A\begin{bmatrix}B_{1} &amp; B_{2}\end{bmatrix}=\begin{bmatrix}A B_{1} &amp; A B_{2}\end{bmatrix}\)</span> (o caso geral está no Exercício 1.1.18 (a) na página 25).</li>
-<li>escrevendo <span class="math inline">\(A\)</span> em termos das suas linhas, <span class="math inline">\(A_{1}=\begin{bmatrix}-3 &amp; 2 &amp; 1\end{bmatrix}\)</span> e <span class="math inline">\(A_{2}=\begin{bmatrix}1 &amp; 2 &amp; -1\end{bmatrix}\)</span>, o produto <span class="math inline">\(A B\)</span> pode ser escrito como <span class="math inline">\(A B=\begin{bmatrix}A_{1} \\ A_{2}\end{bmatrix} B=\begin{bmatrix}A_{1} B \\ A_{2} B\end{bmatrix}\)</span> (o caso geral está no Exercício 1.1.18 (b) na página 25<span class="math inline">\()\)</span>.</li>
+<li><span class="math inline">\(A E_{j}\)</span> é a <span class="math inline">\(j\)</span>-ésima coluna de <span class="math inline">\(A\)</span>, para <span class="math inline">\(j=1,2,3\)</span> e <span class="math inline">\(E_{i}^{T} B\)</span> é a <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\(B\)</span>, para <span class="math inline">\(i=1,2,3\)</span> .</li>
+<li><span class="math inline">\(C D=\begin{bmatrix} d_{1} C_{1} &amp; d_{2} C_{2} &amp; d_{3} C_{3}\end{bmatrix}\)</span>, em que <span class="math inline">\(C_{1}=\begin{bmatrix}-2 \\ 0 \\ -1\end{bmatrix}, C_{2}=\begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix}\)</span> e <span class="math inline">\(C_{3}=\begin{bmatrix}-1 \\ 1 \\ 1\end{bmatrix}\)</span>, sấo as colunas de <span class="math inline">\(C\)</span>.</li>
+<li><span class="math inline">\(D C=\begin{bmatrix} d_{1} C_{1} \\ d_{2} C_{2} \\ d_{3} C_{3}\end{bmatrix}\)</span>, em que <span class="math inline">\(C_{1}=\begin{bmatrix}-2 &amp; 1 &amp; -1\end{bmatrix}, C_{2}=\begin{bmatrix}0 &amp; 1 &amp; 1\end{bmatrix}\)</span> e <span class="math inline">\(C_{3}=\begin{bmatrix}-1 &amp; 0 &amp; 1\end{bmatrix}\)</span> são as linhas de <span class="math inline">\(C\)</span>.</li>
+<li>Escrevendo <span class="math inline">\(B\)</span> em termos das suas colunas, <span class="math inline">\(B=\begin{bmatrix}B_{1} &amp; B_{2}\end{bmatrix}\)</span>, em que <span class="math inline">\(B_{1}=\begin{bmatrix}2 \\ 2 \\ 0\end{bmatrix}\)</span> e <span class="math inline">\(B_{2}=\begin{bmatrix}-1 \\ 0 \\ 3\end{bmatrix}\)</span>, o produto <span class="math inline">\(A B\)</span> pode ser escrito como <span class="math inline">\(A B=A\begin{bmatrix}B_{1} &amp; B_{2}\end{bmatrix}=\begin{bmatrix}A B_{1} &amp; A B_{2}\end{bmatrix}\)</span>.</li>
+<li>escrevendo <span class="math inline">\(A\)</span> em termos das suas linhas, <span class="math inline">\(A_{1}=\begin{bmatrix}-3 &amp; 2 &amp; 1\end{bmatrix}\)</span> e <span class="math inline">\(A_{2}=\begin{bmatrix}1 &amp; 2 &amp; -1\end{bmatrix}\)</span>, o produto <span class="math inline">\(A B\)</span> pode ser escrito como <span class="math inline">\(A B=\begin{bmatrix}A_{1} \\ A_{2}\end{bmatrix} B=\begin{bmatrix}A_{1} B \\ A_{2} B\end{bmatrix}\)</span>.</li>
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
@@ -222,14 +223,14 @@ y \\
 z
 \end{bmatrix}
 \]</span></p>
-<p>Verifique que <span class="math inline">\(x A_{1}+y A_{2}+z A_{3}=A X\)</span>, em que <span class="math inline">\(A_{j}\)</span> é a <span class="math inline">\(j\)</span>-ésima coluna de <span class="math inline">\(A\)</span>, para <span class="math inline">\(j=1,2,3\)</span> (o caso geral está no Exercício 1.1.19 na página 25).</p>
+<p>Verifique que <span class="math inline">\(x A_{1}+y A_{2}+z A_{3}=A X\)</span>, em que <span class="math inline">\(A_{j}\)</span> é a <span class="math inline">\(j\)</span>-ésima coluna de <span class="math inline">\(A\)</span>, para <span class="math inline">\(j=1,2,3\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 5</strong></span> Encontre um valor de <span class="math inline">\(x\)</span> tal que <span class="math inline">\(A B^{T}=0\)</span>, em que</p>
 <p><span class="math display">\[
 A=\begin{bmatrix}
 x &amp; 4 &amp; -2
-\end{bmatrix} \text { e } B=\begin{bmatrix}
+\end{bmatrix}\quad \text {e}\quad  B=\begin{bmatrix}
 2 &amp; -3 &amp; 5
 \end{bmatrix} .
 \]</span></p>
@@ -237,15 +238,8 @@ x &amp; 4 &amp; -2
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercício 6</strong></span> Mostre que as matrizes <span class="math inline">\(A=\begin{bmatrix}1 &amp; \frac{1}{y} \\ y &amp; 1\end{bmatrix}\)</span>, em que <span class="math inline">\(y\)</span> é uma número real não nulo, verificam a equação <span class="math inline">\(X^{2}=2 X\)</span>.</p>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 7</strong></span> Mostre que se <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são matrizes que comutam com a matriz <span class="math inline">\(M=\begin{bmatrix}0 &amp; 1 \\ -1 &amp; 0\end{bmatrix}\)</span>, então <span class="math inline">\(A B=B A\)</span>.</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 8</strong></span> &nbsp;</p>
-<ol type="1">
-<li>Determine todas as matrizes <span class="math inline">\(A, 2 \times 2\)</span>, diagonais (os elementos que estão fora da diagonal são iguais a zero) que comutam com toda matriz <span class="math inline">\(B, 2 \times 2\)</span>, ou seja, tais que <span class="math inline">\(A B=B A\)</span>, para toda matriz <span class="math inline">\(B, 2 \times 2\)</span>.</li>
-<li>Determine todas as matrizes <span class="math inline">\(A, 2 \times 2\)</span>, que comutam com toda matriz <span class="math inline">\(B, 2 \times 2\)</span>, ou seja, tais que <span class="math inline">\(A B=B A\)</span>, para toda matriz <span class="math inline">\(B, 2 \times 2\)</span>. 1.1.9. Verifique que <span class="math inline">\(A^{3}=\overline{0}\)</span>, para</li>
-</ol>
+<div id="exr-nilp-3x3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 7</strong></span> Verifique que <span class="math inline">\(A^{3}=\overline{0}\)</span>, para</p>
 <p><span class="math display">\[
 A=\begin{bmatrix}
 0 &amp; 1 &amp; 0 \\
@@ -255,26 +249,27 @@ A=\begin{bmatrix}
 \]</span></p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 9</strong></span> Se <span class="math inline">\(A B=B A\)</span> e <span class="math inline">\(p\)</span> é um inteiro positivo, mostre que <span class="math inline">\((A B)^{p}=A^{p} B^{p}\)</span>. Explique porque precisa usar que <span class="math inline">\(AB=BA\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercício 8</strong></span> Se <span class="math inline">\(A B=B A\)</span> e <span class="math inline">\(p\)</span> é um inteiro positivo, mostre que <span class="math inline">\((A B)^{p}=A^{p} B^{p}\)</span>. Explique porque precisa usar que <span class="math inline">\(AB=BA\)</span>.</p>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 10</strong></span> Sejam <span class="math inline">\(A, B\)</span> e <span class="math inline">\(C\)</span> matrizes <span class="math inline">\(n \times n\)</span>.</p>
-<ol type="a">
-<li><span class="math inline">\((A+B)^{2}=A^{2}+2 A B+B^{2}\)</span>? E se <span class="math inline">\(A B=B A\)</span>? Justifique.</li>
-<li><span class="math inline">\((A B) C=C(A B)\)</span>? E se <span class="math inline">\(A C=C A\)</span> e <span class="math inline">\(B C=C B\)</span>? Justifique. (Sugestão: Veja o Exemplo 1.8 na página 14.)</li>
+<p><span class="theorem-title"><strong>Exercício 9</strong></span> Sejam <span class="math inline">\(A, B\)</span> e <span class="math inline">\(C\)</span> matrizes <span class="math inline">\(n \times n\)</span>.</p>
+<ol type="1">
+<li>Pode afirmar que <span class="math inline">\((A+B)^{2}=A^{2}+2 A B+B^{2}\)</span>? E se <span class="math inline">\(A B=B A\)</span>? Justifique.</li>
+<li>Pode afirmar que <span class="math inline">\((A-B)^{2}=A^{2}-2 A B+B^{2}\)</span>? E se <span class="math inline">\(A B=B A\)</span>? Justifique.</li>
+<li>Pode afirmar que <span class="math inline">\((A+B)(A-B)=A^{2}-B^{2}\)</span>? E se <span class="math inline">\(A B=B A\)</span>? Justifique.</li>
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 11</strong></span> &nbsp;</p>
-<ol type="a">
-<li>Se <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são duas matrizes tais que <span class="math inline">\(A B=\overline{0}\)</span>, então <span class="math inline">\(A=\overline{0}\)</span> ou <span class="math inline">\(B=\overline{0}\)</span>? Justifique.</li>
-<li>Se <span class="math inline">\(A B=\overline{0}\)</span>, então <span class="math inline">\(B A=\overline{0}\)</span>? Justifique.</li>
-<li>Se <span class="math inline">\(A\)</span> é uma matriz tal que <span class="math inline">\(A^{2}=\overline{0}\)</span>, então <span class="math inline">\(A=\overline{0}\)</span>? Justifique.</li>
+<p><span class="theorem-title"><strong>Exercício 10</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Dê exemplo de matrizes <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> (pode ser <span class="math inline">\(2\times 2\)</span>) não nulos tais que <span class="math inline">\(AB=0\)</span>.</li>
+<li>Verifique para seu exemplo se <span class="math inline">\(BA=0\)</span>. Decida se a seguinte afirmação é verdadeira para toda matriz <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> <span class="math inline">\(n\times n\)</span>: Se <span class="math inline">\(AB=0\)</span> então <span class="math inline">\(BA=0\)</span>.</li>
+<li>Ache uma matriz <span class="math inline">\(A\)</span> não nula tal que <span class="math inline">\(A^2=0\)</span>. (Dica: veja o <a href="#exr-nilp-3x3" class="quarto-xref">Exercício&nbsp;7</a>.)</li>
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 12</strong></span> Dizemos que uma matriz <span class="math inline">\(A, n \times n\)</span>, é simétrica se <span class="math inline">\(A^{T}=A\)</span> e é anti-simétrica se <span class="math inline">\(A^{T}=-A\)</span>.</p>
-<ol type="a">
+<p><span class="theorem-title"><strong>Exercício 11</strong></span> Dizemos que uma matriz <span class="math inline">\(A, n \times n\)</span>, é simétrica se <span class="math inline">\(A^{T}=A\)</span> e é anti-simétrica se <span class="math inline">\(A^{T}=-A\)</span>.</p>
+<ol type="1">
 <li>Mostre que se <span class="math inline">\(A\)</span> é simétrica, então <span class="math inline">\(a_{i j}=a_{j i}\)</span>, para <span class="math inline">\(i, j=1, \ldots n\)</span> e que se <span class="math inline">\(A\)</span> é anti-simétrica, então <span class="math inline">\(a_{i j}=-a_{j i}\)</span>, para <span class="math inline">\(i, j=1, \ldots n\)</span>. Portanto, os elementos da diagonal principal de uma matriz antisimétrica são iguais a zero.</li>
 <li>Mostre que se <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são simétricas, então <span class="math inline">\(A+B\)</span> e <span class="math inline">\(\alpha A\)</span> são simétricas, para todo escalar <span class="math inline">\(\alpha\)</span>.</li>
 <li>Mostre que se <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são simétricas, então <span class="math inline">\(A B\)</span> é simétrica se, e somente se, <span class="math inline">\(A B=B A\)</span>.</li>
@@ -284,37 +279,7 @@ A=\begin{bmatrix}
 </ol>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 13</strong></span> Para matrizes quadradas <span class="math inline">\(A=\left(a_{i j}\right)_{n \times n}\)</span> definimos o traço de <span class="math inline">\(A\)</span> como sendo a soma dos elementos da diagonal (principal) de <span class="math inline">\(A\)</span>, ou seja, <span class="math inline">\(\operatorname{tr}(A)=\sum_{i=1}^{n} a_{i i}\)</span>.</p>
-<ol type="a">
-<li>Mostre que <span class="math inline">\(\operatorname{tr}(A+B)=\operatorname{tr}(A)+\operatorname{tr}(B)\)</span>.</li>
-<li>Mostre que <span class="math inline">\(\operatorname{tr}(\alpha A)=\alpha \operatorname{tr}(A)\)</span>.</li>
-<li>Mostre que <span class="math inline">\(\operatorname{tr}\left(A^{T}\right)=\operatorname{tr}(A)\)</span>.</li>
-<li>Mostre que <span class="math inline">\(\operatorname{tr}(A B)=\operatorname{tr}(B A)\)</span>. (Sugestão: Prove inicialmente para matrizes <span class="math inline">\(2 \times 2\)</span>.)</li>
-</ol>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 14</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n \times n\)</span>. Mostre que se <span class="math inline">\(A A^{T}=\overline{0}\)</span>, então <span class="math inline">\(A=\overline{0}\)</span>. (Sugestão: use o traço.) E se a matriz <span class="math inline">\(A\)</span> for <span class="math inline">\(m \times n\)</span>, com <span class="math inline">\(m \neq n\)</span>?</p>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 15</strong></span> Já vimos que o produto de matrizes não é comutativo. Entretanto, certos conjuntos de matrizes são comutativos. Mostre que:</p>
-<ol type="a">
-<li>Se <span class="math inline">\(D_{1}\)</span> e <span class="math inline">\(D_{2}\)</span> são matrizes diagonais <span class="math inline">\(n \times n\)</span>, então <span class="math inline">\(D_{1} D_{2}=D_{2} D_{1}\)</span>.</li>
-<li>Se <span class="math inline">\(A\)</span> é uma matriz <span class="math inline">\(n \times n\)</span> e <span class="math display">\[
-B=a_{0} I_{n}+a_{1} A+a_{2} A^{2}+\ldots+a_{k} A^{k}
-\]</span> em que <span class="math inline">\(a_{0}, \ldots, a_{k}\)</span> sâo escalares, então <span class="math inline">\(A B=B A\)</span>.</li>
-</ol>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercício 16</strong></span> Uma matriz <span class="math inline">\(A\)</span> é chamada nilpotente se <span class="math inline">\(A^{k}=\overline{0}\)</span>, para algum inteiro positivo <span class="math inline">\(k\)</span>. Verifique que a matriz</p>
-<p><span class="math display">\[
-A=\begin{bmatrix}
-0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \ddots &amp; \vdots \\
-0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \\
-0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
-\end{bmatrix}_{n \times n}
-\]</span> é nilpotente.</p>
+<p><span class="theorem-title"><strong>Exercício 12</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz <span class="math inline">\(n \times n\)</span>. Mostre que se <span class="math inline">\(A A^{T}=\overline{0}\)</span>, então <span class="math inline">\(A=\overline{0}\)</span>. (Sugestão: Computa a soma das entradas na diagonal principal (ou seja, o traço) de <span class="math inline">\(AA^T\)</span>.) E se a matriz <span class="math inline">\(A\)</span> for <span class="math inline">\(m \times n\)</span>, com <span class="math inline">\(m \neq n\)</span>?</p>
 </div>
 
 
