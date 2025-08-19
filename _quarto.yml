@@ -28,4 +28,6 @@ format:
     css: styles.css
   html:
     css: article.css
+    include-in-header:
+     - file: macros.html
 
