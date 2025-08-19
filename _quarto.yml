@@ -4,6 +4,7 @@ project:
     - index.qmd
     - semana1.qmd
     - ex1.qmd
+    - semana2.qmd
 
 render-on-save: false 
 
