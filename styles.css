@@ -1,9 +1,9 @@
 .reveal {
-  font-size: 120%; /* Adjust this percentage as needed */
+  font-size: 150%; /* Adjust this percentage as needed */
 }
 
 .reveal .slides > section {
-  font-size: 120%; /* Adjust for slide content */
+  font-size: 150%; /* Adjust for slide content */
 }
 
 /* Hide author and affiliation in Revealjs title slide if present */
