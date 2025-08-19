@@ -1,7 +1,7 @@
 ---
 title: "Matrizes"
 author: "Csaba Schneider"
-date: "2025-01-01"
+date: "agosto de 2025"
 format: 
     revealjs:
         slide-level: 2
