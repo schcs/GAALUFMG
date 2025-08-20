@@ -25,22 +25,16 @@ a_{m1} & a_{m2} & \ldots & a_{mn}
 $$
 :::
 
-A $i$-ésima linha de $A$ é:
-$$
-\begin{bmatrix}
+A $i$-ésima linha de $A$ é $\begin{bmatrix}
 a_{i1} & a_{i2} & \ldots & a_{in}
-\end{bmatrix}
-$$
-
-A $j$-ésima coluna de $A$ é:
-$$
-\begin{bmatrix}
+\end{bmatrix}$
+A $j$-ésima coluna de $A$ é
+$\begin{bmatrix}
 a_{1j} \\
 a_{2j} \\
 \vdots \\
 a_{mj}
-\end{bmatrix}
-$$
+\end{bmatrix}$.
 
 Nós também usamos a notação [ $A = \left(a_{ij}\right)_{m \times n}$ ]{.bg-yellow}. Aqui, $a_{ij}$ ou $[A]_{ij}$ é o elemento ou entrada na posição $(i, j)$ da matriz $A$.
 
@@ -61,10 +55,7 @@ C = \begin{bmatrix}
 1 & 3 & 0 \\
 2 & 4 & -2
 \end{bmatrix},
-$$
-
-$$
-D = \begin{bmatrix}
+\quad D = \begin{bmatrix}
 1 & 2 & 3
 \end{bmatrix}, \quad
 E = \begin{bmatrix}
@@ -163,14 +154,9 @@ $$
 
 O [múltiplo escalar]{.text-red} de uma matriz $A = \left(a_{ij}\right)_{m \times n}$ por um escalar $\alpha$ é definido como:
 
+:::{.bg-yellow}
 $$
-B = \alpha A
-$$
-
-onde:
-
-::: {.bg-yellow}
-$$
+B = \alpha A\quad \mbox{onde}\quad 
 b_{ij} = \alpha a_{ij}.
 $$
 :::
@@ -506,15 +492,11 @@ A = \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}, \quad
 B = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}.
 $$
 
-Calculando $AB$:
+Calculando $AB$ e $BA$:
 $$
 AB = \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}
          \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}
-     = \begin{bmatrix}2 & 1 \\ 1 & 0\end{bmatrix}.
-$$
-
-Calculando $BA$:
-$$
+     = \begin{bmatrix}2 & 1 \\ 1 & 0\end{bmatrix},\qquad 
 BA = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}
          \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}
      = \begin{bmatrix}0 & 1 \\ 1 & 2\end{bmatrix}.

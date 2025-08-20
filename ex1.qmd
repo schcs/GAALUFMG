@@ -130,6 +130,35 @@ Sejam $A, B$ e $C$ matrizes $n \times n$.
 :::
 
 :::{#exr-}
+Seja 
+$$
+A=\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}
+$$
+Ache todos os valores $a,b,c,d\in\R$ tais que 
+$$
+\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} a & b \\ c & d \end{bmatrix}=
+\begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}
+$$
+e todos os valores $e,f,g,h$ tais que 
+$$
+\begin{bmatrix} e & f \\ g & h \end{bmatrix}\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}=
+\begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}
+$$
+:::
+
+:::{#exr-}
+Seja 
+$$
+A=\begin{bmatrix} a & b \\ c & d \end{bmatrix}.
+$$
+Seja $d=ac-bd$. Assumindo que $d\neq 0$, verifique que 
+$$
+\frac 1d \begin{bmatrix} a & b \\ c & d \end{bmatrix}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix} =
+\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+:::
+
+:::{#exr-}
 
 1. Dê exemplo de matrizes $A$ e $B$ (pode ser $2\times 2$) não nulos tais que $AB=0$.
 2. Verifique para seu exemplo se $BA=0$. Decida se a seguinte afirmação é verdadeira para 
