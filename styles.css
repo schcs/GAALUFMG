@@ -1,10 +1,12 @@
 .reveal {
-  font-size: 120%; /* Adjust this percentage as needed */
-}
+  font-size: 100%; 
+ }
 
 .reveal .slides > section {
-  font-size: 120%; /* Adjust for slide content */
+  font-size: 120%; 
 }
+
+
 
 /* Hide author and affiliation in Revealjs title slide if present */
 .reveal .quarto-title-block .quarto-title-authors,
@@ -39,3 +41,4 @@
 
 /* Improve contrast inside boxes in dark themes if needed */
 .reveal.dark .box { background: rgba(255, 255, 255, 0.06); }
+
