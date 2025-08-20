@@ -8,5 +8,5 @@ Geometria Analítica e Álgebra Linear
 
 - [Matrizes](semana1.qmd)
 - [Exercícios sobre matrizes](ex1.qmd)
-<!--- [Sistemas lineares](semana2.qmd)-->
+- [Sistemas lineares](semana2.qmd)
 

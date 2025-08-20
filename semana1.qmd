@@ -90,16 +90,9 @@ Duas matrizes $A=(a_{ij})$ a $B=(b_{ij})$ são [iguais]{.text-red}, se elas
 A [soma]{.text-red} de duas matrizes [do mesmo tamanho]{.bg-yellow}, $A = \left(a_{ij}\right)_{m \times n}$ e $B = \left(b_{ij}\right)_{m \times n}$, é definida como:
 
 $$
-C = A + B
+C = A + B\quad \mbox{onde}\quad c_{ij} = a_{ij} + b_{ij}.
 $$
 
-onde:
-
-::: {.bg-yellow}
-$$
-c_{ij} = a_{ij} + b_{ij}.
-$$
-:::
 
 ### Exemplo
 
@@ -302,7 +295,7 @@ b_{p1} & \cdots & \color{blue}{b_{pj}} & \cdots & b_{pn}
 $$
 
 
-### Condições para Multiplicação de Matrizes
+## Condições para Multiplicação de Matrizes
 
 -   [O número de colunas de $A$ deve ser igual ao número de linhas de $B$.]{.bg-yellow}
 -   A matriz resultante $C$ terá dimensões $m \times n$.
@@ -462,7 +455,7 @@ I_m\,A = A \quad\text{e}\quad A\,I_n = A.
 $$
 :::
 
-Exemplo (com $m=n=2$):
+## Exemplo (com $m=n=2$):
 
 $$
 I_2 = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix},\quad

@@ -26,9 +26,13 @@ date: "Criado e atualizado 2025/II"
 format:
   revealjs:
     css: styles.css
-    width: 2000 # 20:9 landscape (phone-like) 
-    height: 900 
-    margin: 0.02 # reduce letterboxing minScale: 0.2 maxScale: 2.0
+    width: 1920 # 16:9 
+    height: 1080 
+    margin: 0.02 # less edge padding 
+    minScale: 0.2 
+    maxScale: 2.0 
+    center: false # optional: reduces top whitespace
+    include-in-header: macros.html
   html:
     css: article.css
     include-in-header:
