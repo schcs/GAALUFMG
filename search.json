@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Geometria Analítica e Álgebra Linear",
     "section": "",
-    "text": "Geometria Analítica e Álgebra Linear\n\nMatrizes\nExercícios sobre matrizes"
+    "text": "Geometria Analítica e Álgebra Linear\n\nMatrizes\nExercícios sobre matrizes\nSistemas lineares"
   },
   {
     "objectID": "semana1.html#definição-de-uma-matriz",
@@ -32,7 +32,7 @@
     "href": "semana1.html#soma-de-matrizes",
     "title": "Matrizes",
     "section": "Soma de Matrizes",
-    "text": "Soma de Matrizes\nA soma de duas matrizes do mesmo tamanho, \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) e \\(B = \\left(b_{ij}\\right)_{m \\times n}\\), é definida como:\n\\[\nC = A + B\n\\]\nonde:\n\n\\[\nc_{ij} = a_{ij} + b_{ij}.\n\\]\n\nExemplo\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & -3 \\\\\n3 & 4 & 0\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 & 5 \\\\\n0 & 3 & -4\n\\end{bmatrix}.\n\\]\nA soma de \\(A\\) e \\(B\\) é:\n\\[\nC = A + B = \\begin{bmatrix}\n1 + (-2) & 2 + 1 & -3 + 5 \\\\\n3 + 0 & 4 + 3 & 0 + (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 3 & 2 \\\\\n3 & 7 & -4\n\\end{bmatrix}.\n\\]"
+    "text": "Soma de Matrizes\nA soma de duas matrizes do mesmo tamanho, \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) e \\(B = \\left(b_{ij}\\right)_{m \\times n}\\), é definida como:\n\\[\nC = A + B\\quad \\mbox{onde}\\quad c_{ij} = a_{ij} + b_{ij}.\n\\]\nExemplo\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & -3 \\\\\n3 & 4 & 0\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 & 5 \\\\\n0 & 3 & -4\n\\end{bmatrix}.\n\\]\nA soma de \\(A\\) e \\(B\\) é:\n\\[\nC = A + B = \\begin{bmatrix}\n1 + (-2) & 2 + 1 & -3 + 5 \\\\\n3 + 0 & 4 + 3 & 0 + (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 3 & 2 \\\\\n3 & 7 & -4\n\\end{bmatrix}.\n\\]"
   },
   {
     "objectID": "semana1.html#matriz-nula",
@@ -67,7 +67,14 @@
     "href": "semana1.html#multiplicação-entre-matrizes",
     "title": "Matrizes",
     "section": "Multiplicação entre Matrizes",
-    "text": "Multiplicação entre Matrizes\nO produto de duas matrizes \\(A = \\left(a_{ij}\\right)_{m \\times p}\\) e \\(B = \\left(b_{ij}\\right)_{p \\times n}\\) é definido como:\n\\[\nC = AB\n\\]\nonde a matriz resultante \\(C = \\left(c_{ij}\\right)_{m \\times n}\\) tem entradas dadas por:\n\n\\[\nc_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj} = \\sum_{k=1}^{p} a_{ik} b_{kj}.\n\\]\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1p}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\color{red}{a_{i1}} & \\color{red}{a_{i2}} & \\cdots & \\color{red}{a_{ip}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mp}\n\\end{bmatrix},\\quad\nB = \\begin{bmatrix}\nb_{11} & \\cdots & \\color{blue}{b_{1j}} & \\cdots & b_{1n}\\\\\nb_{21} & \\cdots & \\color{blue}{b_{2j}} & \\cdots & b_{2n}\\\\\n\\vdots & \\ddots & \\vdots & \\ddots & \\vdots \\\\\nb_{p1} & \\cdots & \\color{blue}{b_{pj}} & \\cdots & b_{pn}\n\\end{bmatrix},\\quad c_{ij} = \\sum\\limits_{k=1}^{p} \\color{red}{a_{ik}}\\,\\color{blue}{b_{kj}}\n\\]\nCondições para Multiplicação de Matrizes\n\nO número de colunas de \\(A\\) deve ser igual ao número de linhas de \\(B\\).\nA matriz resultante \\(C\\) terá dimensões \\(m \\times n\\)."
+    "text": "Multiplicação entre Matrizes\nO produto de duas matrizes \\(A = \\left(a_{ij}\\right)_{m \\times p}\\) e \\(B = \\left(b_{ij}\\right)_{p \\times n}\\) é definido como:\n\\[\nC = AB\n\\]\nonde a matriz resultante \\(C = \\left(c_{ij}\\right)_{m \\times n}\\) tem entradas dadas por:\n\n\\[\nc_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj} = \\sum_{k=1}^{p} a_{ik} b_{kj}.\n\\]\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1p}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\color{red}{a_{i1}} & \\color{red}{a_{i2}} & \\cdots & \\color{red}{a_{ip}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mp}\n\\end{bmatrix},\\quad\nB = \\begin{bmatrix}\nb_{11} & \\cdots & \\color{blue}{b_{1j}} & \\cdots & b_{1n}\\\\\nb_{21} & \\cdots & \\color{blue}{b_{2j}} & \\cdots & b_{2n}\\\\\n\\vdots & \\ddots & \\vdots & \\ddots & \\vdots \\\\\nb_{p1} & \\cdots & \\color{blue}{b_{pj}} & \\cdots & b_{pn}\n\\end{bmatrix},\\quad c_{ij} = \\sum\\limits_{k=1}^{p} \\color{red}{a_{ik}}\\,\\color{blue}{b_{kj}}\n\\]"
+  },
+  {
+    "objectID": "semana1.html#condições-para-multiplicação-de-matrizes",
+    "href": "semana1.html#condições-para-multiplicação-de-matrizes",
+    "title": "Matrizes",
+    "section": "Condições para Multiplicação de Matrizes",
+    "text": "Condições para Multiplicação de Matrizes\n\nO número de colunas de \\(A\\) deve ser igual ao número de linhas de \\(B\\).\nA matriz resultante \\(C\\) terá dimensões \\(m \\times n\\)."
   },
   {
     "objectID": "semana1.html#exemplo-produto-de-matrizes",
@@ -81,7 +88,14 @@
     "href": "semana1.html#matriz-identidade",
     "title": "Matrizes",
     "section": "Matriz Identidade",
-    "text": "Matriz Identidade\nA matriz identidade de ordem \\(n\\), denotada por \\(I_n\\) ou simplesmente por \\(I\\), é a matriz quadrada \\(n \\times n\\) com \\(1\\) na diagonal principal e \\(0\\) fora dela.\nExemplo\n\n\\[\nI_3 = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}.\n\\]\n\nPropriedade\nPara qualquer matriz \\(A\\) \\({m\\times n}\\), a matriz identidade satisfaz:\n\n\\[\nI_m\\,A = A \\quad\\text{e}\\quad A\\,I_n = A.\n\\]\n\nExemplo (com \\(m=n=2\\)):\n\\[\nI_2 = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix},\\quad\nA = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]\n\\[\nI_2A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}\\!\n\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}\n= \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} = A,\\qquad\nA I_2 = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]"
+    "text": "Matriz Identidade\nA matriz identidade de ordem \\(n\\), denotada por \\(I_n\\) ou simplesmente por \\(I\\), é a matriz quadrada \\(n \\times n\\) com \\(1\\) na diagonal principal e \\(0\\) fora dela.\nExemplo\n\n\\[\nI_3 = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}.\n\\]\n\nPropriedade\nPara qualquer matriz \\(A\\) \\({m\\times n}\\), a matriz identidade satisfaz:\n\n\\[\nI_m\\,A = A \\quad\\text{e}\\quad A\\,I_n = A.\n\\]"
+  },
+  {
+    "objectID": "semana1.html#exemplo-com-mn2",
+    "href": "semana1.html#exemplo-com-mn2",
+    "title": "Matrizes",
+    "section": "Exemplo (com \\(m=n=2\\)):",
+    "text": "Exemplo (com \\(m=n=2\\)):\n\\[\nI_2 = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix},\\quad\nA = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]\n\\[\nI_2A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}\\!\n\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}\n= \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} = A,\\qquad\nA I_2 = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]"
   },
   {
     "objectID": "semana1.html#propriedades-das-operações-com-matrizes",

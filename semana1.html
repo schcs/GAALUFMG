@@ -215,14 +215,8 @@ E = \begin{bmatrix}
 <h2>Soma de Matrizes</h2>
 <p>A <span class="text-red">soma</span> de duas matrizes <span class="bg-yellow">do mesmo tamanho</span>, <span class="math inline">\(A = \left(a_{ij}\right)_{m \times n}\)</span> e <span class="math inline">\(B = \left(b_{ij}\right)_{m \times n}\)</span>, é definida como:</p>
 <p><span class="math display">\[
-C = A + B
+C = A + B\quad \mbox{onde}\quad c_{ij} = a_{ij} + b_{ij}.
 \]</span></p>
-<p>onde:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-c_{ij} = a_{ij} + b_{ij}.
-\]</span></p>
-</div>
 <h3 id="exemplo">Exemplo</h3>
 <p>Considere as matrizes:</p>
 <p><span class="math display">\[
@@ -382,7 +376,9 @@ b_{21} &amp; \cdots &amp; \color{blue}{b_{2j}} &amp; \cdots &amp; b_{2n}\\
 b_{p1} &amp; \cdots &amp; \color{blue}{b_{pj}} &amp; \cdots &amp; b_{pn}
 \end{bmatrix},\quad c_{ij} = \sum\limits_{k=1}^{p} \color{red}{a_{ik}}\,\color{blue}{b_{kj}}
 \]</span></p>
-<h3 id="condições-para-multiplicação-de-matrizes">Condições para Multiplicação de Matrizes</h3>
+</section>
+<section id="condições-para-multiplicação-de-matrizes" class="slide level2">
+<h2>Condições para Multiplicação de Matrizes</h2>
 <ul>
 <li><span class="bg-yellow">O número de colunas de <span class="math inline">\(A\)</span> deve ser igual ao número de linhas de <span class="math inline">\(B\)</span>.</span></li>
 <li>A matriz resultante <span class="math inline">\(C\)</span> terá dimensões <span class="math inline">\(m \times n\)</span>.</li>
@@ -505,7 +501,9 @@ I_3 = \begin{bmatrix}
 I_m\,A = A \quad\text{e}\quad A\,I_n = A.
 \]</span></p>
 </div>
-<p>Exemplo (com <span class="math inline">\(m=n=2\)</span>):</p>
+</section>
+<section id="exemplo-com-mn2" class="slide level2">
+<h2>Exemplo (com <span class="math inline">\(m=n=2\)</span>):</h2>
 <p><span class="math display">\[
 I_2 = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix},\quad
 A = \begin{bmatrix}1 &amp; 2 \\ 3 &amp; 4\end{bmatrix}.
@@ -786,12 +784,17 @@ B^{T}A^{T} = \begin{bmatrix}
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 2000,
+        width: 1920,
 
-        height: 900,
+        height: 1080,
 
         // Factor of the display size that should remain empty around the content
         margin: 2.0e-2,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
