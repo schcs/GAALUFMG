@@ -1,0 +1,725 @@
+---
+title: "Sistemas lineares"
+author: "Csaba Schneider"
+date: "agosto de 2025"
+lang: pt-br
+format: 
+    revealjs:
+        slide-level: 2
+        css: styles.css
+---
+
+## Exemplo $2×2$ e sua solução 
+
+Considere o sistema em $x$ e $y$:
+$$
+\begin{cases}
+x + y = 5, \\
+2x - y = 1.
+\end{cases}
+$$
+
+[Método da substituição/eliminação:]{.bg-yellow}
+
+Some as duas equações para eliminar $y$:
+$$
+(x+y) + (2x - y) = 5 + 1 \;\Rightarrow\; 3x = 6 \;\Rightarrow\; x = 2.
+$$
+
+Substitua $x=2$ na primeira equação:
+$$
+2 + y = 5 \;\Rightarrow\; y = 3.
+$$
+
+Logo, a solução única é $\boxed{x=2,\; y=3}$.
+
+Verificação:
+$$
+x + y = 2 + 3 = 5,\qquad 2x - y = 2\cdot 2 - 3 = 1.
+$$
+
+## A forma geral de um sistema linear
+
+Um [sistema linear]{.text-red} em $n$ incógnitas $x_1,\ldots,x_n$ com $m$ equações tem a forma
+$$
+\begin{align*}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1,\\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2,\\
+\quad&\vdots\\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m.
+\end{align*}
+$$
+
+Aqui, os $a_{ij}$ são os [coeficientes]{.text-red}, os $x_j$ são as [incógnitas]{.text-red} e $b_i$ são os [termos constantes]{.text-red}.
+
+
+## Resolução do Sistema por Eliminação de Gauss-Jordan
+
+
+Considere o sistema:
+$$
+\begin{alignedat}{5}
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}
+$$
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Vamos trocar as duas primeiras equações:
+$$
+\color{red}{\begin{alignedat}{5}
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}}
+ \qquad \Rightarrow \qquad
+\color{blue}{\begin{alignedat}{5}
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}}
+$$
+:::
+:::{.fragment .current-visible}
+Eliminamos a variável $x_1$ da segunda e a terceira equação:
+
+- subtraimos 2 vezes a primeira equação da segunda;
+- subtraimos a primeira equação da terceira. 
+$$
+\color{red}{\begin{alignedat}{5}
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}}\qquad \Rightarrow \qquad
+\color{blue}{\begin{alignedat}{5}
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+     &{}{} & 3x_2&{}-{}& 3x_3&{}+{}& x_4 &{}={}& -2\\
+     &{}{} &  x_2&{}{} &     &{}{} &     &{}={}& -2
+\end{alignedat}}
+$$
+:::
+:::{.fragment .current-visible}
+Trocamos a segunda e a terceira equação:
+$$
+\color{red}{\begin{alignedat}{5}
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+     &{}{} & 3x_2&{}-{}& 3x_3&{}+{}& x_4 &{}={}& -2\\
+     &{}{} &  x_2&{}{} &     &{}{} &     &{}={}& -2
+\end{alignedat}}\qquad \Rightarrow \qquad
+\color{blue}{\begin{alignedat}{5}
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+     &{}{} &  x_2&{}{} &     &{}{} &     &{}={}& -2\\
+     &{}{} & 3x_2&{}-{}& 3x_3&{}+{}& x_4 &{}={}& -2
+\end{alignedat}}
+$$
+:::
+:::{.fragment .current-visible}
+Eliminamos a variável $x_2$ da primeira e a terceira equação:
+
+- somamos a segunda equação à primeira;
+- subtraimos 3 vezes da segunda equação da terceira.
+$$
+\color{red}{\begin{alignedat}{5}
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+     &{}{} &  x_2&{}{} &     &{}{} &     &{}={}& -2\\
+     &{}{} & 3x_2&{}-{}& 3x_3&{}+{}& x_4 &{}={}& -2
+\end{alignedat}}\qquad \Rightarrow \qquad
+\color{blue}{\begin{alignedat}{5}
+ x_1            && &{}+{}& x_3 &{}&    &{}={}& -1\\
+     &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
+     &{}{} &      &{}-{}& 3x_3&{}+{}& x_4&{}={}& 4
+\end{alignedat}}
+$$
+:::
+:::{.fragment .current-visible}
+Multiplicamos a terceira equação por $-1/3$:
+$$
+\color{red}{\begin{alignedat}{5}
+ x_1            && &{}+{}& x_3 &{}&    &{}={}& -1\\
+     &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
+     &{}{} &      &{}-{}& 3x_3&{}+{}& x_4&{}={}& 4
+\end{alignedat}}\qquad \Rightarrow \qquad
+\color{blue}{\begin{alignedat}{5}
+ x_1            && &{}+{}& x_3 &{}&    &{}={}& -1\\
+     &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
+     &{}{} &      &{}{}& x_3&{}-{}& (1/3)x_4&{}={}& -4/3
+\end{alignedat}}
+$$
+:::
+:::{.fragment .current-visible}
+Eliminamos a variável $x_3$ da primeira equação.
+
+- subtraímos a terceira equação da primeira.
+$$
+\color{red}{\begin{alignedat}{5}
+ x_1            && &{}+{}& x_3 &{}&    &{}={}& -1\\
+     &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
+     &{}{} &      &{}{}& x_3&{}-{}& (1/3)x_4&{}={}& -4/3
+\end{alignedat}}\qquad \Rightarrow \qquad
+\color{blue}{\begin{alignedat}{5}
+ x_1            && &{}{}& &{}    &{+(1/3)x_4}&={}& 1/3\\
+     &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
+     &{}{} &      &{}{}& x_3&{}-{}& (1/3)x_4&{}={}& -4/3
+\end{alignedat}}
+$$
+:::
+:::
+
+## A forma escalonada reduzida do sistema
+
+Depois destas manipulações, o sistema está nesta forma:
+$$
+\begin{alignedat}{5}
+ x_1            && &{}{}& &{}    &{+(1/3)x_4}&={}& 1/3\\
+     &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
+     &{}{} &      &{}{}& x_3&{}-{}& (1/3)x_4&{}={}& -4/3
+\end{alignedat}
+$$
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Dizemos que este sistema está na [forma escalonada reduzida]{.bg-yellow} porque:
+
+1. O primeiro coeficiente não nulo de cada equação (o pivô) é $1$;
+2. O pivô de cada equação aparece numa coluna situada à direita do pivô da equação anterior;
+3. Em cada coluna de pivô, todos os outros coeficientes são $0$ (acima e abaixo do pivô);
+
+Aqui, os pivôs estão nas variáveis $x_1$, $x_2$ e $x_3$; a coluna de $x_4$ não tem pivô, logo 
+$x_4$ é [variável livre]{.bg-yellow}.
+:::
+:::{.fragment .current-visible}
+A forma escalonada reduzida do sistema foi obtida usando as segintes operações pelas equações: 
+
+1. trocar duas equações;
+2. multilicar uma equação por um escalar não nulo;
+3. Somar um múltiplo escalar de [uma]{.bg-yellow} equação à uma [outra]{.bg-yellow}.
+
+:::{.bg-yellow}
+:::{#thm-}
+Todo sistema pode ser transformado para a forma escalonada reduzida pelas três operações acima por linhas.
+:::
+:::
+:::
+:::
+
+
+## A Solução do Sistema
+
+Agora a solução do sistema pode ser determinada. 
+
+\begin{alignedat}{5}
+ x_1            && &{}{}& &{}    &{+(1/3)x_4}&={}& 1/3\\
+     &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
+     &{}{} &      &{}{}& x_3&{}-{}& (1/3)x_4&{}={}& -4/3
+\end{alignedat}
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+- $x_2=-2$;
+- $x_4$ é variável livre: ela pode assumir qualquer valor; ou seja $x_4=\alpha\in\R$. 
+- $x_1=1/3-(1/3)\alpha$;
+- $x_3=-4/3+(1/3)\alpha$.
+:::
+:::{.fragment .current-visible}
+A [solução geral]{.bg-yellow} do sistema é 
+$$
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} 1/3-(1/3)\alpha \\ -2 \\ -4/3+(1/3)\alpha \\ \alpha\end{bmatrix},\quad\alpha\in\R
+$$
+:::
+:::
+
+
+## Forma matricial
+
+Considere o sistema linear:
+$$
+\begin{align*}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1\\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2\\
+\quad&\vdots\\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
+\end{align*}
+\quad A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{bmatrix},\quad x = \begin{bmatrix}x_1\\ x_2\\ \vdots\\ x_n\end{bmatrix}, \quad b = \begin{bmatrix}b_1\\ b_2\\ \vdots\\ b_m\end{bmatrix}
+$$
+Então o sistema escreve-se na [forma matricial]{.text-red}:
+
+::: {.bg-yellow}
+$$
+A\,x = b.
+$$
+:::
+
+## Exemplo
+
+Considere o sistema:
+$$ 
+\begin{alignedat}{5}
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}.
+$$
+
+Neste caso
+$$ 
+A = \begin{bmatrix} 2 & 1 & -1 & 1 \\ 
+                    1 & -1 & 1 & 0 \\
+                    1 & 0 & 1 & 0 \end{bmatrix}, 
+                    \quad 
+x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4\end{bmatrix},\quad b = \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix} 
+$$
+
+Além disso, o sistema pode ser escrita na [forma matricial]{.bg-yellow}:
+$$
+Ax = b.
+$$ 
+
+## A matriz aumentada do sistema
+$$ 
+\begin{alignedat}{5}
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}.
+$$
+
+Opcionalmente, podemos representar o sistema pela [matriz aumentada]{.text-red}:
+$$
+ \begin{bmatrix} 2 & 1 & -1 & 1  &  | & 0 \\ 
+                    1 & -1 & 1 & 0  & | & 1 \\
+                    1 & 0 & 1 & 0 & | & -1\end{bmatrix}
+$$
+
+
+
+## Resolução do sistema usando a sua matriz
+
+Considere o mesmo sistema como acima:
+$$ 
+\begin{alignedat}{5}
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}.
+$$
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Matriz aumentada inicial (pivô na coluna 1):
+$$
+\left[\,\begin{array}{cccc|c}
+2 & 1 & -1 & 1 & 0\\
+1 & -1 & \phantom{-}1 & 0 & 1\\
+1 & 0 & \phantom{-}1 & 0 & -1
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operação: L1 $\leftrightarrow$ L2 \; (coloca pivô $1$ em \color{red}{L1}).
+:::
+Resultado:
+$$
+\left[\,\begin{array}{cccc|c}
+2 & 1 & -1 & 1 & 0\\
+1 & -1 & \phantom{-}1 & 0 & 1\\
+1 & 0 & \phantom{-}1 & 0 & -1
+\end{array}\,\right]
+\Rightarrow \left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{-1} & \color{red}{1} & \color{red}{0} & \color{red}{1}\\
+\color{blue}{2} & \color{blue}{1} & \color{blue}{-1} & \color{blue}{1} & \color{blue}{0}\\
+\color{teal}{1} & \color{teal}{0} & \color{teal}{1} & \color{teal}{0} & \color{teal}{-1}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operações: 
+
+1. L2 $\leftarrow$ L2 $-\,2$L1 \; (zera coluna 1 em \color{blue}{L2}); 
+2. L3 $\leftarrow$ L3 $-\,$L1 \; (zera coluna 1 em \color{teal}{L3}).
+:::
+Resultado:
+$$
+\left[\,\begin{array}{cccc|c}
+1 & -1 & 1 & 0 & 1\\
+2 & 1 & -1 & 1 & 0\\
+1 & 0 & 1 & 0 & -1
+\end{array}\,\right]\Rightarrow 
+\left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{-1} & \color{red}{1} & \color{red}{0} & \color{red}{1}\\
+\color{blue}{0} & \color{blue}{3} & \color{blue}{-3} & \color{blue}{1} & \color{blue}{-2}\\
+\color{teal}{0} & \color{teal}{1} & \color{teal}{0} & \color{teal}{0} & \color{teal}{-2}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operação: L2 $\leftrightarrow$ L3 \; (coloca pivô $1$ em \color{blue}{L2}).
+:::
+Resultado:
+$$
+\left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{-1} & \color{red}{1} & \color{red}{0} & \color{red}{1}\\
+\color{blue}{0} & \color{blue}{3} & \color{blue}{-3} & \color{blue}{1} & \color{blue}{-2}\\
+\color{teal}{0} & \color{teal}{1} & \color{teal}{0} & \color{teal}{0} & \color{teal}{-2}
+\end{array}\,\right]
+\Rightarrow \left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{-1} & \color{red}{1} & \color{red}{0} & \color{red}{1}\\
+\color{blue}{0} & \color{blue}{1} & \color{blue}{0} & \color{blue}{0} & \color{blue}{-2}\\
+\color{teal}{0} & \color{teal}{3} & \color{teal}{-3} & \color{teal}{1} & \color{teal}{-2}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operações: 
+
+1. L1 $\leftarrow$ L1 $+\,$L2 \; (zera coluna 2 acima, usa \color{red}{L1} e \color{blue}{L2});
+2. L3 $\leftarrow$ L3 $-\,3$L2 \; (zera coluna 2 abaixo, usa \color{teal}{L3} e \color{blue}{L2}).
+:::
+Resultado:
+$$
+\left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{-1} & \color{red}{1} & \color{red}{0} & \color{red}{1}\\
+\color{blue}{0} & \color{blue}{1} & \color{blue}{0} & \color{blue}{0} & \color{blue}{-2}\\
+\color{teal}{0} & \color{teal}{3} & \color{teal}{-3} & \color{teal}{1} & \color{teal}{-2}
+\end{array}\,\right]\Rightarrow 
+\left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{0} & \color{red}{1} & \color{red}{0} & \color{red}{-1}\\
+0 & 1 & 0 & 0 & -2\\
+\color{teal}{0} & \color{teal}{0} & \color{teal}{-3} & \color{teal}{1} & \color{teal}{4}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operação: L3 $\leftarrow -\tfrac{1}{3}$L3 \quad (normaliza o pivô em \color{teal}{L3}).
+:::
+Resultado:
+$$
+\left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{0} & \color{red}{1} & \color{red}{0} & \color{red}{-1}\\
+0 & 1 & 0 & 0 & -2\\
+\color{teal}{0} & \color{teal}{0} & \color{teal}{-3} & \color{teal}{1} & \color{teal}{4}
+\end{array}\,\right]
+\Rightarrow \left[\,\begin{array}{cccc|c}
+1 & 0 & 1 & 0 & -1\\
+0 & 1 & 0 & 0 & -2\\
+\color{teal}{0} & \color{teal}{0} & \color{teal}{1} & \color{teal}{-1/3} & \color{teal}{-4/3}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operação: L1 $\leftarrow$ L1 $-\,$L3 \; (zera coluna 3 acima do pivô).
+:::
+Forma escalonada reduzida por linhas (RREF):
+$$
+\left[\,\begin{array}{cccc|c}
+1 & 0 & 1 & 0 & -1\\
+0 & 1 & 0 & 0 & -2\\
+\color{teal}{0} & \color{teal}{0} & \color{teal}{1} & \color{teal}{-1/3} & \color{teal}{-4/3}
+\end{array}\,\right]\Rightarrow 
+\left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{0} & \color{red}{0} & \color{red}{1/3} & \color{red}{1/3}\\
+0 & 1 & 0 & 0 & -2\\
+0 & 0 & 1 & -1/3 & -4/3
+\end{array}\,\right]
+$$
+Solução: 
+$$
+x_1 = \tfrac{1}{3} - \tfrac{1}{3}\alpha,\quad x_2 = -2,\quad x_3 = -\tfrac{4}{3} + \tfrac{1}{3}\alpha,\quad 
+x_4=\alpha\in \R.
+$$
+:::
+:::
+
+## Forma Escalonada Reduzida (FER) de uma Matriz
+
+::: {.bg-yellow}
+Definição (FER). Uma matriz está na forma escalonada reduzida por linhas quando:
+
+1. Todas as linhas nulas (se existirem) aparecem abaixo das linhas não nulas;
+2. Em cada linha não nula, o primeiro elemento não nulo (pivô) é igual a 1;
+3. Em cada coluna de pivô, todos os demais elementos são 0;
+4. A coluna do pivô de uma linha está à direita da coluna do pivô da linha imediatamente acima.
+:::
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Por exemplo, 
+$$
+\left[\,\begin{array}{cccc|c}
+\color{red}{1} & \color{red}{0} & \color{red}{0} & \color{red}{1/3} & \color{red}{1/3}\\
+0 & 1 & 0 & 0 & -2\\
+0 & 0 & 1 & -1/3 & -4/3\\
+0 & 0 & 0 & 0 & 0 
+\end{array}\,\right]
+$$ 
+:::
+:::{.fragment .current-visible}
+Toda matriz pode ser transformada para FER usando as seguintes operações por linhas:
+
+1. trocar duas linhas;
+2. multilicar uma linha por um escalar não nulo;
+3. Somar um múltiplo escalar de [uma]{.bg-yellow} linha à uma [outra]{.bg-yellow}.
+:::
+:::
+
+## Sistema com nenhuma solução
+
+Considere o seguinte sistema:
+$$
+\begin{align*}
+x_1+x_2-x_3&=3\\
+x_1-x_2+x_3&=0\\
+2x_2-2x_3&=-3
+\end{align*}
+$$
+A matriz aumentada do sistema:
+$$
+\begin{bmatrix}
+1 & 1 & -1 & | & 3\\ 
+1 & -1 & 1 & | & 0\\ 
+0 & 2 & -2 & | & -3
+\end{bmatrix}  
+\Rightarrow 
+\begin{bmatrix}
+1 & 1 & -1 & | & 3\\ 
+0 & -2 & 2 & | & -3\\ 
+0 & 2 & -2 & | & -3
+\end{bmatrix}
+\Rightarrow 
+\begin{bmatrix}
+1 & 1 & -1 & | & 3\\ 
+0 & -2 & 2 & | & -3\\ 
+\color{red}0 & \color{red}0 & \color{red}0 & | & \color{red}-6
+\end{bmatrix}
+$$
+
+A última linha corresponde à equação 
+$$
+\color{red}{0\cdot x_1+0\cdot x_2+0\cdot x_3=-6}.
+$$
+Mas isso é claramente uma [equação impossível]{.bg-yellow}. [O sistema não possui solução]{.bg-yellow}
+
+## Sistema com infinitas soluções
+
+Já vimos um exemplo de um sistema com infinitas soluções:
+$$ 
+\begin{alignedat}{5}
+2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
+ x_1 &{}-{}& x_2 &{}+{}& x_3 &{}&    &{}={}& 1\\
+ x_1 &{}+{}&     &{}{}& x_3 &{}{}&     &{}={}& -1
+\end{alignedat}.
+$$
+
+
+Sua matriz aumentada 
+$$
+\left[\,\begin{array}{cccc|c}
+2 & 1 & -1 & 1 &  0\\
+1 & -1 & \phantom{-}1 & 0 &  1\\
+1 & 0 & \phantom{-}1 & 0 &  -1
+\end{array}\,\right]
+\Rightarrow 
+\left[\,\begin{array}{cccc|c}
+1 & 0 & 1 & 0 & -1\\
+0 & 1 & 0 & 0 & -2\\
+{0} & {0} & {1} & {-1/3} & {-4/3}
+\end{array}\,\right]
+$$
+
+O sistema possui infinitas soluções, pois:
+
+- a matriz FER do sistema não tem linha que corresponde a uma equação impossível;
+- a matriz FER do sistema possui variável livre. 
+
+## Exemplo 3×4: Gauss–Jordan
+
+Vamos resolver por Gauss–Jordan o sistema com matriz aumentada $3\times 4$:
+
+$$
+\begin{align*}
+x_1+2x_2-x_3&=2\\
+2x_1 + x_2+x_3&=7\\
+-x_1+x_2+2x_3&=3.
+\end{align*}
+$$
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Matriz inicial (pivô em L1, coluna 1):
+$$
+\left[\,\begin{array}{ccc|c}
+1 & 2 & -1 & 2\\
+2 & 1 & \phantom{-}1 & 7\\
+-1 & 1 & \phantom{-}2 & 3
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operações: 
+
+1. L2 $\leftarrow$ L2 $-\,2$L1 \;  
+2. L3 $\leftarrow$ L3 $+\,$L1 \; 
+:::
+Resultado:
+$$
+\left[\,\begin{array}{ccc|c}
+1 & 2 & -1 & 2\\
+2 & 1 & \phantom{-}1 & 7\\
+-1 & 1 & \phantom{-}2 & 3
+\end{array}\,\right]
+\Rightarrow \left[\,\begin{array}{ccc|c}
+\color{red}{1} & \color{red}{2} & \color{red}{-1} & \color{red}{2}\\
+\color{blue}{0} & \color{blue}{-3} & \color{blue}{3} & \color{blue}{3}\\
+\color{teal}{0} & \color{teal}{3} & \color{teal}{1} & \color{teal}{5}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operação: L2 $\leftarrow -\tfrac{1}{3}\,$L2
+:::
+Resultado:
+$$
+\left[\,\begin{array}{ccc|c}
+\color{red}{1} & \color{red}{2} & \color{red}{-1} & \color{red}{2}\\
+\color{blue}{0} & \color{blue}{-3} & \color{blue}{3} & \color{blue}{3}\\
+\color{teal}{0} & \color{teal}{3} & \color{teal}{1} & \color{teal}{5}
+\end{array}\,\right]\Rightarrow 
+\left[\,\begin{array}{ccc|c}
+1 & 2 & -1 & 2\\
+\color{blue}{0} & \color{blue}{1} & \color{blue}{-1} & \color{blue}{-1}\\
+0 & 3 & 1 & 5
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operações: 
+
+1) L1 $\leftarrow$ L1 $-\,2$L2 
+2) L3 $\leftarrow$ L3 $-\,3$L2.
+:::
+Resultado:
+$$
+\left[\,\begin{array}{ccc|c}
+1 & 2 & -1 & 2\\
+\color{blue}{0} & \color{blue}{1} & \color{blue}{-1} & \color{blue}{-1}\\
+0 & 3 & 1 & 5
+\end{array}\,\right]
+\Rightarrow \left[\,\begin{array}{ccc|c}
+\color{red}{1} & 0 & \color{red}{1} & \color{red}{4}\\
+0 & 1 & -1 & -1\\
+\color{teal}{0} & 0 & \color{teal}{4} & \color{teal}{8}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operação: L3 $\leftarrow \tfrac{1}{4}$L3.
+:::
+Resultado:
+$$
+\left[\,\begin{array}{ccc|c}
+\color{red}{1} & 0 & \color{red}{1} & \color{red}{4}\\
+0 & 1 & -1 & -1\\
+\color{teal}{0} & 0 & \color{teal}{4} & \color{teal}{8}
+\end{array}\,\right]\Rightarrow 
+\left[\,\begin{array}{ccc|c}
+1 & 0 & 1 & 4\\
+0 & 1 & -1 & -1\\
+\color{teal}{0} & \color{teal}{0} & \color{teal}{1} & \color{teal}{2}
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+::: {.bg-yellow}
+Operações: 
+
+1) L1 $\leftarrow$ L1 $-\,$L3;
+2) L2 $\leftarrow$ L2 $+\,$L3.
+:::
+Forma escalonada reduzida por linhas (RREF):
+$$
+\left[\,\begin{array}{ccc|c}
+1 & 0 & 1 & 4\\
+0 & 1 & -1 & -1\\
+\color{teal}{0} & \color{teal}{0} & \color{teal}{1} & \color{teal}{2}
+\end{array}\,\right]\Rightarrow 
+\left[\,\begin{array}{ccc|c}
+\color{red}{1} & 0 & 0 & \color{red}{2}\\
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 2
+\end{array}\,\right]
+$$
+:::
+
+:::{.fragment .current-visible}
+O sistema possui única solução:
+
+- A sua matriz na FER não tem linhas que representa uma equação impossível;
+- A matriz na FER não tem variável livre.
+
+Solução: $x_1 = 2$, $x_2 = 1$, $x_3 = 2$.
+:::
+:::
+
+## Os Três Casos dos Sistemas Lineares
+
+Seja 
+$$
+Ax=b
+$$
+um sistema de equações lineares. 
+
+Temos uma das seguintes alternativas para as soluções do sistema:
+
+1. O sistema não possui solução;
+2. O sistema possui infinitas soluções; 
+3. O sistema possui única solução.
+
+## Sistemas homogêneous 
+
+O sistema 
+$$
+\begin{align*}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= 0,\\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= 0,\\
+\quad&\vdots\\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= 0.
+\end{align*}
+$$
+é dito [sistema homogêneo]{.bg-yellow}.
+
+A sua forma matricial é 
+$$
+Ax = 0
+$$
+
+Observe que $x_1=\cdots = x_n=0$ é sempre solução do sistema. Portanto, para sistema homogêneos temos uma 
+das seguintes alternativas:
+
+1. o sistema tem infinitas soluções;
+2. o sistema possui única solução.
