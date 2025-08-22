@@ -707,16 +707,47 @@ A = \begin{bmatrix}
 <p>A sua inversa é</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
-A^{-1} = \begin{bmatrix}
+B = \begin{bmatrix}
 -24 &amp; 18 &amp; 5 \\
 20 &amp; -15 &amp; -4 \\
 -5 &amp; 4 &amp; 1
 \end{bmatrix}.
 \]</span></p>
 </div>
-<p>Podemos verificar diretamente que <span class="math display">\[
-A\,A^{-1} = I_3.
+<p>Podemos verificar diretamente que</p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p><span class="math display">\[
+A B=
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+0 &amp; 1 &amp; 4 \\
+5 &amp; 6 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+-24 &amp; 18 &amp; 5 \\
+20 &amp; -15 &amp; -4 \\
+-5 &amp; 4 &amp; 1
+\end{bmatrix}
 \]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><span class="math display">\[
+AB=
+\begin{bmatrix}
+1\cdot(-24)+2\cdot 20+3\cdot(-5) &amp; 1\cdot 18+2\cdot(-15)+3\cdot 4 &amp; 1\cdot 5+2\cdot(-4)+3\cdot 1 \\
+0\cdot(-24)+1\cdot 20+4\cdot(-5) &amp; 0\cdot 18+1\cdot(-15)+4\cdot 4 &amp; 0\cdot 5+1\cdot(-4)+4\cdot 1 \\
+5\cdot(-24)+6\cdot 20+0\cdot(-5) &amp; 5\cdot 18+6\cdot(-15)+0\cdot 4 &amp; 5\cdot 5+6\cdot(-4)+0\cdot 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
 </section>
 <section id="exemplo-não-invertível" class="slide level3">
 <h3>Exemplo não invertível</h3>
@@ -745,14 +776,17 @@ c &amp; d
 \end{bmatrix} = \begin{bmatrix}
 a &amp; b \\
 a &amp; b
+\end{bmatrix}\neq \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
 \end{bmatrix}.
 \]</span></p>
 </div>
 <p>Repare que as duas linhas de <span class="math inline">\(BC\)</span> são iguais. Se <span class="math inline">\(B\)</span> tivesse uma inversa <span class="math inline">\(B^{-1}\)</span>, então tomando <span class="math inline">\(C=B^{-1}\)</span> teríamos <span class="math inline">\(BC=I_2\)</span>, mas <span class="math inline">\(I_2\)</span> tem linhas diferentes <span class="math inline">\([1\;0]\)</span> e <span class="math inline">\([0\;1]\)</span>, portanto não existe tal <span class="math inline">\(C\)</span>.</p>
 <p>Assim, <span class="math inline">\(B\)</span> não é invertível.</p>
 </section>
-<section id="encontrando-a-primeira-coluna-de-a-1" class="slide level3">
-<h3>Encontrando a primeira coluna de <span class="math inline">\(A^{-1}\)</span></h3>
+<section id="procedimento-geral-de-achar-a-matriz-inversa" class="slide level3">
+<h3>Procedimento geral de achar a matriz inversa</h3>
 <p>Considere <span class="math display">\[
 A = \begin{bmatrix}
 -2 &amp; 7 &amp; -3 \\
@@ -784,35 +818,53 @@ b_{31} &amp; b_{32} &amp; b_{33}
 0 &amp; 0 &amp; 1
 \end{bmatrix}
 \]</span></p>
-<p>A primeira coluna de <span class="math inline">\(AB\)</span> é <span class="math display">\[
-A\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}1\\0\\0\end{bmatrix}
-\]</span> porque <span class="math inline">\(AB=I_3\)</span>.</p>
-<div class="bg-yellow">
+</section>
+<section id="encontrando-a-primeira-coluna-de-a-1" class="slide level3">
+<h3>Encontrando a primeira coluna de <span class="math inline">\(A^{-1}\)</span></h3>
 <p><span class="math display">\[
-\begin{bmatrix}
+AB=\begin{bmatrix}
 -2 &amp; 7 &amp; -3 \\
 1 &amp; -4 &amp; 2 \\
 0 &amp; 2 &amp; -1
 \end{bmatrix}
-\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}1\\0\\0\end{bmatrix}
+\begin{bmatrix}
+b_{11} &amp; b_{12} &amp; b_{13} \\
+b_{21} &amp; b_{22} &amp; b_{23} \\
+b_{31} &amp; b_{32} &amp; b_{33}
+\end{bmatrix}=
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
 \]</span></p>
-</div>
-<p>Que equivale ao sistema linear</p>
+<p>Considerando a primeira coluna, obremos o seguinte sistema de equações lineares.</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
 \begin{align*}
 -2b_{11} + 7b_{21} - 3b_{31} &amp;= 1 \\[4pt]
 \;\;b_{11} - 4b_{21} + 2b_{31} &amp;= 0 \\[4pt]
 \;\;2b_{21} - b_{31} &amp;= 0
-\end{align*}=A\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\end{align*}
 \]</span></p>
 </div>
+<p>A forma matricial este sistema é <span class="math display">\[
+A\begin{bmatrix} b_{11} \\ b_{21} \\ b_{31}\end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 0\end{bmatrix}
+\]</span></p>
 <p>Resolver este sistema fornece a primeira coluna de <span class="math inline">\(A^{-1}\)</span>.</p>
 </section>
 <section id="a-primeira-coluna-de-b" class="slide level3">
 <h3>A primeira coluna de <span class="math inline">\(B\)</span></h3>
-<p>Cálculo por eliminação de Gauss (matriz aumentada):</p>
-<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{align*}
+-2b_{11} + 7b_{21} - 3b_{31} &amp;= 1 \\[4pt]
+\;\;b_{11} - 4b_{21} + 2b_{31} &amp;= 0 \\[4pt]
+\;\;2b_{21} - b_{31} &amp;= 0
+\end{align*}
+\]</span></p>
+<p>Cálculo por eliminação de Gauss-Jordan (matriz aumentada):</p>
+<div class="r-stack">
+<div class="fragment current-visible">
 <p><span class="math display">\[
 \left[\begin{array}{ccc|c}
 -2 &amp; 7 &amp; -3 &amp; 1\\
@@ -827,15 +879,19 @@ A\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}1\\0\\0\e
 \end{array}\right]
 \]</span></p>
 </div>
-<p>Aplicando <span class="math inline">\(R_2\leftarrow R_2 + 2R_1\)</span> e multiplicando <span class="math inline">\(R_2\)</span> por <span class="math inline">\(-1\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
+<div class="fragment current-visible">
+<p>Aplicando <span class="math inline">\(R_2\leftarrow L_2 + 2L_1\)</span> e multiplicando <span class="math inline">\(L_2\)</span> por <span class="math inline">\(-1\)</span>: <span class="math display">\[
 \left[\begin{array}{ccc|c}
+1 &amp; -4 &amp; 2 &amp; 0\\
+-2 &amp; 7 &amp; -3 &amp; 1\\
+0 &amp; 2 &amp; -1 &amp; 0
+\end{array}\right]
+\Rightarrow \left[\begin{array}{ccc|c}
 1 &amp; -4 &amp; 2 &amp; 0\\
 0 &amp; -1 &amp; 1 &amp; 1\\
 0 &amp; 2 &amp; -1 &amp; 0
 \end{array}\right]
-\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\Longrightarrow
 \left[\begin{array}{ccc|c}
 1 &amp; -4 &amp; 2 &amp; 0\\
 0 &amp; 1 &amp; -1 &amp; -1\\
@@ -843,19 +899,33 @@ A\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}1\\0\\0\e
 \end{array}\right]
 \]</span></p>
 </div>
-<p>Zerando acima e abaixo do pivô da segunda coluna: <span class="math inline">\(R_1\leftarrow R_1 + 4R_2\)</span>, <span class="math inline">\(R_3\leftarrow R_3 - 2R_2\)</span>:</p>
+<div class="fragment current-visible">
+<p>Zerando acima e abaixo do pivô da segunda coluna: <span class="math inline">\(L_1\leftarrow L_1 + 4L_2\)</span>, <span class="math inline">\(L_3\leftarrow L_3 - 2L_2\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
 \left[\begin{array}{ccc|c}
-1 &amp; 0 &amp; -2 &amp; -4\\
+1 &amp; -4 &amp; 2 &amp; 0\\
+0 &amp; 1 &amp; -1 &amp; -1\\
+0 &amp; 2 &amp; -1 &amp; 0
+\end{array}\right]
+\Rightarrow
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; -2 &amp; 0\\
 0 &amp; 1 &amp; -1 &amp; -1\\
 0 &amp; 0 &amp; 1 &amp; 2
 \end{array}\right]
 \]</span></p>
 </div>
-<p>Adicionar agora operações para limpar a terceira coluna: <span class="math inline">\(R_1\leftarrow R_1 + 2R_3\)</span> e <span class="math inline">\(R_2\leftarrow R_2 + R_3\)</span>:</p>
+</div>
+<div class="fragment">
+<p>Adicionar agora operações para limpar a terceira coluna: <span class="math inline">\(L_1\leftarrow L_1 + 2L_3\)</span> e <span class="math inline">\(L_2\leftarrow L_2 + L_3\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; -2 &amp; 0\\
+0 &amp; 1 &amp; -1 &amp; -1\\
+0 &amp; 0 &amp; 1 &amp; 2
+\end{array}\right]\Rightarrow
 \left[\begin{array}{ccc|c}
 1 &amp; 0 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 0 &amp; 1\\
@@ -863,29 +933,41 @@ A\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}1\\0\\0\e
 \end{array}\right]
 \]</span></p>
 </div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
 <p>Da matriz reduzida acima lemos diretamente <span class="math display">\[
 b_{11}=0,\\ b_{21}=1,\quad b_{31}=2.
 \]</span></p>
+</div>
+<div class="fragment current-visible">
 <p>Portanto a primeira coluna de <span class="math inline">\(B=A^{-1}\)</span> é <span class="math display">\[
 \begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}0\\1\\2\end{bmatrix}.
 \]</span></p>
+</div>
+</div>
 </section>
 <section id="encontrando-a-segunda-coluna-de-a-1" class="slide level3">
 <h3>Encontrando a segunda coluna de <span class="math inline">\(A^{-1}\)</span></h3>
-<p>A segunda coluna de <span class="math inline">\(AB\)</span> corresponde a <span class="math display">\[
-A\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\end{bmatrix},
-\]</span> pois <span class="math inline">\(AB=I_3\)</span>.</p>
-<div class="bg-yellow">
 <p><span class="math display">\[
-\begin{bmatrix}
+AB=\begin{bmatrix}
 -2 &amp; 7 &amp; -3 \\
 1 &amp; -4 &amp; 2 \\
 0 &amp; 2 &amp; -1
 \end{bmatrix}
-\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\end{bmatrix}
+\begin{bmatrix}
+b_{11} &amp; b_{12} &amp; b_{13} \\
+b_{21} &amp; b_{22} &amp; b_{23} \\
+b_{31} &amp; b_{32} &amp; b_{33}
+\end{bmatrix}=
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
 \]</span></p>
-</div>
-<p>Que equivale ao sistema linear</p>
+<p>Considerando a segunda coluna, obtemos o sistema linear:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
 \begin{aligned}
@@ -895,12 +977,16 @@ A\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\e
 \end{aligned}
 \]</span></p>
 </div>
+<p>A forma matricial deste sistema é <span class="math display">\[
+A\begin{bmatrix} b_{12} \\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}
+\]</span></p>
 <p>Resolver este sistema fornece a segunda coluna de <span class="math inline">\(A^{-1}\)</span>.</p>
 </section>
-<section id="a-segunda-linha-de-b" class="slide level3">
-<h3>A segunda linha de <span class="math inline">\(B\)</span></h3>
+<section id="a-segunda-coluna-de-b" class="slide level3">
+<h3>A segunda coluna de <span class="math inline">\(B\)</span></h3>
 <p>Cálculo por eliminação de Gauss (matriz aumentada):</p>
-<div class="bg-yellow">
+<div class="r-stack">
+<div class="fragment current-visible">
 <p><span class="math display">\[
 \left[\begin{array}{ccc|c}
 -2 &amp; 7 &amp; -3 &amp; 0\\
@@ -915,15 +1001,18 @@ A\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\e
 \end{array}\right]
 \]</span></p>
 </div>
-<p>Aplicando <span class="math inline">\(R_2\leftarrow R_2 + 2R_1\)</span> e multiplicando <span class="math inline">\(R_2\)</span> por <span class="math inline">\(-1\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
+<div class="fragment current-visible">
+<p>Aplicando <span class="math inline">\(R_2\leftarrow R_2 + 2R_1\)</span> e multiplicando <span class="math inline">\(R_2\)</span> por <span class="math inline">\(-1\)</span>: <span class="math display">\[
 \left[\begin{array}{ccc|c}
+1 &amp; -4 &amp; 2 &amp; 1\\
+-2 &amp; 7 &amp; -3 &amp; 0\\
+0 &amp; 2 &amp; -1 &amp; 0
+\end{array}\right]
+\Rightarrow \left[\begin{array}{ccc|c}
 1 &amp; -4 &amp; 2 &amp; 1\\
 0 &amp; -1 &amp; 1 &amp; 2\\
 0 &amp; 2 &amp; -1 &amp; 0
-\end{array}\right]
-\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\end{array}\right]\Longrightarrow
 \left[\begin{array}{ccc|c}
 1 &amp; -4 &amp; 2 &amp; 1\\
 0 &amp; 1 &amp; -1 &amp; -2\\
@@ -931,9 +1020,16 @@ A\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\e
 \end{array}\right]
 \]</span></p>
 </div>
+<div class="fragment current-visible">
 <p>Zerando acima e abaixo do pivô da segunda coluna: <span class="math inline">\(R_1\leftarrow R_1 + 4R_2\)</span>, <span class="math inline">\(R_3\leftarrow R_3 - 2R_2\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
+\left[\begin{array}{ccc|c}
+1 &amp; -4 &amp; 2 &amp; 1\\
+0 &amp; 1 &amp; -1 &amp; -2\\
+0 &amp; 2 &amp; -1 &amp; 0
+\end{array}\right]
+\Rightarrow
 \left[\begin{array}{ccc|c}
 1 &amp; 0 &amp; -2 &amp; -7\\
 0 &amp; 1 &amp; -1 &amp; -2\\
@@ -941,9 +1037,16 @@ A\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\e
 \end{array}\right]
 \]</span></p>
 </div>
+</div>
+<div class="fragment">
 <p>Limpeza final da terceira coluna: <span class="math inline">\(R_1\leftarrow R_1 + 2R_3\)</span>, <span class="math inline">\(R_2\leftarrow R_2 + R_3\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; -2 &amp; -7\\
+0 &amp; 1 &amp; -1 &amp; -2\\
+0 &amp; 0 &amp; 1 &amp; 4
+\end{array}\right]\Rightarrow
 \left[\begin{array}{ccc|c}
 1 &amp; 0 &amp; 0 &amp; 1\\
 0 &amp; 1 &amp; 0 &amp; 2\\
@@ -951,18 +1054,28 @@ A\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\e
 \end{array}\right]
 \]</span></p>
 </div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
 <p>Da matriz reduzida lemos diretamente <span class="math display">\[
 b_{12}=1,\quad b_{22}=2,\quad b_{32}=4.
 \]</span></p>
+</div>
+<div class="fragment current-visible">
 <p>Portanto a segunda coluna de <span class="math inline">\(B=A^{-1}\)</span> é <span class="math display">\[
 \begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}1\\2\\4\end{bmatrix}.
 \]</span></p>
+</div>
+</div>
 </section>
 <section id="encontrando-a-terceira-coluna-de-a-1" class="slide level3">
 <h3>Encontrando a terceira coluna de <span class="math inline">\(A^{-1}\)</span></h3>
-<p>A terceira coluna de <span class="math inline">\(AB\)</span> corresponde a <span class="math display">\[
+<p>A terceira coluna de <span class="math inline">\(AB\)</span> corresponde a</p>
+<p><span class="math display">\[
 A\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}0\\0\\1\end{bmatrix},
-\]</span> pois <span class="math inline">\(AB=I_3\)</span>.</p>
+\]</span></p>
+<p>pois <span class="math inline">\(AB=I_3\)</span>.</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
 \begin{bmatrix}
@@ -988,7 +1101,8 @@ A\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}0\\0\\1\e
 <section id="a-terceira-coluna-de-b" class="slide level3">
 <h3>A terceira coluna de <span class="math inline">\(B\)</span></h3>
 <p>Cálculo por eliminação de Gauss (matriz aumentada):</p>
-<div class="bg-yellow">
+<div class="r-stack">
+<div class="fragment current-visible">
 <p><span class="math display">\[
 \left[\begin{array}{ccc|c}
 -2 &amp; 7 &amp; -3 &amp; 0\\
@@ -1003,15 +1117,18 @@ A\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}0\\0\\1\e
 \end{array}\right]
 \]</span></p>
 </div>
-<p>Aplicando <span class="math inline">\(R_2\leftarrow R_2 + 2R_1\)</span> e multiplicando <span class="math inline">\(R_2\)</span> por <span class="math inline">\(-1\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
+<div class="fragment current-visible">
+<p>Aplicando <span class="math inline">\(R_2\leftarrow R_2 + 2R_1\)</span> e multiplicando <span class="math inline">\(R_2\)</span> por <span class="math inline">\(-1\)</span>: <span class="math display">\[
 \left[\begin{array}{ccc|c}
+1 &amp; -4 &amp; 2 &amp; 0\\
+-2 &amp; 7 &amp; -3 &amp; 0\\
+0 &amp; 2 &amp; -1 &amp; 1
+\end{array}\right]
+\Rightarrow \left[\begin{array}{ccc|c}
 1 &amp; -4 &amp; 2 &amp; 0\\
 0 &amp; -1 &amp; 1 &amp; 0\\
 0 &amp; 2 &amp; -1 &amp; 1
-\end{array}\right]
-\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\end{array}\right]\Longrightarrow
 \left[\begin{array}{ccc|c}
 1 &amp; -4 &amp; 2 &amp; 0\\
 0 &amp; 1 &amp; -1 &amp; 0\\
@@ -1019,32 +1136,66 @@ A\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}0\\0\\1\e
 \end{array}\right]
 \]</span></p>
 </div>
+<div class="fragment current-visible">
 <p>Zerando acima e abaixo do pivô da segunda coluna: <span class="math inline">\(R_1\leftarrow R_1 + 4R_2\)</span>, <span class="math inline">\(R_3\leftarrow R_3 - 2R_2\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}
+1 &amp; -4 &amp; 2 &amp; 0\\
+0 &amp; 1 &amp; -1 &amp; 0\\
+0 &amp; 2 &amp; -1 &amp; 1
+\end{array}\right]
+\Rightarrow
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; -2 &amp; 0\\
+0 &amp; 1 &amp; -1 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 5
+\end{array}\right]
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>Limpeza final da terceira coluna: <span class="math inline">\(R_1\leftarrow R_1 + 2R_3\)</span>, <span class="math inline">\(R_2\leftarrow R_2 + R_3\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
 \left[\begin{array}{ccc|c}
 1 &amp; 0 &amp; -2 &amp; 0\\
 0 &amp; 1 &amp; -1 &amp; 0\\
-0 &amp; 0 &amp; 1 &amp; 1
+0 &amp; 0 &amp; 1 &amp; 5
+\end{array}\right]\Rightarrow
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; 10\\
+0 &amp; 1 &amp; 0 &amp; 5\\
+0 &amp; 0 &amp; 1 &amp; 5
 \end{array}\right]
 \]</span></p>
 </div>
-<p>Limpeza final da terceira coluna: <span class="math inline">\(R_1\leftarrow R_1 + 2R_3\)</span>, <span class="math inline">\(R_2\leftarrow R_2 + R_3\)</span>:</p>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Da matriz reduzida lemos diretamente <span class="math display">\[
+b_{13}=10,\quad b_{23}=5,\quad b_{33}=5.
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Portanto a terceira coluna de <span class="math inline">\(B=A^{-1}\)</span> é <span class="math display">\[
+\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}10\\5\\5\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>A inversa de <span class="math inline">\(A\)</span> é</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}
-1 &amp; 0 &amp; 0 &amp; 2\\
-0 &amp; 1 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; 1 &amp; 1
-\end{array}\right]
+A^{-1} = \begin{bmatrix}
+0 &amp; 1 &amp; 2 \\
+1 &amp; 2 &amp; 1 \\
+2 &amp; 4 &amp; 1
+\end{bmatrix}.
 \]</span></p>
 </div>
-<p>Da matriz reduzida lemos diretamente <span class="math display">\[
-b_{13}=2,\quad b_{23}=1,\quad b_{33}=1.
-\]</span></p>
-<p>Portanto a terceira coluna de <span class="math inline">\(B=A^{-1}\)</span> é <span class="math display">\[
-\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}2\\1\\1\end{bmatrix}.
-\]</span></p>
+</div>
 </section>
 <section id="a-inversa-de-a" class="slide level3">
 <h3>A inversa de <span class="math inline">\(A\)</span></h3>
@@ -1078,7 +1229,9 @@ AB = \begin{bmatrix}
 </section>
 <section id="calcular-a-inversa-simultaneamente" class="slide level3">
 <h3>Calcular a inversa simultaneamente</h3>
-<p>Colocamos a matriz identidade ao lado de <span class="math inline">\(A\)</span> e aplicamos eliminação por linhas até obter <span class="math inline">\([I\;|\;A^{-1}]\)</span>.</p>
+<p>Na prática, nós fazemos estas três eliminações simultáneamente. Colocamos a matriz identidade ao lado de <span class="math inline">\(A\)</span> e aplicamos eliminação por linhas até obter <span class="math inline">\([I\;|\;A^{-1}]\)</span>.</p>
+<div class="r-stack">
+<div class="fragment current-visible">
 <div class="bg-yellow">
 <p><span class="math display">\[
 \left[\begin{array}{ccc|ccc}
@@ -1094,6 +1247,8 @@ AB = \begin{bmatrix}
 \end{array}\right]
 \]</span></p>
 </div>
+</div>
+<div class="fragment current-visible">
 <p>Aplicando <span class="math inline">\(R_2\leftarrow R_2 + 2R_1\)</span> e depois <span class="math inline">\(R_2\leftarrow -R_2\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
@@ -1110,6 +1265,8 @@ AB = \begin{bmatrix}
 \end{array}\right]
 \]</span></p>
 </div>
+</div>
+<div class="fragment current-visible">
 <p>Zerando a coluna 2: <span class="math inline">\(R_1\leftarrow R_1 + 4R_2\)</span>, <span class="math inline">\(R_3\leftarrow R_3 - 2R_2\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
@@ -1120,6 +1277,8 @@ AB = \begin{bmatrix}
 \end{array}\right]
 \]</span></p>
 </div>
+</div>
+<div class="fragment">
 <p>Limpeza final da coluna 3: <span class="math inline">\(R_1\leftarrow R_1 + 2R_3\)</span>, <span class="math inline">\(R_2\leftarrow R_2 + R_3\)</span>:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
@@ -1130,57 +1289,98 @@ AB = \begin{bmatrix}
 \end{array}\right]
 \]</span></p>
 </div>
-<p>Da matriz final lemos imediatamente :::{.bg-yellow} <span class="math display">\[
+</div>
+</div>
+<div class="fragment">
+<p>Da matriz final lemos imediatamente</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
 A^{-1} = \begin{bmatrix} 0 &amp; 1 &amp; 2 \\
 1 &amp; 2 &amp; 1 \\
 2 &amp; 4 &amp; 1 \end{bmatrix}.
-\]</span> :::</p>
-<p>Verificação rápida: multiplicando obtém-se <span class="math inline">\(A\,A^{-1}=I_3\)</span>.</p>
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="um-exemplo-não-invertível" class="slide level3">
+<h3>Um exemplo não invertível</h3>
+<p>Considere a matriz</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+C=\begin{bmatrix}1 &amp; 2 &amp; 3\\ 2 &amp; 4 &amp; 6\\ 0 &amp; 1 &amp; 1\end{bmatrix}.
+\]</span></p>
+</div>
+<p>A matriz aumentada <span class="math inline">\([C\mid I_3]\)</span> é</p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<div class="bg-yellow">
+<p><span class="math display">\[
+\left[\begin{array}{ccc|ccc}
+1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
+2 &amp; 4 &amp; 6 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right]
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Aplicando <span class="math inline">\(R_2\leftarrow R_2 - 2R_1\)</span> obtemos</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\left[\begin{array}{ccc|ccc}
+1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -2 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right]
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Trocando <span class="math inline">\(R_2\)</span> e <span class="math inline">\(R_3\)</span> para prosseguir com a eliminação:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\left[\begin{array}{ccc|ccc}
+1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -2 &amp; 1 &amp; 0
+\end{array}\right]
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>Zerando a entrada (1,2) com <span class="math inline">\(R_1\leftarrow R_1 - 2R_2\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\left[\begin{array}{ccc|ccc}
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; -2 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; -2 &amp; 1 &amp; 0
+\end{array}\right]
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Repare que na forma escalonada reduzida a parte esquerda apresenta uma linha nula. Essa linha nula na parte esquerda implica que não se alcança <span class="math inline">\([I_3\mid C^{-1}]\)</span>. Portanto <span class="math inline">\(C\)</span> é singular (não invertível).</p>
+</div>
 </section>
 <section id="propriedades-fundamentais-da-inversa" class="slide level3">
 <h3>Propriedades fundamentais da inversa</h3>
-<p>Algumas propriedades importantes da matriz inversa (supondo <span class="math inline">\(A,B\)</span> matrizes quadradas invertíveis de mesma ordem e <span class="math inline">\(k\in\mathbb{R}\setminus\{0\}\)</span>):</p>
+<p>Algumas propriedades (A,B invertíveis de mesma ordem; <span class="math inline">\(k\in\mathbb{R}\)</span>, <span class="math inline">\(k\neq 0\)</span>):</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li><p>Unicidade: se existe <span class="math inline">\(A^{-1}\)</span>, então é única.</p></li>
-<li><p>Involução:</p></li>
+<li>Unicidade: <span class="math inline">\(A^{-1}\)</span> é única.</li>
+<li>Involução: <span class="math inline">\((A^{-1})^{-1}=A\)</span>.</li>
+<li>Produto: <span class="math inline">\((AB)^{-1}=B^{-1}A^{-1}\)</span>.</li>
 </ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-(A^{-1})^{-1} = A.
-\]</span></p>
-</div>
+</div><div class="column" style="width:50%;">
 <ul>
-<li>Inversa do produto:</li>
+<li>Transposta: <span class="math inline">\((A^{T})^{-1}=(A^{-1})^{T}\)</span>.</li>
+<li>Escalar: <span class="math inline">\((kA)^{-1}=\frac{1}{k}A^{-1}\)</span>.</li>
+<li>Potências: <span class="math inline">\((A^{m})^{-1}=(A^{-1})^{m}\)</span>, <span class="math inline">\(m\in\mathbb{Z}\)</span>.</li>
 </ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-(AB)^{-1} = B^{-1}A^{-1}.
-\]</span></p>
-</div>
-<ul>
-<li>Inversa da transposta:</li>
-</ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-(A^{T})^{-1} = (A^{-1})^{T}.
-\]</span></p>
-</div>
-<ul>
-<li>Escalar:</li>
-</ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-(kA)^{-1} = \frac{1}{k}A^{-1},\quad k\neq 0.
-\]</span></p>
-</div>
-<ul>
-<li>Potências:</li>
-</ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-(A^{m})^{-1} = (A^{-1})^{m},\quad m\in\mathbb{Z}.
-\]</span></p>
-</div>
+</div></div>
 <p>Estas regras permitem manipular inversas em expressões algébricas e resolver sistemas de forma sistemática.</p>
 </section>
 <section id="usando-a-inversa-para-resolver-sistemas-lineares" class="slide level3">
@@ -1197,6 +1397,8 @@ Ax = b
 x = A^{-1}b.
 \]</span></p>
 </div>
+<div class="r-stack">
+<div class="fragment current-visible">
 <p>Exemplo: considere</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
@@ -1205,12 +1407,18 @@ A = \begin{bmatrix}-2 &amp; 7 &amp; -3 \\ 1 &amp; -4 &amp; 2 \\ 0 &amp; 2 &amp; 
 \qquad b = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}.
 \]</span></p>
 </div>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
 <p>Calculamos</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
 x = A^{-1}b = \begin{bmatrix}0 &amp; 1 &amp; 2 \\ 1 &amp; 2 &amp; 1 \\ 2 &amp; 4 &amp; 1\end{bmatrix}\begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix} = \begin{bmatrix}8 \\ 8 \\ 13\end{bmatrix}.
 \]</span></p>
 </div>
+</div>
+</div>
+<div class="fragment">
 <p>Verificação direta:</p>
 <div class="bg-yellow">
 <p><span class="math display">\[
@@ -1218,6 +1426,8 @@ A x = \begin{bmatrix}-2 &amp; 7 &amp; -3 \\ 1 &amp; -4 &amp; 2 \\ 0 &amp; 2 &amp
 \]</span></p>
 </div>
 <p>Assim, <span class="math inline">\(x=\begin{bmatrix}8\\8\\13\end{bmatrix}\)</span> é a solução única de <span class="math inline">\(Ax=b\)</span>.</p>
+</div>
+</div>
 
 
 </section>
