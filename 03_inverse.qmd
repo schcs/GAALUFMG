@@ -1,0 +1,654 @@
+---
+title: "Matriz inversa"
+author: "Csaba Schneider"
+date: "agosto de 2025"
+format: 
+    revealjs:
+        slide-level: 3
+        css: styles.css
+---
+
+
+
+### Definição de Matriz Inversa
+
+::: {#def-inv}
+Uma [matriz inversa]{.text-red} de uma matriz quadrada $A\in\mathbb{R}^{n\times n}$ é uma matriz $B$ tal que
+$$
+AB = BA = I_n.
+$$
+Se tal $B$ existe, dizemos que $A$ é [invertível]{.bg-yellow} (ou não singular) e escrevemos $B = A^{-1}$.
+:::
+
+:::{.bg-yellow}
+$$
+A^{-1} 	\mbox{ é a matriz tal que } A A^{-1} = A^{-1} A = I_n.
+$$
+:::
+
+### Exemplo $3\times 3$
+
+Considere
+$$
+A = \begin{bmatrix}
+1 & 2 & 3 \\
+0 & 1 & 4 \\
+5 & 6 & 0
+\end{bmatrix}.
+$$
+
+
+A sua inversa é
+
+:::{.bg-yellow}
+$$
+A^{-1} = \begin{bmatrix}
+-24 & 18 & 5 \\
+20 & -15 & -4 \\
+-5 & 4 & 1
+\end{bmatrix}.
+$$
+:::
+
+Podemos verificar diretamente que
+$$
+A\,A^{-1} = I_3.
+$$
+
+### Exemplo não invertível
+
+Considere
+$$
+B = \begin{bmatrix}
+1 & 0 \\
+1 & 0
+\end{bmatrix},
+\qquad C = \begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}.
+$$
+
+Multiplicando:
+
+:::{.bg-yellow}
+$$
+BC = \begin{bmatrix}
+1 & 0 \\
+1 & 0
+\end{bmatrix}\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix} = \begin{bmatrix}
+1\cdot a + 0\cdot c & 1\cdot b + 0\cdot d \\
+1\cdot a + 0\cdot c & 1\cdot b + 0\cdot d
+\end{bmatrix} = \begin{bmatrix}
+a & b \\
+a & b
+\end{bmatrix}.
+$$
+:::
+
+Repare que as duas linhas de $BC$ são iguais. Se $B$ tivesse uma inversa $B^{-1}$, então tomando $C=B^{-1}$ teríamos $BC=I_2$, mas $I_2$ tem linhas diferentes $[1\;0]$ e $[0\;1]$, portanto não existe tal $C$.
+
+Assim, $B$ não é invertível.
+
+### Encontrando a primeira coluna de $A^{-1}$
+
+Considere
+$$
+A = \begin{bmatrix}
+-2 & 7 & -3 \\
+1 & -4 & 2 \\
+0 & 2 & -1
+\end{bmatrix}.
+$$
+
+Assuma que $A$ é invertível que a sua inversa é 
+$$
+B=\begin{bmatrix} 
+b_{11} & b_{12} & b_{13} \\ 
+b_{21} & b_{22} & b_{23} \\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}
+$$
+
+Isso quer dizer que 
+$$
+AB=\begin{bmatrix}
+-2 & 7 & -3 \\
+1 & -4 & 2 \\
+0 & 2 & -1
+\end{bmatrix}
+\begin{bmatrix} 
+b_{11} & b_{12} & b_{13} \\ 
+b_{21} & b_{22} & b_{23} \\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+A primeira coluna de $AB$ é
+$$
+A\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}1\\0\\0\end{bmatrix}
+$$
+porque $AB=I_3$.
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+-2 & 7 & -3 \\
+1 & -4 & 2 \\
+0 & 2 & -1
+\end{bmatrix}
+\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}1\\0\\0\end{bmatrix}
+$$
+:::
+
+Que equivale ao sistema linear
+
+:::{.bg-yellow}
+$$
+\begin{align*}
+-2b_{11} + 7b_{21} - 3b_{31} &= 1 \\[4pt]
+\;\;b_{11} - 4b_{21} + 2b_{31} &= 0 \\[4pt]
+\;\;2b_{21} - b_{31} &= 0
+\end{align*}=A\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+$$
+:::
+
+Resolver este sistema fornece a primeira coluna de $A^{-1}$.
+
+### A primeira coluna de $B$
+
+Cálculo por eliminação de Gauss (matriz aumentada):
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+-2 & 7 & -3 & 1\\
+1 & -4 & 2 & 0\\
+0 & 2 & -1 & 0
+\end{array}\right]
+\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 0\\
+-2 & 7 & -3 & 1\\
+0 & 2 & -1 & 0
+\end{array}\right]
+$$
+:::
+
+Aplicando $R_2\leftarrow R_2 + 2R_1$ e multiplicando $R_2$ por $-1$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 0\\
+0 & -1 & 1 & 1\\
+0 & 2 & -1 & 0
+\end{array}\right]
+\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 0\\
+0 & 1 & -1 & -1\\
+0 & 2 & -1 & 0
+\end{array}\right]
+$$
+:::
+
+Zerando acima e abaixo do pivô da segunda coluna: $R_1\leftarrow R_1 + 4R_2$, $R_3\leftarrow R_3 - 2R_2$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & 0 & -2 & -4\\
+0 & 1 & -1 & -1\\
+0 & 0 & 1 & 2
+\end{array}\right]
+$$
+:::
+
+Adicionar agora operações para limpar a terceira coluna: $R_1\leftarrow R_1 + 2R_3$ e $R_2\leftarrow R_2 + R_3$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 2
+\end{array}\right]
+$$
+:::
+
+Da matriz reduzida acima lemos diretamente
+$$
+b_{11}=0,\\ b_{21}=1,\quad b_{31}=2.
+$$
+
+Portanto a primeira coluna de $B=A^{-1}$ é
+$$
+\begin{bmatrix}b_{11}\\ b_{21}\\ b_{31}\end{bmatrix} = \begin{bmatrix}0\\1\\2\end{bmatrix}.
+$$
+
+### Encontrando a segunda coluna de $A^{-1}$
+
+A segunda coluna de $AB$ corresponde a
+$$
+A\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\end{bmatrix},
+$$
+pois $AB=I_3$.
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+-2 & 7 & -3 \\
+1 & -4 & 2 \\
+0 & 2 & -1
+\end{bmatrix}
+\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}0\\1\\0\end{bmatrix}
+$$
+:::
+
+Que equivale ao sistema linear
+
+:::{.bg-yellow}
+$$
+\begin{aligned}
+-2b_{12} + 7b_{22} - 3b_{32} &= 0 \\
+\;\;b_{12} - 4b_{22} + 2b_{32} &= 1 \\
+\;\;2b_{22} - b_{32} &= 0
+\end{aligned}
+$$
+:::
+
+Resolver este sistema fornece a segunda coluna de $A^{-1}$.
+
+### A segunda linha de $B$
+
+Cálculo por eliminação de Gauss (matriz aumentada):
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+-2 & 7 & -3 & 0\\
+1 & -4 & 2 & 1\\
+0 & 2 & -1 & 0
+\end{array}\right]
+\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 1\\
+-2 & 7 & -3 & 0\\
+0 & 2 & -1 & 0
+\end{array}\right]
+$$
+:::
+
+Aplicando $R_2\leftarrow R_2 + 2R_1$ e multiplicando $R_2$ por $-1$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 1\\
+0 & -1 & 1 & 2\\
+0 & 2 & -1 & 0
+\end{array}\right]
+\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 1\\
+0 & 1 & -1 & -2\\
+0 & 2 & -1 & 0
+\end{array}\right]
+$$
+:::
+
+Zerando acima e abaixo do pivô da segunda coluna: $R_1\leftarrow R_1 + 4R_2$, $R_3\leftarrow R_3 - 2R_2$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & 0 & -2 & -7\\
+0 & 1 & -1 & -2\\
+0 & 0 & 1 & 4
+\end{array}\right]
+$$
+:::
+
+Limpeza final da terceira coluna: $R_1\leftarrow R_1 + 2R_3$, $R_2\leftarrow R_2 + R_3$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & 0 & 0 & 1\\
+0 & 1 & 0 & 2\\
+0 & 0 & 1 & 4
+\end{array}\right]
+$$
+:::
+
+Da matriz reduzida lemos diretamente
+$$
+b_{12}=1,\quad b_{22}=2,\quad b_{32}=4.
+$$
+
+Portanto a segunda coluna de $B=A^{-1}$ é
+$$
+\begin{bmatrix}b_{12}\\ b_{22}\\ b_{32}\end{bmatrix} = \begin{bmatrix}1\\2\\4\end{bmatrix}.
+$$
+
+### Encontrando a terceira coluna de $A^{-1}$
+
+A terceira coluna de $AB$ corresponde a
+$$
+A\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}0\\0\\1\end{bmatrix},
+$$
+pois $AB=I_3$.
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+-2 & 7 & -3 \\
+1 & -4 & 2 \\
+0 & 2 & -1
+\end{bmatrix}
+\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}0\\0\\1\end{bmatrix}
+$$
+:::
+
+Que equivale ao sistema linear
+
+:::{.bg-yellow}
+$$
+\begin{aligned}
+-2b_{13} + 7b_{23} - 3b_{33} &= 0 \\
+\;\;b_{13} - 4b_{23} + 2b_{33} &= 0 \\
+\;\;2b_{23} - b_{33} &= 1
+\end{aligned}
+$$
+:::
+
+Resolver este sistema fornece a terceira coluna de $A^{-1}$.
+
+### A terceira coluna de $B$
+
+Cálculo por eliminação de Gauss (matriz aumentada):
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+-2 & 7 & -3 & 0\\
+1 & -4 & 2 & 0\\
+0 & 2 & -1 & 1
+\end{array}\right]
+\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 0\\
+-2 & 7 & -3 & 0\\
+0 & 2 & -1 & 1
+\end{array}\right]
+$$
+:::
+
+Aplicando $R_2\leftarrow R_2 + 2R_1$ e multiplicando $R_2$ por $-1$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 0\\
+0 & -1 & 1 & 0\\
+0 & 2 & -1 & 1
+\end{array}\right]
+\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\left[\begin{array}{ccc|c}
+1 & -4 & 2 & 0\\
+0 & 1 & -1 & 0\\
+0 & 2 & -1 & 1
+\end{array}\right]
+$$
+:::
+
+Zerando acima e abaixo do pivô da segunda coluna: $R_1\leftarrow R_1 + 4R_2$, $R_3\leftarrow R_3 - 2R_2$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & 0 & -2 & 0\\
+0 & 1 & -1 & 0\\
+0 & 0 & 1 & 1
+\end{array}\right]
+$$
+:::
+
+Limpeza final da terceira coluna: $R_1\leftarrow R_1 + 2R_3$, $R_2\leftarrow R_2 + R_3$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|c}
+1 & 0 & 0 & 2\\
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1
+\end{array}\right]
+$$
+:::
+
+Da matriz reduzida lemos diretamente
+$$
+b_{13}=2,\quad b_{23}=1,\quad b_{33}=1.
+$$
+
+Portanto a terceira coluna de $B=A^{-1}$ é
+$$
+\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}2\\1\\1\end{bmatrix}.
+$$
+
+
+### A inversa de $A$
+
+Portanto, a inversa calculada a partir das colunas obtidas é:
+
+:::{.bg-yellow}
+$$
+A^{-1} = \begin{bmatrix}
+0 & 1 & 2 \\
+1 & 2 & 1 \\
+2 & 4 & 1
+\end{bmatrix}.
+$$
+:::
+
+Verificação: 
+$$
+AB = \begin{bmatrix}
+1 & 2 & 3 \\
+0 & 1 & 4 \\
+5 & 6 & 0
+\end{bmatrix}\begin{bmatrix}
+0 & 1 & 2 \\
+1 & 2 & 1 \\
+2 & 4 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+
+### Calcular a inversa simultaneamente
+
+Colocamos a matriz identidade ao lado de $A$ e aplicamos eliminação por linhas até obter $[I\;|\;A^{-1}]$.
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|ccc}
+-2 & 7 & -3 & 1 & 0 & 0 \\
+1 & -4 & 2 & 0 & 1 & 0 \\
+0 & 2 & -1 & 0 & 0 & 1
+\end{array}\right]
+\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\left[\begin{array}{ccc|ccc}
+1 & -4 & 2 & 0 & 1 & 0 \\
+-2 & 7 & -3 & 1 & 0 & 0 \\
+0 & 2 & -1 & 0 & 0 & 1
+\end{array}\right]
+$$
+:::
+
+Aplicando $R_2\leftarrow R_2 + 2R_1$ e depois $R_2\leftarrow -R_2$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|ccc}
+1 & -4 & 2 & 0 & 1 & 0 \\
+0 & -1 & 1 & 1 & 2 & 0 \\
+0 & 2 & -1 & 0 & 0 & 1
+\end{array}\right]
+\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\left[\begin{array}{ccc|ccc}
+1 & -4 & 2 & 0 & -1 & 0 \\
+0 & 1 & -1 & -1 & -2 & 0 \\
+0 & 2 & -1 & 0 & 0 & 1
+\end{array}\right]
+$$
+:::
+
+Zerando a coluna 2: $R_1\leftarrow R_1 + 4R_2$, $R_3\leftarrow R_3 - 2R_2$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|ccc}
+1 & 0 & -2 & -4 & -7 & 0 \\
+0 & 1 & -1 & -1 & -2 & 0 \\
+0 & 0 & 1 & 2 & 4 & 1
+\end{array}\right]
+$$
+:::
+
+Limpeza final da coluna 3: $R_1\leftarrow R_1 + 2R_3$, $R_2\leftarrow R_2 + R_3$:
+
+:::{.bg-yellow}
+$$
+\left[\begin{array}{ccc|ccc}
+1 & 0 & 0 & 0 & 1 & 2 \\
+0 & 1 & 0 & 1 & 2 & 1 \\
+0 & 0 & 1 & 2 & 4 & 1
+\end{array}\right]
+$$
+:::
+
+Da matriz final lemos imediatamente
+:::{.bg-yellow}
+$$
+A^{-1} = \begin{bmatrix} 0 & 1 & 2 \\
+1 & 2 & 1 \\
+2 & 4 & 1 \end{bmatrix}.
+$$
+:::
+
+Verificação rápida: multiplicando obtém-se $A\,A^{-1}=I_3$.
+
+### Propriedades fundamentais da inversa
+
+Algumas propriedades importantes da matriz inversa (supondo $A,B$ matrizes quadradas invertíveis de mesma ordem e $k\in\mathbb{R}\setminus\{0\}$):
+
+- Unicidade: se existe $A^{-1}$, então é única.
+
+- Involução:
+
+:::{.bg-yellow}
+$$
+(A^{-1})^{-1} = A.
+$$
+:::
+
+- Inversa do produto:
+
+:::{.bg-yellow}
+$$
+(AB)^{-1} = B^{-1}A^{-1}.
+$$
+:::
+
+- Inversa da transposta:
+
+:::{.bg-yellow}
+$$
+(A^{T})^{-1} = (A^{-1})^{T}.
+$$
+:::
+
+- Escalar:
+
+:::{.bg-yellow}
+$$
+(kA)^{-1} = \frac{1}{k}A^{-1},\quad k\neq 0.
+$$
+:::
+
+- Potências:
+
+:::{.bg-yellow}
+$$
+(A^{m})^{-1} = (A^{-1})^{m},\quad m\in\mathbb{Z}.
+$$
+:::
+
+
+Estas regras permitem manipular inversas em expressões algébricas e resolver sistemas de forma sistemática.
+
+### Usando a inversa para resolver sistemas lineares
+
+Se $A$ é invertível, o sistema linear
+
+:::{.bg-yellow}
+$$
+Ax = b
+$$
+:::
+
+possui solução única dada por
+
+:::{.bg-yellow}
+$$
+x = A^{-1}b.
+$$
+:::
+
+Exemplo: considere
+
+:::{.bg-yellow}
+$$
+A = \begin{bmatrix}-2 & 7 & -3 \\ 1 & -4 & 2 \\ 0 & 2 & -1\end{bmatrix},
+\qquad A^{-1} = \begin{bmatrix}0 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 4 & 1\end{bmatrix},
+\qquad b = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}.
+$$
+:::
+
+Calculamos
+
+:::{.bg-yellow}
+$$
+x = A^{-1}b = \begin{bmatrix}0 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 4 & 1\end{bmatrix}\begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix} = \begin{bmatrix}8 \\ 8 \\ 13\end{bmatrix}.
+$$
+:::
+
+Verificação direta:
+
+:::{.bg-yellow}
+$$
+A x = \begin{bmatrix}-2 & 7 & -3 \\ 1 & -4 & 2 \\ 0 & 2 & -1\end{bmatrix}\begin{bmatrix}8 \\ 8 \\ 13\end{bmatrix} = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix} = b.
+$$
+:::
+
+Assim, $x=\begin{bmatrix}8\\8\\13\end{bmatrix}$ é a solução única de $Ax=b$.
+
+
+
+
+

@@ -1,0 +1,108 @@
+---
+title: "Determinante de uma matriz"
+author: "Csaba Schneider"
+date: "agosto de 2025"
+format:
+    revealjs:
+        slide-level: 2
+        css: styles.css
+---
+
+## Definição e exemplos iniciais
+
+O determinante é uma função que associa a cada matriz quadrada $A\in\mathbb{R}^{n\times n}$ um número real, denotado por $\det(A)$ ou $\operatorname{det}(A)$, e que codifica propriedades geométricas e algébricas importantes (volume, invertibilidade, etc.).
+
+- Para $1\times1$, se $A=[a]$ então
+
+:::{.bg-yellow}
+$$\det(A)=a.$$ 
+:::
+
+- Para $2\times2$, se
+
+:::{.bg-yellow}
+$$A=\begin{bmatrix}a_{11} & a_{12} \\\ a_{21} & a_{22}\end{bmatrix},$$
+:::
+então
+
+:::{.bg-yellow}
+$$\det(A)=a_{11}a_{22}-a_{12}a_{21}.$$ 
+:::
+
+## Menores e cofatores
+
+Para $A=(a_{ij})_{n\times n}$, o menor de $a_{ij}$, denotado $\tilde{A}_{ij}$, é a submatriz $(n-1)\times(n-1)$ obtida eliminando a linha $i$ e a coluna $j$. O cofator correspondente é
+
+:::{.bg-yellow}
+$$\tilde{a}_{ij}=(-1)^{i+j}\det(\tilde{A}_{ij}).$$
+:::
+
+O sinal dos cofatores segue o padrão
+
+:::{.bg-yellow}
+$$\begin{bmatrix} + & - & + & - & \cdots \\ - & + & - & + & \cdots \\ + & - & + & - & \cdots \\ \vdots & & & & \ddots \end{bmatrix}.$$ 
+:::
+
+## Desenvolvimento por cofatores
+
+O determinante pode ser calculado expandindo por qualquer linha ou qualquer coluna. Por exemplo, pelo desenvolvimento pela primeira linha:
+
+:::{.bg-yellow}
+$$\det(A)=\sum_{j=1}^{n} a_{1j}\tilde{a}_{1j} = a_{11}\tilde{a}_{11}+a_{12}\tilde{a}_{12}+\cdots+a_{1n}\tilde{a}_{1n}.$$ 
+:::
+
+Exemplo (3\times3):
+
+:::{.bg-yellow}
+$$\det\begin{bmatrix}a_{11}&a_{12}&a_{13}\\ a_{21}&a_{22}&a_{23}\\ a_{31}&a_{32}&a_{33}\end{bmatrix}=a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{23}a_{31})+a_{13}(a_{21}a_{32}-a_{22}a_{31}).$$
+:::
+
+## Propriedades importantes
+
+- Linha/coluna linear: o determinante é linear em cada linha (mantendo as outras fixas).
+- Troca de linhas: trocar duas linhas muda o sinal do determinante.
+- Multiplicar uma linha por $\alpha$ multiplica o determinante por $\alpha$.
+- Adicionar múltiplo de uma linha a outra não altera o determinante.
+- Triangular: se $A$ é triangular (superior ou inferior), então $\det(A)$ é o produto dos elementos da diagonal principal.
+- Critério de invertibilidade: $A$ é invertível sse $\det(A)\neq0$.
+- Produto: $\det(AB)=\det(A)\det(B)$.
+- Transposta: $\det(A^T)=\det(A)$.
+
+
+:::{.bg-yellow}
+$$\det(I_n)=1, \qquad A\text{ invertível }\iff \det(A)\neq 0.$$ 
+:::
+
+## Cálculo prático e operações de linha
+
+Usar operações elementares por linhas (Gauss) facilita o cálculo: ao transformar $A$ em matriz triangular por operações que preservam/ajustam o determinante, é rápido obter $\det(A)$ como produto da diagonal, lembrando o efeito de cada operação sobre o valor do determinante.
+
+Exemplo (retirado de "determinantes.md"):
+
+:::{.bg-yellow}
+$$A=\begin{bmatrix}0&0&0&-3\\ 1&2&3&4\\ -1&3&2&5\\ 2&1&-2&0\end{bmatrix}.$$ 
+Desenvolvendo pela primeira linha e calculando o cofator correspondente obtém-se $\det(A)=-75$.
+:::
+
+## Exemplo: matriz triangular
+
+Se
+
+:::{.bg-yellow}
+$$A=\begin{bmatrix}a_{11}&0&0\\ a_{21}&a_{22}&0\\ a_{31}&a_{32}&a_{33}\end{bmatrix},$$
+:::
+então
+
+:::{.bg-yellow}
+$$\det(A)=a_{11}a_{22}a_{33}.$$ 
+:::
+
+## Uso do determinante
+
+- Decide se $A$ é invertível.
+- Serve para calcular a inversa por adjunta: $A^{-1}=\dfrac{1}{\det(A)}\operatorname{adj}(A)$ quando $\det(A)\neq0$.
+- Interpretação geométrica: em $\mathbb{R}^n$, $|\det(A)|$ é o fator de escala do volume por $A$.
+
+---
+
+Referências e material adicional: ver `determinantes.md` para mais exemplos e demonstrações completas.
