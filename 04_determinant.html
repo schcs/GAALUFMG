@@ -682,8 +682,8 @@ Csaba Schneider
 
   <p class="date">2025-01-01</p>
 </section>
-<section id="definição-e-exemplos-iniciais" class="slide level2">
-<h2>Definição e exemplos iniciais</h2>
+<section id="definição-e-exemplos-iniciais" class="slide level3">
+<h3>Definição e exemplos iniciais</h3>
 <p>O determinante é uma função que associa a cada matriz quadrada <span class="math inline">\(A\in\mathbb{R}^{n\times n}\)</span> um número real, denotado por <span class="math inline">\(\det(A)\)</span> ou <span class="math inline">\(\operatorname{det}(A)\)</span>, e que codifica propriedades geométricas e algébricas importantes (volume, invertibilidade, etc.).</p>
 <ul>
 <li>Para <span class="math inline">\(1\times1\)</span>, se <span class="math inline">\(A=[a]\)</span> então</li>
@@ -702,74 +702,603 @@ Csaba Schneider
 <p><span class="math display">\[\det(A)=a_{11}a_{22}-a_{12}a_{21}.\]</span></p>
 </div>
 </section>
-<section id="menores-e-cofatores" class="slide level2">
-<h2>Menores e cofatores</h2>
-<p>Para <span class="math inline">\(A=(a_{ij})_{n\times n}\)</span>, o menor de <span class="math inline">\(a_{ij}\)</span>, denotado <span class="math inline">\(\tilde{A}_{ij}\)</span>, é a submatriz <span class="math inline">\((n-1)\times(n-1)\)</span> obtida eliminando a linha <span class="math inline">\(i\)</span> e a coluna <span class="math inline">\(j\)</span>. O cofator correspondente é</p>
+<section id="menores-e-cofatores" class="slide level3">
+<h3>Menores e cofatores</h3>
+<div class="fragment">
+<p>Para a matriz <span class="math inline">\(A=(a_{ij})_{n\times n}\)</span>, o menor de <span class="math inline">\(a_{ij}\)</span>, denotado <span class="math inline">\(\tilde{A}_{ij}\)</span>, é a submatriz <span class="math inline">\((n-1)\times(n-1)\)</span> obtida eliminando a linha <span class="math inline">\(i\)</span> e a coluna <span class="math inline">\(j\)</span>. O cofator é</p>
 <div class="bg-yellow">
-<p><span class="math display">\[\tilde{a}_{ij}=(-1)^{i+j}\det(\tilde{A}_{ij}).\]</span></p>
+<p><span class="math display">\[
+\tilde{a}_{ij}=(-1)^{i+j}\det(\tilde{A}_{ij}).
+\]</span></p>
 </div>
-<p>O sinal dos cofatores segue o padrão</p>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Exemplo simbólico (<span class="math inline">\(3\times3\)</span>):</p>
 <div class="bg-yellow">
-<p><span class="math display">\[\begin{bmatrix} + &amp; - &amp; + &amp; - &amp; \cdots \\ - &amp; + &amp; - &amp; + &amp; \cdots \\ + &amp; - &amp; + &amp; - &amp; \cdots \\ \vdots &amp; &amp; &amp; &amp; \ddots \end{bmatrix}.\]</span></p>
+<p><span class="math display">\[
+\require{cancel}
+A=\begin{bmatrix}
+\cancel{a_{11}} &amp; \cancel{a_{12}} &amp; \cancel{a_{13}} \\
+a_{21} &amp; \cancel{a_{22}} &amp; a_{23} \\
+a_{31} &amp; \cancel{a_{32}} &amp; a_{33}
+\end{bmatrix},\qquad
+\tilde{A}_{12}=\begin{bmatrix}a_{21} &amp; a_{23}\\ a_{31} &amp; a_{33}\end{bmatrix},
+\qquad
+\tilde a_{12}=(-1)^{1+2} a_{21}a_{33}-a_{23}a_{31}=-a_{21}a_{33}+a_{23}a_{31}
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Exemplo numérico rápido:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+A=\begin{bmatrix}\cancel 1 &amp; \cancel 2 &amp; \cancel 3\\ \cancel 4 &amp; 5 &amp; 6\\ \cancel7 &amp; 8 &amp; 9\end{bmatrix},\qquad
+\tilde{A}_{11}=\begin{bmatrix}5 &amp; 6\\ 8 &amp; 9\end{bmatrix},\quad
+\det(\tilde{A}_{11})=5\cdot9-6\cdot8=-3,\quad
+\tilde{a}_{11}=(-1)^{1+1}\det(\tilde{A}_{11})=-3.
+\]</span></p>
+</div>
+<p>Portanto o cofator de <span class="math inline">\(a_{11}\)</span> é</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\tilde{a}_{11}=(-1)^{1+1}(-3) = -3.
+\]</span></p>
+</div>
+</div>
 </div>
 </section>
-<section id="desenvolvimento-por-cofatores" class="slide level2">
-<h2>Desenvolvimento por cofatores</h2>
-<p>O determinante pode ser calculado expandindo por qualquer linha ou qualquer coluna. Por exemplo, pelo desenvolvimento pela primeira linha:</p>
+<section id="a-definição-do-determinante-3times-3" class="slide level3">
+<h3>A definição do determinante <span class="math inline">\(3\times 3\)</span></h3>
+<p>Seja</p>
+<p><span class="math display">\[
+A=\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} \\
+a_{21} &amp; a_{22} &amp; a_{23} \\
+a_{31} &amp; a_{32} &amp; a_{33}
+\end{bmatrix}.
+\]</span></p>
+<p>O determinante de <span class="math inline">\(A\)</span> é calculado por desenvolvimento por cofatores pela primeira linha:</p>
 <div class="bg-yellow">
-<p><span class="math display">\[\det(A)=\sum_{j=1}^{n} a_{1j}\tilde{a}_{1j} = a_{11}\tilde{a}_{11}+a_{12}\tilde{a}_{12}+\cdots+a_{1n}\tilde{a}_{1n}.\]</span></p>
-</div>
-<p>Exemplo (3):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[\det\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\ a_{21}&amp;a_{22}&amp;a_{23}\\ a_{31}&amp;a_{32}&amp;a_{33}\end{bmatrix}=a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{23}a_{31})+a_{13}(a_{21}a_{32}-a_{22}a_{31}).\]</span></p>
+<p><span class="math display">\[
+\begin{align*}
+\det(A)&amp;=a_{11}\tilde{a}_{11}+a_{12}\tilde{a}_{12}+a_{13}\tilde{a}_{13},\qquad
+\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})\\&amp;=
+a_{11}(-1)^{1+1}\det\begin{bmatrix}a_{22} &amp; a_{23}\\[4pt] a_{32} &amp; a_{33}\end{bmatrix}
++ a_{12}(-1)^{1+2}\det\begin{bmatrix}a_{21} &amp; a_{23}\\[4pt] a_{31} &amp; a_{33}\end{bmatrix}
++ a_{13}(-1)^{1+3}\det\begin{bmatrix}a_{21} &amp; a_{22}\\[4pt] a_{31} &amp; a_{32}\end{bmatrix}
+\end{align*}
+\]</span></p>
 </div>
 </section>
-<section id="propriedades-importantes" class="slide level2">
-<h2>Propriedades importantes</h2>
+<section id="exemplo" class="slide level3">
+<h3>Exemplo</h3>
+<p><span class="math display">\[
+\det\begin{bmatrix}1&amp;2&amp;3\\[4pt]-1&amp;3&amp;2\\[4pt]2&amp;1&amp;-2\end{bmatrix}
+=1\cdot\det\begin{bmatrix}3&amp;2\\[4pt]1&amp;-2\end{bmatrix}
+-2\cdot\det\begin{bmatrix}-1&amp;2\\[4pt]2&amp;-2\end{bmatrix}
++3\cdot\det\begin{bmatrix}-1&amp;3\\[4pt]2&amp;1\end{bmatrix}.
+\]</span></p>
+<p>Calculando os determinantes <span class="math display">\[2\times2\]</span>:</p>
+<p><span class="math display">\[
+\det\begin{bmatrix}3&amp;2\\1&amp;-2\end{bmatrix}=-8,\qquad
+\det\begin{bmatrix}-1&amp;2\\2&amp;-2\end{bmatrix}=-2,\qquad
+\det\begin{bmatrix}-1&amp;3\\2&amp;1\end{bmatrix}=-7.
+\]</span></p>
+<p>Portanto</p>
+<p><span class="math display">\[
+\det = 1\cdot(-8)-2\cdot(-2)+3\cdot(-7)=-8+4-21=-25.
+\]</span></p>
+</section>
+<section id="o-determinante-caso-geral" class="slide level3">
+<h3>O determinante: Caso geral</h3>
+<p>Seja <span class="math inline">\(A=(a_{ij})_{n\times n}\)</span>. Pelo desenvolvimento por cofatores ao longo da primeira linha temos:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{align*}
+\det(A)&amp;=\sum_{j=1}^{n} a_{1j}(-1)^{1+j}\det(\tilde{A}_{1j})
+\\&amp;=a_{11}(-1)^{1+1}\det(\tilde{A}_{11})+a_{12}(-1)^{1+2}\det(\tilde{A}_{12})+\cdots+a_{1n}(-1)^{1+n}\det(\tilde{A}_{1n}),
+\end{align*}
+\]</span></p>
+</div>
+<p>onde o fator <span class="math inline">\((-1)^{1+j}\det(\tilde{A}_{1j})\)</span> é o cofator correspondente ao elemento <span class="math inline">\(a_{1j}\)</span>. Em notação geral escrevemos o cofator como <span class="math display">\[
+\tilde a_{i,j}=(-1)^{i+j}\det(\tilde{A}_{i,j}).
+\]</span></p>
+<p>Esta expressão fornece uma definição recursiva do determinante em termos dos determinantes dos menores <span class="math inline">\((n-1)\times(n-1)\)</span>.</p>
+</section>
+<section id="exemplo-detalhado" class="slide level3">
+<h3>Exemplo detalhado</h3>
+<p>Vamos calcular detalhadamente o determinante da matriz:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+A=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; -3 \\
+1 &amp; 2 &amp; 3 &amp; 4 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix}.
+\]</span></p>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Como os três primeiros elementos da primeira linha são zero, o desenvolvimento por cofatores pela primeira linha reduz-se à contribuição do último elemento <span class="math inline">\(-3\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{align*}
+\det(A)&amp;=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(B)\\
+&amp;=(-3)(-1)^{5}\det(B)=3\det(B),
+\end{align*}
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>onde <span class="math inline">\(B\)</span> é o menor obtido suprimindo a primeira linha e a quarta coluna:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+B=\begin{bmatrix}1 &amp; 2 &amp; 3 \\ -1 &amp; 3 &amp; 2 \\ 2 &amp; 1 &amp; -2\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Agora calculamos <span class="math inline">\(\det(B)\)</span> por desenvolvimento pela primeira linha:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(B)=1\cdot\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}-2\cdot\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}+3\cdot\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}=-8,\qquad
+\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}=-2,\qquad
+\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}=-7.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Substituindo estes valores em <span class="math inline">\(\det(B)\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(B)=1\cdot(-8)-2\cdot(-2)+3\cdot(-7)=-8+4-21=-25.
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>Finalmente, voltando a <span class="math inline">\(\det(A)=3\det(B)\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A)=3\cdot(-25)=-75.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="determinantes-e-operações-elementares-por-linhas" class="slide level3">
+<h3>Determinantes e operações elementares por linhas</h3>
+<p>Multiplicar uma linha (ou coluna) de uma matriz por um escalar <span class="math inline">\(k\)</span> multiplica o determinante pelo mesmo escalar. Em notação: se <span class="math inline">\(A'\)</span> é obtida a partir de <span class="math inline">\(A\)</span> multiplicando a linha <span class="math inline">\(i\)</span> por <span class="math inline">\(k\)</span>, então</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A')=k\,\det(A).
+\]</span></p>
+</div>
+<p>Considere a matriz <span class="math inline">\(A\)</span> do exemplo anterior e obtenha <span class="math inline">\(A'\)</span> multiplicando a segunda linha por <span class="math inline">\(-2\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+A'=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; -3 \\
+-2 &amp; -4 &amp; -6 &amp; -8 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix},
+\]</span></p>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{align*}
+\det(A)&amp;=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(B)\\
+&amp;=(-3)(-1)^{5}\det(B)=3\det(B),
+\end{align*}
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>onde <span class="math inline">\(B\)</span> é o menor obtido suprimindo a primeira linha e a quarta coluna:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+B=\begin{bmatrix}-2 &amp; -4 &amp; -6 \\ -1 &amp; 3 &amp; 2 \\ 2 &amp; 1 &amp; -2\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Agora calculamos <span class="math inline">\(\det(B)\)</span> por desenvolvimento pela primeira linha:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(B)=-2\cdot\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}+4\cdot\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}-6\cdot\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}=-8,\quad
+\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}=-2,
+\quad
+\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}=-7.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Substituindo estes valores em <span class="math inline">\(\det(B)\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(B)=-2\cdot(-8)+4\cdot(-2)-6\cdot(-7)=16-8+42=50.
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>Finalmente, voltando a <span class="math inline">\(\det(A)=3\det(B)\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A)=3\cdot 50=150.
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Nota: se multiplicarmos todas as linhas por um mesmo escalar <span class="math inline">\(k\)</span> em uma matriz <span class="math inline">\(n\times n\)</span>, o determinante é multiplicado por <span class="math inline">\(k^{n}\)</span>.</p>
+</div>
+</section>
+<section id="exemplo-detalhado-com-troca-de-linhas" class="slide level3">
+<h3>Exemplo detalhado com troca de linhas</h3>
+<p>Considere agora a matriz obtida trocando a segunda e a terceira linhas de <span class="math inline">\(A\)</span>. Chamemos-na de <span class="math inline">\(\tilde A\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\tilde A=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; -3 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+1 &amp; 2 &amp; 3 &amp; 4 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix}.
+\]</span></p>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Como antes, pelo desenvolvimento pela primeira linha só resta a contribuição do último elemento <span class="math inline">\(-3\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{align*}
+\det(\tilde A)&amp;=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(\tilde B)\\
+&amp;=(-3)(-1)^{5}\det(\tilde B)=3\det(\tilde B),
+\end{align*}
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>onde <span class="math inline">\(\tilde B\)</span> é o menor formado pelas linhas 2,3,4 de <span class="math inline">\(\tilde A\)</span> sem a quarta coluna:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\tilde B=\begin{bmatrix}-1 &amp; 3 &amp; 2 \\
+1 &amp; 2 &amp; 3 \\
+2 &amp; 1 &amp; -2\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Calculamos <span class="math inline">\(\det(\tilde B)\)</span> por desenvolvimento pela primeira linha:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(\tilde B)=(-1)\cdot\det\begin{bmatrix}2 &amp; 3 \\
+1 &amp; -2\end{bmatrix}-3\cdot\det\begin{bmatrix}1 &amp; 3 \\
+2 &amp; -2\end{bmatrix}+2\cdot\det\begin{bmatrix}1 &amp; 2 \\
+2 &amp; 1\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det\begin{bmatrix}2 &amp; 3 \\
+1 &amp; -2\end{bmatrix}=-7,
+\quad
+\det\begin{bmatrix}1 &amp; 3 \\
+2 &amp; -2\end{bmatrix}=-8,
+\quad
+\det\begin{bmatrix}1 &amp; 2 \\
+2 &amp; 1\end{bmatrix}=-3.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Substituindo esses valores em <span class="math inline">\(\det(\tilde B)\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(\tilde B)=(-1)\cdot(-7)-3\cdot(-8)+2\cdot(-3)=7+24-6=25.
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>Finalmente,</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(\tilde A)=3\cdot25=75.
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Observe que este resultado é o negativo do determinante da matriz original <span class="math inline">\(A\)</span> (recorde: <span class="math inline">\(\det(A)=-75\)</span>). Trocar duas linhas produz, de facto, a multiplicação do determinante por <span class="math inline">\(-1\)</span>.</p>
+</div>
+</section>
+<section id="somar-um-múltiplo-escalar-de-uma-linha-a-uma-outra" class="slide level3">
+<h3>Somar um múltiplo escalar de uma linha a uma outra</h3>
+<p>Do exemplo anterior e obtemos <span class="math inline">\(A''\)</span> aplicando <span class="math inline">\(L_2\leftarrow L_2+2L_3\)</span> (ou seja, adicionamos duas vezes a terceira linha à segunda):</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+A''=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; -3 \\
+-1 &amp; 8 &amp; 7 &amp; 14 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix}.
+\]</span></p>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Pelo desenvolvimento pela primeira linha só contribui o último termo <span class="math inline">\(-3\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A'')=(-3)(-1)^{1+4}\det(B'')=3\det(B''),
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>onde <span class="math inline">\(B''\)</span> é o menor obtido suprimindo a primeira linha e a quarta coluna:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+B''=\begin{bmatrix}-1 &amp; 8 &amp; 7 \\
+-1 &amp; 3 &amp; 2 \\
+2 &amp; 1 &amp; -2\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Calculamos <span class="math inline">\(\det(B'')\)</span> por desenvolvimento pela primeira linha:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(B'')=(-1)\cdot\det\begin{bmatrix}3 &amp; 2 \\
+1 &amp; -2\end{bmatrix}-8\cdot\det\begin{bmatrix}-1 &amp; 2 \\
+2 &amp; -2\end{bmatrix}+7\cdot\det\begin{bmatrix}-1 &amp; 3 \\
+2 &amp; 1\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det\begin{bmatrix}3 &amp; 2 \\
+1 &amp; -2\end{bmatrix}=3\cdot(-2)-2\cdot1=-6-2=-8,
+\]</span></p>
+</div>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det\begin{bmatrix}-1 &amp; 2 \\
+2 &amp; -2\end{bmatrix}=(-1)(-2)-2\cdot2=2-4=-2,
+\]</span></p>
+</div>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det\begin{bmatrix}-1 &amp; 3 \\
+2 &amp; 1\end{bmatrix}=(-1)\cdot1-3\cdot2=-1-6=-7.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Substituindo esses valores em <span class="math inline">\(\det(B'')\)</span>:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(B'')=(-1)\cdot(-8)-8\cdot(-2)+7\cdot(-7)=8+16-49=-25.
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>Finalmente,</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A'')=3\cdot(-25)=-75.
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Concluímos que a operação <span class="math inline">\(L_2\leftarrow L_2+2L_3\)</span> não alterou o determinante: <span class="math inline">\(\det(A'')=\det(A)=-75\)</span>.</p>
+</div>
+</section>
+<section id="operações-elementares-por-linhas-e-o-determinante" class="slide level3">
+<h3>Operações elementares por linhas e o determinante</h3>
+<p>Resumo rápido das operações elementares por linhas e o seu efeito no determinante:</p>
 <ul>
-<li>Linha/coluna linear: o determinante é linear em cada linha (mantendo as outras fixas).</li>
-<li>Troca de linhas: trocar duas linhas muda o sinal do determinante.</li>
-<li>Multiplicar uma linha por <span class="math inline">\(\alpha\)</span> multiplica o determinante por <span class="math inline">\(\alpha\)</span>.</li>
-<li>Adicionar múltiplo de uma linha a outra não altera o determinante.</li>
-<li>Triangular: se <span class="math inline">\(A\)</span> é triangular (superior ou inferior), então <span class="math inline">\(\det(A)\)</span> é o produto dos elementos da diagonal principal.</li>
-<li>Critério de invertibilidade: <span class="math inline">\(A\)</span> é invertível sse <span class="math inline">\(\det(A)\neq0\)</span>.</li>
-<li>Produto: <span class="math inline">\(\det(AB)=\det(A)\det(B)\)</span>.</li>
-<li>Transposta: <span class="math inline">\(\det(A^T)=\det(A)\)</span>.</li>
+<li>Troca de duas linhas <span class="math inline">\(L_i\leftrightarrow L_j\)</span>:</li>
 </ul>
 <div class="bg-yellow">
-<p><span class="math display">\[\det(I_n)=1, \qquad A\text{ invertível }\iff \det(A)\neq 0.\]</span></p>
+<p><span class="math display">\[
+\text{Se }A' \text{ é obtida de } A \text{ trocando duas linhas, então }\;\det(A')=-\det(A).
+\]</span></p>
 </div>
-</section>
-<section id="cálculo-prático-e-operações-de-linha" class="slide level2">
-<h2>Cálculo prático e operações de linha</h2>
-<p>Usar operações elementares por linhas (Gauss) facilita o cálculo: ao transformar <span class="math inline">\(A\)</span> em matriz triangular por operações que preservam/ajustam o determinante, é rápido obter <span class="math inline">\(\det(A)\)</span> como produto da diagonal, lembrando o efeito de cada operação sobre o valor do determinante.</p>
-<p>Exemplo (retirado de “determinantes.md”):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[A=\begin{bmatrix}0&amp;0&amp;0&amp;-3\\ 1&amp;2&amp;3&amp;4\\ -1&amp;3&amp;2&amp;5\\ 2&amp;1&amp;-2&amp;0\end{bmatrix}.\]</span> Desenvolvendo pela primeira linha e calculando o cofator correspondente obtém-se <span class="math inline">\(\det(A)=-75\)</span>.</p>
-</div>
-</section>
-<section id="exemplo-matriz-triangular" class="slide level2">
-<h2>Exemplo: matriz triangular</h2>
-<p>Se</p>
-<div class="bg-yellow">
-<p><span class="math display">\[A=\begin{bmatrix}a_{11}&amp;0&amp;0\\ a_{21}&amp;a_{22}&amp;0\\ a_{31}&amp;a_{32}&amp;a_{33}\end{bmatrix},\]</span></p>
-</div>
-<p>então</p>
-<div class="bg-yellow">
-<p><span class="math display">\[\det(A)=a_{11}a_{22}a_{33}.\]</span></p>
-</div>
-</section>
-<section id="uso-do-determinante" class="slide level2">
-<h2>Uso do determinante</h2>
 <ul>
-<li>Decide se <span class="math inline">\(A\)</span> é invertível.</li>
-<li>Serve para calcular a inversa por adjunta: <span class="math inline">\(A^{-1}=\dfrac{1}{\det(A)}\operatorname{adj}(A)\)</span> quando <span class="math inline">\(\det(A)\neq0\)</span>.</li>
-<li>Interpretação geométrica: em <span class="math inline">\(\mathbb{R}^n\)</span>, <span class="math inline">\(|\det(A)|\)</span> é o fator de escala do volume por <span class="math inline">\(A\)</span>.</li>
+<li>Multiplicar uma linha por um escalar <span class="math inline">\(k\)</span> (<span class="math inline">\(L_i\leftarrow kL_i\)</span>):</li>
 </ul>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A')=k\,\det(A).
+\]</span></p>
+</div>
+<p>Nota: multiplicar todas as linhas por <span class="math inline">\(k\)</span> numa matriz <span class="math inline">\(n\times n\)</span> multiplica o determinante por <span class="math inline">\(k^{n}\)</span>.</p>
+<ul>
+<li>Adicionar a uma linha um múltiplo de outra (<span class="math inline">\(L_i\leftarrow L_i+kL_j\)</span>, <span class="math inline">\(i\neq j\)</span>):</li>
+</ul>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A')=\det(A).
+\]</span></p>
+</div>
 </section>
-<section class="slide level2">
-
-<p>Referências e material adicional: ver <code>determinantes.md</code> para mais exemplos e demonstrações completas.</p>
+<section id="determinante-por-eliminação-de-gauss-jordan" class="slide level3">
+<h3>Determinante por eliminação de Gauss-Jordan</h3>
+<p>Vamos calcular <span class="math inline">\(\det(A)\)</span> aplicando operações elementares por linhas para transformar <span class="math inline">\(A\)</span> numa matriz triangular superior, registrando o efeito das trocas de linhas.</p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Começamos com a matriz original:</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+A=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; -3 \\
+1 &amp; 2 &amp; 3 &amp; 4 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Troque as linhas <span class="math inline">\(L_1\leftrightarrow L_2\)</span> para obter pivô na primeira coluna (troca altera o sinal do determinante):</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; -3 \\
+1 &amp; 2 &amp; 3 &amp; 4 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix}
+\Rightarrow
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix}
+\qquad (\text{uma troca},\;\text{fator }-1)
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Elimine a primeira coluna abaixo do pivô usando operações do tipo <span class="math inline">\(L_i\leftarrow L_i+kL_1\)</span> (não alteram o determinante):</p>
+<ul>
+<li><span class="math inline">\(L_3\leftarrow L_3+L_1\)</span> e <span class="math inline">\(L_4\leftarrow L_4-2L_1\)</span>.</li>
+</ul>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+-1 &amp; 3 &amp; 2 &amp; 5 \\
+2 &amp; 1 &amp; -2 &amp; 0
+\end{bmatrix}
+\Rightarrow
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+0 &amp; 5 &amp; 5 &amp; 9 \\
+0 &amp; -3 &amp; -8 &amp; -8
+\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Troque agora <span class="math inline">\(L_2\leftrightarrow L_3\)</span> para trazer o pivô <span class="math inline">\(5\)</span> para a posição <span class="math inline">\((2,2)\)</span> (terceira troca, outro fator <span class="math inline">\(-1\)</span>):</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+0 &amp; 5 &amp; 5 &amp; 9 \\
+0 &amp; -3 &amp; -8 &amp; -8
+\end{bmatrix}
+\Rightarrow
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 5 &amp; 5 &amp; 9 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+0 &amp; -3 &amp; -8 &amp; -8
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Elimine a segunda coluna abaixo do pivô <span class="math inline">\(5\)</span> com <span class="math inline">\(L_4\leftarrow L_4+\tfrac{3}{5}L_2\)</span> (adição de múltiplo não altera o determinante):</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 5 &amp; 5 &amp; 9 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+0 &amp; -3 &amp; -8 &amp; -8
+\end{bmatrix}
+\Rightarrow
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 5 &amp; 5 &amp; 9 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+0 &amp; 0 &amp; -5 &amp; -\tfrac{13}{5}
+\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p>Finalmente troque <span class="math inline">\(L_3\leftrightarrow L_4\)</span> para obter a forma triangular superior (quarta troca, fator ,-1):</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 5 &amp; 5 &amp; 9 \\
+0 &amp; 0 &amp; 0 &amp; -3 \\
+0 &amp; 0 &amp; -5 &amp; -\tfrac{13}{5}
+\end{bmatrix}.
+\Rightarrow
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 5 &amp; 5 &amp; 9 \\
+0 &amp; 0 &amp; -5 &amp; -\tfrac{13}{5} \\
+0 &amp; 0 &amp; 0 &amp; -3
+\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p>Agora a matriz é triangular superior; o determinante é o produto das entradas da diagonal multiplicado por <span class="math inline">\((-1)^{\#\text{trocas}}\)</span> (cada troca contribuiu com <span class="math inline">\(-1\)</span>). Tivémos 4 trocas, portanto um fator <span class="math inline">\((-1)^4=1\)</span>.</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(A)=(1)\cdot(1)\cdot(5)\cdot(-5)\cdot(-3) = 1\cdot 75 = 75.
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Isto coincide com o cálculo por desenvolvimento por cofatores apresentado antes.</p>
+</div>
+</section>
+<section id="produto-de-matrizes-e-determinantes" class="slide level3">
+<h3>Produto de matrizes e determinantes</h3>
+<p>Para matrizes quadradas compatíveis <span class="math inline">\(A,B\in\mathbb{R}^{n\times n}\)</span> vale a identidade fundamental</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\det(AB)=\det(A)\,\det(B).
+\]</span></p>
+</div>
+<p>Como consequência imediata, se <span class="math inline">\(A\)</span> for invertível existe <span class="math inline">\(A^{-1}\)</span> tal que <span class="math inline">\(AA^{-1}=I_n\)</span>. Aplicando a identidade acima e sabendo que <span class="math inline">\(\det(I_n)=1\)</span> obtemos</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+1=\det(I_n)=\det(A)\,\det(A^{-1}).
+\]</span></p>
+</div>
+<p>Isto implica que <span class="math inline">\(\det(A)\neq 0\)</span> (pois é um fator de 1). Portanto toda matriz invertível tem determinante não nulo. Equivalentemente, se <span class="math inline">\(\det(A)=0\)</span> então <span class="math inline">\(A\)</span> não é invertível.</p>
+<p>Vice-versa, se <span class="math inline">\(\det A\neq 0\)</span>, então <span class="math inline">\(A\)</span> é invertível.</p>
 
 
 </section>

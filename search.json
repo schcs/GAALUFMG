@@ -7,55 +7,6 @@
     "text": "\\[\n  \\newcommand{\\Z}{\\mathbb Z}\n  \\newcommand{\\Q}{\\mathbb Q}\n  \\newcommand{\\R}{\\mathbb R}\n  \\newcommand{\\C}{\\mathbb C}\n  \\newcommand{\\F}{\\mathbb F}\n  \\newcommand{\\K}{\\mathbb K}\n  \\newcommand{\\L}{\\mathbb L}\n  \\newcommand{\\N}{\\mathbb N}\n  \\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n  \\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n  \\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n  \\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n  \\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n  \\newcommand{\\lxor}{\\dot\\lor}\n  \\newcommand{\\cond}{\\Rightarrow}\n  \\newcommand{\\bicond}{\\Leftrightarrow}\n  \\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n  \\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n  \\newcommand{\\real}[1]{\\mathfrak R(#1)}\n  \\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n  \\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n  \\DeclareMathOperator{\\sen}{sen}\n  \\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n  \\newcommand{\\E}{\\mathbb E}\n  \\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n  \\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n  \\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n  \\newcommand{\\overbar}[1]{\\mkern 1.5mu\\overline{\\mkern-1.5mu#1\\mkern-1.5mu}\\mkern 1.5mu}\n  \\newcommand{\\ul}[1]{\\underline{#1}}\n  \\newcommand{\\tn}[1]{\\textnormal{#1}}\n  \\]"
   },
   {
-    "objectID": "04_determinant.html#definição-e-exemplos-iniciais",
-    "href": "04_determinant.html#definição-e-exemplos-iniciais",
-    "title": "Determinante de uma matriz",
-    "section": "Definição e exemplos iniciais",
-    "text": "Definição e exemplos iniciais\nO determinante é uma função que associa a cada matriz quadrada \\(A\\in\\mathbb{R}^{n\\times n}\\) um número real, denotado por \\(\\det(A)\\) ou \\(\\operatorname{det}(A)\\), e que codifica propriedades geométricas e algébricas importantes (volume, invertibilidade, etc.).\n\nPara \\(1\\times1\\), se \\(A=[a]\\) então\n\n\n\\[\\det(A)=a.\\]\n\n\nPara \\(2\\times2\\), se\n\n\n\\[A=\\begin{bmatrix}a_{11} & a_{12} \\\\\\ a_{21} & a_{22}\\end{bmatrix},\\]\n\nentão\n\n\\[\\det(A)=a_{11}a_{22}-a_{12}a_{21}.\\]"
-  },
-  {
-    "objectID": "04_determinant.html#menores-e-cofatores",
-    "href": "04_determinant.html#menores-e-cofatores",
-    "title": "Determinante de uma matriz",
-    "section": "Menores e cofatores",
-    "text": "Menores e cofatores\nPara \\(A=(a_{ij})_{n\\times n}\\), o menor de \\(a_{ij}\\), denotado \\(\\tilde{A}_{ij}\\), é a submatriz \\((n-1)\\times(n-1)\\) obtida eliminando a linha \\(i\\) e a coluna \\(j\\). O cofator correspondente é\n\n\\[\\tilde{a}_{ij}=(-1)^{i+j}\\det(\\tilde{A}_{ij}).\\]\n\nO sinal dos cofatores segue o padrão\n\n\\[\\begin{bmatrix} + & - & + & - & \\cdots \\\\ - & + & - & + & \\cdots \\\\ + & - & + & - & \\cdots \\\\ \\vdots & & & & \\ddots \\end{bmatrix}.\\]"
-  },
-  {
-    "objectID": "04_determinant.html#desenvolvimento-por-cofatores",
-    "href": "04_determinant.html#desenvolvimento-por-cofatores",
-    "title": "Determinante de uma matriz",
-    "section": "Desenvolvimento por cofatores",
-    "text": "Desenvolvimento por cofatores\nO determinante pode ser calculado expandindo por qualquer linha ou qualquer coluna. Por exemplo, pelo desenvolvimento pela primeira linha:\n\n\\[\\det(A)=\\sum_{j=1}^{n} a_{1j}\\tilde{a}_{1j} = a_{11}\\tilde{a}_{11}+a_{12}\\tilde{a}_{12}+\\cdots+a_{1n}\\tilde{a}_{1n}.\\]\n\nExemplo (3):\n\n\\[\\det\\begin{bmatrix}a_{11}&a_{12}&a_{13}\\\\ a_{21}&a_{22}&a_{23}\\\\ a_{31}&a_{32}&a_{33}\\end{bmatrix}=a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{23}a_{31})+a_{13}(a_{21}a_{32}-a_{22}a_{31}).\\]"
-  },
-  {
-    "objectID": "04_determinant.html#propriedades-importantes",
-    "href": "04_determinant.html#propriedades-importantes",
-    "title": "Determinante de uma matriz",
-    "section": "Propriedades importantes",
-    "text": "Propriedades importantes\n\nLinha/coluna linear: o determinante é linear em cada linha (mantendo as outras fixas).\nTroca de linhas: trocar duas linhas muda o sinal do determinante.\nMultiplicar uma linha por \\(\\alpha\\) multiplica o determinante por \\(\\alpha\\).\nAdicionar múltiplo de uma linha a outra não altera o determinante.\nTriangular: se \\(A\\) é triangular (superior ou inferior), então \\(\\det(A)\\) é o produto dos elementos da diagonal principal.\nCritério de invertibilidade: \\(A\\) é invertível sse \\(\\det(A)\\neq0\\).\nProduto: \\(\\det(AB)=\\det(A)\\det(B)\\).\nTransposta: \\(\\det(A^T)=\\det(A)\\).\n\n\n\\[\\det(I_n)=1, \\qquad A\\text{ invertível }\\iff \\det(A)\\neq 0.\\]"
-  },
-  {
-    "objectID": "04_determinant.html#cálculo-prático-e-operações-de-linha",
-    "href": "04_determinant.html#cálculo-prático-e-operações-de-linha",
-    "title": "Determinante de uma matriz",
-    "section": "Cálculo prático e operações de linha",
-    "text": "Cálculo prático e operações de linha\nUsar operações elementares por linhas (Gauss) facilita o cálculo: ao transformar \\(A\\) em matriz triangular por operações que preservam/ajustam o determinante, é rápido obter \\(\\det(A)\\) como produto da diagonal, lembrando o efeito de cada operação sobre o valor do determinante.\nExemplo (retirado de “determinantes.md”):\n\n\\[A=\\begin{bmatrix}0&0&0&-3\\\\ 1&2&3&4\\\\ -1&3&2&5\\\\ 2&1&-2&0\\end{bmatrix}.\\] Desenvolvendo pela primeira linha e calculando o cofator correspondente obtém-se \\(\\det(A)=-75\\)."
-  },
-  {
-    "objectID": "04_determinant.html#exemplo-matriz-triangular",
-    "href": "04_determinant.html#exemplo-matriz-triangular",
-    "title": "Determinante de uma matriz",
-    "section": "Exemplo: matriz triangular",
-    "text": "Exemplo: matriz triangular\nSe\n\n\\[A=\\begin{bmatrix}a_{11}&0&0\\\\ a_{21}&a_{22}&0\\\\ a_{31}&a_{32}&a_{33}\\end{bmatrix},\\]\n\nentão\n\n\\[\\det(A)=a_{11}a_{22}a_{33}.\\]"
-  },
-  {
-    "objectID": "04_determinant.html#uso-do-determinante",
-    "href": "04_determinant.html#uso-do-determinante",
-    "title": "Determinante de uma matriz",
-    "section": "Uso do determinante",
-    "text": "Uso do determinante\n\nDecide se \\(A\\) é invertível.\nServe para calcular a inversa por adjunta: \\(A^{-1}=\\dfrac{1}{\\det(A)}\\operatorname{adj}(A)\\) quando \\(\\det(A)\\neq0\\).\nInterpretação geométrica: em \\(\\mathbb{R}^n\\), \\(|\\det(A)|\\) é o fator de escala do volume por \\(A\\)."
-  },
-  {
     "objectID": "semana2.html",
     "href": "semana2.html",
     "title": "Sistemas lineares",
