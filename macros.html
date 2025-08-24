@@ -535,6 +535,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 
 
-
+<script>
+var resizeSlide = function() {
+   Reveal.configure({
+     width: window.innerWidth,
+     height: window.innerHeight
+   });
+}
+//setInterval(resizeSlide, 1000);
+</script>
 
 </body></html>

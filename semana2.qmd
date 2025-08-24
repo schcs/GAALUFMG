@@ -5,11 +5,11 @@ date: "agosto de 2025"
 lang: pt-br
 format: 
     revealjs:
-        slide-level: 2
+        slide-level: 3
         css: styles.css
 ---
 
-## Exemplo $2×2$ e sua solução 
+### Exemplo $2×2$ e sua solução 
 
 Considere o sistema em $x$ e $y$:
 $$
@@ -38,7 +38,7 @@ $$
 x + y = 2 + 3 = 5,\qquad 2x - y = 2\cdot 2 - 3 = 1.
 $$
 
-## A forma geral de um sistema linear
+### A forma geral de um sistema linear
 
 Um [sistema linear]{.text-red} em $n$ incógnitas $x_1,\ldots,x_n$ com $m$ equações tem a forma
 $$
@@ -53,7 +53,7 @@ $$
 Aqui, os $a_{ij}$ são os [coeficientes]{.text-red}, os $x_j$ são as [incógnitas]{.text-red} e $b_i$ são os [termos constantes]{.text-red}.
 
 
-## Resolução do Sistema por Eliminação de Gauss-Jordan
+### Resolução do Sistema por Eliminação de Gauss-Jordan
 
 
 Considere o sistema:
@@ -167,7 +167,7 @@ $$
 :::
 :::
 
-## A forma escalonada reduzida do sistema
+### A forma escalonada reduzida do sistema
 
 Depois destas manipulações, o sistema está nesta forma:
 $$
@@ -205,7 +205,7 @@ Todo sistema pode ser transformado para a forma escalonada reduzida pelas três 
 :::
 
 
-## A Solução do Sistema
+### A Solução do Sistema
 
 Agora a solução do sistema pode ser determinada. 
 
@@ -231,7 +231,7 @@ $$
 :::
 
 
-## Forma matricial
+### Forma matricial
 
 Considere o sistema linear:
 $$
@@ -255,7 +255,7 @@ A\,x = b.
 $$
 :::
 
-## Exemplo
+### Exemplo
 
 Considere o sistema:
 $$ 
@@ -280,7 +280,7 @@ $$
 Ax = b.
 $$ 
 
-## A matriz aumentada do sistema
+### A matriz aumentada do sistema
 $$ 
 \begin{alignedat}{5}
 2x_1 &{}+{}& x_2 &{}-{}& x_3 &{}+{}& x_4 &{}={}& 0\\
@@ -298,7 +298,7 @@ $$
 
 
 
-## Resolução do sistema usando a sua matriz
+### Resolução do sistema usando a sua matriz
 
 Considere o mesmo sistema como acima:
 $$ 
@@ -447,7 +447,7 @@ $$
 :::
 :::
 
-## Forma Escalonada Reduzida (FER) de uma Matriz
+### Forma Escalonada Reduzida (FER) de uma Matriz
 
 ::: {.bg-yellow}
 Definição (FER). Uma matriz está na forma escalonada reduzida por linhas quando:
@@ -479,7 +479,7 @@ Toda matriz pode ser transformada para FER usando as seguintes operações por l
 :::
 :::
 
-## Sistema com nenhuma solução
+### Sistema com nenhuma solução
 
 Considere o seguinte sistema:
 $$
@@ -516,7 +516,7 @@ $$
 $$
 Mas isso é claramente uma [equação impossível]{.bg-yellow}. [O sistema não possui solução]{.bg-yellow}
 
-## Sistema com infinitas soluções
+### Sistema com infinitas soluções
 
 Já vimos um exemplo de um sistema com infinitas soluções:
 $$ 
@@ -548,7 +548,7 @@ O sistema possui infinitas soluções, pois:
 - a matriz FER do sistema não tem linha que corresponde a uma equação impossível;
 - a matriz FER do sistema possui variável livre. 
 
-## Exemplo 3×4: Gauss–Jordan
+### Exemplo 3×4: Gauss–Jordan
 
 Vamos resolver por Gauss–Jordan o sistema com matriz aumentada $3\times 4$:
 
@@ -686,7 +686,7 @@ Solução: $x_1 = 2$, $x_2 = 1$, $x_3 = 2$.
 :::
 :::
 
-## Os Três Casos dos Sistemas Lineares
+### Os Três Casos dos Sistemas Lineares
 
 Seja 
 $$
@@ -700,7 +700,7 @@ Temos uma das seguintes alternativas para as soluções do sistema:
 2. O sistema possui infinitas soluções; 
 3. O sistema possui única solução.
 
-## Sistemas homogêneous 
+### Sistemas homogêneous 
 
 O sistema 
 $$
