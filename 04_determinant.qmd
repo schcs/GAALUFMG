@@ -1,0 +1,736 @@
+---
+title: "Determinante de uma matriz"
+author: "Csaba Schneider"
+date: "agosto de 2025"
+format:
+    revealjs:
+        slide-level: 3
+        css: styles.css
+---
+
+### Definição e exemplos iniciais
+
+O determinante é uma função que associa a cada matriz quadrada $A\in\mathbb{R}^{n\times n}$ um número real, denotado por $\det(A)$ ou $\operatorname{det}(A)$, e que codifica propriedades geométricas e algébricas importantes (volume, invertibilidade, etc.).
+
+- Para $1\times1$, se $A=[a]$ então
+
+:::{.bg-yellow}
+$$\det(A)=a.$$ 
+:::
+
+- Para $2\times2$, se
+
+:::{.bg-yellow}
+$$A=\begin{bmatrix}a_{11} & a_{12} \\\ a_{21} & a_{22}\end{bmatrix},$$
+:::
+então
+
+:::{.bg-yellow}
+$$\det(A)=a_{11}a_{22}-a_{12}a_{21}.$$ 
+:::
+
+
+### Menores e cofatores
+
+:::{.fragment}
+Para a matriz $A=(a_{ij})_{n\times n}$, o menor de $a_{ij}$, denotado $\tilde{A}_{ij}$, é a submatriz $(n-1)\times(n-1)$ obtida eliminando a linha $i$ e a coluna $j$. O cofator é
+
+:::{.bg-yellow}
+$$
+\tilde{a}_{ij}=(-1)^{i+j}\det(\tilde{A}_{ij}).
+$$
+:::
+:::
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Exemplo simbólico ($3\times3$):
+
+:::{.bg-yellow}
+$$
+\require{cancel}
+A=\begin{bmatrix}
+ \cancel{a_{11}} & \cancel{a_{12}} & \cancel{a_{13}} \\
+ a_{21} & \cancel{a_{22}} & a_{23} \\
+ a_{31} & \cancel{a_{32}} & a_{33}
+\end{bmatrix},\qquad
+\tilde{A}_{12}=\begin{bmatrix}a_{21} & a_{23}\\ a_{31} & a_{33}\end{bmatrix},
+\qquad 
+\tilde a_{12}=(-1)^{1+2} a_{21}a_{33}-a_{23}a_{31}=-a_{21}a_{33}+a_{23}a_{31}
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Exemplo numérico rápido:
+
+:::{.bg-yellow}
+$$
+A=\begin{bmatrix}\cancel 1 & \cancel 2 & \cancel 3\\ \cancel 4 & 5 & 6\\ \cancel7 & 8 & 9\end{bmatrix},\qquad
+\tilde{A}_{11}=\begin{bmatrix}5 & 6\\ 8 & 9\end{bmatrix},\quad
+\det(\tilde{A}_{11})=5\cdot9-6\cdot8=-3,\quad
+\tilde{a}_{11}=(-1)^{1+1}\det(\tilde{A}_{11})=-3.
+$$
+:::
+
+Portanto o cofator de $a_{11}$ é
+
+:::{.bg-yellow}
+$$
+\tilde{a}_{11}=(-1)^{1+1}(-3) = -3.
+$$
+:::
+:::
+:::
+
+### A definição do determinante $3\times 3$
+
+Seja
+
+$$
+A=\begin{bmatrix}
+ a_{11} & a_{12} & a_{13} \\
+ a_{21} & a_{22} & a_{23} \\
+ a_{31} & a_{32} & a_{33}
+\end{bmatrix}.
+$$
+
+O determinante de $A$ é calculado por desenvolvimento por cofatores pela primeira linha:
+
+:::{.bg-yellow}
+$$
+\begin{align*}
+\det(A)&=a_{11}\tilde{a}_{11}+a_{12}\tilde{a}_{12}+a_{13}\tilde{a}_{13},\qquad
+\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})\\&=
+a_{11}(-1)^{1+1}\det\begin{bmatrix}a_{22} & a_{23}\\[4pt] a_{32} & a_{33}\end{bmatrix}
++ a_{12}(-1)^{1+2}\det\begin{bmatrix}a_{21} & a_{23}\\[4pt] a_{31} & a_{33}\end{bmatrix}
++ a_{13}(-1)^{1+3}\det\begin{bmatrix}a_{21} & a_{22}\\[4pt] a_{31} & a_{32}\end{bmatrix}
+\end{align*}
+$$
+:::
+
+
+### Exemplo 
+
+$$
+\det\begin{bmatrix}1&2&3\\[4pt]-1&3&2\\[4pt]2&1&-2\end{bmatrix}
+=1\cdot\det\begin{bmatrix}3&2\\[4pt]1&-2\end{bmatrix}
+-2\cdot\det\begin{bmatrix}-1&2\\[4pt]2&-2\end{bmatrix}
++3\cdot\det\begin{bmatrix}-1&3\\[4pt]2&1\end{bmatrix}.
+$$
+
+Calculando os determinantes $$2\times2$$:
+
+$$
+\det\begin{bmatrix}3&2\\1&-2\end{bmatrix}=-8,\qquad
+\det\begin{bmatrix}-1&2\\2&-2\end{bmatrix}=-2,\qquad
+\det\begin{bmatrix}-1&3\\2&1\end{bmatrix}=-7.
+$$
+
+Portanto
+
+$$
+\det = 1\cdot(-8)-2\cdot(-2)+3\cdot(-7)=-8+4-21=-25.
+$$
+
+
+### O determinante: Caso geral
+
+Seja $A=(a_{ij})_{n\times n}$. Pelo desenvolvimento por cofatores ao longo da primeira linha temos:
+
+:::{.bg-yellow}
+$$
+\begin{align*}
+\det(A)&=\sum_{j=1}^{n} a_{1j}(-1)^{1+j}\det(\tilde{A}_{1j})
+\\&=a_{11}(-1)^{1+1}\det(\tilde{A}_{11})+a_{12}(-1)^{1+2}\det(\tilde{A}_{12})+\cdots+a_{1n}(-1)^{1+n}\det(\tilde{A}_{1n}),
+\end{align*}
+$$
+:::
+
+onde o fator $(-1)^{1+j}\det(\tilde{A}_{1j})$ é o cofator correspondente ao elemento $a_{1j}$. Em notação geral escrevemos o cofator como 
+$$
+\tilde a_{i,j}=(-1)^{i+j}\det(\tilde{A}_{i,j}).
+$$
+
+Esta expressão fornece uma definição recursiva do determinante em termos dos determinantes dos menores $(n-1)\times(n-1)$.
+
+
+### Exemplo detalhado
+
+Vamos calcular detalhadamente o determinante da matriz:
+
+:::{.bg-yellow}
+$$
+A=\begin{bmatrix}
+0 & 0 & 0 & -3 \\
+1 & 2 & 3 & 4 \\
+-1 & 3 & 2 & 5 \\
+2 & 1 & -2 & 0
+\end{bmatrix}.
+$$
+:::
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Como os três primeiros elementos da primeira linha são zero, o desenvolvimento por cofatores pela primeira linha reduz-se à contribuição do último elemento $-3$:
+
+:::{.bg-yellow}
+$$
+\begin{align*}
+\det(A)&=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(B)\\
+&=(-3)(-1)^{5}\det(B)=3\det(B),
+\end{align*}
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+onde $B$ é o menor obtido suprimindo a primeira linha e a quarta coluna:
+
+:::{.bg-yellow}
+$$
+B=\begin{bmatrix}1 & 2 & 3 \\ -1 & 3 & 2 \\ 2 & 1 & -2\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Agora calculamos $\det(B)$ por desenvolvimento pela primeira linha:
+
+:::{.bg-yellow}
+$$
+\det(B)=1\cdot\det\begin{bmatrix}3 & 2\\ 1 & -2\end{bmatrix}-2\cdot\det\begin{bmatrix}-1 & 2\\ 2 & -2\end{bmatrix}+3\cdot\det\begin{bmatrix}-1 & 3\\ 2 & 1\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Calculemos cada determinante $2\times2$:
+
+:::{.bg-yellow}
+$$
+\det\begin{bmatrix}3 & 2\\ 1 & -2\end{bmatrix}=-8,\qquad
+\det\begin{bmatrix}-1 & 2\\ 2 & -2\end{bmatrix}=-2,\qquad
+\det\begin{bmatrix}-1 & 3\\ 2 & 1\end{bmatrix}=-7.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Substituindo estes valores em $\det(B)$:
+
+:::{.bg-yellow}
+$$
+\det(B)=1\cdot(-8)-2\cdot(-2)+3\cdot(-7)=-8+4-21=-25.
+$$
+:::
+:::
+
+:::{.fragment}
+Finalmente, voltando a $\det(A)=3\det(B)$:
+
+:::{.bg-yellow}
+$$
+\det(A)=3\cdot(-25)=-75.
+$$
+:::
+:::
+:::
+
+### Determinantes e operações elementares por linhas
+
+Multiplicar uma linha (ou coluna) de uma matriz por um escalar $k$ multiplica o determinante pelo mesmo escalar. Em notação: se $A'$ é obtida a partir de $A$ multiplicando a linha $i$ por $k$, então
+
+:::{.bg-yellow}
+$$
+\det(A')=k\,\det(A).
+$$
+:::
+
+Considere a matriz $A$ do exemplo anterior e obtenha $A'$ multiplicando a segunda linha por $-2$:
+
+:::{.bg-yellow}
+$$
+A'=\begin{bmatrix}
+0 & 0 & 0 & -3 \\
+-2 & -4 & -6 & -8 \\
+-1 & 3 & 2 & 5 \\
+2 & 1 & -2 & 0
+\end{bmatrix},
+$$
+:::
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+
+:::{.bg-yellow}
+$$
+\begin{align*}
+\det(A)&=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(B)\\
+&=(-3)(-1)^{5}\det(B)=3\det(B),
+\end{align*}
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+onde $B$ é o menor obtido suprimindo a primeira linha e a quarta coluna:
+
+:::{.bg-yellow}
+$$
+B=\begin{bmatrix}-2 & -4 & -6 \\ -1 & 3 & 2 \\ 2 & 1 & -2\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Agora calculamos $\det(B)$ por desenvolvimento pela primeira linha:
+
+:::{.bg-yellow}
+$$
+\det(B)=-2\cdot\det\begin{bmatrix}3 & 2\\ 1 & -2\end{bmatrix}+4\cdot\det\begin{bmatrix}-1 & 2\\ 2 & -2\end{bmatrix}-6\cdot\det\begin{bmatrix}-1 & 3\\ 2 & 1\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Calculemos cada determinante $2\times2$:
+
+:::{.bg-yellow}
+$$
+\det\begin{bmatrix}3 & 2\\ 1 & -2\end{bmatrix}=-8,\quad 
+\det\begin{bmatrix}-1 & 2\\ 2 & -2\end{bmatrix}=-2,
+\quad
+\det\begin{bmatrix}-1 & 3\\ 2 & 1\end{bmatrix}=-7.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Substituindo estes valores em $\det(B)$:
+
+:::{.bg-yellow}
+$$
+\det(B)=-2\cdot(-8)+4\cdot(-2)-6\cdot(-7)=16-8+42=50.
+$$
+:::
+:::
+
+:::{.fragment}
+Finalmente, voltando a $\det(A)=3\det(B)$:
+
+:::{.bg-yellow}
+$$
+\det(A)=3\cdot 50=150.
+$$
+:::
+:::
+:::
+
+
+:::{.fragment}
+Nota: se multiplicarmos todas as linhas por um mesmo escalar $k$ em uma matriz $n\times n$, o determinante é multiplicado por $k^{n}$.
+:::
+
+### Exemplo detalhado com troca de linhas
+
+
+
+Considere agora a matriz obtida trocando a segunda e a terceira linhas de $A$. Chamemos-na de $\tilde A$:
+
+:::{.bg-yellow}
+$$
+\tilde A=\begin{bmatrix}
+0 & 0 & 0 & -3 \\
+-1 & 3 & 2 & 5 \\
+1 & 2 & 3 & 4 \\
+2 & 1 & -2 & 0
+\end{bmatrix}.
+$$
+:::
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Como antes, pelo desenvolvimento pela primeira linha só resta a contribuição do último elemento $-3$:
+
+:::{.bg-yellow}
+$$
+\begin{align*}
+\det(\tilde A)&=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(\tilde B)\\
+&=(-3)(-1)^{5}\det(\tilde B)=3\det(\tilde B),
+\end{align*}
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+onde $\tilde B$ é o menor formado pelas linhas 2,3,4 de $\tilde A$ sem a quarta coluna:
+
+:::{.bg-yellow}
+$$
+\tilde B=\begin{bmatrix}-1 & 3 & 2 \\
+1 & 2 & 3 \\
+2 & 1 & -2\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Calculamos $\det(\tilde B)$ por desenvolvimento pela primeira linha:
+
+:::{.bg-yellow}
+$$
+\det(\tilde B)=(-1)\cdot\det\begin{bmatrix}2 & 3 \\
+1 & -2\end{bmatrix}-3\cdot\det\begin{bmatrix}1 & 3 \\
+2 & -2\end{bmatrix}+2\cdot\det\begin{bmatrix}1 & 2 \\
+2 & 1\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Calculemos cada determinante $2\times2$:
+
+:::{.bg-yellow}
+$$
+\det\begin{bmatrix}2 & 3 \\
+1 & -2\end{bmatrix}=-7,
+\quad 
+\det\begin{bmatrix}1 & 3 \\
+2 & -2\end{bmatrix}=-8,
+\quad
+\det\begin{bmatrix}1 & 2 \\
+2 & 1\end{bmatrix}=-3.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Substituindo esses valores em $\det(\tilde B)$:
+
+:::{.bg-yellow}
+$$
+\det(\tilde B)=(-1)\cdot(-7)-3\cdot(-8)+2\cdot(-3)=7+24-6=25.
+$$
+:::
+:::
+
+:::{.fragment}
+Finalmente,
+
+:::{.bg-yellow}
+$$
+\det(\tilde A)=3\cdot25=75.
+$$
+:::
+:::
+:::
+
+:::{.fragment}
+Observe que este resultado é o negativo do determinante da matriz original $A$ (recorde: $\det(A)=-75$). Trocar duas linhas produz, de facto, a multiplicação do determinante por $-1$.
+:::
+
+### Somar um múltiplo escalar de uma linha a uma outra
+
+Do exemplo anterior e obtemos $A''$ aplicando $L_2\leftarrow L_2+2L_3$ (ou seja, adicionamos duas vezes a terceira linha à segunda):
+
+:::{.bg-yellow}
+$$
+A''=\begin{bmatrix}
+0 & 0 & 0 & -3 \\
+-1 & 8 & 7 & 14 \\
+-1 & 3 & 2 & 5 \\
+2 & 1 & -2 & 0
+\end{bmatrix}.
+$$
+:::
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Pelo desenvolvimento pela primeira linha só contribui o último termo $-3$:
+
+:::{.bg-yellow}
+$$
+\det(A'')=(-3)(-1)^{1+4}\det(B'')=3\det(B''),
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+onde $B''$ é o menor obtido suprimindo a primeira linha e a quarta coluna:
+
+:::{.bg-yellow}
+$$
+B''=\begin{bmatrix}-1 & 8 & 7 \\
+-1 & 3 & 2 \\
+2 & 1 & -2\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Calculamos $\det(B'')$ por desenvolvimento pela primeira linha:
+
+:::{.bg-yellow}
+$$
+\det(B'')=(-1)\cdot\det\begin{bmatrix}3 & 2 \\
+1 & -2\end{bmatrix}-8\cdot\det\begin{bmatrix}-1 & 2 \\
+2 & -2\end{bmatrix}+7\cdot\det\begin{bmatrix}-1 & 3 \\
+2 & 1\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Calculemos cada determinante $2\times2$:
+
+:::{.bg-yellow}
+$$
+\det\begin{bmatrix}3 & 2 \\
+1 & -2\end{bmatrix}=3\cdot(-2)-2\cdot1=-6-2=-8,
+$$
+:::
+
+:::{.bg-yellow}
+$$
+\det\begin{bmatrix}-1 & 2 \\
+2 & -2\end{bmatrix}=(-1)(-2)-2\cdot2=2-4=-2,
+$$
+:::
+
+:::{.bg-yellow}
+$$
+\det\begin{bmatrix}-1 & 3 \\
+2 & 1\end{bmatrix}=(-1)\cdot1-3\cdot2=-1-6=-7.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Substituindo esses valores em $\det(B'')$:
+
+:::{.bg-yellow}
+$$
+\det(B'')=(-1)\cdot(-8)-8\cdot(-2)+7\cdot(-7)=8+16-49=-25.
+$$
+:::
+:::
+
+:::{.fragment}
+Finalmente,
+
+:::{.bg-yellow}
+$$
+\det(A'')=3\cdot(-25)=-75.
+$$
+:::
+:::
+:::
+
+:::{.fragment}
+Concluímos que a operação $L_2\leftarrow L_2+2L_3$ não alterou o determinante: $\det(A'')=\det(A)=-75$.
+:::
+
+
+### Operações elementares por linhas e o determinante
+
+Resumo rápido das operações elementares por linhas e o seu efeito no determinante:
+
+- Troca de duas linhas $L_i\leftrightarrow L_j$:
+
+:::{.bg-yellow}
+$$
+\text{Se }A' \text{ é obtida de } A \text{ trocando duas linhas, então }\;\det(A')=-\det(A).
+$$
+:::
+
+- Multiplicar uma linha por um escalar $k$ ($L_i\leftarrow kL_i$):
+
+:::{.bg-yellow}
+$$
+\det(A')=k\,\det(A).
+$$
+:::
+
+Nota: multiplicar todas as linhas por $k$ numa matriz $n\times n$ multiplica o determinante por $k^{n}$.
+
+- Adicionar a uma linha um múltiplo de outra ($L_i\leftarrow L_i+kL_j$, $i\neq j$):
+
+:::{.bg-yellow}
+$$
+\det(A')=\det(A).
+$$
+:::
+
+### Determinante por eliminação de Gauss-Jordan
+
+Vamos calcular $\det(A)$ aplicando operações elementares por linhas para transformar $A$ numa matriz triangular superior, registrando o efeito das trocas de linhas.
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Começamos com a matriz original:
+
+:::{.bg-yellow}
+$$
+A=\begin{bmatrix}
+0 & 0 & 0 & -3 \\
+1 & 2 & 3 & 4 \\
+-1 & 3 & 2 & 5 \\
+2 & 1 & -2 & 0
+\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Troque as linhas $L_1\leftrightarrow L_2$ para obter pivô na primeira coluna (troca altera o sinal do determinante):
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+0 & 0 & 0 & -3 \\
+1 & 2 & 3 & 4 \\
+-1 & 3 & 2 & 5 \\
+2 & 1 & -2 & 0
+\end{bmatrix}
+\Rightarrow 
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 0 & 0 & -3 \\
+-1 & 3 & 2 & 5 \\
+2 & 1 & -2 & 0
+\end{bmatrix}
+\qquad (\text{uma troca},\;\text{fator }-1)
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Elimine a primeira coluna abaixo do pivô usando operações do tipo $L_i\leftarrow L_i+kL_1$ (não alteram o determinante):
+
+- $L_3\leftarrow L_3+L_1$ e $L_4\leftarrow L_4-2L_1$.
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 0 & 0 & -3 \\
+-1 & 3 & 2 & 5 \\
+2 & 1 & -2 & 0
+\end{bmatrix}
+\Rightarrow 
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 0 & 0 & -3 \\
+0 & 5 & 5 & 9 \\
+0 & -3 & -8 & -8
+\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Troque agora $L_2\leftrightarrow L_3$ para trazer o pivô $5$ para a posição $(2,2)$ (terceira troca, outro fator $-1$):
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 0 & 0 & -3 \\
+0 & 5 & 5 & 9 \\
+0 & -3 & -8 & -8
+\end{bmatrix}
+\Rightarrow 
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 5 & 5 & 9 \\
+0 & 0 & 0 & -3 \\
+0 & -3 & -8 & -8
+\end{bmatrix}
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Elimine a segunda coluna abaixo do pivô $5$ com
+$L_4\leftarrow L_4+\tfrac{3}{5}L_2$ (adição de múltiplo não altera o determinante):
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 5 & 5 & 9 \\
+0 & 0 & 0 & -3 \\
+0 & -3 & -8 & -8
+\end{bmatrix}
+\Rightarrow 
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 5 & 5 & 9 \\
+0 & 0 & 0 & -3 \\
+0 & 0 & -5 & -\tfrac{13}{5}
+\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment .current-visible}
+Finalmente troque $L_3\leftrightarrow L_4$ para obter a forma triangular superior (quarta troca, fator \,-1):
+
+:::{.bg-yellow}
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 5 & 5 & 9 \\
+0 & 0 & 0 & -3 \\
+0 & 0 & -5 & -\tfrac{13}{5}
+\end{bmatrix}.
+\Rightarrow
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 5 & 5 & 9 \\
+0 & 0 & -5 & -\tfrac{13}{5} \\
+0 & 0 & 0 & -3
+\end{bmatrix}.
+$$
+:::
+:::
+
+:::{.fragment}
+Agora a matriz é triangular superior; o determinante é o produto das entradas da diagonal multiplicado por $(-1)^{\#\text{trocas}}$ (cada troca contribuiu com $-1$). Tivémos 4 trocas, portanto um fator $(-1)^4=1$.
+
+:::{.bg-yellow}
+$$
+\det(A)=(1)\cdot(1)\cdot(5)\cdot(-5)\cdot(-3) = 1\cdot 75 = 75.
+$$
+:::
+:::
+:::
+
+:::{.fragment}
+Isto coincide com o cálculo por desenvolvimento por cofatores apresentado antes.
+:::
+
+### Produto de matrizes e determinantes
+
+Para matrizes quadradas compatíveis $A,B\in\mathbb{R}^{n\times n}$ vale a identidade fundamental
+
+:::{.bg-yellow}
+$$
+\det(AB)=\det(A)\,\det(B).
+$$
+:::
+
+Como consequência imediata, se $A$ for invertível existe $A^{-1}$ tal que $AA^{-1}=I_n$. Aplicando a identidade acima e sabendo que $\det(I_n)=1$ obtemos
+
+:::{.bg-yellow}
+$$
+1=\det(I_n)=\det(A)\,\det(A^{-1}).
+$$
+:::
+
+Isto implica que $\det(A)\neq 0$ (pois é um fator de 1). Portanto toda matriz invertível tem determinante não nulo. Equivalentemente, se $\det(A)=0$ então $A$ não é invertível.
+
+Vice-versa, se $\det A\neq 0$, então $A$ é invertível. 
+
+
