@@ -12,7 +12,7 @@
 
   <meta name="author" content="Csaba Schneider">
   <meta name="dcterms.date" content="2025-01-01">
-  <title>Determinante de uma matriz</title>
+  <title>Vetores</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -876,7 +876,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Determinante de uma matriz</h1>
+  <h1 class="title">Vetores</h1>
   <p class="subtitle">Apostilas</p>
 
 <div class="quarto-title-authors">
@@ -889,623 +889,249 @@ Csaba Schneider
 
   <p class="date">2025-01-01</p>
 </section>
-<section id="definição-e-exemplos-iniciais" class="slide level3">
-<h3>Definição e exemplos iniciais</h3>
-<p>O determinante é uma função que associa a cada matriz quadrada <span class="math inline">\(A\in\mathbb{R}^{n\times n}\)</span> um número real, denotado por <span class="math inline">\(\det(A)\)</span> ou <span class="math inline">\(\operatorname{det}(A)\)</span>, e que codifica propriedades geométricas e algébricas importantes (volume, invertibilidade, etc.).</p>
+<section id="introdução" class="slide level3">
+<h3>Introdução</h3>
+<p>Vamos começar o estudo de <span class="text-red">vetores</span>.</p>
+<p>Na Física, as grandezas podem ser classificadas como escalares e vetoriais.</p>
 <ul>
-<li>Para <span class="math inline">\(1\times1\)</span>, se <span class="math inline">\(A=[a]\)</span> então</li>
+<li>Grandezas escalares são dadas por um número, por exemplo: distância, área, massa, etc. {.fragment}</li>
+<li>Grandezas vetoriais são dadas por um vetor que tem módulo, direção e sentido. São exemplos: velocidade, força peso, força resultante, etc. {.fragment}</li>
 </ul>
-<div class="bg-yellow">
-<p><span class="math display">\[\det(A)=a.\]</span></p>
-</div>
+<p>Como o módulo de um vetor é um número, para saber o que é um vetor, precisamos refletir primeiramente:</p>
+<p><span class="bg-yellow fragment">O que é número?</span></p>
+</section>
+<section id="o-que-é-o-número-cinco" class="slide level3">
+<h3>O que é o número cinco?</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig14.png" class="fragment r-stretch" style="width:80.0%"></section>
+<section id="o-que-é-o-número-cinco-cont." class="slide level3">
+<h3>O que é o número cinco? (cont.)</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig14.png" style="width:60.0%" class="r-stretch"><ul>
+<li>O número cinco é um conceito abstrato, representado de diferentes maneiras. {.fragment}</li>
+<li>Nenhuma dessas imagens é o número cinco; são representações do número cinco. {.fragment}</li>
+</ul>
+</section>
+<section id="vetores" class="slide level3">
+<h3>Vetores</h3>
 <ul>
-<li>Para <span class="math inline">\(2\times2\)</span>, se</li>
+<li>Vetores também são conceitos abstratos. {.fragment}</li>
+<li>São representados por segmentos orientados. {.fragment}</li>
+<li>Segmentos orientados paralelos, com mesmo comprimento e sentido, representam o mesmo vetor. {.fragment}</li>
 </ul>
-<div class="bg-yellow">
-<p><span class="math display">\[A=\begin{bmatrix}a_{11} &amp; a_{12} \\\ a_{21} &amp; a_{22}\end{bmatrix},\]</span></p>
-</div>
-<p>então</p>
-<div class="bg-yellow">
-<p><span class="math display">\[\det(A)=a_{11}a_{22}-a_{12}a_{21}.\]</span></p>
-</div>
+
+<img data-src="../ChicosNotes/Semana6/fig01.png" class="fragment r-stretch" style="width:60.0%"><p>Do mesmo modo que a representação de um número não é o número, a representação de um vetor por um segmento orientado não é o vetor.</p>
 </section>
-<section id="menores-e-cofatores" class="slide level3">
-<h3>Menores e cofatores</h3>
-<div class="fragment">
-<p>Para a matriz <span class="math inline">\(A=(a_{ij})_{n\times n}\)</span>, o menor de <span class="math inline">\(a_{ij}\)</span>, denotado <span class="math inline">\(\tilde{A}_{ij}\)</span>, é a submatriz <span class="math inline">\((n-1)\times(n-1)\)</span> obtida eliminando a linha <span class="math inline">\(i\)</span> e a coluna <span class="math inline">\(j\)</span>. O cofator é</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\tilde{a}_{ij}=(-1)^{i+j}\det(\tilde{A}_{ij}).
-\]</span></p>
-</div>
-</div>
-<div class="r-stack">
-<div class="fragment current-visible">
-<p>Exemplo simbólico (<span class="math inline">\(3\times3\)</span>):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\require{cancel}
-A=\begin{bmatrix}
-\cancel{a_{11}} &amp; \cancel{a_{12}} &amp; \cancel{a_{13}} \\
-a_{21} &amp; \cancel{a_{22}} &amp; a_{23} \\
-a_{31} &amp; \cancel{a_{32}} &amp; a_{33}
-\end{bmatrix},\qquad
-\tilde{A}_{12}=\begin{bmatrix}a_{21} &amp; a_{23}\\ a_{31} &amp; a_{33}\end{bmatrix},
-\qquad
-\tilde a_{12}=(-1)^{1+2} a_{21}a_{33}-a_{23}a_{31}=-a_{21}a_{33}+a_{23}a_{31}
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Exemplo numérico rápido:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-A=\begin{bmatrix}\cancel 1 &amp; \cancel 2 &amp; \cancel 3\\ \cancel 4 &amp; 5 &amp; 6\\ \cancel7 &amp; 8 &amp; 9\end{bmatrix},\qquad
-\tilde{A}_{11}=\begin{bmatrix}5 &amp; 6\\ 8 &amp; 9\end{bmatrix},\quad
-\det(\tilde{A}_{11})=5\cdot9-6\cdot8=-3,\quad
-\tilde{a}_{11}=(-1)^{1+1}\det(\tilde{A}_{11})=-3.
-\]</span></p>
-</div>
-<p>Portanto o cofator de <span class="math inline">\(a_{11}\)</span> é</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\tilde{a}_{11}=(-1)^{1+1}(-3) = -3.
-\]</span></p>
-</div>
-</div>
-</div>
+<section id="operações-com-vetores-soma" class="slide level3">
+<h3>Operações com vetores — Soma</h3>
+<p><span class="bg-yellow">Soma</span>: regra do paralelogramo. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig02.png" class="fragment r-stretch" style="width:60.0%"><p>Na figura, vemos que a soma de vetores é comutativa: <span class="math inline">\(V + W = W + V\)</span>. {.fragment}</p>
 </section>
-<section id="a-definição-do-determinante-3times-3" class="slide level3">
-<h3>A definição do determinante <span class="math inline">\(3\times 3\)</span></h3>
-<p>Seja</p>
-<p><span class="math display">\[
-A=\begin{bmatrix}
-a_{11} &amp; a_{12} &amp; a_{13} \\
-a_{21} &amp; a_{22} &amp; a_{23} \\
-a_{31} &amp; a_{32} &amp; a_{33}
-\end{bmatrix}.
-\]</span></p>
-<p>O determinante de <span class="math inline">\(A\)</span> é calculado por desenvolvimento por cofatores pela primeira linha:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{align*}
-\det(A)&amp;=a_{11}\tilde{a}_{11}+a_{12}\tilde{a}_{12}+a_{13}\tilde{a}_{13},\qquad
-\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})\\&amp;=
-a_{11}(-1)^{1+1}\det\begin{bmatrix}a_{22} &amp; a_{23}\\[4pt] a_{32} &amp; a_{33}\end{bmatrix}
-+ a_{12}(-1)^{1+2}\det\begin{bmatrix}a_{21} &amp; a_{23}\\[4pt] a_{31} &amp; a_{33}\end{bmatrix}
-+ a_{13}(-1)^{1+3}\det\begin{bmatrix}a_{21} &amp; a_{22}\\[4pt] a_{31} &amp; a_{32}\end{bmatrix}
-\end{align*}
-\]</span></p>
-</div>
-</section>
-<section id="exemplo" class="slide level3">
-<h3>Exemplo</h3>
-<p><span class="math display">\[
-\det\begin{bmatrix}1&amp;2&amp;3\\[4pt]-1&amp;3&amp;2\\[4pt]2&amp;1&amp;-2\end{bmatrix}
-=1\cdot\det\begin{bmatrix}3&amp;2\\[4pt]1&amp;-2\end{bmatrix}
--2\cdot\det\begin{bmatrix}-1&amp;2\\[4pt]2&amp;-2\end{bmatrix}
-+3\cdot\det\begin{bmatrix}-1&amp;3\\[4pt]2&amp;1\end{bmatrix}.
-\]</span></p>
-<p>Calculando os determinantes <span class="math display">\[2\times2\]</span>:</p>
-<p><span class="math display">\[
-\det\begin{bmatrix}3&amp;2\\1&amp;-2\end{bmatrix}=-8,\qquad
-\det\begin{bmatrix}-1&amp;2\\2&amp;-2\end{bmatrix}=-2,\qquad
-\det\begin{bmatrix}-1&amp;3\\2&amp;1\end{bmatrix}=-7.
-\]</span></p>
-<p>Portanto</p>
-<p><span class="math display">\[
-\det = 1\cdot(-8)-2\cdot(-2)+3\cdot(-7)=-8+4-21=-25.
-\]</span></p>
-</section>
-<section id="o-determinante-caso-geral" class="slide level3">
-<h3>O determinante: Caso geral</h3>
-<p>Seja <span class="math inline">\(A=(a_{ij})_{n\times n}\)</span>. Pelo desenvolvimento por cofatores ao longo da primeira linha temos:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{align*}
-\det(A)&amp;=\sum_{j=1}^{n} a_{1j}(-1)^{1+j}\det(\tilde{A}_{1j})
-\\&amp;=a_{11}(-1)^{1+1}\det(\tilde{A}_{11})+a_{12}(-1)^{1+2}\det(\tilde{A}_{12})+\cdots+a_{1n}(-1)^{1+n}\det(\tilde{A}_{1n}),
-\end{align*}
-\]</span></p>
-</div>
-<p>onde o fator <span class="math inline">\((-1)^{1+j}\det(\tilde{A}_{1j})\)</span> é o cofator correspondente ao elemento <span class="math inline">\(a_{1j}\)</span>. Em notação geral escrevemos o cofator como <span class="math display">\[
-\tilde a_{i,j}=(-1)^{i+j}\det(\tilde{A}_{i,j}).
-\]</span></p>
-<p>Esta expressão fornece uma definição recursiva do determinante em termos dos determinantes dos menores <span class="math inline">\((n-1)\times(n-1)\)</span>.</p>
-</section>
-<section id="exemplo-detalhado" class="slide level3">
-<h3>Exemplo detalhado</h3>
-<p>Vamos calcular detalhadamente o determinante da matriz:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-A=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; -3 \\
-1 &amp; 2 &amp; 3 &amp; 4 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix}.
-\]</span></p>
-</div>
-<div class="r-stack">
-<div class="fragment current-visible">
-<p>Como os três primeiros elementos da primeira linha são zero, o desenvolvimento por cofatores pela primeira linha reduz-se à contribuição do último elemento <span class="math inline">\(-3\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{align*}
-\det(A)&amp;=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(B)\\
-&amp;=(-3)(-1)^{5}\det(B)=3\det(B),
-\end{align*}
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>onde <span class="math inline">\(B\)</span> é o menor obtido suprimindo a primeira linha e a quarta coluna:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-B=\begin{bmatrix}1 &amp; 2 &amp; 3 \\ -1 &amp; 3 &amp; 2 \\ 2 &amp; 1 &amp; -2\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Agora calculamos <span class="math inline">\(\det(B)\)</span> por desenvolvimento pela primeira linha:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(B)=1\cdot\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}-2\cdot\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}+3\cdot\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}=-8,\qquad
-\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}=-2,\qquad
-\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}=-7.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Substituindo estes valores em <span class="math inline">\(\det(B)\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(B)=1\cdot(-8)-2\cdot(-2)+3\cdot(-7)=-8+4-21=-25.
-\]</span></p>
-</div>
-</div>
-<div class="fragment">
-<p>Finalmente, voltando a <span class="math inline">\(\det(A)=3\det(B)\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A)=3\cdot(-25)=-75.
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="determinantes-e-operações-elementares-por-linhas" class="slide level3">
-<h3>Determinantes e operações elementares por linhas</h3>
-<p>Multiplicar uma linha (ou coluna) de uma matriz por um escalar <span class="math inline">\(k\)</span> multiplica o determinante pelo mesmo escalar. Em notação: se <span class="math inline">\(A'\)</span> é obtida a partir de <span class="math inline">\(A\)</span> multiplicando a linha <span class="math inline">\(i\)</span> por <span class="math inline">\(k\)</span>, então</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A')=k\,\det(A).
-\]</span></p>
-</div>
-<p>Considere a matriz <span class="math inline">\(A\)</span> do exemplo anterior e obtenha <span class="math inline">\(A'\)</span> multiplicando a segunda linha por <span class="math inline">\(-2\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-A'=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; -3 \\
--2 &amp; -4 &amp; -6 &amp; -8 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix},
-\]</span></p>
-</div>
-<div class="r-stack">
-<div class="fragment current-visible">
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{align*}
-\det(A)&amp;=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(B)\\
-&amp;=(-3)(-1)^{5}\det(B)=3\det(B),
-\end{align*}
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>onde <span class="math inline">\(B\)</span> é o menor obtido suprimindo a primeira linha e a quarta coluna:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-B=\begin{bmatrix}-2 &amp; -4 &amp; -6 \\ -1 &amp; 3 &amp; 2 \\ 2 &amp; 1 &amp; -2\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Agora calculamos <span class="math inline">\(\det(B)\)</span> por desenvolvimento pela primeira linha:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(B)=-2\cdot\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}+4\cdot\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}-6\cdot\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det\begin{bmatrix}3 &amp; 2\\ 1 &amp; -2\end{bmatrix}=-8,\quad
-\det\begin{bmatrix}-1 &amp; 2\\ 2 &amp; -2\end{bmatrix}=-2,
-\quad
-\det\begin{bmatrix}-1 &amp; 3\\ 2 &amp; 1\end{bmatrix}=-7.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Substituindo estes valores em <span class="math inline">\(\det(B)\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(B)=-2\cdot(-8)+4\cdot(-2)-6\cdot(-7)=16-8+42=50.
-\]</span></p>
-</div>
-</div>
-<div class="fragment">
-<p>Finalmente, voltando a <span class="math inline">\(\det(A)=3\det(B)\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A)=3\cdot 50=150.
-\]</span></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Nota: se multiplicarmos todas as linhas por um mesmo escalar <span class="math inline">\(k\)</span> em uma matriz <span class="math inline">\(n\times n\)</span>, o determinante é multiplicado por <span class="math inline">\(k^{n}\)</span>.</p>
-</div>
-</section>
-<section id="exemplo-detalhado-com-troca-de-linhas" class="slide level3">
-<h3>Exemplo detalhado com troca de linhas</h3>
-<p>Considere agora a matriz obtida trocando a segunda e a terceira linhas de <span class="math inline">\(A\)</span>. Chamemos-na de <span class="math inline">\(\tilde A\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\tilde A=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; -3 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-1 &amp; 2 &amp; 3 &amp; 4 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix}.
-\]</span></p>
-</div>
-<div class="r-stack">
-<div class="fragment current-visible">
-<p>Como antes, pelo desenvolvimento pela primeira linha só resta a contribuição do último elemento <span class="math inline">\(-3\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{align*}
-\det(\tilde A)&amp;=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(\tilde B)\\
-&amp;=(-3)(-1)^{5}\det(\tilde B)=3\det(\tilde B),
-\end{align*}
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>onde <span class="math inline">\(\tilde B\)</span> é o menor formado pelas linhas 2,3,4 de <span class="math inline">\(\tilde A\)</span> sem a quarta coluna:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\tilde B=\begin{bmatrix}-1 &amp; 3 &amp; 2 \\
-1 &amp; 2 &amp; 3 \\
-2 &amp; 1 &amp; -2\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Calculamos <span class="math inline">\(\det(\tilde B)\)</span> por desenvolvimento pela primeira linha:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(\tilde B)=(-1)\cdot\det\begin{bmatrix}2 &amp; 3 \\
-1 &amp; -2\end{bmatrix}-3\cdot\det\begin{bmatrix}1 &amp; 3 \\
-2 &amp; -2\end{bmatrix}+2\cdot\det\begin{bmatrix}1 &amp; 2 \\
-2 &amp; 1\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det\begin{bmatrix}2 &amp; 3 \\
-1 &amp; -2\end{bmatrix}=-7,
-\quad
-\det\begin{bmatrix}1 &amp; 3 \\
-2 &amp; -2\end{bmatrix}=-8,
-\quad
-\det\begin{bmatrix}1 &amp; 2 \\
-2 &amp; 1\end{bmatrix}=-3.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Substituindo esses valores em <span class="math inline">\(\det(\tilde B)\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(\tilde B)=(-1)\cdot(-7)-3\cdot(-8)+2\cdot(-3)=7+24-6=25.
-\]</span></p>
-</div>
-</div>
-<div class="fragment">
-<p>Finalmente,</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(\tilde A)=3\cdot25=75.
-\]</span></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Observe que este resultado é o negativo do determinante da matriz original <span class="math inline">\(A\)</span> (recorde: <span class="math inline">\(\det(A)=-75\)</span>). Trocar duas linhas produz, de facto, a multiplicação do determinante por <span class="math inline">\(-1\)</span>.</p>
-</div>
-</section>
-<section id="somar-um-múltiplo-escalar-de-uma-linha-a-uma-outra" class="slide level3">
-<h3>Somar um múltiplo escalar de uma linha a uma outra</h3>
-<p>Do exemplo anterior e obtemos <span class="math inline">\(A''\)</span> aplicando <span class="math inline">\(L_2\leftarrow L_2+2L_3\)</span> (ou seja, adicionamos duas vezes a terceira linha à segunda):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-A''=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; -3 \\
--1 &amp; 8 &amp; 7 &amp; 14 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix}.
-\]</span></p>
-</div>
-<div class="r-stack">
-<div class="fragment current-visible">
-<p>Pelo desenvolvimento pela primeira linha só contribui o último termo <span class="math inline">\(-3\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A'')=(-3)(-1)^{1+4}\det(B'')=3\det(B''),
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>onde <span class="math inline">\(B''\)</span> é o menor obtido suprimindo a primeira linha e a quarta coluna:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-B''=\begin{bmatrix}-1 &amp; 8 &amp; 7 \\
--1 &amp; 3 &amp; 2 \\
-2 &amp; 1 &amp; -2\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Calculamos <span class="math inline">\(\det(B'')\)</span> por desenvolvimento pela primeira linha:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(B'')=(-1)\cdot\det\begin{bmatrix}3 &amp; 2 \\
-1 &amp; -2\end{bmatrix}-8\cdot\det\begin{bmatrix}-1 &amp; 2 \\
-2 &amp; -2\end{bmatrix}+7\cdot\det\begin{bmatrix}-1 &amp; 3 \\
-2 &amp; 1\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Calculemos cada determinante <span class="math inline">\(2\times2\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det\begin{bmatrix}3 &amp; 2 \\
-1 &amp; -2\end{bmatrix}=3\cdot(-2)-2\cdot1=-6-2=-8,
-\]</span></p>
-</div>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det\begin{bmatrix}-1 &amp; 2 \\
-2 &amp; -2\end{bmatrix}=(-1)(-2)-2\cdot2=2-4=-2,
-\]</span></p>
-</div>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det\begin{bmatrix}-1 &amp; 3 \\
-2 &amp; 1\end{bmatrix}=(-1)\cdot1-3\cdot2=-1-6=-7.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Substituindo esses valores em <span class="math inline">\(\det(B'')\)</span>:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(B'')=(-1)\cdot(-8)-8\cdot(-2)+7\cdot(-7)=8+16-49=-25.
-\]</span></p>
-</div>
-</div>
-<div class="fragment">
-<p>Finalmente,</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A'')=3\cdot(-25)=-75.
-\]</span></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Concluímos que a operação <span class="math inline">\(L_2\leftarrow L_2+2L_3\)</span> não alterou o determinante: <span class="math inline">\(\det(A'')=\det(A)=-75\)</span>.</p>
-</div>
-</section>
-<section id="operações-elementares-por-linhas-e-o-determinante" class="slide level3">
-<h3>Operações elementares por linhas e o determinante</h3>
-<p>Resumo rápido das operações elementares por linhas e o seu efeito no determinante:</p>
+<section id="operações-com-vetores-associatividade" class="slide level3">
+<h3>Operações com vetores — Associatividade</h3>
+<p>A soma de vetores também é associativa: <span class="math inline">\((V+W)+U = V+(W+U)\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig03.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-vetor-nulo-e-simétrico" class="slide level3">
+<h3>Operações com vetores — Vetor nulo e simétrico</h3>
+<p>O vetor nulo <span class="math inline">\(\vec{0}\)</span> é representado por um ponto (mesmo ponto inicial e final).</p>
 <ul>
-<li>Troca de duas linhas <span class="math inline">\(L_i\leftrightarrow L_j\)</span>:</li>
+<li>Elemento neutro da soma: <span class="math inline">\(V + \vec{0} = V\)</span>. {.fragment}</li>
+<li>Dado <span class="math inline">\(V\)</span>, o <span class="bg-yellow">simétrico</span> é <span class="math inline">\(-V\)</span> (mesma direção, sentido contrário) e <span class="math inline">\(V + (-V) = \vec{0}\)</span>. {.fragment}</li>
 </ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\text{Se }A' \text{ é obtida de } A \text{ trocando duas linhas, então }\;\det(A')=-\det(A).
-\]</span></p>
-</div>
-<ul>
-<li>Multiplicar uma linha por um escalar <span class="math inline">\(k\)</span> (<span class="math inline">\(L_i\leftarrow kL_i\)</span>):</li>
+
+<img data-src="../ChicosNotes/Semana6/fig04.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-diferença" class="slide level3">
+<h3>Operações com vetores — Diferença</h3>
+<p><span class="bg-yellow">Diferença</span>: <span class="math inline">\(V - W = V + (-W)\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig05.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-diagonais" class="slide level3">
+<h3>Operações com vetores — Diagonais</h3>
+<p>Dados <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, as diagonais do paralelogramo gerado por eles são a soma e a diferença. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig06.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-multiplicação-por-escalar" class="slide level3">
+<h3>Operações com vetores — Multiplicação por escalar</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig07.png" style="width:60.0%" class="r-stretch"><ul>
+<li>Se dois vetores são múltiplos escalares, então são representados por segmentos orientados paralelos. {.fragment}</li>
+<li>Reciprocamente, se representados por segmentos orientados paralelos, então um é múltiplo escalar do outro. {.fragment}</li>
 </ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A')=k\,\det(A).
-\]</span></p>
-</div>
-<p>Nota: multiplicar todas as linhas por <span class="math inline">\(k\)</span> numa matriz <span class="math inline">\(n\times n\)</span> multiplica o determinante por <span class="math inline">\(k^{n}\)</span>.</p>
-<ul>
-<li>Adicionar a uma linha um múltiplo de outra (<span class="math inline">\(L_i\leftarrow L_i+kL_j\)</span>, <span class="math inline">\(i\neq j\)</span>):</li>
-</ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A')=\det(A).
-\]</span></p>
-</div>
 </section>
-<section id="determinante-por-eliminação-de-gauss-jordan" class="slide level3">
-<h3>Determinante por eliminação de Gauss-Jordan</h3>
-<p>Vamos calcular <span class="math inline">\(\det(A)\)</span> aplicando operações elementares por linhas para transformar <span class="math inline">\(A\)</span> numa matriz triangular superior, registrando o efeito das trocas de linhas.</p>
-<div class="r-stack">
-<div class="fragment current-visible">
-<p>Começamos com a matriz original:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-A=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; -3 \\
-1 &amp; 2 &amp; 3 &amp; 4 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Troque as linhas <span class="math inline">\(L_1\leftrightarrow L_2\)</span> para obter pivô na primeira coluna (troca altera o sinal do determinante):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; -3 \\
-1 &amp; 2 &amp; 3 &amp; 4 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix}
-\Rightarrow
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix}
-\qquad (\text{uma troca},\;\text{fator }-1)
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Elimine a primeira coluna abaixo do pivô usando operações do tipo <span class="math inline">\(L_i\leftarrow L_i+kL_1\)</span> (não alteram o determinante):</p>
-<ul>
-<li><span class="math inline">\(L_3\leftarrow L_3+L_1\)</span> e <span class="math inline">\(L_4\leftarrow L_4-2L_1\)</span>.</li>
-</ul>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
--1 &amp; 3 &amp; 2 &amp; 5 \\
-2 &amp; 1 &amp; -2 &amp; 0
-\end{bmatrix}
-\Rightarrow
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
-0 &amp; 5 &amp; 5 &amp; 9 \\
-0 &amp; -3 &amp; -8 &amp; -8
-\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Troque agora <span class="math inline">\(L_2\leftrightarrow L_3\)</span> para trazer o pivô <span class="math inline">\(5\)</span> para a posição <span class="math inline">\((2,2)\)</span> (terceira troca, outro fator <span class="math inline">\(-1\)</span>):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
-0 &amp; 5 &amp; 5 &amp; 9 \\
-0 &amp; -3 &amp; -8 &amp; -8
-\end{bmatrix}
-\Rightarrow
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 5 &amp; 5 &amp; 9 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
-0 &amp; -3 &amp; -8 &amp; -8
-\end{bmatrix}
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Elimine a segunda coluna abaixo do pivô <span class="math inline">\(5\)</span> com <span class="math inline">\(L_4\leftarrow L_4+\tfrac{3}{5}L_2\)</span> (adição de múltiplo não altera o determinante):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 5 &amp; 5 &amp; 9 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
-0 &amp; -3 &amp; -8 &amp; -8
-\end{bmatrix}
-\Rightarrow
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 5 &amp; 5 &amp; 9 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
-0 &amp; 0 &amp; -5 &amp; -\tfrac{13}{5}
-\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment current-visible">
-<p>Finalmente troque <span class="math inline">\(L_3\leftrightarrow L_4\)</span> para obter a forma triangular superior (quarta troca, fator ,-1):</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 5 &amp; 5 &amp; 9 \\
-0 &amp; 0 &amp; 0 &amp; -3 \\
-0 &amp; 0 &amp; -5 &amp; -\tfrac{13}{5}
-\end{bmatrix}.
-\Rightarrow
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-0 &amp; 5 &amp; 5 &amp; 9 \\
-0 &amp; 0 &amp; -5 &amp; -\tfrac{13}{5} \\
-0 &amp; 0 &amp; 0 &amp; -3
-\end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-<div class="fragment">
-<p>Agora a matriz é triangular superior; o determinante é o produto das entradas da diagonal multiplicado por <span class="math inline">\((-1)^{\#\text{trocas}}\)</span> (cada troca contribuiu com <span class="math inline">\(-1\)</span>). Tivémos 4 trocas, portanto um fator <span class="math inline">\((-1)^4=1\)</span>.</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-\det(A)=(1)\cdot(1)\cdot(5)\cdot(-5)\cdot(-3) = 1\cdot 75 = 75.
-\]</span></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Isto coincide com o cálculo por desenvolvimento por cofatores apresentado antes.</p>
-</div>
+<section id="exemplo-1" class="slide level3">
+<h3>Exemplo 1</h3>
+<p>Mostre que o segmento que une os pontos médios de dois lados de um triângulo é paralelo e tem metade do comprimento do terceiro lado. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig08.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="exemplo-2" class="slide level3">
+<h3>Exemplo 2</h3>
+<p>Mostre que as diagonais de um paralelogramo se cortam ao meio. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig09.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="vetores-em-coordenadas" class="slide level3">
+<h3>Vetores em coordenadas</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig10.png" style="width:60.0%" class="r-stretch"><p>Por definição, as coordenadas de um vetor são as coordenadas do ponto final do seu representante com ponto inicial na origem. {.fragment}</p>
+<p><span class="bg-yellow">Isso é muito importante</span>: para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem. {.fragment}</p>
 </section>
-<section id="produto-de-matrizes-e-determinantes" class="slide level3">
-<h3>Produto de matrizes e determinantes</h3>
-<p>Para matrizes quadradas compatíveis <span class="math inline">\(A,B\in\mathbb{R}^{n\times n}\)</span> vale a identidade fundamental</p>
-<div class="bg-yellow">
+<section id="operações-de-vetores-em-coordenadas" class="slide level3">
+<h3>Operações de vetores em coordenadas</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span>, então <span class="math display">\[
+V+W = (v_1 + w_1,\ v_2 + w_2), \qquad \alpha V = (\alpha v_1,\ \alpha v_2).
+\]</span> { .fragment }</p>
+
+<img data-src="../ChicosNotes/Semana6/fig11.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="o-vetor-que-liga-dois-pontos-no-plano" class="slide level3">
+<h3>O vetor que liga dois pontos no plano</h3>
+<p>Dados dois pontos <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> no plano, determinar as coordenadas do vetor <span class="math inline">\(\overrightarrow{PQ}\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig12.png" class="fragment r-stretch" style="width:60.0%"><p><span class="math display">\[
+\overrightarrow{OP} + \overrightarrow{PQ} = \overrightarrow{OQ}
+\;\Rightarrow\; P + \overrightarrow{PQ} = Q
+\;\Rightarrow\; \overrightarrow{PQ} = Q - P.
+\]</span> { .fragment }</p>
 <p><span class="math display">\[
-\det(AB)=\det(A)\,\det(B).
-\]</span></p>
-</div>
-<p>Como consequência imediata, se <span class="math inline">\(A\)</span> for invertível existe <span class="math inline">\(A^{-1}\)</span> tal que <span class="math inline">\(AA^{-1}=I_n\)</span>. Aplicando a identidade acima e sabendo que <span class="math inline">\(\det(I_n)=1\)</span> obtemos</p>
-<div class="bg-yellow">
+\overrightarrow{PQ} = (\text{ponto final}) - (\text{ponto inicial}).
+\]</span> { .fragment }</p>
+</section>
+<section id="o-vetor-que-liga-dois-pontos-no-plano-exemplo" class="slide level3">
+<h3>O vetor que liga dois pontos no plano (exemplo)</h3>
+<p>Se <span class="math inline">\(P=(2,4)\)</span> e <span class="math inline">\(Q=(5,2)\)</span>, então <span class="math inline">\(\overrightarrow{PQ} = Q - P = (5,2) - (2,4) = (3,-2)\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig13.png" class="fragment r-stretch" style="width:70.0%"><p>Observe o representante de <span class="math inline">\(\overrightarrow{PQ}\)</span> saindo da origem. {.fragment}</p>
+</section>
+<section id="exercícios-no-plano-cartesiano" class="slide level3">
+<h3>Exercícios no plano cartesiano</h3>
+<ol type="1">
+<li>Os pontos <span class="math inline">\(P=(3,7)\)</span>, <span class="math inline">\(Q=(5,11)\)</span> e <span class="math inline">\(R=(7,16)\)</span> são colineares? {.fragment}</li>
+<li>Dados <span class="math inline">\(A=(x_1,y_1)\)</span> e <span class="math inline">\(B=(x_2,y_2)\)</span>, mostre que o ponto médio de <span class="math inline">\(AB\)</span> é <span class="math inline">\(M=\big(\tfrac{x_1+x_2}{2},\tfrac{y_1+y_2}{2}\big)\)</span>. {.fragment}</li>
+<li>Considere <span class="math inline">\(A = (-2,1)\)</span> e <span class="math inline">\(B = (10,7)\)</span>. Determine <span class="math inline">\(C\)</span> e <span class="math inline">\(D\)</span> que dividem o segmento <span class="math inline">\(AB\)</span> em três partes iguais. {.fragment}</li>
+<li>Dados <span class="math inline">\(A=(-1,3)\)</span>, <span class="math inline">\(B=(3,2)\)</span> e <span class="math inline">\(C=(5,4)\)</span>, determine <span class="math inline">\(D\)</span> tal que <span class="math inline">\(ABCD\)</span> são vértices consecutivos de um paralelogramo. {.fragment}</li>
+</ol>
+</section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço" class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig01_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont." class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço (cont.)</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig02_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont.-1" class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço (cont.)</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig03_1.png" class="fragment r-stretch" style="width:60.0%"><p>No plano ou no espaço, as coordenadas de um vetor são as coordenadas do seu ponto final, quando representamos o vetor por um segmento orientado saindo da origem. {.fragment}</p>
+</section>
+<section id="norma-comprimento" class="slide level3">
+<h3>Norma = comprimento</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2)\)</span>, então <span class="math inline">\(\lVert V \rVert = \sqrt{v_1^2 + v_2^2}\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig04_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="norma-comprimento-cont." class="slide level3">
+<h3>Norma = comprimento (cont.)</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2,v_3)\)</span>, então <span class="math inline">\(\lVert V \rVert = \sqrt{v_1^2 + v_2^2 + v_3^2}\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig05_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="distância-entre-dois-pontos" class="slide level3">
+<h3>Distância entre dois pontos</h3>
+<p>Se <span class="math inline">\(P=(x_1,y_1)\)</span> e <span class="math inline">\(Q=(x_2,y_2)\)</span>, então</p>
+<p><span class="math display">\[\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \qquad
+\operatorname{dist}(P,Q)=\lVert\overrightarrow{PQ}\rVert=\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.\]</span></p>
+
+<img data-src="../ChicosNotes/Semana6/fig06_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="vetores-unitários" class="slide level3">
+<h3>Vetores unitários</h3>
+<p>Se <span class="math inline">\(\alpha\in\mathbb{R}\)</span> e <span class="math inline">\(V\)</span> é um vetor, então <span class="math inline">\(\lVert\alpha V\rVert = |\alpha|\,\lVert V\rVert\)</span> (por exemplo, <span class="math inline">\(\lVert-2V\rVert = 2\lVert V\rVert\)</span>).</p>
+<p>Um vetor <span class="math inline">\(V\)</span> é <span class="bg-yellow">unitário</span> se <span class="math inline">\(\lVert V\rVert = 1\)</span>. {.fragment}</p>
+<p>Se <span class="math inline">\(V\neq\vec{0}\)</span>, então existe um vetor unitário na mesma direção e sentido de <span class="math inline">\(V\)</span>: <span class="math display">\[U\;=\;\Big(\tfrac{1}{\lVert V\rVert}\Big)\,V.\]</span></p>
+
+<img data-src="../ChicosNotes/Semana6/fig07_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="vetores-unitários-exercícios" class="slide level3">
+<h3>Vetores unitários — exercícios</h3>
+<ul>
+<li>Determine um vetor unitário na direção da reta <span class="math inline">\(y=2x\)</span>. Quantos existem? {.fragment}</li>
+<li>Determine um vetor unitário na direção da reta <span class="math inline">\(y=-\tfrac{1}{2}x\)</span>. Quantos existem? {.fragment}</li>
+<li>Todo vetor unitário no plano é da forma <span class="math inline">\(U=(\cos\theta,\sin\theta)\)</span>. Interprete. {.fragment}</li>
+<li>Determine um vetor unitário na direção da reta que liga <span class="math inline">\(P=(-1,2,4)\)</span> e <span class="math inline">\(Q=(3,5,1)\)</span>. {.fragment}</li>
+</ul>
+</section>
+<section id="produto-escalar" class="slide level3">
+<h3>Produto escalar</h3>
+<p>O produto escalar entre dois vetores <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é o número real <span class="math display">\[\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta,\]</span> onde <span class="math inline">\(\theta\)</span> é o ângulo entre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</p>
+
+<img data-src="../ChicosNotes/Semana6/fig08_1.png" class="fragment r-stretch" style="width:60.0%"><p>Além disso, <span class="math inline">\(\langle V,W\rangle = 0\)</span> se <span class="math inline">\(V=\vec{0}\)</span> ou se <span class="math inline">\(W=\vec{0}\)</span>. {.fragment}</p>
+</section>
+<section id="produto-escalar-exemplo" class="slide level3">
+<h3>Produto escalar — exemplo</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math inline">\(\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta = \sqrt{17}\,\sqrt{13}\,\cos\theta\)</span>. {.fragment}</p>
+<p>Mas como determinar <span class="math inline">\(\theta\)</span>? E no espaço? {.fragment}</p>
+</section>
+<section id="lei-dos-cossenos" class="slide level3">
+<h3>Lei dos Cossenos</h3>
+<p>Para calcular <span class="math inline">\(\theta\)</span> e, portanto, o produto escalar, use a <span class="bg-yellow">Lei dos Cossenos</span>: {.fragment} <span class="math display">\[a^2=b^2+c^2-2bc\cos\theta.\]</span></p>
+
+<img data-src="../ChicosNotes/Semana6/fig10_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="produto-escalar-em-coordenadas-teoremas" class="slide level3">
+<h3>Produto escalar em coordenadas — teoremas</h3>
+<p>No plano, se <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2.\]</span></p>
+<p>No espaço, se <span class="math inline">\(V=(v_1,v_2,v_3)\)</span> e <span class="math inline">\(W=(w_1,w_2,w_3)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2 + v_3w_3.\]</span></p>
+</section>
+<section id="produto-escalar-exemplo-rápido" class="slide level3">
+<h3>Produto escalar — exemplo rápido</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math inline">\(\langle V,W\rangle = 4\cdot 2 + 1\cdot 3 = 11\)</span>. {.fragment}</p>
+</section>
+<section id="ângulo-entre-dois-vetores" class="slide level3">
+<h3>Ângulo entre dois vetores</h3>
+<p>Se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são dados em coordenadas, então <span class="math display">\[\cos\theta\;=\;\dfrac{\langle V,W\rangle}{\lVert V\rVert\,\lVert W\rVert}.\]</span></p>
+<p>O ângulo <span class="math inline">\(\theta\)</span> entre dois vetores satisfaz <span class="math inline">\(0^\circ\leq\theta\leq 180^\circ\)</span>. {.fragment}</p>
+</section>
+<section id="ângulo-entre-dois-vetores-exemplo" class="slide level3">
+<h3>Ângulo entre dois vetores — exemplo</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math display">\[\cos\theta=\dfrac{11}{\sqrt{17}\,\sqrt{13}},\qquad \theta = \arccos\Big(\dfrac{11}{\sqrt{17}\,\sqrt{13}}\Big) \approx 42^\circ.\]</span> { .fragment }</p>
+</section>
+<section id="classificação-pelo-produto-escalar" class="slide level3">
+<h3>Classificação pelo produto escalar</h3>
+<p>Para <span class="math inline">\(V,W\neq\vec{0}\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(\theta\)</span> é agudo se <span class="math inline">\(\langle V,W\rangle &gt; 0\)</span>; {.fragment}</li>
+<li><span class="math inline">\(\theta\)</span> é obtuso se <span class="math inline">\(\langle V,W\rangle &lt; 0\)</span>; {.fragment}</li>
+<li><span class="math inline">\(\theta=90^\circ\)</span> se <span class="math inline">\(\langle V,W\rangle = 0\)</span>. {.fragment}</li>
+</ol>
+<p>Assim, <span class="math inline">\(\langle V,W\rangle = 0\)</span> determina a ortogonalidade de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>. {.fragment}</p>
+</section>
+<section id="exemplo-rotação-de-90circ-no-plano" class="slide level3">
+<h3>Exemplo: rotação de <span class="math inline">\(90^\circ\)</span> no plano</h3>
+<p>Dado <span class="math inline">\(V=(a,b)\)</span>, o vetor <span class="math inline">\(W=(-b,a)\)</span> é obtido de <span class="math inline">\(V\)</span> por rotação de <span class="math inline">\(90^\circ\)</span> anti-horária:</p>
 <p><span class="math display">\[
-1=\det(I_n)=\det(A)\,\det(A^{-1}).
-\]</span></p>
-</div>
-<p>Isto implica que <span class="math inline">\(\det(A)\neq 0\)</span> (pois é um fator de 1). Portanto toda matriz invertível tem determinante não nulo. Equivalentemente, se <span class="math inline">\(\det(A)=0\)</span> então <span class="math inline">\(A\)</span> não é invertível.</p>
-<p>Vice-versa, se <span class="math inline">\(\det A\neq 0\)</span>, então <span class="math inline">\(A\)</span> é invertível.</p>
+W = R_{90^\circ}V = \begin{bmatrix} \cos 90^\circ &amp; -\sin 90^\circ \\ \sin 90^\circ &amp; \cos 90^\circ \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
+= \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
+= \begin{bmatrix} -b \\ a \end{bmatrix}.
+\]</span> { .fragment }</p>
+<p>Observe que <span class="math inline">\(\lVert V\rVert = \lVert W\rVert\)</span> e <span class="math inline">\(\langle V,W\rangle = -ab + ab = 0\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig12_1.png" class="fragment r-stretch" style="width:70.0%"></section>
+<section id="exercícios" class="slide level3">
+<h3>Exercícios</h3>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(A=(3,0,2)\)</span>, <span class="math inline">\(B=(4,3,0)\)</span> e <span class="math inline">\(C=(8,1,-1)\)</span> são vértices de um triângulo retângulo. Calcule a área. {.fragment}</li>
+<li>No cubo unitário <span class="math inline">\(ABCDEFGH\)</span>, determine: {.fragment}</li>
+</ol>
+<ul>
+<li>o ângulo entre duas diagonais do cubo; são perpendiculares? {.fragment}</li>
+<li>o ângulo entre uma aresta e uma diagonal do cubo; é o mesmo para qualquer escolha? {.fragment}</li>
+</ul>
+
+<img data-src="../ChicosNotes/Semana6/fig11_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="propriedades-do-produto-escalar" class="slide level3">
+<h3>Propriedades do produto escalar</h3>
+<ol type="1">
+<li><span class="math inline">\(\langle V,W\rangle = \langle W,V\rangle\)</span>. {.fragment}</li>
+<li><span class="math inline">\(\langle U,V+W\rangle = \langle U,V\rangle + \langle U,W\rangle\)</span>. {.fragment}</li>
+<li><span class="math inline">\(\alpha\,\langle V,W\rangle = \langle \alpha V,W\rangle = \langle V,\alpha W\rangle\)</span>. {.fragment}</li>
+</ol>
+<p>Relação com matrizes: se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são colunas, {.fragment} <span class="math display">\[\langle V,W\rangle = V^{T}W = \begin{bmatrix} v_1 &amp; v_2 &amp; v_3 \end{bmatrix}\!\begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} = v_1w_1 + v_2w_2 + v_3w_3.\]</span> { .fragment }</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
