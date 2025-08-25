@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -712,13 +712,14 @@ x + y = 2 + 3 = 5,\qquad 2x - y = 2\cdot 2 - 3 = 1.
 </section>
 <section id="a-forma-geral-de-um-sistema-linear" class="slide level3">
 <h3>A forma geral de um sistema linear</h3>
-<p>Um <span class="text-red">sistema linear</span> em <span class="math inline">\(n\)</span> incógnitas <span class="math inline">\(x_1,\ldots,x_n\)</span> com <span class="math inline">\(m\)</span> equações tem a forma</p>
-<p><span class="math display">\[\begin{align*}
+<p>Um <span class="text-red">sistema linear</span> em <span class="math inline">\(n\)</span> incógnitas <span class="math inline">\(x_1,\ldots,x_n\)</span> com <span class="math inline">\(m\)</span> equações tem a forma <span class="math display">\[
+\begin{align*}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &amp;= b_1,\\
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &amp;= b_2,\\
 \quad&amp;\vdots\\
 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &amp;= b_m.
-\end{align*}\]</span></p>
+\end{align*}
+\]</span></p>
 <p>Aqui, os <span class="math inline">\(a_{ij}\)</span> são os <span class="text-red">coeficientes</span>, os <span class="math inline">\(x_j\)</span> são as <span class="text-red">incógnitas</span> e <span class="math inline">\(b_i\)</span> são os <span class="text-red">termos constantes</span>.</p>
 </section>
 <section id="resolução-do-sistema-por-eliminação-de-gauss-jordan" class="slide level3">
@@ -857,7 +858,7 @@ x_1            &amp;&amp; &amp;{}{}&amp; &amp;{}    &amp;{+(1/3)x_4}&amp;={}&amp
 </ol>
 <div class="bg-yellow">
 <div id="thm-" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1</strong></span> Todo sistema pode ser transformado para a forma escalonada reduzida pelas três operações acima por linhas.</p>
+<p><span class="theorem-title"><strong>Teorema 1</strong></span> Todo sistema pode ser transformado para a forma escalonada reduzida pelas três operações acima por linhas.</p>
 </div>
 </div>
 </div>
@@ -866,39 +867,36 @@ x_1            &amp;&amp; &amp;{}{}&amp; &amp;{}    &amp;{+(1/3)x_4}&amp;={}&amp
 <section id="a-solução-do-sistema" class="slide level3">
 <h3>A Solução do Sistema</h3>
 <p>Agora a solução do sistema pode ser determinada.</p>
-<p><span class="math display">\[
-\begin{alignedat}{5}
+<span class="math display">\[\begin{alignedat}{5}
 x_1            &amp;&amp; &amp;{}{}&amp; &amp;{}    &amp;{+(1/3)x_4}&amp;={}&amp; 1/3\\
      &amp;{}{} &amp;  x_2 &amp;{}{} &amp;     &amp;{}{} &amp;    &amp;{}={}&amp; -2\\
      &amp;{}{} &amp;      &amp;{}{}&amp; x_3&amp;{}-{}&amp; (1/3)x_4&amp;{}={}&amp; -4/3
-\end{alignedat}
-\]</span></p>
+\end{alignedat}\]</span>
 <div class="r-stack">
 <div class="fragment current-visible">
 <ul>
 <li><span class="math inline">\(x_2=-2\)</span>;</li>
-<li><span class="math inline">\(x_4\)</span> é variável livre: ela pode assumir qualquer valor; ou seja <span class="math inline">\(x_4=\alpha\in\mathbb R\)</span>.</li>
+<li><span class="math inline">\(x_4\)</span> é variável livre: ela pode assumir qualquer valor; ou seja <span class="math inline">\(x_4=\alpha\in\R\)</span>.</li>
 <li><span class="math inline">\(x_1=1/3-(1/3)\alpha\)</span>;</li>
 <li><span class="math inline">\(x_3=-4/3+(1/3)\alpha\)</span>.</li>
 </ul>
 </div>
 <div class="fragment current-visible">
 <p>A <span class="bg-yellow">solução geral</span> do sistema é <span class="math display">\[
-\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} 1/3-(1/3)\alpha \\ -2 \\ -4/3+(1/3)\alpha \\ \alpha\end{bmatrix},\quad\alpha\in\mathbb R
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} 1/3-(1/3)\alpha \\ -2 \\ -4/3+(1/3)\alpha \\ \alpha\end{bmatrix},\quad\alpha\in\R
 \]</span></p>
 </div>
 </div>
 </section>
 <section id="forma-matricial" class="slide level3">
 <h3>Forma matricial</h3>
-<p>Considere o sistema linear:</p>
-<p><span class="math display">\[
-\begin{aligned}
+<p>Considere o sistema linear: <span class="math display">\[
+\begin{align*}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &amp;= b_1\\
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &amp;= b_2\\
 \quad&amp;\vdots\\
 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &amp;= b_m
-\end{aligned}
+\end{align*}
 \quad A = \begin{bmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
 a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
 \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
@@ -1075,7 +1073,7 @@ x_1 &amp;{}+{}&amp;     &amp;{}{}&amp; x_3 &amp;{}{}&amp;     &amp;{}={}&amp; -1
 \end{array}\,\right]
 \]</span> Solução: <span class="math display">\[
 x_1 = \tfrac{1}{3} - \tfrac{1}{3}\alpha,\quad x_2 = -2,\quad x_3 = -\tfrac{4}{3} + \tfrac{1}{3}\alpha,\quad
-x_4=\alpha\in \mathbb R.
+x_4=\alpha\in \R.
 \]</span></p>
 </div>
 </div>
@@ -1114,13 +1112,13 @@ x_4=\alpha\in \mathbb R.
 </section>
 <section id="sistema-com-nenhuma-solução" class="slide level3">
 <h3>Sistema com nenhuma solução</h3>
-<p>Considere o seguinte sistema:</p>
-<p><span class="math display">\[\begin{align*}
+<p>Considere o seguinte sistema: <span class="math display">\[
+\begin{align*}
 x_1+x_2-x_3&amp;=3\\
 x_1-x_2+x_3&amp;=0\\
 2x_2-2x_3&amp;=-3
-\end{align*}\]</span></p>
-<p>A matriz aumentada do sistema: <span class="math display">\[
+\end{align*}
+\]</span> A matriz aumentada do sistema: <span class="math display">\[
 \begin{bmatrix}
 1 &amp; 1 &amp; -1 &amp; | &amp; 3\\
 1 &amp; -1 &amp; 1 &amp; | &amp; 0\\
@@ -1174,11 +1172,13 @@ x_1 &amp;{}+{}&amp;     &amp;{}{}&amp; x_3 &amp;{}{}&amp;     &amp;{}={}&amp; -1
 <section id="exemplo-34-gaussjordan" class="slide level3">
 <h3>Exemplo 3×4: Gauss–Jordan</h3>
 <p>Vamos resolver por Gauss–Jordan o sistema com matriz aumentada <span class="math inline">\(3\times 4\)</span>:</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
+\begin{align*}
 x_1+2x_2-x_3&amp;=2\\
 2x_1 + x_2+x_3&amp;=7\\
 -x_1+x_2+2x_3&amp;=3.
-\end{align*}\]</span></p>
+\end{align*}
+\]</span></p>
 <div class="r-stack">
 <div class="fragment current-visible">
 <p>Matriz inicial (pivô em L1, coluna 1): <span class="math display">\[
@@ -1311,14 +1311,14 @@ Ax=b
 </section>
 <section id="sistemas-homogêneous" class="slide level3">
 <h3>Sistemas homogêneous</h3>
-<p>O sistema</p>
-<p><span class="math display">\[\begin{align*}
+<p>O sistema <span class="math display">\[
+\begin{align*}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &amp;= 0,\\
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &amp;= 0,\\
 \quad&amp;\vdots\\
 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &amp;= 0.
-\end{align*}\]</span></p>
-<p>é dito <span class="bg-yellow">sistema homogêneo</span>.</p>
+\end{align*}
+\]</span> é dito <span class="bg-yellow">sistema homogêneo</span>.</p>
 <p>A sua forma matricial é <span class="math display">\[
 Ax = 0
 \]</span></p>
@@ -1567,12 +1567,12 @@ Ax = 0
           // flash "checked"
           button.classList.add('code-copy-button-checked');
           var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copied!");
+          button.setAttribute("title", "Copiada");
           let tooltip;
           if (window.bootstrap) {
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copied!");
+            button.setAttribute("data-bs-title", "Copiada");
             tooltip = new bootstrap.Tooltip(button, 
               { trigger: "manual", 
                 customClass: "code-copy-button-tooltip",
