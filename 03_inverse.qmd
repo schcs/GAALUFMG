@@ -191,13 +191,12 @@ $$
 Considerando a primeira coluna, obremos o seguinte sistema de equações lineares.
 
 :::{.bg-yellow}
-$$
+
 \begin{align*}
 -2b_{11} + 7b_{21} - 3b_{31} &= 1 \\[4pt]
 \;\;b_{11} - 4b_{21} + 2b_{31} &= 0 \\[4pt]
 \;\;2b_{21} - b_{31} &= 0
 \end{align*}
-$$
 :::
 
 A forma matricial este sistema é 
@@ -211,13 +210,13 @@ Resolver este sistema fornece a primeira coluna de $A^{-1}$.
 
 
 
-$$
+
 \begin{align*}
 -2b_{11} + 7b_{21} - 3b_{31} &= 1 \\[4pt]
 \;\;b_{11} - 4b_{21} + 2b_{31} &= 0 \\[4pt]
 \;\;2b_{21} - b_{31} &= 0
 \end{align*}
-$$
+
 
 
 Cálculo por eliminação de Gauss-Jordan (matriz aumentada):

@@ -7,7 +7,8 @@ project:
     - semana2.qmd
     - 03_inverse.qmd
     - 04_determinant.qmd
-
+    - 05_vetores.qmd
+    
 
 render-on-save: false 
 

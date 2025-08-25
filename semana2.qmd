@@ -2,7 +2,6 @@
 title: "Sistemas lineares"
 author: "Csaba Schneider"
 date: "agosto de 2025"
-lang: pt-br
 format: 
     revealjs:
         slide-level: 3
@@ -41,14 +40,13 @@ $$
 ### A forma geral de um sistema linear
 
 Um [sistema linear]{.text-red} em $n$ incógnitas $x_1,\ldots,x_n$ com $m$ equações tem a forma
-$$
+
 \begin{align*}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1,\\
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2,\\
 \quad&\vdots\\
 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m.
 \end{align*}
-$$
 
 Aqui, os $a_{ij}$ são os [coeficientes]{.text-red}, os $x_j$ são as [incógnitas]{.text-red} e $b_i$ são os [termos constantes]{.text-red}.
 
@@ -209,23 +207,25 @@ Todo sistema pode ser transformado para a forma escalonada reduzida pelas três 
 
 Agora a solução do sistema pode ser determinada. 
 
+$$
 \begin{alignedat}{5}
  x_1            && &{}{}& &{}    &{+(1/3)x_4}&={}& 1/3\\
      &{}{} &  x_2 &{}{} &     &{}{} &    &{}={}& -2\\
      &{}{} &      &{}{}& x_3&{}-{}& (1/3)x_4&{}={}& -4/3
 \end{alignedat}
+$$
 
 :::{.r-stack}
 :::{.fragment .current-visible}
 - $x_2=-2$;
-- $x_4$ é variável livre: ela pode assumir qualquer valor; ou seja $x_4=\alpha\in\R$. 
+- $x_4$ é variável livre: ela pode assumir qualquer valor; ou seja $x_4=\alpha\in\mathbb R$. 
 - $x_1=1/3-(1/3)\alpha$;
 - $x_3=-4/3+(1/3)\alpha$.
 :::
 :::{.fragment .current-visible}
 A [solução geral]{.bg-yellow} do sistema é 
 $$
-\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} 1/3-(1/3)\alpha \\ -2 \\ -4/3+(1/3)\alpha \\ \alpha\end{bmatrix},\quad\alpha\in\R
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} 1/3-(1/3)\alpha \\ -2 \\ -4/3+(1/3)\alpha \\ \alpha\end{bmatrix},\quad\alpha\in\mathbb R
 $$
 :::
 :::
@@ -234,13 +234,14 @@ $$
 ### Forma matricial
 
 Considere o sistema linear:
+
 $$
-\begin{align*}
+\begin{aligned}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1\\
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2\\
 \quad&\vdots\\
 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
-\end{align*}
+\end{aligned}
 \quad A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
@@ -442,7 +443,7 @@ $$
 Solução: 
 $$
 x_1 = \tfrac{1}{3} - \tfrac{1}{3}\alpha,\quad x_2 = -2,\quad x_3 = -\tfrac{4}{3} + \tfrac{1}{3}\alpha,\quad 
-x_4=\alpha\in \R.
+x_4=\alpha\in \mathbb R.
 $$
 :::
 :::
@@ -482,13 +483,13 @@ Toda matriz pode ser transformada para FER usando as seguintes operações por l
 ### Sistema com nenhuma solução
 
 Considere o seguinte sistema:
-$$
+
 \begin{align*}
 x_1+x_2-x_3&=3\\
 x_1-x_2+x_3&=0\\
 2x_2-2x_3&=-3
 \end{align*}
-$$
+
 A matriz aumentada do sistema:
 $$
 \begin{bmatrix}
@@ -552,13 +553,13 @@ O sistema possui infinitas soluções, pois:
 
 Vamos resolver por Gauss–Jordan o sistema com matriz aumentada $3\times 4$:
 
-$$
+
 \begin{align*}
 x_1+2x_2-x_3&=2\\
 2x_1 + x_2+x_3&=7\\
 -x_1+x_2+2x_3&=3.
 \end{align*}
-$$
+
 
 :::{.r-stack}
 :::{.fragment .current-visible}
@@ -703,14 +704,14 @@ Temos uma das seguintes alternativas para as soluções do sistema:
 ### Sistemas homogêneous 
 
 O sistema 
-$$
+
 \begin{align*}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= 0,\\
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= 0,\\
 \quad&\vdots\\
 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= 0.
 \end{align*}
-$$
+
 é dito [sistema homogêneo]{.bg-yellow}.
 
 A sua forma matricial é 
