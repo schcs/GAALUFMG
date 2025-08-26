@@ -324,7 +324,7 @@ $$
 
 :::{.fragment .current-visible}
 ::: {.bg-yellow}
-Operação: L1 $\leftrightarrow$ L2 \; (coloca pivô $1$ em \color{red}{L1}).
+Operação: L1 $\leftrightarrow$ L2 \; (coloca pivô $1$ em L1).
 :::
 Resultado:
 $$
@@ -345,8 +345,8 @@ $$
 ::: {.bg-yellow}
 Operações: 
 
-1. L2 $\leftarrow$ L2 $-\,2$L1 \; (zera coluna 1 em \color{blue}{L2}); 
-2. L3 $\leftarrow$ L3 $-\,$L1 \; (zera coluna 1 em \color{teal}{L3}).
+1. L2 $\leftarrow$ L2 $-\,2$L1 \; (zera coluna 1 em L2); 
+2. L3 $\leftarrow$ L3 $-\,$L1 \; (zera coluna 1 em L3).
 :::
 Resultado:
 $$
@@ -365,7 +365,7 @@ $$
 
 :::{.fragment .current-visible}
 ::: {.bg-yellow}
-Operação: L2 $\leftrightarrow$ L3 \; (coloca pivô $1$ em \color{blue}{L2}).
+Operação: L2 $\leftrightarrow$ L3 \; (coloca pivô $1$ em L2).
 :::
 Resultado:
 $$
@@ -386,8 +386,8 @@ $$
 ::: {.bg-yellow}
 Operações: 
 
-1. L1 $\leftarrow$ L1 $+\,$L2 \; (zera coluna 2 acima, usa \color{red}{L1} e \color{blue}{L2});
-2. L3 $\leftarrow$ L3 $-\,3$L2 \; (zera coluna 2 abaixo, usa \color{teal}{L3} e \color{blue}{L2}).
+1. L1 $\leftarrow$ L1 $+\,$L2 \; (zera coluna 2 acima, usa L1 e L2);
+2. L3 $\leftarrow$ L3 $-\,3$L2 \; (zera coluna 2 abaixo, usa L3 e L2).
 :::
 Resultado:
 $$
@@ -406,7 +406,7 @@ $$
 
 :::{.fragment .current-visible}
 ::: {.bg-yellow}
-Operação: L3 $\leftarrow -\tfrac{1}{3}$L3 \quad (normaliza o pivô em \color{teal}{L3}).
+Operação: L3 $\leftarrow -\tfrac{1}{3}$L3 \quad (normaliza o pivô em L3).
 :::
 Resultado:
 $$
@@ -538,7 +538,7 @@ $$
 \end{array}\,\right]
 \Rightarrow 
 \left[\,\begin{array}{cccc|c}
-1 & 0 & 1 & 0 & -1\\
+1 & 0 & 0 & 1/3 & 1/3\\
 0 & 1 & 0 & 0 & -2\\
 {0} & {0} & {1} & {-1/3} & {-4/3}
 \end{array}\,\right]
