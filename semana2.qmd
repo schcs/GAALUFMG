@@ -193,7 +193,7 @@ $x_4$ é [variável livre]{.bg-yellow}.
 A forma escalonada reduzida do sistema foi obtida usando as segintes operações pelas equações: 
 
 1. trocar duas equações;
-2. multilicar uma equação por um escalar não nulo;
+2. multiplicar uma equação por um escalar não nulo;
 3. Somar um múltiplo escalar de [uma]{.bg-yellow} equação à uma [outra]{.bg-yellow}.
 
 :::{.bg-yellow}
