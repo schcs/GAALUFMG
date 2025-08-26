@@ -11,4 +11,5 @@ Geometria Analítica e Álgebra Linear
 - [Sistemas lineares](semana2.qmd)
 - [A inversa de uma matrix](03_inverse.qmd)
 - [O determinante de uma matrix](04_determinant.qmd)
+- [Vetores](05_vetores.qmd)
 

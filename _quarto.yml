@@ -1,5 +1,5 @@
 project: 
-  type: website 
+  type:  website
   render:
     - index.qmd
     - semana1.qmd
@@ -7,7 +7,8 @@ project:
     - semana2.qmd
     - 03_inverse.qmd
     - 04_determinant.qmd
-
+    - 05_vetores.qmd
+    
 
 render-on-save: false 
 
@@ -29,15 +30,22 @@ date: "Criado e atualizado 2025/II"
 format:
   revealjs:
     css: styles.css
-    # width: 2000 # 16:9 
-    # height: 900 
-    margin: 0.02 # less edge padding 
-    minScale: 0.2 
-    maxScale: 2.0 
+    #width: 2000 # 16:9 
+    #height: 9000 
+    margin: 0.00 # less edge padding 
+    # minScale: 0.2 
+    # maxScale: 2.0 
     center: false # optional: reduces top whitespace
     include-in-header: macros.html
+    # theme: simple
+    # scroll: true
   html:
     css: article.css
     include-in-header:
      - file: macros.html
-
+  pdf: 
+    include-in-header:
+     - file: macros.tex
+  beamer: 
+    include-in-header:
+     - file: macros.tex

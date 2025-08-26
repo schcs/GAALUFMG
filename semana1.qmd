@@ -4,11 +4,11 @@ author: "Csaba Schneider"
 date: "agosto de 2025"
 format: 
     revealjs:
-        slide-level: 2
+        slide-level: 3
         css: styles.css
 ---
 
-## Definição de uma Matriz
+### Definição de uma Matriz
 
 ::: {#def-}
 Uma [matriz]{.text-red} $A$, $m \times n$ ($m$ por $n$), é uma tabela de $m \cdot n$ números dispostos em $m$ linhas e $n$ colunas:
@@ -38,7 +38,7 @@ a_{mj}
 
 Nós também usamos a notação [ $A = \left(a_{ij}\right)_{m \times n}$ ]{.bg-yellow}. Aqui, $a_{ij}$ ou $[A]_{ij}$ é o elemento ou entrada na posição $(i, j)$ da matriz $A$.
 
-## Exemplos de Matrizes
+### Exemplos de Matrizes
 
 Considere as seguintes matrizes:
 
@@ -76,7 +76,7 @@ Duas matrizes $A=(a_{ij})$ a $B=(b_{ij})$ são [iguais]{.text-red}, se elas
 2. $a_{ij}=b_{ij}$ para todo $i,j$ (têm as mesmas entradas) 
 
 
-## Soma de Matrizes
+### Soma de Matrizes
 
 A [soma]{.text-red} de duas matrizes [do mesmo tamanho]{.bg-yellow}, $A = \left(a_{ij}\right)_{m \times n}$ e $B = \left(b_{ij}\right)_{m \times n}$, é definida como:
 
@@ -85,7 +85,7 @@ C = A + B\quad \mbox{onde}\quad c_{ij} = a_{ij} + b_{ij}.
 $$
 
 
-### Exemplo
+#### Exemplo
 
 Considere as matrizes:
 
@@ -112,7 +112,7 @@ C = A + B = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-## Matriz Nula
+### Matriz Nula
 
 A [matriz nula]{.text-red} (matriz zero) de tamanho $m \times n$, denotada por $0_{m\times n}$ (ou simplesmente $0$ quando o tamanho é claro), é a matriz em que todas as entradas são zero:
 
@@ -125,7 +125,7 @@ $$
 
 Para qualquer matriz $A$ de tamanho $m \times n$, vale [ $A + 0_{m\times n} = A$ ]{.bg-yellow}.
 
-### Exemplo
+#### Exemplo
 
 Se
 $$
@@ -150,7 +150,7 @@ $$
 
 
 
-## Múltiplo Escalar de uma Matriz
+### Múltiplo Escalar de uma Matriz
 
 O [múltiplo escalar]{.text-red} de uma matriz $A = \left(a_{ij}\right)_{m \times n}$ por um escalar $\alpha$ é definido como:
 
@@ -161,7 +161,7 @@ b_{ij} = \alpha a_{ij}.
 $$
 :::
 
-### Exemplo
+#### Exemplo
 
 Considere a matriz:
 
@@ -187,14 +187,14 @@ $$
 \end{bmatrix}.
 $$
 
-## Simétrica de uma Matriz
+### Simétrica de uma Matriz
 
 A [simétrica/negativa]{.text-red} de uma matriz $A$ é definida por [ $-A = (-1)A$ ]{.bg-yellow}. Em particular, se $A = (a_{ij})$, então 
 $$
 -A = (-a_{ij}).
 $$
 
-### Exemplo
+#### Exemplo
 
 Considere
 $$
@@ -221,11 +221,11 @@ $$
 
 
 
-## Transposta de uma Matriz
+### Transposta de uma Matriz
 
 A [transposta]{.text-red} de uma matriz $A = \left(a_{ij}\right)_{m \times n}$ é a matriz [ $A^T = \left(a_{ji}\right)_{n \times m}$ ]{.bg-yellow} obtida trocando as linhas por colunas.
 
-### Exemplo
+#### Exemplo
 
 Considere a matriz:
 
@@ -248,7 +248,7 @@ $$
 
 
 
-## Multiplicação entre Matrizes
+### Multiplicação entre Matrizes
 
 O produto de duas matrizes $A = \left(a_{ij}\right)_{m \times p}$ e $B = \left(b_{ij}\right)_{p \times n}$ é definido como:
 
@@ -281,7 +281,7 @@ b_{p1} & \cdots & \color{blue}{b_{pj}} & \cdots & b_{pn}
 $$
 
 
-## Condições para Multiplicação de Matrizes
+### Condições para Multiplicação de Matrizes
 
 -   [O número de colunas de $A$ deve ser igual ao número de linhas de $B$.]{.bg-yellow}
 -   A matriz resultante $C$ terá dimensões $m \times n$.
@@ -290,7 +290,7 @@ $$
 
 
 
-## Exemplo: Produto de Matrizes
+### Exemplo: Produto de Matrizes
 
 
 :::{.r-stack}
@@ -415,11 +415,11 @@ $$
 :::
 :::
 
-## Matriz Identidade
+### Matriz Identidade
 
 A [matriz identidade]{.text-red} de ordem $n$, denotada por $I_n$ ou simplesmente por $I$, é a matriz quadrada $n \times n$ com $1$ na diagonal principal e $0$ fora dela.
 
-### Exemplo
+#### Exemplo
 
 :::{.bg-yellow}
 $$
@@ -431,7 +431,7 @@ I_3 = \begin{bmatrix}
 $$
 :::
 
-### Propriedade
+#### Propriedade
 
 Para qualquer matriz $A$ ${m\times n}$, a [matriz identidade]{.text-red} satisfaz:
 
@@ -441,7 +441,7 @@ I_m\,A = A \quad\text{e}\quad A\,I_n = A.
 $$
 :::
 
-## Exemplo (com $m=n=2$):
+### Exemplo (com $m=n=2$):
 
 $$
 I_2 = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix},\quad
@@ -459,22 +459,22 @@ $$
 
 
 
-## Propriedades das Operações com Matrizes
+### Propriedades das Operações com Matrizes
 
-## Adição de Matrizes
+### Adição de Matrizes
 
 1.  **Propriedade Comutativa**: $A + B = B + A$
 2.  **Propriedade Associativa**: $(A + B) + C = A + (B + C)$
 3.  **Identidade Aditiva**: $A + 0 = A$, onde $0$ é a matriz zero.
 4.  **Inverso Aditivo**: $A + (-A) = 0$
 
-## Multiplicação Escalar
+### Multiplicação Escalar
 
 1.  **Propriedade Distributiva**: $\alpha(A + B) = \alpha A + \alpha B$
 2.  **Propriedade Associativa**: $(\alpha \beta)A = \alpha(\beta A)$
 3.  **Identidade Multiplicativa**: $1 \cdot A = A$
 
-## Multiplicação de Matrizes
+### Multiplicação de Matrizes
 
 1.  **Propriedade Associativa**: $(AB)C = A(BC)$
 2.  **Propriedade Distributiva**: $A(B + C) = AB + AC$ e $(A + B)C = AC + BC$
@@ -482,7 +482,7 @@ $$
 4. Se $A$ é matriz $m\times n$, então $I_mA=AI_n=A$
 5.  **Não-Comutatividade**: Em geral, [$AB \neq BA$]{.text-red}
 
-## Multiplicação Não Comutativa
+### Multiplicação Não Comutativa
 
 Vamos ilustrar que, em geral, $AB \neq BA$.
 
@@ -504,7 +504,7 @@ $$
 
 Conclusão: [ $AB = \begin{bmatrix}2 & 1 \\ 1 & 0\end{bmatrix} \neq \begin{bmatrix}0 & 1 \\ 1 & 2\end{bmatrix} = BA$ ]{.text-red}
 
-## Transposta
+### Transposta
 
 1.  Dupla transposição: $(A^T)^T = A$.
 2.  Transposição da soma (mesmas dimensões): $(A + B)^T = A^T + B^T$.
@@ -514,7 +514,7 @@ Conclusão: [ $AB = \begin{bmatrix}2 & 1 \\ 1 & 0\end{bmatrix} \neq \begin{bmatr
 
 
 
-## Propriedade: transposta do produto
+### Propriedade: transposta do produto
 
 Para matrizes de tamanhos compatíveis, vale a identidade
 $$
