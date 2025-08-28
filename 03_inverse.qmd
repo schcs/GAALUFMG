@@ -12,18 +12,35 @@ format:
 
 ### Definição de Matriz Inversa
 
+:::{.fragment}
+Lembre que a matriz identidade $I_n$ é a matriz $n\times n$
+$$
+I_n = \begin{bmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
+\end{bmatrix}
+$$ 
+We have that $AI_n=A$ e $I_nB=B$ se $A$ é $m\times n$ e $B$ é $n\times m$. 
+:::
+:::{.fragment}
 ::: {#def-inv}
-Uma [matriz inversa]{.text-red} de uma matriz quadrada $A\in\mathbb{R}^{n\times n}$ é uma matriz $B$ tal que
+- Uma matriz $B$ chama-se [inversa]{.text-red} de uma matriz quadrada $A\in\mathbb{R}^{n\times n}$ 
+se
 $$
 AB = BA = I_n.
 $$
-Se tal $B$ existe, dizemos que $A$ é [invertível]{.bg-yellow} (ou não singular) e escrevemos $B = A^{-1}$.
+Se tal $B$ existe, dizemos que $A$ é [invertível]{.bg-yellow} ou [não singular]{.bg-yellow} e escrevemos $B = A^{-1}$.
+
+- Caso contrário, dizemos que $A$ é [não invertível]{.bg-yellow} ou [singular]{.bg-yellow}.
 :::
 
 :::{.bg-yellow}
 $$
 A^{-1} 	\mbox{ é a matriz tal que } A A^{-1} = A^{-1} A = I_n.
 $$
+:::
 :::
 
 ### Exemplo $3\times 3$
@@ -229,7 +246,7 @@ $$
 1 & -4 & 2 & 0\\
 0 & 2 & -1 & 0
 \end{array}\right]
-\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\stackrel{L_1\leftrightarrow L_2}{\Longrightarrow}
 \left[\begin{array}{ccc|c}
 1 & -4 & 2 & 0\\
 -2 & 7 & -3 & 1\\
@@ -240,7 +257,7 @@ $$
 
 
 :::{.fragment .current-visible}
-Aplicando $R_2\leftarrow L_2 + 2L_1$ e multiplicando $L_2$ por $-1$:
+Aplicando $L_2\leftarrow L_2 + 2L_1$ e multiplicando $L_2$ por $-1$:
 $$
 \left[\begin{array}{ccc|c}
 1 & -4 & 2 & 0\\
@@ -305,7 +322,7 @@ $$
 :::{.fragment .current-visible}
 Da matriz reduzida acima lemos diretamente
 $$
-b_{11}=0,\\ b_{21}=1,\quad b_{31}=2.
+b_{11}=0,\quad b_{21}=1,\quad b_{31}=2.
 $$
 :::
 
@@ -371,7 +388,7 @@ $$
 1 & -4 & 2 & 1\\
 0 & 2 & -1 & 0
 \end{array}\right]
-\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\stackrel{L_1\leftrightarrow L_2}{\Longrightarrow}
 \left[\begin{array}{ccc|c}
 1 & -4 & 2 & 1\\
 -2 & 7 & -3 & 0\\
@@ -381,7 +398,7 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Aplicando $R_2\leftarrow R_2 + 2R_1$ e multiplicando $R_2$ por $-1$:
+Aplicando $L_2\leftarrow L_2 + 2L_1$ e multiplicando $L_2$ por $-1$:
 $$
 \left[\begin{array}{ccc|c}
 1 & -4 & 2 & 1\\
@@ -402,7 +419,7 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Zerando acima e abaixo do pivô da segunda coluna: $R_1\leftarrow R_1 + 4R_2$, $R_3\leftarrow R_3 - 2R_2$:
+Zerando acima e abaixo do pivô da segunda coluna: $L_1\leftarrow L_1 + 4L_2$, $L_3\leftarrow L_3 - 2L_2$:
 
 :::{.bg-yellow}
 $$
@@ -422,7 +439,7 @@ $$
 :::
 
 :::{.fragment}
-Limpeza final da terceira coluna: $R_1\leftarrow R_1 + 2R_3$, $R_2\leftarrow R_2 + R_3$:
+Limpeza final da terceira coluna: $L_1\leftarrow L_1 + 2L_3$, $L_2\leftarrow L_2 + L_3$:
 
 :::{.bg-yellow}
 $$
@@ -504,7 +521,7 @@ $$
 1 & -4 & 2 & 0\\
 0 & 2 & -1 & 1
 \end{array}\right]
-\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\stackrel{L_1\leftrightarrow L_2}{\Longrightarrow}
 \left[\begin{array}{ccc|c}
 1 & -4 & 2 & 0\\
 -2 & 7 & -3 & 0\\
@@ -514,7 +531,7 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Aplicando $R_2\leftarrow R_2 + 2R_1$ e multiplicando $R_2$ por $-1$:
+Aplicando $L_2\leftarrow L_2 + 2L_1$ e multiplicando $L_2$ por $-1$:
 $$
 \left[\begin{array}{ccc|c}
 1 & -4 & 2 & 0\\
@@ -535,7 +552,7 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Zerando acima e abaixo do pivô da segunda coluna: $R_1\leftarrow R_1 + 4R_2$, $R_3\leftarrow R_3 - 2R_2$:
+Zerando acima e abaixo do pivô da segunda coluna: $L_1\leftarrow L_1 + 4L_2$, $L_3\leftarrow L_3 - 2L_2$:
 
 :::{.bg-yellow}
 $$
@@ -555,7 +572,7 @@ $$
 :::
 
 :::{.fragment}
-Limpeza final da terceira coluna: $R_1\leftarrow R_1 + 2R_3$, $R_2\leftarrow R_2 + R_3$:
+Limpeza final da terceira coluna: $L_1\leftarrow L_1 + 2L_3$, $L_2\leftarrow L_2 + L_3$:
 
 :::{.bg-yellow}
 $$
@@ -653,7 +670,7 @@ $$
 1 & -4 & 2 & 0 & 1 & 0 \\
 0 & 2 & -1 & 0 & 0 & 1
 \end{array}\right]
-\stackrel{R_1\leftrightarrow R_2}{\Longrightarrow}
+\stackrel{L_1\leftrightarrow L_2}{\Longrightarrow}
 \left[\begin{array}{ccc|ccc}
 1 & -4 & 2 & 0 & 1 & 0 \\
 -2 & 7 & -3 & 1 & 0 & 0 \\
@@ -664,16 +681,22 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Aplicando $R_2\leftarrow R_2 + 2R_1$ e depois $R_2\leftarrow -R_2$:
+Aplicando $L_2\leftarrow L_2 + 2L_1$ e depois $L_2\leftarrow -L_2$:
 
 :::{.bg-yellow}
 $$
 \left[\begin{array}{ccc|ccc}
 1 & -4 & 2 & 0 & 1 & 0 \\
+-2 & 7 & -3 & 1 & 0 & 0 \\
+0 & 2 & -1 & 0 & 0 & 1
+\end{array}\right]
+\Rightarrow 
+\left[\begin{array}{ccc|ccc}
+1 & -4 & 2 & 0 & 1 & 0 \\
 0 & -1 & 1 & 1 & 2 & 0 \\
 0 & 2 & -1 & 0 & 0 & 1
 \end{array}\right]
-\stackrel{R_2\cdot(-1)}{\Longrightarrow}
+\stackrel{L_2\cdot(-1)}{\Longrightarrow}
 \left[\begin{array}{ccc|ccc}
 1 & -4 & 2 & 0 & -1 & 0 \\
 0 & 1 & -1 & -1 & -2 & 0 \\
@@ -684,10 +707,15 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Zerando a coluna 2: $R_1\leftarrow R_1 + 4R_2$, $R_3\leftarrow R_3 - 2R_2$:
+Zerando a coluna 2: $L_1\leftarrow L_1 + 4L_2$, $L_3\leftarrow L_3 - 2L_2$:
 
 :::{.bg-yellow}
 $$
+\left[\begin{array}{ccc|ccc}
+1 & -4 & 2 & 0 & -1 & 0 \\
+0 & 1 & -1 & -1 & -2 & 0 \\
+0 & 2 & -1 & 0 & 0 & 1
+\end{array}\right]\Rightarrow 
 \left[\begin{array}{ccc|ccc}
 1 & 0 & -2 & -4 & -7 & 0 \\
 0 & 1 & -1 & -1 & -2 & 0 \\
@@ -698,10 +726,16 @@ $$
 :::
 
 :::{.fragment}
-Limpeza final da coluna 3: $R_1\leftarrow R_1 + 2R_3$, $R_2\leftarrow R_2 + R_3$:
+Limpeza final da coluna 3: $L_1\leftarrow L_1 + 2L_3$, $L_2\leftarrow L_2 + L_3$:
 
 :::{.bg-yellow}
 $$
+\left[\begin{array}{ccc|ccc}
+1 & 0 & -2 & -4 & -7 & 0 \\
+0 & 1 & -1 & -1 & -2 & 0 \\
+0 & 0 & 1 & 2 & 4 & 1
+\end{array}\right]
+\Rightarrow
 \left[\begin{array}{ccc|ccc}
 1 & 0 & 0 & 0 & 1 & 2 \\
 0 & 1 & 0 & 1 & 2 & 1 \\
@@ -753,10 +787,16 @@ $$
 
 
 :::{.fragment .current-visible}
-Aplicando $R_2\leftarrow R_2 - 2R_1$ obtemos
+Aplicando $L_2\leftarrow L_2 - 2L_1$ obtemos
 
 :::{.bg-yellow}
 $$
+\left[\begin{array}{ccc|ccc}
+1 & 2 & 3 & 1 & 0 & 0 \\
+2 & 4 & 6 & 0 & 1 & 0 \\
+0 & 1 & 1 & 0 & 0 & 1
+\end{array}\right]
+\Rightarrow 
 \left[\begin{array}{ccc|ccc}
 1 & 2 & 3 & 1 & 0 & 0 \\
 0 & 0 & 0 & -2 & 1 & 0 \\
@@ -768,10 +808,16 @@ $$
 
 
 :::{.fragment .current-visible}
-Trocando $R_2$ e $R_3$ para prosseguir com a eliminação:
+Trocando $L_2$ e $L_3$ para prosseguir com a eliminação:
 
 :::{.bg-yellow}
 $$
+\left[\begin{array}{ccc|ccc}
+1 & 2 & 3 & 1 & 0 & 0 \\
+0 & 0 & 0 & -2 & 1 & 0 \\
+0 & 1 & 1 & 0 & 0 & 1
+\end{array}\right]
+\Rightarrow
 \left[\begin{array}{ccc|ccc}
 1 & 2 & 3 & 1 & 0 & 0 \\
 0 & 1 & 1 & 0 & 0 & 1 \\
@@ -783,10 +829,16 @@ $$
 
 
 :::{.fragment}
-Zerando a entrada (1,2) com $R_1\leftarrow R_1 - 2R_2$:
+Zerando a entrada (1,2) com $L_1\leftarrow L_1 - 2L_2$:
 
 :::{.bg-yellow}
 $$
+\left[\begin{array}{ccc|ccc}
+1 & 2 & 3 & 1 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 & 1 \\
+0 & 0 & 0 & -2 & 1 & 0
+\end{array}\right]
+\Rightarrow 
 \left[\begin{array}{ccc|ccc}
 1 & 0 & 1 & 1 & 0 & -2 \\
 0 & 1 & 1 & 0 & 0 & 1 \\
@@ -803,7 +855,7 @@ Repare que na forma escalonada reduzida a parte esquerda apresenta uma linha nul
 
 ### Propriedades fundamentais da inversa
 
-Algumas propriedades (A,B invertíveis de mesma ordem; $k\in\mathbb{R}$, $k\neq 0$):
+Algumas propriedades ($A$ e $B$ invertíveis de mesma ordem; $\alpha\in\mathbb{R}$, $\alpha\neq 0$):
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -814,7 +866,7 @@ Algumas propriedades (A,B invertíveis de mesma ordem; $k\in\mathbb{R}$, $k\neq 
 
 ::: {.column width="50%"}
 - Transposta: $(A^{T})^{-1}=(A^{-1})^{T}$.
-- Escalar: $(kA)^{-1}=\frac{1}{k}A^{-1}$.
+- Escalar: $(\alpha A)^{-1}=\frac{1}{\alpha}A^{-1}$.
 - Potências: $(A^{m})^{-1}=(A^{-1})^{m}$, $m\in\mathbb{Z}$.
 :::
 :::
