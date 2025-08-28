@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://schcs.github.io/GAALUFMG/04_determinant.html</loc>
-    <lastmod>2025-08-23T14:15:14.163Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/semana2.html</loc>
-    <lastmod>2025-08-26T14:16:55.993Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/semana1.html</loc>
-    <lastmod>2025-08-26T13:20:08.594Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/index.html</loc>
-    <lastmod>2025-08-26T13:20:08.594Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/ex1.html</loc>
-    <lastmod>2025-08-21T22:31:11.090Z</lastmod>
+    <loc>https://schcs.github.io/GAALUFMG/05_vetores.html</loc>
+    <lastmod>2025-08-24T20:49:34.119Z</lastmod>
   </url>
   <url>
     <loc>https://schcs.github.io/GAALUFMG/03_inverse.html</loc>
-    <lastmod>2025-08-26T13:20:08.594Z</lastmod>
+    <lastmod>2025-08-28T13:16:49.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/ex1.html</loc>
+    <lastmod>2025-08-20T20:55:53.804Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/index.html</loc>
+    <lastmod>2025-08-24T20:55:44.205Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/semana1.html</loc>
+    <lastmod>2025-08-21T00:49:24.723Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/semana2.html</loc>
+    <lastmod>2025-08-25T12:20:11.334Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/04_determinant.html</loc>
+    <lastmod>2025-08-24T20:38:57.823Z</lastmod>
   </url>
 </urlset>
