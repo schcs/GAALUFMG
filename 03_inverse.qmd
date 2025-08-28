@@ -290,7 +290,7 @@ $$
 \end{array}\right]
 \Rightarrow 
 \left[\begin{array}{ccc|c}
-1 & 0 & -2 & 0\\
+1 & 0 & -2 & -4\\
 0 & 1 & -1 & -1\\
 0 & 0 & 1 & 2
 \end{array}\right]
@@ -304,7 +304,7 @@ Adicionar agora operações para limpar a terceira coluna: $L_1\leftarrow L_1 + 
 :::{.bg-yellow}
 $$
 \left[\begin{array}{ccc|c}
-1 & 0 & -2 & 0\\
+1 & 0 & -2 & -4\\
 0 & 1 & -1 & -1\\
 0 & 0 & 1 & 2
 \end{array}\right]\Rightarrow 
@@ -565,7 +565,7 @@ $$
 \left[\begin{array}{ccc|c}
 1 & 0 & -2 & 0\\
 0 & 1 & -1 & 0\\
-0 & 0 & 1 & 5
+0 & 0 & 1 & 1
 \end{array}\right]
 $$
 :::
@@ -577,14 +577,14 @@ Limpeza final da terceira coluna: $L_1\leftarrow L_1 + 2L_3$, $L_2\leftarrow L_2
 :::{.bg-yellow}
 $$
 \left[\begin{array}{ccc|c}
-1 & 0 & -2 & 0\\
-0 & 1 & -1 & 0\\
-0 & 0 & 1 & 5
+1 & 0 & -2 & 2\\
+0 & 1 & -1 & 1\\
+0 & 0 & 1 & 1
 \end{array}\right]\Rightarrow
 \left[\begin{array}{ccc|c}
-1 & 0 & 0 & 10\\
-0 & 1 & 0 & 5\\
-0 & 0 & 1 & 5
+1 & 0 & 0 & 2\\
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1
 \end{array}\right]
 $$
 :::
@@ -595,23 +595,22 @@ $$
 :::{.fragment .current-visible}
 Da matriz reduzida lemos diretamente
 $$
-b_{13}=10,\quad b_{23}=5,\quad b_{33}=5.
+b_{13}=2,\quad b_{23}=1,\quad b_{33}=1.
 $$
 :::
 
 :::{.fragment}
 Portanto a terceira coluna de $B=A^{-1}$ é
 $$
-\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}10\\5\\5\end{bmatrix}.
+\begin{bmatrix}b_{13}\\ b_{23}\\ b_{33}\end{bmatrix} = \begin{bmatrix}2\\1\\1\end{bmatrix}.
 $$
 :::
 :::
 
 :::{.fragment}
-A inversa de $A$ é
-
 :::{.bg-yellow}
 $$
+\mbox{A inversa de $A$ é:}\quad
 A^{-1} = \begin{bmatrix}
 0 & 1 & 2 \\
 1 & 2 & 1 \\
@@ -638,9 +637,9 @@ $$
 Verificação: 
 $$
 AB = \begin{bmatrix}
-1 & 2 & 3 \\
-0 & 1 & 4 \\
-5 & 6 & 0
+-2 & 7 & -3 \\
+1 & -4 & 2 \\
+0 & 2 & -1 
 \end{bmatrix}\begin{bmatrix}
 0 & 1 & 2 \\
 1 & 2 & 1 \\
