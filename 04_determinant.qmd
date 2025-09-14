@@ -21,12 +21,17 @@ $$\det(A)=a.$$
 - Para $2\times2$, se
 
 :::{.bg-yellow}
-$$A=\begin{bmatrix}a_{11} & a_{12} \\\ a_{21} & a_{22}\end{bmatrix},$$
+$$
+A=\begin{bmatrix}
+{\color{red}{a_{11}}} & {\color{blue}{a_{12}}} \\
+{\color{blue}{a_{21}}} & {\color{red}{a_{22}}}
+\end{bmatrix},
+$$
 :::
 então
 
 :::{.bg-yellow}
-$$\det(A)=a_{11}a_{22}-a_{12}a_{21}.$$ 
+$$\det(A)={\color{red}a_{11}a_{22}}-{\color{blue}a_{12}a_{21}}.$$ 
 :::
 
 
@@ -99,12 +104,21 @@ O determinante de $A$ é calculado por desenvolvimento por cofatores pela primei
 
 :::{.bg-yellow}
 $$
+\det(A)=a_{11}\tilde{a}_{11}+a_{12}\tilde{a}_{12}+a_{13}\tilde{a}_{13}
+$$
+:::
+onde $\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$.
+
+Expandindo esta definição, obtemos que 
+
+:::{.bg-yellow}
+$$
 \begin{align*}
-\det(A)&=a_{11}\tilde{a}_{11}+a_{12}\tilde{a}_{12}+a_{13}\tilde{a}_{13},\qquad
-\tilde{a}_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})\\&=
+\det A&=
 a_{11}(-1)^{1+1}\det\begin{bmatrix}a_{22} & a_{23}\\[4pt] a_{32} & a_{33}\end{bmatrix}
 + a_{12}(-1)^{1+2}\det\begin{bmatrix}a_{21} & a_{23}\\[4pt] a_{31} & a_{33}\end{bmatrix}
-+ a_{13}(-1)^{1+3}\det\begin{bmatrix}a_{21} & a_{22}\\[4pt] a_{31} & a_{32}\end{bmatrix}
++ a_{13}(-1)^{1+3}\det\begin{bmatrix}a_{21} & a_{22}\\[4pt] a_{31} & a_{32}\end{bmatrix}\\
+&=a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{13}a_{22}a_{31}.
 \end{align*}
 $$
 :::
@@ -119,7 +133,7 @@ $$
 +3\cdot\det\begin{bmatrix}-1&3\\[4pt]2&1\end{bmatrix}.
 $$
 
-Calculando os determinantes $$2\times2$$:
+Calculando os determinantes $2\times2$:
 
 $$
 \det\begin{bmatrix}3&2\\1&-2\end{bmatrix}=-8,\qquad
@@ -133,10 +147,81 @@ $$
 \det = 1\cdot(-8)-2\cdot(-2)+3\cdot(-7)=-8+4-21=-25.
 $$
 
+### O determinante $3\times 3$
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+$$
+A=\begin{bmatrix}
+ a_{11} & a_{12} & a_{13} \\
+ a_{21} & a_{22} & a_{23} \\
+ a_{31} & a_{32} & a_{33}
+\end{bmatrix}.
+$$
+O determinante foi calculado como 
+$$
+a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{13}a_{22}a_{31}
+$$
+:::
+
+:::{.fragment .current-visible}
+$$
+A=\begin{bmatrix}
+ a_{11} & a_{12} & a_{13} & a_{11} & a_{12}\\
+ a_{21} & a_{22} & a_{23} & a_{21} & a_{22}\\
+ a_{31} & a_{32} & a_{33} & a_{31} & a_{32}
+\end{bmatrix}.
+$$
+O determinante foi calculado como 
+$$
+a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{13}a_{22}a_{31}
+$$
+:::
+
+:::{.fragment .current-visible}
+$$
+A=\begin{bmatrix}
+ {\color{red}a_{11}} & {\color{blue}a_{12}} & {\color{green}a_{13}} & a_{11} & a_{12}\\
+ a_{21} & {\color{red}a_{22}} & {\color{blue}a_{23}} & {\color{green}a_{21}} & a_{22}\\
+ a_{31} & a_{32} & {\color{red}a_{33}} & {\color{blue}a_{31}} & {\color{green}a_{32}}
+\end{bmatrix}.
+$$
+O determinante foi calculado como 
+$$
+{\color{red}a_{11}a_{22}a_{33}}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+{\color{blue}a_{12}a_{23}a_{31}}+{\color{green}a_{13}a_{21}a_{32}}-a_{13}a_{22}a_{31}
+$$
+:::
+
+:::{.fragment}
+$$
+A=\begin{bmatrix}
+ a_{11} & a_{12} & {\color{red}a_{13}} & {\color{blue}a_{11}} & {\color{green}a_{12}}\\
+ a_{21} & {\color{red}a_{22}} & {\color{blue}a_{23}} & {\color{green}a_{21}} & a_{22}\\
+ {\color{red}a_{31}} & {\color{blue}a_{32}} & {\color{green}a_{33}} & a_{31} & a_{32}
+\end{bmatrix}.
+$$
+O determinante foi calculado como 
+$$
+a_{11}a_{22}a_{33}-{\color{blue}a_{11}a_{23}a_{32}}-{\color{green}a_{12}a_{21}a_{33}}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-{\color{red}a_{13}a_{22}a_{31}}
+$$
+:::
+:::
+:::{.fragment}
+Este método funciona apenas para matrizes $3\times 3$. 
+:::
 
 ### O determinante: Caso geral
 
-Seja $A=(a_{ij})_{n\times n}$. Pelo desenvolvimento por cofatores ao longo da primeira linha temos:
+Seja 
+$$
+A=\begin{bmatrix}
+ a_{11} & a_{12} & \cdots & a_{1n}\\
+ a_{21} & a_{22} & \cdots & a_{2n}\\
+ \vdots & \vdots & \ddots & \vdots\\
+ a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix}\in\mathbb{R}^{n\times n}
+$$ 
+Pelo desenvolvimento por cofatores ao longo da primeira linha temos:
 
 :::{.bg-yellow}
 $$
@@ -147,12 +232,9 @@ $$
 $$
 :::
 
-onde o fator $(-1)^{1+j}\det(\tilde{A}_{1j})$ é o cofator correspondente ao elemento $a_{1j}$. Em notação geral escrevemos o cofator como 
-$$
-\tilde a_{i,j}=(-1)^{i+j}\det(\tilde{A}_{i,j}).
-$$
+onde o fator $\tilde a_{1j}=(-1)^{1+j}\det(\tilde{A}_{1j})$ é o cofator correspondente ao elemento $a_{1j}$. 
 
-Esta expressão fornece uma definição recursiva do determinante em termos dos determinantes dos menores $(n-1)\times(n-1)$.
+Esta expressão fornece uma [definição recursiva]{.bg-yellow} do determinante em termos dos determinantes dos menores $(n-1)\times(n-1)$.
 
 
 ### Exemplo detalhado
@@ -236,6 +318,30 @@ $$
 :::
 :::
 :::
+
+### Desenvolvimento por linha ou coluna arbitrária
+
+Considere a matriz
+$$
+A=\begin{bmatrix}
+ a_{11} & \cdots & a_{1l} & \cdots & a_{1n}\\
+ \vdots & \ddots & \vdots &        & \vdots\\
+ a_{k1} & \cdots & a_{kl} & \cdots & a_{kn}\\
+ \vdots &        & \vdots & \ddots & \vdots\\
+ a_{n1} & \cdots & a_{nl} & \cdots & a_{nn}
+\end{bmatrix}\in\mathbb{R}^{n\times n}
+$$ 
+
+O determinante de $A$ pode ser calculada por espansão ou desenolvimento de uma linha ou coluna arbitrária:
+$$
+\begin{align*}
+\det A &= \sum_{i=1}^na_{ki}\tilde a_{ki}\quad \mbox{expansão por linha $k$}\\  
+&=\sum_{j=1}^na_{jl}\tilde a_{jl}\quad \mbox{expansão por coluna $l$.}
+\end{align*}
+$$
+
+Geralmente escolhemos a linha ou coluna que dá menos trabalho.
+
 
 ### Determinantes e operações elementares por linhas
 
@@ -336,11 +442,11 @@ Nota: se multiplicarmos todas as linhas por um mesmo escalar $k$ em uma matriz $
 
 
 
-Considere agora a matriz obtida trocando a segunda e a terceira linhas de $A$. Chamemos-na de $\tilde A$:
+Considere agora a matriz obtida trocando a segunda e a terceira linhas de $A$:
 
 :::{.bg-yellow}
 $$
-\tilde A=\begin{bmatrix}
+A=\begin{bmatrix}
 0 & 0 & 0 & -3 \\
 -1 & 3 & 2 & 5 \\
 1 & 2 & 3 & 4 \\
@@ -356,19 +462,19 @@ Como antes, pelo desenvolvimento pela primeira linha só resta a contribuição 
 :::{.bg-yellow}
 $$
 \begin{align*}
-\det(\tilde A)&=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(\tilde B)\\
-&=(-3)(-1)^{5}\det(\tilde B)=3\det(\tilde B),
+\det(A)&=0\cdot\tilde{a}_{11}+0\cdot\tilde{a}_{12}+0\cdot\tilde{a}_{13}+(-3)(-1)^{1+4}\det(B)\\
+&=(-3)(-1)^{5}\det(B)=3\det(B),
 \end{align*}
 $$
 :::
 :::
 
 :::{.fragment .current-visible}
-onde $\tilde B$ é o menor formado pelas linhas 2,3,4 de $\tilde A$ sem a quarta coluna:
+onde $B$ é o menor formado pelas linhas 2,3,4 de $A$ sem a quarta coluna:
 
 :::{.bg-yellow}
 $$
-\tilde B=\begin{bmatrix}-1 & 3 & 2 \\
+B=\begin{bmatrix}-1 & 3 & 2 \\
 1 & 2 & 3 \\
 2 & 1 & -2\end{bmatrix}.
 $$
@@ -376,11 +482,11 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Calculamos $\det(\tilde B)$ por desenvolvimento pela primeira linha:
+Calculamos $\det(B)$ por desenvolvimento pela primeira linha:
 
 :::{.bg-yellow}
 $$
-\det(\tilde B)=(-1)\cdot\det\begin{bmatrix}2 & 3 \\
+\det(B)=(-1)\cdot\det\begin{bmatrix}2 & 3 \\
 1 & -2\end{bmatrix}-3\cdot\det\begin{bmatrix}1 & 3 \\
 2 & -2\end{bmatrix}+2\cdot\det\begin{bmatrix}1 & 2 \\
 2 & 1\end{bmatrix}.
@@ -406,11 +512,11 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Substituindo esses valores em $\det(\tilde B)$:
+Substituindo esses valores em $\det(B)$:
 
 :::{.bg-yellow}
 $$
-\det(\tilde B)=(-1)\cdot(-7)-3\cdot(-8)+2\cdot(-3)=7+24-6=25.
+\det(B)=(-1)\cdot(-7)-3\cdot(-8)+2\cdot(-3)=7+24-6=25.
 $$
 :::
 :::
@@ -420,23 +526,24 @@ Finalmente,
 
 :::{.bg-yellow}
 $$
-\det(\tilde A)=3\cdot25=75.
+\det(A)=3\cdot25=75.
 $$
 :::
 :::
 :::
 
 :::{.fragment}
-Observe que este resultado é o negativo do determinante da matriz original $A$ (recorde: $\det(A)=-75$). Trocar duas linhas produz, de facto, a multiplicação do determinante por $-1$.
+Observe que este resultado é o negativo do determinante da matriz original $A$ (recorde: $\det(A)=-75$). Trocar duas linhas 
+resulta na multiplicação do determinante por $-1$.
 :::
 
 ### Somar um múltiplo escalar de uma linha a uma outra
 
-Do exemplo anterior e obtemos $A''$ aplicando $L_2\leftarrow L_2+2L_3$ (ou seja, adicionamos duas vezes a terceira linha à segunda):
+Considere o exemplo original aplicando a operação elementar por linhas $L_2\leftarrow L_2+2L_3$ (ou seja, adicionamos duas vezes a terceira linha à segunda):
 
 :::{.bg-yellow}
 $$
-A''=\begin{bmatrix}
+A=\begin{bmatrix}
 0 & 0 & 0 & -3 \\
 -1 & 8 & 7 & 14 \\
 -1 & 3 & 2 & 5 \\
@@ -447,21 +554,21 @@ $$
 
 :::{.r-stack}
 :::{.fragment .current-visible}
-Pelo desenvolvimento pela primeira linha só contribui o último termo $-3$:
+Pelo desenvolvimento pela primeira temos que:
 
 :::{.bg-yellow}
 $$
-\det(A'')=(-3)(-1)^{1+4}\det(B'')=3\det(B''),
+\det(A)=(-3)(-1)^{1+4}\det(B)=3\det(B),
 $$
 :::
 :::
 
 :::{.fragment .current-visible}
-onde $B''$ é o menor obtido suprimindo a primeira linha e a quarta coluna:
+onde $B$ é o menor obtido suprimindo a primeira linha e a quarta coluna:
 
 :::{.bg-yellow}
 $$
-B''=\begin{bmatrix}-1 & 8 & 7 \\
+B=\begin{bmatrix}-1 & 8 & 7 \\
 -1 & 3 & 2 \\
 2 & 1 & -2\end{bmatrix}.
 $$
@@ -469,11 +576,11 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Calculamos $\det(B'')$ por desenvolvimento pela primeira linha:
+Calculamos $\det(B)$ por desenvolvimento pela primeira linha:
 
 :::{.bg-yellow}
 $$
-\det(B'')=(-1)\cdot\det\begin{bmatrix}3 & 2 \\
+\det(B)=(-1)\cdot\det\begin{bmatrix}3 & 2 \\
 1 & -2\end{bmatrix}-8\cdot\det\begin{bmatrix}-1 & 2 \\
 2 & -2\end{bmatrix}+7\cdot\det\begin{bmatrix}-1 & 3 \\
 2 & 1\end{bmatrix}.
@@ -507,11 +614,11 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Substituindo esses valores em $\det(B'')$:
+Substituindo esses valores em $\det(B)$:
 
 :::{.bg-yellow}
 $$
-\det(B'')=(-1)\cdot(-8)-8\cdot(-2)+7\cdot(-7)=8+16-49=-25.
+\det(B)=(-1)\cdot(-8)-8\cdot(-2)+7\cdot(-7)=8+16-49=-25.
 $$
 :::
 :::
@@ -521,14 +628,14 @@ Finalmente,
 
 :::{.bg-yellow}
 $$
-\det(A'')=3\cdot(-25)=-75.
+\det(A)=3\cdot(-25)=-75.
 $$
 :::
 :::
 :::
 
 :::{.fragment}
-Concluímos que a operação $L_2\leftarrow L_2+2L_3$ não alterou o determinante: $\det(A'')=\det(A)=-75$.
+Concluímos que a operação $L_2\leftarrow L_2+2L_3$ não alterou o determinante: $\det(A)=\det(A)=-75$.
 :::
 
 
