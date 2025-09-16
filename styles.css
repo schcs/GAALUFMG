@@ -6,6 +6,19 @@
   font-size: 130%; 
 }
 
+/* Prevent auto-stretch for specific images */
+.reveal .slides img.nostretch {
+  max-width: 30% !important; /* acts as an upper bound */
+  width: auto !important;    /* respect intrinsic width unless width attr given */
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* If width attribute is used with .nostretch, let it control size explicitly */
+.reveal .slides img.nostretch[width] {
+  max-width: unset !important;
+}
+
 
 
 /* Hide author and affiliation in Revealjs title slide if present */
