@@ -342,6 +342,10 @@ $$
 
 Geralmente escolhemos a linha ou coluna que dá menos trabalho.
 
+### Exploração do determinante 
+
+![Exercícios sobre determinante](QRCodes/ws_det.png){.nostretch width=50%}
+
 
 ### Determinantes e operações elementares por linhas
 
