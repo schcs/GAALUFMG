@@ -7,7 +7,6 @@ project:
     - semana2.qmd
     - 03_inverse.qmd
     - 04_determinant.qmd
-    - WorkSheets/determinant_worksheet.qmd
     - 05_vetores.qmd
     
 
