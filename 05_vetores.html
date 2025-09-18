@@ -12,7 +12,7 @@
 
   <meta name="author" content="Csaba Schneider">
   <meta name="dcterms.date" content="2025-01-01">
-  <title>Matrizes</title>
+  <title>Vetores</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -876,7 +876,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Matrizes</h1>
+  <h1 class="title">Vetores</h1>
   <p class="subtitle">Apostilas</p>
 
 <div class="quarto-title-authors">
@@ -889,452 +889,249 @@ Csaba Schneider
 
   <p class="date">2025-01-01</p>
 </section>
-<section id="definição-de-uma-matriz" class="slide level3">
-<h3>Definição de uma Matriz</h3>
-<div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1</strong></span> Uma <span class="text-red">matriz</span> <span class="math inline">\(A\)</span>, <span class="math inline">\(m \times n\)</span> (<span class="math inline">\(m\)</span> por <span class="math inline">\(n\)</span>), é uma tabela de <span class="math inline">\(m \cdot n\)</span> números dispostos em <span class="math inline">\(m\)</span> linhas e <span class="math inline">\(n\)</span> colunas:</p>
-</div>
-<div class="bg-yellow">
-<p><span class="math display">\[
-A = \begin{bmatrix}
-a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n} \\
-a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n} \\
-\vdots &amp;        &amp; \ldots &amp; \vdots \\
-a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
-\end{bmatrix}
-\]</span></p>
-</div>
-<p>A <span class="math inline">\(i\)</span>-ésima linha de <span class="math inline">\(A\)</span> é <span class="math inline">\(\begin{bmatrix}
-a_{i1} &amp; a_{i2} &amp; \ldots &amp; a_{in}
-\end{bmatrix}\)</span> A <span class="math inline">\(j\)</span>-ésima coluna de <span class="math inline">\(A\)</span> é <span class="math inline">\(\begin{bmatrix}
-a_{1j} \\
-a_{2j} \\
-\vdots \\
-a_{mj}
-\end{bmatrix}\)</span>.</p>
-<p>Nós também usamos a notação <span class="bg-yellow"><span class="math inline">\(A = \left(a_{ij}\right)_{m \times n}\)</span></span>. Aqui, <span class="math inline">\(a_{ij}\)</span> ou <span class="math inline">\([A]_{ij}\)</span> é o elemento ou entrada na posição <span class="math inline">\((i, j)\)</span> da matriz <span class="math inline">\(A\)</span>.</p>
-</section>
-<section id="exemplos-de-matrizes" class="slide level3">
-<h3>Exemplos de Matrizes</h3>
-<p>Considere as seguintes matrizes:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-1/2 &amp; 2/3 \\
-3 &amp; 4/5
-\end{bmatrix}, \quad
-B = \begin{bmatrix}
--2 &amp; 1 \\
-0 &amp; 3
-\end{bmatrix}, \quad
-C = \begin{bmatrix}
-1 &amp; 3 &amp; 0 \\
-2 &amp; 4 &amp; -2
-\end{bmatrix},
-\quad D = \begin{bmatrix}
-1 &amp; 2 &amp; 3
-\end{bmatrix}, \quad
-E = \begin{bmatrix}
-4 \\
-5 \\
-6
-\end{bmatrix}.
-\]</span></p>
+<section id="introdução" class="slide level3">
+<h3>Introdução</h3>
+<p>Vamos começar o estudo de <span class="text-red">vetores</span>.</p>
+<p>Na Física, as grandezas podem ser classificadas como escalares e vetoriais.</p>
 <ul>
-<li>As matrizes <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> são <span class="math inline">\(2 \times 2\)</span> (2 linhas e 2 colunas, matriz quadrada).</li>
-<li>A matriz <span class="math inline">\(C\)</span> é <span class="math inline">\(2 \times 3\)</span> (2 linhas e 3 colunas).</li>
-<li>A matriz <span class="math inline">\(D\)</span> é <span class="math inline">\(1 \times 3\)</span> (1 linha e 3 colunas, <span class="bg-yellow">matriz linha</span>, <span class="bg-yellow">vetor linha</span>).</li>
-<li>A matriz <span class="math inline">\(E\)</span> é <span class="math inline">\(3 \times 1\)</span> (3 linhas e 1 coluna, <span class="bg-yellow">matriz coluna</span>, <span class="bg-yellow">vetor coluna</span>).</li>
+<li>Grandezas escalares são dadas por um número, por exemplo: distância, área, massa, etc. {.fragment}</li>
+<li>Grandezas vetoriais são dadas por um vetor que tem módulo, direção e sentido. São exemplos: velocidade, força peso, força resultante, etc. {.fragment}</li>
 </ul>
-<p>Duas matrizes <span class="math inline">\(A=(a_{ij})\)</span> a <span class="math inline">\(B=(b_{ij})\)</span> são <span class="text-red">iguais</span>, se elas</p>
-<ol type="1">
-<li>têm o mesmo tamanho e</li>
-<li><span class="math inline">\(a_{ij}=b_{ij}\)</span> para todo <span class="math inline">\(i,j\)</span> (têm as mesmas entradas)</li>
-</ol>
+<p>Como o módulo de um vetor é um número, para saber o que é um vetor, precisamos refletir primeiramente:</p>
+<p><span class="bg-yellow fragment">O que é número?</span></p>
 </section>
-<section id="soma-de-matrizes" class="slide level3">
-<h3>Soma de Matrizes</h3>
-<p>A <span class="text-red">soma</span> de duas matrizes <span class="bg-yellow">do mesmo tamanho</span>, <span class="math inline">\(A = \left(a_{ij}\right)_{m \times n}\)</span> e <span class="math inline">\(B = \left(b_{ij}\right)_{m \times n}\)</span>, é definida como:</p>
-<p><span class="math display">\[
-C = A + B\quad \mbox{onde}\quad c_{ij} = a_{ij} + b_{ij}.
-\]</span></p>
-<h4 id="exemplo">Exemplo</h4>
-<p>Considere as matrizes:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-1 &amp; 2 &amp; -3 \\
-3 &amp; 4 &amp; 0
-\end{bmatrix}, \quad
-B = \begin{bmatrix}
--2 &amp; 1 &amp; 5 \\
-0 &amp; 3 &amp; -4
-\end{bmatrix}.
-\]</span></p>
-<p>A soma de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é:</p>
-<p><span class="math display">\[
-C = A + B = \begin{bmatrix}
-1 + (-2) &amp; 2 + 1 &amp; -3 + 5 \\
-3 + 0 &amp; 4 + 3 &amp; 0 + (-4)
-\end{bmatrix} = \begin{bmatrix}
--1 &amp; 3 &amp; 2 \\
-3 &amp; 7 &amp; -4
-\end{bmatrix}.
-\]</span></p>
-</section>
-<section id="matriz-nula" class="slide level3">
-<h3>Matriz Nula</h3>
-<p>A <span class="text-red">matriz nula</span> (matriz zero) de tamanho <span class="math inline">\(m \times n\)</span>, denotada por <span class="math inline">\(0_{m\times n}\)</span> (ou simplesmente <span class="math inline">\(0\)</span> quando o tamanho é claro), é a matriz em que todas as entradas são zero:</p>
-<p><span class="math display">\[
-0_{2\times 3} = \begin{bmatrix}
-0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0
-\end{bmatrix}.
-\]</span></p>
-<p>Para qualquer matriz <span class="math inline">\(A\)</span> de tamanho <span class="math inline">\(m \times n\)</span>, vale <span class="bg-yellow"><span class="math inline">\(A + 0_{m\times n} = A\)</span></span>.</p>
-<h4 id="exemplo-1">Exemplo</h4>
-<p>Se <span class="math display">\[
-A = \begin{bmatrix}
-1 &amp; -2 &amp; 3 \\
-0 &amp; 4 &amp; -1
-\end{bmatrix}, \quad 0 = \begin{bmatrix}
-0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0
-\end{bmatrix},
-\]</span> então <span class="math display">\[
-A + 0 = \begin{bmatrix}
-1+0 &amp; -2+0 &amp; 3+0 \\
-0+0 &amp; 4+0 &amp; -1+0
-\end{bmatrix} = \begin{bmatrix}
-1 &amp; -2 &amp; 3 \\
-0 &amp; 4 &amp; -1
-\end{bmatrix} = A.
-\]</span></p>
-</section>
-<section id="múltiplo-escalar-de-uma-matriz" class="slide level3">
-<h3>Múltiplo Escalar de uma Matriz</h3>
-<p>O <span class="text-red">múltiplo escalar</span> de uma matriz <span class="math inline">\(A = \left(a_{ij}\right)_{m \times n}\)</span> por um escalar <span class="math inline">\(\alpha\)</span> é definido como:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-B = \alpha A\quad \mbox{onde}\quad
-b_{ij} = \alpha a_{ij}.
-\]</span></p>
-</div>
-<h4 id="exemplo-2">Exemplo</h4>
-<p>Considere a matriz:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
--2 &amp; 1 \\
-0 &amp; 3 \\
-5 &amp; -4
-\end{bmatrix}.
-\]</span></p>
-<p>O múltiplo de <span class="math inline">\(A\)</span> pelo escalar <span class="math inline">\(-3\)</span> é:</p>
-<p><span class="math display">\[
--3A = \begin{bmatrix}
-(-3)\cdot(-2) &amp; (-3)\cdot 1 \\
-(-3)\cdot 0 &amp; (-3)\cdot 3 \\
-(-3)\cdot 5 &amp; (-3)\cdot (-4)
-\end{bmatrix} = \begin{bmatrix}
-6 &amp; -3 \\
-0 &amp; -9 \\
--15 &amp; 12
-\end{bmatrix}.
-\]</span></p>
-</section>
-<section id="simétrica-de-uma-matriz" class="slide level3">
-<h3>Simétrica de uma Matriz</h3>
-<p>A <span class="text-red">simétrica/negativa</span> de uma matriz <span class="math inline">\(A\)</span> é definida por <span class="bg-yellow"><span class="math inline">\(-A = (-1)A\)</span></span>. Em particular, se <span class="math inline">\(A = (a_{ij})\)</span>, então <span class="math display">\[
--A = (-a_{ij}).
-\]</span></p>
-<h4 id="exemplo-3">Exemplo</h4>
-<p>Considere <span class="math display">\[
-A = \begin{bmatrix}
-2 &amp; -3 \\
-1 &amp; 4
-\end{bmatrix} \quad \Rightarrow \quad
--A = (-1)A = \begin{bmatrix}
--2 &amp; 3 \\
--1 &amp; -4
-\end{bmatrix}.
-\]</span></p>
-<p>Além disso, vale a propriedade <span class="bg-yellow"><span class="math inline">\(A + (-A) = 0\)</span></span>. No exemplo acima, <span class="math display">\[
-A + (-A) = \begin{bmatrix}
-2+(-2) &amp; -3+3 \\
-1+(-1) &amp; 4+(-4)
-\end{bmatrix} = \begin{bmatrix}
-0 &amp; 0 \\
-0 &amp; 0
-\end{bmatrix} = 0_{2\times 2}.
-\]</span></p>
-</section>
-<section id="transposta-de-uma-matriz" class="slide level3">
-<h3>Transposta de uma Matriz</h3>
-<p>A <span class="text-red">transposta</span> de uma matriz <span class="math inline">\(A = \left(a_{ij}\right)_{m \times n}\)</span> é a matriz <span class="bg-yellow"><span class="math inline">\(A^T = \left(a_{ji}\right)_{n \times m}\)</span></span> obtida trocando as linhas por colunas.</p>
-<h4 id="exemplo-4">Exemplo</h4>
-<p>Considere a matriz:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-1 &amp; 2 &amp; 3 \\
-4 &amp; 5 &amp; 6
-\end{bmatrix}.
-\]</span></p>
-<p>A transposta de <span class="math inline">\(A\)</span> é:</p>
-<p><span class="math display">\[
-A^T = \begin{bmatrix}
-1 &amp; 4 \\
-2 &amp; 5 \\
-3 &amp; 6
-\end{bmatrix}.
-\]</span></p>
-</section>
-<section id="multiplicação-entre-matrizes" class="slide level3">
-<h3>Multiplicação entre Matrizes</h3>
-<p>O produto de duas matrizes <span class="math inline">\(A = \left(a_{ij}\right)_{m \times p}\)</span> e <span class="math inline">\(B = \left(b_{ij}\right)_{p \times n}\)</span> é definido como:</p>
-<p><span class="math display">\[
-C = AB
-\]</span></p>
-<p>onde a matriz resultante <span class="math inline">\(C = \left(c_{ij}\right)_{m \times n}\)</span> tem entradas dadas por:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{ip}b_{pj} = \sum_{k=1}^{p} a_{ik} b_{kj}.
-\]</span></p>
-</div>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1p}\\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\color{red}{a_{i1}} &amp; \color{red}{a_{i2}} &amp; \cdots &amp; \color{red}{a_{ip}}\\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mp}
-\end{bmatrix},\quad
-B = \begin{bmatrix}
-b_{11} &amp; \cdots &amp; \color{blue}{b_{1j}} &amp; \cdots &amp; b_{1n}\\
-b_{21} &amp; \cdots &amp; \color{blue}{b_{2j}} &amp; \cdots &amp; b_{2n}\\
-\vdots &amp; \ddots &amp; \vdots &amp; \ddots &amp; \vdots \\
-b_{p1} &amp; \cdots &amp; \color{blue}{b_{pj}} &amp; \cdots &amp; b_{pn}
-\end{bmatrix},\quad c_{ij} = \sum\limits_{k=1}^{p} \color{red}{a_{ik}}\,\color{blue}{b_{kj}}
-\]</span></p>
-</section>
-<section id="condições-para-multiplicação-de-matrizes" class="slide level3">
-<h3>Condições para Multiplicação de Matrizes</h3>
-<ul>
-<li><span class="bg-yellow">O número de colunas de <span class="math inline">\(A\)</span> deve ser igual ao número de linhas de <span class="math inline">\(B\)</span>.</span></li>
-<li>A matriz resultante <span class="math inline">\(C\)</span> terá dimensões <span class="math inline">\(m \times n\)</span>.</li>
+<section id="o-que-é-o-número-cinco" class="slide level3">
+<h3>O que é o número cinco?</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig14.png" class="fragment r-stretch" style="width:80.0%"></section>
+<section id="o-que-é-o-número-cinco-cont." class="slide level3">
+<h3>O que é o número cinco? (cont.)</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig14.png" style="width:60.0%" class="r-stretch"><ul>
+<li>O número cinco é um conceito abstrato, representado de diferentes maneiras. {.fragment}</li>
+<li>Nenhuma dessas imagens é o número cinco; são representações do número cinco. {.fragment}</li>
 </ul>
 </section>
-<section id="exemplo-produto-de-matrizes" class="slide level3">
-<h3>Exemplo: Produto de Matrizes</h3>
-<div class="r-stack">
-<div class="fragment current-visible">
-<p>Considere as matrizes:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-1 &amp; 2 &amp; 3 \\
-4 &amp; 5 &amp; 6
-\end{bmatrix}_{2\times 3}, \quad
-B = \begin{bmatrix}
-7 &amp; {8} \\
-9 &amp; {10} \\
-11 &amp; {12}
-\end{bmatrix}_{3\times 2}.
-\]</span> O produto vai ser uma matriz <span class="math inline">\(2\times 2\)</span>: <span class="math display">\[
-C=\begin{bmatrix} c_{11} &amp; c_{12} \\ c_{21} &amp; c_{22}\end{bmatrix}_{2\times 2}
-\]</span></p>
-</div>
-<div class="fragment current-visible">
-<p>Considere as matrizes:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-\color{red}{1} &amp; \color{red}{2} &amp; \color{red}{3} \\
-4 &amp; 5 &amp; 6
-\end{bmatrix}, \quad
-B = \begin{bmatrix}
-\color{blue}{7} &amp; 8 \\
-\color{blue}{9} &amp; 10 \\
-\color{blue}{11} &amp; 12
-\end{bmatrix}.
-\]</span></p>
-<p>Para calcular <span class="math inline">\(c_{11}\)</span>, multiplicamos a primeira linha de <span class="math inline">\(A\)</span> pela primeira coluna de <span class="math inline">\(B\)</span>: <span class="math display">\[
-c_{11} = \color{red}{1}\cdot \color{blue}{7} + \color{red}{2}\cdot \color{blue}{9} + \color{red}{3}\cdot \color{blue}{11} = 7 + 18 + 33 = 58.
-\]</span> O produto vai ser uma matriz <span class="math inline">\(2\times 2\)</span>: <span class="math display">\[
-C=\begin{bmatrix} 58 &amp; c_{12} \\ c_{21} &amp; c_{22}\end{bmatrix}
-\]</span></p>
-</div>
-<div class="fragment current-visible">
-<p>Considere as matrizes:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-\color{red}{1} &amp; \color{red}{2} &amp; \color{red}{3} \\
-4 &amp; 5 &amp; 6
-\end{bmatrix}, \quad
-B = \begin{bmatrix}
-7 &amp; \color{blue}{8} \\
-9 &amp; \color{blue}{10} \\
-11 &amp; \color{blue}{12}
-\end{bmatrix}.
-\]</span></p>
-<p>Para calcular <span class="math inline">\(c_{12}\)</span>, multiplicamos a primeira linha de <span class="math inline">\(A\)</span> pela segunda coluna de <span class="math inline">\(B\)</span>: <span class="math display">\[
-c_{12} = \color{red}{1}\cdot \color{blue}{8} + \color{red}{2}\cdot \color{blue}{10} + \color{red}{3}\cdot \color{blue}{12} = 8 + 20 + 36 = 64.
-\]</span> O produto vai ser uma matriz <span class="math inline">\(2\times 2\)</span>: <span class="math display">\[
-C=\begin{bmatrix} 58 &amp; 64 \\ c_{21} &amp; c_{22}\end{bmatrix}
-\]</span></p>
-</div>
-<div class="fragment current-visible">
-<p>Considere as matrizes:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-1 &amp; 2 &amp; 3 \\
-\color{red}{4} &amp; \color{red}{5} &amp; \color{red}{6}
-\end{bmatrix}, \quad
-B = \begin{bmatrix}
-\color{blue}{7} &amp; 8 \\
-\color{blue}{9} &amp; 10 \\
-\color{blue}{11} &amp; 12
-\end{bmatrix}.
-\]</span></p>
-<p>Para calcular <span class="math inline">\(c_{21}\)</span>, multiplicamos a segunda linha de <span class="math inline">\(A\)</span> pela primeira coluna de <span class="math inline">\(B\)</span>: <span class="math display">\[
-c_{21} = \color{red}{4}\cdot \color{blue}{7} + \color{red}{5}\cdot \color{blue}{9} + \color{red}{6}\cdot \color{blue}{11} = 28 + 45 + 66 = 139.
-\]</span> O produto vai ser uma matriz <span class="math inline">\(2\times 2\)</span>: <span class="math display">\[
-C=\begin{bmatrix} 58 &amp; 64 \\ 139 &amp; c_{22}\end{bmatrix}
-\]</span></p>
-</div>
-<div class="fragment current-visible">
-<p>Considere as matrizes:</p>
-<p><span class="math display">\[
-A = \begin{bmatrix}
-1 &amp; 2 &amp; 3 \\
-\color{red}{4} &amp; \color{red}{5} &amp; \color{red}{6}
-\end{bmatrix}, \quad
-B = \begin{bmatrix}
-7 &amp; \color{blue}{8} \\
-9 &amp; \color{blue}{10} \\
-11 &amp; \color{blue}{12}
-\end{bmatrix}.
-\]</span></p>
-<p>Para calcular <span class="math inline">\(c_{22}\)</span>, multiplicamos a segunda linha de <span class="math inline">\(A\)</span> pela segunda coluna de <span class="math inline">\(B\)</span>: <span class="math display">\[
-c_{22} = \color{red}{4}\cdot \color{blue}{8} + \color{red}{5}\cdot \color{blue}{10} + \color{red}{6}\cdot \color{blue}{12} = 32 + 50 + 72 = 154.
-\]</span> O produto vai ser uma matriz <span class="math inline">\(2\times 2\)</span>: <span class="math display">\[
-C=\begin{bmatrix} 58 &amp; 64 \\ 139 &amp; 154 \end{bmatrix}
-\]</span></p>
-</div>
-</div>
+<section id="vetores" class="slide level3">
+<h3>Vetores</h3>
+<ul>
+<li>Vetores também são conceitos abstratos. {.fragment}</li>
+<li>São representados por segmentos orientados. {.fragment}</li>
+<li>Segmentos orientados paralelos, com mesmo comprimento e sentido, representam o mesmo vetor. {.fragment}</li>
+</ul>
+
+<img data-src="../ChicosNotes/Semana6/fig01.png" class="fragment r-stretch" style="width:60.0%"><p>Do mesmo modo que a representação de um número não é o número, a representação de um vetor por um segmento orientado não é o vetor.</p>
 </section>
-<section id="matriz-identidade" class="slide level3">
-<h3>Matriz Identidade</h3>
-<p>A <span class="text-red">matriz identidade</span> de ordem <span class="math inline">\(n\)</span>, denotada por <span class="math inline">\(I_n\)</span> ou simplesmente por <span class="math inline">\(I\)</span>, é a matriz quadrada <span class="math inline">\(n \times n\)</span> com <span class="math inline">\(1\)</span> na diagonal principal e <span class="math inline">\(0\)</span> fora dela.</p>
-<h4 id="exemplo-5">Exemplo</h4>
-<div class="bg-yellow">
-<p><span class="math display">\[
-I_3 = \begin{bmatrix}
-1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{bmatrix}.
-\]</span></p>
-</div>
-<h4 id="propriedade">Propriedade</h4>
-<p>Para qualquer matriz <span class="math inline">\(A\)</span> <span class="math inline">\({m\times n}\)</span>, a <span class="text-red">matriz identidade</span> satisfaz:</p>
-<div class="bg-yellow">
-<p><span class="math display">\[
-I_m\,A = A \quad\text{e}\quad A\,I_n = A.
-\]</span></p>
-</div>
+<section id="operações-com-vetores-soma" class="slide level3">
+<h3>Operações com vetores — Soma</h3>
+<p><span class="bg-yellow">Soma</span>: regra do paralelogramo. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig02.png" class="fragment r-stretch" style="width:60.0%"><p>Na figura, vemos que a soma de vetores é comutativa: <span class="math inline">\(V + W = W + V\)</span>. {.fragment}</p>
 </section>
-<section id="exemplo-com-mn2" class="slide level3">
-<h3>Exemplo (com <span class="math inline">\(m=n=2\)</span>):</h3>
-<p><span class="math display">\[
-I_2 = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix},\quad
-A = \begin{bmatrix}1 &amp; 2 \\ 3 &amp; 4\end{bmatrix}.
-\]</span></p>
-<p><span class="math display">\[
-I_2A = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}\!
-\begin{bmatrix}1 &amp; 2 \\ 3 &amp; 4\end{bmatrix}
-= \begin{bmatrix}1 &amp; 2 \\ 3 &amp; 4\end{bmatrix} = A,\qquad
-A I_2 = \begin{bmatrix}1 &amp; 2 \\ 3 &amp; 4\end{bmatrix}.
-\]</span></p>
+<section id="operações-com-vetores-associatividade" class="slide level3">
+<h3>Operações com vetores — Associatividade</h3>
+<p>A soma de vetores também é associativa: <span class="math inline">\((V+W)+U = V+(W+U)\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig03.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-vetor-nulo-e-simétrico" class="slide level3">
+<h3>Operações com vetores — Vetor nulo e simétrico</h3>
+<p>O vetor nulo <span class="math inline">\(\vec{0}\)</span> é representado por um ponto (mesmo ponto inicial e final).</p>
+<ul>
+<li>Elemento neutro da soma: <span class="math inline">\(V + \vec{0} = V\)</span>. {.fragment}</li>
+<li>Dado <span class="math inline">\(V\)</span>, o <span class="bg-yellow">simétrico</span> é <span class="math inline">\(-V\)</span> (mesma direção, sentido contrário) e <span class="math inline">\(V + (-V) = \vec{0}\)</span>. {.fragment}</li>
+</ul>
+
+<img data-src="../ChicosNotes/Semana6/fig04.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-diferença" class="slide level3">
+<h3>Operações com vetores — Diferença</h3>
+<p><span class="bg-yellow">Diferença</span>: <span class="math inline">\(V - W = V + (-W)\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig05.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-diagonais" class="slide level3">
+<h3>Operações com vetores — Diagonais</h3>
+<p>Dados <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, as diagonais do paralelogramo gerado por eles são a soma e a diferença. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig06.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="operações-com-vetores-multiplicação-por-escalar" class="slide level3">
+<h3>Operações com vetores — Multiplicação por escalar</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig07.png" style="width:60.0%" class="r-stretch"><ul>
+<li>Se dois vetores são múltiplos escalares, então são representados por segmentos orientados paralelos. {.fragment}</li>
+<li>Reciprocamente, se representados por segmentos orientados paralelos, então um é múltiplo escalar do outro. {.fragment}</li>
+</ul>
 </section>
-<section id="propriedades-das-operações-com-matrizes" class="slide level3">
-<h3>Propriedades das Operações com Matrizes</h3>
+<section id="exemplo-1" class="slide level3">
+<h3>Exemplo 1</h3>
+<p>Mostre que o segmento que une os pontos médios de dois lados de um triângulo é paralelo e tem metade do comprimento do terceiro lado. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig08.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="exemplo-2" class="slide level3">
+<h3>Exemplo 2</h3>
+<p>Mostre que as diagonais de um paralelogramo se cortam ao meio. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig09.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="vetores-em-coordenadas" class="slide level3">
+<h3>Vetores em coordenadas</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig10.png" style="width:60.0%" class="r-stretch"><p>Por definição, as coordenadas de um vetor são as coordenadas do ponto final do seu representante com ponto inicial na origem. {.fragment}</p>
+<p><span class="bg-yellow">Isso é muito importante</span>: para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem. {.fragment}</p>
 </section>
-<section id="adição-de-matrizes" class="slide level3">
-<h3>Adição de Matrizes</h3>
+<section id="operações-de-vetores-em-coordenadas" class="slide level3">
+<h3>Operações de vetores em coordenadas</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span>, então <span class="math display">\[
+V+W = (v_1 + w_1,\ v_2 + w_2), \qquad \alpha V = (\alpha v_1,\ \alpha v_2).
+\]</span> { .fragment }</p>
+
+<img data-src="../ChicosNotes/Semana6/fig11.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="o-vetor-que-liga-dois-pontos-no-plano" class="slide level3">
+<h3>O vetor que liga dois pontos no plano</h3>
+<p>Dados dois pontos <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> no plano, determinar as coordenadas do vetor <span class="math inline">\(\overrightarrow{PQ}\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig12.png" class="fragment r-stretch" style="width:60.0%"><p><span class="math display">\[
+\overrightarrow{OP} + \overrightarrow{PQ} = \overrightarrow{OQ}
+\;\Rightarrow\; P + \overrightarrow{PQ} = Q
+\;\Rightarrow\; \overrightarrow{PQ} = Q - P.
+\]</span> { .fragment }</p>
+<p><span class="math display">\[
+\overrightarrow{PQ} = (\text{ponto final}) - (\text{ponto inicial}).
+\]</span> { .fragment }</p>
+</section>
+<section id="o-vetor-que-liga-dois-pontos-no-plano-exemplo" class="slide level3">
+<h3>O vetor que liga dois pontos no plano (exemplo)</h3>
+<p>Se <span class="math inline">\(P=(2,4)\)</span> e <span class="math inline">\(Q=(5,2)\)</span>, então <span class="math inline">\(\overrightarrow{PQ} = Q - P = (5,2) - (2,4) = (3,-2)\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig13.png" class="fragment r-stretch" style="width:70.0%"><p>Observe o representante de <span class="math inline">\(\overrightarrow{PQ}\)</span> saindo da origem. {.fragment}</p>
+</section>
+<section id="exercícios-no-plano-cartesiano" class="slide level3">
+<h3>Exercícios no plano cartesiano</h3>
 <ol type="1">
-<li><strong>Propriedade Comutativa</strong>: <span class="math inline">\(A + B = B + A\)</span></li>
-<li><strong>Propriedade Associativa</strong>: <span class="math inline">\((A + B) + C = A + (B + C)\)</span></li>
-<li><strong>Identidade Aditiva</strong>: <span class="math inline">\(A + 0 = A\)</span>, onde <span class="math inline">\(0\)</span> é a matriz zero.</li>
-<li><strong>Inverso Aditivo</strong>: <span class="math inline">\(A + (-A) = 0\)</span></li>
+<li>Os pontos <span class="math inline">\(P=(3,7)\)</span>, <span class="math inline">\(Q=(5,11)\)</span> e <span class="math inline">\(R=(7,16)\)</span> são colineares? {.fragment}</li>
+<li>Dados <span class="math inline">\(A=(x_1,y_1)\)</span> e <span class="math inline">\(B=(x_2,y_2)\)</span>, mostre que o ponto médio de <span class="math inline">\(AB\)</span> é <span class="math inline">\(M=\big(\tfrac{x_1+x_2}{2},\tfrac{y_1+y_2}{2}\big)\)</span>. {.fragment}</li>
+<li>Considere <span class="math inline">\(A = (-2,1)\)</span> e <span class="math inline">\(B = (10,7)\)</span>. Determine <span class="math inline">\(C\)</span> e <span class="math inline">\(D\)</span> que dividem o segmento <span class="math inline">\(AB\)</span> em três partes iguais. {.fragment}</li>
+<li>Dados <span class="math inline">\(A=(-1,3)\)</span>, <span class="math inline">\(B=(3,2)\)</span> e <span class="math inline">\(C=(5,4)\)</span>, determine <span class="math inline">\(D\)</span> tal que <span class="math inline">\(ABCD\)</span> são vértices consecutivos de um paralelogramo. {.fragment}</li>
 </ol>
 </section>
-<section id="multiplicação-escalar" class="slide level3">
-<h3>Multiplicação Escalar</h3>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço" class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig01_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont." class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço (cont.)</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig02_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont.-1" class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço (cont.)</h3>
+
+<img data-src="../ChicosNotes/Semana6/fig03_1.png" class="fragment r-stretch" style="width:60.0%"><p>No plano ou no espaço, as coordenadas de um vetor são as coordenadas do seu ponto final, quando representamos o vetor por um segmento orientado saindo da origem. {.fragment}</p>
+</section>
+<section id="norma-comprimento" class="slide level3">
+<h3>Norma = comprimento</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2)\)</span>, então <span class="math inline">\(\lVert V \rVert = \sqrt{v_1^2 + v_2^2}\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig04_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="norma-comprimento-cont." class="slide level3">
+<h3>Norma = comprimento (cont.)</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2,v_3)\)</span>, então <span class="math inline">\(\lVert V \rVert = \sqrt{v_1^2 + v_2^2 + v_3^2}\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig05_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="distância-entre-dois-pontos" class="slide level3">
+<h3>Distância entre dois pontos</h3>
+<p>Se <span class="math inline">\(P=(x_1,y_1)\)</span> e <span class="math inline">\(Q=(x_2,y_2)\)</span>, então</p>
+<p><span class="math display">\[\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \qquad
+\operatorname{dist}(P,Q)=\lVert\overrightarrow{PQ}\rVert=\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.\]</span></p>
+
+<img data-src="../ChicosNotes/Semana6/fig06_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="vetores-unitários" class="slide level3">
+<h3>Vetores unitários</h3>
+<p>Se <span class="math inline">\(\alpha\in\mathbb{R}\)</span> e <span class="math inline">\(V\)</span> é um vetor, então <span class="math inline">\(\lVert\alpha V\rVert = |\alpha|\,\lVert V\rVert\)</span> (por exemplo, <span class="math inline">\(\lVert-2V\rVert = 2\lVert V\rVert\)</span>).</p>
+<p>Um vetor <span class="math inline">\(V\)</span> é <span class="bg-yellow">unitário</span> se <span class="math inline">\(\lVert V\rVert = 1\)</span>. {.fragment}</p>
+<p>Se <span class="math inline">\(V\neq\vec{0}\)</span>, então existe um vetor unitário na mesma direção e sentido de <span class="math inline">\(V\)</span>: <span class="math display">\[U\;=\;\Big(\tfrac{1}{\lVert V\rVert}\Big)\,V.\]</span></p>
+
+<img data-src="../ChicosNotes/Semana6/fig07_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="vetores-unitários-exercícios" class="slide level3">
+<h3>Vetores unitários — exercícios</h3>
+<ul>
+<li>Determine um vetor unitário na direção da reta <span class="math inline">\(y=2x\)</span>. Quantos existem? {.fragment}</li>
+<li>Determine um vetor unitário na direção da reta <span class="math inline">\(y=-\tfrac{1}{2}x\)</span>. Quantos existem? {.fragment}</li>
+<li>Todo vetor unitário no plano é da forma <span class="math inline">\(U=(\cos\theta,\sin\theta)\)</span>. Interprete. {.fragment}</li>
+<li>Determine um vetor unitário na direção da reta que liga <span class="math inline">\(P=(-1,2,4)\)</span> e <span class="math inline">\(Q=(3,5,1)\)</span>. {.fragment}</li>
+</ul>
+</section>
+<section id="produto-escalar" class="slide level3">
+<h3>Produto escalar</h3>
+<p>O produto escalar entre dois vetores <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é o número real <span class="math display">\[\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta,\]</span> onde <span class="math inline">\(\theta\)</span> é o ângulo entre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</p>
+
+<img data-src="../ChicosNotes/Semana6/fig08_1.png" class="fragment r-stretch" style="width:60.0%"><p>Além disso, <span class="math inline">\(\langle V,W\rangle = 0\)</span> se <span class="math inline">\(V=\vec{0}\)</span> ou se <span class="math inline">\(W=\vec{0}\)</span>. {.fragment}</p>
+</section>
+<section id="produto-escalar-exemplo" class="slide level3">
+<h3>Produto escalar — exemplo</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math inline">\(\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta = \sqrt{17}\,\sqrt{13}\,\cos\theta\)</span>. {.fragment}</p>
+<p>Mas como determinar <span class="math inline">\(\theta\)</span>? E no espaço? {.fragment}</p>
+</section>
+<section id="lei-dos-cossenos" class="slide level3">
+<h3>Lei dos Cossenos</h3>
+<p>Para calcular <span class="math inline">\(\theta\)</span> e, portanto, o produto escalar, use a <span class="bg-yellow">Lei dos Cossenos</span>: {.fragment} <span class="math display">\[a^2=b^2+c^2-2bc\cos\theta.\]</span></p>
+
+<img data-src="../ChicosNotes/Semana6/fig10_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="produto-escalar-em-coordenadas-teoremas" class="slide level3">
+<h3>Produto escalar em coordenadas — teoremas</h3>
+<p>No plano, se <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2.\]</span></p>
+<p>No espaço, se <span class="math inline">\(V=(v_1,v_2,v_3)\)</span> e <span class="math inline">\(W=(w_1,w_2,w_3)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2 + v_3w_3.\]</span></p>
+</section>
+<section id="produto-escalar-exemplo-rápido" class="slide level3">
+<h3>Produto escalar — exemplo rápido</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math inline">\(\langle V,W\rangle = 4\cdot 2 + 1\cdot 3 = 11\)</span>. {.fragment}</p>
+</section>
+<section id="ângulo-entre-dois-vetores" class="slide level3">
+<h3>Ângulo entre dois vetores</h3>
+<p>Se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são dados em coordenadas, então <span class="math display">\[\cos\theta\;=\;\dfrac{\langle V,W\rangle}{\lVert V\rVert\,\lVert W\rVert}.\]</span></p>
+<p>O ângulo <span class="math inline">\(\theta\)</span> entre dois vetores satisfaz <span class="math inline">\(0^\circ\leq\theta\leq 180^\circ\)</span>. {.fragment}</p>
+</section>
+<section id="ângulo-entre-dois-vetores-exemplo" class="slide level3">
+<h3>Ângulo entre dois vetores — exemplo</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math display">\[\cos\theta=\dfrac{11}{\sqrt{17}\,\sqrt{13}},\qquad \theta = \arccos\Big(\dfrac{11}{\sqrt{17}\,\sqrt{13}}\Big) \approx 42^\circ.\]</span> { .fragment }</p>
+</section>
+<section id="classificação-pelo-produto-escalar" class="slide level3">
+<h3>Classificação pelo produto escalar</h3>
+<p>Para <span class="math inline">\(V,W\neq\vec{0}\)</span>:</p>
 <ol type="1">
-<li><strong>Propriedade Distributiva</strong>: <span class="math inline">\(\alpha(A + B) = \alpha A + \alpha B\)</span></li>
-<li><strong>Propriedade Associativa</strong>: <span class="math inline">\((\alpha \beta)A = \alpha(\beta A)\)</span></li>
-<li><strong>Identidade Multiplicativa</strong>: <span class="math inline">\(1 \cdot A = A\)</span></li>
+<li><span class="math inline">\(\theta\)</span> é agudo se <span class="math inline">\(\langle V,W\rangle &gt; 0\)</span>; {.fragment}</li>
+<li><span class="math inline">\(\theta\)</span> é obtuso se <span class="math inline">\(\langle V,W\rangle &lt; 0\)</span>; {.fragment}</li>
+<li><span class="math inline">\(\theta=90^\circ\)</span> se <span class="math inline">\(\langle V,W\rangle = 0\)</span>. {.fragment}</li>
 </ol>
+<p>Assim, <span class="math inline">\(\langle V,W\rangle = 0\)</span> determina a ortogonalidade de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>. {.fragment}</p>
 </section>
-<section id="multiplicação-de-matrizes" class="slide level3">
-<h3>Multiplicação de Matrizes</h3>
+<section id="exemplo-rotação-de-90circ-no-plano" class="slide level3">
+<h3>Exemplo: rotação de <span class="math inline">\(90^\circ\)</span> no plano</h3>
+<p>Dado <span class="math inline">\(V=(a,b)\)</span>, o vetor <span class="math inline">\(W=(-b,a)\)</span> é obtido de <span class="math inline">\(V\)</span> por rotação de <span class="math inline">\(90^\circ\)</span> anti-horária:</p>
+<p><span class="math display">\[
+W = R_{90^\circ}V = \begin{bmatrix} \cos 90^\circ &amp; -\sin 90^\circ \\ \sin 90^\circ &amp; \cos 90^\circ \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
+= \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
+= \begin{bmatrix} -b \\ a \end{bmatrix}.
+\]</span> { .fragment }</p>
+<p>Observe que <span class="math inline">\(\lVert V\rVert = \lVert W\rVert\)</span> e <span class="math inline">\(\langle V,W\rangle = -ab + ab = 0\)</span>. {.fragment}</p>
+
+<img data-src="../ChicosNotes/Semana6/fig12_1.png" class="fragment r-stretch" style="width:70.0%"></section>
+<section id="exercícios" class="slide level3">
+<h3>Exercícios</h3>
 <ol type="1">
-<li><strong>Propriedade Associativa</strong>: <span class="math inline">\((AB)C = A(BC)\)</span></li>
-<li><strong>Propriedade Distributiva</strong>: <span class="math inline">\(A(B + C) = AB + AC\)</span> e <span class="math inline">\((A + B)C = AC + BC\)</span></li>
-<li><strong>Compatibilidade da Multiplicação Escalar</strong>: <span class="math inline">\(\alpha(AB) = (\alpha A)B = A(\alpha B)\)</span></li>
-<li>Se <span class="math inline">\(A\)</span> é matriz <span class="math inline">\(m\times n\)</span>, então <span class="math inline">\(I_mA=AI_n=A\)</span></li>
-<li><strong>Não-Comutatividade</strong>: Em geral, <span class="text-red"><span class="math inline">\(AB \neq BA\)</span></span></li>
+<li>Mostre que <span class="math inline">\(A=(3,0,2)\)</span>, <span class="math inline">\(B=(4,3,0)\)</span> e <span class="math inline">\(C=(8,1,-1)\)</span> são vértices de um triângulo retângulo. Calcule a área. {.fragment}</li>
+<li>No cubo unitário <span class="math inline">\(ABCDEFGH\)</span>, determine: {.fragment}</li>
 </ol>
-</section>
-<section id="multiplicação-não-comutativa" class="slide level3">
-<h3>Multiplicação Não Comutativa</h3>
-<p>Vamos ilustrar que, em geral, <span class="math inline">\(AB \neq BA\)</span>.</p>
-<p>Considere <span class="math display">\[
-A = \begin{bmatrix}1 &amp; 2 \\ 0 &amp; 1\end{bmatrix}, \quad
-B = \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}.
-\]</span></p>
-<p>Calculando <span class="math inline">\(AB\)</span> e <span class="math inline">\(BA\)</span>: <span class="math display">\[
-AB = \begin{bmatrix}1 &amp; 2 \\ 0 &amp; 1\end{bmatrix}
-         \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}
-     = \begin{bmatrix}2 &amp; 1 \\ 1 &amp; 0\end{bmatrix},\qquad
-BA = \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}
-         \begin{bmatrix}1 &amp; 2 \\ 0 &amp; 1\end{bmatrix}
-     = \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 2\end{bmatrix}.
-\]</span></p>
-<p>Conclusão: <span class="text-red"><span class="math inline">\(AB = \begin{bmatrix}2 &amp; 1 \\ 1 &amp; 0\end{bmatrix} \neq \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 2\end{bmatrix} = BA\)</span></span></p>
-</section>
-<section id="transposta" class="slide level3">
-<h3>Transposta</h3>
+<ul>
+<li>o ângulo entre duas diagonais do cubo; são perpendiculares? {.fragment}</li>
+<li>o ângulo entre uma aresta e uma diagonal do cubo; é o mesmo para qualquer escolha? {.fragment}</li>
+</ul>
+
+<img data-src="../ChicosNotes/Semana6/fig11_1.png" class="fragment r-stretch" style="width:60.0%"></section>
+<section id="propriedades-do-produto-escalar" class="slide level3">
+<h3>Propriedades do produto escalar</h3>
 <ol type="1">
-<li>Dupla transposição: <span class="math inline">\((A^T)^T = A\)</span>.</li>
-<li>Transposição da soma (mesmas dimensões): <span class="math inline">\((A + B)^T = A^T + B^T\)</span>.</li>
-<li>Transposição do produto por escalar: <span class="math inline">\((\alpha A)^T = \alpha A^T\)</span>.</li>
-<li>Transposição do produto (dimensões compatíveis): <span class="math inline">\((AB)^T = B^T A^T\)</span>.</li>
-<li>Simetria: <span class="math inline">\(A\)</span> é simétrica se <span class="math inline">\(A^T = A\)</span> e antissimétrica se <span class="math inline">\(A^T = -A\)</span>.</li>
+<li><span class="math inline">\(\langle V,W\rangle = \langle W,V\rangle\)</span>. {.fragment}</li>
+<li><span class="math inline">\(\langle U,V+W\rangle = \langle U,V\rangle + \langle U,W\rangle\)</span>. {.fragment}</li>
+<li><span class="math inline">\(\alpha\,\langle V,W\rangle = \langle \alpha V,W\rangle = \langle V,\alpha W\rangle\)</span>. {.fragment}</li>
 </ol>
-</section>
-<section id="propriedade-transposta-do-produto" class="slide level3">
-<h3>Propriedade: transposta do produto</h3>
-<p>Para matrizes de tamanhos compatíveis, vale a identidade <span class="math display">\[
-(AB)^{T} = B^{T} A^{T}.
-\]</span></p>
-<p>Exemplo pequeno (matrizes <span class="math inline">\(2\times 2\)</span>): <span class="math display">\[
-A = \begin{bmatrix}1 &amp; 2\\ 3 &amp; 0\end{bmatrix},\quad
-B = \begin{bmatrix}0 &amp; 4\\ 5 &amp; -1\end{bmatrix}.
-\]</span> Então <span class="math display">\[
-AB = \begin{bmatrix}
-1\cdot 0 + 2\cdot 5 &amp; 1\cdot 4 + 2\cdot(-1)\\
-3\cdot 0 + 0\cdot 5 &amp; 3\cdot 4 + 0\cdot(-1)
-\end{bmatrix}
-= \begin{bmatrix}10 &amp; 2\\ 0 &amp; 12\end{bmatrix},\quad
-(AB)^{T} = \begin{bmatrix}10 &amp; 0\\ 2 &amp; 12\end{bmatrix}.
-\]</span></p>
-<p>Por outro lado, <span class="math display">\[
-B^{T} = \begin{bmatrix}0 &amp; 5\\ 4 &amp; -1\end{bmatrix},\quad
-A^{T} = \begin{bmatrix}1 &amp; 3\\ 2 &amp; 0\end{bmatrix},\quad
-B^{T}A^{T} = \begin{bmatrix}
-0\cdot 1 + 5\cdot 2 &amp; 0\cdot 3 + 5\cdot 0\\
-4\cdot 1 + (-1)\cdot 2 &amp; 4\cdot 3 + (-1)\cdot 0
-\end{bmatrix}
-= \begin{bmatrix}10 &amp; 0\\ 2 &amp; 12\end{bmatrix}.
-\]</span></p>
-<p>Logo, <span class="math inline">\((AB)^{T} = B^{T}A^{T}\neq A^TB^T\)</span>.</p>
+<p>Relação com matrizes: se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são colunas, {.fragment} <span class="math display">\[\langle V,W\rangle = V^{T}W = \begin{bmatrix} v_1 &amp; v_2 &amp; v_3 \end{bmatrix}\!\begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} = v_1w_1 + v_2w_2 + v_3w_3.\]</span> { .fragment }</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
