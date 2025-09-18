@@ -839,3 +839,6 @@ Isto implica que $\det(A)\neq 0$ (pois é um fator de 1). Portanto toda matriz i
 Vice-versa, se $\det A\neq 0$, então $A$ é invertível. 
 
 
+### Exploração do determinante 
+
+![Exercícios sobre determinante](QRCodes/resumo1.png){.nostretch width=50%}
