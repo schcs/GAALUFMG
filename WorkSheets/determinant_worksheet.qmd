@@ -62,4 +62,21 @@ a. Determine o determinante de $B$ sem fazer conta numérica. (Dica: pense como 
 $B$ muda se trocar a primeira e a quarta linha e deduza o único valor possível para $\det B$.)
 b. Escreva uma frase no seu caderno para descrever o fenómeno começando assim: *Se uma matriz tem duas linhas repetidas, então*$\ldots$'  
 c. O que pode-se dizer sobre o determinante de uma matriz que tem duas colunas repetidas?
+d. Se uma linha ou coluna da matriz é nula, o que pode dizer sobre o determinante de $A$?
 
+5. Considere a matriz 
+$$
+C=\begin{bmatrix}
+1 & 2 & 0 & -1\\
+0 & -2 & 3 & 0\\
+0 & 0 & 3 & -1\\
+0 & 0 & 0 & -1\\
+\end{bmatrix}
+$$
+Calcule o determinante de  $C$ usando expansão por uma coluna. 
+
+a. Qual é o determinante de $C$? Como pode calcular $\det C$ de maneira mais simples?
+b. Escreva uma frase no seu caderno para descrever o fenómeno observado começando assim: 
+*O determinante de uma matriz na forma triangular é*$\ldots$'
+c. Explique o fenômeno observado em seu caderno em 2-3 frases.   
+d. O que pode dizer sobre o determinante de uma matriz diagonal?

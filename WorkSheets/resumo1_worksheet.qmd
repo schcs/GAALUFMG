@@ -1,0 +1,38 @@
+---
+title: "Matrizes quadradas"
+author: ""
+date: "2025-09-18"
+---
+
+
+1. Calcule o determinante da seguinte matriz usando eliminação de Gauss-Jordan:
+$$
+\begin{bmatrix}
+1 & 3 & 9 & 7 \\
+2 & 3 & 2 & 5 \\ 
+0 & 3 & 4 & 1 \\
+4 & 6 & 9 & 1 \\
+\end{bmatrix}
+$$
+
+
+
+Responde às seguintes perguntas em seu caderno. Escreva uma frase completa para cada pergunta justificando 
+com 2-3 frases coerentes. 
+
+1. Alice tem uma matriz quadrada $A$ e calculou a forma escalonada reduzida $B$ de $A$. Alice 
+passa a matriz $B$ para o Bob. Bob só tem a matriz $B$ e não conhece a matriz $A$. Bob consegue responder 
+as seguintes questões?
+
+a. A matriz $A$ é invertível?
+b. O que pode dizer sobre o determinante de $A$? O Bob consegue saber $\det A$? Ele tem alguma informação 
+sobre $\det A$?
+c. Considere o sistema $Ax=b$. O que o Bob pode dizer sobre o número de soluções do sistema?
+
+2. Assuma agora que Alice calculou o determinante de $A$ e passou o determinante para o $B$. O Bob sabe  $\det A$, mas não conhece $A$.
+
+
+a. O Bob consegue saber se $A$ é invertível?
+b. Considere o sistema $AX=B$? O que o Bob pode dizer sobre o número de soluções do sistema?
+
+
