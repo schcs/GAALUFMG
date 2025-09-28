@@ -342,6 +342,10 @@ $$
 
 Geralmente escolhemos a linha ou coluna que dá menos trabalho.
 
+### Exploração do determinante 
+
+![Exercícios sobre determinante](QRCodes/ws_det.png){.nostretch width=50%}
+
 
 ### Determinantes e operações elementares por linhas
 
@@ -434,9 +438,6 @@ $$
 :::
 
 
-:::{.fragment}
-Nota: se multiplicarmos todas as linhas por um mesmo escalar $k$ em uma matriz $n\times n$, o determinante é multiplicado por $k^{n}$.
-:::
 
 ### Exemplo detalhado com troca de linhas
 
@@ -594,21 +595,10 @@ Calculemos cada determinante $2\times2$:
 :::{.bg-yellow}
 $$
 \det\begin{bmatrix}3 & 2 \\
-1 & -2\end{bmatrix}=3\cdot(-2)-2\cdot1=-6-2=-8,
-$$
-:::
-
-:::{.bg-yellow}
-$$
-\det\begin{bmatrix}-1 & 2 \\
-2 & -2\end{bmatrix}=(-1)(-2)-2\cdot2=2-4=-2,
-$$
-:::
-
-:::{.bg-yellow}
-$$
+1 & -2\end{bmatrix}=-8,\quad \det\begin{bmatrix}-1 & 2 \\
+2 & -2\end{bmatrix}=-2,\quad 
 \det\begin{bmatrix}-1 & 3 \\
-2 & 1\end{bmatrix}=(-1)\cdot1-3\cdot2=-1-6=-7.
+2 & 1\end{bmatrix}=-7.
 $$
 :::
 :::
@@ -737,7 +727,7 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Troque agora $L_2\leftrightarrow L_3$ para trazer o pivô $5$ para a posição $(2,2)$ (outro fator $-1$):
+Troque agora $L_2\leftrightarrow L_3$ para trazer o pivô $5$ para a posição $(2,2)$ (segubnda troca, outro fator $-1$):
 
 :::{.bg-yellow}
 $$
@@ -782,7 +772,7 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Finalmente troque $L_3\leftrightarrow L_4$ para obter a forma triangular superior (mais um fator \,-1):
+Finalmente troque $L_3\leftrightarrow L_4$ para obter a forma triangular superior (terceira troca, fator \,-1):
 
 :::{.bg-yellow}
 $$
@@ -791,7 +781,7 @@ $$
 0 & 5 & 5 & 9 \\
 0 & 0 & 0 & -3 \\
 0 & 0 & -5 & -\tfrac{13}{5}
-\end{bmatrix}.
+\end{bmatrix}
 \Rightarrow
 \begin{bmatrix}
 1 & 2 & 3 & 4 \\
@@ -804,11 +794,19 @@ $$
 :::
 
 :::{.fragment}
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 5 & 5 & 9 \\
+0 & 0 & -5 & -\tfrac{13}{5} \\
+0 & 0 & 0 & -3
+\end{bmatrix}.
+$$
 Agora a matriz é triangular superior; o determinante é o produto das entradas da diagonal multiplicado por $(-1)^{\#\text{trocas}}$ (cada troca contribuiu com $-1$). Tivémos 3 trocas, portanto um fator $(-1)^3=-1$.
 
 :::{.bg-yellow}
 $$
-\det(A)=(-1)\cdot(1)\cdot(5)\cdot(-5)\cdot(-3) = (-1)\cdot 75 = -75.
+\det(A)=(-1)\cdot(1)\cdot(5)\cdot(-5)\cdot(-3) = -1\cdot 75 = -75.
 $$
 :::
 :::
@@ -841,3 +839,6 @@ Isto implica que $\det(A)\neq 0$ (pois é um fator de 1). Portanto toda matriz i
 Vice-versa, se $\det A\neq 0$, então $A$ é invertível. 
 
 
+### Exploração do determinante 
+
+![Exercícios sobre determinante](QRCodes/resumo1.png){.nostretch width=50%}

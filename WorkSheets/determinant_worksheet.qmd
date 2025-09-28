@@ -1,0 +1,82 @@
+---
+title: "O determinante (exercícios na aula)"
+author: ""
+date: "2025-09-16"
+---
+
+Seja $A$ uma matriz quadrada
+$$
+\displaystyle A=\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{pmatrix}.
+$$
+
+Lembre que o determinante de $A$ pode ser calculado por expansão de uma linha ou coluna qualquer. Em 
+símbolos, temos que 
+$$
+\det A=\sum_{i=1}^n a_{ki}\tilde a_{ki}=\sum_{j=1}^n a_{jl}\tilde a_{jl}.
+$$
+
+Considere a seguinte matriz 
+$$
+A=\begin{bmatrix}
+1 & 2 & 0 & -1\\
+1 & -2 & 3 & 0\\
+1 & 0 & 0 & -1\\
+0 & 0 & -2 & 1\\
+\end{bmatrix}
+$$
+
+1. Calcule o determinante de $A$ por expansão de uma linha ou coluna. 
+
+2. Multiplique uma linha de $A$ por um escalar $\alpha\in\mathbb R$. Escolhe um escalar pequeno, tal como $-2$, 
+$-1$, $1$, $2$. Reculcule o determinante da matriz obtida dessa forma. 
+    
+    a. O que observe?
+    b. Escreva uma frase no seu caderno para descrever o fenómeno começando assim: *Ao multiplicar uma linha de uma matriz por um escalar, o determinante*$\ldots$' 
+    c. Explique o fenômeno em 2-3 frases no seu caderno. 
+    d. Pense no que acontece se multiplicamos uma *coluna* por um escalar. 
+
+3. Agora troque duas linhas de $A$ e reculcule o determinante da matriz obtida. 
+
+    a. O que observe?
+    b. Escreva uma frase no seu caderno para descrever o fenómeno começando assim: *Ao trocar duas linhas de uma matriz, o determinante*\ldots$' 
+    c. Explique o fenômeno em 2-3 frases no seu caderno. 
+    d. Pense no que acontece se trocarmos duas colunas. 
+
+4. Considere a matriz $B$
+$$
+B=\begin{bmatrix}
+1 & 2 & 0 & -1\\
+1 & -2 & 3 & 0\\
+1 & 0 & 0 & -1\\
+1 & 2 & 0 & -1\\
+\end{bmatrix}
+$$
+Note que $B$ tem linhas repetidas. 
+ 
+a. Determine o determinante de $B$ sem fazer conta numérica. (Dica: pense como o determinante de 
+$B$ muda se trocar a primeira e a quarta linha e deduza o único valor possível para $\det B$.)
+b. Escreva uma frase no seu caderno para descrever o fenómeno começando assim: *Se uma matriz tem duas linhas repetidas, então*$\ldots$'  
+c. O que pode-se dizer sobre o determinante de uma matriz que tem duas colunas repetidas?
+d. Se uma linha ou coluna da matriz é nula, o que pode dizer sobre o determinante de $A$?
+
+5. Considere a matriz 
+$$
+C=\begin{bmatrix}
+1 & 2 & 0 & -1\\
+0 & -2 & 3 & 0\\
+0 & 0 & 3 & -1\\
+0 & 0 & 0 & -1\\
+\end{bmatrix}
+$$
+Calcule o determinante de  $C$ usando expansão por uma coluna. 
+
+a. Qual é o determinante de $C$? Como pode calcular $\det C$ de maneira mais simples?
+b. Escreva uma frase no seu caderno para descrever o fenómeno observado começando assim: 
+*O determinante de uma matriz na forma triangular é*$\ldots$'
+c. Explique o fenômeno observado em seu caderno em 2-3 frases.   
+d. O que pode dizer sobre o determinante de uma matriz diagonal?
