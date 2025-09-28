@@ -737,7 +737,7 @@ $$
 :::
 
 :::{.fragment .current-visible}
-Troque agora $L_2\leftrightarrow L_3$ para trazer o pivô $5$ para a posição $(2,2)$ (terceira troca, outro fator $-1$):
+Troque agora $L_2\leftrightarrow L_3$ para trazer o pivô $5$ para a posição $(2,2)$ (outro fator $-1$):
 
 :::{.bg-yellow}
 $$
@@ -775,14 +775,14 @@ $$
 1 & 2 & 3 & 4 \\
 0 & 5 & 5 & 9 \\
 0 & 0 & 0 & -3 \\
-0 & 0 & -5 & -\tfrac{13}{5}
+0 & 0 & -5 & -13/5
 \end{bmatrix}.
 $$
 :::
 :::
 
 :::{.fragment .current-visible}
-Finalmente troque $L_3\leftrightarrow L_4$ para obter a forma triangular superior (quarta troca, fator \,-1):
+Finalmente troque $L_3\leftrightarrow L_4$ para obter a forma triangular superior (mais um fator \,-1):
 
 :::{.bg-yellow}
 $$
@@ -804,11 +804,11 @@ $$
 :::
 
 :::{.fragment}
-Agora a matriz é triangular superior; o determinante é o produto das entradas da diagonal multiplicado por $(-1)^{\#\text{trocas}}$ (cada troca contribuiu com $-1$). Tivémos 4 trocas, portanto um fator $(-1)^4=1$.
+Agora a matriz é triangular superior; o determinante é o produto das entradas da diagonal multiplicado por $(-1)^{\#\text{trocas}}$ (cada troca contribuiu com $-1$). Tivémos 3 trocas, portanto um fator $(-1)^3=-1$.
 
 :::{.bg-yellow}
 $$
-\det(A)=(1)\cdot(1)\cdot(5)\cdot(-5)\cdot(-3) = 1\cdot 75 = 75.
+\det(A)=(-1)\cdot(1)\cdot(5)\cdot(-5)\cdot(-3) = (-1)\cdot 75 = -75.
 $$
 :::
 :::
