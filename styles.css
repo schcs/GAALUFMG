@@ -6,8 +6,9 @@
   font-size: 130%; 
 }
 
+
 /* Prevent auto-stretch for specific images */
-.reveal .slides img.nostretch {
+ .reveal .slides img.nostretch {
   max-width: 30% !important; /* acts as an upper bound */
   width: auto !important;    /* respect intrinsic width unless width attr given */
   height: auto !important;
