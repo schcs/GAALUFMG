@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
+
+  <meta name="author" content="Francisco Dutenhefner/Csaba Schneider">
+  <meta name="dcterms.date" content="2025-01-01">
+  <title>Vetores</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+  <title>macros</title>
+  <style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  div.columns{display: flex; gap: min(4vw, 1.5em);}
+  div.column{flex: auto; overflow-x: auto;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+  ul.task-list li input[type="checkbox"] {
+    width: 0.8em;
+    margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+    vertical-align: middle;
+  }
+  </style>
+
+
+  <script src="macros_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="macros_files/libs/quarto-html/quarto.js"></script>
+  <script src="macros_files/libs/quarto-html/popper.min.js"></script>
+  <script src="macros_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="macros_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="macros_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="macros_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+  <script src="macros_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="macros_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="macros_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  const typesetMath = (el) => {
+    if (window.MathJax) {
+      // MathJax Typeset
+      window.MathJax.typeset([el]);
+    } else if (window.katex) {
+      // KaTeX Render
+      var mathElements = el.getElementsByClassName("math");
+      var macros = [];
+      for (var i = 0; i < mathElements.length; i++) {
+        var texText = mathElements[i].firstChild;
+        if (mathElements[i].tagName == "SPAN") {
+          window.katex.render(texText.data, mathElements[i], {
+            displayMode: mathElements[i].classList.contains('display'),
+            throwOnError: false,
+            macros: macros,
+            fleqn: false
+          });
+        }
+      }
+    }
+  }
+  window.Quarto = {
+    typesetMath
+  };
+  </script>
+
+  </head>
+
+  <body class="fullcontent quarto-light">
+
+  <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+  <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title">Vetores</h1></header>
+
+
+
+
+  <div class="hidden">
+  <p><span class="math display">\[
+  \newcommand{\Z}{\mathbb Z}
+  \newcommand{\Q}{\mathbb Q}
+  \newcommand{\R}{\mathbb R}
+  \newcommand{\C}{\mathbb C}
+  \newcommand{\F}{\mathbb F}
+  \newcommand{\K}{\mathbb K}
+  \newcommand{\L}{\mathbb L}
+  \newcommand{\N}{\mathbb N}
+  \newcommand{\sym}[1]{\operatorname{Sym}(#1)}
+  \newcommand{\GLV}[1]{\operatorname{GL}(#1)}
+  \newcommand{\SLV}[1]{\operatorname{SL}(#1)}
+  \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+  \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+  \newcommand{\lxor}{\dot\lor}
+  \newcommand{\cond}{\Rightarrow}
+  \newcommand{\bicond}{\Leftrightarrow}
+  \newcommand{\mdc}[2]{\operatorname{mdc}(#1,#2)}
+  \newcommand{\grau}[1]{\operatorname{grau}(#1)}
+  \newcommand{\real}[1]{\mathfrak R(#1)}
+  \newcommand{\imag}[1]{\mathfrak I(#1)}
+  \newcommand{\argz}[1]{\mbox{arg}(#1)}
+  \DeclareMathOperator{\sen}{sen}
+  \newcommand{\cis}[1]{\cos #1+i\sen #1}
+  \newcommand{\E}{\mathbb E}
+  \newcommand{\aut}[1]{\textrm{Aut}(#1)}
+  \newcommand{\fix}[1]{\textrm{Fix}(#1)}
+  \newcommand{\gal}[2]{\textrm{Gal}(#1:#2)}
+  \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+  \newcommand{\ul}[1]{\underline{#1}}
+  \newcommand{\tn}[1]{\textnormal{#1}}
+  \]</span></p>
+  </div>
+
+  </main>
+  <!-- /main column -->
+  <script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    toggleBodyColorPrimary();  
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      // For code content inside modals, clipBoardJS needs to be initialized with a container option
+      // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+   	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        // TODO in 1.5, we should make sure this works without a callout special case
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  </div> <!-- /content -->
+
+
+  <script>
+  var resizeSlide = function() {
+     Reveal.configure({
+       width: window.innerWidth,
+       height: window.innerHeight
+     });
+  }
+  //setInterval(resizeSlide, 1000);
+  </script>
+
+  
+
+
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  
+  <p class="subtitle">Apostilas</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Francisco Dutenhefner/Csaba Schneider 
+</div>
+</div>
+</div>
+
+  <p class="date">2025-01-01</p>
+</section>
+<section id="introdução" class="slide level3">
+<h3>Introdução</h3>
+<p>Vamos começar o estudo de <span class="text-red">vetores</span>.</p>
+<p>Na Física, as grandezas podem ser classificadas como escalares e vetoriais.</p>
+<ul>
+<li>Grandezas escalares são dadas por um número, por exemplo: distância, área, massa, etc.</li>
+<li>Grandezas vetoriais são dadas por um vetor que tem módulo, direção e sentido. São exemplos: velocidade, força peso, força resultante, etc.</li>
+</ul>
+<p>Como o módulo de um vetor é um número, para saber o que é um vetor, precisamos refletir primeiramente:</p>
+<p><span class="bg-yellow">O que é número?</span></p>
+</section>
+<section id="o-que-é-o-número-cinco" class="slide level3">
+<h3>O que é o número cinco?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig14.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="o-que-é-o-número-cinco-cont." class="slide level3">
+<h3>O que é o número cinco? (cont.)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig14.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+<ul>
+<li>O número cinco é um conceito abstrato, representado de diferentes maneiras.</li>
+<li>Nenhuma dessas imagens é o número cinco; são representações do número cinco.</li>
+</ul>
+</section>
+<section id="vetores" class="slide level3">
+<h3>Vetores</h3>
+<ul>
+<li>Vetores também são conceitos abstratos.</li>
+<li>São representados por segmentos orientados.</li>
+<li>Segmentos orientados paralelos, com mesmo comprimento e sentido, representam o mesmo vetor.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig01.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Do mesmo modo que a representação de um número não é o número, a representação de um vetor por um segmento orientado não é o vetor.</p>
+</section>
+<section id="operações-com-vetores-soma" class="slide level3">
+<h3>Operações com vetores — Soma</h3>
+<p><span class="bg-yellow">Soma</span>: regra do paralelogramo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig02.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
+</div>
+<p>Na figura, vemos que a soma de vetores é comutativa: <span class="math inline">\(V + W = W + V\)</span>.</p>
+</section>
+<section id="operações-com-vetores-associatividade" class="slide level3">
+<h3>Operações com vetores — Associatividade</h3>
+<p>A soma de vetores também é associativa: <span class="math inline">\((V+W)+U = V+(W+U)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig03.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="operações-com-vetores-vetor-nulo-e-simétrico" class="slide level3">
+<h3>Operações com vetores — Vetor nulo e simétrico</h3>
+<p>O vetor nulo <span class="math inline">\(\vec{0}\)</span> é representado por um ponto (mesmo ponto inicial e final).</p>
+<ul>
+<li>Elemento neutro da soma: <span class="math inline">\(V + \vec{0} = V\)</span>.</li>
+<li>Dado <span class="math inline">\(V\)</span>, o <span class="bg-yellow">simétrico</span> é <span class="math inline">\(-V\)</span> (mesma direção, sentido contrário) e <span class="math inline">\(V + (-V) = \vec{0}\)</span>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig04.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
+</div>
+</section>
+<section id="operações-com-vetores-diferença" class="slide level3">
+<h3>Operações com vetores — Diferença</h3>
+<p><span class="bg-yellow">Diferença</span>: <span class="math inline">\(V - W = V + (-W)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig05.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="operações-com-vetores-diagonais" class="slide level3">
+<h3>Operações com vetores — Diagonais</h3>
+<p>Dados <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, as diagonais do paralelogramo gerado por eles são a soma e a diferença.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig06.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="operações-com-vetores-multiplicação-por-escalar" class="slide level3">
+<h3>Operações com vetores — Multiplicação por escalar</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig07.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+<ul>
+<li>Se dois vetores são múltiplos escalares, então são representados por segmentos orientados paralelos.</li>
+<li>Reciprocamente, se representados por segmentos orientados paralelos, então um é múltiplo escalar do outro.</li>
+</ul>
+</section>
+<section id="exercício-1" class="slide level3">
+<h3>Exercício 1</h3>
+<p>Mostre que o segmento que une os pontos médios de dois lados de um triângulo é paralelo e tem metade do comprimento do terceiro lado.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig08.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exemplo-2" class="slide level3">
+<h3>Exemplo 2</h3>
+<p>Mostre que as diagonais de um paralelogramo se cortam ao meio.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig09.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="vetores-em-coordenadas" class="slide level3">
+<h3>Vetores em coordenadas</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig10.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Por definição, as coordenadas de um vetor são as coordenadas do ponto final do seu representante com ponto inicial na origem.</p>
+<p><span class="bg-yellow">Isso é muito importante</span>: para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem.</p>
+</section>
+<section id="operações-de-vetores-em-coordenadas" class="slide level3">
+<h3>Operações de vetores em coordenadas</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span>, então <span class="math display">\[
+V+W = (v_1 + w_1,\ v_2 + w_2), \qquad \alpha V = (\alpha v_1,\ \alpha v_2).
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig11.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="o-vetor-que-liga-dois-pontos-no-plano" class="slide level3">
+<h3>O vetor que liga dois pontos no plano</h3>
+<p>Dados dois pontos <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> no plano, determinar as coordenadas do vetor <span class="math inline">\(\overrightarrow{PQ}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig12.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\overrightarrow{OP} + \overrightarrow{PQ} = \overrightarrow{OQ}
+\;\Rightarrow\; P + \overrightarrow{PQ} = Q
+\;\Rightarrow\; \overrightarrow{PQ} = Q - P.
+\]</span></p>
+<p><span class="math display">\[
+\overrightarrow{PQ} = (\text{ponto final}) - (\text{ponto inicial}).
+\]</span></p>
+</section>
+<section id="o-vetor-que-liga-dois-pontos-no-plano-exemplo" class="slide level3">
+<h3>O vetor que liga dois pontos no plano (exemplo)</h3>
+<p>Se <span class="math inline">\(P=(2,4)\)</span> e <span class="math inline">\(Q=(5,2)\)</span>, então <span class="math inline">\(\overrightarrow{PQ} = Q - P = (5,2) - (2,4) = (3,-2)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig13.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+<p>Observe o representante de <span class="math inline">\(\overrightarrow{PQ}\)</span> saindo da origem.</p>
+</section>
+<section id="exercícios-no-plano-cartesiano" class="slide level3">
+<h3>Exercícios no plano cartesiano</h3>
+<ol type="1">
+<li>Os pontos <span class="math inline">\(P=(3,7)\)</span>, <span class="math inline">\(Q=(5,11)\)</span> e <span class="math inline">\(R=(7,16)\)</span> são colineares?</li>
+<li>Dados <span class="math inline">\(A=(x_1,y_1)\)</span> e <span class="math inline">\(B=(x_2,y_2)\)</span>, mostre que o ponto médio de <span class="math inline">\(AB\)</span> é <span class="math inline">\(M=\big(\tfrac{x_1+x_2}{2},\tfrac{y_1+y_2}{2}\big)\)</span>.</li>
+<li>Considere <span class="math inline">\(A = (-2,1)\)</span> e <span class="math inline">\(B = (10,7)\)</span>. Determine <span class="math inline">\(C\)</span> e <span class="math inline">\(D\)</span> que dividem o segmento <span class="math inline">\(AB\)</span> em três partes iguais.</li>
+<li>Dados <span class="math inline">\(A=(-1,3)\)</span>, <span class="math inline">\(B=(3,2)\)</span> e <span class="math inline">\(C=(5,4)\)</span>, determine <span class="math inline">\(D\)</span> tal que <span class="math inline">\(ABCD\)</span> são vértices consecutivos de um paralelogramo.</li>
+</ol>
+</section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço" class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig01_1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont." class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço (cont.)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig02_1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont.-1" class="slide level3">
+<h3>Plano cartesiano e sistemas de coordenadas no espaço (cont.)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig03_1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>No plano ou no espaço, as coordenadas de um vetor são as coordenadas do seu ponto final, quando representamos o vetor por um segmento orientado saindo da origem.</p>
+</section>
+<section id="norma-comprimento" class="slide level3">
+<h3>Norma = comprimento</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2)\)</span>, então <span class="math inline">\(\lVert V \rVert = \sqrt{v_1^2 + v_2^2}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig04_1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="norma-comprimento-cont." class="slide level3">
+<h3>Norma = comprimento (cont.)</h3>
+<p>Se <span class="math inline">\(V=(v_1,v_2,v_3)\)</span>, então <span class="math inline">\(\lVert V \rVert = \sqrt{v_1^2 + v_2^2 + v_3^2}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig05_1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="distância-entre-dois-pontos" class="slide level3">
+<h3>Distância entre dois pontos</h3>
+<p>Se <span class="math inline">\(P=(x_1,y_1)\)</span> e <span class="math inline">\(Q=(x_2,y_2)\)</span>, então</p>
+<p><span class="math display">\[\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \qquad
+\operatorname{dist}(P,Q)=\lVert\overrightarrow{PQ}\rVert=\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig06_1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="vetores-unitários" class="slide level3">
+<h3>Vetores unitários</h3>
+<p>Se <span class="math inline">\(\alpha\in\mathbb{R}\)</span> e <span class="math inline">\(V\)</span> é um vetor, então <span class="math inline">\(\lVert\alpha V\rVert = |\alpha|\,\lVert V\rVert\)</span> (por exemplo, <span class="math inline">\(\lVert-2V\rVert = 2\lVert V\rVert\)</span>).</p>
+<p>Um vetor <span class="math inline">\(V\)</span> é <span class="bg-yellow">unitário</span> se <span class="math inline">\(\lVert V\rVert = 1\)</span>.</p>
+<p>Se <span class="math inline">\(V\neq\vec{0}\)</span>, então existe um vetor unitário na mesma direção e sentido de <span class="math inline">\(V\)</span>: <span class="math display">\[U\;=\;\Big(\tfrac{1}{\lVert V\rVert}\Big)\,V.\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig07_1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="vetores-unitários-exercícios" class="slide level3">
+<h3>Vetores unitários — exercícios</h3>
+<ul>
+<li>Determine um vetor unitário na direção da reta <span class="math inline">\(y=2x\)</span>. Quantos existem?</li>
+<li>Determine um vetor unitário na direção da reta <span class="math inline">\(y=-\tfrac{1}{2}x\)</span>. Quantos existem?</li>
+<li>Todo vetor unitário no plano é da forma <span class="math inline">\(U=(\cos\theta,\sin\theta)\)</span>. Interprete.</li>
+<li>Determine um vetor unitário na direção da reta que liga <span class="math inline">\(P=(-1,2,4)\)</span> e <span class="math inline">\(Q=(3,5,1)\)</span>.</li>
+</ul>
+</section>
+<section id="produto-escalar" class="slide level3">
+<h3>Produto escalar</h3>
+<p>O produto escalar entre dois vetores <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é o número real <span class="math display">\[\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta,\]</span> onde <span class="math inline">\(\theta\)</span> é o ângulo entre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</p>
+
+<img data-src="img/05_vetores/fig08_1.png" style="width:60.0%" class="r-stretch"><p>Além disso, <span class="math inline">\(\langle V,W\rangle = 0\)</span> se <span class="math inline">\(V=\vec{0}\)</span> ou se <span class="math inline">\(W=\vec{0}\)</span>.</p>
+</section>
+<section id="produto-escalar-exemplo" class="slide level3">
+<h3>Produto escalar — exemplo</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math inline">\(\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta = \sqrt{17}\,\sqrt{13}\,\cos\theta\)</span>.</p>
+<p>Mas como determinar <span class="math inline">\(\theta\)</span>? E no espaço?</p>
+</section>
+<section id="lei-dos-cossenos" class="slide level3">
+<h3>Lei dos Cossenos</h3>
+<p>Para calcular <span class="math inline">\(\theta\)</span> e, portanto, o produto escalar, use a <span class="bg-yellow">Lei dos Cossenos</span>: <span class="math display">\[a^2=b^2+c^2-2bc\cos\theta.\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig10_1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="produto-escalar-em-coordenadas-teoremas" class="slide level3">
+<h3>Produto escalar em coordenadas — teoremas</h3>
+<p>No plano, se <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2.\]</span></p>
+<p>No espaço, se <span class="math inline">\(V=(v_1,v_2,v_3)\)</span> e <span class="math inline">\(W=(w_1,w_2,w_3)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2 + v_3w_3.\]</span></p>
+</section>
+<section id="produto-escalar-exemplo-rápido" class="slide level3">
+<h3>Produto escalar — exemplo rápido</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math inline">\(\langle V,W\rangle = 4\cdot 2 + 1\cdot 3 = 11\)</span>.</p>
+</section>
+<section id="ângulo-entre-dois-vetores" class="slide level3">
+<h3>Ângulo entre dois vetores</h3>
+<p>Se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são dados em coordenadas, então <span class="math display">\[\cos\theta\;=\;\dfrac{\langle V,W\rangle}{\lVert V\rVert\,\lVert W\rVert}.\]</span></p>
+<p>O ângulo <span class="math inline">\(\theta\)</span> entre dois vetores satisfaz <span class="math inline">\(0^\circ\leq\theta\leq 180^\circ\)</span>.</p>
+</section>
+<section id="ângulo-entre-dois-vetores-exemplo" class="slide level3">
+<h3>Ângulo entre dois vetores — exemplo</h3>
+<p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math display">\[\cos\theta=\dfrac{11}{\sqrt{17}\,\sqrt{13}},\qquad \theta = \arccos\Big(\dfrac{11}{\sqrt{17}\,\sqrt{13}}\Big) \approx 42^\circ.\]</span></p>
+</section>
+<section id="classificação-pelo-produto-escalar" class="slide level3">
+<h3>Classificação pelo produto escalar</h3>
+<p>Para <span class="math inline">\(V,W\neq\vec{0}\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(\theta\)</span> é agudo se <span class="math inline">\(\langle V,W\rangle &gt; 0\)</span>;</li>
+<li><span class="math inline">\(\theta\)</span> é obtuso se <span class="math inline">\(\langle V,W\rangle &lt; 0\)</span>;</li>
+<li><span class="math inline">\(\theta=90^\circ\)</span> se <span class="math inline">\(\langle V,W\rangle = 0\)</span>.</li>
+</ol>
+<p>Assim, <span class="math inline">\(\langle V,W\rangle = 0\)</span> determina a ortogonalidade de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</p>
+</section>
+<section id="exemplo-rotação-de-90circ-no-plano" class="slide level3">
+<h3>Exemplo: rotação de <span class="math inline">\(90^\circ\)</span> no plano</h3>
+<p>Dado <span class="math inline">\(V=(a,b)\)</span>, o vetor <span class="math inline">\(W=(-b,a)\)</span> é obtido de <span class="math inline">\(V\)</span> por rotação de <span class="math inline">\(90^\circ\)</span> anti-horária:</p>
+<p><span class="math display">\[
+W = R_{90^\circ}V = \begin{bmatrix} \cos 90^\circ &amp; -\sin 90^\circ \\ \sin 90^\circ &amp; \cos 90^\circ \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
+= \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
+= \begin{bmatrix} -b \\ a \end{bmatrix}.
+\]</span></p>
+<p>Observe que <span class="math inline">\(\lVert V\rVert = \lVert W\rVert\)</span> e <span class="math inline">\(\langle V,W\rangle = -ab + ab = 0\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig12_1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exercícios" class="slide level3">
+<h3>Exercícios</h3>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(A=(3,0,2)\)</span>, <span class="math inline">\(B=(4,3,0)\)</span> e <span class="math inline">\(C=(8,1,-1)\)</span> são vértices de um triângulo retângulo. Calcule a área.</li>
+<li>No cubo unitário <span class="math inline">\(ABCDEFGH\)</span>, determine:</li>
+</ol>
+<ul>
+<li>o ângulo entre duas diagonais do cubo; são perpendiculares?</li>
+<li>o ângulo entre uma aresta e uma diagonal do cubo; é o mesmo para qualquer escolha?</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig11_1.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
+</div>
+</section>
+<section id="propriedades-do-produto-escalar" class="slide level3">
+<h3>Propriedades do produto escalar</h3>
+<ol type="1">
+<li><span class="math inline">\(\langle V,W\rangle = \langle W,V\rangle\)</span>.</li>
+<li><span class="math inline">\(\langle U,V+W\rangle = \langle U,V\rangle + \langle U,W\rangle\)</span>.</li>
+<li><span class="math inline">\(\alpha\,\langle V,W\rangle = \langle \alpha V,W\rangle = \langle V,\alpha W\rangle\)</span>.</li>
+</ol>
+<p>Relação com matrizes: se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são colunas, <span class="math display">\[\langle V,W\rangle = V^{T}W = \begin{bmatrix} v_1 &amp; v_2 &amp; v_3 \end{bmatrix}\!\begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} = v_1w_1 + v_2w_2 + v_3w_3.\]</span></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/schcs\.github\.io\/GAALUFMG\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
