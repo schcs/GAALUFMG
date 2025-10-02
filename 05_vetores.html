@@ -815,6 +815,19 @@ Francisco Dutenhefner/Csaba Schneider
 </figure>
 </div>
 </section>
+<section id="exemplo-2-solução" class="slide level3">
+<h3>Exemplo 2 — Solução</h3>
+<p>Seja <span class="math inline">\(ABCD\)</span> um paralelogramo. Defina <span class="math inline">\(V = \overrightarrow{AB}\)</span> e <span class="math inline">\(W = \overrightarrow{AD}\)</span>. Então:</p>
+<ul>
+<li><span class="math inline">\(\overrightarrow{AC} = V + W\)</span>;</li>
+<li><span class="math inline">\(\overrightarrow{BD}= -V + W\)</span>.</li>
+</ul>
+<p>Sejam <span class="math inline">\(M_{AC}\)</span> e <span class="math inline">\(M_{BD}\)</span> is pontos médios nas diagonais <span class="math inline">\(AC\)</span> e <span class="math inline">\(BD\)</span>. Ora, <span class="math display">\[\begin{align*}
+\overrightarrow{AM_{AC}}&amp;=\frac 12\overrightarrow{AC}=\frac{V+W}{2}\\
+\overrightarrow{AM_{BD}}&amp;=\overrightarrow{AB}+\frac 12\overrightarrow{BD}=V+\frac{-V+W}{2}=\frac{V+W}{2}.
+\end{align*}\]</span></p>
+<p>Isso quer dizer que o vetor com ponto inicial em <span class="math inline">\(A\)</span> e ponto final em <span class="math inline">\(M_{AC}\)</span> é o mesmo que o vetor com ponto inicial em <span class="math inline">\(A\)</span> e ponto final em <span class="math inline">\(M_{BD}\)</span>. Logo, <span class="math inline">\(M_{AC}=M_{BD}\)</span> e as diagonais se cortam ao meio.</p>
+</section>
 <section id="vetores-em-coordenadas" class="slide level3">
 <h3>Vetores em coordenadas</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -823,7 +836,7 @@ Francisco Dutenhefner/Csaba Schneider
 </figure>
 </div>
 <p>Por definição, as coordenadas de um vetor são as coordenadas do ponto final do seu representante com ponto inicial na origem.</p>
-<p><span class="bg-yellow">Isso é muito importante</span>: para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem.</p>
+<p><span class="bg-yellow">Isso é muito importante:</span> para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem.</p>
 </section>
 <section id="operações-de-vetores-em-coordenadas" class="slide level3">
 <h3>Operações de vetores em coordenadas</h3>
@@ -841,24 +854,28 @@ V+W = (v_1 + w_1,\ v_2 + w_2), \qquad \alpha V = (\alpha v_1,\ \alpha v_2).
 <p>Dados dois pontos <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> no plano, determinar as coordenadas do vetor <span class="math inline">\(\overrightarrow{PQ}\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig12.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="img/05_vetores/fig12.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
 </figure>
 </div>
 <p><span class="math display">\[
 \overrightarrow{OP} + \overrightarrow{PQ} = \overrightarrow{OQ}
-\;\Rightarrow\; P + \overrightarrow{PQ} = Q
-\;\Rightarrow\; \overrightarrow{PQ} = Q - P.
+\;\Rightarrow\; \overrightarrow{PQ} = \overrightarrow{OQ} - \overrightarrow{OP}.
 \]</span></p>
+<div class="bg-yellow">
 <p><span class="math display">\[
 \overrightarrow{PQ} = (\text{ponto final}) - (\text{ponto inicial}).
 \]</span></p>
+</div>
 </section>
 <section id="o-vetor-que-liga-dois-pontos-no-plano-exemplo" class="slide level3">
 <h3>O vetor que liga dois pontos no plano (exemplo)</h3>
-<p>Se <span class="math inline">\(P=(2,4)\)</span> e <span class="math inline">\(Q=(5,2)\)</span>, então <span class="math inline">\(\overrightarrow{PQ} = Q - P = (5,2) - (2,4) = (3,-2)\)</span>.</p>
+<p>Se <span class="math inline">\(P=(2,4)\)</span> e <span class="math inline">\(Q=(5,2)\)</span>, então <span class="math display">\[
+\overrightarrow{PQ} = \overrightarrow{OQ} - \overrightarrow{OP} =  Q-P=
+(5,2) - (2,4) = (3,-2).
+\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig13.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+<p><img data-src="img/05_vetores/fig13.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
 </figure>
 </div>
 <p>Observe o representante de <span class="math inline">\(\overrightarrow{PQ}\)</span> saindo da origem.</p>
@@ -962,9 +979,24 @@ V+W = (v_1 + w_1,\ v_2 + w_2), \qquad \alpha V = (\alpha v_1,\ \alpha v_2).
 <p>Para calcular <span class="math inline">\(\theta\)</span> e, portanto, o produto escalar, use a <span class="bg-yellow">Lei dos Cossenos</span>: <span class="math display">\[a^2=b^2+c^2-2bc\cos\theta.\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig10_1.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+<p><img data-src="img/05_vetores/fig10_1.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
 </figure>
 </div>
+<p>Daqui, <span class="math display">\[
+bc\cos\theta=\frac 12 (b^2+c^2-a^2)
+\]</span></p>
+</section>
+<section id="calcular-produto-escalar-usando-a-lei-dos-cossenos" class="slide level3">
+<h3>Calcular produto escalar usando a Lei dos Cossenos</h3>
+<p>Sejam <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span> vetores e seja <span class="math inline">\(\vartheta\)</span> os seus ângulos. <span class="math display">\[\begin{align*}
+\left&lt;V,W\right&gt;&amp;=\|V\|\|W\|\cos(\vartheta)=\frac 12 (\|V\|^2+\|W\|^2-\|W-V\|^2)\\
+&amp;=\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\
+&amp;=\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\
+&amp;=v_1w_1+v_2w_2.
+\end{align*}\]</span></p>
+<p>Logo ::: {.bg-yellow} <span class="math display">\[
+\left&lt;V,W\right&gt;=v_1w_1+v_2w_2
+\]</span> ::: e não precisa saber o ângulo.</p>
 </section>
 <section id="produto-escalar-em-coordenadas-teoremas" class="slide level3">
 <h3>Produto escalar em coordenadas — teoremas</h3>
@@ -990,19 +1022,16 @@ V+W = (v_1 + w_1,\ v_2 + w_2), \qquad \alpha V = (\alpha v_1,\ \alpha v_2).
 <ol type="1">
 <li><span class="math inline">\(\theta\)</span> é agudo se <span class="math inline">\(\langle V,W\rangle &gt; 0\)</span>;</li>
 <li><span class="math inline">\(\theta\)</span> é obtuso se <span class="math inline">\(\langle V,W\rangle &lt; 0\)</span>;</li>
-<li><span class="math inline">\(\theta=90^\circ\)</span> se <span class="math inline">\(\langle V,W\rangle = 0\)</span>.</li>
+<li><span class="math inline">\(\theta=90^\circ\)</span> se <span class="math inline">\(\langle V,W\rangle = 0\)</span> (vetores perpendiculares ou ortogonais).</li>
 </ol>
 <p>Assim, <span class="math inline">\(\langle V,W\rangle = 0\)</span> determina a ortogonalidade de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</p>
 </section>
 <section id="exemplo-rotação-de-90circ-no-plano" class="slide level3">
 <h3>Exemplo: rotação de <span class="math inline">\(90^\circ\)</span> no plano</h3>
 <p>Dado <span class="math inline">\(V=(a,b)\)</span>, o vetor <span class="math inline">\(W=(-b,a)\)</span> é obtido de <span class="math inline">\(V\)</span> por rotação de <span class="math inline">\(90^\circ\)</span> anti-horária:</p>
-<p><span class="math display">\[
-W = R_{90^\circ}V = \begin{bmatrix} \cos 90^\circ &amp; -\sin 90^\circ \\ \sin 90^\circ &amp; \cos 90^\circ \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
-= \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
-= \begin{bmatrix} -b \\ a \end{bmatrix}.
-\]</span></p>
-<p>Observe que <span class="math inline">\(\lVert V\rVert = \lVert W\rVert\)</span> e <span class="math inline">\(\langle V,W\rangle = -ab + ab = 0\)</span>.</p>
+<p>Observe que <span class="math display">\[
+\lVert V\rVert = \lVert W\rVert\quad \mbox{e} \quad\langle V,W\rangle = -ab + ab = 0
+\]</span> e <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são ortogonais.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/05_vetores/fig12_1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
