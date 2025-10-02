@@ -21,36 +21,6 @@
 }
 
 
-
-/* Hide author and affiliation in Revealjs title slide if present */
-.reveal .quarto-title-block .quarto-title-authors,
-.reveal .quarto-title-block .quarto-title-affiliations,
-.reveal .quarto-title-block .author,
-.reveal .quarto-title-block .affiliation {
-  display: none !important;
-}
-
-/* Fix title positioning - hide persistent title on regular slides */
-.reveal .slide-header,
-.reveal .slide-footer {
-  display: none !important;
-}
-
-/* Hide any title that appears outside the title slide */
-.reveal .slides section:not(.title-slide) h1.title,
-.reveal .slides section:not([data-state="title"]) h1.title {
-  display: none !important;
-}
-
-/* Ensure title slide title is properly centered */
-.reveal .title-slide h1,
-.reveal section[data-state="title"] h1,
-.reveal .quarto-title-block .title {
-  text-align: center !important;
-  margin: 0 auto !important;
-  width: 100% !important;
-}
-
 /* --- Color utilities for Quarto/Reveal.js --- */
 /* Text colors */
 .text-red { color: #d32f2f !important; }
