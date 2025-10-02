@@ -248,7 +248,7 @@ O produto escalar entre dois vetores $V$ e $W$ é o número real
 $$\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta,$$
 onde $\theta$ é o ângulo entre $V$ e $W$.
 
-![](img/05_vetores/fig08_1.png){width=60%}
+![](img/05_vetores/fig08_1.png){.nostretch width=30% fig-align="center"}
 
 Além disso, $\langle V,W\rangle = 0$ se $V=\vec{0}$ ou se $W=\vec{0}$. 
 
