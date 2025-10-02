@@ -285,11 +285,13 @@ Sejam $V=(v_1,v_2)$ e $W=(w_1,w_2)$ vetores e seja $\vartheta$ os seus ângulos.
 \end{align*}
 
 Logo
+
 ::: {.bg-yellow}
 $$
 \left<V,W\right>=v_1w_1+v_2w_2
 $$
 :::
+
 e não precisa saber o ângulo.
 
 ### Produto escalar em coordenadas — teoremas
