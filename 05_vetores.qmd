@@ -1,7 +1,9 @@
 ---
 title: "Vetores"
-author: "Francisco Dutenhefner/Csaba Schneider"
-date: "agosto de 2025"
+author: "UFMG"
+lang: pt-BR
+date: last-modified
+date-format: long
 format:
   revealjs:
     slide-level: 3
