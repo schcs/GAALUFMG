@@ -107,6 +107,22 @@ Mostre que as diagonais de um paralelogramo se cortam ao meio.
 
 ![](img/05_vetores/fig09.png){.nostretch width=50% fig-align="center"}
 
+### Exemplo 2 — Solução
+
+Seja $ABCD$ um paralelogramo. Defina $V = \overrightarrow{AB}$ e 
+$W = \overrightarrow{AD}$. Então:
+
+- $\overrightarrow{AC} = V + W$;
+- $\overrightarrow{BD}= -V + W$.
+
+Sejam $M_{AC}$ e $M_{BD}$ is pontos médios nas diagonais $AC$ e $BD$. Ora, 
+\begin{align*}
+\overrightarrow{AM_{AC}}&=\frac 12\overrightarrow{AC}=\frac{V+W}{2}\\
+\overrightarrow{AM_{BD}}&=\overrightarrow{AB}+\frac 12\overrightarrow{BD}=V+\frac{-V+W}{2}=\frac{V+W}{2}.
+\end{align*}
+
+Isso quer dizer que o vetor com ponto inicial em $A$ e ponto final em $M_{AC}$ é o mesmo 
+que o vetor com ponto inicial em $A$ e ponto final em $M_{BD}$. Logo, $M_{AC}=M_{BD}$ e as diagonais se cortam ao meio.
 
 ### Vetores em coordenadas
 
@@ -114,7 +130,7 @@ Mostre que as diagonais de um paralelogramo se cortam ao meio.
 
 Por definição, as coordenadas de um vetor são as coordenadas do ponto final do seu representante com ponto inicial na origem. 
 
-[Isso é muito importante]{.bg-yellow}: para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem. 
+[Isso é muito importante:]{.bg-yellow} para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem. 
 
 
 ### Operações de vetores em coordenadas
@@ -131,24 +147,29 @@ $$
 
 Dados dois pontos $P$ e $Q$ no plano, determinar as coordenadas do vetor $\overrightarrow{PQ}$. 
 
-![](img/05_vetores/fig12.png){.nostretch width=40% fig-align="center"}
+![](img/05_vetores/fig12.png){.nostretch width=30% fig-align="center"}
 
 $$
 \overrightarrow{OP} + \overrightarrow{PQ} = \overrightarrow{OQ}
-\;\Rightarrow\; P + \overrightarrow{PQ} = Q
-\;\Rightarrow\; \overrightarrow{PQ} = Q - P.
+\;\Rightarrow\; \overrightarrow{PQ} = \overrightarrow{OQ} - \overrightarrow{OP}.
 $$ 
 
+::: {.bg-yellow}
 $$
 \overrightarrow{PQ} = (\text{ponto final}) - (\text{ponto inicial}).
-$$ 
+$$
+:::
 
 
 ### O vetor que liga dois pontos no plano (exemplo)
 
-Se $P=(2,4)$ e $Q=(5,2)$, então $\overrightarrow{PQ} = Q - P = (5,2) - (2,4) = (3,-2)$. 
+Se $P=(2,4)$ e $Q=(5,2)$, então 
+$$ 
+\overrightarrow{PQ} = \overrightarrow{OQ} - \overrightarrow{OP} =  Q-P=
+(5,2) - (2,4) = (3,-2).
+$$
 
-![](img/05_vetores/fig13.png){.nostretch width=50% fig-align="center"}
+![](img/05_vetores/fig13.png){.nostretch width=35% fig-align="center"}
 
 Observe o representante de $\overrightarrow{PQ}$ saindo da origem. 
 
@@ -244,8 +265,30 @@ Mas como determinar $\theta$? E no espaço?
 Para calcular $\theta$ e, portanto, o produto escalar, use a [Lei dos Cossenos]{.bg-yellow}: 
 $$a^2=b^2+c^2-2bc\cos\theta.$$
 
-![](img/05_vetores/fig10_1.png){.nostretch width=50% fig-align="center"}
+![](img/05_vetores/fig10_1.png){.nostretch width=35% fig-align="center"}
 
+Daqui, 
+$$
+bc\cos\theta=\frac 12 (b^2+c^2-a^2)
+$$
+
+### Calcular produto escalar usando a Lei dos Cossenos
+
+Sejam $V=(v_1,v_2)$ e $W=(w_1,w_2)$ vetores e seja $\vartheta$ os seus ângulos. 
+\begin{align*}
+\left<V,W\right>&=\|V\|\|W\|\cos(\vartheta)=\frac 12 (\|V\|^2+\|W\|^2-\|W-V\|^2)\\
+&=\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\
+&=\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\
+&=v_1w_1+v_2w_2.
+\end{align*}
+
+Logo
+::: {.bg-yellow}
+$$
+\left<V,W\right>=v_1w_1+v_2w_2
+$$
+:::
+e não precisa saber o ângulo.
 
 ### Produto escalar em coordenadas — teoremas
 
@@ -281,7 +324,7 @@ Para $V,W\neq\vec{0}$:
 
 1. $\theta$ é agudo se $\langle V,W\rangle > 0$; 
 2. $\theta$ é obtuso se $\langle V,W\rangle < 0$; 
-3. $\theta=90^\circ$ se $\langle V,W\rangle = 0$. 
+3. $\theta=90^\circ$ se $\langle V,W\rangle = 0$ (vetores perpendiculares ou ortogonais). 
 
 Assim, $\langle V,W\rangle = 0$ determina a ortogonalidade de $V$ e $W$. 
 
@@ -290,13 +333,12 @@ Assim, $\langle V,W\rangle = 0$ determina a ortogonalidade de $V$ e $W$.
 
 Dado $V=(a,b)$, o vetor $W=(-b,a)$ é obtido de $V$ por rotação de $90^\circ$ anti-horária:
 
-$$
-W = R_{90^\circ}V = \begin{bmatrix} \cos 90^\circ & -\sin 90^\circ \\ \sin 90^\circ & \cos 90^\circ \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
-= \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}\!\begin{bmatrix} a \\ b \end{bmatrix}
-= \begin{bmatrix} -b \\ a \end{bmatrix}.
-$$ 
 
-Observe que $\lVert V\rVert = \lVert W\rVert$ e $\langle V,W\rangle = -ab + ab = 0$. 
+Observe que 
+$$
+\lVert V\rVert = \lVert W\rVert\quad \mbox{e} \quad\langle V,W\rangle = -ab + ab = 0
+$$ 
+e $V$ e $W$ são ortogonais.
 
 ![](img/05_vetores/fig12_1.png){.nostretch width=40% fig-align="center"}
 
