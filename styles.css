@@ -30,6 +30,21 @@
   display: none !important;
 }
 
+/* Ensure consistent title positioning across Quarto versions */
+.reveal .quarto-title-block {
+  text-align: center !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+.reveal .quarto-title-block .title,
+.reveal .title-slide h1,
+.reveal section[data-state="title"] h1 {
+  text-align: center !important;
+  margin: 0 auto 0.5em auto !important;
+  width: 100% !important;
+}
+
 /* --- Color utilities for Quarto/Reveal.js --- */
 /* Text colors */
 .text-red { color: #d32f2f !important; }
