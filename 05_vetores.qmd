@@ -6,11 +6,11 @@ date: last-modified
 date-format: long
 format:
   revealjs:
-    slide-level: 3
+    slide-level: 2
     css: styles.css
 ---
 
-### Introdução
+## Introdução
 
 Vamos começar o estudo de [vetores]{.text-red}.
 
@@ -24,12 +24,12 @@ Como o módulo de um vetor é um número, para saber o que é um vetor, precisam
 [O que é número?]{.bg-yellow}
 
 
-### O que é o número cinco?
+## O que é o número cinco?
 
 ![](img/05_vetores/fig14.png){.nostretch width=60% fig-align="center"}
 
 
-### O que é o número cinco? (cont.)
+## O que é o número cinco? (cont.)
 
 ![](img/05_vetores/fig14.png){.nostretch width=60% fig-align="center"}
 
@@ -37,7 +37,7 @@ Como o módulo de um vetor é um número, para saber o que é um vetor, precisam
 - Nenhuma dessas imagens é o número cinco; são representações do número cinco. 
 
 
-### Vetores
+## Vetores
 
 - Vetores também são conceitos abstratos. 
 - São representados por segmentos orientados. 
@@ -48,7 +48,7 @@ Como o módulo de um vetor é um número, para saber o que é um vetor, precisam
 Do mesmo modo que a representação de um número não é o número, a representação de um vetor por um segmento orientado não é o vetor.
 
 
-### Operações com vetores — Soma
+## Operações com vetores — Soma
 
 [Soma]{.bg-yellow}: regra do paralelogramo. 
 
@@ -57,14 +57,14 @@ Do mesmo modo que a representação de um número não é o número, a represent
 Na figura, vemos que a soma de vetores é comutativa: $V + W = W + V$. 
 
 
-### Operações com vetores — Associatividade
+## Operações com vetores — Associatividade
 
 A soma de vetores também é associativa: $(V+W)+U = V+(W+U)$. 
 
 ![](img/05_vetores/fig03.png){.nostretch width=50% fig-align="center"}
 
 
-### Operações com vetores — Vetor nulo e simétrico
+## Operações com vetores — Vetor nulo e simétrico
 
 O vetor nulo $\vec{0}$ é representado por um ponto (mesmo ponto inicial e final).
 
@@ -74,21 +74,21 @@ O vetor nulo $\vec{0}$ é representado por um ponto (mesmo ponto inicial e final
 ![](img/05_vetores/fig04.png){.nostretch width=30% fig-align="center"}
 
 
-### Operações com vetores — Diferença
+## Operações com vetores — Diferença
 
 [Diferença]{.bg-yellow}: $V - W = V + (-W)$. 
 
 ![](img/05_vetores/fig05.png){.nostretch width=50% fig-align="center"}
 
 
-### Operações com vetores — Diagonais
+## Operações com vetores — Diagonais
 
 Dados $V$ e $W$, as diagonais do paralelogramo gerado por eles são a soma e a diferença. 
 
 ![](img/05_vetores/fig06.png){.nostretch width=50% fig-align="center"}
 
 
-### Operações com vetores — Multiplicação por escalar
+## Operações com vetores — Multiplicação por escalar
 
 ![](img/05_vetores/fig07.png){.nostretch width=50% fig-align="center"}
 
@@ -96,20 +96,20 @@ Dados $V$ e $W$, as diagonais do paralelogramo gerado por eles são a soma e a d
 - Reciprocamente, se representados por segmentos orientados paralelos, então um é múltiplo escalar do outro. 
 
 
-### Exercício 1
+## Exercício 1
 
 Mostre que o segmento que une os pontos médios de dois lados de um triângulo é paralelo e tem metade do comprimento do terceiro lado. 
 
 ![](img/05_vetores/fig08.png){.nostretch width=50% fig-align="center"}
 
 
-### Exemplo 2
+## Exemplo 2
 
 Mostre que as diagonais de um paralelogramo se cortam ao meio. 
 
 ![](img/05_vetores/fig09.png){.nostretch width=50% fig-align="center"}
 
-### Exemplo 2 — Solução
+## Exemplo 2 — Solução
 
 Seja $ABCD$ um paralelogramo. Defina $V = \overrightarrow{AB}$ e 
 $W = \overrightarrow{AD}$. Então:
@@ -126,7 +126,7 @@ Sejam $M_{AC}$ e $M_{BD}$ is pontos médios nas diagonais $AC$ e $BD$. Ora,
 Isso quer dizer que o vetor com ponto inicial em $A$ e ponto final em $M_{AC}$ é o mesmo 
 que o vetor com ponto inicial em $A$ e ponto final em $M_{BD}$. Logo, $M_{AC}=M_{BD}$ e as diagonais se cortam ao meio.
 
-### Vetores em coordenadas
+## Vetores em coordenadas
 
 ![](img/05_vetores/fig10.png){.nostretch width=40% fig-align="center"}
 
@@ -135,7 +135,7 @@ Por definição, as coordenadas de um vetor são as coordenadas do ponto final d
 [Isso é muito importante:]{.bg-yellow} para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem. 
 
 
-### Operações de vetores em coordenadas
+## Operações de vetores em coordenadas
 
 Se $V=(v_1,v_2)$ e $W=(w_1,w_2)$, então
 $$
@@ -145,7 +145,7 @@ $$
 ![](img/05_vetores/fig11.png){.nostretch width=70% fig-align="center"}
 
 
-### O vetor que liga dois pontos no plano
+## O vetor que liga dois pontos no plano
 
 Dados dois pontos $P$ e $Q$ no plano, determinar as coordenadas do vetor $\overrightarrow{PQ}$. 
 
@@ -163,7 +163,7 @@ $$
 :::
 
 
-### O vetor que liga dois pontos no plano (exemplo)
+## O vetor que liga dois pontos no plano (exemplo)
 
 Se $P=(2,4)$ e $Q=(5,2)$, então 
 $$ 
@@ -176,7 +176,7 @@ $$
 Observe o representante de $\overrightarrow{PQ}$ saindo da origem. 
 
 
-### Exercícios no plano cartesiano
+## Exercícios no plano cartesiano
 
 1. Os pontos $P=(3,7)$, $Q=(5,11)$ e $R=(7,16)$ são colineares? 
 2. Dados $A=(x_1,y_1)$ e $B=(x_2,y_2)$, mostre que o ponto médio de $AB$ é $M=\big(\tfrac{x_1+x_2}{2},\tfrac{y_1+y_2}{2}\big)$. 
@@ -184,38 +184,38 @@ Observe o representante de $\overrightarrow{PQ}$ saindo da origem.
 4. Dados $A=(-1,3)$, $B=(3,2)$ e $C=(5,4)$, determine $D$ tal que $ABCD$ são vértices consecutivos de um paralelogramo. 
 
 
-### Plano cartesiano e sistemas de coordenadas no espaço
+## Plano cartesiano e sistemas de coordenadas no espaço
 
 ![](img/05_vetores/fig01_1.png){.nostretch width=50% fig-align="center"}
 
 
-### Plano cartesiano e sistemas de coordenadas no espaço (cont.)
+## Plano cartesiano e sistemas de coordenadas no espaço (cont.)
 
 ![](img/05_vetores/fig02_1.png){.nostretch width=40% fig-align="center"}
 
 
-### Plano cartesiano e sistemas de coordenadas no espaço (cont.)
+## Plano cartesiano e sistemas de coordenadas no espaço (cont.)
 
 ![](img/05_vetores/fig03_1.png){.nostretch width=40% fig-align="center"}
 
 No plano ou no espaço, as coordenadas de um vetor são as coordenadas do seu ponto final, quando representamos o vetor por um segmento orientado saindo da origem. 
 
 
-### Norma = comprimento
+## Norma = comprimento
 
 Se $V=(v_1,v_2)$, então $\lVert V \rVert = \sqrt{v_1^2 + v_2^2}$. 
 
 ![](img/05_vetores/fig04_1.png){.nostretch width=50% fig-align="center"}
 
 
-### Norma = comprimento (cont.)
+## Norma = comprimento (cont.)
 
 Se $V=(v_1,v_2,v_3)$, então $\lVert V \rVert = \sqrt{v_1^2 + v_2^2 + v_3^2}$. 
 
 ![](img/05_vetores/fig05_1.png){.nostretch width=50% fig-align="center"}
 
 
-### Distância entre dois pontos
+## Distância entre dois pontos
 
 Se $P=(x_1,y_1)$ e $Q=(x_2,y_2)$, então
 
@@ -224,7 +224,7 @@ $$\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \qquad
 
 ![](img/05_vetores/fig06_1.png){.nostretch width=40% fig-align="center"}
 
-### Vetores unitários
+## Vetores unitários
 
 Se $\alpha\in\mathbb{R}$ e $V$ é um vetor, então $\lVert\alpha V\rVert = |\alpha|\,\lVert V\rVert$ (por exemplo, $\lVert-2V\rVert = 2\lVert V\rVert$).
 
@@ -236,7 +236,7 @@ $$U\;=\;\Big(\tfrac{1}{\lVert V\rVert}\Big)\,V.$$
 ![](img/05_vetores/fig07_1.png){.nostretch width=50% fig-align="center"}
 
 
-### Vetores unitários — exercícios
+## Vetores unitários — exercícios
 
 - Determine um vetor unitário na direção da reta $y=2x$. Quantos existem? 
 - Determine um vetor unitário na direção da reta $y=-\tfrac{1}{2}x$. Quantos existem? 
@@ -244,7 +244,7 @@ $$U\;=\;\Big(\tfrac{1}{\lVert V\rVert}\Big)\,V.$$
 - Determine um vetor unitário na direção da reta que liga $P=(-1,2,4)$ e $Q=(3,5,1)$. 
 
 
-### Produto escalar
+## Produto escalar
 
 O produto escalar entre dois vetores $V$ e $W$ é o número real
 $$\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta,$$
@@ -255,14 +255,14 @@ onde $\theta$ é o ângulo entre $V$ e $W$.
 Além disso, $\langle V,W\rangle = 0$ se $V=\vec{0}$ ou se $W=\vec{0}$. 
 
 
-### Produto escalar — exemplo
+## Produto escalar — exemplo
 
 Se $V=(4,1)$ e $W=(2,3)$, então $\langle V,W\rangle = \lVert V\rVert\,\lVert W\rVert\,\cos\theta = \sqrt{17}\,\sqrt{13}\,\cos\theta$. 
 
 Mas como determinar $\theta$? E no espaço? 
 
 
-### Lei dos Cossenos
+## Lei dos Cossenos
 
 Para calcular $\theta$ e, portanto, o produto escalar, use a [Lei dos Cossenos]{.bg-yellow}: 
 $$a^2=b^2+c^2-2bc\cos\theta.$$
@@ -274,7 +274,7 @@ $$
 bc\cos\theta=\frac 12 (b^2+c^2-a^2)
 $$
 
-### Calcular produto escalar usando a Lei dos Cossenos
+## Calcular produto escalar usando a Lei dos Cossenos
 
 Sejam $V=(v_1,v_2)$ e $W=(w_1,w_2)$ vetores e seja $\vartheta$ os seus ângulos. 
 \begin{align*}
@@ -294,7 +294,7 @@ $$
 
 e não precisa saber o ângulo.
 
-### Produto escalar em coordenadas — teoremas
+## Produto escalar em coordenadas — teoremas
 
 No plano, se $V=(v_1,v_2)$ e $W=(w_1,w_2)$, então
 $$\langle V,W\rangle = v_1w_1 + v_2w_2.$$
@@ -303,12 +303,12 @@ No espaço, se $V=(v_1,v_2,v_3)$ e $W=(w_1,w_2,w_3)$, então
 $$\langle V,W\rangle = v_1w_1 + v_2w_2 + v_3w_3.$$
 
 
-### Produto escalar — exemplo rápido
+## Produto escalar — exemplo rápido
 
 Se $V=(4,1)$ e $W=(2,3)$, então $\langle V,W\rangle = 4\cdot 2 + 1\cdot 3 = 11$. 
 
 
-### Ângulo entre dois vetores
+## Ângulo entre dois vetores
 
 Se $V$ e $W$ são dados em coordenadas, então
 $$\cos\theta\;=\;\dfrac{\langle V,W\rangle}{\lVert V\rVert\,\lVert W\rVert}.$$
@@ -316,13 +316,13 @@ $$\cos\theta\;=\;\dfrac{\langle V,W\rangle}{\lVert V\rVert\,\lVert W\rVert}.$$
 O ângulo $\theta$ entre dois vetores satisfaz $0^\circ\leq\theta\leq 180^\circ$. 
 
 
-### Ângulo entre dois vetores — exemplo
+## Ângulo entre dois vetores — exemplo
 
 Se $V=(4,1)$ e $W=(2,3)$, então
 $$\cos\theta=\dfrac{11}{\sqrt{17}\,\sqrt{13}},\qquad \theta = \arccos\Big(\dfrac{11}{\sqrt{17}\,\sqrt{13}}\Big) \approx 42^\circ.$$ 
 
 
-### Classificação pelo produto escalar
+## Classificação pelo produto escalar
 
 Para $V,W\neq\vec{0}$:
 
@@ -333,7 +333,7 @@ Para $V,W\neq\vec{0}$:
 Assim, $\langle V,W\rangle = 0$ determina a ortogonalidade de $V$ e $W$. 
 
 
-### Exemplo: rotação de $90^\circ$ no plano
+## Exemplo: rotação de $90^\circ$ no plano
 
 Dado $V=(a,b)$, o vetor $W=(-b,a)$ é obtido de $V$ por rotação de $90^\circ$ anti-horária:
 
@@ -347,7 +347,7 @@ e $V$ e $W$ são ortogonais.
 ![](img/05_vetores/fig12_1.png){.nostretch width=40% fig-align="center"}
 
 
-### Exercícios
+## Exercícios
 
 1. Mostre que $A=(3,0,2)$, $B=(4,3,0)$ e $C=(8,1,-1)$ são vértices de um triângulo retângulo. Calcule a área. 
 2. No cubo unitário $ABCDEFGH$, determine: 
@@ -357,7 +357,7 @@ e $V$ e $W$ são ortogonais.
 ![](img/05_vetores/fig11_1.png){.nostretch width=30% fig-align="center"}
 
 
-### Propriedades do produto escalar
+## Propriedades do produto escalar
 
 1. $\langle V,W\rangle = \langle W,V\rangle$. 
 2. $\langle U,V+W\rangle = \langle U,V\rangle + \langle U,W\rangle$. 
