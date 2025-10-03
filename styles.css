@@ -49,3 +49,13 @@
 /* Improve contrast inside boxes in dark themes if needed */
 .reveal.dark .box { background: rgba(255, 255, 255, 0.06); }
 
+
+/* --- Quarto 1.8.x revealjs guards --- */
+/* Hide site-level navbar/sidebar when rendering slides inside a website */
+body.reveal .navbar,
+body.reveal .quarto-sidebar,
+body.reveal .quarto-secondary-nav {
+  display: none !important;
+}
+
+
