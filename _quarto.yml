@@ -35,13 +35,16 @@ format:
     margin: 0.00 # less edge padding 
     # minScale: 0.2 
     # maxScale: 2.0 
-    include-in-header: macros.html
     # theme: simple
     # scroll: true
   html:
     css: article.css
-    include-in-header:
-     - file: macros.html
+    include-after-body:
+      - text: |
+          <script>
+          window.MathJax = window.MathJax || {};
+          </script>
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
   pdf: 
     include-in-header:
      - file: macros.tex

@@ -4,10 +4,14 @@ author: "UFMG"
 lang: pt-BR
 date: last-modified
 date-format: long
+page-layout: full
+navbar: false
 format:
   revealjs:
     slide-level: 2
     css: styles.css
+    title-slide-attributes:
+      data-state: title
 ---
 
 ## Introdução
