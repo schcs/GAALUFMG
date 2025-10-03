@@ -7,6 +7,272 @@
     "text": "\\[\n  \\newcommand{\\Z}{\\mathbb Z}\n  \\newcommand{\\Q}{\\mathbb Q}\n  \\newcommand{\\R}{\\mathbb R}\n  \\newcommand{\\C}{\\mathbb C}\n  \\newcommand{\\F}{\\mathbb F}\n  \\newcommand{\\K}{\\mathbb K}\n  \\newcommand{\\L}{\\mathbb L}\n  \\newcommand{\\N}{\\mathbb N}\n  \\newcommand{\\sym}[1]{\\operatorname{Sym}(#1)}\n  \\newcommand{\\GLV}[1]{\\operatorname{GL}(#1)}\n  \\newcommand{\\SLV}[1]{\\operatorname{SL}(#1)}\n  \\newcommand{\\GL}[2]{\\operatorname{GL}(#1,#2)}\n  \\newcommand{\\SL}[2]{\\operatorname{SL}(#1,#2)}\n  \\newcommand{\\lxor}{\\dot\\lor}\n  \\newcommand{\\cond}{\\Rightarrow}\n  \\newcommand{\\bicond}{\\Leftrightarrow}\n  \\newcommand{\\mdc}[2]{\\operatorname{mdc}(#1,#2)}\n  \\newcommand{\\grau}[1]{\\operatorname{grau}(#1)}\n  \\newcommand{\\real}[1]{\\mathfrak R(#1)}\n  \\newcommand{\\imag}[1]{\\mathfrak I(#1)}\n  \\newcommand{\\argz}[1]{\\mbox{arg}(#1)}\n  \\DeclareMathOperator{\\sen}{sen}\n  \\newcommand{\\cis}[1]{\\cos #1+i\\sen #1}\n  \\newcommand{\\E}{\\mathbb E}\n  \\newcommand{\\aut}[1]{\\textrm{Aut}(#1)}\n  \\newcommand{\\fix}[1]{\\textrm{Fix}(#1)}\n  \\newcommand{\\gal}[2]{\\textrm{Gal}(#1:#2)}\n  \\newcommand{\\overbar}[1]{\\mkern 1.5mu\\overline{\\mkern-1.5mu#1\\mkern-1.5mu}\\mkern 1.5mu}\n  \\newcommand{\\ul}[1]{\\underline{#1}}\n  \\newcommand{\\tn}[1]{\\textnormal{#1}}\n  \\]"
   },
   {
+    "objectID": "05_vetores.html#introdução",
+    "href": "05_vetores.html#introdução",
+    "title": "Vetores",
+    "section": "Introdução",
+    "text": "Introdução\nVamos começar o estudo de vetores.\nNa Física, as grandezas podem ser classificadas como escalares e vetoriais.\n\nGrandezas escalares são dadas por um número, por exemplo: distância, área, massa, etc.\nGrandezas vetoriais são dadas por um vetor que tem módulo, direção e sentido. São exemplos: velocidade, força peso, força resultante, etc.\n\nComo o módulo de um vetor é um número, para saber o que é um vetor, precisamos refletir primeiramente:\nO que é número?"
+  },
+  {
+    "objectID": "05_vetores.html#o-que-é-o-número-cinco",
+    "href": "05_vetores.html#o-que-é-o-número-cinco",
+    "title": "Vetores",
+    "section": "O que é o número cinco?",
+    "text": "O que é o número cinco?"
+  },
+  {
+    "objectID": "05_vetores.html#o-que-é-o-número-cinco-cont.",
+    "href": "05_vetores.html#o-que-é-o-número-cinco-cont.",
+    "title": "Vetores",
+    "section": "O que é o número cinco? (cont.)",
+    "text": "O que é o número cinco? (cont.)\n\n\n\n\n\n\nO número cinco é um conceito abstrato, representado de diferentes maneiras.\nNenhuma dessas imagens é o número cinco; são representações do número cinco."
+  },
+  {
+    "objectID": "05_vetores.html#vetores",
+    "href": "05_vetores.html#vetores",
+    "title": "Vetores",
+    "section": "Vetores",
+    "text": "Vetores\n\nVetores também são conceitos abstratos.\nSão representados por segmentos orientados.\nSegmentos orientados paralelos, com mesmo comprimento e sentido, representam o mesmo vetor.\n\n\n\n\n\n\nDo mesmo modo que a representação de um número não é o número, a representação de um vetor por um segmento orientado não é o vetor."
+  },
+  {
+    "objectID": "05_vetores.html#operações-com-vetores-soma",
+    "href": "05_vetores.html#operações-com-vetores-soma",
+    "title": "Vetores",
+    "section": "Operações com vetores — Soma",
+    "text": "Operações com vetores — Soma\nSoma: regra do paralelogramo.\n\n\n\n\n\nNa figura, vemos que a soma de vetores é comutativa: \\(V + W = W + V\\)."
+  },
+  {
+    "objectID": "05_vetores.html#operações-com-vetores-associatividade",
+    "href": "05_vetores.html#operações-com-vetores-associatividade",
+    "title": "Vetores",
+    "section": "Operações com vetores — Associatividade",
+    "text": "Operações com vetores — Associatividade\nA soma de vetores também é associativa: \\((V+W)+U = V+(W+U)\\)."
+  },
+  {
+    "objectID": "05_vetores.html#operações-com-vetores-vetor-nulo-e-simétrico",
+    "href": "05_vetores.html#operações-com-vetores-vetor-nulo-e-simétrico",
+    "title": "Vetores",
+    "section": "Operações com vetores — Vetor nulo e simétrico",
+    "text": "Operações com vetores — Vetor nulo e simétrico\nO vetor nulo \\(\\vec{0}\\) é representado por um ponto (mesmo ponto inicial e final).\n\nElemento neutro da soma: \\(V + \\vec{0} = V\\).\nDado \\(V\\), o simétrico é \\(-V\\) (mesma direção, sentido contrário) e \\(V + (-V) = \\vec{0}\\)."
+  },
+  {
+    "objectID": "05_vetores.html#operações-com-vetores-diferença",
+    "href": "05_vetores.html#operações-com-vetores-diferença",
+    "title": "Vetores",
+    "section": "Operações com vetores — Diferença",
+    "text": "Operações com vetores — Diferença\nDiferença: \\(V - W = V + (-W)\\)."
+  },
+  {
+    "objectID": "05_vetores.html#operações-com-vetores-diagonais",
+    "href": "05_vetores.html#operações-com-vetores-diagonais",
+    "title": "Vetores",
+    "section": "Operações com vetores — Diagonais",
+    "text": "Operações com vetores — Diagonais\nDados \\(V\\) e \\(W\\), as diagonais do paralelogramo gerado por eles são a soma e a diferença."
+  },
+  {
+    "objectID": "05_vetores.html#operações-com-vetores-multiplicação-por-escalar",
+    "href": "05_vetores.html#operações-com-vetores-multiplicação-por-escalar",
+    "title": "Vetores",
+    "section": "Operações com vetores — Multiplicação por escalar",
+    "text": "Operações com vetores — Multiplicação por escalar\n\n\n\n\n\n\nSe dois vetores são múltiplos escalares, então são representados por segmentos orientados paralelos.\nReciprocamente, se representados por segmentos orientados paralelos, então um é múltiplo escalar do outro."
+  },
+  {
+    "objectID": "05_vetores.html#exercício-1",
+    "href": "05_vetores.html#exercício-1",
+    "title": "Vetores",
+    "section": "Exercício 1",
+    "text": "Exercício 1\nMostre que o segmento que une os pontos médios de dois lados de um triângulo é paralelo e tem metade do comprimento do terceiro lado."
+  },
+  {
+    "objectID": "05_vetores.html#exemplo-2",
+    "href": "05_vetores.html#exemplo-2",
+    "title": "Vetores",
+    "section": "Exemplo 2",
+    "text": "Exemplo 2\nMostre que as diagonais de um paralelogramo se cortam ao meio."
+  },
+  {
+    "objectID": "05_vetores.html#exemplo-2-solução",
+    "href": "05_vetores.html#exemplo-2-solução",
+    "title": "Vetores",
+    "section": "Exemplo 2 — Solução",
+    "text": "Exemplo 2 — Solução\nSeja \\(ABCD\\) um paralelogramo. Defina \\(V = \\overrightarrow{AB}\\) e \\(W = \\overrightarrow{AD}\\). Então:\n\n\\(\\overrightarrow{AC} = V + W\\);\n\\(\\overrightarrow{BD}= -V + W\\).\n\nSejam \\(M_{AC}\\) e \\(M_{BD}\\) is pontos médios nas diagonais \\(AC\\) e \\(BD\\). Ora, \\[\\begin{align*}\n\\overrightarrow{AM_{AC}}&=\\frac 12\\overrightarrow{AC}=\\frac{V+W}{2}\\\\\n\\overrightarrow{AM_{BD}}&=\\overrightarrow{AB}+\\frac 12\\overrightarrow{BD}=V+\\frac{-V+W}{2}=\\frac{V+W}{2}.\n\\end{align*}\\]\nIsso quer dizer que o vetor com ponto inicial em \\(A\\) e ponto final em \\(M_{AC}\\) é o mesmo que o vetor com ponto inicial em \\(A\\) e ponto final em \\(M_{BD}\\). Logo, \\(M_{AC}=M_{BD}\\) e as diagonais se cortam ao meio."
+  },
+  {
+    "objectID": "05_vetores.html#vetores-em-coordenadas",
+    "href": "05_vetores.html#vetores-em-coordenadas",
+    "title": "Vetores",
+    "section": "Vetores em coordenadas",
+    "text": "Vetores em coordenadas\n\n\n\n\n\nPor definição, as coordenadas de um vetor são as coordenadas do ponto final do seu representante com ponto inicial na origem.\nIsso é muito importante: para pegar as coordenadas, represente o vetor por um segmento orientado saindo da origem."
+  },
+  {
+    "objectID": "05_vetores.html#operações-de-vetores-em-coordenadas",
+    "href": "05_vetores.html#operações-de-vetores-em-coordenadas",
+    "title": "Vetores",
+    "section": "Operações de vetores em coordenadas",
+    "text": "Operações de vetores em coordenadas\nSe \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\), então \\[\nV+W = (v_1 + w_1,\\ v_2 + w_2), \\qquad \\alpha V = (\\alpha v_1,\\ \\alpha v_2).\n\\]"
+  },
+  {
+    "objectID": "05_vetores.html#o-vetor-que-liga-dois-pontos-no-plano",
+    "href": "05_vetores.html#o-vetor-que-liga-dois-pontos-no-plano",
+    "title": "Vetores",
+    "section": "O vetor que liga dois pontos no plano",
+    "text": "O vetor que liga dois pontos no plano\nDados dois pontos \\(P\\) e \\(Q\\) no plano, determinar as coordenadas do vetor \\(\\overrightarrow{PQ}\\).\n\n\n\n\n\n\\[\n\\overrightarrow{OP} + \\overrightarrow{PQ} = \\overrightarrow{OQ}\n\\;\\Rightarrow\\; \\overrightarrow{PQ} = \\overrightarrow{OQ} - \\overrightarrow{OP}.\n\\]\n\n\\[\n\\overrightarrow{PQ} = (\\text{ponto final}) - (\\text{ponto inicial}).\n\\]"
+  },
+  {
+    "objectID": "05_vetores.html#o-vetor-que-liga-dois-pontos-no-plano-exemplo",
+    "href": "05_vetores.html#o-vetor-que-liga-dois-pontos-no-plano-exemplo",
+    "title": "Vetores",
+    "section": "O vetor que liga dois pontos no plano (exemplo)",
+    "text": "O vetor que liga dois pontos no plano (exemplo)\nSe \\(P=(2,4)\\) e \\(Q=(5,2)\\), então \\[\n\\overrightarrow{PQ} = \\overrightarrow{OQ} - \\overrightarrow{OP} =  Q-P=\n(5,2) - (2,4) = (3,-2).\n\\]\n\n\n\n\n\nObserve o representante de \\(\\overrightarrow{PQ}\\) saindo da origem."
+  },
+  {
+    "objectID": "05_vetores.html#exercícios-no-plano-cartesiano",
+    "href": "05_vetores.html#exercícios-no-plano-cartesiano",
+    "title": "Vetores",
+    "section": "Exercícios no plano cartesiano",
+    "text": "Exercícios no plano cartesiano\n\nOs pontos \\(P=(3,7)\\), \\(Q=(5,11)\\) e \\(R=(7,16)\\) são colineares?\nDados \\(A=(x_1,y_1)\\) e \\(B=(x_2,y_2)\\), mostre que o ponto médio de \\(AB\\) é \\(M=\\big(\\tfrac{x_1+x_2}{2},\\tfrac{y_1+y_2}{2}\\big)\\).\nConsidere \\(A = (-2,1)\\) e \\(B = (10,7)\\). Determine \\(C\\) e \\(D\\) que dividem o segmento \\(AB\\) em três partes iguais.\nDados \\(A=(-1,3)\\), \\(B=(3,2)\\) e \\(C=(5,4)\\), determine \\(D\\) tal que \\(ABCD\\) são vértices consecutivos de um paralelogramo."
+  },
+  {
+    "objectID": "05_vetores.html#plano-cartesiano-e-sistemas-de-coordenadas-no-espaço",
+    "href": "05_vetores.html#plano-cartesiano-e-sistemas-de-coordenadas-no-espaço",
+    "title": "Vetores",
+    "section": "Plano cartesiano e sistemas de coordenadas no espaço",
+    "text": "Plano cartesiano e sistemas de coordenadas no espaço"
+  },
+  {
+    "objectID": "05_vetores.html#plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont.",
+    "href": "05_vetores.html#plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont.",
+    "title": "Vetores",
+    "section": "Plano cartesiano e sistemas de coordenadas no espaço (cont.)",
+    "text": "Plano cartesiano e sistemas de coordenadas no espaço (cont.)"
+  },
+  {
+    "objectID": "05_vetores.html#plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont.-1",
+    "href": "05_vetores.html#plano-cartesiano-e-sistemas-de-coordenadas-no-espaço-cont.-1",
+    "title": "Vetores",
+    "section": "Plano cartesiano e sistemas de coordenadas no espaço (cont.)",
+    "text": "Plano cartesiano e sistemas de coordenadas no espaço (cont.)\n\n\n\n\n\nNo plano ou no espaço, as coordenadas de um vetor são as coordenadas do seu ponto final, quando representamos o vetor por um segmento orientado saindo da origem."
+  },
+  {
+    "objectID": "05_vetores.html#norma-comprimento",
+    "href": "05_vetores.html#norma-comprimento",
+    "title": "Vetores",
+    "section": "Norma = comprimento",
+    "text": "Norma = comprimento\nSe \\(V=(v_1,v_2)\\), então \\(\\lVert V \\rVert = \\sqrt{v_1^2 + v_2^2}\\)."
+  },
+  {
+    "objectID": "05_vetores.html#norma-comprimento-cont.",
+    "href": "05_vetores.html#norma-comprimento-cont.",
+    "title": "Vetores",
+    "section": "Norma = comprimento (cont.)",
+    "text": "Norma = comprimento (cont.)\nSe \\(V=(v_1,v_2,v_3)\\), então \\(\\lVert V \\rVert = \\sqrt{v_1^2 + v_2^2 + v_3^2}\\)."
+  },
+  {
+    "objectID": "05_vetores.html#distância-entre-dois-pontos",
+    "href": "05_vetores.html#distância-entre-dois-pontos",
+    "title": "Vetores",
+    "section": "Distância entre dois pontos",
+    "text": "Distância entre dois pontos\nSe \\(P=(x_1,y_1)\\) e \\(Q=(x_2,y_2)\\), então\n\\[\\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \\qquad\n\\operatorname{dist}(P,Q)=\\lVert\\overrightarrow{PQ}\\rVert=\\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.\\]"
+  },
+  {
+    "objectID": "05_vetores.html#vetores-unitários",
+    "href": "05_vetores.html#vetores-unitários",
+    "title": "Vetores",
+    "section": "Vetores unitários",
+    "text": "Vetores unitários\nSe \\(\\alpha\\in\\mathbb{R}\\) e \\(V\\) é um vetor, então \\(\\lVert\\alpha V\\rVert = |\\alpha|\\,\\lVert V\\rVert\\) (por exemplo, \\(\\lVert-2V\\rVert = 2\\lVert V\\rVert\\)).\nUm vetor \\(V\\) é unitário se \\(\\lVert V\\rVert = 1\\).\nSe \\(V\\neq\\vec{0}\\), então existe um vetor unitário na mesma direção e sentido de \\(V\\): \\[U\\;=\\;\\Big(\\tfrac{1}{\\lVert V\\rVert}\\Big)\\,V.\\]"
+  },
+  {
+    "objectID": "05_vetores.html#vetores-unitários-exercícios",
+    "href": "05_vetores.html#vetores-unitários-exercícios",
+    "title": "Vetores",
+    "section": "Vetores unitários — exercícios",
+    "text": "Vetores unitários — exercícios\n\nDetermine um vetor unitário na direção da reta \\(y=2x\\). Quantos existem?\nDetermine um vetor unitário na direção da reta \\(y=-\\tfrac{1}{2}x\\). Quantos existem?\nTodo vetor unitário no plano é da forma \\(U=(\\cos\\theta,\\sin\\theta)\\). Interprete.\nDetermine um vetor unitário na direção da reta que liga \\(P=(-1,2,4)\\) e \\(Q=(3,5,1)\\)."
+  },
+  {
+    "objectID": "05_vetores.html#produto-escalar",
+    "href": "05_vetores.html#produto-escalar",
+    "title": "Vetores",
+    "section": "Produto escalar",
+    "text": "Produto escalar\nO produto escalar entre dois vetores \\(V\\) e \\(W\\) é o número real \\[\\langle V,W\\rangle = \\lVert V\\rVert\\,\\lVert W\\rVert\\,\\cos\\theta,\\] onde \\(\\theta\\) é o ângulo entre \\(V\\) e \\(W\\).\n\n\n\n\n\nAlém disso, \\(\\langle V,W\\rangle = 0\\) se \\(V=\\vec{0}\\) ou se \\(W=\\vec{0}\\)."
+  },
+  {
+    "objectID": "05_vetores.html#produto-escalar-exemplo",
+    "href": "05_vetores.html#produto-escalar-exemplo",
+    "title": "Vetores",
+    "section": "Produto escalar — exemplo",
+    "text": "Produto escalar — exemplo\nSe \\(V=(4,1)\\) e \\(W=(2,3)\\), então \\(\\langle V,W\\rangle = \\lVert V\\rVert\\,\\lVert W\\rVert\\,\\cos\\theta = \\sqrt{17}\\,\\sqrt{13}\\,\\cos\\theta\\).\nMas como determinar \\(\\theta\\)? E no espaço?"
+  },
+  {
+    "objectID": "05_vetores.html#lei-dos-cossenos",
+    "href": "05_vetores.html#lei-dos-cossenos",
+    "title": "Vetores",
+    "section": "Lei dos Cossenos",
+    "text": "Lei dos Cossenos\nPara calcular \\(\\theta\\) e, portanto, o produto escalar, use a Lei dos Cossenos: \\[a^2=b^2+c^2-2bc\\cos\\theta.\\]\n\n\n\n\n\nDaqui, \\[\nbc\\cos\\theta=\\frac 12 (b^2+c^2-a^2)\n\\]"
+  },
+  {
+    "objectID": "05_vetores.html#calcular-produto-escalar-usando-a-lei-dos-cossenos",
+    "href": "05_vetores.html#calcular-produto-escalar-usando-a-lei-dos-cossenos",
+    "title": "Vetores",
+    "section": "Calcular produto escalar usando a Lei dos Cossenos",
+    "text": "Calcular produto escalar usando a Lei dos Cossenos\nSejam \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\) vetores e seja \\(\\vartheta\\) os seus ângulos. \\[\\begin{align*}\n\\left&lt;V,W\\right&gt;&=\\|V\\|\\|W\\|\\cos(\\vartheta)=\\frac 12 (\\|V\\|^2+\\|W\\|^2-\\|W-V\\|^2)\\\\\n&=\\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\\\\n&=\\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\\\\n&=v_1w_1+v_2w_2.\n\\end{align*}\\]\nLogo\n\n\\[\n\\left&lt;V,W\\right&gt;=v_1w_1+v_2w_2\n\\]\n\ne não precisa saber o ângulo."
+  },
+  {
+    "objectID": "05_vetores.html#produto-escalar-em-coordenadas-teoremas",
+    "href": "05_vetores.html#produto-escalar-em-coordenadas-teoremas",
+    "title": "Vetores",
+    "section": "Produto escalar em coordenadas — teoremas",
+    "text": "Produto escalar em coordenadas — teoremas\nNo plano, se \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\), então \\[\\langle V,W\\rangle = v_1w_1 + v_2w_2.\\]\nNo espaço, se \\(V=(v_1,v_2,v_3)\\) e \\(W=(w_1,w_2,w_3)\\), então \\[\\langle V,W\\rangle = v_1w_1 + v_2w_2 + v_3w_3.\\]"
+  },
+  {
+    "objectID": "05_vetores.html#produto-escalar-exemplo-rápido",
+    "href": "05_vetores.html#produto-escalar-exemplo-rápido",
+    "title": "Vetores",
+    "section": "Produto escalar — exemplo rápido",
+    "text": "Produto escalar — exemplo rápido\nSe \\(V=(4,1)\\) e \\(W=(2,3)\\), então \\(\\langle V,W\\rangle = 4\\cdot 2 + 1\\cdot 3 = 11\\)."
+  },
+  {
+    "objectID": "05_vetores.html#ângulo-entre-dois-vetores",
+    "href": "05_vetores.html#ângulo-entre-dois-vetores",
+    "title": "Vetores",
+    "section": "Ângulo entre dois vetores",
+    "text": "Ângulo entre dois vetores\nSe \\(V\\) e \\(W\\) são dados em coordenadas, então \\[\\cos\\theta\\;=\\;\\dfrac{\\langle V,W\\rangle}{\\lVert V\\rVert\\,\\lVert W\\rVert}.\\]\nO ângulo \\(\\theta\\) entre dois vetores satisfaz \\(0^\\circ\\leq\\theta\\leq 180^\\circ\\)."
+  },
+  {
+    "objectID": "05_vetores.html#ângulo-entre-dois-vetores-exemplo",
+    "href": "05_vetores.html#ângulo-entre-dois-vetores-exemplo",
+    "title": "Vetores",
+    "section": "Ângulo entre dois vetores — exemplo",
+    "text": "Ângulo entre dois vetores — exemplo\nSe \\(V=(4,1)\\) e \\(W=(2,3)\\), então \\[\\cos\\theta=\\dfrac{11}{\\sqrt{17}\\,\\sqrt{13}},\\qquad \\theta = \\arccos\\Big(\\dfrac{11}{\\sqrt{17}\\,\\sqrt{13}}\\Big) \\approx 42^\\circ.\\]"
+  },
+  {
+    "objectID": "05_vetores.html#classificação-pelo-produto-escalar",
+    "href": "05_vetores.html#classificação-pelo-produto-escalar",
+    "title": "Vetores",
+    "section": "Classificação pelo produto escalar",
+    "text": "Classificação pelo produto escalar\nPara \\(V,W\\neq\\vec{0}\\):\n\n\\(\\theta\\) é agudo se \\(\\langle V,W\\rangle &gt; 0\\);\n\\(\\theta\\) é obtuso se \\(\\langle V,W\\rangle &lt; 0\\);\n\\(\\theta=90^\\circ\\) se \\(\\langle V,W\\rangle = 0\\) (vetores perpendiculares ou ortogonais).\n\nAssim, \\(\\langle V,W\\rangle = 0\\) determina a ortogonalidade de \\(V\\) e \\(W\\)."
+  },
+  {
+    "objectID": "05_vetores.html#exemplo-rotação-de-90circ-no-plano",
+    "href": "05_vetores.html#exemplo-rotação-de-90circ-no-plano",
+    "title": "Vetores",
+    "section": "Exemplo: rotação de \\(90^\\circ\\) no plano",
+    "text": "Exemplo: rotação de \\(90^\\circ\\) no plano\nDado \\(V=(a,b)\\), o vetor \\(W=(-b,a)\\) é obtido de \\(V\\) por rotação de \\(90^\\circ\\) anti-horária:\nObserve que \\[\n\\lVert V\\rVert = \\lVert W\\rVert\\quad \\mbox{e} \\quad\\langle V,W\\rangle = -ab + ab = 0\n\\] e \\(V\\) e \\(W\\) são ortogonais."
+  },
+  {
+    "objectID": "05_vetores.html#exercícios",
+    "href": "05_vetores.html#exercícios",
+    "title": "Vetores",
+    "section": "Exercícios",
+    "text": "Exercícios\n\nMostre que \\(A=(3,0,2)\\), \\(B=(4,3,0)\\) e \\(C=(8,1,-1)\\) são vértices de um triângulo retângulo. Calcule a área.\nNo cubo unitário \\(ABCDEFGH\\), determine:\n\n\no ângulo entre duas diagonais do cubo; são perpendiculares?\no ângulo entre uma aresta e uma diagonal do cubo; é o mesmo para qualquer escolha?"
+  },
+  {
+    "objectID": "05_vetores.html#propriedades-do-produto-escalar",
+    "href": "05_vetores.html#propriedades-do-produto-escalar",
+    "title": "Vetores",
+    "section": "Propriedades do produto escalar",
+    "text": "Propriedades do produto escalar\n\n\\(\\langle V,W\\rangle = \\langle W,V\\rangle\\).\n\\(\\langle U,V+W\\rangle = \\langle U,V\\rangle + \\langle U,W\\rangle\\).\n\\(\\alpha\\,\\langle V,W\\rangle = \\langle \\alpha V,W\\rangle = \\langle V,\\alpha W\\rangle\\).\n\nRelação com matrizes: se \\(V\\) e \\(W\\) são colunas, \\[\\langle V,W\\rangle = V^{T}W = \\begin{bmatrix} v_1 & v_2 & v_3 \\end{bmatrix}\\!\\begin{bmatrix} w_1 \\\\ w_2 \\\\ w_3 \\end{bmatrix} = v_1w_1 + v_2w_2 + v_3w_3.\\]"
+  },
+  {
     "objectID": "03_inverse.html",
     "href": "03_inverse.html",
     "title": "Matriz inversa",
