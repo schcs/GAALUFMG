@@ -20,12 +20,7 @@
   max-width: unset !important;
 }
 
-.reveal h1,
-.reveal h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 0.5em;
-}
+
 
 /* --- Color utilities for Quarto/Reveal.js --- */
 /* Text colors */

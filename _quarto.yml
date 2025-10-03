@@ -35,7 +35,6 @@ format:
     margin: 0.00 # less edge padding 
     # minScale: 0.2 
     # maxScale: 2.0 
-    center: false # optional: reduces top whitespace
     include-in-header: macros.html
     # theme: simple
     # scroll: true
