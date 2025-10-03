@@ -6,6 +6,14 @@
   font-size: 130%; 
 }
 
+.reveal h1, h2 {
+      text-align: center; /* Centers the text horizontally */
+      position: absolute; /* Allows for precise positioning */
+      top: 20%; /* Moves the top edge to the vertical center */
+      left: 50%; /* Moves the left edge to the horizontal center */
+      transform: translate(-50%, -50%); /* Adjusts for the element's own dimensions to truly center it */
+    }
+
 
 /* Prevent auto-stretch for specific images */
  .reveal .slides img.nostretch {
