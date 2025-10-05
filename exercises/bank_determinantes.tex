@@ -1,0 +1,1374 @@
+% -----------------------------------------------------------------------------
+% Lista 04 - Matriz inversa, Determinante e Sistemas Lineares (verbatim import)
+% Fonte: lista04_determinante_sistemas_matriz_inversa_solucao.tex (Exercícios 1-5)
+% -----------------------------------------------------------------------------
+
+\newcommand{\dps}{\displaystyle}
+
+% Exercício 1
+\begin{problem}
+Sejam $A$ e $B$ matrizes $4 \times 4$ tais que $\det(A)=-2$ e $\det(B)=5$. Calcule
+
+$$\begin{array}{lllllllllllll}  
+\text{(a)}\ \det(2A)         & & & & & &   \text{(b)}\ \det(-A)             & & & & & &   \text{(c)}\ \det(-3A)             \\
+                             & & & & & &                                    & & & & & &                                     \\
+\text{(d)}\ \det(A^{t}B)     & & & & & &   \text{(e)}\ \det(A^3)            & & & & & &   \text{(f)}\ \det(A^{-1}B^2)       \\
+                             & & & & & &                                    & & & & & &                                     \\
+\text{(g)}\ \det(-3A^2B^3)   & & & & & &   \text{(h)}\ \det(B^{-1}A^{-1})   & & & & & &   \text{(i)}\ \det(2AB^t)          
+\end{array}$$
+\end{problem}
+\begin{solution}
+Vamos utilizar as seguintes propriedades do determinante.
+
+\medskip
+Se $X$ e $Y$ são matrizes $n \times n$ então
+$$\det(X^t) = \det(X)               \hspace{2cm}     \det(k X) = k^n \det(X)$$
+$$\det(X^{-1}) = \frac{1}{\det(X)}  \hspace{1.7cm}  \det(X Y) = \det(X) \det(Y)$$
+
+\medskip
+Utilizando estas propriedades obtemos:
+\begin{enumerate}
+\item[(a)] $\det(2A) = 2^4 \ \det(A) = 16 \cdot (-2) = -32.$
+
+\item[(b)] $\det(-A) = (-1)^4\ \det(A) = \det(A) = -2$.
+
+\item[(c)] $\det(-3A) = (-3)^4\  \det(A) = 81 \cdot (-2) = -162.$
+
+\item[(d)] $\det(A^{t}B) = \det(A^{t}) \det(B) = \det(A) \det(B) = -2 \cdot 5 = -10.$ 
+
+\item[(e)] $\det(A^3) = \det(A)^3 = (-2)^3 = -8.$
+
+\item[(f)] $\dps \det(A^{-1}B^2) = \det(A^{-1}) \det(B^2) = \dfrac{1}{\det(A)}\cdot \det(B)^2 = \dfrac{1}{-2} \cdot 5^2 = -\dfrac{25}{2}.$ 
+
+\item[(g)] $\det(-3A^2B^3) = (-3)^4 \ \det(A)^2 \ \det(B)^3 = 81 \cdot (-2)^2 \cdot 5^3 = 40500.$
+
+\item[(h)] $\dps \det(B^{-1}A^{-1}) = \det(B^{-1}) \det(A^{-1}) = \dfrac{1}{\det(B)} \cdot \dfrac{1}{\det(A)} =
+\dfrac{1}{5} \cdot \dfrac{1}{-2} = -\dfrac{1}{10}.$
+
+\item[(i)] $\det(2AB^t) = 2^4 \ \det(A) \det(B) = 16 \cdot (-2) \cdot 5 = -160.$
+\end{enumerate}
+\end{solution}
+
+
+% Exercício 2
+\begin{problem}
+Para uma matriz quadrada $A$ sabe-se que $\det(A) = 2$ e que 
+$$A^{-1}\ =\ \left[\begin{array}{rrr} 1  &  2  &  2  \\
+                                      0  & -1  &  a  \\
+                                     -1  &  2  & -1  \end{array}\right].$$
+Calcule o valor da constante $a$.
+\end{problem}
+\begin{solution}
+Por um cálculo direto pela regra de Sarrus obtemos $\det(A^{-1}) = -1-4a$. 
+Pela propriedade do determinante podemos escrever 
+$$\det(A^{-1}) = \frac{1}{\det(A)}\ \ \ \ \ \Rightarrow \ \ \ \ \ -1-4a = \dfrac{1}{2}$$
+Resolvendo essa equação obtemos
+$$a = -\dfrac{3}{8}$$
+\end{solution}
+
+% Exercício 3
+\begin{problem}
+Utilizando operações elementares em linhas, transforme cada uma das seguintes matrizes em uma matriz triangular superior. Em seguida, utilizando estas matrizes triangulares, calcule os determinantes das matrizes dadas.
+
+$$A = \left[ \begin{array}{rrrr}
+ 3 & \ 1 &  0 &  -2 \\
+ 0 &   2 & -4 &   0 \\
+ 1 &   0 & -1 &   2 \\  
+ 1 &   2 &  1 &  -7
+\end{array} \right] \ \ \ \ \ \ \ \ \ \ \ \ \ B = \left[ \begin{array}{rrrr}
+ 0 &  1 & -1 &  \ 2 \\
+ 1 &  3 &  1 &  0 \\
+ 2 &  0 &  0 &  3 \\  
+ 4 & -2 &  1 &  2
+\end{array} \right]$$
+\end{problem}
+\begin{solution}
+Vamos começar calculando $\det(A)$. 
+Invertendo as posições das linhas 1 e 3 obtemos
+$$A_1 = \left[ \begin{array}{rrrr}
+ 1 & \ 0 & -1 &   2 \\  
+ 0 &   2 & -4 &   0 \\
+ 3 &   1 &  0 &  -2 \\
+ 1 &   2 &  1 &  -7
+\end{array} \right]$$
+Efetuando as operações elementares $L_3 \leftarrow L_3 - 3L_1$ e $L_4 \leftarrow L_4 - L_1$ obtemos
+$$A_2 = \left[ \begin{array}{rrrr}
+ 1 & \ 0 & -1 &   2 \\  
+ 0 &   2 & -4 &   0 \\
+ 0 &   1 &  3 &  -8 \\
+ 0 &   2 &  2 &  -9
+\end{array} \right]$$
+Invertendo de posição a segunda e a terceira linha obtemos
+$$A_3 = \left[ \begin{array}{rrrr}
+ 1 & \ 0 & -1 &   2 \\  
+ 0 &   1 &  3 &  -8 \\
+ 0 &   2 & -4 &   0 \\
+ 0 &   2 &  2 &  -9
+\end{array} \right]$$
+Efetuando as operações elementares $L_3 \leftarrow L_3 - 2L_2$ e $L_4 \leftarrow L_4 - 2L_2$ obtemos
+$$A_4 = \left[ \begin{array}{rrrr}
+ 1 & \ 0 &  -1 &   2 \\  
+ 0 &   1 &   3 &  -8 \\
+ 0 &   0 & -10 &  16 \\
+ 0 &   0 &  -4 &   7
+\end{array} \right]$$
+Dividindo a terceira linha por $2$ obtemos
+$$A_5 = \left[ \begin{array}{rrrr}
+ 1 & \ 0 &  -1 &   2 \\  
+ 0 &   1 &   3 &  -8 \\
+ 0 &   0 &  -5 &   8 \\
+ 0 &   0 &  -4 &   7
+\end{array} \right]$$
+Efetuando a operação $L_3 \leftarrow L_3 - L_4$ obtemos
+$$A_6 = \left[ \begin{array}{rrrr}
+ 1 & \ 0 &  -1 &   2 \\  
+ 0 &   1 &   3 &  -8 \\
+ 0 &   0 &  -1 &   1 \\
+ 0 &   0 &  -4 &   7
+\end{array} \right]$$
+Efetuando a operação $L_4 \leftarrow L_4 - 4L_3$ obtemos
+$$A_7 = \left[ \begin{array}{rrrr}
+ 1 & \ 0 &  -1 &   2 \\  
+ 0 &   1 &   3 &  -8 \\
+ 0 &   0 &  -1 &   1 \\
+ 0 &   0 &   0 &   3
+\end{array} \right]$$
+Observe que nesse momento obtivemos uma matriz triangular superior. O determinante dessa matriz é o produto dos números da diagonal principal.
+$$\det(A_7) = 1 \times 1 \times (-1) \times 3 = -3$$
+Agora observe que, durante o escalonamento, o determinante trocou de sinal duas vezes e ele foi dividido por $2$. 
+Daí podemos concluir que 
+$$\det(A) = (-1)^2 \times 2 \times \det(A_7) = -6$$
+
+\bigskip
+Agora vamos calcular o determinante da matriz $B$.
+Invertendo a posição da primeira e da segunda linha de $B$ obtemos
+$$B_1 = \left[ \begin{array}{rrrr}
+ 1 &  3 &  1 &  \ 0 \\
+ 0 &  1 & -1 &    2 \\
+ 2 &  0 &  0 &    3 \\  
+ 4 & -2 &  1 &    2
+\end{array} \right]$$
+Efetuando as operações elementares $L_3 \leftarrow L_3 - 2L_1$ e $L_4 \leftarrow L_4 - 4L_1$ obtemos
+$$B_2 = \left[ \begin{array}{rrrr}
+ 1 &    3 &   1 &  \ 0 \\
+ 0 &    1 &  -1 &    2 \\
+ 0 &   -6 &  -2 &    3 \\  
+ 0 &  -14 &  -3 &    2
+\end{array} \right]$$
+Efetuando as operações elementares $L_3 \leftarrow L_3 + 6L_2$ e $L_4 \leftarrow L_4 + 14L_2$ obtemos
+$$B_3 = \left[ \begin{array}{rrrr}
+ 1 &  \ 3 &    1 &     0 \\
+ 0 &    1 &   -1 &     2 \\
+ 0 &    0 &   -8 &    15 \\  
+ 0 &    0 &  -17 &  \ 30
+\end{array} \right]$$
+Efetuando a operação $L_4 \leftarrow L_4 - 2L_3$ obtemos
+$$B_4 = \left[ \begin{array}{rrrr}
+ 1 &  \ 3 &    1 &     0 \\
+ 0 &    1 &   -1 &     2 \\
+ 0 &    0 &   -8 &  \ 15 \\  
+ 0 &    0 &   -1 &     0
+\end{array} \right]$$
+Invertendo de posição a terceira e a quarta linhas obtemos
+$$B_5 = \left[ \begin{array}{rrrr}
+ 1 &  \ 3 &    1 &     0 \\
+ 0 &    1 &   -1 &     2 \\
+ 0 &    0 &   -1 &     0 \\
+ 0 &    0 &   -8 &  \ 15  
+\end{array} \right]$$
+Efetuando a operação $L_4 \leftarrow L_4 - 8L_3$ obtemos
+$$B_6 = \left[ \begin{array}{rrrr}
+ 1 &  \ 3 &    1 &     0 \\
+ 0 &    1 &   -1 &     2 \\
+ 0 &    0 &   -1 &     0 \\
+ 0 &    0 &    0 &  \ 15  
+\end{array} \right]$$
+Observe que nesse momento obtivemos uma matriz triangular superior. O determinante dessa matriz é o produto dos números da diagonal principal.
+$$\det(B_6) = 1 \times 1 \times (-1) \times 15 = -15$$
+Agora observe que, durante o escalonamento, o determinante trocou de sinal duas vezes. 
+Daí podemos concluir que 
+$$\det(A) = (-1)^2 \times \det(B_6) = -15$$
+\end{solution}
+
+% Exercício 4
+\begin{problem}
+Utilizando o desenvolvimento em cofatores por uma linha ou por uma coluna, calcule novamente os determinantes das duas matrizes do exercício anterior.
+\end{problem}
+\begin{solution}
+Vamos calcular $\det(A)$ desenvolvimento em cofatores pela segunda linha.
+$$\det(A)\ =\ 
+2 \times (-1)^{2+2} \times \det \left[ \begin{array}{rrr}
+ 3 &  0 & -2 \\
+ 1 & -1 &  2 \\  
+ 1 &  1 & -7
+\end{array} \right]\  \ + \ \ 
+(-4) \times (-1)^{2+3} \times \det \left[ \begin{array}{rrr}
+ 3 & \ 1 & -2 \\
+ 1 &   0 &  2 \\  
+ 1 &   2 & -7
+\end{array} \right] .$$
+Pela Regra de Sarrus podemos calcular os determinantes das matrizes $3 \times 3$.
+
+\medskip
+\hspace{3cm}$\det \left[ \begin{array}{rrr}
+ 3 &  0 & -2 \\
+ 1 & -1 &  2 \\  
+ 1 &  1 & -7
+\end{array} \right]\ =\ 21 + 0 - 2 - 2 - 6 + 0 = 11$
+
+\medskip
+\hspace{3cm}$\det \left[ \begin{array}{rrr}
+ 3 & \ 1 & -2 \\
+ 1 &   0 &  2 \\  
+ 1 &   2 & -7
+\end{array} \right]\ =\ 0 + 2 - 4 + 0 - 12 + 7 = -7$
+
+\medskip
+Daí
+$$\det(A) = 2 \cdot 11 + 4 \cdot (-7) = 22 - 28 = -6$$
+
+\bigskip
+Agora vamos calcular o determinante da matriz $B$. Para isso, vamos efetuar o \linebreak
+desenvolvimento por cofatores pela terceira linha.
+$$\det(B)\ =\ 
+2 \times (-1)^{3+1} \times \det \left[ \begin{array}{rrr}
+ 1 & -1 & \  2 \\
+ 3 &  1 &  0 \\  
+-2 &  1 &  2
+\end{array} \right]\  \ + \ \ 
+3 \times (-1)^{3+4} \times \det \left[ \begin{array}{rrr}
+ 0 &  1 & -1 \\
+ 1 &  3 &  1 \\  
+ 4 & -2 &  1
+\end{array} \right] .$$
+Pela Regra de Sarrus podemos calcular os determinantes das matrizes $3 \times 3$.
+
+\medskip
+\hspace{3cm}$\det \left[ \begin{array}{rrr}
+ 1 & -1 & \  2 \\
+ 3 &  1 &  0 \\  
+-2 &  1 &  2
+\end{array} \right]\ =\ 2 + 0 + 6 + 4 + 0 + 6 = 18$
+
+\medskip
+\hspace{3cm}$\det \left[ \begin{array}{rrr}
+ 0 &  1 & -1 \\
+ 1 &  3 &  1 \\  
+ 4 & -2 &  1
+\end{array} \right]\ =\ 0 + 4 + 2 + 12 + 0 - 1 = 17$
+
+\medskip
+Daí
+$$\det(B) = 2 \cdot 18 - 3 \cdot 17 = 36 - 51 = -15$$
+\end{solution}
+
+% Exercício 5
+\begin{problem}
+Encontre todos os valores de $a$ para os quais a matriz
+$$A\ =\ \left[\begin{array}{ccccc}
+     3  & &  0 & &  -1  \\
+     3  & &  1 & & a+1  \\
+  2a+1  & &  2 & &   1 \end{array}\right] $$
+tem inversa. Se $a=17$, dê o conjunto solução do sistema linear homogêneo $AX=\overline{0}$.
+\end{problem}
+\begin{solution}
+Por um cálculo direto temos que $\det(A)=-4a-8$. A matriz $A$ tem inversa se $\det(A)=-4a-8 \neq 0$, ou seja, se $a\neq -2$.
+Para $a=17$ a matriz $A$ é invertível e a solução do sistema linear homogêneo $AX=\overline{0}$ é a solução trivial.
+\end{solution}
+
+% Exercício 6
+\begin{problem}
+\begin{enumerate}
+\item[(a)] Calcule a inversa da seguinte matriz.
+$$A=\left[ \begin{array}{rrrr}
+-5 &  1 &  \ 1  \\
+ 3 & -1 &    0  \\
+ 7 & -6 &    5 
+ \end{array} \right] .$$
+\item[(b)] Calcule os determinantes das matrizes $A$ e $A^{-1}$.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\begin{enumerate}
+\item[(a)] Vamos calcular $A^{-1}$ escalonando a matriz 
+$$\left[ \begin{array}{rrrr|rrrr}
+-5 &  1 & \ 1   & & &     1 &  \ 0 &  \ 0  \\
+ 3 & -1 &   0   & & &     0 &    1 &    0 \\
+ 7 & -6 &   5   & & &     0 &    0 &    1   
+\end{array} \right] .$$
+Efetuando a operação elementar $L_1 \leftarrow L_1 + 2L_2$ obtendo:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & -1 & \ 1   & & &     1 &  \ 2 &  \ 0  \\
+ 3 & -1 &   0   & & &     0 &    1 &    0 \\
+ 7 & -6 &   5   & & &     0 &    0 &    1   
+\end{array} \right] .$$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 3L_1$ e $L_3 \leftarrow L_3 - 7L_1$ obtemos:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & -1 &   1   & & &     1 &    2 &  \ 0  \\
+ 0 &  2 &  -3   & & &    -3 &   -5 &    0 \\
+ 0 &  1 &  -2   & & &    -7 &  -14 &    1   
+\end{array} \right] .$$
+Invertendo a linha 2 com a linha 3 obtemos
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & -1 &   1   & & &     1 &    2 &  \ 0  \\
+ 0 &  1 &  -2   & & &    -7 &  -14 &    1  \\
+ 0 &  2 &  -3   & & &    -3 &   -5 &    0  
+\end{array} \right] .$$
+Efetuando as operações elementares $L_1 \leftarrow L_1 + L_2$ e $L_3 \leftarrow L_3 - 2L_2$ obtemos:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 &  0 &  -1   & & &    -6 &  -12 &    1  \\
+ 0 &  1 &  -2   & & &    -7 &  -14 &    1  \\
+ 0 &  0 &   1   & & &    11 &   23 &   -2  
+\end{array} \right] .$$
+Efetuando as operações elementares $L_1 \leftarrow L_1 + L_3$ e $L_2 \leftarrow L_2 + 2L_3$ obtemos:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 &  0 &  0   & & &     5 &   11 &   -1  \\
+ 0 &  1 &  0   & & &    15 &   32 &   -3  \\
+ 0 &  0 &  1   & & &    11 &   23 &   -2  
+\end{array} \right] .$$
+Como obtemos a matriz identidade do lado esquerdo, concluímos que $B$ é invertível e que $B^{-1}$ é a matriz que esta escrita do lado direito, ou seja,
+$$A^{-1} = \left[ \begin{array}{rrrr}
+ 5 &  11 & -1  \\
+15 &  32 & -3  \\
+11 &  23 & -2 
+\end{array} \right] .$$
+
+\item[(b)] Pela regra de Sarrus, $\det(A) = 25 + 0 - 18 + 7 + 0 - 15 = -1$. Aplicando propriedade do determinante temos que
+$\det(A^{-1}) = \dfrac{1}{\det(A)} = \dfrac{1}{-1} = -1$.
+\end{enumerate}
+\end{solution}
+
+% Exercício 7
+\begin{problem}
+Suponha que a matriz
+$$B\ =\ \left[\begin{array}{rrrr}
+  1 &  0 &  0 &  0 \\
+  2 & -3 &  0 &  0  \\
+ -2 &  1 &  -1 &  0 \\
+  3 &  5 &  8 &  -2  \end{array}\right] $$
+tenha sido obtida de $A$ aplicando-se sucessivamente as seguintes operações elementares:
+\begin{enumerate}
+\item[(a)] Troca da linha $L_3$ com a linha $L_4$;
+\item[(b)] Substituição da linha $L_2$ por  $L_2\, -\, 3\, L_1$;
+\item[(c)] Substituição da linha $L_3$ por $\displaystyle\frac{1}{2}\, L_3$.
+\end{enumerate}
+Calcule o determinante da matriz $A$.
+\end{problem}
+\begin{solution}
+\begin{itemize}
+\item Seja $A_1$ a matriz obtida de $A$ pela primeira operação elementar: 
+ troca da linha $L_3$ com a linha $L_4$.
+\item Seja $A_2$ a matriz obtida de $A_1$ pela segunda operação elementar:
+substituição da linha $L_2$ por  $L_2\, -\, 3\, L_1$.
+\item Finalmente seja $B$ a matriz obtida de $A_2$ pela terceira operação elementar: \linebreak
+substituição da linha $L_3$ por $\displaystyle\frac{1}{2}\, L_3$.
+\end{itemize}
+Sabemos como cada uma destas operações elementares afeta o determinante da matriz.  Para estas
+operações elementares temos que 
+$$\det(A_1)\ =\ -\det(A)$$
+$$\det(A_2)\ =\ \det(A_1)$$
+$$\det(B)\ =\ \frac{1}{2}\,\det(A_2)$$
+Daí segue que $\det(A)\ =\ -2 \det(B)$. Mas $B$ é uma matriz triangular. Portanto o seu determinante é igual ao produto dos elementos
+da sua diagonal principal
+$$\det(B)  = 1 \times (-3) \times (-1) \times (-2) = -6$$
+Daí segue que 
+$$\det(A)\ =\ (-2) \times (-6) = 12$$
+\end{solution}
+
+% Exercício 8
+\begin{problem} 
+Sabe-se que para algum número real $x$ a seguinte igualdade é verdadeira. Determine o valor de $x$.
+
+$$\left[ \begin{array}{rrr}
+ -1 &   2 & -2 \\
+  1 &  -6 &  4 \\
+  2 &   x &  7 \\
+\end{array}\right]^{2024} \ =\ 
+\left[ \begin{array}{rrr}
+ -1 &   6 & -4 \\
+  1 &  -2 &  2 \\
+  2 &  -6 &  5 \\
+\end{array}\right]$$
+\end{problem}
+\begin{solution} A igualdade acima é da forma $A^{2024} = B$ para dadas matrizes $A$ e $B$. \linebreak
+Calculando, pela regra de Sarrus, o determinante dos dois lados dessa igualdade e \linebreak utilizando a propriedade
+$$\det\left( A^{2024} \right) = \det\left(A\right)^{2024}$$
+obtemos
+$$ \left( 42 + 16 - 2x -24 + 4x - 14 \right)^{2024} = 10 + 24 + 24 - 16 - 12 - 30 $$
+Simplificando obtemos
+$$\left( 20 + 2x \right)^{2024} = 0 \ \ \ \ \Rightarrow \ \ \ \ 20+2x=0 \ \ \ \ \Rightarrow \ \ \ \ x=-10.$$
+
+\bigskip
+Observação. Na parte final desse curso você vai estudar a teoria de diagonalização de matrizes. Foi essa teoria que foi utilizada na elaboração dessa questão. De fato, para essa questão foram consideradas as matrizes
+$$P = \left[ \begin{array}{rrr}
+  1 & \ 1  &  2 \\
+ -1 &   1  & -1 \\
+ -2 &   1  & -2 \\
+\end{array}\right] \ \ \ \ \text{e} \ \ \ \ 
+D = \left[ \begin{array}{rrr}
+  1 &   0  & \ 0 \\
+  0 &  -1  &   0 \\
+  0 &   0  &   0 \\
+\end{array}\right]$$
+e foi calculada a seguinte matriz
+$$A\ =\ P\, D\, P^{-1}\ =\ \left[ \begin{array}{rrr}
+ -1 &   2  & -2 \\
+  1 &  -6  &  4 \\
+  2 &  -10 &  7 \\
+\end{array}\right]$$
+Com essa estrutura, observe que para todo número natural $n$, temos que $A^n = P\, D^n \, P^{-1}$. Como $D$ é uma matriz diagonal, é bem fácil elevar $D$ a qualquer expoente e calcular o lado direito dessa igualdade.
+Em particular, no caso dessa questão,
+$$D^{2024} =\left[ \begin{array}{rrr}
+  1 & \ 0  & \  0 \\
+  0 &   1  &    0 \\
+  0 &   0  &    0 \\
+\end{array}\right]$$
+
+Daí
+
+$$A^{2024} = P\, D^{2024} \, P^{-1}\ =\ \left[ \begin{array}{rrr}
+  1 & \ 1  &  2 \\
+ -1 &   1  & -1 \\
+ -2 &   1  & -2 \\
+\end{array}\right] \\
+\left[ \begin{array}{rrr}
+  1 & \ 0  & \  0 \\
+  0 &   1  &    0 \\
+  0 &   0  &    0 \\
+\end{array}\right] \\
+\left[ \begin{array}{rrr}
+ -1 &   4  & -3 \\
+  0 &   2  & -1 \\
+  1 &  -3  &  2 \\
+\end{array}\right] = 
+\left[\begin{array}{rrr}
+ -1 &   6 & -4 \\
+  1 &  -2 &  2 \\
+  2 &  -6 &  5 \\
+\end{array}\right]$$
+\end{solution}
+
+% Exercício 9
+\begin{problem} 
+Determine os valores das constantes $a$, $b$, $c$ e $d$ das entradas das seguintes matrizes:
+
+$$A = \left[\begin{array}{ccc}
+\ a\  & \  0\  & \ 1 \ \\
+5   &  2   &  0  \\
+7   &  b   &  3  \ \end{array}\right]   \ \ \ \ \ \ \\
+A^{-1} = \left[\begin{array}{rrr}
+\ -6   &    c   &    2 \   \\
+  15   & \  -2  & \ -5 \   \\
+  d    &   -3   &   -6 \   \end{array}\right]$$
+\end{problem}
+\begin{solution} 
+Multiplicando a matriz $A$ pela sua inversa $A^{-1}$ obtemos a matriz identidade.
+Efetuando essa multiplicação obtemos
+
+$$A \cdot A^{-1}\ =\ \left[\begin{array}{ccc}
+-6a+d        &    ac-3      &    2a-6       \\
+   0         &    5c-4      &    0          \\
+\ -42+15b+3d  \ \  \ & \  \ \   7c-2b-9 \ \ \ &\  \ \   -4-5b \ \end{array}\right]\ =\ 
+\left[\begin{array}{ccc}
+\ 1\  &  \ 0\  & \ 0 \ \\
+  0   &    1   &   0  \\
+  0   &    0   &   1  \ \end{array}\right]$$
+
+Igualando as entradas das matrizes obtemos várias igualdades que podem ser utilizadas tais como:
+
+$$2a-6=0 \ \ \ \ \ \ -4-5b=1 \ \ \ \ \ \ 5c-4=1  \ \ \ \ \ \ -6a+d=1$$
+
+Resolvendo essas equações obtemos
+
+$$a=3\  \ \ \ \ \ b=-1 \ \ \ \ \ \ c=1 \ \ \ \ \ \ d=19 $$
+
+Substituindo esses valores é fácil ver que todas as outras igualdades são válidas.
+\end{solution}
+
+% Exercício 10
+\begin{problem}
+Considere a matriz
+$$ A=\left[ \begin{array}{rrr}
+  1 & 1 & -1 \\
+ -3 & x &  x \\
+  1 & 0 & -1 \\
+\end{array}\right]$$
+\begin{enumerate}
+\item[(a)] Encontre os valores da incógnita $x$ para os quais a matriz $A$ seja invertível.
+\item[(b)] Substitua $x = 2$ na matriz $A$ e calcule $A^{-1}$, caso exista.
+\item[(c)] Resolva o sistema 
+$$\left\{\begin{array}{rrrrrrr}
+  x & + &   y  & - &    z  & = &  -3 \\
+-3x & + &  2y  & + &   2z  & = &   5 \\
+  x &   &      & - &    z  & = &  -4
+\end{array} \right.$$
+\end{enumerate}
+\end{problem}
+\begin{solution} 
+\begin{itemize}
+\item[(a)] Por um cálculo direto obtemos $\det(A)=x-3$. A matriz $A$ é invertível se \linebreak 
+$\det(A)=x-3 \neq 0$. Portanto a matriz $A$ é invertível para todos os valores de $x$ diferentes de $3$.
+
+\item[(b)] Para $x=2$, o cálculo da matriz inversa $A^{-1}$ pode ser realizado através do escalonamento da seguinte matriz.
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & \ 1 &  -1   & & &     1 &  \ 0 &  \ 0  \\
+-3 &   2 &   2   & & &     0 &    1 &    0 \\
+ 1 &   0 &  -1   & & &     0 &    0 &    1   
+\end{array} \right] .$$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 + 3L_1$ e $L_3 \leftarrow L_3 - L_1$ obtemos:
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 &   1 &  -1   & & &     1 &  \ 0 &  \ 0  \\
+ 0 &   5 &  -1   & & &     3 &    1 &    0 \\
+ 0 &  -1 &   0   & & &    -1 &    0 &    1   
+\end{array} \right] .$$
+
+Trocando o sinal da terceira linha e, em seguida, invertendo de posição a segunda com a terceira linha obtemos
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & \ 1 &  -1   & & &   \ 1 &  \ 0 &    0  \\
+ 0 &   1 &   0   & & &     1 &    0 &   -1  \\   
+ 0 &   5 &  -1   & & &     3 &    1 &    0
+\end{array} \right] .$$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 - L_2$ e $L_3 \leftarrow L_3 - 5L_2$ obtemos:
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & \ 0 &  -1   & & &     0 &  \ 0 &    1  \\
+ 0 &   1 &   0   & & &     1 &    0 &   -1  \\   
+ 0 &   0 &  -1   & & &    -2 &    1 &    5
+\end{array} \right] .$$
+
+Trocando o sinal da terceira linha obtemos
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & \ 0 &  -1   & & &   \ 0 &    0 &    1  \\
+ 0 &   1 &   0   & & &     1 &    0 &   -1  \\   
+ 0 &   0 &   1   & & &     2 &   -1 &   -5
+\end{array} \right] .$$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_3$ obtemos
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & \ 0 & \ 0   & & &   \ 2 &   -1 &   -4  \\
+ 0 &   1 &   0   & & &     1 &    0 &   -1  \\   
+ 0 &   0 &   1   & & &     2 &   -1 &   -5
+\end{array} \right] .$$
+
+Como obtemos a matriz identidade do lado esquerdo, concluímos que $A^{-1}$ é a matriz que esta escrita do lado direito, ou seja,
+$$A^{-1} = \left[ \begin{array}{rrrr}
+ 2 &  -1 & -4  \\
+ 1 &   0 & -1  \\
+ 2 &  -1 & -5 
+\end{array} \right] .$$
+
+
+\item[(c)] Observe que a matriz de coeficientes desse sistema linear é a matriz $A$ do item anterior.
+Portanto a solução desse sistema pode ser escrita como $X = A^{-1} B$. Efetuando a multiplicação, obtemos a solução
+
+$$X\ =\ A^{-1} B\ =\ \left[ \begin{array}{rrrr}
+ 2 &  -1 & -4  \\
+ 1 &   0 & -1  \\
+ 2 &  -1 & -5 
+\end{array} \right] \ 
+\left[ \begin{array}{r} -3 \\ 5 \\ -4 \end{array} \right]\ =\ +\left[ \begin{array}{r} \ 5 \\ 1 \\ 9 \end{array} \right]$$
+
+\end{itemize}
+\end{solution}
+
+
+% Exercício 11
+\begin{problem}
+\begin{enumerate}
+\item[(a)] Calcule o determinante da seguinte matriz.
+
+$$M=\left[ \begin{array}{rrrr}
+ 0 &  1 & -1 & \ 2 \\
+ 1 &  3 &  1 &   0 \\
+ 2 &  0 &  0 &   3 \\  
+ 4 & -2 &  1 &   2
+\end{array} \right] .$$
+
+\item[(b)] Resolva o seguinte sistema linear homogêneo que tem como matriz de coeficientes a matriz $M$.
+
+$$ \left\{\begin{array}{rrrrrrrrr}
+     &   &   y  & - &   z & + &  2w &  = &   0  \\
+   x & + &  3y  & + &   z &   &     &  = &   0  \\
+  2x &   &      &   &     & + &  3w &  = &   0  \\
+	4x & - &  2y  & + &   z & + &  2w &  = &   0  \\
+\end{array} \right.$$
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\begin{enumerate}
+\item[(a)] Vamos calcular $\det(M)$ desenvolvimento em cofatores pela terceira linha.
+
+$$\det(M)\ =\ 
+2 \times (-1)^{3+1} \times \det \left[ \begin{array}{rrr}
+ 1 & -1 & \  2 \\
+ 3 &  1 &  0 \\  
+-2 &  1 &  2
+\end{array} \right]\  \ + \ \ 
+3 \times (-1)^{3+4} \times \det \left[ \begin{array}{rrr}
+ 0 &  1 & -1 \\
+ 1 &  3 &  1 \\  
+ 4 & -2 &  1
+\end{array} \right] .$$
+
+Pela Regra de Sarrus podemos calcular os determinantes das matrizes $3 \times 3$.
+
+\hspace{3cm}$\det \left[ \begin{array}{rrr}
+ 1 & -1 & \  2 \\
+ 3 &  1 &  0 \\  
+-2 &  1 &  2
+\end{array} \right]\ =\ 2 + 0 + 6 + 4 + 0 + 6 = 18$
+
+\bigskip
+\hspace{3cm}$\det \left[ \begin{array}{rrr}
+ 0 &  1 & -1 \\
+ 1 &  3 &  1 \\  
+ 4 & -2 &  1
+\end{array} \right]\ =\ 0 + 4 + 2 + 12 + 0 - 1 = 17$
+
+Daí $\det(M) = 2 \cdot 18 - 3 \cdot 17 = 36 - 51 = -15$.
+
+\item[(b)] Como $\det(M) \neq 0$, o sistema linear homogêneo $MX=\overline{0}$ só admite a solução trivial $x=y=z=w=0$.
+
+\end{enumerate}
+\end{solution}
+
+% Exercício 12
+\begin{problem} 
+Considere o seguinte sistema linear nas incógnitas $x$ e $y$.
+$$\left\{\begin{array}{rrrrrrr}
+3x &  +  &   y &   = &  b  \\
+ax &  +  &  2y &   = &  4  \end{array} \right.$$
+Determine condições sobre $a$ e $b$ para que esse sistema admita uma única solução; \linebreak 
+infinitas soluções; ou não admita solução alguma.
+\end{problem}
+\begin{solution} Sabemos que o sistema linear $AX=B$ possui uma única solução quando $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  3 & \  1  \\
+  a &    2  \end{array}\right]\ =\ 6-a\ . $$
+Portanto o sistema possui uma única solução quando $6-a \neq 0$, ou seja, quando $a\neq 6$.
+Vamos analisar agora o que acontece quando $a=6$. Nesse caso a matriz aumentada é
+$$ \left[\begin{array}{rrr|rr}
+  3 & \ 1  & & &   b  \\
+  6 &   2  & & &   4  \end{array}\right] $$
+Efetuando a operação elementar $L_2 \leftarrow L_2 - 2L_1$ obtemos:
+$$ \left[\begin{array}{rrr|rc}
+  3 & \ 1  & & &   b     \\
+  0 &   0  & & &   4-2b  \end{array}\right] $$
+A segunda equação dessa matriz significa a equação $0x+0y=4-2b$ que só admite solução quando $b=2$. Daí podemos concluir o seguinte:
+\begin{itemize}
+\item O sistema tem uma única solução se $a \neq 6$, $\ \forall\ b \in \R$.
+\item O sistema não tem solução se $a=6$ e se $b \neq 2$.
+\item O sistema tem infinitas soluções se $a=6$ e $b=2$. Nesse caso, considerando $x$ como variável livre, obtemos a equação
+$y=2-3x$ e o conjunto solução $S$ pode ser dado do seguinte modo.
+$$S\ =\ \big\{ (x,y) = \left(x, 2-3x \right)\ ,\ \forall x \in \R \big\} $$
+\end{itemize}
+\end{solution}
+
+% Exercício 13
+\begin{problem} 
+Considere o seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+ x & + &  2y & + &  2z & = &  b\\
+3x & + &  6y & - &  4z & = &  4\\
+2x & + &  ay & - &  6z & = &  1
+\end{array} \right.$$
+\noindent Determine todos os valores de $a$ e de $b$ para os quais o sistema:
+\begin{itemize}
+\item[(a)] tem uma única solução;
+\item[(b)] não tem solução;
+\item[(c)] tem infinitas soluções. Nesse caso dê o conjunto solução do sistema.
+\end{itemize}
+\end{problem}
+\begin{solution}  Sabemos que o sistema linear $AX=B$ possui uma única solução quando $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  1 & \  2  &   2  \\
+  3 &    6  &  -4  \\ 
+  2 &    a  &  -6  \end{array}\right]\ =\ 10a-40\ . $$
+Portanto o sistema possui uma única solução quando $10a-40 \neq 0$, ou seja, quando $a\neq 4$.
+Vamos analisar agora o que acontece quando $a=4$. Nesse caso a matriz aumentada é
+$$ \left[\begin{array}{rrrr|rr}
+  1 & \ 2 &    2 & & &   b  \\
+  3 &   6 &   -4 & & &   4  \\ 
+  2 &   4 &   -6 & & &   1  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 3L_1$ e $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 2 &     2 & & &   b  \\
+  0 &   0 &   -10 & & &   4-3b  \\ 
+  0 &   0 &   -10 & & &   1-2b  \end{array}\right] $$
+Efetuando a operação elementar $L_3 \leftarrow L_3 - L_2$ obtemos
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 2 &     2 & & &   b  \\
+  0 &   0 &   -10 & & &   4-3b  \\ 
+  0 &   0 &     0 & & &   b-3  \end{array}\right] $$
+A última equação dessa matriz significa que $0x+0y+0z=b-3$. Daí vemos que o sistema linear dado não tem solução se $b \neq 3$. Vamos ver o que acontece no caso $b=3$. Substituindo na matriz anterior obtemos
+$$ \left[\begin{array}{rrrr|rr}
+  1 & \ 2 &     2 & & &   3  \\
+  0 &   0 &   -10 & & &  -5  \\ 
+  0 &   0 &     0 & & &   0  \end{array}\right] $$
+Dividindo a segunda linha por $-10$ obtemos
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 2 &  \ 2 & & &   3             \\[5pt]
+  0 &   0 &    1 & & &   \dfrac{1}{2}  \\[9pt] 
+  0 &   0 &    0 & & &   0             \end{array}\right] $$
+Efetuando a operação elementar $L_1 \leftarrow L_1 - 2L_2$ obtemos
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 2 &  \ 0 & & &   2             \\[5pt]
+  0 &   0 &    1 & & &   \dfrac{1}{2}  \\[9pt] 
+  0 &   0 &    0 & & &   0             \end{array}\right] $$
+Observe que obtivemos uma matriz na forma escalonada reduzida. Como a segunda coluna não tem pivô, podemos considerar $y$ como variável livre.
+Nesse caso o sistema linear possui infinitas soluções em que
+$$x=2-2y\ \ \ ,\ \ \ z=\dfrac{1}{2} \ \ \ ,\ \ \forall y \in \R$$
+Resumindo, uma solução para essa questão pode ser dada do seguinte modo.
+\begin{itemize}
+\item[(a)] O sistema possui uma única solução quando $a \neq 4$, $\ \forall\ b \in \R$.
+\item[(b)] O sistema não tem solução se $a=4$ e $b\neq 3$.
+\item[(c)] O sistema possui infinitas soluções se $a=4$ e $b=3$. Nesse caso, o conjunto solução $S$ é:
+$$S\ =\ \biggl\{ (x,y,z) = \left(2-2y, y , \dfrac{1}{2}\right)\ ,\ \forall y \in \R \biggr\} $$
+\end{itemize}
+\end{solution}
+
+% Exercício 14
+\begin{problem} 
+Considere o seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+ x & + & ay & + &   z & = &  3\\
+2x & - &  y & + &   z & = &  a\\
+ax & + & 4y & + &  2z & = &  6
+\end{array} \right.$$
+\noindent Determine todos os valores de $a$ para os quais o sistema:
+\begin{itemize}
+\item[(a)] tem uma única solução;
+\item[(b)] não tem solução;
+\item[(c)] tem infinitas soluções. Nesse caso dê o conjunto solução do sistema.
+\end{itemize}
+\end{problem}
+\begin{solution}  Sabemos que o sistema linear $AX=B$ possui uma única solução quando $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  1 &  a &  \ 1  \\
+  2 & -1 &    1  \\ 
+  a &  4 &    2  \end{array}\right]\ =\ a^2-3a+2\ . $$
+Portanto o sistema possui uma única solução quando $a^2-3a+2 \neq 0$, ou seja, quando $a\neq 1$ e $a\neq 2$.
+Vamos analisar agora o que acontece com os casos $a=1$ e $a=2$.
+
+\medskip
+Suponhamos inicialmente que $a=1$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+$$ \left[\begin{array}{rrrr|rr}
+  1 &  1 &  \ 1 & & &   3  \\
+  2 & -1 &    1 & & &   1  \\ 
+  1 &  4 &    2 & & &   6  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 2L_1$ e $L_3 \leftarrow L_3 - L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 &  1 &  1 & & &   3  \\
+  0 & -3 & -1 & & &  -5  \\ 
+  0 &  3 &  1 & & &   3 \end{array}\right] $$
+Efetuando a operação elementar $L_3 \leftarrow L_3 + L_2$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 &  1 &  1 & & &   3  \\
+  0 & -3 & -1 & & &  -5  \\ 
+  0 &  0 &  0 & & &  -2 \end{array}\right] $$
+A última linha desse sistema diz que $0x+0y+0z=-2$. Isso implica que nesse caso o sistema não admite solução alguma.
+
+\medskip
+Agora vamos analisar o caso $a=2$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+$$ \left[\begin{array}{rrrr|rr}
+  1 &  2 &  \ 1 & & &   3  \\
+  2 & -1 &    1 & & &   2  \\ 
+  2 &  4 &    2 & & &   6  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 2L_1$ e $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 &  2 &  1 & & &   3  \\
+  0 & -5 & -1 & & &  -4  \\ 
+  0 &  0 &  0 & & &   0  \end{array}\right] $$
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_2$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 &  0 & & &  -1  \\
+  0 & -5 & -1 & & &  -4  \\ 
+  0 &  0 &  0 & & &   0  \end{array}\right] $$
+Multiplicando a segunda linha por $-1$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 &  \ 0 & & &  -1  \\
+  0 &  5 &    1 & & &   4  \\ 
+  0 &  0 &    0 & & &   0  \end{array}\right] $$
+ Esta matriz não está na forma escalonada reduzida, mas já é possível concluir que nesse caso o sistema possui infinitas soluções.  Considerando $y$ como variável livre, podemos escrever $x=-1+3y$ e $z=4-5y$. O conjunto solução pode ser dado por
+$$S\ =\ \{ (x,y,z) = (-1+3y, y , 4-5y)\ ,\ \forall y \in \R \} $$
+\medskip
+Finalizando, as respostas deste exercício são:
+\begin{enumerate}
+\item[(a)] O sistema possui uma única solução quando $a \neq 1$ e $a \neq 2$.
+\item[(b)] O sistema não tem solução se $a=1$.
+\item[(c)] O sistema possui infinitas soluções se $a=2$. Nesse caso, o conjunto solução $S$ é:
+\begin{itemize} 
+\item se $x$ é variável livre,
+$\displaystyle S\ =\ \left\{ (x,y,z) = \left(x, \dfrac{x+1}{3}, \dfrac{7-5x}{3} \right)\ ,\ \forall x \in \R \right\} $
+\item se $y$ é variável livre, $S\ =\ \biggl\{ (x,y,z) = (-1+3y, y , 4-5y)\ ,\ \forall y \in \R \biggr\} $
+\item se $z$ é variável livre,
+$\displaystyle S\ =\ \left\{ (x,y,z) = \left( \dfrac{7-3z}{5} , \dfrac{4-z}{5} , z \right)\ ,\ \forall z \in \R \right\} $
+\end{itemize}
+\end{enumerate}
+\end{solution}
+
+% Exercício 15
+\begin{problem} 
+    Considere o seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+ x & - & 3y & + &  az & = &  14\\
+4x & + & ay & + &  6z & = &  20\\
+ x & + &  y & + &  2z & = &   a
+\end{array} \right.$$
+\noindent Determine todos os valores de $a$ para os quais o sistema:
+\begin{itemize}
+\item[(a)] tem uma única solução;
+\item[(b)] não tem solução;
+\item[(c)] tem infinitas soluções. Nesse caso dê o conjunto solução do sistema.
+\end{itemize}
+\end{problem}
+\begin{solution} Sabemos que o sistema linear $AX=B$ possui uma única solução quando $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  1 & -3 &  \ a  \\
+  4 &  a &    6  \\ 
+  1 &  1 &    2  \end{array}\right]\ =\ -a^2+6a\ . $$
+Portanto o sistema possui uma única solução quando $-a^2+6a \neq 0$, ou seja, quando $a\neq 0$ e $a\neq 6$.
+Vamos analisar agora o que acontece com os casos $a=0$ e $a=6$.
+
+\medskip
+Suponhamos inicialmente que $a=0$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 &  \ 0 & & &  14  \\
+  4 &  0 &    6 & & &  20  \\ 
+  1 &  1 &    2 & & &   0  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 4L_1$ e $L_3 \leftarrow L_3 - L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 & \ 0 & & &   14  \\
+  0 & 12 &   6 & & &  -36  \\ 
+  0 &  4 &   2 & & &  -14 \end{array}\right] $$
+Dividindo a segunda por $3$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 & \ 0 & & &   14  \\
+  0 &  4 &   2 & & &  -12  \\ 
+  0 &  4 &   2 & & &  -14 \end{array}\right] $$
+A segunda linha desta matriz aumentada significa que $4y+2z=-12$, enquanto que a terceira linha significa que $4y+2z=-14$.
+Como essas duas equações são inconsistentes, o sistema não possui solução para $a=0$.
+
+\medskip
+Agora vamos analisar o caso $a=6$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 & \ 6 & & &  14  \\
+  4 &  6 &   6 & & &  20  \\ 
+  1 &  1 &   2 & & &   6  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 4L_1$ e $L_3 \leftarrow L_3 - L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 &   6 & & &   14  \\
+  0 & 18 & -18 & & &  -36  \\ 
+  0 &  4 &  -4 & & &   -8  \end{array}\right] $$
+Dividindo a segunda linha por 18 e dividindo a terceira linha por 4 obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 & -3 &  6 & & &   14  \\
+  0 &  1 & -1 & & &   -2  \\ 
+  0 &  1 & -1 & & &   -2  \end{array}\right] $$
+Efetuando as operações elementares $L_1 \leftarrow L_1 + 3L_2$ e $L_3 \leftarrow L_3 - L_2$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+  1 & \ 0 &  3 & & &   8  \\
+  0 &   1 & -1 & & &  -2  \\ 
+  0 &   0 &  0 & & &   0  \end{array}\right] $$
+Esta matriz esta na forma escalonada reduzida. Considerando $z$ como variável livre, podemos escrever $x=8-3z$ e $y=-2+z$ e isso implica que o sistema possui infinitas soluções. O conjunto solução pode ser dado por
+$$S\ =\ \{ (x,y,z) = (8-3z, -2+z , z)\ ,\ \forall z \in \R \} $$
+
+\medskip
+Finalizando, as respostas deste exercício são:
+\begin{enumerate}
+\item[(a)] O sistema possui uma única solução quando $a \neq 0$ e $a \neq 6$.
+\item[(b)] O sistema não tem solução se $a=0$.
+\item[(c)] O sistema possui infinitas soluções se $a=6$. Nesse caso, o conjunto solução $S$ é
+\begin{itemize}
+\item se $x$ é variável livre,
+$S \displaystyle \ =\ \left\{ (x,y,z) = \left( x, \dfrac{2-x}{3} , \dfrac{8-x}{3}  \right)\ ,\ \forall x \in \R \right\} $
+\item se $y$ é variável livre, $S\ =\ \biggl\{ (x,y,z) = ( 2-3y , y , 2+y )\ ,\ \forall y \in \R \biggr\} $
+\item se $z$ é variável livre, $S\ =\ \biggl\{ (x,y,z) = (8-3z, -2+z , z)\ ,\ \forall z \in \R \biggr\} $
+\end{itemize}
+\end{enumerate}
+\end{solution}
+
+
+% Exercício 16
+\begin{problem}
+Determine condições sobre o coeficiente $a$ para que o sistema linear
+$$\left\{ \begin{array}{rrrrrrr}  3x & + & 2y & + &  z  &  =  &  -3 \\
+                                  ax & + &  y & - & 3z  &  =  &  -2 \\
+                                  2x & + & ay & + & 4z  &  =  &   3 \end{array}\right.$$
+possua uma única solução; infinitas soluções; e nenhuma solução.
+\end{problem}
+\begin{solution}
+Sabemos que o sistema linear $AX=B$ possui uma única solução quando $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  3 &  \ 2 &   1  \\
+  a &    1 &  -3  \\ 
+  2 &    a &   4  \end{array}\right]\ =\ a^2+a-2\ . $$
+Portanto o sistema possui uma única solução quando $a^2+a-2 \neq 0$, ou seja, quando $a\neq 1$ e $a\neq -2$.
+Vamos analisar agora o que acontece com os casos $a=1$ e $a=-2$.
+
+\medskip
+Suponhamos inicialmente que $a=1$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+$$ \left[\begin{array}{rrrr|rr}
+  3 &  \ 2 &    1 & & &   -3  \\
+  1 &    1 &   -3 & & &   -2  \\ 
+  2 &    1 &    4 & & &    3  \end{array}\right] $$
+Invertendo de posição a primeira e a segunda linha obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 &  \ 1 &   -3 & & &   -2  \\ 
+  3 &    2 &    1 & & &   -3  \\
+  2 &    1 &    4 & & &    3
+\end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 3L_1$ e $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 &    1 &   -3 & & &   -2  \\ 
+  0 &   -1 &   10 & & &    3  \\
+  0 &   -1 &   10 & & &    7
+\end{array}\right] $$
+
+A segunda linha desta matriz aumentada significa que $-y+10z=3$, enquanto que a terceira linha significa que $-y+10z=7$.
+Como essas duas equações são inconsistentes, o sistema não possui solução para $a=1$.
+
+\medskip
+Agora vamos analisar o caso $a=-2$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  3 &    2 &    1 & & &   -3  \\
+ -2 &    1 &   -3 & & &   -2  \\ 
+  2 &   -2 &    4 & & &    3  \end{array}\right] $$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_2$ obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 &    3 &   -2 & & &   -5  \\
+ -2 &    1 &   -3 & & &   -2  \\ 
+  2 &   -2 &    4 & & &    3  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 + 2L_1$ e $L_3 \leftarrow L_3 - 2L_1$ obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 &    3 &   -2 & & &   -5  \\
+  0 &    7 &   -7 & & &  -12  \\ 
+  0 &   -8 &    8 & & &   13  \end{array}\right] $$
+
+A segunda linha desta matriz aumentada significa que $7y-7z=-12$, enquanto que a terceira linha significa que $-8y+8z=13$.
+Como essas duas equações são inconsistentes, o sistema não possui solução para $a=-2$.
+
+\medskip
+Finalizando, as respostas deste exercício são:
+\begin{enumerate}
+\item[(a)] O sistema possui uma única solução quando $a \neq 1$ e $a \neq -2$.
+\item[(b)] O sistema não tem solução se $a=1$ e o sistema não tem solução para $a=-2$.
+\item[(c)] Não existe valor de $a$ para o qual o sistema possua infinitas soluções.
+\end{enumerate}
+\end{solution}
+
+% Exercício 17
+\begin{problem} 
+Considere o seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+
+$$\left\{\begin{array}{rrrrrrr}
+5x & + & ay & - &  2z & = &  1\\
+ax & + & 3y & + &  3z & = &  b\\
+2x & + & 4y & - &   z & = &  0
+\end{array} \right.$$\noindent Determine todos os valores de $a$ e $b$ para os quais o sistema:
+\begin{itemize}
+\item[(a)] tem uma única solução;
+\item[(b)] não tem solução;
+\item[(c)] tem infinitas soluções. Aqui dê o conjunto solução do sistema linear.
+\end{itemize}
+\end{problem}
+\begin{solution}
+Sabemos que o sistema linear $AX=B$ possui uma única solução quando $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  5 & \ a &   -2  \\
+  a &   3 &    3  \\ 
+  2 &   4 &   -1  \end{array}\right]\ =\ a^2-2a-63\ . $$
+
+Portanto o sistema possui uma única solução quando $a^2-2a-63 \neq 0$, ou seja, quando $a\neq 9$ e $a\neq -7$.
+
+\bigskip
+Vamos analisar agora o que acontece com os casos $a=9$ e $a=-7$.
+
+\bigskip
+Suponhamos inicialmente que $a=9$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  5 & \ 9 &   -2 & & &   1  \\
+  9 &   3 &    3 & & &   b  \\ 
+  2 &   4 &   -1 & & &   0  \end{array}\right] $$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 - 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+  1  & \ 1  &   0   & & &   1  \\
+  9  &   3  &   3   & & &   b  \\ 
+  2  &   4  &  -1   & & &   0  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 9L_1$  e  $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1  &   1  &   0   & & &   1    \\
+  0  &  -6  &   3   & & &   b-9  \\ 
+  0  &   2  &  -1   & & &   -2     \end{array}\right] $$
+
+Efetuando a operação elementar $L_2 \leftarrow L_2 + 3L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1  & \ 1  &   0   & & &   1    \\
+  0  &   0  &   0   & & &   b-15  \\ 
+  0  &   2  &  -1   & & &   -2     \end{array}\right] $$
+
+Invertendo as posições da segunda e da terceira linha obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1  & \ 1  &   0   & & &   1    \\
+  0  &   2  &  -1   & & &  -2  \\ 
+  0  &   0  &   0   & & &   b-15     \end{array}\right] $$
+
+A última equação dessa matriz nos diz que o sistema não tem solução se $b \neq 15$.
+Por outro lado, se $b=15$, obtemos o seguinte sistema linear
+
+$$\left\{\begin{array}{rrrrrrr}
+ x & + &  y &   &     & = &  1\\
+   &   & 2y & - &   z & = & -2\\  \end{array} \right.$$\noindent Considerando $y$ como variável livre, obtemos $x=1-y$ e $z=2+2y$. Nesse caso o sistema possui infinitas soluções, e o conjunto solução $S$ pode ser representado da seguinte maneira.
+
+$$S\ =\ \left\{ (x,y,z) = (1-y, y , 2+2y)\ ,\ \forall y \in \R \right\} $$
+
+\bigskip
+Agora vamos analisar o caso $a=-7$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  5 &  -7 &   -2 & & &   1  \\
+ -7 &   3 &    3 & & &   b  \\ 
+  2 &   4 &   -1 & & &   0  \end{array}\right] $$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 - 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 &  -15 &    0  & & &   1  \\
+ -7 &    3 &    3  & & &   b  \\ 
+  2 &    4 &   -1  & & &   0  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 + 7L_1$  e  $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1 &   -15  &    0  & & &   1    \\
+  0 &  -102  &    3  & & &   b+7  \\ 
+  0 &    34  &   -1  & & &   -2   \end{array}\right] $$
+
+Efetuando a operação elementar $L_2 \leftarrow L_2 + 3L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1 &   -15  &    0  & & &   1    \\
+  0 &     0  &    0  & & &   b+1  \\ 
+  0 &    34  &   -1  & & &   -2   \end{array}\right] $$
+
+Invertendo as posições da segunda e da terceira linha obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1 &   -15  &    0  & & &    1   \\
+  0 &    34  &   -1  & & &   -2   \\ 
+  0 &     0  &    0  & & &   b+1   \end{array}\right] $$
+
+A última equação dessa matriz nos diz que o sistema não tem solução se $b \neq -1$.
+Por outro lado, se $b=-1$, obtemos o seguinte sistema linear
+
+$$\left\{\begin{array}{rrrrrrr}
+ x & - &  15y &   &     & = &  1\\
+   &   &  34y & - &   z & = & -2\\  \end{array} \right.$$\noindent 
+Considerando $y$ como variável livre, obtemos $x=1+15y$ e $z=2+34y$. Nesse caso o sistema possui infinitas soluções, e o conjunto solução $S$ pode ser representado da seguinte maneira.
+
+$$S\ =\ \left\{ (x,y,z) = (1+15y, y , 2+34y)\ ,\ \forall y \in \R \right\} $$
+
+\bigskip
+Em resumo, as respostas dessa questão podem ser:
+
+\bigskip
+\begin{enumerate}
+\item[(a)] O sistema possui uma única solução quando $a \neq 9$ e $a \neq -7$.
+\item[(b)] O sistema não tem solução se $a=9$ e $b \neq 15$ ou se $a=-7$ e $b\neq -1$.
+\item[(c)] O sistema possui infinitas soluções se $a=9$ e $b=15$. Nesse caso, o conjunto solução $S$ é:
+$$S\ =\ \left\{ (x,y,z) = (1-y, y , 2+2y)\ ,\ \forall y \in \R \right\} $$
+
+O sistema também possui infinitas soluções se $a=-7$ e $b=-1$.  Nesse caso, o conjunto solução $S$ é:
+$$S\ =\ \left\{ (x,y,z) = (1+15y, y , 2+34y)\ ,\ \forall y \in \R \right\} $$
+\end{enumerate}
+\end{solution}
+
+% Exercício 18
+\begin{problem} 
+Considere o seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+
+$$
+\left\{\begin{array}{rrrrrrr}
+3x & + & 4y & + &  az & = &  1\\
+ax & + &  y & + &  3z & = &  b\\
+2x & + & 3y & - &  2z & = &  1
+\end{array} \right.$$\noindent Determine todos os valores de $a$ e $b$ para os quais o sistema:
+\begin{itemize}
+\item[(a)] tem uma única solução;
+\item[(b)] não tem solução;
+\item[(c)] tem infinitas soluções. Aqui dê o conjunto solução do sistema linear.
+\end{itemize}
+\end{problem}
+\begin{solution}
+Sabemos que o sistema linear $AX=B$ possui uma única solução quando $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  3 & \ 4 &    a  \\
+  a &   1 &    3  \\ 
+  2 &   3 &   -2  \end{array}\right]\ =\ 3a^2 + 6a - 9 \ . $$
+
+Portanto o sistema possui uma única solução quando $3a^2 + 6a - 9 \neq 0$, ou seja, quando $a\neq 1$ e $a\neq -3$.
+
+\bigskip
+Vamos analisar agora o que acontece com os casos $a=1$ e $a=-3$.
+
+\bigskip
+Suponhamos inicialmente que $a=1$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  3 & \ 4 &    1  & & &   1  \\
+  1 &   1 &    3  & & &   b  \\ 
+  2 &   3 &   -2  & & &   1  \end{array}\right] $$
+
+Invertendo a posição da primeira e da segunda linha obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 & \ 1 &    3  & & &   b  \\ 
+  3 &   4 &    1  & & &   1  \\
+  2 &   3 &   -2  & & &   1  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 3L_1$  e  $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 1 &    3  & & &   b  \\ 
+  0 &   1 &   -8  & & &   1-3b  \\
+  0 &   1 &   -8  & & &   1-2b  \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 - L_2$  e   $L_3 \leftarrow L_3 - L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 0 &   11  & & &  -1+4b     \\ 
+  0 &   1 &   -8  & & &   1-3b  \\
+  0 &   0 &    0  & & &   b     \end{array}\right] $$
+
+A última equação dessa matriz nos diz que o sistema não tem solução se $b \neq 0$.
+Por outro lado, se $b=0$, obtemos o seguinte sistema linear
+
+$$\left\{\begin{array}{rrrrrrr}
+ x &   &    & + & 11z & = & -1 \\
+   &   &  y & - &  8z & = &  1 \\  \end{array} \right.$$\noindent 
+Considerando $z$ como variável livre, obtemos $x=-1-11z$ e $y=1+8z$. Nesse caso o sistema possui infinitas soluções, e o conjunto solução $S$ pode ser representado da seguinte maneira.
+
+$$S\ =\ \left\{ (x,y,z) = (-1-11z, 1+8z , z)\ ,\ \forall z \in \R \right\} $$
+
+\bigskip
+Agora vamos analisar o caso $a=-3$. Substituindo este valor na matriz aumentada do sistema linear dado obtemos
+
+$$ \left[\begin{array}{rrrr|rr}
+  3 & \ 4 &   -3 & & &   1  \\
+ -3 &   1 &    3 & & &   b  \\ 
+  2 &   3 &   -2 & & &   1  \end{array}\right] $$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 - L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 & \ 1 &   -1 & & &   0  \\
+ -3 &   1 &    3 & & &   b  \\ 
+  2 &   3 &   -2 & & &   1  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 + 3L_1$  e   $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 & \ 1 &   -1 & & &   0  \\
+  0 &   4 &    0 & & &   b  \\ 
+  0 &   1 &    0 & & &   1  \end{array}\right] $$
+
+Invertendo as posições da segunda e da terceira linha obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+  1 & \ 1 &   -1 & & &   0  \\
+  0 &   1 &    0 & & &   1  \\ 
+  0 &   4 &    0 & & &   b  \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 - L_2$  e   $L_3 \leftarrow L_3 - 4L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 0 &   -1 & & &  -1    \\
+  0 &   1 &    0 & & &   1    \\ 
+  0 &   0 &    0 & & &   b-4  \end{array}\right] $$
+
+A última equação dessa matriz nos diz que o sistema não tem solução se $b \neq 4$.
+Por outro lado, se $b=4$, obtemos o seguinte sistema linear
+
+$$\left\{\begin{array}{rrrrrrr}
+ x &   &    & - &   z & = & -1 \\
+   &   &  y &   &     & = &  1 \\  \end{array} \right.$$\noindent 
+Considerando $z$ como variável livre, obtemos $x=-1+z$ e $y=1$. Nesse caso o sistema possui infinitas soluções, e o conjunto solução $S$ pode ser representado da seguinte maneira.
+
+$$S\ =\ \left\{ (x,y,z) = (-1+z, 1 , z)\ ,\ \forall z \in \R \right\} $$
+
+\bigskip
+Em resumo, as respostas dessa questão podem ser:
+
+\bigskip
+\begin{enumerate}
+\item[(a)] O sistema possui uma única solução quando $a \neq 1$ e $a \neq -3$.
+\item[(b)] O sistema não tem solução se $a=1$ e $b \neq 0$ ou se $a=-3$ e $b\neq 4$.
+\item[(c)] O sistema possui infinitas soluções se $a=1$ e $b=0$. Nesse caso, o conjunto solução $S$ é:
+$$S\ =\ \left\{ (x,y,z) = (-1-11z, 1+8z , z)\ ,\ \forall z \in \R \right\} $$
+
+O sistema também possui infinitas soluções se $a=-3$ e $b=4$.  Nesse caso, o conjunto solução $S$ é:
+$$S\ =\ \left\{ (x,y,z) = (-1+z, 1 , z)\ ,\ \forall z \in \R \right\} $$
+\end{enumerate}
+\end{solution}
+
+% Exercício 19
+\begin{problem}
+Determine condições sobre $a$ e $b$ para que o sistema linear
+$$\left\{ \begin{array}{rrrrrrr}  ax &   &    & + & 2z  &  =  &  2 \\
+                                  5x & + & 2y &   &     &  =  &  1 \\
+                                  x  & - & 2y & + & bz  &  =  &  3 \end{array}\right.$$
+possua uma única solução; infinitas soluções; e nenhuma solução.
+\end{problem}
+\begin{solution}
+Para analisar esse sistema linear, vamos escalonar a matriz aumentada.
+$$ \left[\begin{array}{rrrr|rr}
+  a &    0 &  \ 2 & & &  \ 2  \\
+  5 &    2 &    0 & & &    1  \\ 
+  1 &   -2 &    b & & &    3  \end{array}\right] $$
+Invertendo de posição a primeira e a terceira linha obtemos
+$$ \left[\begin{array}{rrrr|rr}
+  1 &   -2 &  \ b & & &  \ 3  \\
+  5 &    2 &    0 & & &    1  \\ 
+	a &    0 &    2 & & &    2  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 5L_1$ e $L_3 \leftarrow L_3 - aL_1$ obtemos
+$$ \left[\begin{array}{rrcr|rc}
+  1 &  \ \ -2 \ \  &    b       & & &    3   \\
+  0 &  \ \ 12 \ \  &  -5b       & & &  -14   \\ 
+	0 &  \ \ 2a \ \  & \  2-ab \  & & &  2-3a  \end{array}\right] $$
+Efetuando a operação elementar $\dps L_3 \leftarrow L_3 - \dfrac{a}{6} L_2$ obtemos
+$$ \left[\begin{array}{rrcr|rc}
+  1 &  \ \  -2 \ \ &    b                  & & &    3              \\[8pt]
+  0 &  \ \  12 \ \ &  -5b                  & & &  -14              \\[9pt] 
+	0 &  \ \  0  \ \ &  \ 2-\dfrac{ab}{6} \  & & &  2-\dfrac{2a}{3}  \end{array}\right] $$
+Multiplicando a terceira linha por $6$ obtemos
+$$ \left[\begin{array}{rrcr|rc}
+  1 &  \ \  -2 \ \ &    b                & & &    3              \\
+  0 &  \ \  12 \ \ &  -5b                & & &  -14              \\
+	0 &  \ \   0 \ \ &  \ 12-ab   \        & & &  12-4a            \end{array}\right] $$
+Observe que essa matriz esta na forma triangular e que a terceira linha significa a equação
+$$(12-ab)z = 12-4a$$
+Dessa equação podemos concluir que
+\begin{itemize}
+\item O sistema tem uma única solução se $12-ab \neq 0$.
+\item O sistema não tem solução se $12-ab=0$ e se $12-4a \neq 0$.
+\item O sistema tem infinitas soluções se $12-ab=0$ e se $12-4a=0$.
+\end{itemize}
+Resolvendo essas equações concluímos, finalmente, que
+\begin{itemize}
+\item O sistema tem uma única solução se $ab \neq 12$.
+\item O sistema não tem solução se $ab=12$ mas $a \neq 3$ e $b \neq 4$.
+\item O sistema tem infinitas soluções se $a = 3$ e se $b = 4$.
+\end{itemize}
+\end{solution}
+
+% Exercício 20
+\begin{problem}
+Dê um exemplo de uma matriz não diagonal $A_{2 \times 2}$ tal que $A^{-1} = A$.
+\end{problem}
+\begin{solution}
+Calculando o determinante dos dois lados da igualdade $A^{-1} = A$ obtemos
+$\dfrac{1}{\det(A)} = \det(A)$. Daí segue que $\det(A)^2 = 1$ e portanto $\det(A) = \pm 1$. 
+Logo, se existir uma tal matriz, essa deve ter determinante igual a $1$ ou igual a $-1$. 
+Para começar, vamos procurar uma tal matriz $A$ supondo que $\det(A)=1$.
+De modo geral, se
+$$A = \left[\begin{array}{rr} a & b \\ c & d \end{array}\right]$$
+então
+$$A^{-1} = \dfrac{1}{ad-bc} \left[\begin{array}{rr} d & -b \\ -c & a \end{array}\right]$$
+Para $\det(A)=1$ a igualdade $A^{-1} = A$ toma a forma
+$$\left[\begin{array}{rr} d & -b \\ -c & a \end{array}\right] \ = \
+  \left[\begin{array}{rr} a &  b \\  c & d \end{array}\right]$$
+Isso implica que $a=d$ e $b=c=0$. Logo $A$ é um múltiplo da matriz identidade. Como o determinante de $A$ é igual a 1, nesse caso obtemos apenas duas possibilidades: $A=$Id ou $A=-$Id.
+
+\medskip
+Agora vamos procurar uma matriz $A$ supondo que $\det(A)=-1$.
+Nesse caso a igualdade $A^{-1} = A$ toma a forma
+$$\left[\begin{array}{rr} -d &  b \\  c & -a \end{array}\right] \ = \
+  \left[\begin{array}{rr}  a &  b \\  c &  d \end{array}\right]$$
+Daqui obtemos a restrição $d=-a$. Assim, qualquer matriz $A$ com determinante $-1$ e que tem a seguinte forma é tal que $A^{-1} = A$.
+$$A = \left[\begin{array}{rr} a & b \\ c & -a \end{array}\right]$$
+Para um exemplo numérico considere $a=2$, $b=-1$ e $c=3$.
+$$A = \left[\begin{array}{rr} 2 & -1 \\ 3 & -2 \end{array}\right]$$
+\end{solution}
+
+
+% Exercício 21
+\begin{problem}
+Dê exemplo de matrizes $2 \times 2$ não nulas $A$, $B$ e $C$ tais que
+$$AB=AC \ \  {\rm e}\ \ B \neq C\, .$$
+É possível construir um tal exemplo com $\det(A) \neq 0$ ?
+\end{problem}
+\begin{solution}
+Para começar, observe que se $A$ tem inversa, então podemos multiplicar a igualdade
+$AB=AC$ pela matriz $A^{-1}$ pelo lado esquerdo para concluir que $B=C$. Logo, se $\det(A) \neq 0$, então vale a lei do cancelamento explicitada nessa questão. Entretanto, se $A$ não é uma  matriz invertível isso não é verdade. Considere por exemplo as matrizes
+$$A = \left[\begin{array}{rr} 1 & 0 \\ 0 & 0 \end{array}\right]\ \ \ \ 
+  B = \left[\begin{array}{rr} 1 & 2 \\ 3 & 4 \end{array}\right]\ \ \ \ 
+	C = \left[\begin{array}{rr} 1 & 2 \\ 5 & 6 \end{array}\right]$$
+Nesse caso $B \neq C$ mas 
+$$AB = AC = \left[\begin{array}{rr} 1 & 2 \\ 0 & 0 \end{array}\right]$$
+\end{solution}
+
+% Exercício 22
+\begin{problem}
+Dada uma matriz quadrada $A$, mostre que a matriz $B=AA^t$ é uma matriz {\bf simétrica}. Isto é, mostre que $B^t=B$.
+\end{problem}
+\begin{solution}
+Lembre-se da seguinte propriedade da matriz transposta
+$$(XY)^t = Y^t X^t$$
+Calculando a transposta da matriz $B$ obtemos
+$$B^t\ =\ (A A^t)^t\ =\  \left(A^t\right)^t A^t\ =\ A A^t\ =\ B$$
+Como $B^t=B$ concluímos que $B$ é uma matriz simétrica.
+\end{solution}
+
+% Exercício 23
+\begin{problem}
+Sejam $A$ e $B$ matrizes quadradas tais que $\det(AB)=0$. Mostre que ou $A$ é não invertível ou $B$ é não invertível.
+\end{problem}
+\begin{solution}
+Temos que 
+$$\det(AB) = \det(A) \det(B) = 0$$
+Daí segue que ou $\det(A)=0$ ou $\det(B)=0$. 
+Logo $A$ não tem inversa ou $B$ não tem inversa.
+\end{solution}
+
+% Exercício 24
+\begin{problem}
+Existe uma matriz quadrada $A$ tal que $A$ tem inversa, mas $A^2$ não tem inversa?
+\end{problem}
+\begin{solution}
+Não existe uma tal matriz. De fato, se $A$ tem inversa, então $\det(A)\neq 0$.
+Daí $\det(A^2) = \det(A)^2 \neq 0$ e portanto $A^2$ também tem inversa.
+\end{solution}
+
+% Exercício 25
+\begin{problem}
+Uma matriz é chamada de {\bf ortogonal} se a sua inversa é igual a sua transposta. 
+Mostre que se $A$ é uma matriz ortogonal, então $\det(A) = \pm 1$.
+\end{problem}
+\begin{solution}
+Se $A$ é uma matriz ortogonal então $A^{-1} = A^t$.
+Calculando o determinante dos dois lados dessa igualdade concluímos que 
+$$\dfrac{1}{\det(A)} = \det(A^t)$$
+Como $\det(A^t)=\det(A)$, obtemos $\det(A)^2$=1. Daí $\det(A) = \pm 1$.
+\end{solution}

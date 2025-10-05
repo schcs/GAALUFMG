@@ -1,0 +1,951 @@
+% -----------------------------------------------------------------------------
+% Lista 03 - Sistemas Lineares e Matriz Inversa (verbatim import)
+% Fonte: Lista03_sistemas_lineares_solucao.tex
+% -----------------------------------------------------------------------------
+
+% Exercício 1
+\begin{problem}
+Calcule a solução do seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+ 3x & + & 4y & - & 2z & = & 2 \\
+-2x & - & 5y & + & 2z & = & 1 \\
+ 4x & - & 2y & - &  z & = & 4 \end{array}\right. $$
+\end{problem}
+\begin{solution}
+A matriz aumentada do sistema linear dado é
+$$ \left[\begin{array}{rrrr|rr}
+	3 &   4 &  -2 & & &   2  \\
+ -2 &  -5 &   2 & & &   1  \\ 
+	4 &  -2 &  -1 & & &   4  \end{array}\right] $$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 &   0 & & &   3  \\
+ -2 &  -5 &   2 & & &   1  \\ 
+	4 &  -2 &  -1 & & &   4  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 + 2L_1$ e $L_3 \leftarrow L_3 - 4L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 &   0 & & &   3  \\
+	0 &  -7 &   2 & & &   7  \\ 
+	0 &   2 &  -1 & & &  -8  \end{array}\right] $$
+
+Efetuando a operação elementar $L_2 \leftarrow L_2 + 4L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 &   0 & & &    3  \\
+	0 &   1 &  -2 & & &  -25  \\ 
+	0 &   2 &  -1 & & &   -8  \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 + L_2$ e $L_3 \leftarrow L_3 - 2L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 &  -2 & & &  -22  \\
+	0 &    1 &  -2 & & &  -25  \\ 
+	0 &    0 &   3 & & &   42  \end{array}\right] $$
+
+Dividindo a terceira linha por 3 obtemos:
+
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 &  -2 & & &  -22  \\
+	0 &    1 &  -2 & & &  -25  \\ 
+	0 &    0 &   1 & & &   14  \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 + 2L_3$ e $L_2 \leftarrow L_2 + 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 & \  0 & & &    6  \\
+	0 &    1 &    0 & & &    3  \\ 
+	0 &    0 &    1 & & &   14  \end{array}\right] $$
+
+Como obtivemos a matriz identidade do lado esquerdo, segue que a solução é a coluna da direita desta matriz. 
+Portanto a solução do sistema linear dado é $x=6$, $y=3$ e $z=14$.
+\end{solution}
+
+% Exercício 2
+\begin{problem}
+Calcule a solução do seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+ 4x & - & 3y & - & 2z & = &   8 \\
+ 3x & + & 2y & - & 4z & = &   9 \\
+ 2x & + &  y & + & 6z & = &  10 \end{array}\right. $$
+\end{problem}
+\begin{solution}
+A matriz aumentada do sistema linear dado é
+$$ \left[\begin{array}{rrrr|rr}
+	4 &  -3 &   -2 & & &   8  \\
+	3 &   2 &   -4 & & &   9  \\ 
+	2 &   1 &    6 & & &  10  \end{array}\right] $$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 - L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -5 &    2 & & &  -1  \\
+	3 &   2 &   -4 & & &   9  \\ 
+	2 &   1 &    6 & & &  10  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 3L_1$ e $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -5 &    2 & & &  -1  \\
+	0 &  17 &  -10 & & &  12  \\ 
+	0 &  11 &    2 & & &  12  \end{array}\right] $$
+
+Efetuando a operação elementar $L_2 \leftarrow L_2 - L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -5 &    2 & & &  -1  \\
+	0 &   6 &  -12 & & &   0  \\ 
+	0 &  11 &    2 & & &  12  \end{array}\right] $$
+
+Dividindo a segunda linha por 6 obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -5 &    2 & & &  -1  \\
+	0 &   1 &   -2 & & &   0  \\ 
+	0 &  11 &    2 & & &  12  \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 + 5L_2$ e $L_3 \leftarrow L_3 - 11L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \ 0 &   -8 & & &  -1  \\
+	0 &   1 &   -2 & & &   0  \\ 
+	0 &   0 &   24 & & &  12  \end{array}\right] $$
+
+Dividindo a terceira linha por 24 obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \ 0 &   -8 & & &  -1            \\[10pt]
+	0 &   1 &   -2 & & &   0            \\[10pt] 
+	0 &   0 &    1 & & &  \dfrac{1}{2}  \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 + 8L_3$ e $L_2 \leftarrow L_2 + 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \ 0 & \  0 & & &   3            \\[10pt]
+	0 &   1 &    0 & & &   1            \\[10pt] 
+	0 &   0 &    1 & & &  \dfrac{1}{2}  \end{array}\right] $$
+
+
+Como obtivemos a matriz identidade do lado esquerdo, segue que a solução é a coluna da direita desta matriz. 
+Portanto a solução do sistema linear dado é
+$$x=3 \ \ \ \ \ \ y=1\ \ \ \ \ \ \ z=\dfrac{1}{2}$$
+\end{solution}
+
+% Exercício 3
+\begin{problem}
+Calcule a solução do seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+10x & - & 3y & + & 4z & = & 6 \\
+ 5x & + &  y & + & 2z & = & 1 \\
+ 2x & + &  y & + &  z & = & 0 \end{array}\right. $$
+\end{problem}
+\begin{solution}
+A matriz aumentada do sistema linear dado é
+$$ \left[\begin{array}{rrrr|rr}
+ 10 &  -3 & \  4 & & &   6  \\
+	5 &   1 &    2 & & &   1  \\ 
+	2 &   1 &    1 & & &   0  \end{array}\right] $$
+
+Efetuando a operação elementar $L_2 \leftarrow L_2 - 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+ 10 &  -3 & \  4 & & &   6  \\
+	1 &  -1 &    0 & & &   1  \\ 
+	2 &   1 &    1 & & &   0  \end{array}\right] $$
+
+Invertendo de posição a primeira e a segunda linha obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 & \  0 & & &   1  \\ 
+ 10 &  -3 &    4 & & &   6  \\
+	2 &   1 &    1 & & &   0  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 10L_1$ e $L_3 \leftarrow L_3 - 2L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 & \  0 & & &   1  \\ 
+	0 &   7 &    4 & & &  -4  \\
+	0 &   3 &    1 & & &  -2  \end{array}\right] $$
+
+Efetuando a operação elementar $L_2 \leftarrow L_2 - 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 & \  0 & & &   1  \\ 
+	0 &   1 &    2 & & &   0  \\
+	0 &   3 &    1 & & &  -2  \end{array}\right] $$
+
+	Efetuando as operações elementares $L_1 \leftarrow L_1 + L_2$ e $L_3 \leftarrow L_3 - 3L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 &   2 & & &   1  \\ 
+	0 &    1 &   2 & & &   0  \\
+	0 &    0 &  -5 & & &  -2  \end{array}\right] $$
+
+Dividindo a terceira linha por $-5$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 & \  2 & & &   1             \\[8pt]
+	0 &    1 &    2 & & &   0             \\[8pt]
+	0 &    0 &    1 & & &   \dfrac{2}{5}  \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 - 2L_3$ e $L_2 \leftarrow L_2 - 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 & \  0 & & &    \dfrac{1}{5}        \\[13pt]
+	0 &    1 &    0 & & &   -\dfrac{4}{5}        \\[13pt]
+	0 &    0 &    1 & & &    \dfrac{2}{5}        \end{array}\right] $$
+
+Como obtivemos a matriz identidade do lado esquerdo, segue que a solução é a coluna da direita desta matriz. 
+Portanto a solução do sistema linear dado é
+$$x=\dfrac{1}{5} \ \ \ \ \ \ y = -\dfrac{4}{5} \ \ \ \ \ \ z=\dfrac{2}{5}$$
+\end{solution}
+
+% Exercício 4
+\begin{problem}
+Calcule a solução do seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+ 6x & + & 8y & - &  z & = &  3 \\
+ 4x & - & 6y & + &  z & = &  8 \\
+ 9x & - & 4y & - &  z & = &  0 \end{array}\right. $$
+\end{problem}
+\begin{solution}
+A matriz aumentada do sistema linear dado é
+$$ \left[\begin{array}{rrrr|rr}
+	6 &   8 &   -1 & & &   3  \\
+	4 &  -6 &    1 & & &   8  \\ 
+	9 &  -4 &   -1 & & &   0  \end{array}\right] $$
+
+Efetuando a operação elementar $L_3 \leftarrow L_3 - 2L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	6 &   8 &   -1 & & &    3  \\
+	4 &  -6 &    1 & & &    8  \\ 
+	1 &   8 &   -3 & & &  -16  \end{array}\right] $$
+
+Invertendo a primeira e a terceira linha obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &   8 &   -3 & & &  -16  \\
+	4 &  -6 &    1 & & &    8  \\ 
+	6 &   8 &   -1 & & &    3  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 4L_1$ e $L_3 \leftarrow L_3 - 6L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &    8 &   -3 & & &  -16  \\
+	0 &  -38 &   13 & & &   72  \\ 
+	0 &  -40 &   17 & & &   99  \end{array}\right] $$
+
+Efetuando a operação elementar $L_2 \leftarrow L_2 - L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &    8 &   -3 & & &  -16  \\
+	0 &    2 &   -4 & & &  -27  \\ 
+	0 &  -40 &   17 & & &   99  \end{array}\right] $$
+
+Dividindo a segunda linha por 2 obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &    8 &   -3 & & &  -16             \\[12pt]
+	0 &    1 &   -2 & & &  -\dfrac{27}{2}  \\[12pt] 
+	0 &  -40 &   17 & & &   99             \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 - 8L_2$ e $L_3 \leftarrow L_3 + 40L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 &   13 & & &  92               \\[12pt]
+	0 &    1 &   -2 & & &  -\dfrac{27}{2}   \\[12pt] 
+	0 &    0 &  -63 & & &  -441             \end{array}\right] $$
+
+Dividindo a terceira linha por $-63$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \  0 &   13 & & &  92               \\[12pt]
+	0 &    1 &   -2 & & &  -\dfrac{27}{2}   \\[12pt] 
+	0 &    0 &    1 & & &  7                \end{array}\right] $$
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 - 13L_3$ e $L_2 \leftarrow L_2 + 2L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rc}
+	1 & \  0 & \  0 & & &  1               \\[12pt]
+	0 &    1 &    0 & & &  \dfrac{1}{2}    \\[12pt] 
+	0 &    0 &    1 & & &  7                \end{array}\right] $$
+
+Como obtivemos a matriz identidade do lado esquerdo, segue que a solução é a coluna da direita desta matriz. 
+Portanto a solução do sistema linear dado é
+$$x=1 \ \ \ \ \ \ y = \dfrac{1}{2} \ \ \ \ \ \ z=7$$
+\end{solution}
+
+% Exercício 5
+\begin{problem}
+Mostre que o seguinte sistema linear nas incógnitas $x$, $y$ e $z$ não tem solução.
+$$\left\{\begin{array}{rrrrrrr}
+ 4x & + & 2y & + & 8z & = &  3 \\
+ 6x & - & 3y & + & 4z & = & -5 \\
+ 5x & + &  y & + & 8z & = &  1 \end{array}\right. $$
+\end{problem}
+\begin{solution}
+Vamos tentar obter a solução do sistema linear dado escalonando sua matriz aumentada:
+$$ \left[\begin{array}{rrrr|rr}
+	4 &   2 & \  8 & & &   3  \\
+	6 &  -3 &    4 & & &  -5  \\ 
+	5 &   1 &    8 & & &   1  \end{array}\right] $$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 - L_3$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+ -1 &   1 & \  0 & & &   2  \\
+	6 &  -3 &    4 & & &  -5  \\ 
+	5 &   1 &    8 & & &   1  \end{array}\right] $$
+
+Multiplicando a primeira linha por $-1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 & \  0 & & &  -2  \\
+	6 &  -3 &    4 & & &  -5  \\ 
+	5 &   1 &    8 & & &   1  \end{array}\right] $$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 6L_1$ e $L_3 \leftarrow L_3 - 5L_1$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 & \  0 & & &  -2  \\
+	0 &   3 &    4 & & &   7  \\
+	0 &   6 &    8 & & &  11  \end{array}\right] $$
+
+Multiplicando a segunda linha por 2 obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 & \  0 & & &  -2  \\
+	0 &   6 &    8 & & &  14  \\
+	0 &   6 &    8 & & &  11  \end{array}\right] $$
+
+Efetuando a operação elementar $L_3 \leftarrow L_3 - L_2$ obtemos:
+
+$$ \left[\begin{array}{rrrr|rr}
+	1 &  -1 & \  0 & & &  -2  \\
+	0 &   6 &    8 & & &  14  \\
+	0 &   0 &    0 & & &  -3  \end{array}\right] $$
+
+A última linha dessa matriz significa a equação $0x + 0y + 0z = -3$ que não tem solução.
+Portanto o sistema linear dado não tem solução.
+\end{solution}
+
+% Exercício 6
+\begin{problem}
+Considere o seguinte sistema linear nas incógnitas $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+  x & - & 2y & + & 5z & = & a \\
+ 4x & - & 5y & + & 8z & = & b \\
+-3x & + & 3y & - & 3z & = & c \end{array}\right. $$
+Determine condições sobre $a$, $b$ e $c$ para que este sistema admita alguma solução. 
+Neste caso este sistema possui uma única solução ou ele possui infinitas soluções? \linebreak
+Dê o conjunto solução deste sistema linear.
+\end{problem}
+\begin{solution}
+A matriz aumentada do sistema linear dado é
+$$ \left[\begin{array}{rrrr|rc}
+  1 &  -2 &   5 & & &   a  \\
+  4 &  -5 &   8 & & &   b  \\ 
+ -3 &   3 &  -3 & & &   c  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 4L_1$ e $L_3 \leftarrow L_3 + 3L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rc}
+  1 &  -2 &    5 & & &   a      \\
+  0 &   3 &  -12 & & &   -4a+b  \\ 
+  0 &  -3 &   12 & & &   3a+c   \end{array}\right] $$
+Dividindo a segunda linha por 3 obtemos
+$$ \left[\begin{array}{rrrr|rc}
+  1 &  -2 &    5 & & &   a                  \\[6pt]
+  0 &   1 &   -4 & & &   \dfrac{-4a+b}{3}   \\[10pt] 
+  0 &  -3 &   12 & & &   3a+c               \end{array}\right] $$
+Efetuando as operações elementares $L_1 \leftarrow L_1 + 2L_2$ e $L_3 \leftarrow L_3 + 3L_2$ obtemos:
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \  0 &   -3 & & &   \dfrac{-5a+2b}{3}  \\[10pt]
+  0 &    1 &   -4 & & &   \dfrac{-4a+b}{3}   \\[10pt]
+  0 &    0 &    0 & & &   -a+b+c             \end{array}\right] $$
+A última equação dessa matriz representa a equação
+$$0x + 0y + 0z = -a+b+c$$
+Daí segue que para o sistema linear dado admitir solução precisamos ter $-a+b+c=0$. Se esse é o caso, a matriz anterior fica na forma escalonada reduzida.
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \  0 &   -3 & & &   \dfrac{-5a+2b}{3}  \\[10pt]
+  0 &    1 &   -4 & & &   \dfrac{-4a+b}{3}   \\[10pt] 
+  0 &    0 &    0 & & &   0                  \end{array}\right] $$
+Considerando $z$ como variável livre, vemos que o sistema possui infinitas soluções. O conjunto solução pode ser dado por
+$$x=\dfrac{-5a+2b}{3} + 3z\ \ , \ \ \ \ y = \dfrac{-4a+b}{3} + 4z\ \ , \ \ \ \ \forall\ z \in \R $$
+\end{solution}
+
+% Exercício 7
+\begin{problem}
+Considere o seguinte sistema linear nas variáveis $x$, $y$ e $z$.
+$$\left\{\begin{array}{rrrrrrr}
+  x & + & 2y & + &        z & = &   1 \\
+  x & + & 3y & + &        z & = &   1 \\
+ 3x & + & 7y & + & (a^2-1)z & = & a+1 \end{array}\right. $$
+\begin{itemize}
+\item[(a)] Encontre todos os valores de $a$ para os quais o sistema não tem solução, tem solução única e tem infinitas soluções.
+\item[(b)] Para o caso em que o sistema possui infinitas soluções, encontre a solução geral do sistema.
+\end{itemize}
+\end{problem}
+\begin{solution}
+\begin{itemize}
+\item[(a)]
+A matriz aumentada do sistema linear dado é
+$$ \left[\begin{array}{rrcr|rc}
+  1 & \ 2 &   1     & & &   1    \\
+  1 &   3 &   1     & & &   1    \\ 
+  3 &   7 &  a^2-1  & & &   a+1  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - L_1$ e $L_3 \leftarrow L_3 - 3L_1$ obtemos:
+$$ \left[\begin{array}{rrcr|rc}
+  1 & \ 2 &   1     & & &   1    \\
+  0 &   1 &   0     & & &   0    \\ 
+  0 &   1 &  a^2-4  & & &   a-2  \end{array}\right] $$
+Efetuando as operações elementares $L_1 \leftarrow L_1 - 2L_2$ e $L_3 \leftarrow L_3 - L_2$ obtemos:
+$$ \left[\begin{array}{rrcr|rc}
+  1 & \ 0 &   1     & & &   1    \\
+  0 &   1 &   0     & & &   0    \\ 
+  0 &   0 &  a^2-4  & & &   a-2  \end{array}\right] $$
+A terceira equação dessa matriz representa a equação
+$$(a^2-4)z = a-2$$
+Vamos analisar o conjunto solução dessa equação.
+\begin{itemize}
+\item[$\bullet$] Se $a^2-4 \neq 0$ então essa equação admite uma única solução. Portanto o sistema linear dado admite uma única solução se
+$a \neq 2$ e $a \neq -2$.
+\item[$\bullet$] Se $a^2-4 = 0$ e se $a-2 \neq 0$ então a equação não admite solução. Portanto o sistema linear dado não admite solução se $a=-2$.
+\item[$\bullet$] Se $a^2-4 = 0$ e se $a-2 = 0$ então essa solução possui infinitas soluções. Portanto o sistema linear dado admite infinitas soluções se $a=2$.
+\end{itemize}
+
+
+\item[(b)] Substituindo $a=2$ na última matriz obtida durante o escalonamento, obtemos
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 0 &  \ 1     & & &   1    \\
+  0 &   1 &    0     & & &   0    \\ 
+  0 &   0 &    0     & & &   0  \end{array}\right] $$
+Observe que essa matriz está na forma escalona reduzida. Considerando $z$ como variável livre, obtemos o conjunto solução
+$$S\ =\ \{\ (x,y,z) = (1-z,0,z) \ , \ \ \forall z \in \R \ \}$$
+\end{itemize}
+\end{solution}
+
+% Exercício 8
+\begin{problem}
+Considere o seguinte sistema linear nas variáveis  $x$, $y$ e $z$.
+$$\left\{ \begin{array}{rrrrrrr}
+ax & + & 2y & - &  z & = & b_1 \\
+2x & + &  y & + &  z & = & b_2 \\
+-x & + &  y & - &  2z & = & b_3 \end{array} \right.$$
+\begin{enumerate}
+\item[(a)] Determine os valores do coeficiente $a$ para que este sistema sempre possua uma única solução.
+\item[(b)] Determine condições sobre os números $a$, $b_1$, $b_2$ e $b_3$ para que este sistema não tenha solução.
+\item[(c)] Determine condições sobre os números $a$, $b_1$, $b_2$ e $b_3$ para que este sistema possua infinitas soluções.
+\item[(d)] Dê um exemplo de números $a$, $b_1$, $b_2$ e $b_3$ para que este sistema possua infinitas soluções. Além  disso, para estes valores numéricos, escreva a solução geral do sistema.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\begin{itemize}
+\item[(a)] Sabemos que o sistema linear $AX=B$ possui uma única solução quando \linebreak $\det(A) \neq 0$. No nosso caso,
+$$ \det(A) = \det\left[\begin{array}{rrr}
+  a & \ 2 &  -1  \\
+  2 &   1 &   1  \\ 
+ -1 &   1 &  -2  \end{array}\right]\ =\ 3-3a\ . $$
+Portanto o sistema possui uma única solução quando $3-3a \neq 0$, ou seja, quando $a\neq 1$. Daí segue que o sistema não tem solução ou o sistema possui infinitas soluções somente quando $a=1$. Então, para continuar, vamos escalonar a matriz aumentada considerando $a=1$.
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 2 &  -1   & & &   b_1    \\
+  2 &   1 &   1   & & &   b_2    \\ 
+ -1 &   1 &  -2   & & &   b_3  \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 2L_1$ e $L_3 \leftarrow L_3 + L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rc}
+  1 &   2 &  -1   & & &   b_1    \\
+  0 &  -3 &   3   & & &   -2b_1 + b_2    \\ 
+  0 &   3 &  -3   & & &   b_1 + b_3  \end{array}\right] $$
+Efetuando a operação elementar $L_3 \leftarrow L_3 + L_2$ obtemos:
+$$ \left[\begin{array}{rrrr|rc}
+  1 &   2 &  -1   & & &   b_1    \\
+  0 &  -3 &   3   & & &   -2b_1 + b_2    \\ 
+  0 &   0 &   0   & & &   -b_1 + b_2 + b_3  \end{array}\right] $$
+Observe que essa matriz esta na forma triangular e que a última equação representa a equação
+$$0x + 0y + 0z = -b_1 + b_2 + b_3$$
+
+
+\item[(b)] Da equação anterior vemos que o sistema não admite solução se $a=1$ e se \linebreak $-b_1+b_2+b_3 \neq 0$.
+
+\item[(c)] De modo análogo, o sistema possui infinitas soluções se $a=1$ e se $-b_1+b_2+b_3 = 0$.
+
+\item[(d)] Nesse item devemos obrigatoriamente escolher $a=1$. Para as outras constantes, podemos escolher $b_1$, $b_2$ e $b_3$ tais que a equação $-b_1+b_2+b_3 = 0$ seja satisfeita. Se esse é o caso, a última matriz escalonada passa a ter a forma:
+$$ \left[\begin{array}{rrrr|rc}
+  1 &   2 &  -1   & & &   b_1             \\
+  0 &  -3 &   3   & & &   -2b_1 + b_2     \\ 
+  0 &   0 &   0   & & &   0               \end{array}\right] $$
+Trocando o sinal da segunda linha e dividindo essa linha por 3 obtemos:
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 2 &  -1   & & &   b_1                      \\[8pt]
+  0 &   1 &  -1   & & &   \dfrac{2b_1 - b_2}{3}    \\[10pt]
+  0 &   0 &   0   & & &   0                         \end{array}\right] $$
+Efetuando a operação elementar $L_1 \leftarrow L_1 - 2L_2$ obtemos:
+$$ \left[\begin{array}{rrrr|rc}
+  1 & \ 0 &   1   & & &   \dfrac{-b_1 + 2b_2}{3}   \\[10pt]
+  0 &   1 &  -1   & & &   \dfrac{2b_1 - b_2}{3}    \\[10pt] 
+  0 &   0 &   0   & & &   0                         \end{array}\right] $$
+Observe que essa matriz está na forma escalonada reduzinda. Considerando $z$ como variável livre, obtemos o seguinte conjunto solução.
+$$x = \dfrac{-b_1 + 2b_2}{3} - z \ \ , \ \ \ \ y = \dfrac{2b_1 - b_2}{3} + z \ \ , \ \ \ \ \forall z \in \R $$
+Observamos que nessa solução apresentamos a solução geral para quaisquer $b_1$, $b_2$ e $b_3$ tais que
+$-b_1 + b_2 + b_3 = 0$. O exercício era mais simples, pois permitia que cada aluno fizesse uma escolha de valores dessas constantes. 
+Uma escolha particularmente simples dessas constantes é $b_1=b_2=b_3=0$. Nesse caso, o sistema é um sistema linear homogêneo cuja solução geral é 
+$$S\ =\ \{\ (x,y,z) = (-z,z,z) \ , \ \ \forall z \in \R \ \}$$
+\end{itemize}
+\end{solution}
+
+% Exercício 9
+\begin{problem}
+\begin{enumerate}
+\item[(a)] Calcule a inversa da seguinte matriz.
+
+$$A=\left[ \begin{array}{rrrr}
+-5  &   1  &    3  \\
+ 3  &  -1  &   -2  \\
+-2  &   3  &    2 
+ \end{array} \right] .$$
+
+\medskip
+\item[(b)] Determine a solução do seguinte sistema linear, que tem como matriz de \linebreak 
+coeficientes a matriz $A$ do item (a).
+
+$$ \left\{\begin{array}{rrrrrrr}
+ -5x & + &   y & + &  3z & = &  -1\\
+  3x & - &   y & - &  2z & = &   0\\
+ -2x & + &  3y & + &  2z & = &   1
+\end{array} \right.$$
+
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\begin{enumerate}
+\item[(a)] Vamos calcular $A^{-1}$ escalonando a matriz 
+
+$$\left[ \begin{array}{rrrr|rrrr}
+-5  &   1  &   3   & & &     1 &  \ 0 &  \ 0  \\
+ 3  &  -1  &  -2   & & &     0 &    1 &    0 \\
+-2  &   3  &   2   & & &     0 &    0 &    1   
+\end{array} \right]$$
+ 
+Efetuando a operação elementar $L_1 \leftarrow L_1 + 2L_2$ obtemos:
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1  &  -1  &  -1   & & &     1 &  \ 2 &  \ 0  \\
+ 3  &  -1  &  -2   & & &     0 &    1 &    0 \\
+-2  &   3  &   2   & & &     0 &    0 &    1   
+\end{array} \right]$$
+
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 3L_1$  e  $L_3 \leftarrow L_3 + 2L_1$  obtemos:
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1  &  -1  &  -1   & & &     1 &    2 &  \ 0  \\
+ 0  &   2  &   1   & & &    -3 &   -5 &    0  \\
+ 0  &   1  &   0   & & &     2 &    4 &    1     
+\end{array} \right]$$
+
+Invertendo a segunda e a terceira linha obtemos:
+
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1  &  -1  &  -1   & & &     1 &    2 &  \ 0  \\
+ 0  &   1  &   0   & & &     2 &    4 &    1  \\  
+ 0  &   2  &   1   & & &    -3 &   -5 &    0
+\end{array} \right]$$
+
+
+Efetuando as operações elementares $L_1 \leftarrow L_1 + L_2$  e  $L_3 \leftarrow L_3 - 2L_2$  obtemos:
+ 
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1  & \ 0  &  -1   & & &     3 &    6 &    1  \\
+ 0  &   1  &   0   & & &     2 &    4 &    1  \\
+ 0  &   0  &   1   & & &    -7 &  -13 &   -2 
+\end{array} \right]$$
+
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_3$ 
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1  & \ 0  & \ 0   & & &    -4 &   -7 &   -1  \\
+ 0  &   1  &   0   & & &     2 &    4 &    1  \\
+ 0  &   0  &   1   & & &    -7 &  -13 &   -2 
+\end{array} \right]$$
+
+
+\bigskip
+Como obtivemos a matriz identidade do lado esquerdo, concluímos que $A$ é \linebreak 
+invertível e que $A^{-1}$ é a matriz que esta escrita do lado direito, ou seja,
+
+$$A^{-1} = \left[ \begin{array}{rrrr}
+ -4 &  -7 &   -1  \\
+  2 &   4 &    1  \\
+ -7 & -13 &   -2 
+\end{array} \right] .$$
+ 
+
+\bigskip
+\item[(b)] Sabemos que a solução de um sistema linear do tipo $AX=B$, em que $A$ é matriz quadrada invertível, é dada por $X = A^{-1}B$. No caso dessa questão, a solução do sistema linear dado é
+
+$$X = 
+\left[ \begin{array}{rrrr}
+ -4 &  -7 &   -1  \\
+  2 &   4 &    1  \\
+ -7 & -13 &   -2 
+\end{array} \right] \ 
+\left[ \begin{array}{rrr} -1 \\ 0 \\ 1 \end{array} \right] = 
+\left[ \begin{array}{rrrrr} 4 & + & 0 & - & 1  \\ -2 & + & 0 & + & 1 \\ 7 & + & 0 & - & 2 \end{array} \right] = 
+\left[ \begin{array}{r}  3  \\ -1 \\  5 \end{array} \right]$$
+
+\bigskip
+Portanto a solução é
+$$x=3 \ \ \ \ \ \ \ y=-1 \ \ \ \ \ \ \ z=5$$
+
+\end{enumerate}
+=
+\end{solution}
+
+% Exercício 10
+\begin{problem}
+Caso exista, calcule a inversa de 
+$$A = \left[\begin{array}{rrr}
+  0 &  1 & -1  \\
+  2 & -2 & -1  \\
+ -1 &  1 &  1  \end{array}\right]\ . $$
+Agora resolva o sistema linear 
+$$\left[\begin{array}{rrr}
+  0 &  1 & -1  \\
+  2 & -2 & -1  \\
+ -1 &  1 &  1  \end{array}\right] \ 
+\left[\begin{array}{ccc} x \\ y \\ z \end{array}\right] \ = \ 
+\left[\begin{array}{rrr} 3 \\ -1 \\ 7 \end{array}\right]\ .$$
+\end{problem}
+\begin{solution}
+Vamos calcular $A^{-1}$ escalonando a matriz 
+$$\left[ \begin{array}{rrrr|rrrr}
+ 0 &  1 &  -1   & & &     1 &  \ 0 &  \ 0  \\
+ 2 & -2 &  -1   & & &     0 &    1 &    0 \\
+-1 &  1 &   1   & & &     0 &    0 &    1   
+\end{array} \right]$$
+Trocando o sinal da terceira linha e em seguida invertendo de posição com a primeira linha obtemos:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 &  -1 &  -1   & & &     0 & \  0 &   -1 \\
+ 2 &  -2 &  -1   & & &     0 &    1 &    0 \\
+ 0 &   1 &  -1   & & &     1 &    0 &    0 
+\end{array} \right]$$
+Efetuando a operação elementar $L_2 \leftarrow L_2 - 2L_1$ obtemos:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 &  -1 &  -1   & & &     0 & \  0 &   -1 \\
+ 0 &   0 &   1   & & &     0 &    1 &    2 \\
+ 0 &   1 &  -1   & & &     1 &    0 &    0 
+\end{array} \right]$$
+Invertendo de posição a segunda e a terceira linha obtemos:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 &  -1 &  -1   & & &     0 & \  0 &   -1 \\
+ 0 &   1 &  -1   & & &     1 &    0 &    0 \\
+ 0 &   0 &   1   & & &     0 &    1 &    2 
+\end{array} \right]$$
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_2$ obtemos:
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & \ 0 &  -2   & & &     1 & \  0 &   -1 \\
+ 0 &   1 &  -1   & & &     1 &    0 &    0 \\
+ 0 &   0 &   1   & & &     0 &    1 &    2 
+\end{array} \right]$$
+Efetuando as operações elementares $L_1 \leftarrow L_1 + 2L_3$ e $L_2 \leftarrow L_2 + L_3$ obtemos
+$$\left[ \begin{array}{rrrr|rrrr}
+ 1 & \ 0 & \ 0   & & &     1 & \  2 & \  3 \\
+ 0 &   1 &   0   & & &     1 &    1 &    2 \\
+ 0 &   0 &   1   & & &     0 &    1 &    2 
+\end{array} \right]$$
+Como obtemos a matriz identidade do lado esquerdo, concluímos que $A$ é invertível e que $A^{-1}$ é a matriz que esta escrita do lado direito, ou seja,
+$$A^{-1} = \left[ \begin{array}{rrr}
+ 1 & \  2 & \ 3  \\
+ 1 &    1 &   2  \\
+ 0 &    1 &   2 
+\end{array} \right]$$
+
+\medskip
+O sistema linear dado tem a forma $AX=B$. A solução desse sistema é $X = A^{-1}B$. Efetuando essa multiplicação obtemos
+$$X\ =\ \left[ \begin{array}{rrr}
+ 1 & \  2 & \ 3  \\
+ 1 &    1 &   2  \\
+ 0 &    1 &   2 
+\end{array} \right] \
+\left[\begin{array}{rrr} 3 \\ -1 \\ 7 \end{array}\right]\ =\ 
+\left[\begin{array}{rrr} 22 \\ 16 \\ 13 \end{array}\right]$$
+\end{solution}
+
+% Exercício 11
+\begin{problem}
+Determine matrizes $X$ e $Y$ tais que $AX=B$ e $YA=B$, sendo
+$$A = \left[\begin{array}{rrr}
+	1 &  3 & -2  \\
+	4 & -1 &  3  \\
+ -2 &  1 & -2  \end{array}\right] \ \ \ \ {\rm e} \ \ \ \
+B = \left[\begin{array}{rrr}
+	1 & -1 &  0  \\
+ -1 &  0 &  1  \\
+	0 &  1 & -1  \end{array}\right] \ . $$
+\end{problem}
+\begin{solution}
+Multiplicando por $A^{-1}$ pelo lado esquerdo os dois lados da igualdade \linebreak $AX=B$ obtemos $X = A^{-1} B$.
+Multiplicando por $A^{-1}$ pelo lado direito  os dois \linebreak lados da igualdade $YA=B$ obtemos $Y = B A^{-1}$.
+Por um cálculo direto obtemos 
+$$A^{-1} = \left[ \begin{array}{rrr}
+-1 &    4 &    7  \\
+ 2 &   -6 &  -11  \\
+ 2 &   -7 &  -13 
+\end{array} \right]$$
+Daí, efetuando as multiplicações, obtemos:
+$$X\ =\ A^{-1} B\ =\ 
+\left[ \begin{array}{rrr}
+-1 &    4 &    7  \\
+ 2 &   -6 &  -11  \\
+ 2 &   -7 &  -13 
+\end{array} \right]\ 
+\left[\begin{array}{rrr}
+	1 & -1 &  0  \\
+ -1 &  0 &  1  \\
+	0 &  1 & -1  \end{array}\right]\ =\ 
+\left[\begin{array}{rrr}
+ -5 &   8 & -3  \\
+	8 & -13 &  5  \\
+	9 & -15 &  6  \end{array}\right]$$
+
+$$Y\ =\ B A^{-1}\ =\ 
+\left[\begin{array}{rrr}
+	1 & -1 &  0  \\
+ -1 &  0 &  1  \\
+	0 &  1 & -1  \end{array}\right]\ 
+\left[ \begin{array}{rrr}
+-1 &    4 &    7  \\
+ 2 &   -6 &  -11  \\
+ 2 &   -7 &  -13 
+\end{array} \right]\ =\ 
+\left[ \begin{array}{rrr}
+ -3 &   10 &   18  \\
+	3 &  -11 &  -20  \\
+	0 &    1 &    2  
+\end{array} \right]$$
+\end{solution}
+
+% Exercício 12
+\begin{problem}
+Determine uma matriz $X$ tal que $A X A^{-1} = B$, sendo
+$$A = \left[\begin{array}{rr}
+	4 &  7  \\
+	3 &  5  \end{array}\right] \ \ \ \ {\rm e} \ \ \ \
+B = \left[\begin{array}{rr}
+ -2 &  1  \\
+ -4 &  5  \end{array}\right] \ . $$
+\end{problem}
+\begin{solution}
+Multiplicando a equação dada por $A^{-1}$ pelo lado esquerdo e por $A$ pelo lado direito obtemos 
+$X = A^{-1} B A$. Por um cálculo direto temos que
+$$A^{-1} = \left[\begin{array}{rr}
+ -5 &  7  \\
+	3 & -4  \end{array}\right]$$
+Efetuando as multiplicações obtemos
+
+$$X\ =\ A^{-1} B A\ =\ 
+\left[\begin{array}{rr}
+ -5 &  7  \\
+	3 & -4  \end{array}\right]\ 
+\left[\begin{array}{rr}
+ -2 &  1  \\
+ -4 &  5  \end{array}\right]\ 
+\left[\begin{array}{rr}
+	4 &  7  \\
+	3 &  5  \end{array}\right]\ =\ 
+\left[\begin{array}{rr}
+ 18 &  24  \\
+-11 & -15  \end{array}\right]$$
+\end{solution}
+
+% Exercício 13
+\begin{problem}
+Determine a matriz $X$, solução da equação $AX + 2B = 5C$, sendo
+$$A = \left[\begin{array}{rr}
+	5 &  7  \\
+	2 &  3  \end{array}\right] \ \ , \ \
+B = \left[\begin{array}{rr}
+	3 &  -1  \\
+ -3 &   5  \end{array}\right]\ \ {\rm e} \ \
+C = \left[\begin{array}{rr}
+	1 &   1  \\
+ -1 &   2  \end{array}\right]\ . $$
+\end{problem}
+\begin{solution}
+Subtraindo $2B$ de ambos os lados da igualdade obtemos $AX = 5C - 2B$. 
+Agora, multiplicando por $A^{-1}$ pelo lado esquerdo, obtemos $X = A^{-1} (5C-2B)$.
+Por um cálculo direto temos que
+$$5C-2B\ =\ 
+5\left[\begin{array}{rr}
+	1 &   1  \\
+ -1 &   2  \end{array}\right]\ -\ 
+2\left[\begin{array}{rr}
+	3 &  -1  \\
+ -3 &   5  \end{array}\right]\ =\ 
+\left[\begin{array}{rr}
+	5 &    5  \\
+ -5 &   10  \end{array}\right]\ -\ 
+\left[\begin{array}{rr}
+	6 &  -2  \\
+ -6 &  10  \end{array}\right]\ =\ 
+\left[\begin{array}{rr}
+ -1 &  7  \\
+	1 &  0  \end{array}\right]$$
+
+$$A^{-1}\ =\ 
+\left[\begin{array}{rr}
+	3 &   -7  \\
+ -2 &   5  \end{array}\right]$$
+
+$$X\ =\ A^{-1} (5C-2B)\ =\ 
+\left[\begin{array}{rr}
+	3 &   -7  \\
+ -2 &   5  \end{array}\right]\ 
+\left[\begin{array}{rr}
+ -1 &  7  \\
+	1 &  0  \end{array}\right]\ =\ 
+\left[\begin{array}{rr}
+ -10 &  21  \\
+	 7 & -14  \end{array}\right]$$
+\end{solution}
+
+% Exercício 14
+\begin{problem}
+Para as matrizes $A$ e $B$ dadas a seguir, calcule $(A+B)^2$ e calcule $A^2 + 2AB + B^2$. 
+Em seguida explique porque a igualdade $(A+B)^2 = A^2 + 2AB + B^2$ em geral não é válida para matrizes.
+$$A = \left[\begin{array}{rr}
+	1 & -1  \\
+	0 &  1  \end{array}\right] \ \ \ \ {\rm e} \ \ \ \
+B = \left[\begin{array}{rr}
+	0 &  4  \\
+	2 & -1  \end{array}\right] \ . $$
+\end{problem}
+\begin{solution}
+Por um cálculo direto temos que 
+$$(A+B)^2\ =\ (A+B) \cdot (A+B)\ =\ 
+\left[\begin{array}{rr}
+	1 &  3  \\
+	2 &  0  \end{array}\right] \cdot
+\left[\begin{array}{rr}
+	1 &  3  \\
+	2 &  0  \end{array}\right]\ =\ 
+\left[\begin{array}{rr}
+	7 &  3  \\
+	2 &  6  \end{array}\right]$$
+
+$$A^2 + 2AB + B^2\ =\ 
+\left[\begin{array}{rr}
+	1 & -2  \\
+	0 &  1  \end{array}\right] + 
+\left[\begin{array}{rr}
+ -4 &  10  \\
+	4 &  -2  \end{array}\right] + 
+\left[\begin{array}{rr}
+	8 &  -4  \\
+ -2 &   9  \end{array}\right]\ =\ 
+\left[\begin{array}{rr}
+	5 &   4  \\
+	2 &   8  \end{array}\right]$$
+
+A igualdade $(A+B)^2 = A^2 + 2AB + B^2$ não é válida pois desenvolvendo o lado esquerdo pela propriedade distributiva obtemos
+$$(A+B)^2\ =\ (A+B) \cdot (A+B)\ =\ A^2 + AB + BA + B^2$$
+Como a multiplicação de matrizes não é comutativa, não podemos escrever que 
+$$AB + BA = AB + AB = 2AB$$
+Assim a identidade somente é válida se $AB$ for igual a $BA$. 
+\end{solution}
+
+% Exercício 15
+\begin{problem}
+Determine a solução geral do sistema linear
+$$\left\{ \begin{array}{rrrrrrrrr}
+ 2x & + &  y & + & 4z & - & 2w & = &  6 \\
+ 3x & + & 2y & + &  z & - & 3w & = & -2 \\
+ 4x & + & 3y & - & 2z & - & 5w & = &  0 \end{array} \right.$$
+\end{problem}
+\begin{solution}
+A matriz aumentada do sistema linear dado é 
+$$ \left[\begin{array}{rrrrr|rr}
+	2 & \ 1 &   4  &  -2   & & &    6      \\
+	3 &   2 &   1  &  -3   & & &   -2      \\ 
+	4 &   3 &  -2  &  -5   & & &    0      \end{array}\right] $$
+Efetuando a operação elementar $L_1 \leftarrow L_1 - L_2$ obtemos:
+$$ \left[\begin{array}{rrrrr|rr}
+ -1 &  -1 &   3  &   1   & & &    8      \\
+	3 &   2 &   1  &  -3   & & &   -2      \\ 
+	4 &   3 &  -2  &  -5   & & &    0      \end{array}\right] $$
+Trocando o sinal da primeira linha obtemos:
+$$ \left[\begin{array}{rrrrr|rr}
+	1 & \ 1 &  -3  &  -1   & & &   -8      \\
+	3 &   2 &   1  &  -3   & & &   -2      \\ 
+	4 &   3 &  -2  &  -5   & & &    0      \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 3L_1$ e $L_3 \leftarrow L_3 - 4L_1$ obtemos:
+$$ \left[\begin{array}{rrrrr|rr}
+	1 &   1 &  -3  &  -1   & & &   -8      \\
+	0 &  -1 &  10  &   0   & & &   22      \\ 
+	0 &  -1 &  10  &  -1   & & &   32      \end{array}\right] $$
+Trocando o sinal da segunda linha obtemos:
+$$ \left[\begin{array}{rrrrr|rr}
+	1 &   1 &   -3  &  -1   & & &   -8      \\
+	0 &   1 &  -10  &   0   & & &  -22      \\ 
+	0 &  -1 &   10  &  -1   & & &   32      \end{array}\right] $$
+Efetuando as operações elementares $L_1 \leftarrow L_1 - L_2$ e $L_3 \leftarrow L_3 + L_2$ obtemos:
+$$ \left[\begin{array}{rrrrr|rr}
+	1 & \ 0 &    7  &  -1   & & &   14      \\
+	0 &   1 &  -10  &   0   & & &  -22      \\ 
+	0 &   0 &    0  &  -1   & & &    10      \end{array}\right] $$
+Trocando o sinal da terceira linha obtemos:
+$$ \left[\begin{array}{rrrrr|rr}
+	1 & \ 0 &    7  &  -1   & & &   14      \\
+	0 &   1 &  -10  &   0   & & &  -22      \\ 
+	0 &   0 &    0  &   1   & & &  -10      \end{array}\right] $$
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_3$ obtemos:
+$$ \left[\begin{array}{rrrrr|rr}
+	1 & \ 0 &    7  & \ 0   & & &    4      \\
+	0 &   1 &  -10  &   0   & & &  -22      \\ 
+	0 &   0 &    0  &   1   & & &  -10      \end{array}\right] $$
+Observe que nesse ponto obtivemos uma matriz escalonada reduzida. A coluna sem pivô está associada a variável $z$.
+Considerando então $z$ como variável livre concluímos que o sistema linear possui infinitas soluções e que o conjunto solução pode ser dado por 
+$$S\ =\ \{\ (x,y,z,w) = (4-7z , -22+10z , z , -10)\ , \ \forall z \in \R\ \}$$
+\end{solution}
+
+% Exercício 16
+\begin{problem}
+Determine a solução geral do sistema linear homogêneo
+$$\left\{ \begin{array}{rrrrrrr}
+ 3x & + & 2y & - &  z & = & 0 \\
+ 4x & + & 5y & + & 2z & = & 0 \\
+-2x & + &  y & + & 4z & = & 0 \end{array} \right.$$
+\end{problem}
+\begin{solution}
+A matriz aumentada do sistema linear dado é 
+$$ \left[\begin{array}{rrrr|rr}
+	3 & \ 2 &  -1    & & &    0      \\
+	4 &   5 &   2    & & &    0      \\ 
+ -2 &   1 &   4    & & &    0      \end{array}\right] $$
+Efetuando a operação elementar $L_1 \leftarrow L_1 + L_3$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+	1 & \ 3 & \ 3    & & &    0      \\
+	4 &   5 &   2    & & &    0      \\ 
+ -2 &   1 &   4    & & &    0      \end{array}\right] $$
+Efetuando as operações elementares $L_2 \leftarrow L_2 - 4L_1$ e $L_3 \leftarrow L_3 + 2L_1$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+	1 &   3 &    3    & & &    0      \\
+	0 &  -7 &  -10    & & &    0      \\ 
+	0 &   7 &   10    & & &    0      \end{array}\right] $$
+Dividindo a segunda linha por $-7$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+	1 &   3 &    3              & & &    0      \\[-2pt]
+	0 &   1 &  \dfrac{10}{7}    & & &    0      \\[-2pt]
+	0 &   7 &   10              & & &    0      \end{array}\right] $$
+Efetuando as operações elementares $L_1 \leftarrow L_1 - 3L_2$ e $L_3 \leftarrow L_3 - 7L_2$ obtemos:
+$$ \left[\begin{array}{rrrr|rr}
+	1 &   0 &  -\dfrac{9}{7}     & & &    0      \\[-2pt]
+	0 &   1 &   \dfrac{10}{7}    & & &    0      \\[-2pt]
+	0 &   0 &   0                & & &    0      \end{array}\right] $$
+Essa matriz esta na forma escalona reduzida. Considerando $z$ como variável livre \linebreak 
+podemos escrever o conjunto solução do sistema linear dado do seguinte modo
+$$S\ =\ \left\{\ (x,y,z)\ =\ \left( \ \dfrac{9}{7}z\, ,\, -\dfrac{10}{7}z\, ,\, z\  \right)\ , \ \forall z \in \R\ \right\}$$
+\end{solution}
+
+
