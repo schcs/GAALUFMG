@@ -521,6 +521,235 @@ bc\cos\theta=\frac 12 (b^2+c^2-a^2)
 <li><span class="math inline">\(\alpha\,\langle V,W\rangle = \langle \alpha V,W\rangle = \langle V,\alpha W\rangle\)</span>.</li>
 </ol>
 <p>Relação com matrizes: se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são colunas, <span class="math display">\[\langle V,W\rangle = V^{T}W = \begin{bmatrix} v_1 &amp; v_2 &amp; v_3 \end{bmatrix}\!\begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} = v_1w_1 + v_2w_2 + v_3w_3.\]</span></p>
+</section>
+<section id="projeção-ortogonal" class="slide level2">
+<h2>Projeção ortogonal</h2>
+<p>Dado um vetor não nulo <span class="math inline">\(V\)</span> e um vetor <span class="math inline">\(W\)</span>, definimos a projeção ortogonal de <span class="math inline">\(W\)</span> na direção de <span class="math inline">\(V\)</span> como o vetor <span class="math inline">\(\operatorname{proj}_V(W)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig18.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Se <span class="math inline">\(\theta = \angle(V,W)\)</span>:</p>
+<ul>
+<li>Se <span class="math inline">\(\theta\)</span> é agudo, então <span class="math inline">\(\operatorname{proj}_V(W)\)</span> é um múltiplo positivo de <span class="math inline">\(V\)</span>.</li>
+<li>Se <span class="math inline">\(\theta\)</span> é obtuso, então <span class="math inline">\(\operatorname{proj}_V(W)\)</span> é um múltiplo negativo de <span class="math inline">\(V\)</span>.</li>
+</ul>
+</section>
+<section id="projeção-ortogonal-caracterização" class="slide level2">
+<h2>Projeção ortogonal — caracterização</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig17.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
+</div>
+<p>O vetor <span class="math inline">\(\operatorname{proj}_V(W)\)</span> é caracterizado por:</p>
+<ol type="1">
+<li><span class="math inline">\(\operatorname{proj}_V(W)=\alpha V\)</span> para algum <span class="math inline">\(\alpha\in\mathbb{R}\)</span>.</li>
+<li><span class="math inline">\(W - \operatorname{proj}_V(W)\)</span> é ortogonal a <span class="math inline">\(V\)</span>.</li>
+</ol>
+<p>De <span class="math inline">\(\langle W-\alpha V, V\rangle = 0\)</span> segue que <span class="math display">\[\alpha = \frac{\langle W,V\rangle}{\langle V,V\rangle}, \qquad \operatorname{proj}_V(W)=\frac{\langle W,V\rangle}{\langle V,V\rangle}\,V.\]</span></p>
+</section>
+<section id="projeção-ortogonal-exercícios" class="slide level2">
+<h2>Projeção ortogonal – Exercícios</h2>
+<ol type="1">
+<li>Projeções ortogonais de <span class="math inline">\(W=(1,2)\)</span> e <span class="math inline">\(U=(-1,2)\)</span> sobre <span class="math inline">\(V=(3,1)\)</span>.</li>
+<li>Projeções ortogonais de <span class="math inline">\(W=(w_1,w_2,w_3)\)</span> em cada eixo coordenado (<span class="math inline">\(\vec{i},\vec{j},\vec{k}\)</span>).</li>
+<li>Para <span class="math inline">\(V=(1,2,-1)\)</span> e <span class="math inline">\(W=(3,1,0)\)</span> calcule <span class="math inline">\(\operatorname{proj}_W(V)\)</span> e <span class="math inline">\(\operatorname{proj}_V(W)\)</span>.</li>
+</ol>
+<!--4. Dois vetores ortogonais, ambos paralelos ao plano $x+2y+3z=0$.
+5. Distância do ponto $A=(4,-5,5)$ ao plano $\alpha: x-2y+z=1$ via projeção.
+
+Observação: se $P$ está no plano $\alpha$, então
+$$\operatorname{dist}(A,\alpha)=\big\|\operatorname{proj}_N(\overrightarrow{PA})\big\|.$$
+
+6. Distância do ponto $A=(4,-2,6)$ à reta $r: (x,y,z)=(-1,1,1)+t(1,-1,2)$.
+
+Para $P$ em $r$ (e $V_r$ vetor diretor):
+$$\operatorname{dist}(A,r)^2 + \big\|\operatorname{proj}_{V_r}(\overrightarrow{PA})\big\|^2 = \|\overrightarrow{PA}\|^2.$$
+-->
+<p>Se <span class="math inline">\(\alpha\in\mathbb R\)</span>, <span class="math inline">\((\alpha V) \times W = V \times (\alpha W) = \alpha ( V \times W )\)</span>. </p>
+</section>
+<section id="produto-vetorial-em-mathbbr3-ideia" class="slide level2">
+<h2>Produto vetorial em <span class="math inline">\(\mathbb{R}^3\)</span> — ideia</h2>
+<p>Dados dois vetores <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, queremos achar um vetor <span class="math inline">\(V\times W\)</span> ortogonal a <span class="math inline">\(V\)</span> e a <span class="math inline">\(W\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig19.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Pergunta: Quantos vetores perpendiculares a <span class="math inline">\(V\)</span> e a <span class="math inline">\(W\)</span> existem?</p>
+<p>Como são vários (mas todos paralelos), precisamos apenas fixar o comprimento e o sentido.</p>
+</section>
+<section id="produto-vetorial-em-mathbbr3-norma" class="slide level2">
+<h2>Produto vetorial em <span class="math inline">\(\mathbb{R}^3\)</span> — norma</h2>
+<p>Por definição, o comprimento de <span class="math inline">\(V \times W\)</span> é a área do paralelogramo definido por <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig20.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p><span class="math display">\[\lVert V \times W\rVert = \lVert V\rVert\,\lVert W\rVert\,\operatorname{sen}(\theta)\]</span></p>
+<p>Já temos a norma e a direção de <span class="math inline">\(V \times W\)</span>. Falta fixar o sentido.</p>
+</section>
+<section id="produto-vetorial-em-mathbbr3-sentido-regra-da-mão-direita" class="slide level2">
+<h2>Produto vetorial em <span class="math inline">\(\mathbb{R}^3\)</span> — sentido (regra da mão direita)</h2>
+<p>Por definição, o sentido de <span class="math inline">\(V \times W\)</span> é tal que (nesta ordem) <span class="math inline">\(V\)</span>, <span class="math inline">\(W\)</span> e <span class="math inline">\(V \times W\)</span> satisfazem a regra da mão direita.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig21.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="produto-vetorial-caracterização" class="slide level2">
+<h2>Produto vetorial — caracterização</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig19.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>O produto vetorial <span class="math inline">\(V \times W\)</span> é caracterizado por:</p>
+<ul>
+<li>(norma) <span class="math inline">\(\lVert V \times W\rVert = \lVert V\rVert\,\lVert W\rVert\,\operatorname{sen}(\theta)\)</span>;</li>
+<li>(direção) <span class="math inline">\(V \times W\)</span> é perpendicular ao plano de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>;</li>
+<li>(sentido) <span class="math inline">\(V\)</span>, <span class="math inline">\(W\)</span> e <span class="math inline">\(V \times W\)</span> satisfazem a regra da mão direita.</li>
+</ul>
+</section>
+<section id="produto-vetorial-exemplo-enunciado" class="slide level2">
+<h2>Produto vetorial — exemplo (enunciado)</h2>
+<p>Exemplo: Calcule o produto vetorial entre <span class="math inline">\(V=(-1,3,0)\)</span> e <span class="math inline">\(W=(2,1,5)\)</span>.</p>
+<p>É muito difícil calcular o produto vetorial usando apenas a definição dada. Para fazer este cálculo, vamos explorar primeiro as propriedades de <span class="math inline">\(V \times W\)</span>.</p>
+</section>
+<section id="propriedades-do-produto-vetorial" class="slide level2">
+<h2>Propriedades do produto vetorial</h2>
+<p>Sejam <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> vetores em <span class="math inline">\(\mathbb{R}^3\)</span>. Então:</p>
+<ol type="1">
+<li><span class="math inline">\(V \times W = - (W \times V)\)</span> (anti-comutatividade).</li>
+<li><span class="math inline">\(V \times W = \vec{0}\)</span> se (e somente se) <span class="math inline">\(V = \alpha W\)</span> ou <span class="math inline">\(W = \alpha V\)</span> (dependência linear).</li>
+<li><span class="math inline">\(\langle V , V \times W\rangle = \langle W , V \times W\rangle = 0\)</span> (ortogonalidade de <span class="math inline">\(V \times W\)</span> a <span class="math inline">\(V\)</span> e a <span class="math inline">\(W\)</span>).</li>
+<li>Se <span class="math inline">\(\alpha\in\mathbb{R}\)</span>, então <span class="math inline">\((\alpha V) \times W = V \times (\alpha W) = \alpha ( V \times W )\)</span> (homogeneidade).</li>
+<li><span class="math inline">\(V \times (W+U) = V \times W + V \times U\)</span> (distributividade à direita). Analogamente, <span class="math inline">\((V+U) \times W = V \times W + U \times W\)</span>.</li>
+</ol>
+</section>
+<section id="produto-vetorial-em-coordenadas-canônicos" class="slide level2">
+<h2>Produto vetorial em coordenadas — canônicos</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig22.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Vetores canônicos: <span class="math inline">\(\vec{i}=(1,0,0)\)</span>, <span class="math inline">\(\vec{j}=(0,1,0)\)</span>, <span class="math inline">\(\vec{k}=(0,0,1)\)</span>. Se <span class="math inline">\(V=(a,b,c)\)</span> então</p>
+<p><span class="math display">\[V = a\vec{i} + b\vec{j} + c\vec{k}.\]</span></p>
+</section>
+<section id="produto-vetorial-produtos-entre-canônicos" class="slide level2">
+<h2>Produto vetorial — produtos entre canônicos</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig22.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
+</div>
+<p><span class="math display">\[\begin{array}{ccccccccccccc}
+    \vec{i} \times \vec{i}=\vec{0}  &amp; &amp; &amp; &amp; &amp; &amp;    \vec{j} \times \vec{i}=-\vec{k} &amp; &amp; &amp; &amp; &amp; &amp;  \vec{k} \times \vec{i}=\vec{j}   \\
+                                    &amp; &amp; &amp; &amp; &amp; &amp;                                    &amp; &amp; &amp; &amp; &amp; &amp;                                   \\
+    \vec{i} \times \vec{j}=\vec{k}  &amp; &amp; &amp; &amp; &amp; &amp;    \vec{j} \times \vec{j}=\vec{0}  &amp; &amp; &amp; &amp; &amp; &amp;  \vec{k} \times \vec{j}=-\vec{i}  \\
+                                    &amp; &amp; &amp; &amp; &amp; &amp;                                    &amp; &amp; &amp; &amp; &amp; &amp;                                   \\
+    \vec{i} \times \vec{k}=-\vec{j} &amp; &amp; &amp; &amp; &amp; &amp;    \vec{j} \times \vec{k}=\vec{i}  &amp; &amp; &amp; &amp; &amp; &amp;  \vec{k} \times \vec{k}=\vec{0}
+\end{array}\]</span></p>
+</section>
+<section id="produto-vetorial-fórmula-em-coordenadas" class="slide level2">
+<h2>Produto vetorial — fórmula em coordenadas</h2>
+<p>Se <span class="math display">\[\begin{array}{ccccccccc}
+V &amp; = &amp; (v_1,v_2,v_3) &amp; = &amp; v_1\vec{i} &amp; + &amp; v_2\vec{j} &amp; + &amp; v_3\vec{k} \\
+W &amp; = &amp; (w_1,w_2,w_3) &amp; = &amp; w_1\vec{i} &amp; + &amp; w_2\vec{j} &amp; + &amp; w_3\vec{k}
+\end{array}\]</span></p>
+<p>Aplicando distributividade e as relações entre <span class="math inline">\(\vec{i},\vec{j},\vec{k}\)</span>:</p>
+<p><span class="math display">\[V \times W = (v_2w_3-v_3w_2\ ,\ v_3w_1-v_1w_3\ ,\ v_1w_2-v_2w_1 ).\]</span></p>
+<p>Forma mnemônica (determinante simbólico):</p>
+<p><span class="math display">\[V \times W = \det\begin{bmatrix}
+     \vec{i} &amp;  \vec{j} &amp;  \vec{k} \\
+     v_1     &amp;  v_2     &amp;  v_3     \\
+     w_1     &amp;  w_2     &amp;  w_3
+\end{bmatrix}.\]</span></p>
+</section>
+<section id="produto-vetorial-exemplo-cálculo" class="slide level2">
+<h2>Produto vetorial — exemplo (cálculo)</h2>
+<p>Calcule <span class="math inline">\(V \times W\)</span> para <span class="math inline">\(V=(-1,3,0)\)</span> e <span class="math inline">\(W=(2,1,5)\)</span>.</p>
+<p><span class="math display">\[
+V \times W = \det\begin{bmatrix}
+     \vec{i} &amp;  \vec{j} &amp;  \vec{k} \\
+     -1      &amp;  3       &amp;  0        \\
+      2      &amp;  1       &amp;  5
+    \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+V \times W =
+    \vec{i}\begin{vmatrix} 3 &amp; 0 \\ 1 &amp; 5 \end{vmatrix} -
+    \vec{j}\begin{vmatrix} -1 &amp; 0 \\ 2 &amp; 5 \end{vmatrix} +
+    \vec{k}\begin{vmatrix} -1 &amp; 3 \\ 2 &amp; 1 \end{vmatrix}.
+\]</span></p>
+<p><span class="math display">\[
+V \times W = 15\vec{i} + 5\vec{j} -7\vec{k} = (15,5,-7).
+\]</span></p>
+<p>Verificação: <span class="math inline">\(\langle V, V \times W\rangle = \langle W, V \times W\rangle = 0\)</span>.</p>
+</section>
+<section id="aplicação-área-de-triângulo-no-espaço" class="slide level2">
+<h2>Aplicação: área de triângulo no espaço</h2>
+<p>Exemplo 2. Calcule a área do triângulo <span class="math inline">\(ABC\)</span> com <span class="math inline">\(A=(4,1,2)\)</span>, <span class="math inline">\(B=(3,5,3)\)</span>, <span class="math inline">\(C=(-2,3,5)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig23.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p><span class="math display">\[\boxed{\text{Área}(\triangle ABC)=\tfrac12\,\lVert \overrightarrow{AB} \times \overrightarrow{AC}\rVert}\]</span></p>
+</section>
+<section id="área-de-triângulo-cálculo" class="slide level2">
+<h2>Área de triângulo — cálculo</h2>
+<p><span class="math inline">\(\overrightarrow{AB}=(-1,4,1)\)</span>, <span class="math inline">\(\overrightarrow{AC}=(-6,2,3)\)</span>.</p>
+<p><span class="math display">\[\overrightarrow{AB} \times \overrightarrow{AC} = \det\begin{bmatrix}
+\vec{i} &amp;  \vec{j} &amp;  \vec{k} \\
+-1      &amp;  4       &amp; 1         \\
+-6      &amp;  2       &amp; 3
+\end{bmatrix} = (10,-3,22).\]</span></p>
+<p>Área <span class="math inline">\(= \tfrac12\sqrt{10^2+(-3)^2+22^2}= \tfrac12\sqrt{593}\)</span>.</p>
+</section>
+<section id="produto-misto" class="slide level2">
+<h2>Produto misto</h2>
+<p>Teorema. Para <span class="math inline">\(U=(u_1,u_2,u_3)\)</span>, <span class="math inline">\(V=(v_1,v_2,v_3)\)</span>, <span class="math inline">\(W=(w_1,w_2,w_3)\)</span>: <span class="math display">\[\langle U, V \times W\rangle = \det\begin{bmatrix}
+u_1 &amp; u_2 &amp; u_3 \\
+v_1 &amp; v_2 &amp; v_3 \\
+w_1 &amp; w_2 &amp; w_3
+\end{bmatrix}.\]</span></p>
+<p>Demonstração: escreva <span class="math inline">\(V \times W\)</span> pelas coordenadas e calcule o produto escalar.</p>
+</section>
+<section id="produto-misto-interpretação-geométrica" class="slide level2">
+<h2>Produto misto — interpretação geométrica</h2>
+<p>Teorema. Dados <span class="math inline">\(U,V,W\)</span>, <span class="math display">\[\big|\langle U, V \times W\rangle\big|\]</span> é o volume do paralelepípedo determinado por <span class="math inline">\(U,V,W\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig24.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="vetores-coplanares-caracterização" class="slide level2">
+<h2>Vetores coplanares — caracterização</h2>
+<p>Teorema. Três vetores <span class="math inline">\(U,V,W\)</span> em <span class="math inline">\(\mathbb{R}^3\)</span> são coplanares se e somente se <span class="math display">\[\langle U, V \times W\rangle = 0\]</span> ou, equivalentemente, o volume do paralelepípedo que eles determinam é zero.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/05_vetores/fig25.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="aplicação-pontos-coplanares" class="slide level2">
+<h2>Aplicação: pontos coplanares</h2>
+<p>Exemplo 3. Verifique se <span class="math inline">\(A=(2,3,3)\)</span>, <span class="math inline">\(B=(4,1,3)\)</span>, <span class="math inline">\(C=(2,5,1)\)</span>, <span class="math inline">\(D=(3,3,2)\)</span> são coplanares.</p>
+<p><span class="math inline">\(\overrightarrow{AB}=(2,-2,0)\)</span>, <span class="math inline">\(\overrightarrow{AC}=(0,2,-2)\)</span>, <span class="math inline">\(\overrightarrow{AD}=(1,0,-1)\)</span>.</p>
+<p><span class="math display">\[\langle \overrightarrow{AB}, \overrightarrow{AC} \times \overrightarrow{AD}\rangle =
+\det\begin{bmatrix}
+2 &amp; -2 &amp; 0 \\
+0 &amp;  2 &amp; -2 \\
+1 &amp;  0 &amp; -1
+\end{bmatrix}= -2+2=0.\]</span></p>
+<p>Logo são coplanares.</p>
 
 
 </section>

@@ -266,6 +266,139 @@
     "text": "Propriedades do produto escalar\n\n\\(\\langle V,W\\rangle = \\langle W,V\\rangle\\).\n\\(\\langle U,V+W\\rangle = \\langle U,V\\rangle + \\langle U,W\\rangle\\).\n\\(\\alpha\\,\\langle V,W\\rangle = \\langle \\alpha V,W\\rangle = \\langle V,\\alpha W\\rangle\\).\n\nRelação com matrizes: se \\(V\\) e \\(W\\) são colunas, \\[\\langle V,W\\rangle = V^{T}W = \\begin{bmatrix} v_1 & v_2 & v_3 \\end{bmatrix}\\!\\begin{bmatrix} w_1 \\\\ w_2 \\\\ w_3 \\end{bmatrix} = v_1w_1 + v_2w_2 + v_3w_3.\\]"
   },
   {
+    "objectID": "05_vetores.html#projeção-ortogonal",
+    "href": "05_vetores.html#projeção-ortogonal",
+    "title": "Vetores",
+    "section": "Projeção ortogonal",
+    "text": "Projeção ortogonal\nDado um vetor não nulo \\(V\\) e um vetor \\(W\\), definimos a projeção ortogonal de \\(W\\) na direção de \\(V\\) como o vetor \\(\\operatorname{proj}_V(W)\\).\n\n\n\n\n\nSe \\(\\theta = \\angle(V,W)\\):\n\nSe \\(\\theta\\) é agudo, então \\(\\operatorname{proj}_V(W)\\) é um múltiplo positivo de \\(V\\).\nSe \\(\\theta\\) é obtuso, então \\(\\operatorname{proj}_V(W)\\) é um múltiplo negativo de \\(V\\)."
+  },
+  {
+    "objectID": "05_vetores.html#projeção-ortogonal-caracterização",
+    "href": "05_vetores.html#projeção-ortogonal-caracterização",
+    "title": "Vetores",
+    "section": "Projeção ortogonal — caracterização",
+    "text": "Projeção ortogonal — caracterização\n\n\n\n\n\nO vetor \\(\\operatorname{proj}_V(W)\\) é caracterizado por:\n\n\\(\\operatorname{proj}_V(W)=\\alpha V\\) para algum \\(\\alpha\\in\\mathbb{R}\\).\n\\(W - \\operatorname{proj}_V(W)\\) é ortogonal a \\(V\\).\n\nDe \\(\\langle W-\\alpha V, V\\rangle = 0\\) segue que \\[\\alpha = \\frac{\\langle W,V\\rangle}{\\langle V,V\\rangle}, \\qquad \\operatorname{proj}_V(W)=\\frac{\\langle W,V\\rangle}{\\langle V,V\\rangle}\\,V.\\]"
+  },
+  {
+    "objectID": "05_vetores.html#projeção-ortogonal-exercícios",
+    "href": "05_vetores.html#projeção-ortogonal-exercícios",
+    "title": "Vetores",
+    "section": "Projeção ortogonal – Exercícios",
+    "text": "Projeção ortogonal – Exercícios\n\nProjeções ortogonais de \\(W=(1,2)\\) e \\(U=(-1,2)\\) sobre \\(V=(3,1)\\).\nProjeções ortogonais de \\(W=(w_1,w_2,w_3)\\) em cada eixo coordenado (\\(\\vec{i},\\vec{j},\\vec{k}\\)).\nPara \\(V=(1,2,-1)\\) e \\(W=(3,1,0)\\) calcule \\(\\operatorname{proj}_W(V)\\) e \\(\\operatorname{proj}_V(W)\\).\n\n\nSe \\(\\alpha\\in\\mathbb R\\), \\((\\alpha V) \\times W = V \\times (\\alpha W) = \\alpha ( V \\times W )\\)."
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-em-mathbbr3-ideia",
+    "href": "05_vetores.html#produto-vetorial-em-mathbbr3-ideia",
+    "title": "Vetores",
+    "section": "Produto vetorial em \\(\\mathbb{R}^3\\) — ideia",
+    "text": "Produto vetorial em \\(\\mathbb{R}^3\\) — ideia\nDados dois vetores \\(V\\) e \\(W\\), queremos achar um vetor \\(V\\times W\\) ortogonal a \\(V\\) e a \\(W\\).\n\n\n\n\n\nPergunta: Quantos vetores perpendiculares a \\(V\\) e a \\(W\\) existem?\nComo são vários (mas todos paralelos), precisamos apenas fixar o comprimento e o sentido."
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-em-mathbbr3-norma",
+    "href": "05_vetores.html#produto-vetorial-em-mathbbr3-norma",
+    "title": "Vetores",
+    "section": "Produto vetorial em \\(\\mathbb{R}^3\\) — norma",
+    "text": "Produto vetorial em \\(\\mathbb{R}^3\\) — norma\nPor definição, o comprimento de \\(V \\times W\\) é a área do paralelogramo definido por \\(V\\) e \\(W\\).\n\n\n\n\n\n\\[\\lVert V \\times W\\rVert = \\lVert V\\rVert\\,\\lVert W\\rVert\\,\\operatorname{sen}(\\theta)\\]\nJá temos a norma e a direção de \\(V \\times W\\). Falta fixar o sentido."
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-em-mathbbr3-sentido-regra-da-mão-direita",
+    "href": "05_vetores.html#produto-vetorial-em-mathbbr3-sentido-regra-da-mão-direita",
+    "title": "Vetores",
+    "section": "Produto vetorial em \\(\\mathbb{R}^3\\) — sentido (regra da mão direita)",
+    "text": "Produto vetorial em \\(\\mathbb{R}^3\\) — sentido (regra da mão direita)\nPor definição, o sentido de \\(V \\times W\\) é tal que (nesta ordem) \\(V\\), \\(W\\) e \\(V \\times W\\) satisfazem a regra da mão direita."
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-caracterização",
+    "href": "05_vetores.html#produto-vetorial-caracterização",
+    "title": "Vetores",
+    "section": "Produto vetorial — caracterização",
+    "text": "Produto vetorial — caracterização\n\n\n\n\n\nO produto vetorial \\(V \\times W\\) é caracterizado por:\n\n(norma) \\(\\lVert V \\times W\\rVert = \\lVert V\\rVert\\,\\lVert W\\rVert\\,\\operatorname{sen}(\\theta)\\);\n(direção) \\(V \\times W\\) é perpendicular ao plano de \\(V\\) e \\(W\\);\n(sentido) \\(V\\), \\(W\\) e \\(V \\times W\\) satisfazem a regra da mão direita."
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-exemplo-enunciado",
+    "href": "05_vetores.html#produto-vetorial-exemplo-enunciado",
+    "title": "Vetores",
+    "section": "Produto vetorial — exemplo (enunciado)",
+    "text": "Produto vetorial — exemplo (enunciado)\nExemplo: Calcule o produto vetorial entre \\(V=(-1,3,0)\\) e \\(W=(2,1,5)\\).\nÉ muito difícil calcular o produto vetorial usando apenas a definição dada. Para fazer este cálculo, vamos explorar primeiro as propriedades de \\(V \\times W\\)."
+  },
+  {
+    "objectID": "05_vetores.html#propriedades-do-produto-vetorial",
+    "href": "05_vetores.html#propriedades-do-produto-vetorial",
+    "title": "Vetores",
+    "section": "Propriedades do produto vetorial",
+    "text": "Propriedades do produto vetorial\nSejam \\(V\\) e \\(W\\) vetores em \\(\\mathbb{R}^3\\). Então:\n\n\\(V \\times W = - (W \\times V)\\) (anti-comutatividade).\n\\(V \\times W = \\vec{0}\\) se (e somente se) \\(V = \\alpha W\\) ou \\(W = \\alpha V\\) (dependência linear).\n\\(\\langle V , V \\times W\\rangle = \\langle W , V \\times W\\rangle = 0\\) (ortogonalidade de \\(V \\times W\\) a \\(V\\) e a \\(W\\)).\nSe \\(\\alpha\\in\\mathbb{R}\\), então \\((\\alpha V) \\times W = V \\times (\\alpha W) = \\alpha ( V \\times W )\\) (homogeneidade).\n\\(V \\times (W+U) = V \\times W + V \\times U\\) (distributividade à direita). Analogamente, \\((V+U) \\times W = V \\times W + U \\times W\\)."
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-em-coordenadas-canônicos",
+    "href": "05_vetores.html#produto-vetorial-em-coordenadas-canônicos",
+    "title": "Vetores",
+    "section": "Produto vetorial em coordenadas — canônicos",
+    "text": "Produto vetorial em coordenadas — canônicos\n\n\n\n\n\nVetores canônicos: \\(\\vec{i}=(1,0,0)\\), \\(\\vec{j}=(0,1,0)\\), \\(\\vec{k}=(0,0,1)\\). Se \\(V=(a,b,c)\\) então\n\\[V = a\\vec{i} + b\\vec{j} + c\\vec{k}.\\]"
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-produtos-entre-canônicos",
+    "href": "05_vetores.html#produto-vetorial-produtos-entre-canônicos",
+    "title": "Vetores",
+    "section": "Produto vetorial — produtos entre canônicos",
+    "text": "Produto vetorial — produtos entre canônicos\n\n\n\n\n\n\\[\\begin{array}{ccccccccccccc}\n    \\vec{i} \\times \\vec{i}=\\vec{0}  & & & & & &    \\vec{j} \\times \\vec{i}=-\\vec{k} & & & & & &  \\vec{k} \\times \\vec{i}=\\vec{j}   \\\\\n                                    & & & & & &                                    & & & & & &                                   \\\\\n    \\vec{i} \\times \\vec{j}=\\vec{k}  & & & & & &    \\vec{j} \\times \\vec{j}=\\vec{0}  & & & & & &  \\vec{k} \\times \\vec{j}=-\\vec{i}  \\\\\n                                    & & & & & &                                    & & & & & &                                   \\\\\n    \\vec{i} \\times \\vec{k}=-\\vec{j} & & & & & &    \\vec{j} \\times \\vec{k}=\\vec{i}  & & & & & &  \\vec{k} \\times \\vec{k}=\\vec{0}\n\\end{array}\\]"
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-fórmula-em-coordenadas",
+    "href": "05_vetores.html#produto-vetorial-fórmula-em-coordenadas",
+    "title": "Vetores",
+    "section": "Produto vetorial — fórmula em coordenadas",
+    "text": "Produto vetorial — fórmula em coordenadas\nSe \\[\\begin{array}{ccccccccc}\nV & = & (v_1,v_2,v_3) & = & v_1\\vec{i} & + & v_2\\vec{j} & + & v_3\\vec{k} \\\\\nW & = & (w_1,w_2,w_3) & = & w_1\\vec{i} & + & w_2\\vec{j} & + & w_3\\vec{k}\n\\end{array}\\]\nAplicando distributividade e as relações entre \\(\\vec{i},\\vec{j},\\vec{k}\\):\n\\[V \\times W = (v_2w_3-v_3w_2\\ ,\\ v_3w_1-v_1w_3\\ ,\\ v_1w_2-v_2w_1 ).\\]\nForma mnemônica (determinante simbólico):\n\\[V \\times W = \\det\\begin{bmatrix}\n     \\vec{i} &  \\vec{j} &  \\vec{k} \\\\\n     v_1     &  v_2     &  v_3     \\\\\n     w_1     &  w_2     &  w_3\n\\end{bmatrix}.\\]"
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-exemplo-cálculo",
+    "href": "05_vetores.html#produto-vetorial-exemplo-cálculo",
+    "title": "Vetores",
+    "section": "Produto vetorial — exemplo (cálculo)",
+    "text": "Produto vetorial — exemplo (cálculo)\nCalcule \\(V \\times W\\) para \\(V=(-1,3,0)\\) e \\(W=(2,1,5)\\).\n\\[\nV \\times W = \\det\\begin{bmatrix}\n     \\vec{i} &  \\vec{j} &  \\vec{k} \\\\\n     -1      &  3       &  0        \\\\\n      2      &  1       &  5\n    \\end{bmatrix}\n\\]\n\\[\nV \\times W =\n    \\vec{i}\\begin{vmatrix} 3 & 0 \\\\ 1 & 5 \\end{vmatrix} -\n    \\vec{j}\\begin{vmatrix} -1 & 0 \\\\ 2 & 5 \\end{vmatrix} +\n    \\vec{k}\\begin{vmatrix} -1 & 3 \\\\ 2 & 1 \\end{vmatrix}.\n\\]\n\\[\nV \\times W = 15\\vec{i} + 5\\vec{j} -7\\vec{k} = (15,5,-7).\n\\]\nVerificação: \\(\\langle V, V \\times W\\rangle = \\langle W, V \\times W\\rangle = 0\\)."
+  },
+  {
+    "objectID": "05_vetores.html#aplicação-área-de-triângulo-no-espaço",
+    "href": "05_vetores.html#aplicação-área-de-triângulo-no-espaço",
+    "title": "Vetores",
+    "section": "Aplicação: área de triângulo no espaço",
+    "text": "Aplicação: área de triângulo no espaço\nExemplo 2. Calcule a área do triângulo \\(ABC\\) com \\(A=(4,1,2)\\), \\(B=(3,5,3)\\), \\(C=(-2,3,5)\\).\n\n\n\n\n\n\\[\\boxed{\\text{Área}(\\triangle ABC)=\\tfrac12\\,\\lVert \\overrightarrow{AB} \\times \\overrightarrow{AC}\\rVert}\\]"
+  },
+  {
+    "objectID": "05_vetores.html#área-de-triângulo-cálculo",
+    "href": "05_vetores.html#área-de-triângulo-cálculo",
+    "title": "Vetores",
+    "section": "Área de triângulo — cálculo",
+    "text": "Área de triângulo — cálculo\n\\(\\overrightarrow{AB}=(-1,4,1)\\), \\(\\overrightarrow{AC}=(-6,2,3)\\).\n\\[\\overrightarrow{AB} \\times \\overrightarrow{AC} = \\det\\begin{bmatrix}\n\\vec{i} &  \\vec{j} &  \\vec{k} \\\\\n-1      &  4       & 1         \\\\\n-6      &  2       & 3\n\\end{bmatrix} = (10,-3,22).\\]\nÁrea \\(= \\tfrac12\\sqrt{10^2+(-3)^2+22^2}= \\tfrac12\\sqrt{593}\\)."
+  },
+  {
+    "objectID": "05_vetores.html#produto-misto",
+    "href": "05_vetores.html#produto-misto",
+    "title": "Vetores",
+    "section": "Produto misto",
+    "text": "Produto misto\nTeorema. Para \\(U=(u_1,u_2,u_3)\\), \\(V=(v_1,v_2,v_3)\\), \\(W=(w_1,w_2,w_3)\\): \\[\\langle U, V \\times W\\rangle = \\det\\begin{bmatrix}\nu_1 & u_2 & u_3 \\\\\nv_1 & v_2 & v_3 \\\\\nw_1 & w_2 & w_3\n\\end{bmatrix}.\\]\nDemonstração: escreva \\(V \\times W\\) pelas coordenadas e calcule o produto escalar."
+  },
+  {
+    "objectID": "05_vetores.html#produto-misto-interpretação-geométrica",
+    "href": "05_vetores.html#produto-misto-interpretação-geométrica",
+    "title": "Vetores",
+    "section": "Produto misto — interpretação geométrica",
+    "text": "Produto misto — interpretação geométrica\nTeorema. Dados \\(U,V,W\\), \\[\\big|\\langle U, V \\times W\\rangle\\big|\\] é o volume do paralelepípedo determinado por \\(U,V,W\\)."
+  },
+  {
+    "objectID": "05_vetores.html#vetores-coplanares-caracterização",
+    "href": "05_vetores.html#vetores-coplanares-caracterização",
+    "title": "Vetores",
+    "section": "Vetores coplanares — caracterização",
+    "text": "Vetores coplanares — caracterização\nTeorema. Três vetores \\(U,V,W\\) em \\(\\mathbb{R}^3\\) são coplanares se e somente se \\[\\langle U, V \\times W\\rangle = 0\\] ou, equivalentemente, o volume do paralelepípedo que eles determinam é zero."
+  },
+  {
+    "objectID": "05_vetores.html#aplicação-pontos-coplanares",
+    "href": "05_vetores.html#aplicação-pontos-coplanares",
+    "title": "Vetores",
+    "section": "Aplicação: pontos coplanares",
+    "text": "Aplicação: pontos coplanares\nExemplo 3. Verifique se \\(A=(2,3,3)\\), \\(B=(4,1,3)\\), \\(C=(2,5,1)\\), \\(D=(3,3,2)\\) são coplanares.\n\\(\\overrightarrow{AB}=(2,-2,0)\\), \\(\\overrightarrow{AC}=(0,2,-2)\\), \\(\\overrightarrow{AD}=(1,0,-1)\\).\n\\[\\langle \\overrightarrow{AB}, \\overrightarrow{AC} \\times \\overrightarrow{AD}\\rangle =\n\\det\\begin{bmatrix}\n2 & -2 & 0 \\\\\n0 &  2 & -2 \\\\\n1 &  0 & -1\n\\end{bmatrix}= -2+2=0.\\]\nLogo são coplanares."
+  },
+  {
     "objectID": "ex1.html",
     "href": "ex1.html",
     "title": "Exercícios sobre Matrizes",
