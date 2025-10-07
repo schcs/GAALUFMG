@@ -242,7 +242,7 @@
     "href": "05_vetores.html#classificação-pelo-produto-escalar",
     "title": "Vetores",
     "section": "Classificação pelo produto escalar",
-    "text": "Classificação pelo produto escalar\nPara \\(V,W\\neq\\vec{0}\\):\n\n\\(\\theta\\) é agudo se \\(\\langle V,W\\rangle &gt; 0\\);\n\\(\\theta\\) é obtuso se \\(\\langle V,W\\rangle &lt; 0\\);\n\\(\\theta=90^\\circ\\) se \\(\\langle V,W\\rangle = 0\\) (vetores perpendiculares ou ortogonais).\n\nAssim, \\(\\langle V,W\\rangle = 0\\) determina a ortogonalidade de \\(V\\) e \\(W\\)."
+    "text": "Classificação pelo produto escalar\nPara \\(V,W\\neq\\vec{0}\\):\n\n\\(\\theta\\) é agudo se \\(\\langle V,W\\rangle &gt; 0\\);\n\\(\\theta\\) é obtuso se \\(\\langle V,W\\rangle &lt; 0\\);\n\\(\\theta=90^\\circ\\) se \\(\\langle V,W\\rangle = 0\\) (vetores perpendiculares ou ortogonais).\n\n\n\n\n\n\nAssim, \\(\\langle V,W\\rangle = 0\\) determina a ortogonalidade de \\(V\\) e \\(W\\)."
   },
   {
     "objectID": "05_vetores.html#exemplo-rotação-de-90circ-no-plano",
@@ -340,7 +340,7 @@
     "href": "05_vetores.html#produto-vetorial-produtos-entre-canônicos",
     "title": "Vetores",
     "section": "Produto vetorial — produtos entre canônicos",
-    "text": "Produto vetorial — produtos entre canônicos\n\n\n\n\n\n\\[\\begin{array}{ccccccccccccc}\n    \\vec{i} \\times \\vec{i}=\\vec{0}  & & & & & &    \\vec{j} \\times \\vec{i}=-\\vec{k} & & & & & &  \\vec{k} \\times \\vec{i}=\\vec{j}   \\\\\n                                    & & & & & &                                    & & & & & &                                   \\\\\n    \\vec{i} \\times \\vec{j}=\\vec{k}  & & & & & &    \\vec{j} \\times \\vec{j}=\\vec{0}  & & & & & &  \\vec{k} \\times \\vec{j}=-\\vec{i}  \\\\\n                                    & & & & & &                                    & & & & & &                                   \\\\\n    \\vec{i} \\times \\vec{k}=-\\vec{j} & & & & & &    \\vec{j} \\times \\vec{k}=\\vec{i}  & & & & & &  \\vec{k} \\times \\vec{k}=\\vec{0}\n\\end{array}\\]"
+    "text": "Produto vetorial — produtos entre canônicos\n\n \n\n\\[\\begin{array}{ccccccccccccc}\n    \\vec{i} \\times \\vec{i}=\\vec{0}  & & & & & &    \\vec{j} \\times \\vec{i}=-\\vec{k} & & & & & &  \\vec{k} \\times \\vec{i}=\\vec{j}   \\\\\n                                    & & & & & &                                    & & & & & &                                   \\\\\n    \\vec{i} \\times \\vec{j}=\\vec{k}  & & & & & &    \\vec{j} \\times \\vec{j}=\\vec{0}  & & & & & &  \\vec{k} \\times \\vec{j}=-\\vec{i}  \\\\\n                                    & & & & & &                                    & & & & & &                                   \\\\\n    \\vec{i} \\times \\vec{k}=-\\vec{j} & & & & & &    \\vec{j} \\times \\vec{k}=\\vec{i}  & & & & & &  \\vec{k} \\times \\vec{k}=\\vec{0}\n\\end{array}\\]"
   },
   {
     "objectID": "05_vetores.html#produto-vetorial-fórmula-em-coordenadas",
