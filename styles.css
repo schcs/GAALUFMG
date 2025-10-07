@@ -6,8 +6,10 @@
   font-size: 130%; 
 }
 
+
+
 /* Prevent auto-stretch for specific images */
-.reveal .slides img.nostretch {
+ .reveal .slides img.nostretch {
   max-width: 30% !important; /* acts as an upper bound */
   width: auto !important;    /* respect intrinsic width unless width attr given */
   height: auto !important;
@@ -20,14 +22,6 @@
 }
 
 
-
-/* Hide author and affiliation in Revealjs title slide if present */
-.reveal .quarto-title-block .quarto-title-authors,
-.reveal .quarto-title-block .quarto-title-affiliations,
-.reveal .quarto-title-block .author,
-.reveal .quarto-title-block .affiliation {
-  display: none !important;
-}
 
 /* --- Color utilities for Quarto/Reveal.js --- */
 /* Text colors */
@@ -54,4 +48,14 @@
 
 /* Improve contrast inside boxes in dark themes if needed */
 .reveal.dark .box { background: rgba(255, 255, 255, 0.06); }
+
+
+/* --- Quarto 1.8.x revealjs guards --- */
+/* Hide site-level navbar/sidebar when rendering slides inside a website */
+body.reveal .navbar,
+body.reveal .quarto-sidebar,
+body.reveal .quarto-secondary-nav {
+  display: none !important;
+}
+
 

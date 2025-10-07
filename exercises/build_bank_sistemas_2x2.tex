@@ -1,0 +1,36 @@
+% Wrapper document to compile bank_sistemas_2x2.tex
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{exercisebank}
+
+\newcommand{\R}{\mathbb R}
+
+\usepackage{exercisebank}
+\exercisebanksetup{part problem header={\bfseries{\thepartproblemcounter}.},problem header={\normalfont\Large\bfseries{}}, solution header={{\textbf{Solução:}}}}
+
+
+
+\makeset{ExerciseSet1}{\select{bank_sistemas_2x2}{1,2,3,4,5,6,7,8,9}}
+\makeset{ExerciseSet2}{\select{bank_problemas2x2}{1,2,3,4,5,6,7,8,9,10}}
+\makeset{ExerciseSet3}{\select{bank_sistemas_lineares}{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}}
+\makeset{ExerciseSet4}{\select{bank_determinantes}{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}}
+\makeset{ExerciseSet5}{\select{bank_problemas_sistemas_lineares}{1,2,3,4,5,6,7,8,9,10}}
+
+
+
+\DisplaySolutions
+
+\begin{document}
+%\buildset{ExerciseSet1}
+%\buildset{ExerciseSet2}
+%\buildset{ExerciseSet3}
+%\buildset{ExerciseSet4}
+\buildset{ExerciseSet5}
+\end{document}

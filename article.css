@@ -1,16 +1,3 @@
-/* Hide subtitle, author, and date from the Quarto title block on HTML pages */
-.quarto-title-block .subtitle { display: none !important; }
-.quarto-title-block .quarto-title-meta { display: none !important; }
-/* Explicitly hide authors/affiliations blocks if present */
-.quarto-title-block .quarto-title-authors { display: none !important; }
-.quarto-title-block .quarto-title-affiliations { display: none !important; }
-.quarto-title-block .author { display: none !important; }
-.quarto-title-block .affiliation { display: none !important; }
-/* Hide the entire author/affiliation meta block (headings like Author/Affiliation) */
-.quarto-title-block .quarto-title-meta-author { display: none !important; }
-.quarto-title-block .author { display: none !important; }
-
-
 /* If a fixed navbar exists, reduce top padding so content pulls up */
 body.nav-fixed #quarto-content { padding-top: 0 !important; }
 

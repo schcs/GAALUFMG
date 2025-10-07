@@ -1,0 +1,32 @@
+% Wrapper document to compile bank_sistemas_2x2.tex
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{exercisebank}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\hmod}[1]{\|#1\|}
+\newcommand{\herm}[1]{{\langle #1 \rangle}}
+\newcommand{\proj}{\operatorname{proj}}
+
+\usepackage{exercisebank}
+\exercisebanksetup{part problem header={\bfseries{\thepartproblemcounter}.},problem header={\normalfont\Large\bfseries{}}, solution header={{\textbf{Solução:}}}}
+
+
+
+\makeset{ExerciseSet1}{\select{bank_vectors}{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}}
+
+
+
+%\DisplaySolutions
+
+\begin{document}
+\buildset{ExerciseSet1}
+\end{document}
