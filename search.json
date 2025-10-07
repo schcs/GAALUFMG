@@ -88,7 +88,7 @@
     "href": "05_vetores.html#exemplo-2-solução",
     "title": "Vetores",
     "section": "Exemplo 2 — Solução",
-    "text": "Exemplo 2 — Solução\nSeja \\(ABCD\\) um paralelogramo. Defina \\(V = \\overrightarrow{AB}\\) e \\(W = \\overrightarrow{AD}\\). Então:\n\n\\(\\overrightarrow{AC} = V + W\\);\n\\(\\overrightarrow{BD}= -V + W\\).\n\nSejam \\(M_{AC}\\) e \\(M_{BD}\\) is pontos médios nas diagonais \\(AC\\) e \\(BD\\). Ora, \\[\\begin{align*}\n\\overrightarrow{AM_{AC}}&=\\frac 12\\overrightarrow{AC}=\\frac{V+W}{2}\\\\\n\\overrightarrow{AM_{BD}}&=\\overrightarrow{AB}+\\frac 12\\overrightarrow{BD}=V+\\frac{-V+W}{2}=\\frac{V+W}{2}.\n\\end{align*}\\]\nIsso quer dizer que o vetor com ponto inicial em \\(A\\) e ponto final em \\(M_{AC}\\) é o mesmo que o vetor com ponto inicial em \\(A\\) e ponto final em \\(M_{BD}\\). Logo, \\(M_{AC}=M_{BD}\\) e as diagonais se cortam ao meio."
+    "text": "Exemplo 2 — Solução\n\n\nSeja \\(ABCD\\) um paralelogramo. Defina \\(V = \\overrightarrow{AB}\\) e \\(W = \\overrightarrow{AD}\\). Então:\n\n\\(\\overrightarrow{AC} = V + W\\);\n\\(\\overrightarrow{BD}= -V + W\\).\n\nSejam \\(M_{AC}\\) e \\(M_{BD}\\) is pontos médios nas diagonais \\(AC\\) e \\(BD\\). Ora, \\[\\begin{align*}\n\\overrightarrow{AM_{AC}}&=\\frac 12\\overrightarrow{AC}=\\frac{V+W}{2}\\\\\n\\overrightarrow{AM_{BD}}&=\\overrightarrow{AB}+\\frac 12\\overrightarrow{BD}=V+\\frac{-V+W}{2}=\\frac{V+W}{2}.\n\\end{align*}\\]\nIsso quer dizer que o vetor com ponto inicial em \\(A\\) e ponto final em \\(M_{AC}\\) é o mesmo que o vetor com ponto inicial em \\(A\\) e ponto final em \\(M_{BD}\\). Logo, \\(M_{AC}=M_{BD}\\) e as diagonais se cortam ao meio."
   },
   {
     "objectID": "05_vetores.html#vetores-em-coordenadas",
@@ -207,7 +207,7 @@
     "href": "05_vetores.html#calcular-produto-escalar-usando-a-lei-dos-cossenos",
     "title": "Vetores",
     "section": "Calcular produto escalar usando a Lei dos Cossenos",
-    "text": "Calcular produto escalar usando a Lei dos Cossenos\nSejam \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\) vetores e seja \\(\\vartheta\\) os seus ângulos. \\[\\begin{align*}\n\\left&lt;V,W\\right&gt;&=\\|V\\|\\|W\\|\\cos(\\vartheta)=\\frac 12 (\\|V\\|^2+\\|W\\|^2-\\|W-V\\|^2)\\\\\n&=\\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\\\\n&=\\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\\\\n&=v_1w_1+v_2w_2.\n\\end{align*}\\]\nLogo\n\n\\[\n\\left&lt;V,W\\right&gt;=v_1w_1+v_2w_2\n\\]\n\ne não precisa saber o ângulo."
+    "text": "Calcular produto escalar usando a Lei dos Cossenos\n\n\nSejam \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\) vetores e seja \\(\\vartheta\\) os seus ângulos. \\[\\begin{align*}\n\\left&lt;V,W\\right&gt;&=\\|V\\|\\|W\\|\\cos(\\vartheta)=\\frac 12 (\\|V\\|^2+\\|W\\|^2-\\|W-V\\|^2)\\\\\n&=\\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\\\\n&=\\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\\\\n&=v_1w_1+v_2w_2.\n\\end{align*}\\]\nLogo\n\n\\[\n\\left&lt;V,W\\right&gt;=v_1w_1+v_2w_2\n\\]\n\ne não precisa saber o ângulo."
   },
   {
     "objectID": "05_vetores.html#produto-escalar-em-coordenadas-teoremas",
@@ -284,7 +284,7 @@
     "href": "05_vetores.html#projeção-ortogonal-exercícios",
     "title": "Vetores",
     "section": "Projeção ortogonal – Exercícios",
-    "text": "Projeção ortogonal – Exercícios\n\nProjeções ortogonais de \\(W=(1,2)\\) e \\(U=(-1,2)\\) sobre \\(V=(3,1)\\).\nProjeções ortogonais de \\(W=(w_1,w_2,w_3)\\) em cada eixo coordenado (\\(\\vec{i},\\vec{j},\\vec{k}\\)).\nPara \\(V=(1,2,-1)\\) e \\(W=(3,1,0)\\) calcule \\(\\operatorname{proj}_W(V)\\) e \\(\\operatorname{proj}_V(W)\\).\n\n\nSe \\(\\alpha\\in\\mathbb R\\), \\((\\alpha V) \\times W = V \\times (\\alpha W) = \\alpha ( V \\times W )\\)."
+    "text": "Projeção ortogonal – Exercícios\n\nProjeções ortogonais de \\(W=(1,2)\\) e \\(U=(-1,2)\\) sobre \\(V=(3,1)\\).\nProjeções ortogonais de \\(W=(w_1,w_2,w_3)\\) em cada eixo coordenado (\\(\\vec{i},\\vec{j},\\vec{k}\\)).\nPara \\(V=(1,2,-1)\\) e \\(W=(3,1,0)\\) calcule \\(\\operatorname{proj}_W(V)\\) e \\(\\operatorname{proj}_V(W)\\)."
   },
   {
     "objectID": "05_vetores.html#produto-vetorial-em-mathbbr3-ideia",
@@ -326,7 +326,7 @@
     "href": "05_vetores.html#propriedades-do-produto-vetorial",
     "title": "Vetores",
     "section": "Propriedades do produto vetorial",
-    "text": "Propriedades do produto vetorial\nSejam \\(V\\) e \\(W\\) vetores em \\(\\mathbb{R}^3\\). Então:\n\n\\(V \\times W = - (W \\times V)\\) (anti-comutatividade).\n\\(V \\times W = \\vec{0}\\) se (e somente se) \\(V = \\alpha W\\) ou \\(W = \\alpha V\\) (dependência linear).\n\\(\\langle V , V \\times W\\rangle = \\langle W , V \\times W\\rangle = 0\\) (ortogonalidade de \\(V \\times W\\) a \\(V\\) e a \\(W\\)).\nSe \\(\\alpha\\in\\mathbb{R}\\), então \\((\\alpha V) \\times W = V \\times (\\alpha W) = \\alpha ( V \\times W )\\) (homogeneidade).\n\\(V \\times (W+U) = V \\times W + V \\times U\\) (distributividade à direita). Analogamente, \\((V+U) \\times W = V \\times W + U \\times W\\)."
+    "text": "Propriedades do produto vetorial\nSejam \\(V\\) e \\(W\\) vetores em \\(\\mathbb{R}^3\\). Então:\n\n\\(V \\times W = - (W \\times V)\\) (anti-comutatividade).\n\\(V \\times W = \\vec{0}\\) se (e somente se) \\(V = \\alpha W\\) ou \\(W = \\alpha V\\) (dependência linear).\n\\(\\langle V , V \\times W\\rangle = \\langle W , V \\times W\\rangle = 0\\) (ortogonalidade de \\(V \\times W\\) a \\(V\\) e a \\(W\\)).\nSe \\(\\alpha\\in\\mathbb{R}\\), então \\((\\alpha V) \\times W = V \\times (\\alpha W) = \\alpha ( V \\times W )\\) (homogeneidade).\n\\(V \\times (W+U) = V \\times W + V \\times U\\) (distributividade à direita). Analogamente, \\((V+U) \\times W = V \\times W + U \\times W\\).\nSe \\(\\alpha\\in\\mathbb R\\), \\((\\alpha V) \\times W = V \\times (\\alpha W) = \\alpha ( V \\times W )\\)."
   },
   {
     "objectID": "05_vetores.html#produto-vetorial-em-coordenadas-canônicos",
