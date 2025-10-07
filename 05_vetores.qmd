@@ -117,6 +117,11 @@ Mostre que as diagonais de um paralelogramo se cortam ao meio.
 
 ## Exemplo 2 — Solução
 
+<!-- Figura no canto superior direito -->
+<img src="img/05_vetores/fig09.png"
+  alt="Segmento que une pontos médios"
+  style="position:absolute; top:10px; right:10px; width:30%; border:none; box-shadow:none;" />
+
 Seja $ABCD$ um paralelogramo. Defina $V = \overrightarrow{AB}$ e 
 $W = \overrightarrow{AD}$. Então:
 
@@ -281,6 +286,11 @@ bc\cos\theta=\frac 12 (b^2+c^2-a^2)
 $$
 
 ## Calcular produto escalar usando a Lei dos Cossenos
+<!-- Figura no canto superior direito -->
+<img src="img/05_vetores/fig10_1.png"
+  alt="Segmento que une pontos médios"
+  style="position:absolute; top:10px; right:-50px; width:10%; border:none; box-shadow:none;" />
+
 
 Sejam $V=(v_1,v_2)$ e $W=(w_1,w_2)$ vetores e seja $\vartheta$ os seus ângulos. 
 \begin{align*}
@@ -412,7 +422,7 @@ $$\operatorname{dist}(A,\alpha)=\big\|\operatorname{proj}_N(\overrightarrow{PA})
 Para $P$ em $r$ (e $V_r$ vetor diretor):
 $$\operatorname{dist}(A,r)^2 + \big\|\operatorname{proj}_{V_r}(\overrightarrow{PA})\big\|^2 = \|\overrightarrow{PA}\|^2.$$
 -->
-\item Se $\alpha\in\mathbb R$, $(\alpha V) \times W = V \times (\alpha W) = \alpha ( V \times W )$.  \pause
+
 
 ## Produto vetorial em $\mathbb{R}^3$ — ideia
 Dados dois vetores $V$ e $W$, queremos achar um vetor $V\times W$ ortogonal a $V$ e a $W$.
@@ -464,6 +474,7 @@ Sejam $V$ e $W$ vetores em $\mathbb{R}^3$. Então:
 3. $\langle V , V \times W\rangle = \langle W , V \times W\rangle = 0$ (ortogonalidade de $V \times W$ a $V$ e a $W$).
 4. Se $\alpha\in\mathbb{R}$, então $(\alpha V) \times W = V \times (\alpha W) = \alpha ( V \times W )$ (homogeneidade).
 5. $V \times (W+U) = V \times W + V \times U$ (distributividade à direita). Analogamente, $(V+U) \times W = V \times W + U \times W$.
+6. Se $\alpha\in\mathbb R$, $(\alpha V) \times W = V \times (\alpha W) = \alpha ( V \times W )$.  
 
 ## Produto vetorial em coordenadas — canônicos
 
