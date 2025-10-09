@@ -354,7 +354,7 @@
     "href": "05_vetores.html#aplicação-área-de-triângulo-no-espaço",
     "title": "Vetores",
     "section": "Aplicação: área de triângulo no espaço",
-    "text": "Aplicação: área de triângulo no espaço\nExemplo 2. Calcule a área do triângulo \\(ABC\\) com \\(A=(4,1,2)\\), \\(B=(3,5,3)\\), \\(C=(-2,3,5)\\).\n\n\n\n\n\n\\[\\boxed{\\text{Área}(\\triangle ABC)=\\tfrac12\\,\\lVert \\overrightarrow{AB} \\times \\overrightarrow{AC}\\rVert}\\]"
+    "text": "Aplicação: área de triângulo no espaço\nExemplo 2. Calcule a área do triângulo \\(ABC\\) com \\(A=(4,1,2)\\), \\(B=(3,5,3)\\), \\(C=(-2,3,5)\\).\n\n\n\n\n\n\\[{\\text{Área}(\\triangle ABC)=\\tfrac12\\,\\lVert \\overrightarrow{AB} \\times \\overrightarrow{AC}\\rVert}\\]"
   },
   {
     "objectID": "05_vetores.html#área-de-triângulo-cálculo",
