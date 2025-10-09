@@ -346,6 +346,8 @@ Para $V,W\neq\vec{0}$:
 2. $\theta$ é obtuso se $\langle V,W\rangle < 0$; 
 3. $\theta=90^\circ$ se $\langle V,W\rangle = 0$ (vetores perpendiculares ou ortogonais). 
 
+![](img/05_vetores/cosine_0_180.png){.nostretch width=45% fig-align="center"}
+
 Assim, $\langle V,W\rangle = 0$ determina a ortogonalidade de $V$ e $W$. 
 
 
@@ -486,7 +488,10 @@ $$V = a\vec{i} + b\vec{j} + c\vec{k}.$$
 
 ## Produto vetorial — produtos entre canônicos
 
-![](img/05_vetores/fig22.png){width=30% fig-align="center" .nostretch}
+<div style="display:flex; justify-content:center; align-items:center; gap:2rem;">
+  <img src="img/05_vetores/fig22.png" style="width:40%; max-width:300px;" />
+  <img src="img/05_vetores/ijk_cycle.png" style="width:40%; max-width:300px;" />
+</div>
 
 $$\begin{array}{ccccccccccccc}
     \vec{i} \times \vec{i}=\vec{0}  & & & & & &    \vec{j} \times \vec{i}=-\vec{k} & & & & & &  \vec{k} \times \vec{i}=\vec{j}   \\
