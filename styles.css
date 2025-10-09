@@ -1,11 +1,14 @@
 .reveal {
-  font-size: 200%; 
+  font-size: 180%; 
  }
 
 .reveal .slides > section {
   font-size: 100%; 
 }
 
+.MathJax_Display, .MathJax .MJX-TeXAtom-ORD {
+  font-size: 0.9em; /* Adjust this value as needed */
+}
 
 
 /* Prevent auto-stretch for specific images */

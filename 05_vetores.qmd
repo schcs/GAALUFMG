@@ -120,7 +120,7 @@ Mostre que as diagonais de um paralelogramo se cortam ao meio.
 <!-- Figura no canto superior direito -->
 <img src="img/05_vetores/fig09.png"
   alt="Segmento que une pontos médios"
-  style="position:absolute; top:10px; right:10px; width:30%; border:none; box-shadow:none;" />
+  style="position:absolute; top:10px; right:10px; width:100%; border:none; box-shadow:none;" />
 
 Seja $ABCD$ um paralelogramo. Defina $V = \overrightarrow{AB}$ e 
 $W = \overrightarrow{AD}$. Então:
@@ -230,8 +230,10 @@ Se $V=(v_1,v_2,v_3)$, então $\lVert V \rVert = \sqrt{v_1^2 + v_2^2 + v_3^2}$.
 
 Se $P=(x_1,y_1)$ e $Q=(x_2,y_2)$, então
 
-$$\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \qquad
-\operatorname{dist}(P,Q)=\lVert\overrightarrow{PQ}\rVert=\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.$$
+\begin{align*}
+\overrightarrow{PQ}&=Q-P=(x_2-x_1 , y_2-y_1)\\
+\operatorname{dist}(P,Q)&=\lVert\overrightarrow{PQ}\rVert=\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.
+\end{align*}
 
 ![](img/05_vetores/fig06_1.png){.nostretch width=40% fig-align="center"}
 
@@ -296,7 +298,7 @@ Sejam $V=(v_1,v_2)$ e $W=(w_1,w_2)$ vetores e seja $\vartheta$ os seus ângulos.
 \begin{align*}
 \left<V,W\right>&=\|V\|\|W\|\cos(\vartheta)=\frac 12 (\|V\|^2+\|W\|^2-\|W-V\|^2)\\
 &=\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\
-&=\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\
+&=\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+v_1^2)-(w_2^2-2v_2w_2+v_2^2))\\
 &=v_1w_1+v_2w_2.
 \end{align*}
 
@@ -319,7 +321,7 @@ No espaço, se $V=(v_1,v_2,v_3)$ e $W=(w_1,w_2,w_3)$, então
 $$\langle V,W\rangle = v_1w_1 + v_2w_2 + v_3w_3.$$
 
 
-## Produto escalar — exemplo rápido
+### Produto escalar — exemplo rápido
 
 Se $V=(4,1)$ e $W=(2,3)$, então $\langle V,W\rangle = 4\cdot 2 + 1\cdot 3 = 11$. 
 
@@ -332,7 +334,7 @@ $$\cos\theta\;=\;\dfrac{\langle V,W\rangle}{\lVert V\rVert\,\lVert W\rVert}.$$
 O ângulo $\theta$ entre dois vetores satisfaz $0^\circ\leq\theta\leq 180^\circ$. 
 
 
-## Ângulo entre dois vetores — exemplo
+### Ângulo entre dois vetores — exemplo
 
 Se $V=(4,1)$ e $W=(2,3)$, então
 $$\cos\theta=\dfrac{11}{\sqrt{17}\,\sqrt{13}},\qquad \theta = \arccos\Big(\dfrac{11}{\sqrt{17}\,\sqrt{13}}\Big) \approx 42^\circ.$$ 
@@ -346,7 +348,7 @@ Para $V,W\neq\vec{0}$:
 2. $\theta$ é obtuso se $\langle V,W\rangle < 0$; 
 3. $\theta=90^\circ$ se $\langle V,W\rangle = 0$ (vetores perpendiculares ou ortogonais). 
 
-![](img/05_vetores/cosine_0_180.png){.nostretch width=45% fig-align="center"}
+![](img/05_vetores/cosine_0_180.png){.nostretch width=35% fig-align="center"}
 
 Assim, $\langle V,W\rangle = 0$ determina a ortogonalidade de $V$ e $W$. 
 
@@ -401,8 +403,10 @@ Se $\theta = \angle(V,W)$:
 
 O vetor $\operatorname{proj}_V(W)$ é caracterizado por:
 
-1. $\operatorname{proj}_V(W)=\alpha V$ para algum $\alpha\in\mathbb{R}$.
-2. $W - \operatorname{proj}_V(W)$ é ortogonal a $V$.
+<div style="text-align:center">
+$\operatorname{proj}_V(W)=\alpha V$ para algum $\alpha\in\mathbb{R}$
+e $W - \operatorname{proj}_V(W)$ é ortogonal a $V$.
+</div>
 
 De $\langle W-\alpha V, V\rangle = 0$ segue que
 $$\alpha = \frac{\langle W,V\rangle}{\langle V,V\rangle}, \qquad \operatorname{proj}_V(W)=\frac{\langle W,V\rangle}{\langle V,V\rangle}\,V.$$
@@ -429,7 +433,7 @@ $$\operatorname{dist}(A,r)^2 + \big\|\operatorname{proj}_{V_r}(\overrightarrow{P
 ## Produto vetorial em $\mathbb{R}^3$ — ideia
 Dados dois vetores $V$ e $W$, queremos achar um vetor $V\times W$ ortogonal a $V$ e a $W$.
 
-![](img/05_vetores/fig19.png){width=40% fig-align="center" .nostretch}
+![](img/05_vetores/fig19.png){width=35% fig-align="center" .nostretch}
 
 Pergunta: Quantos vetores perpendiculares a $V$ e a $W$ existem?
 
@@ -453,7 +457,7 @@ Por definição, o sentido de $V \times W$ é tal que (nesta ordem) $V$, $W$ e $
 
 ## Produto vetorial — caracterização
 
-![](img/05_vetores/fig19.png){width=40% fig-align="center" .nostretch}
+![](img/05_vetores/fig19.png){width=35% fig-align="center" .nostretch}
 
 O produto vetorial $V \times W$ é caracterizado por:
 
@@ -480,7 +484,7 @@ Sejam $V$ e $W$ vetores em $\mathbb{R}^3$. Então:
 
 ## Produto vetorial em coordenadas — canônicos
 
-![](img/05_vetores/fig22.png){width=40% fig-align="center" .nostretch}
+![](img/05_vetores/fig22.png){width=35% fig-align="center" .nostretch}
 
 Vetores canônicos: $\vec{i}=(1,0,0)$, $\vec{j}=(0,1,0)$, $\vec{k}=(0,0,1)$. Se $V=(a,b,c)$ então
 
@@ -509,9 +513,23 @@ V & = & (v_1,v_2,v_3) & = & v_1\vec{i} & + & v_2\vec{j} & + & v_3\vec{k} \\
 W & = & (w_1,w_2,w_3) & = & w_1\vec{i} & + & w_2\vec{j} & + & w_3\vec{k}
 \end{array}$$
 
-Aplicando distributividade e as relações entre $\vec{i},\vec{j},\vec{k}$:
+Ora, 
+\begin{align*}
+V\times W&=(v_1\vec{i}  +  v_2\vec{j}  +  v_3\vec{k})\times (w_1\vec{i}  +  w_2\vec{j}  +  w_3\vec{k})\\
+&=v_1w_1(\vec{i}\times \vec{i})+ v_1w_2(\vec{i}\times \vec{j}) + v_1w_3(\vec{i}\times \vec{k}) \\
+&+ v_2w_1(\vec{j}\times \vec{i}) + v_2w_2(\vec{j}\times \vec{j}) + v_2w_3(\vec{j}\times \vec{k}) \\
+&+ v_3w_1(\vec{k}\times \vec{i}) + v_3w_2(\vec{k}\times \vec{j}) + v_3w_3(\vec{k}\times \vec{k})\\
+&=(v_2w_3-v_3w_2)\vec{i}+(v_3w_1-v_1w_3)\vec{j}+(v_1w_2-v_2w_1)\vec{k}\\
+&=(v_2w_3-v_3w_2\ ,\ v_3w_1-v_1w_3\ ,\ v_1w_2-v_2w_1 ).
+\end{align*}
 
-$$V \times W = (v_2w_3-v_3w_2\ ,\ v_3w_1-v_1w_3\ ,\ v_1w_2-v_2w_1 ).$$
+## Produto vetorial — fórmula em coordenadas
+
+Calculamos para $V=(v_1,v_2,v_3)$ e $W=(w_1,w_2,w_3)$ que 
+\begin{align*}
+V\times W&=(v_2w_3-v_3w_2)\vec{i}+(v_3w_1-v_1w_3)\vec{j}+(v_1w_2-v_2w_1)\vec{k}
+\\&=(v_2w_3-v_3w_2\ ,\ v_3w_1-v_1w_3\ ,\ v_1w_2-v_2w_1 ).
+\end{align*}
 
 Forma mnemônica (determinante simbólico):
 
@@ -570,26 +588,37 @@ $$\overrightarrow{AB} \times \overrightarrow{AC} = \det\begin{bmatrix}
 
 ## Produto misto
 
-Teorema. Para $U=(u_1,u_2,u_3)$, $V=(v_1,v_2,v_3)$, $W=(w_1,w_2,w_3)$:
-$$\langle U, V \times W\rangle = \det\begin{bmatrix}
+O [produto misto]{.bg-yellow} de $U,V,W\in\mathbb R^3$ é 
+$$
+\left<U,V\times W\right>.
+$$
+
+Ora, 
+\begin{align*}
+\left<U,V\times W\right>&=\left<(u_1,u_2,u_3),(v_2w_3-v_3w_2 , v_3w_1-v_1w_3 , v_1w_2-v_2w_1)\right>
+\\&=u_1(v_2w_3-v_3w_2)+u_2(v_3w_1-v_1w_3)+u_3(v_1w_2-v_2w_1)\\
+ &= \det\begin{bmatrix}
  u_1 & u_2 & u_3 \\
  v_1 & v_2 & v_3 \\
  w_1 & w_2 & w_3
-\end{bmatrix}.$$
-
-Demonstração: escreva $V \times W$ pelas coordenadas e calcule o produto escalar.
+\end{bmatrix}.
+\end{align*}
 
 ## Produto misto — interpretação geométrica
 
-Teorema. Dados $U,V,W$,
-$$\big|\langle U, V \times W\rangle\big|$$
+[Teorema.]{.bg-yellow} Dados $U,V,W$,
+$\big|\langle U, V \times W\rangle\big|$
 é o volume do paralelepípedo determinado por $U,V,W$.
 
 ![](img/05_vetores/fig24.png){width=40% fig-align="center" .nostretch}
 
+1. Área da base: $\|V\times W\|$.
+2. Altura: $\|U\||\cos\vartheta|$. 
+3. Volume: $\|V\times W\|\|U\||\cos \vartheta|=|\left<U,V\times W\right>|$.
+
 ## Vetores coplanares — caracterização
 
-Teorema. Três vetores $U,V,W$ em $\mathbb{R}^3$ são coplanares se e somente se
+[Teorema.]{.bg-yellow} Três vetores $U,V,W$ em $\mathbb{R}^3$ são coplanares se e somente se
 $$\langle U, V \times W\rangle = 0$$
 ou, equivalentemente, o volume do paralelepípedo que eles determinam é zero.
 
@@ -606,6 +635,6 @@ $$\langle \overrightarrow{AB}, \overrightarrow{AC} \times \overrightarrow{AD}\ra
  2 & -2 & 0 \\
  0 &  2 & -2 \\
  1 &  0 & -1
-\end{bmatrix}= -2+2=0.$$
+\end{bmatrix}=0.$$
 
 Logo são coplanares.
