@@ -32,12 +32,12 @@ Como o módulo de um vetor é um número, para saber o que é um vetor, precisam
 
 ## O que é o número cinco?
 
-![](img/05_vetores/fig14.png){.nostretch width=60% fig-align="center"}
+![](img/05_vetores/fig14.png){.nostretch width=40% fig-align="center"}
 
 
 ## O que é o número cinco? (cont.)
 
-![](img/05_vetores/fig14.png){.nostretch width=60% fig-align="center"}
+![](img/05_vetores/fig14.png){.nostretch width=40% fig-align="center"}
 
 - O número cinco é um conceito abstrato, representado de diferentes maneiras. 
 - Nenhuma dessas imagens é o número cinco; são representações do número cinco. 
@@ -49,7 +49,7 @@ Como o módulo de um vetor é um número, para saber o que é um vetor, precisam
 - São representados por segmentos orientados. 
 - Segmentos orientados paralelos, com mesmo comprimento e sentido, representam o mesmo vetor. 
 
-![](img/05_vetores/fig01.png){.nostretch width=40% fig-align="center"}
+![](img/05_vetores/fig01.png){.nostretch width=25% fig-align="center"}
 
 Do mesmo modo que a representação de um número não é o número, a representação de um vetor por um segmento orientado não é o vetor.
 
