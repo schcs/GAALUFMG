@@ -165,7 +165,7 @@
     "href": "05_vetores.html#distância-entre-dois-pontos",
     "title": "Vetores",
     "section": "Distância entre dois pontos",
-    "text": "Distância entre dois pontos\nSe \\(P=(x_1,y_1)\\) e \\(Q=(x_2,y_2)\\), então\n\\[\\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \\qquad\n\\operatorname{dist}(P,Q)=\\lVert\\overrightarrow{PQ}\\rVert=\\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.\\]"
+    "text": "Distância entre dois pontos\nSe \\(P=(x_1,y_1)\\) e \\(Q=(x_2,y_2)\\), então\n\\[\\begin{align*}\n\\overrightarrow{PQ}&=Q-P=(x_2-x_1 , y_2-y_1)\\\\\n\\operatorname{dist}(P,Q)&=\\lVert\\overrightarrow{PQ}\\rVert=\\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.\n\\end{align*}\\]"
   },
   {
     "objectID": "05_vetores.html#vetores-unitários",
@@ -207,35 +207,21 @@
     "href": "05_vetores.html#calcular-produto-escalar-usando-a-lei-dos-cossenos",
     "title": "Vetores",
     "section": "Calcular produto escalar usando a Lei dos Cossenos",
-    "text": "Calcular produto escalar usando a Lei dos Cossenos\n\n\nSejam \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\) vetores e seja \\(\\vartheta\\) os seus ângulos. \\[\\begin{align*}\n\\left&lt;V,W\\right&gt;&=\\|V\\|\\|W\\|\\cos(\\vartheta)=\\frac 12 (\\|V\\|^2+\\|W\\|^2-\\|W-V\\|^2)\\\\\n&=\\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\\\\n&=\\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\\\\n&=v_1w_1+v_2w_2.\n\\end{align*}\\]\nLogo\n\n\\[\n\\left&lt;V,W\\right&gt;=v_1w_1+v_2w_2\n\\]\n\ne não precisa saber o ângulo."
+    "text": "Calcular produto escalar usando a Lei dos Cossenos\n\n\nSejam \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\) vetores e seja \\(\\vartheta\\) os seus ângulos. \\[\\begin{align*}\n\\left&lt;V,W\\right&gt;&=\\|V\\|\\|W\\|\\cos(\\vartheta)=\\frac 12 (\\|V\\|^2+\\|W\\|^2-\\|W-V\\|^2)\\\\\n&=\\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\\\\n&=\\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+v_1^2)-(w_2^2-2v_2w_2+v_2^2))\\\\\n&=v_1w_1+v_2w_2.\n\\end{align*}\\]\nLogo\n\n\\[\n\\left&lt;V,W\\right&gt;=v_1w_1+v_2w_2\n\\]\n\ne não precisa saber o ângulo."
   },
   {
     "objectID": "05_vetores.html#produto-escalar-em-coordenadas-teoremas",
     "href": "05_vetores.html#produto-escalar-em-coordenadas-teoremas",
     "title": "Vetores",
     "section": "Produto escalar em coordenadas — teoremas",
-    "text": "Produto escalar em coordenadas — teoremas\nNo plano, se \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\), então \\[\\langle V,W\\rangle = v_1w_1 + v_2w_2.\\]\nNo espaço, se \\(V=(v_1,v_2,v_3)\\) e \\(W=(w_1,w_2,w_3)\\), então \\[\\langle V,W\\rangle = v_1w_1 + v_2w_2 + v_3w_3.\\]"
-  },
-  {
-    "objectID": "05_vetores.html#produto-escalar-exemplo-rápido",
-    "href": "05_vetores.html#produto-escalar-exemplo-rápido",
-    "title": "Vetores",
-    "section": "Produto escalar — exemplo rápido",
-    "text": "Produto escalar — exemplo rápido\nSe \\(V=(4,1)\\) e \\(W=(2,3)\\), então \\(\\langle V,W\\rangle = 4\\cdot 2 + 1\\cdot 3 = 11\\)."
+    "text": "Produto escalar em coordenadas — teoremas\nNo plano, se \\(V=(v_1,v_2)\\) e \\(W=(w_1,w_2)\\), então \\[\\langle V,W\\rangle = v_1w_1 + v_2w_2.\\]\nNo espaço, se \\(V=(v_1,v_2,v_3)\\) e \\(W=(w_1,w_2,w_3)\\), então \\[\\langle V,W\\rangle = v_1w_1 + v_2w_2 + v_3w_3.\\]\nProduto escalar — exemplo rápido\nSe \\(V=(4,1)\\) e \\(W=(2,3)\\), então \\(\\langle V,W\\rangle = 4\\cdot 2 + 1\\cdot 3 = 11\\)."
   },
   {
     "objectID": "05_vetores.html#ângulo-entre-dois-vetores",
     "href": "05_vetores.html#ângulo-entre-dois-vetores",
     "title": "Vetores",
     "section": "Ângulo entre dois vetores",
-    "text": "Ângulo entre dois vetores\nSe \\(V\\) e \\(W\\) são dados em coordenadas, então \\[\\cos\\theta\\;=\\;\\dfrac{\\langle V,W\\rangle}{\\lVert V\\rVert\\,\\lVert W\\rVert}.\\]\nO ângulo \\(\\theta\\) entre dois vetores satisfaz \\(0^\\circ\\leq\\theta\\leq 180^\\circ\\)."
-  },
-  {
-    "objectID": "05_vetores.html#ângulo-entre-dois-vetores-exemplo",
-    "href": "05_vetores.html#ângulo-entre-dois-vetores-exemplo",
-    "title": "Vetores",
-    "section": "Ângulo entre dois vetores — exemplo",
-    "text": "Ângulo entre dois vetores — exemplo\nSe \\(V=(4,1)\\) e \\(W=(2,3)\\), então \\[\\cos\\theta=\\dfrac{11}{\\sqrt{17}\\,\\sqrt{13}},\\qquad \\theta = \\arccos\\Big(\\dfrac{11}{\\sqrt{17}\\,\\sqrt{13}}\\Big) \\approx 42^\\circ.\\]"
+    "text": "Ângulo entre dois vetores\nSe \\(V\\) e \\(W\\) são dados em coordenadas, então \\[\\cos\\theta\\;=\\;\\dfrac{\\langle V,W\\rangle}{\\lVert V\\rVert\\,\\lVert W\\rVert}.\\]\nO ângulo \\(\\theta\\) entre dois vetores satisfaz \\(0^\\circ\\leq\\theta\\leq 180^\\circ\\).\nÂngulo entre dois vetores — exemplo\nSe \\(V=(4,1)\\) e \\(W=(2,3)\\), então \\[\\cos\\theta=\\dfrac{11}{\\sqrt{17}\\,\\sqrt{13}},\\qquad \\theta = \\arccos\\Big(\\dfrac{11}{\\sqrt{17}\\,\\sqrt{13}}\\Big) \\approx 42^\\circ.\\]"
   },
   {
     "objectID": "05_vetores.html#classificação-pelo-produto-escalar",
@@ -277,7 +263,7 @@
     "href": "05_vetores.html#projeção-ortogonal-caracterização",
     "title": "Vetores",
     "section": "Projeção ortogonal — caracterização",
-    "text": "Projeção ortogonal — caracterização\n\n\n\n\n\nO vetor \\(\\operatorname{proj}_V(W)\\) é caracterizado por:\n\n\\(\\operatorname{proj}_V(W)=\\alpha V\\) para algum \\(\\alpha\\in\\mathbb{R}\\).\n\\(W - \\operatorname{proj}_V(W)\\) é ortogonal a \\(V\\).\n\nDe \\(\\langle W-\\alpha V, V\\rangle = 0\\) segue que \\[\\alpha = \\frac{\\langle W,V\\rangle}{\\langle V,V\\rangle}, \\qquad \\operatorname{proj}_V(W)=\\frac{\\langle W,V\\rangle}{\\langle V,V\\rangle}\\,V.\\]"
+    "text": "Projeção ortogonal — caracterização\n\n\n\n\n\nO vetor \\(\\operatorname{proj}_V(W)\\) é caracterizado por:\n\n\\(\\operatorname{proj}_V(W)=\\alpha V\\) para algum \\(\\alpha\\in\\mathbb{R}\\) e \\(W - \\operatorname{proj}_V(W)\\) é ortogonal a \\(V\\).\n\nDe \\(\\langle W-\\alpha V, V\\rangle = 0\\) segue que \\[\\alpha = \\frac{\\langle W,V\\rangle}{\\langle V,V\\rangle}, \\qquad \\operatorname{proj}_V(W)=\\frac{\\langle W,V\\rangle}{\\langle V,V\\rangle}\\,V.\\]"
   },
   {
     "objectID": "05_vetores.html#projeção-ortogonal-exercícios",
@@ -347,7 +333,14 @@
     "href": "05_vetores.html#produto-vetorial-fórmula-em-coordenadas",
     "title": "Vetores",
     "section": "Produto vetorial — fórmula em coordenadas",
-    "text": "Produto vetorial — fórmula em coordenadas\nSe \\[\\begin{array}{ccccccccc}\nV & = & (v_1,v_2,v_3) & = & v_1\\vec{i} & + & v_2\\vec{j} & + & v_3\\vec{k} \\\\\nW & = & (w_1,w_2,w_3) & = & w_1\\vec{i} & + & w_2\\vec{j} & + & w_3\\vec{k}\n\\end{array}\\]\nAplicando distributividade e as relações entre \\(\\vec{i},\\vec{j},\\vec{k}\\):\n\\[V \\times W = (v_2w_3-v_3w_2\\ ,\\ v_3w_1-v_1w_3\\ ,\\ v_1w_2-v_2w_1 ).\\]\nForma mnemônica (determinante simbólico):\n\\[V \\times W = \\det\\begin{bmatrix}\n     \\vec{i} &  \\vec{j} &  \\vec{k} \\\\\n     v_1     &  v_2     &  v_3     \\\\\n     w_1     &  w_2     &  w_3\n\\end{bmatrix}.\\]"
+    "text": "Produto vetorial — fórmula em coordenadas\nSe \\[\\begin{array}{ccccccccc}\nV & = & (v_1,v_2,v_3) & = & v_1\\vec{i} & + & v_2\\vec{j} & + & v_3\\vec{k} \\\\\nW & = & (w_1,w_2,w_3) & = & w_1\\vec{i} & + & w_2\\vec{j} & + & w_3\\vec{k}\n\\end{array}\\]\nOra, \\[\\begin{align*}\nV\\times W&=(v_1\\vec{i}  +  v_2\\vec{j}  +  v_3\\vec{k})\\times (w_1\\vec{i}  +  w_2\\vec{j}  +  w_3\\vec{k})\\\\\n&=v_1w_1(\\vec{i}\\times \\vec{i})+ v_1w_2(\\vec{i}\\times \\vec{j}) + v_1w_3(\\vec{i}\\times \\vec{k}) \\\\\n&+ v_2w_1(\\vec{j}\\times \\vec{i}) + v_2w_2(\\vec{j}\\times \\vec{j}) + v_2w_3(\\vec{j}\\times \\vec{k}) \\\\\n&+ v_3w_1(\\vec{k}\\times \\vec{i}) + v_3w_2(\\vec{k}\\times \\vec{j}) + v_3w_3(\\vec{k}\\times \\vec{k})\\\\\n&=(v_2w_3-v_3w_2)\\vec{i}+(v_3w_1-v_1w_3)\\vec{j}+(v_1w_2-v_2w_1)\\vec{k}\\\\\n&=(v_2w_3-v_3w_2\\ ,\\ v_3w_1-v_1w_3\\ ,\\ v_1w_2-v_2w_1 ).\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "05_vetores.html#produto-vetorial-fórmula-em-coordenadas-1",
+    "href": "05_vetores.html#produto-vetorial-fórmula-em-coordenadas-1",
+    "title": "Vetores",
+    "section": "Produto vetorial — fórmula em coordenadas",
+    "text": "Produto vetorial — fórmula em coordenadas\nCalculamos para \\(V=(v_1,v_2,v_3)\\) e \\(W=(w_1,w_2,w_3)\\) que \\[\\begin{align*}\nV\\times W&=(v_2w_3-v_3w_2)\\vec{i}+(v_3w_1-v_1w_3)\\vec{j}+(v_1w_2-v_2w_1)\\vec{k}\n\\\\&=(v_2w_3-v_3w_2\\ ,\\ v_3w_1-v_1w_3\\ ,\\ v_1w_2-v_2w_1 ).\n\\end{align*}\\]\nForma mnemônica (determinante simbólico):\n\\[V \\times W = \\det\\begin{bmatrix}\n     \\vec{i} &  \\vec{j} &  \\vec{k} \\\\\n     v_1     &  v_2     &  v_3     \\\\\n     w_1     &  w_2     &  w_3\n\\end{bmatrix}.\\]"
   },
   {
     "objectID": "05_vetores.html#produto-vetorial-exemplo-cálculo",
@@ -375,14 +368,14 @@
     "href": "05_vetores.html#produto-misto",
     "title": "Vetores",
     "section": "Produto misto",
-    "text": "Produto misto\nTeorema. Para \\(U=(u_1,u_2,u_3)\\), \\(V=(v_1,v_2,v_3)\\), \\(W=(w_1,w_2,w_3)\\): \\[\\langle U, V \\times W\\rangle = \\det\\begin{bmatrix}\nu_1 & u_2 & u_3 \\\\\nv_1 & v_2 & v_3 \\\\\nw_1 & w_2 & w_3\n\\end{bmatrix}.\\]\nDemonstração: escreva \\(V \\times W\\) pelas coordenadas e calcule o produto escalar."
+    "text": "Produto misto\nO produto misto de \\(U,V,W\\in\\mathbb R^3\\) é \\[\n\\left&lt;U,V\\times W\\right&gt;.\n\\]\nOra, \\[\\begin{align*}\n\\left&lt;U,V\\times W\\right&gt;&=\\left&lt;(u_1,u_2,u_3),(v_2w_3-v_3w_2 , v_3w_1-v_1w_3 , v_1w_2-v_2w_1)\\right&gt;\n\\\\&=u_1(v_2w_3-v_3w_2)+u_2(v_3w_1-v_1w_3)+u_3(v_1w_2-v_2w_1)\\\\\n&= \\det\\begin{bmatrix}\nu_1 & u_2 & u_3 \\\\\nv_1 & v_2 & v_3 \\\\\nw_1 & w_2 & w_3\n\\end{bmatrix}.\n\\end{align*}\\]"
   },
   {
     "objectID": "05_vetores.html#produto-misto-interpretação-geométrica",
     "href": "05_vetores.html#produto-misto-interpretação-geométrica",
     "title": "Vetores",
     "section": "Produto misto — interpretação geométrica",
-    "text": "Produto misto — interpretação geométrica\nTeorema. Dados \\(U,V,W\\), \\[\\big|\\langle U, V \\times W\\rangle\\big|\\] é o volume do paralelepípedo determinado por \\(U,V,W\\)."
+    "text": "Produto misto — interpretação geométrica\nTeorema. Dados \\(U,V,W\\), \\(\\big|\\langle U, V \\times W\\rangle\\big|\\) é o volume do paralelepípedo determinado por \\(U,V,W\\).\n\n\n\n\n\n\nÁrea da base: \\(\\|V\\times W\\|\\).\nAltura: \\(\\|U\\||\\cos\\vartheta|\\).\nVolume: \\(\\|V\\times W\\|\\|U\\||\\cos \\vartheta|=|\\left&lt;U,V\\times W\\right&gt;|\\)."
   },
   {
     "objectID": "05_vetores.html#vetores-coplanares-caracterização",
@@ -396,7 +389,7 @@
     "href": "05_vetores.html#aplicação-pontos-coplanares",
     "title": "Vetores",
     "section": "Aplicação: pontos coplanares",
-    "text": "Aplicação: pontos coplanares\nExemplo 3. Verifique se \\(A=(2,3,3)\\), \\(B=(4,1,3)\\), \\(C=(2,5,1)\\), \\(D=(3,3,2)\\) são coplanares.\n\\(\\overrightarrow{AB}=(2,-2,0)\\), \\(\\overrightarrow{AC}=(0,2,-2)\\), \\(\\overrightarrow{AD}=(1,0,-1)\\).\n\\[\\langle \\overrightarrow{AB}, \\overrightarrow{AC} \\times \\overrightarrow{AD}\\rangle =\n\\det\\begin{bmatrix}\n2 & -2 & 0 \\\\\n0 &  2 & -2 \\\\\n1 &  0 & -1\n\\end{bmatrix}= -2+2=0.\\]\nLogo são coplanares."
+    "text": "Aplicação: pontos coplanares\nExemplo 3. Verifique se \\(A=(2,3,3)\\), \\(B=(4,1,3)\\), \\(C=(2,5,1)\\), \\(D=(3,3,2)\\) são coplanares.\n\\(\\overrightarrow{AB}=(2,-2,0)\\), \\(\\overrightarrow{AC}=(0,2,-2)\\), \\(\\overrightarrow{AD}=(1,0,-1)\\).\n\\[\\langle \\overrightarrow{AB}, \\overrightarrow{AC} \\times \\overrightarrow{AD}\\rangle =\n\\det\\begin{bmatrix}\n2 & -2 & 0 \\\\\n0 &  2 & -2 \\\\\n1 &  0 & -1\n\\end{bmatrix}=0.\\]\nLogo são coplanares."
   },
   {
     "objectID": "ex1.html",

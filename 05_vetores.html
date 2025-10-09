@@ -139,7 +139,7 @@ UFMG
 </div>
 </div>
 
-  <p class="date">7 de outubro de 2025</p>
+  <p class="date">9 de outubro de 2025</p>
 </section>
 <section id="introdução" class="slide level2">
 <h2>Introdução</h2>
@@ -156,7 +156,7 @@ UFMG
 <h2>O que é o número cinco?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig14.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+<p><img data-src="img/05_vetores/fig14.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
 </figure>
 </div>
 </section>
@@ -164,7 +164,7 @@ UFMG
 <h2>O que é o número cinco? (cont.)</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig14.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+<p><img data-src="img/05_vetores/fig14.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
 </figure>
 </div>
 <ul>
@@ -181,7 +181,7 @@ UFMG
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig01.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="img/05_vetores/fig01.png" class="quarto-figure quarto-figure-center" style="width:25.0%"></p>
 </figure>
 </div>
 <p>Do mesmo modo que a representação de um número não é o número, a representação de um vetor por um segmento orientado não é o vetor.</p>
@@ -270,7 +270,7 @@ UFMG
 <h2>Exemplo 2 — Solução</h2>
 <!-- Figura no canto superior direito -->
 
-<img src="img/05_vetores/fig09.png" alt="Segmento que une pontos médios" style="position:absolute; top:10px; right:10px; width:30%; border:none; box-shadow:none;" class="r-stretch"><p>Seja <span class="math inline">\(ABCD\)</span> um paralelogramo. Defina <span class="math inline">\(V = \overrightarrow{AB}\)</span> e <span class="math inline">\(W = \overrightarrow{AD}\)</span>. Então:</p>
+<img src="img/05_vetores/fig09.png" alt="Segmento que une pontos médios" style="position:absolute; top:10px; right:10px; width:100%; border:none; box-shadow:none;" class="r-stretch"><p>Seja <span class="math inline">\(ABCD\)</span> um paralelogramo. Defina <span class="math inline">\(V = \overrightarrow{AB}\)</span> e <span class="math inline">\(W = \overrightarrow{AD}\)</span>. Então:</p>
 <ul>
 <li><span class="math inline">\(\overrightarrow{AC} = V + W\)</span>;</li>
 <li><span class="math inline">\(\overrightarrow{BD}= -V + W\)</span>.</li>
@@ -388,8 +388,10 @@ V+W = (v_1 + w_1,\ v_2 + w_2), \qquad \alpha V = (\alpha v_1,\ \alpha v_2).
 <section id="distância-entre-dois-pontos" class="slide level2">
 <h2>Distância entre dois pontos</h2>
 <p>Se <span class="math inline">\(P=(x_1,y_1)\)</span> e <span class="math inline">\(Q=(x_2,y_2)\)</span>, então</p>
-<p><span class="math display">\[\overrightarrow{PQ}=Q-P=(x_2-x_1 , y_2-y_1), \qquad
-\operatorname{dist}(P,Q)=\lVert\overrightarrow{PQ}\rVert=\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\overrightarrow{PQ}&amp;=Q-P=(x_2-x_1 , y_2-y_1)\\
+\operatorname{dist}(P,Q)&amp;=\lVert\overrightarrow{PQ}\rVert=\sqrt{ (x_2-x_1)^2 + (y_2-y_1)^2 }.
+\end{align*}\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/05_vetores/fig06_1.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
@@ -450,7 +452,7 @@ bc\cos\theta=\frac 12 (b^2+c^2-a^2)
 <img src="img/05_vetores/fig10_1.png" alt="Segmento que une pontos médios" style="position:absolute; top:10px; right:-50px; width:10%; border:none; box-shadow:none;" class="r-stretch"><p>Sejam <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span> vetores e seja <span class="math inline">\(\vartheta\)</span> os seus ângulos. <span class="math display">\[\begin{align*}
 \left&lt;V,W\right&gt;&amp;=\|V\|\|W\|\cos(\vartheta)=\frac 12 (\|V\|^2+\|W\|^2-\|W-V\|^2)\\
 &amp;=\frac 12 (v_1^2+v_2^2+w_1^2+w_2^2-(w_1-v_1)^2-(w_2-v_2)^2)\\
-&amp;=\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+w_1^2)-(w_2^2-2v_2w_2+v_2^2))\\
+&amp;=\frac 12(v_1^2+v_2^2+w_1^2+w_2^2-(w_1^2-2v_1w_1+v_1^2)-(w_2^2-2v_2w_2+v_2^2))\\
 &amp;=v_1w_1+v_2w_2.
 \end{align*}\]</span></p>
 <p>Logo</p>
@@ -465,18 +467,14 @@ bc\cos\theta=\frac 12 (b^2+c^2-a^2)
 <h2>Produto escalar em coordenadas — teoremas</h2>
 <p>No plano, se <span class="math inline">\(V=(v_1,v_2)\)</span> e <span class="math inline">\(W=(w_1,w_2)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2.\]</span></p>
 <p>No espaço, se <span class="math inline">\(V=(v_1,v_2,v_3)\)</span> e <span class="math inline">\(W=(w_1,w_2,w_3)\)</span>, então <span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2 + v_3w_3.\]</span></p>
-</section>
-<section id="produto-escalar-exemplo-rápido" class="slide level2">
-<h2>Produto escalar — exemplo rápido</h2>
+<h3 id="produto-escalar-exemplo-rápido">Produto escalar — exemplo rápido</h3>
 <p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math inline">\(\langle V,W\rangle = 4\cdot 2 + 1\cdot 3 = 11\)</span>.</p>
 </section>
 <section id="ângulo-entre-dois-vetores" class="slide level2">
 <h2>Ângulo entre dois vetores</h2>
 <p>Se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são dados em coordenadas, então <span class="math display">\[\cos\theta\;=\;\dfrac{\langle V,W\rangle}{\lVert V\rVert\,\lVert W\rVert}.\]</span></p>
 <p>O ângulo <span class="math inline">\(\theta\)</span> entre dois vetores satisfaz <span class="math inline">\(0^\circ\leq\theta\leq 180^\circ\)</span>.</p>
-</section>
-<section id="ângulo-entre-dois-vetores-exemplo" class="slide level2">
-<h2>Ângulo entre dois vetores — exemplo</h2>
+<h3 id="ângulo-entre-dois-vetores-exemplo">Ângulo entre dois vetores — exemplo</h3>
 <p>Se <span class="math inline">\(V=(4,1)\)</span> e <span class="math inline">\(W=(2,3)\)</span>, então <span class="math display">\[\cos\theta=\dfrac{11}{\sqrt{17}\,\sqrt{13}},\qquad \theta = \arccos\Big(\dfrac{11}{\sqrt{17}\,\sqrt{13}}\Big) \approx 42^\circ.\]</span></p>
 </section>
 <section id="classificação-pelo-produto-escalar" class="slide level2">
@@ -489,7 +487,7 @@ bc\cos\theta=\frac 12 (b^2+c^2-a^2)
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/cosine_0_180.png" class="quarto-figure quarto-figure-center" style="width:45.0%"></p>
+<p><img data-src="img/05_vetores/cosine_0_180.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
 </figure>
 </div>
 <p>Assim, <span class="math inline">\(\langle V,W\rangle = 0\)</span> determina a ortogonalidade de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</p>
@@ -553,10 +551,9 @@ bc\cos\theta=\frac 12 (b^2+c^2-a^2)
 </figure>
 </div>
 <p>O vetor <span class="math inline">\(\operatorname{proj}_V(W)\)</span> é caracterizado por:</p>
-<ol type="1">
-<li><span class="math inline">\(\operatorname{proj}_V(W)=\alpha V\)</span> para algum <span class="math inline">\(\alpha\in\mathbb{R}\)</span>.</li>
-<li><span class="math inline">\(W - \operatorname{proj}_V(W)\)</span> é ortogonal a <span class="math inline">\(V\)</span>.</li>
-</ol>
+<div style="text-align:center">
+<p><span class="math inline">\(\operatorname{proj}_V(W)=\alpha V\)</span> para algum <span class="math inline">\(\alpha\in\mathbb{R}\)</span> e <span class="math inline">\(W - \operatorname{proj}_V(W)\)</span> é ortogonal a <span class="math inline">\(V\)</span>.</p>
+</div>
 <p>De <span class="math inline">\(\langle W-\alpha V, V\rangle = 0\)</span> segue que <span class="math display">\[\alpha = \frac{\langle W,V\rangle}{\langle V,V\rangle}, \qquad \operatorname{proj}_V(W)=\frac{\langle W,V\rangle}{\langle V,V\rangle}\,V.\]</span></p>
 </section>
 <section id="projeção-ortogonal-exercícios" class="slide level2">
@@ -583,7 +580,7 @@ $$\operatorname{dist}(A,r)^2 + \big\|\operatorname{proj}_{V_r}(\overrightarrow{P
 <p>Dados dois vetores <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, queremos achar um vetor <span class="math inline">\(V\times W\)</span> ortogonal a <span class="math inline">\(V\)</span> e a <span class="math inline">\(W\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig19.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="img/05_vetores/fig19.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
 </figure>
 </div>
 <p>Pergunta: Quantos vetores perpendiculares a <span class="math inline">\(V\)</span> e a <span class="math inline">\(W\)</span> existem?</p>
@@ -613,7 +610,7 @@ $$\operatorname{dist}(A,r)^2 + \big\|\operatorname{proj}_{V_r}(\overrightarrow{P
 <h2>Produto vetorial — caracterização</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig19.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="img/05_vetores/fig19.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
 </figure>
 </div>
 <p>O produto vetorial <span class="math inline">\(V \times W\)</span> é caracterizado por:</p>
@@ -644,7 +641,7 @@ $$\operatorname{dist}(A,r)^2 + \big\|\operatorname{proj}_{V_r}(\overrightarrow{P
 <h2>Produto vetorial em coordenadas — canônicos</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/05_vetores/fig22.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="img/05_vetores/fig22.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
 </figure>
 </div>
 <p>Vetores canônicos: <span class="math inline">\(\vec{i}=(1,0,0)\)</span>, <span class="math inline">\(\vec{j}=(0,1,0)\)</span>, <span class="math inline">\(\vec{k}=(0,0,1)\)</span>. Se <span class="math inline">\(V=(a,b,c)\)</span> então</p>
@@ -669,8 +666,21 @@ $$\operatorname{dist}(A,r)^2 + \big\|\operatorname{proj}_{V_r}(\overrightarrow{P
 V &amp; = &amp; (v_1,v_2,v_3) &amp; = &amp; v_1\vec{i} &amp; + &amp; v_2\vec{j} &amp; + &amp; v_3\vec{k} \\
 W &amp; = &amp; (w_1,w_2,w_3) &amp; = &amp; w_1\vec{i} &amp; + &amp; w_2\vec{j} &amp; + &amp; w_3\vec{k}
 \end{array}\]</span></p>
-<p>Aplicando distributividade e as relações entre <span class="math inline">\(\vec{i},\vec{j},\vec{k}\)</span>:</p>
-<p><span class="math display">\[V \times W = (v_2w_3-v_3w_2\ ,\ v_3w_1-v_1w_3\ ,\ v_1w_2-v_2w_1 ).\]</span></p>
+<p>Ora, <span class="math display">\[\begin{align*}
+V\times W&amp;=(v_1\vec{i}  +  v_2\vec{j}  +  v_3\vec{k})\times (w_1\vec{i}  +  w_2\vec{j}  +  w_3\vec{k})\\
+&amp;=v_1w_1(\vec{i}\times \vec{i})+ v_1w_2(\vec{i}\times \vec{j}) + v_1w_3(\vec{i}\times \vec{k}) \\
+&amp;+ v_2w_1(\vec{j}\times \vec{i}) + v_2w_2(\vec{j}\times \vec{j}) + v_2w_3(\vec{j}\times \vec{k}) \\
+&amp;+ v_3w_1(\vec{k}\times \vec{i}) + v_3w_2(\vec{k}\times \vec{j}) + v_3w_3(\vec{k}\times \vec{k})\\
+&amp;=(v_2w_3-v_3w_2)\vec{i}+(v_3w_1-v_1w_3)\vec{j}+(v_1w_2-v_2w_1)\vec{k}\\
+&amp;=(v_2w_3-v_3w_2\ ,\ v_3w_1-v_1w_3\ ,\ v_1w_2-v_2w_1 ).
+\end{align*}\]</span></p>
+</section>
+<section id="produto-vetorial-fórmula-em-coordenadas-1" class="slide level2">
+<h2>Produto vetorial — fórmula em coordenadas</h2>
+<p>Calculamos para <span class="math inline">\(V=(v_1,v_2,v_3)\)</span> e <span class="math inline">\(W=(w_1,w_2,w_3)\)</span> que <span class="math display">\[\begin{align*}
+V\times W&amp;=(v_2w_3-v_3w_2)\vec{i}+(v_3w_1-v_1w_3)\vec{j}+(v_1w_2-v_2w_1)\vec{k}
+\\&amp;=(v_2w_3-v_3w_2\ ,\ v_3w_1-v_1w_3\ ,\ v_1w_2-v_2w_1 ).
+\end{align*}\]</span></p>
 <p>Forma mnemônica (determinante simbólico):</p>
 <p><span class="math display">\[V \times W = \det\begin{bmatrix}
      \vec{i} &amp;  \vec{j} &amp;  \vec{k} \\
@@ -721,25 +731,36 @@ V \times W = 15\vec{i} + 5\vec{j} -7\vec{k} = (15,5,-7).
 </section>
 <section id="produto-misto" class="slide level2">
 <h2>Produto misto</h2>
-<p>Teorema. Para <span class="math inline">\(U=(u_1,u_2,u_3)\)</span>, <span class="math inline">\(V=(v_1,v_2,v_3)\)</span>, <span class="math inline">\(W=(w_1,w_2,w_3)\)</span>: <span class="math display">\[\langle U, V \times W\rangle = \det\begin{bmatrix}
+<p>O <span class="bg-yellow">produto misto</span> de <span class="math inline">\(U,V,W\in\mathbb R^3\)</span> é <span class="math display">\[
+\left&lt;U,V\times W\right&gt;.
+\]</span></p>
+<p>Ora, <span class="math display">\[\begin{align*}
+\left&lt;U,V\times W\right&gt;&amp;=\left&lt;(u_1,u_2,u_3),(v_2w_3-v_3w_2 , v_3w_1-v_1w_3 , v_1w_2-v_2w_1)\right&gt;
+\\&amp;=u_1(v_2w_3-v_3w_2)+u_2(v_3w_1-v_1w_3)+u_3(v_1w_2-v_2w_1)\\
+&amp;= \det\begin{bmatrix}
 u_1 &amp; u_2 &amp; u_3 \\
 v_1 &amp; v_2 &amp; v_3 \\
 w_1 &amp; w_2 &amp; w_3
-\end{bmatrix}.\]</span></p>
-<p>Demonstração: escreva <span class="math inline">\(V \times W\)</span> pelas coordenadas e calcule o produto escalar.</p>
+\end{bmatrix}.
+\end{align*}\]</span></p>
 </section>
 <section id="produto-misto-interpretação-geométrica" class="slide level2">
 <h2>Produto misto — interpretação geométrica</h2>
-<p>Teorema. Dados <span class="math inline">\(U,V,W\)</span>, <span class="math display">\[\big|\langle U, V \times W\rangle\big|\]</span> é o volume do paralelepípedo determinado por <span class="math inline">\(U,V,W\)</span>.</p>
+<p><span class="bg-yellow">Teorema.</span> Dados <span class="math inline">\(U,V,W\)</span>, <span class="math inline">\(\big|\langle U, V \times W\rangle\big|\)</span> é o volume do paralelepípedo determinado por <span class="math inline">\(U,V,W\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/05_vetores/fig24.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
 </figure>
 </div>
+<ol type="1">
+<li>Área da base: <span class="math inline">\(\|V\times W\|\)</span>.</li>
+<li>Altura: <span class="math inline">\(\|U\||\cos\vartheta|\)</span>.</li>
+<li>Volume: <span class="math inline">\(\|V\times W\|\|U\||\cos \vartheta|=|\left&lt;U,V\times W\right&gt;|\)</span>.</li>
+</ol>
 </section>
 <section id="vetores-coplanares-caracterização" class="slide level2">
 <h2>Vetores coplanares — caracterização</h2>
-<p>Teorema. Três vetores <span class="math inline">\(U,V,W\)</span> em <span class="math inline">\(\mathbb{R}^3\)</span> são coplanares se e somente se <span class="math display">\[\langle U, V \times W\rangle = 0\]</span> ou, equivalentemente, o volume do paralelepípedo que eles determinam é zero.</p>
+<p><span class="bg-yellow">Teorema.</span> Três vetores <span class="math inline">\(U,V,W\)</span> em <span class="math inline">\(\mathbb{R}^3\)</span> são coplanares se e somente se <span class="math display">\[\langle U, V \times W\rangle = 0\]</span> ou, equivalentemente, o volume do paralelepípedo que eles determinam é zero.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/05_vetores/fig25.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
@@ -755,7 +776,7 @@ w_1 &amp; w_2 &amp; w_3
 2 &amp; -2 &amp; 0 \\
 0 &amp;  2 &amp; -2 \\
 1 &amp;  0 &amp; -1
-\end{bmatrix}= -2+2=0.\]</span></p>
+\end{bmatrix}=0.\]</span></p>
 <p>Logo são coplanares.</p>
 
 
