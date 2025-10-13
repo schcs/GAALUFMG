@@ -2,12 +2,12 @@ project:
   type:  website
   render:
     - index.qmd
-    - semana1.qmd
-    - ex1.qmd
-    - semana2.qmd
+    - 01_matrizes.qmd
+    - 02_sistemas.qmd
     - 03_inverse.qmd
     - 04_determinant.qmd
     - 05_vetores.qmd
+    - 06_retas_e_planos.qmd
     
 
 render-on-save: false 
@@ -38,7 +38,7 @@ format:
     # theme: simple
     # scroll: true
   html:
-    css: article.css
+    css: style.css
     include-after-body:
       - text: |
           <script>

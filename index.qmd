@@ -6,10 +6,10 @@ lang: pt
 
 Geometria Analítica e Álgebra Linear 
 
-- [Matrizes](semana1.qmd)
-- [Exercícios sobre matrizes](ex1.qmd)
-- [Sistemas lineares](semana2.qmd)
+- [Matrizes](01_matrizes.qmd)
+<!-- - [Exercícios sobre matrizes](ex1.qmd) -->
+- [Sistemas lineares](02_sistemas.qmd)
 - [A inversa de uma matrix](03_inverse.qmd)
 - [O determinante de uma matrix](04_determinant.qmd)
 - [Vetores](05_vetores.qmd)
-
+- [Retas e planos](06_retas_e_planos.qmd)
