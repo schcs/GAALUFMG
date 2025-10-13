@@ -125,16 +125,28 @@ Com essa equação, podemos ver a reta $r$ como uma régua graduada, uma reta nu
 
 1. Escreva uma equação paramétrica para a reta que passa por $A=(-1,3,4)$ e que é paralela ao vetor $V=(1,-2,0)$.
 2. Escreva uma equação paramétrica para a reta que passa por $M=(5,0,-3)$ e por $N=(3,8,7)$.
-3. Considere o ponto $P=(4,-2,11)$ e a reta $r$ de equação $(x,y,z) = (1,-1,1) + t(3,1,2)$. Determine a equação da reta $s$ que passa por $P$ e que é perpendicular e concorrente com $r$.
+3. Considere o ponto $P=(4,-2,11)$ e a reta $r$ de equação 
+$$ 
+(x,y,z) = (1,-1,1) + t(3,1,2).
+$$ 
+Determine a equação da reta $s$ que passa por $P$ e que é perpendicular e concorrente com $r$.
 
 ## Exercício 3 -- solução
 
 :::{.exr-}
-Considere o ponto $P=(4,-2,11)$ e a reta $r$ de equação $(x,y,z) = (1,-1,1) + t(3,1,2)$. Determine a equação da reta $s$ que passa por $P$ e que é perpendicular e concorrente com $r$.
+Considere o ponto $P=(4,-2,11)$ e a reta $r$ de equação 
+$$
+(x,y,z) = (1,-1,1) + t(3,1,2). 
+$$
+Determine a equação da reta $s$ que passa por $P$ e que é perpendicular e concorrente com $r$.
 :::
 
 O vetor diretor de $r$ é $V=(3,1,2)$. Procuramos um ponto $Q\in r$ tal que $\vec{PQ}\perp V$; ou seja, 
-$\vec{PQ}\cdot v=0$. Tem-se $Q=(1,-1,1)+t(3,1,2)$:
+$\vec{PQ}\cdot v=0$. Tem-se 
+$$
+Q=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t).
+$$
+Logo, 
 \begin{align*}
 (P-(1,-1,1)+t(3,1,2))\cdot v&=0\\
 &⇒ [(4,-2,11)-(1+3t,\,-1+t,\,1+2t)]\cdot(3,1,2)=0\\
@@ -258,7 +270,7 @@ Das duas primeiras, $u=-1$ e $t=-5$; na terceira dá $1-5 ≠ 5$. Logo $r$ e $s$
 
 ## Distância entre retas reversas
 
-3) Distância e pontos de mínima distância:
+[Distância e pontos de mínima distância:]{.bg-yellow}
 Tomando o segmento $PQ$ perpendicular a $r$ e $s$, com $P∈r$ e $Q∈s$:
 \begin{align*}
 (A + tV_r - (C + uV_s))·V_r &= 0\\
