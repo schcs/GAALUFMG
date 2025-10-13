@@ -74,7 +74,7 @@
     "href": "06_retas_e_planos.html#exercício-3-solução",
     "title": "Retas e planos",
     "section": "Exercício 3 – solução",
-    "text": "Exercício 3 – solução\n\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\).\n\nO vetor diretor de \\(r\\) é \\(V=(3,1,2)\\). Procuramos um ponto \\(Q\\in r\\) tal que \\(\\vec{PQ}\\perp V\\); ou seja, \\(\\vec{PQ}\\cdot v=0\\). Tem-se \\[\nQ=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t).\n\\] Logo, \\[\\begin{align*}\n(P-(1,-1,1)+t(3,1,2))\\cdot v&=0\\\\\n&⇒ [(4,-2,11)-(1+3t,\\,-1+t,\\,1+2t)]\\cdot(3,1,2)=0\\\\\n&⇒ (3-3t,\\,-1-t,\\,10-2t)\\cdot(3,1,2)=28-14t=0\\\\\n&⇒ t=2.\n\\end{align*}\\]\nLogo \\(Q=(7,1,5)\\) e um vetor diretor de \\(s\\) é \\(QP=(3,3,-6)=3(1,1,-2)\\). Assim, a reta procurada é \\[\n(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,\n\\] com \\(v·(1,1,-2)=3+1-4=0\\) (perpendicular) e concorrente em \\(Q\\)."
+    "text": "Exercício 3 – solução\n\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\).\n\nO vetor diretor de \\(r\\) é \\(V=(3,1,2)\\). Procuramos um ponto \\(Q\\in r\\) tal que \\(\\vec{PQ}\\perp V\\); ou seja, \\(\\left&lt;\\vec{PQ}, v\\right&gt;=0\\).\n\n\n\\[\nQ=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t) \\mbox{ e }\\vec{PQ}=(-3+3t,1+t,-10+2t).\n\\] Logo, \\[\n0=\\left&lt;\\vec{PQ}, v\\right&gt;=\\left&lt;(-3+3t,1+t,-10+2t),(3,1,2)\\right&gt;=14t-28.\n\\] Daí, \\(t=2\\) e \\(Q=(1,-1,1)+2(3,1,2)=(7,1,5)\\).\n\n\nLogo \\(Q=(7,1,5)\\) e um vetor diretor de \\(s\\) é \\(\\vec{QP}=(3,3,-6)=3(1,1,-2)\\). Assim, a reta procurada é \\[\n(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,\n\\] com \\(\\left&lt;V,(1,1,-2)\\right&gt;=3+1-4=0\\) (perpendicular) e concorrente em \\(Q\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
@@ -105,25 +105,18 @@
     "text": "Exemplo — retas paralelas\n\nEncontre a equação da reta \\(r\\) que passa pelos pontos \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s\\) a reta \\((x,y,z) = (1,2,3)+ t(1,2,1)\\). Verifique se as retas \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nCalcule a distância entre as retas \\(r\\) e \\(s\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#exemplo-solução",
-    "href": "06_retas_e_planos.html#exemplo-solução",
+    "objectID": "06_retas_e_planos.html#exemplo-3-solução",
+    "href": "06_retas_e_planos.html#exemplo-3-solução",
     "title": "Retas e planos",
-    "section": "Exemplo – solução",
-    "text": "Exemplo – solução\n\nUm vetor diretor de \\(r\\) é \\(\\vec{AB} = (-2,-4,-2) = -2(1,2,1)\\). Assim, uma equação paramétrica de \\(r\\) é \\((x,y,z) = (3,5,3) + t(1,2,1), t ∈ ℝ\\).\nAs retas têm vetores diretores paralelos, logo são paralelas. Para ver que não coincidem, note que o ponto \\((1,2,3)\\) de \\(s\\) não satisfaz a equação de \\(r\\): \\[\n3 + t = 1 ⇒ t = -2, \\textrm{ mas } 5 + 2(-2) = 1 ≠ 2.\n\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-solução-1",
-    "href": "06_retas_e_planos.html#exemplo-solução-1",
-    "title": "Retas e planos",
-    "section": "Exemplo – solução",
-    "text": "Exemplo – solução\n\nDistância entre duas retas paralelas. Seja \\(A=(3,5,3)\\in r\\) e \\(C=(1,2,3)\\in s\\). O vetor diretor das duas retas é \\(V=(1,2,1)\\). Temos por Teorema de Pitágoras que \\[\n\\|\\vec{AC}\\|^2=\\operatorname{dist}(r,s)^2+\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n\\]\n\nTemos que\n\n\\(\\vec{AC}=(-2,-3,0)\\) e \\(\\|\\vec{AC}\\|^2=13\\);\n\\(\\operatorname{proj}_V(\\vec{AC})=\\frac {\\left&lt;V,\\vec{AC}\\right&gt;}{\\|V\\|^2}V=-8/6V=(-4/3,-8/3,-4/3)\n\\Rightarrow \\|\\operatorname{proj}_V(\\vec{AC})\\|^2=32/3\\)\n\nLogo \\[\n\\operatorname{dist}(r,s)^2=\\|\\vec{AC}\\|^2-\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n=\\frac{7}3 \\textrm{ e } \\operatorname{dist}(r,s)=\\frac{\\sqrt 7}{\\sqrt 3}.\n\\]"
+    "section": "Exemplo 3 – solução",
+    "text": "Exemplo 3 – solução\nTemos \\[\nr: (x,y,z) = (3,5,3) + t(1,2,1) \\mbox{ e } s: (x,y,z) = (1,2,3)+ u(1,2,1),\\  t, u ∈ ℝ.\n\\]\nDistância entre duas retas paralelas.\nO vetor diretor das duas retas é \\(V=(1,2,1)\\).\nSeja \\(A=(3,5,3)\\in r\\), \\(C=(1,2,3)\\in s\\) com \\(\\vec{AC}=(-2,-3,0)\\). Por Teorema de Pitágoras: \\[\n\\|\\vec{AC}\\|^2=\\operatorname{dist}(r,s)^2+\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n\\]\n\n\nTemos que \\[\n\\operatorname{proj}_V(\\vec{AC})=\\frac {\\left&lt;V,\\vec{AC}\\right&gt;}{\\|V\\|^2}V=-8/6V=(-4/3,-8/3,-4/3)\n\\Rightarrow \\|\\operatorname{proj}_V(\\vec{AC})\\|^2=32/3.\n\\]\n\n\nLogo \\[\n\\operatorname{dist}(r,s)^2=\\|\\vec{AC}\\|^2-\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n=13-\\frac{32}{3}\n=\\frac{7}3 \\textrm{ e } \\operatorname{dist}(r,s)=\\frac{\\sqrt 7}{\\sqrt 3}.\n\\]"
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-retas-concorrentes",
     "href": "06_retas_e_planos.html#exemplo-retas-concorrentes",
     "title": "Retas e planos",
     "section": "Exemplo — retas concorrentes",
-    "text": "Exemplo — retas concorrentes\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(5,4,1)\\) e \\(B=(7,5,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(P=(0,1,0)\\) e \\(Q=(-3,-2,3)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nMostre que \\(r\\) e \\(s\\) são retas concorrentes calculando o ponto \\(P = r \\cap s\\)."
+    "text": "Exemplo — retas concorrentes\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(5,4,1)\\) e \\(B=(7,5,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(P=(0,1,0)\\) e \\(Q=(-3,-2,3)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nMostre que \\(r\\) e \\(s\\) são retas concorrentes calculando o ponto \\(r \\cap s\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-retas-reversas",
@@ -137,14 +130,7 @@
     "href": "06_retas_e_planos.html#retas-reversas-solução",
     "title": "Retas e planos",
     "section": "Retas reversas – solução",
-    "text": "Retas reversas – solução\nSejam \\(A=(4,-2,1)\\), \\(B=(5,-3,2)\\), \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nEquações paramétricas:\n\n\n\\(r: V_r = B-A = (1,-1,1) ⇒ (x,y,z) = A + t(1,-1,1)\\).\n\\(s: V_s = D-C = (-8,-16,4)=-4(2,4,-1) ⇒ (x,y,z) = C + u(2,4,-1)\\).\n\n\nPosição relativa: \\(V_r \\not ∥ V_s\\), logo não são paralelas. Tentando \\(r ∩ s\\): \\[\\begin{align*}\n4+t &= 1+2u\\\\\n-2-t &= 7+4u \\\\\n1+t &= 4-u\n\\end{align*}\\] Das duas primeiras, \\(u=-1\\) e \\(t=-5\\); na terceira dá \\(1-5 ≠ 5\\). Logo \\(r\\) e \\(s\\) são reversas."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#distância-entre-retas-reversas-1",
-    "href": "06_retas_e_planos.html#distância-entre-retas-reversas-1",
-    "title": "Retas e planos",
-    "section": "Distância entre retas reversas",
-    "text": "Distância entre retas reversas\nDistância e pontos de mínima distância: Tomando o segmento \\(PQ\\) perpendicular a \\(r\\) e \\(s\\), com \\(P∈r\\) e \\(Q∈s\\): \\[\\begin{align*}\n(A + tV_r - (C + uV_s))·V_r &= 0\\\\\n(A + tV_r - (C + uV_s))·V_s &= 0\n\\end{align*}\\]\nCom \\(A-C=(3,-9,-3)\\), \\(\\left&lt;V_r,V_r\\right&gt;=3\\), \\(\\left&lt;V_s,V_s\\right&gt;=21\\), \\(\\left&lt;V_r,V_s\\right&gt;=-3\\), \\(\\left&lt;V_r,(A-C)\\right&gt;=9\\), \\(\\left&lt;V_s,(A-C)\\right&gt;=-27\\), obtém-se \\(t+u = -3\\) e \\(t+7u = -9\\) ⇒ \\(u=-1, t=-2\\).\nLogo, \\(P = A + tV_r = (2,0,-1)\\), \\(Q = C + uV_s = (-1,3,5)\\), \\(PQ = Q-P = (-3,3,6) ⟂ V_r, V_s\\).\nDistância: \\(‖PQ‖ = \\sqrt{9+9+36} = 3\\sqrt 6\\)."
+    "text": "Retas reversas – solução\nSejam \\(A=(4,-2,1)\\), \\(B=(5,-3,2)\\), \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nEquações paramétricas:\n\n\n\\(r: V_r = B-A = (1,-1,1) ⇒ (x,y,z) =  (4,-2,1) + t(1,-1,1)\\).\n\\(s: V_s = D-C = (-8,-16,4)=-4(2,4,-1) ⇒ (x,y,z) = (1,7,4) + u(2,4,-1)\\).\n\n\n\n\nPosição relativa: \\(V_r \\not ∥ V_s\\), logo as retas não são paralelas. Tentando \\(r ∩ s\\): \\[\\begin{align*}\n4+t &= 1+2u\\\\\n-2-t &= 7+4u \\\\\n1+t &= 4-u\n\\end{align*}\\] Das duas primeiras, \\(u=-1\\) e \\(t=-5\\); na terceira dá \\(1-5 ≠ 5\\). Logo \\(r\\) e \\(s\\) são reversas.\n\n\n\nDistância e pontos de mínima distância: Toma pontos genêricos \\(P\\in r\\) e \\(Q\\in S\\): \\[\\begin{align*}\nP&=(4+t,-2-t,1+t)\\\\\nQ&=(1+2u,7+4u,4-u)\\\\\n\\vec{PQ}&=(-3+2u-t,9+4u+t,3-u-t).\n\\end{align*}\\]\n\n\nOra, queremos que \\(\\vec{PQ}\\) seja perpendicular a \\(V_r\\) e a \\(V_s\\): \\[\\begin{align*}\n0&=\\left&lt;\\vec{PQ},V_r\\right&gt;=\\left&lt;(-3+2u-t,9+4u+t,3-u-t),(1,-1,1)\\right&gt;=-9-3u-3t\\\\\n0&=\\left&lt;\\vec{PQ},V_s\\right&gt;=\\left&lt;(-3+2u-t,9+4u+t,3-u-t),(2,4,-1)\\right&gt;=27+21u+3t\n\\end{align*}\\]\n\n\nObtivemos o sistema \\[\\begin{align*}\n0&=-9-3u-3t\\\\\n0&=27+21u+3t\n\\end{align*}\\] A solução do sistema é \\(t=-2\\) e \\(u=-1\\).\n\n\nSubstituindo, \\(t=-2\\) e \\(u=-1\\), \\[\\begin{align*}\nP &= (4+t,-2-t,1+t)=  (2,0,-1)\\\\\nQ &= (1+2u,7+4u,4-u)= (-1,3,5)\\\\\nPQ &= Q-P = (-3,3,6) \\perp V_r, V_s.\n\\end{align*}\\]\nDistância: \\(‖PQ‖ = \\sqrt{9+9+36} = 3\\sqrt 6\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#planos-no-espaço",
@@ -187,13 +173,6 @@
     "title": "Retas e planos",
     "section": "Observações sobre a equação geral do plano",
     "text": "Observações sobre a equação geral do plano\n\\[\\boxed{\\;ax+by+cz=d\\;}\\]\n\nPara escrever a equação geral de um plano, precisamos de um vetor \\(N=(a,b,c)\\) ortogonal ao plano (vetor normal), com \\(N\\neq\\vec{0}\\).\nEm muitas situações, o vetor normal será calculado pelo produto vetorial.\nA equação geral do plano não é única: todo múltiplo não nulo de um vetor normal também é vetor normal. Multiplicar a equação \\(ax+by+cz=d\\) por um número não nulo não altera o conjunto solução, apenas muda o vetor normal."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#plano-ponto-e-vetor-normal",
-    "href": "06_retas_e_planos.html#plano-ponto-e-vetor-normal",
-    "title": "Retas e planos",
-    "section": "Plano: ponto e vetor normal",
-    "text": "Plano: ponto e vetor normal\n\n\n\n\n\nSe \\(P_0=(x_0,y_0,z_0)\\) está em um plano e \\(N=(a,b,c)\\neq\\vec{0}\\) é normal ao plano, então para \\(P=(x,y,z)\\) no plano: \\[\n\\langle N,\\overrightarrow{P_0P}\\rangle=0 \\;\\Longleftrightarrow\\; a(x-x_0)+b(y-y_0)+c(z-z_0)=0.\n\\] Equivalente a \\(ax+by+cz = a x_0 + b y_0 + c z_0 = d\\).\nEquação geral do plano: \\(\\boxed{\\;ax+by+cz=d\\;}.\\)"
   },
   {
     "objectID": "06_retas_e_planos.html#produto-vetorial-em-mathbbr3",
@@ -266,60 +245,46 @@
     "text": "Aplicação: plano por duas retas paralelas\nExemplo 7.\n\nEncontre a equação paramétrica da reta \\(r\\) que passa por \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s:(x,y,z)=(1,2,3)+t(1,2,1)\\). Verifique se \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nAche, se possível, uma equação geral do plano que contém as retas \\(r\\) e \\(s\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#lista-de-exercícios-5-estudo-de-pontos-retas-e-planos",
-    "href": "06_retas_e_planos.html#lista-de-exercícios-5-estudo-de-pontos-retas-e-planos",
-    "title": "Retas e planos",
-    "section": "Lista de exercícios 5: estudo de pontos, retas e planos",
-    "text": "Lista de exercícios 5: estudo de pontos, retas e planos\n\nNesta aula serão discutidas dúvidas dos exercícios da Lista 8, sobre posições relativas de retas e planos e sobre o cálculo de ângulos e distâncias.\nVai aproveitar mais quem já estudou e tentou resolver esses exercícios.\nNosso foco não é memorizar e aplicar fórmulas. Em cada caso, devemos entender o problema e construir elementos que permitam a sua solução.\n\nTarefa de casa importante:\n\nPasse a limpo todas as soluções.\nFaça ilustrações de todas as situações."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#posições-relativas-de-dois-objetos-ponto-reta-plano",
-    "href": "06_retas_e_planos.html#posições-relativas-de-dois-objetos-ponto-reta-plano",
-    "title": "Retas e planos",
-    "section": "Posições relativas de dois objetos (ponto, reta, plano)",
-    "text": "Posições relativas de dois objetos (ponto, reta, plano)\n\nEx 1. Ponto - Ponto\nEx 2. Ponto - Reta\nEx 3. Ponto - Plano\n\nReta - Reta:\n\nEx 4. Paralelas\nEx 5. Concorrentes\nEx 6. Reversas\n\nReta - Plano:\n\nEx 7. Reta fura o plano num ponto\nEx 8. Reta paralela ao plano\nEx 9. Reta contida no plano\n\nPlano - Plano:\n\nEx 10. Paralelos\nEx 11. Concorrentes"
-  },
-  {
     "objectID": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
     "href": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
     "title": "Retas e planos",
     "section": "Exemplo 1: ponto e ponto",
-    "text": "Exemplo 1: ponto e ponto\nConsidere os pontos \\(A=(-1,3,2)\\) e \\(B=(2,1,6)\\).\n\n\nDetermine a equação paramétrica da reta \\(\\overleftrightarrow{AB}\\).\n\n\nCalcule o ponto médio do segmento \\(AB\\).\n\n\nCalcule \\(\\mathrm{dist}(A,B)\\).\n\n\nDetermine o ponto simétrico \\(A'\\) de \\(A\\) em relação ao ponto \\(B\\).\n\n\nDetermine o ponto simétrico \\(B'\\) de \\(B\\) em relação ao ponto \\(A\\)."
+    "text": "Exemplo 1: ponto e ponto\nConsidere os pontos \\(A=(-1,3,2)\\) e \\(B=(2,1,6)\\).\n\nDetermine a equação paramétrica da reta \\(\\overleftrightarrow{AB}\\).\nCalcule o ponto médio do segmento \\(AB\\).\nCalcule \\(\\mathrm{dist}(A,B)\\).\nDetermine o ponto simétrico \\(A'\\) de \\(A\\) em relação ao ponto \\(B\\).\nDetermine o ponto simétrico \\(B'\\) de \\(B\\) em relação ao ponto \\(A\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
     "href": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
     "title": "Retas e planos",
     "section": "Exemplo 2: ponto e reta",
-    "text": "Exemplo 2: ponto e reta\nConsidere a reta \\(r\\) de equação paramétrica \\((x,y,z) = (-7,4,9) + t(-2,1,2)\\) e o ponto \\(A=(7,4,5)\\).\n\n\nO ponto \\(A\\) pertence a reta \\(r\\)?\n\n\nDetermine a equação do plano que contém \\(r\\) e \\(A\\).\n\n\nDetermine a reta perpendicular a \\(r\\) que passa por \\(A\\).\n\n\nCalcule \\(\\mathrm{dist}(A,r)\\).\n\n\nDetermine o ponto simétrico de \\(A\\) em relação à reta \\(r\\).\n\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em uma reta."
+    "text": "Exemplo 2: ponto e reta\nConsidere a reta \\(r\\) de equação paramétrica \\((x,y,z) = (-7,4,9) + t(-2,1,2)\\) e o ponto \\(A=(7,4,5)\\).\n\nO ponto \\(A\\) pertence a reta \\(r\\)?\nDetermine a equação do plano que contém \\(r\\) e \\(A\\).\nDetermine a reta perpendicular a \\(r\\) que passa por \\(A\\).\nCalcule \\(\\mathrm{dist}(A,r)\\).\nDetermine o ponto simétrico de \\(A\\) em relação à reta \\(r\\).\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em uma reta."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
     "href": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
     "title": "Retas e planos",
     "section": "Exemplo 3: ponto e plano",
-    "text": "Exemplo 3: ponto e plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-2y+3z=4\\) e o ponto \\(A=(2,8,-8)\\).\n\n\nO ponto \\(A\\) pertence ao plano \\(\\alpha\\)?\n\n\nDetermine a equação paramétrica da reta que passa por \\(A\\) e é perpendicular ao plano \\(\\alpha\\).\n\n\nCalcule \\(\\mathrm{dist}(A,\\alpha)\\).\n\n\nDetermine o ponto simétrico de \\(A\\) em relação ao plano \\(\\alpha\\).\n\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em um plano."
+    "text": "Exemplo 3: ponto e plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-2y+3z=4\\) e o ponto \\(A=(2,8,-8)\\).\n\nO ponto \\(A\\) pertence ao plano \\(\\alpha\\)?\nDetermine a equação paramétrica da reta que passa por \\(A\\) e é perpendicular ao plano \\(\\alpha\\).\nCalcule \\(\\mathrm{dist}(A,\\alpha)\\).\nDetermine o ponto simétrico de \\(A\\) em relação ao plano \\(\\alpha\\).\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em um plano."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
     "href": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
     "title": "Retas e planos",
     "section": "Exemplo 4: duas retas paralelas",
-    "text": "Exemplo 4: duas retas paralelas\nConsidere as retas paralelas\n\\[r:\\ (x,y,z) = (-6,3,-2) + t(3,-1,2)\\]\n\\[s:\\ (x,y,z) = (-3,30,-14) + s(3,-1,2)\\]\n\n\nDetermine a equação do plano \\(\\alpha\\) que contém \\(r\\) e \\(s\\).\n\n\nDê um exemplo de uma reta perpendicular a \\(r\\) e a \\(s\\).\n\n\nCalcule \\(\\mathrm{dist}(r,s)\\).\n\n\nDetermine uma reta contida em \\(\\alpha\\) e que está equidistante de \\(r\\) e de \\(s\\)."
+    "text": "Exemplo 4: duas retas paralelas\nConsidere as retas paralelas\n\\[r:\\ (x,y,z) = (-6,3,-2) + t(3,-1,2)\\]\n\\[s:\\ (x,y,z) = (-3,30,-14) + s(3,-1,2)\\]\n\nDetermine a equação do plano \\(\\alpha\\) que contém \\(r\\) e \\(s\\).\nDê um exemplo de uma reta perpendicular a \\(r\\) e a \\(s\\).\nCalcule \\(\\mathrm{dist}(r,s)\\).\nDetermine uma reta contida em \\(\\alpha\\) e que está equidistante de \\(r\\) e de \\(s\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
     "href": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
     "title": "Retas e planos",
     "section": "Exemplo 5: duas retas concorrentes",
-    "text": "Exemplo 5: duas retas concorrentes\nConsidere as retas\n\\[r:\\ (x,y,z) = (7,2,-2) + t(-3,0,1)\\] \\[s:\\ (x,y,z) = (-1,1,2) + s(2,1,-2)\\]\n\n\nMostre que \\(r\\) e \\(s\\) são concorrentes calculando o ponto \\(P= r \\cap s\\).\n\n\nDetermine a equação geral do plano que contém \\(r\\) e \\(s\\).\n\n\nCalcule o ângulo de \\(r\\) e \\(s\\).\n\n\nObs: neste exemplo aprendemos a calcular o ângulo entre duas retas."
+    "text": "Exemplo 5: duas retas concorrentes\nConsidere as retas\n\\[r:\\ (x,y,z) = (7,2,-2) + t(-3,0,1)\\] \\[s:\\ (x,y,z) = (-1,1,2) + s(2,1,-2)\\]\n\nMostre que \\(r\\) e \\(s\\) são concorrentes calculando o ponto \\(P= r \\cap s\\).\nDetermine a equação geral do plano que contém \\(r\\) e \\(s\\).\nCalcule o ângulo de \\(r\\) e \\(s\\).\n\nObs: neste exemplo aprendemos a calcular o ângulo entre duas retas."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
     "href": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
     "title": "Retas e planos",
     "section": "Exemplo 6: duas retas reversas",
-    "text": "Exemplo 6: duas retas reversas\nConsidere as retas\n\\[r:\\ (x,y,z) = (-1,-1,4) + t(1,1,-1)\\] \\[s:\\ (x,y,z) = (1,3,7) + s(-2,0,1)\\]\n\n\nMostre que \\(r\\) e \\(s\\) são retas reversas.\n\n\nDetermine a equação da reta perpendicular e concorrente com \\(r\\) e com \\(s\\).\n\n\nCalcule \\(\\mathrm{dist}(r,s)\\) e o ângulo entre \\(r\\) e \\(s\\).\n\n\nDetermine o plano \\(\\alpha\\) que contém \\(r\\) e é paralelo a \\(s\\).\n\n\nDetermine o plano \\(\\beta\\) que contém \\(s\\) e é paralelo a \\(r\\).\n\n\nDetermine o plano \\(\\gamma\\) que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\n\n\nDetermine o plano \\(\\omega\\) que contém \\(s\\) e é perpendicular a \\(\\beta\\).\n\n\nDetermine a reta \\(\\gamma \\cap \\omega\\)."
+    "text": "Exemplo 6: duas retas reversas\nConsidere as retas\n\\[r:\\ (x,y,z) = (-1,-1,4) + t(1,1,-1)\\] \\[s:\\ (x,y,z) = (1,3,7) + s(-2,0,1)\\]\n\nMostre que \\(r\\) e \\(s\\) são retas reversas.\nDetermine a equação da reta perpendicular e concorrente com \\(r\\) e com \\(s\\).\nCalcule \\(\\mathrm{dist}(r,s)\\) e o ângulo entre \\(r\\) e \\(s\\).\nDetermine o plano \\(\\alpha\\) que contém \\(r\\) e é paralelo a \\(s\\).\nDetermine o plano \\(\\beta\\) que contém \\(s\\) e é paralelo a \\(r\\).\nDetermine o plano \\(\\gamma\\) que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nDetermine o plano \\(\\omega\\) que contém \\(s\\) e é perpendicular a \\(\\beta\\).\nDetermine a reta \\(\\gamma \\cap \\omega\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações",
@@ -329,67 +294,39 @@
     "text": "Exemplo 6: ilustrações"
   },
   {
-    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.",
-    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.",
-    "title": "Retas e planos",
-    "section": "Exemplo 6: ilustrações (cont.)",
-    "text": "Exemplo 6: ilustrações (cont.)"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-1",
-    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-1",
-    "title": "Retas e planos",
-    "section": "Exemplo 6: ilustrações (cont.)",
-    "text": "Exemplo 6: ilustrações (cont.)"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-2",
-    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-2",
-    "title": "Retas e planos",
-    "section": "Exemplo 6: ilustrações (cont.)",
-    "text": "Exemplo 6: ilustrações (cont.)"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-3",
-    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-3",
-    "title": "Retas e planos",
-    "section": "Exemplo 6: ilustrações (cont.)",
-    "text": "Exemplo 6: ilustrações (cont.)"
-  },
-  {
     "objectID": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
     "href": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
     "title": "Retas e planos",
     "section": "Exemplo 7: reta furando um plano",
-    "text": "Exemplo 7: reta furando um plano\nConsidere o plano \\(\\alpha\\) de equação \\(2x+y-z=4\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,-4) + t(1,-1,2)\\).\n\n\nDetermine o ponto \\(P = r \\cap \\alpha\\).\n\n\nDetermine o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\n\n\nDetermine a reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\n\n\nCalcule o ângulo entre \\(r\\) e \\(\\alpha\\).\n\n\nDetermine a reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\).\n\n\nObs: neste exemplo aprendemos a calcular o ângulo entre uma reta e um plano."
+    "text": "Exemplo 7: reta furando um plano\nConsidere o plano \\(\\alpha\\) de equação \\(2x+y-z=4\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,-4) + t(1,-1,2)\\).\n\nDetermine o ponto \\(P = r \\cap \\alpha\\).\nDetermine o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nDetermine a reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\nCalcule o ângulo entre \\(r\\) e \\(\\alpha\\).\nDetermine a reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\).\n\nObs: neste exemplo aprendemos a calcular o ângulo entre uma reta e um plano."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
     "href": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
     "title": "Retas e planos",
     "section": "Exemplo 8: reta paralela a um plano",
-    "text": "Exemplo 8: reta paralela a um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-y+z=1\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,1) + t(2,-1,-3)\\).\n\n\nMostre que a reta \\(r\\) é paralela ao plano \\(\\alpha\\).\n\n\nAche o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\n\n\nAche o plano que contém \\(r\\) e é paralelo a \\(\\alpha\\).\n\n\nDetermine a equação da reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\n\n\nCalcule \\(\\mathrm{dist}(r,\\alpha)\\)."
+    "text": "Exemplo 8: reta paralela a um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-y+z=1\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,1) + t(2,-1,-3)\\).\n\nMostre que a reta \\(r\\) é paralela ao plano \\(\\alpha\\).\nAche o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nAche o plano que contém \\(r\\) e é paralelo a \\(\\alpha\\).\nDetermine a equação da reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\nCalcule \\(\\mathrm{dist}(r,\\alpha)\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
     "href": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
     "title": "Retas e planos",
     "section": "Exemplo 9: reta contida em um plano",
-    "text": "Exemplo 9: reta contida em um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x+2y-z=3\\) e a reta \\(r\\) de equação \\((x,y,z) = (2,1,1) + t(2,1,4)\\).\n\n\nMostre que \\(r \\subset \\alpha\\).\n\n\nDetermine o plano que contém \\(r\\) e que é perpendicular a \\(\\alpha\\).\n\n\nDê um exemplo de uma reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\)."
+    "text": "Exemplo 9: reta contida em um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x+2y-z=3\\) e a reta \\(r\\) de equação \\((x,y,z) = (2,1,1) + t(2,1,4)\\).\n\nMostre que \\(r \\subset \\alpha\\).\nDetermine o plano que contém \\(r\\) e que é perpendicular a \\(\\alpha\\).\nDê um exemplo de uma reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
     "href": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
     "title": "Retas e planos",
     "section": "Exemplo 10: planos paralelos",
-    "text": "Exemplo 10: planos paralelos\nConsidere os planos\n\\[\\alpha:\\ 2x-y+z=1\\] \\[\\beta:\\ 4x-2y+2z=5\\]\n\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) são planos paralelos.\n\n\nDetermine a reta perpendicular a \\(\\alpha\\) e a \\(\\beta\\) que passa pela origem.\n\n\nCalcule \\(\\mathrm{dist}(\\alpha,\\beta)\\)."
+    "text": "Exemplo 10: planos paralelos\nConsidere os planos\n\\[\\alpha:\\ 2x-y+z=1\\] \\[\\beta:\\ 4x-2y+2z=5\\]\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) são planos paralelos.\nDetermine a reta perpendicular a \\(\\alpha\\) e a \\(\\beta\\) que passa pela origem.\nCalcule \\(\\mathrm{dist}(\\alpha,\\beta)\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
     "href": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
     "title": "Retas e planos",
     "section": "Exemplo 11: planos concorrentes",
-    "text": "Exemplo 11: planos concorrentes\nConsidere os planos\n\\[\\alpha:\\ x-y+3z=1\\] \\[\\beta:\\ 2x-3y-z=2\\]\n\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) não são paralelos.\n\n\nDetermine a equação da reta \\(\\alpha \\cap \\beta\\).\n\n\nCalcule o ângulo entre \\(\\alpha\\) e \\(\\beta\\).\n\n\nDê um exemplo de um plano perpendicular a \\(\\alpha\\) e a \\(\\beta\\)."
+    "text": "Exemplo 11: planos concorrentes\nConsidere os planos\n\\[\\alpha:\\ x-y+3z=1\\] \\[\\beta:\\ 2x-3y-z=2\\]\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) não são paralelos.\nDetermine a equação da reta \\(\\alpha \\cap \\beta\\).\nCalcule o ângulo entre \\(\\alpha\\) e \\(\\beta\\).\nDê um exemplo de um plano perpendicular a \\(\\alpha\\) e a \\(\\beta\\)."
   },
   {
     "objectID": "index.html",
