@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
+
+  <meta name="author" content="UFMG">
+  <title>Retas e planos</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-state="title" class="quarto-title-block center">
+  <h1 class="title">Retas e planos</h1>
+  <p class="subtitle">Apostilas</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+UFMG 
+</div>
+</div>
+</div>
+
+  <p class="date">13 de outubro de 2025</p>
+</section>
+<section id="retas-no-plano" class="slide level2">
+<h2>Retas no plano</h2>
+<!-- The first part comes from Chico's aula10 -->
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig01.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>No plano cartesiano, toda reta tem equação do tipo <span class="math display">\[
+ax+by=c.
+\]</span></p>
+<p>Já estamos acostumados com isso.</p>
+</section>
+<section id="retas-no-espaço" class="slide level2">
+<h2>Retas no espaço</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig02.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Qual é a equação de uma reta no espaço?</p>
+<p>Faz sentido pensar que esta reta poderia ter uma equação do tipo <span class="math inline">\(ax+by=c\)</span> ou, generalizado, do tipo <span class="math inline">\(ax+by+cz=d\)</span>.</p>
+<p><span class="bg-yellow">Não.</span> Pois uma reta é um objeto 1-dimensional. E cada uma destas equações possuem duas variáveis livres.</p>
+</section>
+<section id="exemplo" class="slide level2">
+<h2>Exemplo</h2>
+<p>No espaço, no sistema de coordenadas <span class="math inline">\(xyz\)</span>, desenhe o conjunto solução da equação <span class="math inline">\(x+y=2\)</span>.</p>
+<div class="quarto-layout-panel" data-layout="[[50,50]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="img/06_retas_e_planos/fig03.png" width="400"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="img/06_retas_e_planos/fig04.png" width="400"></p>
+</div>
+</div>
+</div>
+<p>Como <span class="math inline">\(z\)</span> é variável livre, <span class="math inline">\(x+y=2\)</span> é um plano paralelo ao eixo <span class="math inline">\(z\)</span>.</p>
+</section>
+<section id="a-reta-que-passa-por-dois-pontos-ideia" class="slide level2">
+<h2>A reta que passa por dois pontos — ideia</h2>
+<p>Sejam <span class="math inline">\(P_0=(x_0,y_0,z_0)\)</span> e <span class="math inline">\(P_1=(x_1,y_1,z_1)\)</span> dois pontos no espaço. Vamos determinar a equação dos pontos <span class="math inline">\(P=(x,y,z)\)</span> que pertencem à reta <span class="math inline">\(\overleftrightarrow{P_0P_1}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig05.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="a-reta-que-passa-por-dois-pontos-paralelismo" class="slide level2">
+<h2>A reta que passa por dois pontos — paralelismo</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig05.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p><span class="math inline">\(P\)</span> pertence à reta <span class="math inline">\(r\)</span> se os vetores <span class="math inline">\(\overrightarrow{P_0P}\)</span> e <span class="math inline">\(\overrightarrow{P_0P_1}\)</span> são paralelos.</p>
+<p>Ou seja, se estes vetores são múltiplos escalares: <span class="math inline">\(\overrightarrow{P_0P} = t\overrightarrow{P_0P_1}\)</span> para algum <span class="math inline">\(t\in\mathbb{R}\)</span>.</p>
+<p>Isto é, <span class="math inline">\(P - P_0 = t\overrightarrow{P_0P_1}\)</span>, ou ainda</p>
+<p><span class="math display">\[P = P_0  + t\overrightarrow{P_0P_1}.\]</span></p>
+</section>
+<section id="a-reta-que-passa-por-dois-pontos-notação-vetorial" class="slide level2">
+<h2>A reta que passa por dois pontos — notação vetorial</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig06.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Se <span class="math inline">\(V=\overrightarrow{P_0P_1}\)</span>, então <span class="math inline">\(P= P_0 + tV\)</span> (movimento retilíneo uniforme).</p>
+<p>Esta é a <span class="bg-yellow">equação paramétrica</span> da reta <span class="math inline">\(r\)</span>.</p>
+<p>Neste caso, <span class="math inline">\(V\)</span> é um <span class="bg-yellow">vetor diretor</span> de <span class="math inline">\(r\)</span>.</p>
+</section>
+<section id="equação-paramétrica-da-reta-forma-coordenada" class="slide level2">
+<h2>Equação paramétrica da reta — forma coordenada</h2>
+<p>Se <span class="math inline">\(P=(x,y,z)\)</span>, <span class="math inline">\(P_0=(x_0,y_0,z_0)\)</span> e <span class="math inline">\(V=(a,b,c)\)</span>, então</p>
+<p><span class="math display">\[\boxed{P= P_0 + tV}\]</span></p>
+<p>significa que</p>
+<p><span class="math display">\[(x,y,z) = (x_0,y_0,z_0) + t(a,b,c)\]</span></p>
+<p><span class="math display">\[\begin{cases}
+x = x_0 + ta\\
+y = y_0 + tb\\
+z = z_0 + tc
+\end{cases}\]</span></p>
+</section>
+<section id="equação-paramétrica-observações" class="slide level2">
+<h2>Equação paramétrica — observações</h2>
+<p><span class="math display">\[\boxed{P= P_0 + tV}\]</span></p>
+<p><span class="math display">\[\begin{cases}
+x = x_0 + ta\\
+y = y_0 + tb\\
+z = z_0 + tc
+\end{cases}\]</span></p>
+<p>A equação paramétrica de uma reta não é única.</p>
+<ul>
+<li>Podemos trocar o ponto inicial <span class="math inline">\(P_0\)</span> por qualquer outro ponto da reta.</li>
+<li>Podemos trocar o vetor diretor por qualquer múltiplo escalar.</li>
+<li>Sempre <span class="math inline">\(V\neq \vec{0}\)</span>.</li>
+</ul>
+</section>
+<section id="importante-reta-como-régua-numérica" class="slide level2">
+<h2>Importante — reta como régua numérica</h2>
+<p>A equação paramétrica de uma reta <span class="math inline">\(r\)</span> faz uma associação biunívoca entre um ponto <span class="math inline">\(P\)</span> da reta e um número real <span class="math inline">\(t\)</span>.</p>
+<p><span class="math display">\[\boxed{P= P_0 + tV}\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig13.PNG" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Com essa equação, podemos ver a reta <span class="math inline">\(r\)</span> como uma régua graduada, uma reta numérica, ou um eixo numérico orientado. O vetor diretor <span class="math inline">\(V\)</span> dá a direção e a unidade de medida dessa reta numérica.</p>
+</section>
+<section id="exercícios" class="slide level2">
+<h2>Exercícios</h2>
+<ol type="1">
+<li>Escreva uma equação paramétrica para a reta que passa por <span class="math inline">\(A=(-1,3,4)\)</span> e que é paralela ao vetor <span class="math inline">\(V=(1,-2,0)\)</span>.</li>
+<li>Escreva uma equação paramétrica para a reta que passa por <span class="math inline">\(M=(5,0,-3)\)</span> e por <span class="math inline">\(N=(3,8,7)\)</span>.</li>
+<li>Considere o ponto <span class="math inline">\(P=(4,-2,11)\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math inline">\((x,y,z) = (1,-1,1) + t(3,1,2)\)</span>. Determine a equação da reta <span class="math inline">\(s\)</span> que passa por <span class="math inline">\(P\)</span> e que é perpendicular e concorrente com <span class="math inline">\(r\)</span>.</li>
+</ol>
+</section>
+<section id="exercício-3-solução" class="slide level2">
+<h2>Exercício 3 – solução</h2>
+<div class="exr-">
+<p>Considere o ponto <span class="math inline">\(P=(4,-2,11)\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math inline">\((x,y,z) = (1,-1,1) + t(3,1,2)\)</span>. Determine a equação da reta <span class="math inline">\(s\)</span> que passa por <span class="math inline">\(P\)</span> e que é perpendicular e concorrente com <span class="math inline">\(r\)</span>.</p>
+</div>
+<p>O vetor diretor de <span class="math inline">\(r\)</span> é <span class="math inline">\(V=(3,1,2)\)</span>. Procuramos um ponto <span class="math inline">\(Q\in r\)</span> tal que <span class="math inline">\(\vec{PQ}\perp V\)</span>; ou seja, <span class="math inline">\(\vec{PQ}\cdot v=0\)</span>. Tem-se <span class="math inline">\(Q=(1,-1,1)+t(3,1,2)\)</span>: <span class="math display">\[\begin{align*}
+(P-(1,-1,1)+t(3,1,2))\cdot v&amp;=0\\
+&amp;⇒ [(4,-2,11)-(1+3t,\,-1+t,\,1+2t)]\cdot(3,1,2)=0\\
+&amp;⇒ (3-3t,\,-1-t,\,10-2t)\cdot(3,1,2)=28-14t=0\\
+&amp;⇒ t=2.
+\end{align*}\]</span></p>
+<p>Logo <span class="math inline">\(Q=(7,1,5)\)</span> e um vetor diretor de <span class="math inline">\(s\)</span> é <span class="math inline">\(QP=(3,3,-6)=3(1,1,-2)\)</span>. Assim, a reta procurada é <span class="math display">\[
+(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,
+\]</span> com <span class="math inline">\(v·(1,1,-2)=3+1-4=0\)</span> (perpendicular) e concorrente em <span class="math inline">\(Q\)</span>.</p>
+</section>
+<section id="posição-relativa-entre-duas-retas-no-espaço" class="slide level2">
+<h2>Posição relativa entre duas retas no espaço</h2>
+<div class="quarto-layout-panel" data-layout="[[33,33,33]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig08.png"></p>
+<figcaption>Retas paralelas</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig09.PNG"></p>
+<figcaption>Retas concorrentes</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig10.PNG"></p>
+<figcaption>Retas reversas</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Retas paralelas e concorrentes são <span class="bg-yellow">coplanares</span>.</p>
+<p>Retas reversas sempre moram em planos paralelos distintos <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> tais que <span class="math inline">\(s\subset\alpha\)</span> e <span class="math inline">\(r\subset\beta\)</span>.</p>
+</section>
+<section id="retas-reversas-construção-auxiliar" class="slide level2">
+<h2>Retas reversas — construção auxiliar</h2>
+<p>Sempre existe uma reta <span class="math inline">\(t\)</span> perpendicular comum a <span class="math inline">\(r\)</span> e a <span class="math inline">\(s\)</span> interceptando <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig11.PNG" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
+</figure>
+</div>
+<p>Observe a reta <span class="math inline">\(r'\)</span> paralela a <span class="math inline">\(r\)</span> traçada pelo ponto <span class="math inline">\(s \cap t\)</span> e também observe a reta <span class="math inline">\(s'\)</span> paralela a <span class="math inline">\(s\)</span> traçada por <span class="math inline">\(r \cap t\)</span>.</p>
+<ul>
+<li>O plano <span class="math inline">\(\alpha\)</span> é o plano que contém as retas concorrentes <span class="math inline">\(s\)</span> e <span class="math inline">\(r'\)</span>.</li>
+<li>O plano <span class="math inline">\(\beta\)</span> é o plano que contém as retas concorrentes <span class="math inline">\(r\)</span> e <span class="math inline">\(s'\)</span>.</li>
+</ul>
+</section>
+<section id="distância-entre-retas-reversas" class="slide level2">
+<h2>Distância entre retas reversas</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig12.PNG" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Sejam <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> retas reversas, seja <span class="math inline">\(t\)</span> a reta perpendicular comum e sejam <span class="math inline">\(P = r \cap t\)</span> e <span class="math inline">\(Q = s \cap t\)</span>. Então</p>
+<p><span class="math display">\[\operatorname{dist}(r,s) = \operatorname{dist}(P,Q)\]</span></p>
+<p>Esta é a menor distância entre um ponto de <span class="math inline">\(r\)</span> e um ponto de <span class="math inline">\(s\)</span>.</p>
+</section>
+<section id="exemplo-retas-paralelas" class="slide level2">
+<h2>Exemplo — retas paralelas</h2>
+<ol type="1">
+<li>Encontre a equação da reta <span class="math inline">\(r\)</span> que passa pelos pontos <span class="math inline">\(A=(3,5,3)\)</span> e <span class="math inline">\(B=(1,1,1)\)</span>.</li>
+<li>Considere <span class="math inline">\(s\)</span> a reta <span class="math inline">\((x,y,z) = (1,2,3)+ t(1,2,1)\)</span>. Verifique se as retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são paralelas, reversas ou concorrentes.</li>
+<li>Calcule a distância entre as retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</li>
+</ol>
+</section>
+<section id="exemplo-solução" class="slide level2">
+<h2>Exemplo – solução</h2>
+<ol type="1">
+<li><p>Um vetor diretor de <span class="math inline">\(r\)</span> é <span class="math inline">\(\vec{AB} = (-2,-4,-2) = -2(1,2,1)\)</span>. Assim, uma equação paramétrica de <span class="math inline">\(r\)</span> é <span class="math inline">\((x,y,z) = (3,5,3) + t(1,2,1), t ∈ ℝ\)</span>.</p></li>
+<li><p>As retas têm vetores diretores paralelos, logo são paralelas. Para ver que não coincidem, note que o ponto <span class="math inline">\((1,2,3)\)</span> de <span class="math inline">\(s\)</span> não satisfaz a equação de <span class="math inline">\(r\)</span>: <span class="math display">\[
+3 + t = 1 ⇒ t = -2, \textrm{ mas } 5 + 2(-2) = 1 ≠ 2.
+\]</span></p></li>
+</ol>
+</section>
+<section id="exemplo-solução-1" class="slide level2">
+<h2>Exemplo – solução</h2>
+<ol start="3" type="1">
+<li><span class="bg-yellow">Distância entre duas retas paralelas.</span> Seja <span class="math inline">\(A=(3,5,3)\in r\)</span> e <span class="math inline">\(C=(1,2,3)\in s\)</span>. O vetor diretor das duas retas é <span class="math inline">\(V=(1,2,1)\)</span>. Temos por Teorema de Pitágoras que <span class="math display">\[
+\|\vec{AC}\|^2=\operatorname{dist}(r,s)^2+\|\operatorname{proj}_V(\vec{AC})\|^2
+\]</span></li>
+</ol>
+<p>Temos que</p>
+<ul>
+<li><span class="math inline">\(\vec{AC}=(-2,-3,0)\)</span> e <span class="math inline">\(\|\vec{AC}\|^2=13\)</span>;</li>
+<li><span class="math inline">\(\operatorname{proj}_V(\vec{AC})=\frac {\left&lt;V,\vec{AC}\right&gt;}{\|V\|^2}V=-8/6V=(-4/3,-8/3,-4/3)
+\Rightarrow \|\operatorname{proj}_V(\vec{AC})\|^2=32/3\)</span></li>
+</ul>
+<p>Logo <span class="math display">\[
+\operatorname{dist}(r,s)^2=\|\vec{AC}\|^2-\|\operatorname{proj}_V(\vec{AC})\|^2
+=\frac{7}3 \textrm{ e } \operatorname{dist}(r,s)=\frac{\sqrt 7}{\sqrt 3}.
+\]</span></p>
+</section>
+<section id="exemplo-retas-concorrentes" class="slide level2">
+<h2>Exemplo — retas concorrentes</h2>
+<p>Considere a reta <span class="math inline">\(r\)</span> que passa pelos pontos <span class="math inline">\(A=(5,4,1)\)</span> e <span class="math inline">\(B=(7,5,2)\)</span>. Também considere a reta <span class="math inline">\(s\)</span> que passa pelos pontos <span class="math inline">\(P=(0,1,0)\)</span> e <span class="math inline">\(Q=(-3,-2,3)\)</span>.</p>
+<ol type="1">
+<li>Determine equações paramétricas das retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</li>
+<li>Mostre que <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são retas concorrentes calculando o ponto <span class="math inline">\(P = r \cap s\)</span>.</li>
+</ol>
+</section>
+<section id="exemplo-retas-reversas" class="slide level2">
+<h2>Exemplo — retas reversas</h2>
+<p>Considere a reta <span class="math inline">\(r\)</span> que passa pelos pontos <span class="math inline">\(A=(4,-2,1)\)</span> e <span class="math inline">\(B=(5,-3,2)\)</span>. Também considere a reta <span class="math inline">\(s\)</span> que passa pelos pontos <span class="math inline">\(C=(1,7,4)\)</span> e <span class="math inline">\(D=(-7,-9,8)\)</span>.</p>
+<ol type="1">
+<li>Determine equações paramétricas das retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</li>
+<li>Verifique se as retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são paralelas, concorrentes ou reversas.</li>
+<li>Determine a distância entre <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> exibindo pontos <span class="math inline">\(P\in r\)</span> e <span class="math inline">\(Q\in s\)</span> tais que <span class="math inline">\(\operatorname{dist}(r,s) = \operatorname{dist}(P,Q)\)</span>.</li>
+</ol>
+</section>
+<section id="retas-reversas-solução" class="slide level2">
+<h2>Retas reversas – solução</h2>
+<p>Sejam <span class="math inline">\(A=(4,-2,1)\)</span>, <span class="math inline">\(B=(5,-3,2)\)</span>, <span class="math inline">\(C=(1,7,4)\)</span> e <span class="math inline">\(D=(-7,-9,8)\)</span>.</p>
+<ol type="1">
+<li>Equações paramétricas:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(r: V_r = B-A = (1,-1,1) ⇒ (x,y,z) = A + t(1,-1,1)\)</span>.</li>
+<li><span class="math inline">\(s: V_s = D-C = (-8,-16,4)=-4(2,4,-1) ⇒ (x,y,z) = C + u(2,4,-1)\)</span>.</li>
+</ul>
+<ol start="2" type="1">
+<li>Posição relativa: <span class="math inline">\(V_r \not ∥ V_s\)</span>, logo não são paralelas. Tentando <span class="math inline">\(r ∩ s\)</span>: <span class="math display">\[\begin{align*}
+4+t &amp;= 1+2u\\
+-2-t &amp;= 7+4u \\
+1+t &amp;= 4-u
+\end{align*}\]</span> Das duas primeiras, <span class="math inline">\(u=-1\)</span> e <span class="math inline">\(t=-5\)</span>; na terceira dá <span class="math inline">\(1-5 ≠ 5\)</span>. Logo <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são reversas.</li>
+</ol>
+</section>
+<section id="distância-entre-retas-reversas-1" class="slide level2">
+<h2>Distância entre retas reversas</h2>
+<ol start="3" type="1">
+<li>Distância e pontos de mínima distância: Tomando o segmento <span class="math inline">\(PQ\)</span> perpendicular a <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>, com <span class="math inline">\(P∈r\)</span> e <span class="math inline">\(Q∈s\)</span>: <span class="math display">\[\begin{align*}
+(A + tV_r - (C + uV_s))·V_r &amp;= 0\\
+(A + tV_r - (C + uV_s))·V_s &amp;= 0
+\end{align*}\]</span></li>
+</ol>
+<p>Com <span class="math inline">\(A-C=(3,-9,-3)\)</span>, <span class="math inline">\(\left&lt;V_r,V_r\right&gt;=3\)</span>, <span class="math inline">\(\left&lt;V_s,V_s\right&gt;=21\)</span>, <span class="math inline">\(\left&lt;V_r,V_s\right&gt;=-3\)</span>, <span class="math inline">\(\left&lt;V_r,(A-C)\right&gt;=9\)</span>, <span class="math inline">\(\left&lt;V_s,(A-C)\right&gt;=-27\)</span>, obtém-se <span class="math inline">\(t+u = -3\)</span> e <span class="math inline">\(t+7u = -9\)</span> ⇒ <span class="math inline">\(u=-1, t=-2\)</span>.</p>
+<p>Logo, <span class="math inline">\(P = A + tV_r = (2,0,-1)\)</span>, <span class="math inline">\(Q = C + uV_s = (-1,3,5)\)</span>, <span class="math inline">\(PQ = Q-P = (-3,3,6) ⟂ V_r, V_s\)</span>.</p>
+<p>Distância: <span class="math inline">\(‖PQ‖ = \sqrt{9+9+36} = 3\sqrt 6\)</span>.</p>
+<!-- end of Chico's aula10 -->
+<!-- Chico's aula11 -->
+</section>
+<section id="planos-no-espaço" class="slide level2">
+<h2>Planos no Espaço</h2>
+<p>Um plano pode ser dado de várias maneiras:</p>
+<ul>
+<li>Por 3 pontos não colineares passa um único plano.</li>
+<li>Por uma reta e por um ponto fora da reta.</li>
+<li>Dadas duas retas concorrentes.</li>
+<li>Dadas duas retas paralelas.</li>
+<li>Dado um ponto e uma reta, existe um único plano ortogonal à reta que passa por este ponto.</li>
+</ul>
+<p>Algumas destas situações podem ser caracterizadas pelo produto escalar; outras, pelo produto vetorial.</p>
+<p>Vamos começar discutindo a última situação.</p>
+</section>
+<section id="planos-dado-um-ponto-e-um-vetor-normal" class="slide level2">
+<h2>Planos, dado um ponto e um vetor normal</h2>
+<p>Seja dado um ponto <span class="math inline">\(P_0=(x_0,y_0,z_0)\)</span> e um vetor <span class="math inline">\(N\neq\vec{0}\)</span>.</p>
+<p>Existe um único plano <span class="math inline">\(\alpha\)</span> que passa por <span class="math inline">\(P_0\)</span> e que é ortogonal ao vetor <span class="math inline">\(N\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig14.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Nesta situação <span class="math inline">\(N\)</span> é um vetor normal ao plano.</p>
+</section>
+<section id="planos-dado-um-ponto-e-um-vetor-normal-cont." class="slide level2">
+<h2>Planos, dado um ponto e um vetor normal (cont.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig15.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
+</figure>
+</div>
+<p>Um ponto <span class="math inline">\(P=(x,y,z)\)</span> pertence a este plano se os vetores <span class="math inline">\(N=(a,b,c)\)</span> e <span class="math inline">\(\overrightarrow{P_0P}=(x-x_0,\,y-y_0,\,z-z_0)\)</span> são perpendiculares: <span class="math display">\[
+\langle N,\overrightarrow{P_0P}\rangle = 0 \;\Longleftrightarrow\; a(x-x_0)+b(y-y_0)+c(z-z_0)=0.
+\]</span></p>
+<p>Equivalente a <span class="math display">\[
+ax+by+cz = a x_0 + b y_0 + c z_0.
+\]</span></p>
+</section>
+<section id="equação-geral-do-plano" class="slide level2">
+<h2>Equação geral do plano</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig15.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Do item anterior, o lado direito é uma constante <span class="math inline">\(d=a x_0 + b y_0 + c z_0\)</span>. Assim, um ponto <span class="math inline">\(P=(x,y,z)\)</span> pertence ao plano se e somente se</p>
+<p><span class="math display">\[\boxed{\;ax + by + cz = d\;}\]</span></p>
+</section>
+<section id="exemplo-plano-por-ponto-e-normal" class="slide level2">
+<h2>Exemplo: plano por ponto e normal</h2>
+<p>Determine a equação geral do plano que passa por <span class="math inline">\(P_0=(2,3,-4)\)</span> e é ortogonal ao vetor <span class="math inline">\(N=(5,-2,3)\)</span>.</p>
+<p>Solução. A equação geral do plano é da forma <span class="math inline">\(ax+by+cz=d\)</span>, em que os coeficientes <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> são as coordenadas de um vetor normal ao plano. Neste caso, a equação tem a forma <span class="math inline">\(5x-2y+3z=d\)</span>. Substituindo o ponto <span class="math inline">\(P_0=(2,3,-4)\)</span>, obtemos <span class="math inline">\(d\)</span>:</p>
+<p><span class="math display">\[5\cdot 2 - 2\cdot 3 + 3\cdot (-4) = d \;\Rightarrow\; d=-8.\]</span></p>
+<p>Logo, a equação do plano é <span class="math inline">\(\boxed{\;5x-2y+3z=-8\;}.\)</span></p>
+</section>
+<section id="observações-sobre-a-equação-geral-do-plano" class="slide level2">
+<h2>Observações sobre a equação geral do plano</h2>
+<p><span class="math display">\[\boxed{\;ax+by+cz=d\;}\]</span></p>
+<ul>
+<li>Para escrever a equação geral de um plano, precisamos de um vetor <span class="math inline">\(N=(a,b,c)\)</span> ortogonal ao plano (vetor normal), com <span class="math inline">\(N\neq\vec{0}\)</span>.</li>
+<li>Em muitas situações, o vetor normal será calculado pelo produto vetorial.</li>
+<li>A equação geral do plano não é única: todo múltiplo não nulo de um vetor normal também é vetor normal. Multiplicar a equação <span class="math inline">\(ax+by+cz=d\)</span> por um número não nulo não altera o conjunto solução, apenas muda o vetor normal.</li>
+</ul>
+<!-- End of Chico's aula11 -->
+<!-- Chico's Aula12 -->
+</section>
+<section id="plano-ponto-e-vetor-normal" class="slide level2">
+<h2>Plano: ponto e vetor normal</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig21.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
+</figure>
+</div>
+<p>Se <span class="math inline">\(P_0=(x_0,y_0,z_0)\)</span> está em um plano e <span class="math inline">\(N=(a,b,c)\neq\vec{0}\)</span> é normal ao plano, então para <span class="math inline">\(P=(x,y,z)\)</span> no plano: <span class="math display">\[
+\langle N,\overrightarrow{P_0P}\rangle=0 \;\Longleftrightarrow\; a(x-x_0)+b(y-y_0)+c(z-z_0)=0.
+\]</span> Equivalente a <span class="math inline">\(ax+by+cz = a x_0 + b y_0 + c z_0 = d\)</span>.</p>
+<p>Equação geral do plano: <span class="math inline">\(\boxed{\;ax+by+cz=d\;}.\)</span></p>
+</section>
+<section id="produto-vetorial-em-mathbbr3" class="slide level2">
+<h2>Produto Vetorial em <span class="math inline">\(\mathbb{R}^3\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig22.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
+</figure>
+</div>
+<p>O produto vetorial <span class="math inline">\(V\times W\)</span> é caracterizado por:</p>
+<ul>
+<li>Norma: <span class="math inline">\(\|V\times W\|=\|V\|\,\|W\|\,\operatorname{sen}(\theta)\)</span>.</li>
+<li>Direção: <span class="math inline">\(V\times W\)</span> é perpendicular ao plano de <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>.</li>
+<li>Sentido: <span class="math inline">\(V\)</span>, <span class="math inline">\(W\)</span> e <span class="math inline">\(V\times W\)</span> satisfazem a regra da mão direita.</li>
+</ul>
+</section>
+<section id="produto-vetorial-em-coordenadas" class="slide level2">
+<h2>Produto vetorial em coordenadas</h2>
+<p>Se</p>
+<p><span class="math display">\[\begin{aligned}
+V &amp;= (v_1,v_2,v_3) = v_1\,\vec{i}+v_2\,\vec{j}+v_3\,\vec{k},\\
+W &amp;= (w_1,w_2,w_3) = w_1\,\vec{i}+w_2\,\vec{j}+w_3\,\vec{k},
+\end{aligned}\]</span></p>
+<p>então, usando as propriedades do produto vetorial,</p>
+<p><span class="math display">\[V\times W=\big(\,v_2w_3-v_3w_2\,,\; v_3w_1-v_1w_3\,,\; v_1w_2-v_2w_1\,\big).\]</span></p>
+<p>É mais fácil memorizar pelo determinante simbólico</p>
+<p><span class="math display">\[
+V\times W=\det\!\begin{bmatrix}
+\vec{i} &amp; \vec{j} &amp; \vec{k}\\
+v_1 &amp; v_2 &amp; v_3\\
+w_1 &amp; w_2 &amp; w_3
+\end{bmatrix}.
+\]</span></p>
+</section>
+<section id="aplicação-plano-por-reta-e-ponto-fora" class="slide level2">
+<h2>Aplicação: plano por reta e ponto fora</h2>
+<p>Exemplo 1. Determine a equação do plano que passa por <span class="math inline">\(A=(-1,2,1)\)</span> e contém a reta</p>
+<p><span class="math display">\[(x,y,z)=(2,1,3)+t(-1,3,1).\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig30.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="aplicação-plano-por-reta-e-ponto-fora-ideia" class="slide level2">
+<h2>Aplicação: plano por reta e ponto fora (ideia)</h2>
+<p>Observações importantes:</p>
+<ul>
+<li>Para calcular a equação <span class="math inline">\(ax+by+cz=d\)</span> precisamos de um vetor normal <span class="math inline">\(N=(a,b,c)\)</span> e de um ponto <span class="math inline">\(P\)</span> no plano.</li>
+<li>Se <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> são vetores paralelos ao plano, então <span class="math inline">\(N=V\times W\)</span> é um vetor normal do plano.</li>
+<li>Para achar <span class="math inline">\(N\)</span>, basta identificar quaisquer dois vetores paralelos ao plano.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig29.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="aplicação-plano-por-reta-e-ponto-fora-cálculo" class="slide level2">
+<h2>Aplicação: plano por reta e ponto fora (cálculo)</h2>
+<p>No exemplo, <span class="math inline">\(A=(-1,2,1)\)</span> e <span class="math inline">\(r:(x,y,z)=(2,1,3)+t(-1,3,1)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig30.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p>O ponto <span class="math inline">\(B=(2,1,3)\)</span> pertence a <span class="math inline">\(r\)</span> e os vetores <span class="math inline">\(\overrightarrow{BA}=(-3,1,-2)\)</span> e <span class="math inline">\(V_r=(-1,3,1)\)</span> são paralelos ao plano. Então</p>
+<p><span class="math display">\[
+N=\overrightarrow{AB}\times V_r=
+\begin{vmatrix}
+\vec{i}&amp;\vec{j}&amp;\vec{k}\\
+-3&amp;1&amp;-2\\
+-1&amp;3&amp;1
+\end{vmatrix}
+=(7,5,-8).
+\]</span></p>
+<p>Logo, o plano tem equação <span class="math inline">\(7x+5y-8z=d\)</span>.</p>
+</section>
+<section id="aplicação-plano-por-reta-e-ponto-fora-fechamento" class="slide level2">
+<h2>Aplicação: plano por reta e ponto fora (fechamento)</h2>
+<p>Como queremos que <span class="math inline">\(r\)</span> esteja contida no plano, todos os pontos de <span class="math inline">\(r\)</span> devem satisfazer a equação do plano. Um ponto genérico de <span class="math inline">\(r\)</span> é dado por</p>
+<p><span class="math display">\[x=2-t,\quad y=1+3t,\quad z=3+t.\]</span></p>
+<p>Substituindo em <span class="math inline">\(7x+5y-8z=d\)</span>:</p>
+<p><span class="math display">\[7(2-t)+5(1+3t)-8(3+t)=d\;\Rightarrow\; d=-5.\]</span></p>
+<p>Portanto, o plano é <span class="math inline">\(\boxed{\;7x+5y-8z=-5\;}.\)</span></p>
+</section>
+<section id="aplicação-plano-do-exemplo-anterior" class="slide level2">
+<h2>Aplicação: plano do exemplo anterior</h2>
+<p>Exemplo 4. Determine a equação geral do plano que contém</p>
+<p><span class="math display">\[A=(2,3,3),\quad B=(4,1,3),\quad C=(2,5,1),\quad D=(3,3,2).\]</span></p>
+<p>Um vetor normal pode ser</p>
+<p><span class="math display">\[N=\overrightarrow{AB}\times\overrightarrow{AC}=\begin{vmatrix}
+\vec{i}&amp;\vec{j}&amp;\vec{k}\\
+2&amp;-2&amp;0\\
+0&amp;2&amp;-2
+\end{vmatrix}=(4,4,4).\]</span></p>
+<p>Logo, a equação é <span class="math inline">\(4x+4y+4z=d\)</span>. Substituindo <span class="math inline">\(B=(4,1,3)\)</span>, <span class="math inline">\(d=16+4+12=32\)</span>, ou seja, <span class="math inline">\(4x+4y+4z=32\)</span>, que simplifica para <span class="math inline">\(\boxed{x+y+z=8}\)</span>.</p>
+</section>
+<section id="aplicação-plano-dado-por-3-pontos" class="slide level2">
+<h2>Aplicação: plano dado por 3 pontos</h2>
+<p>Exemplo 5. Determine a equação geral do plano que contém</p>
+<p><span class="math display">\[A=(1,1,1),\quad B=(-2,3,3),\quad C=(2,3,1).\]</span></p>
+<p>Um ponto <span class="math inline">\(P=(x,y,z)\)</span> pertence ao plano se os vetores são coplanares:</p>
+<p><span class="math display">\[\overrightarrow{AP}=(x-1,y-1,z-1),\quad \overrightarrow{AB}=(-3,2,2),\quad \overrightarrow{AC}=(1,2,0).\]</span></p>
+<p>Daí,</p>
+<p><span class="math display">\[\det\!\begin{bmatrix}
+x-1&amp;y-1&amp;z-1\\
+-3&amp;2&amp;2\\
+1&amp;2&amp;0
+\end{bmatrix}=0.\]</span></p>
+<p>Expandindo, obtém-se <span class="math inline">\(\boxed{\;2x-y+4z=5\;}.\)</span></p>
+</section>
+<section id="aplicação-plano-por-duas-retas-concorrentes" class="slide level2">
+<h2>Aplicação: plano por duas retas concorrentes</h2>
+<p>Exemplo 6. Verifique se as retas são paralelas, concorrentes ou reversas. Se possível, determine o plano que contém as duas retas.</p>
+<p><span class="math display">\[\begin{cases}
+x=3+t\\
+y=3+2t\\
+z=4+t
+\end{cases}
+\qquad\qquad
+\begin{cases}
+x=-1+2s\\
+y=-2+s\\
+z=3-s
+\end{cases}\]</span></p>
+</section>
+<section id="aplicação-plano-por-duas-retas-paralelas" class="slide level2">
+<h2>Aplicação: plano por duas retas paralelas</h2>
+<p>Exemplo 7.</p>
+<ol type="1">
+<li><p>Encontre a equação paramétrica da reta <span class="math inline">\(r\)</span> que passa por <span class="math inline">\(A=(3,5,3)\)</span> e <span class="math inline">\(B=(1,1,1)\)</span>.</p></li>
+<li><p>Considere <span class="math inline">\(s:(x,y,z)=(1,2,3)+t(1,2,1)\)</span>. Verifique se <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são paralelas, reversas ou concorrentes.</p></li>
+<li><p>Ache, se possível, uma equação geral do plano que contém as retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</p></li>
+</ol>
+<!-- End of Chico's aula12 -->
+<!-- Begin og Chico's Aula13 -->
+</section>
+<section id="lista-de-exercícios-5-estudo-de-pontos-retas-e-planos" class="slide level2">
+<h2>Lista de exercícios 5: estudo de pontos, retas e planos</h2>
+<ul>
+<li>Nesta aula serão discutidas dúvidas dos exercícios da Lista 8, sobre posições relativas de retas e planos e sobre o cálculo de ângulos e distâncias.</li>
+<li>Vai aproveitar mais quem já estudou e tentou resolver esses exercícios.</li>
+<li>Nosso foco não é memorizar e aplicar fórmulas. Em cada caso, devemos entender o problema e construir elementos que permitam a sua solução.</li>
+</ul>
+<p>Tarefa de casa importante:</p>
+<ul>
+<li>Passe a limpo todas as soluções.</li>
+<li>Faça ilustrações de todas as situações.</li>
+</ul>
+</section>
+<section id="posições-relativas-de-dois-objetos-ponto-reta-plano" class="slide level2">
+<h2>Posições relativas de dois objetos (ponto, reta, plano)</h2>
+<ul>
+<li>Ex 1. Ponto - Ponto</li>
+<li>Ex 2. Ponto - Reta</li>
+<li>Ex 3. Ponto - Plano</li>
+</ul>
+<p>Reta - Reta:</p>
+<ul>
+<li>Ex 4. Paralelas</li>
+<li>Ex 5. Concorrentes</li>
+<li>Ex 6. Reversas</li>
+</ul>
+<p>Reta - Plano:</p>
+<ul>
+<li>Ex 7. Reta fura o plano num ponto</li>
+<li>Ex 8. Reta paralela ao plano</li>
+<li>Ex 9. Reta contida no plano</li>
+</ul>
+<p>Plano - Plano:</p>
+<ul>
+<li>Ex 10. Paralelos</li>
+<li>Ex 11. Concorrentes</li>
+</ul>
+</section>
+<section id="exemplo-1-ponto-e-ponto" class="slide level2">
+<h2>Exemplo 1: ponto e ponto</h2>
+<p>Considere os pontos <span class="math inline">\(A=(-1,3,2)\)</span> e <span class="math inline">\(B=(2,1,6)\)</span>.</p>
+<ol type="1">
+<li><ol type="a">
+<li>Determine a equação paramétrica da reta <span class="math inline">\(\overleftrightarrow{AB}\)</span>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Calcule o ponto médio do segmento <span class="math inline">\(AB\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Calcule <span class="math inline">\(\mathrm{dist}(A,B)\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Determine o ponto simétrico <span class="math inline">\(A'\)</span> de <span class="math inline">\(A\)</span> em relação ao ponto <span class="math inline">\(B\)</span>.</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>Determine o ponto simétrico <span class="math inline">\(B'\)</span> de <span class="math inline">\(B\)</span> em relação ao ponto <span class="math inline">\(A\)</span>.</li>
+</ol></li>
+</ol>
+</section>
+<section id="exemplo-2-ponto-e-reta" class="slide level2">
+<h2>Exemplo 2: ponto e reta</h2>
+<p>Considere a reta <span class="math inline">\(r\)</span> de equação paramétrica <span class="math inline">\((x,y,z) = (-7,4,9) + t(-2,1,2)\)</span> e o ponto <span class="math inline">\(A=(7,4,5)\)</span>.</p>
+<ol type="1">
+<li><ol type="a">
+<li>O ponto <span class="math inline">\(A\)</span> pertence a reta <span class="math inline">\(r\)</span>?</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine a equação do plano que contém <span class="math inline">\(r\)</span> e <span class="math inline">\(A\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Determine a reta perpendicular a <span class="math inline">\(r\)</span> que passa por <span class="math inline">\(A\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Calcule <span class="math inline">\(\mathrm{dist}(A,r)\)</span>.</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>Determine o ponto simétrico de <span class="math inline">\(A\)</span> em relação à reta <span class="math inline">\(r\)</span>.</li>
+</ol></li>
+</ol>
+<p>Obs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em uma reta.</p>
+</section>
+<section id="exemplo-3-ponto-e-plano" class="slide level2">
+<h2>Exemplo 3: ponto e plano</h2>
+<p>Considere o plano <span class="math inline">\(\alpha\)</span> de equação <span class="math inline">\(x-2y+3z=4\)</span> e o ponto <span class="math inline">\(A=(2,8,-8)\)</span>.</p>
+<ol type="1">
+<li><ol type="a">
+<li>O ponto <span class="math inline">\(A\)</span> pertence ao plano <span class="math inline">\(\alpha\)</span>?</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine a equação paramétrica da reta que passa por <span class="math inline">\(A\)</span> e é perpendicular ao plano <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Calcule <span class="math inline">\(\mathrm{dist}(A,\alpha)\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Determine o ponto simétrico de <span class="math inline">\(A\)</span> em relação ao plano <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+</ol>
+<p>Obs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em um plano.</p>
+</section>
+<section id="exemplo-4-duas-retas-paralelas" class="slide level2">
+<h2>Exemplo 4: duas retas paralelas</h2>
+<p>Considere as retas paralelas</p>
+<p><span class="math display">\[r:\ (x,y,z) = (-6,3,-2) + t(3,-1,2)\]</span></p>
+<p><span class="math display">\[s:\ (x,y,z) = (-3,30,-14) + s(3,-1,2)\]</span></p>
+<ol type="1">
+<li><ol type="a">
+<li>Determine a equação do plano <span class="math inline">\(\alpha\)</span> que contém <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Dê um exemplo de uma reta perpendicular a <span class="math inline">\(r\)</span> e a <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Calcule <span class="math inline">\(\mathrm{dist}(r,s)\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Determine uma reta contida em <span class="math inline">\(\alpha\)</span> e que está equidistante de <span class="math inline">\(r\)</span> e de <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+</ol>
+</section>
+<section id="exemplo-5-duas-retas-concorrentes" class="slide level2">
+<h2>Exemplo 5: duas retas concorrentes</h2>
+<p>Considere as retas</p>
+<p><span class="math display">\[r:\ (x,y,z) = (7,2,-2) + t(-3,0,1)\]</span> <span class="math display">\[s:\ (x,y,z) = (-1,1,2) + s(2,1,-2)\]</span></p>
+<ol type="1">
+<li><ol type="a">
+<li>Mostre que <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são concorrentes calculando o ponto <span class="math inline">\(P= r \cap s\)</span>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine a equação geral do plano que contém <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Calcule o ângulo de <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+</ol>
+<p>Obs: neste exemplo aprendemos a calcular o ângulo entre duas retas.</p>
+</section>
+<section id="exemplo-6-duas-retas-reversas" class="slide level2">
+<h2>Exemplo 6: duas retas reversas</h2>
+<p>Considere as retas</p>
+<p><span class="math display">\[r:\ (x,y,z) = (-1,-1,4) + t(1,1,-1)\]</span> <span class="math display">\[s:\ (x,y,z) = (1,3,7) + s(-2,0,1)\]</span></p>
+<ol type="1">
+<li><ol type="a">
+<li>Mostre que <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são retas reversas.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine a equação da reta perpendicular e concorrente com <span class="math inline">\(r\)</span> e com <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Calcule <span class="math inline">\(\mathrm{dist}(r,s)\)</span> e o ângulo entre <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Determine o plano <span class="math inline">\(\alpha\)</span> que contém <span class="math inline">\(r\)</span> e é paralelo a <span class="math inline">\(s\)</span>.</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>Determine o plano <span class="math inline">\(\beta\)</span> que contém <span class="math inline">\(s\)</span> e é paralelo a <span class="math inline">\(r\)</span>.</li>
+</ol></li>
+<li><ol start="6" type="a">
+<li>Determine o plano <span class="math inline">\(\gamma\)</span> que contém <span class="math inline">\(r\)</span> e é perpendicular a <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="7" type="a">
+<li>Determine o plano <span class="math inline">\(\omega\)</span> que contém <span class="math inline">\(s\)</span> e é perpendicular a <span class="math inline">\(\beta\)</span>.</li>
+</ol></li>
+<li><ol start="8" type="a">
+<li>Determine a reta <span class="math inline">\(\gamma \cap \omega\)</span>.</li>
+</ol></li>
+</ol>
+</section>
+<section id="exemplo-6-ilustrações" class="slide level2">
+<h2>Exemplo 6: ilustrações</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig32.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exemplo-6-ilustrações-cont." class="slide level2">
+<h2>Exemplo 6: ilustrações (cont.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig33.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exemplo-6-ilustrações-cont.-1" class="slide level2">
+<h2>Exemplo 6: ilustrações (cont.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig34.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exemplo-6-ilustrações-cont.-2" class="slide level2">
+<h2>Exemplo 6: ilustrações (cont.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig35.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exemplo-6-ilustrações-cont.-3" class="slide level2">
+<h2>Exemplo 6: ilustrações (cont.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/06_retas_e_planos/fig36.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exemplo-7-reta-furando-um-plano" class="slide level2">
+<h2>Exemplo 7: reta furando um plano</h2>
+<p>Considere o plano <span class="math inline">\(\alpha\)</span> de equação <span class="math inline">\(2x+y-z=4\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math inline">\((x,y,z) = (0,3,-4) + t(1,-1,2)\)</span>.</p>
+<ol type="1">
+<li><ol type="a">
+<li>Determine o ponto <span class="math inline">\(P = r \cap \alpha\)</span>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine o plano que contém <span class="math inline">\(r\)</span> e é perpendicular a <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Determine a reta que é a projeção ortogonal de <span class="math inline">\(r\)</span> sobre <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Calcule o ângulo entre <span class="math inline">\(r\)</span> e <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>Determine a reta contida em <span class="math inline">\(\alpha\)</span> e que é perpendicular a <span class="math inline">\(r\)</span>.</li>
+</ol></li>
+</ol>
+<p>Obs: neste exemplo aprendemos a calcular o ângulo entre uma reta e um plano.</p>
+</section>
+<section id="exemplo-8-reta-paralela-a-um-plano" class="slide level2">
+<h2>Exemplo 8: reta paralela a um plano</h2>
+<p>Considere o plano <span class="math inline">\(\alpha\)</span> de equação <span class="math inline">\(x-y+z=1\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math inline">\((x,y,z) = (0,3,1) + t(2,-1,-3)\)</span>.</p>
+<ol type="1">
+<li><ol type="a">
+<li>Mostre que a reta <span class="math inline">\(r\)</span> é paralela ao plano <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Ache o plano que contém <span class="math inline">\(r\)</span> e é perpendicular a <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Ache o plano que contém <span class="math inline">\(r\)</span> e é paralelo a <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Determine a equação da reta que é a projeção ortogonal de <span class="math inline">\(r\)</span> sobre <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>Calcule <span class="math inline">\(\mathrm{dist}(r,\alpha)\)</span>.</li>
+</ol></li>
+</ol>
+</section>
+<section id="exemplo-9-reta-contida-em-um-plano" class="slide level2">
+<h2>Exemplo 9: reta contida em um plano</h2>
+<p>Considere o plano <span class="math inline">\(\alpha\)</span> de equação <span class="math inline">\(x+2y-z=3\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math inline">\((x,y,z) = (2,1,1) + t(2,1,4)\)</span>.</p>
+<ol type="1">
+<li><ol type="a">
+<li>Mostre que <span class="math inline">\(r \subset \alpha\)</span>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine o plano que contém <span class="math inline">\(r\)</span> e que é perpendicular a <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Dê um exemplo de uma reta contida em <span class="math inline">\(\alpha\)</span> e que é perpendicular a <span class="math inline">\(r\)</span>.</li>
+</ol></li>
+</ol>
+</section>
+<section id="exemplo-10-planos-paralelos" class="slide level2">
+<h2>Exemplo 10: planos paralelos</h2>
+<p>Considere os planos</p>
+<p><span class="math display">\[\alpha:\ 2x-y+z=1\]</span> <span class="math display">\[\beta:\ 4x-2y+2z=5\]</span></p>
+<ol type="1">
+<li><ol type="a">
+<li>Mostre que <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> são planos paralelos.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine a reta perpendicular a <span class="math inline">\(\alpha\)</span> e a <span class="math inline">\(\beta\)</span> que passa pela origem.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Calcule <span class="math inline">\(\mathrm{dist}(\alpha,\beta)\)</span>.</li>
+</ol></li>
+</ol>
+</section>
+<section id="exemplo-11-planos-concorrentes" class="slide level2">
+<h2>Exemplo 11: planos concorrentes</h2>
+<p>Considere os planos</p>
+<p><span class="math display">\[\alpha:\ x-y+3z=1\]</span> <span class="math display">\[\beta:\ 2x-3y-z=2\]</span></p>
+<ol type="1">
+<li><ol type="a">
+<li>Mostre que <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> não são paralelos.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Determine a equação da reta <span class="math inline">\(\alpha \cap \beta\)</span>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Calcule o ângulo entre <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Dê um exemplo de um plano perpendicular a <span class="math inline">\(\alpha\)</span> e a <span class="math inline">\(\beta\)</span>.</li>
+</ol></li>
+</ol>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiada");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiada");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/schcs\.github\.io\/GAALUFMG\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

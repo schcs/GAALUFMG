@@ -62,3 +62,24 @@ body.reveal .quarto-secondary-nav {
 }
 
 
+/* If a fixed navbar exists, reduce top padding so content pulls up */
+body.nav-fixed #quarto-content { padding-top: 0 !important; }
+
+
+.theorem.exercise {
+  border: 3px outset #00aaff;
+  background-color: #e6f7ff;
+        padding: 5px;
+}
+/* 
+.exercise:before {
+content: "Exerc\00ed cio. ";
+font-weight: bold;
+font-style: normal;
+}
+*/
+
+
+.theorem.exercise[text]:before {
+content: "Exemplo (" attr(text) ") ";
+}

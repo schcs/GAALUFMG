@@ -1,5 +1,537 @@
 [
   {
+    "objectID": "06_retas_e_planos.html#retas-no-plano",
+    "href": "06_retas_e_planos.html#retas-no-plano",
+    "title": "Retas e planos",
+    "section": "Retas no plano",
+    "text": "Retas no plano\n\n\n\n\n\n\nNo plano cartesiano, toda reta tem equação do tipo \\[\nax+by=c.\n\\]\nJá estamos acostumados com isso."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#retas-no-espaço",
+    "href": "06_retas_e_planos.html#retas-no-espaço",
+    "title": "Retas e planos",
+    "section": "Retas no espaço",
+    "text": "Retas no espaço\n\n\n\n\n\nQual é a equação de uma reta no espaço?\nFaz sentido pensar que esta reta poderia ter uma equação do tipo \\(ax+by=c\\) ou, generalizado, do tipo \\(ax+by+cz=d\\).\nNão. Pois uma reta é um objeto 1-dimensional. E cada uma destas equações possuem duas variáveis livres."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo",
+    "href": "06_retas_e_planos.html#exemplo",
+    "title": "Retas e planos",
+    "section": "Exemplo",
+    "text": "Exemplo\nNo espaço, no sistema de coordenadas \\(xyz\\), desenhe o conjunto solução da equação \\(x+y=2\\).\n\n\n\n\n\n\n\n\n\n\nComo \\(z\\) é variável livre, \\(x+y=2\\) é um plano paralelo ao eixo \\(z\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-ideia",
+    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-ideia",
+    "title": "Retas e planos",
+    "section": "A reta que passa por dois pontos — ideia",
+    "text": "A reta que passa por dois pontos — ideia\nSejam \\(P_0=(x_0,y_0,z_0)\\) e \\(P_1=(x_1,y_1,z_1)\\) dois pontos no espaço. Vamos determinar a equação dos pontos \\(P=(x,y,z)\\) que pertencem à reta \\(\\overleftrightarrow{P_0P_1}\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-paralelismo",
+    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-paralelismo",
+    "title": "Retas e planos",
+    "section": "A reta que passa por dois pontos — paralelismo",
+    "text": "A reta que passa por dois pontos — paralelismo\n\n\n\n\n\n\\(P\\) pertence à reta \\(r\\) se os vetores \\(\\overrightarrow{P_0P}\\) e \\(\\overrightarrow{P_0P_1}\\) são paralelos.\nOu seja, se estes vetores são múltiplos escalares: \\(\\overrightarrow{P_0P} = t\\overrightarrow{P_0P_1}\\) para algum \\(t\\in\\mathbb{R}\\).\nIsto é, \\(P - P_0 = t\\overrightarrow{P_0P_1}\\), ou ainda\n\\[P = P_0  + t\\overrightarrow{P_0P_1}.\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-notação-vetorial",
+    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-notação-vetorial",
+    "title": "Retas e planos",
+    "section": "A reta que passa por dois pontos — notação vetorial",
+    "text": "A reta que passa por dois pontos — notação vetorial\n\n\n\n\n\nSe \\(V=\\overrightarrow{P_0P_1}\\), então \\(P= P_0 + tV\\) (movimento retilíneo uniforme).\nEsta é a equação paramétrica da reta \\(r\\).\nNeste caso, \\(V\\) é um vetor diretor de \\(r\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#equação-paramétrica-da-reta-forma-coordenada",
+    "href": "06_retas_e_planos.html#equação-paramétrica-da-reta-forma-coordenada",
+    "title": "Retas e planos",
+    "section": "Equação paramétrica da reta — forma coordenada",
+    "text": "Equação paramétrica da reta — forma coordenada\nSe \\(P=(x,y,z)\\), \\(P_0=(x_0,y_0,z_0)\\) e \\(V=(a,b,c)\\), então\n\\[\\boxed{P= P_0 + tV}\\]\nsignifica que\n\\[(x,y,z) = (x_0,y_0,z_0) + t(a,b,c)\\]\n\\[\\begin{cases}\nx = x_0 + ta\\\\\ny = y_0 + tb\\\\\nz = z_0 + tc\n\\end{cases}\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#equação-paramétrica-observações",
+    "href": "06_retas_e_planos.html#equação-paramétrica-observações",
+    "title": "Retas e planos",
+    "section": "Equação paramétrica — observações",
+    "text": "Equação paramétrica — observações\n\\[\\boxed{P= P_0 + tV}\\]\n\\[\\begin{cases}\nx = x_0 + ta\\\\\ny = y_0 + tb\\\\\nz = z_0 + tc\n\\end{cases}\\]\nA equação paramétrica de uma reta não é única.\n\nPodemos trocar o ponto inicial \\(P_0\\) por qualquer outro ponto da reta.\nPodemos trocar o vetor diretor por qualquer múltiplo escalar.\nSempre \\(V\\neq \\vec{0}\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#importante-reta-como-régua-numérica",
+    "href": "06_retas_e_planos.html#importante-reta-como-régua-numérica",
+    "title": "Retas e planos",
+    "section": "Importante — reta como régua numérica",
+    "text": "Importante — reta como régua numérica\nA equação paramétrica de uma reta \\(r\\) faz uma associação biunívoca entre um ponto \\(P\\) da reta e um número real \\(t\\).\n\\[\\boxed{P= P_0 + tV}\\]\n\n\n\n\n\nCom essa equação, podemos ver a reta \\(r\\) como uma régua graduada, uma reta numérica, ou um eixo numérico orientado. O vetor diretor \\(V\\) dá a direção e a unidade de medida dessa reta numérica."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exercícios",
+    "href": "06_retas_e_planos.html#exercícios",
+    "title": "Retas e planos",
+    "section": "Exercícios",
+    "text": "Exercícios\n\nEscreva uma equação paramétrica para a reta que passa por \\(A=(-1,3,4)\\) e que é paralela ao vetor \\(V=(1,-2,0)\\).\nEscreva uma equação paramétrica para a reta que passa por \\(M=(5,0,-3)\\) e por \\(N=(3,8,7)\\).\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\((x,y,z) = (1,-1,1) + t(3,1,2)\\). Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exercício-3-solução",
+    "href": "06_retas_e_planos.html#exercício-3-solução",
+    "title": "Retas e planos",
+    "section": "Exercício 3 – solução",
+    "text": "Exercício 3 – solução\n\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\((x,y,z) = (1,-1,1) + t(3,1,2)\\). Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\).\n\nO vetor diretor de \\(r\\) é \\(V=(3,1,2)\\). Procuramos um ponto \\(Q\\in r\\) tal que \\(\\vec{PQ}\\perp V\\); ou seja, \\(\\vec{PQ}\\cdot v=0\\). Tem-se \\(Q=(1,-1,1)+t(3,1,2)\\): \\[\\begin{align*}\n(P-(1,-1,1)+t(3,1,2))\\cdot v&=0\\\\\n&⇒ [(4,-2,11)-(1+3t,\\,-1+t,\\,1+2t)]\\cdot(3,1,2)=0\\\\\n&⇒ (3-3t,\\,-1-t,\\,10-2t)\\cdot(3,1,2)=28-14t=0\\\\\n&⇒ t=2.\n\\end{align*}\\]\nLogo \\(Q=(7,1,5)\\) e um vetor diretor de \\(s\\) é \\(QP=(3,3,-6)=3(1,1,-2)\\). Assim, a reta procurada é \\[\n(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,\n\\] com \\(v·(1,1,-2)=3+1-4=0\\) (perpendicular) e concorrente em \\(Q\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
+    "href": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
+    "title": "Retas e planos",
+    "section": "Posição relativa entre duas retas no espaço",
+    "text": "Posição relativa entre duas retas no espaço\n\n\n\n\n\n\nRetas paralelas\n\n\n\n\n\n\n\nRetas concorrentes\n\n\n\n\n\n\n\nRetas reversas\n\n\n\n\n\nRetas paralelas e concorrentes são coplanares.\nRetas reversas sempre moram em planos paralelos distintos \\(\\alpha\\) e \\(\\beta\\) tais que \\(s\\subset\\alpha\\) e \\(r\\subset\\beta\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#retas-reversas-construção-auxiliar",
+    "href": "06_retas_e_planos.html#retas-reversas-construção-auxiliar",
+    "title": "Retas e planos",
+    "section": "Retas reversas — construção auxiliar",
+    "text": "Retas reversas — construção auxiliar\nSempre existe uma reta \\(t\\) perpendicular comum a \\(r\\) e a \\(s\\) interceptando \\(r\\) e \\(s\\).\n\n\n\n\n\nObserve a reta \\(r'\\) paralela a \\(r\\) traçada pelo ponto \\(s \\cap t\\) e também observe a reta \\(s'\\) paralela a \\(s\\) traçada por \\(r \\cap t\\).\n\nO plano \\(\\alpha\\) é o plano que contém as retas concorrentes \\(s\\) e \\(r'\\).\nO plano \\(\\beta\\) é o plano que contém as retas concorrentes \\(r\\) e \\(s'\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#distância-entre-retas-reversas",
+    "href": "06_retas_e_planos.html#distância-entre-retas-reversas",
+    "title": "Retas e planos",
+    "section": "Distância entre retas reversas",
+    "text": "Distância entre retas reversas\n\n\n\n\n\nSejam \\(r\\) e \\(s\\) retas reversas, seja \\(t\\) a reta perpendicular comum e sejam \\(P = r \\cap t\\) e \\(Q = s \\cap t\\). Então\n\\[\\operatorname{dist}(r,s) = \\operatorname{dist}(P,Q)\\]\nEsta é a menor distância entre um ponto de \\(r\\) e um ponto de \\(s\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-retas-paralelas",
+    "href": "06_retas_e_planos.html#exemplo-retas-paralelas",
+    "title": "Retas e planos",
+    "section": "Exemplo — retas paralelas",
+    "text": "Exemplo — retas paralelas\n\nEncontre a equação da reta \\(r\\) que passa pelos pontos \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s\\) a reta \\((x,y,z) = (1,2,3)+ t(1,2,1)\\). Verifique se as retas \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nCalcule a distância entre as retas \\(r\\) e \\(s\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-solução",
+    "href": "06_retas_e_planos.html#exemplo-solução",
+    "title": "Retas e planos",
+    "section": "Exemplo – solução",
+    "text": "Exemplo – solução\n\nUm vetor diretor de \\(r\\) é \\(\\vec{AB} = (-2,-4,-2) = -2(1,2,1)\\). Assim, uma equação paramétrica de \\(r\\) é \\((x,y,z) = (3,5,3) + t(1,2,1), t ∈ ℝ\\).\nAs retas têm vetores diretores paralelos, logo são paralelas. Para ver que não coincidem, note que o ponto \\((1,2,3)\\) de \\(s\\) não satisfaz a equação de \\(r\\): \\[\n3 + t = 1 ⇒ t = -2, \\textrm{ mas } 5 + 2(-2) = 1 ≠ 2.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-solução-1",
+    "href": "06_retas_e_planos.html#exemplo-solução-1",
+    "title": "Retas e planos",
+    "section": "Exemplo – solução",
+    "text": "Exemplo – solução\n\nDistância entre duas retas paralelas. Seja \\(A=(3,5,3)\\in r\\) e \\(C=(1,2,3)\\in s\\). O vetor diretor das duas retas é \\(V=(1,2,1)\\). Temos por Teorema de Pitágoras que \\[\n\\|\\vec{AC}\\|^2=\\operatorname{dist}(r,s)^2+\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n\\]\n\nTemos que\n\n\\(\\vec{AC}=(-2,-3,0)\\) e \\(\\|\\vec{AC}\\|^2=13\\);\n\\(\\operatorname{proj}_V(\\vec{AC})=\\frac {\\left&lt;V,\\vec{AC}\\right&gt;}{\\|V\\|^2}V=-8/6V=(-4/3,-8/3,-4/3)\n\\Rightarrow \\|\\operatorname{proj}_V(\\vec{AC})\\|^2=32/3\\)\n\nLogo \\[\n\\operatorname{dist}(r,s)^2=\\|\\vec{AC}\\|^2-\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n=\\frac{7}3 \\textrm{ e } \\operatorname{dist}(r,s)=\\frac{\\sqrt 7}{\\sqrt 3}.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-retas-concorrentes",
+    "href": "06_retas_e_planos.html#exemplo-retas-concorrentes",
+    "title": "Retas e planos",
+    "section": "Exemplo — retas concorrentes",
+    "text": "Exemplo — retas concorrentes\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(5,4,1)\\) e \\(B=(7,5,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(P=(0,1,0)\\) e \\(Q=(-3,-2,3)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nMostre que \\(r\\) e \\(s\\) são retas concorrentes calculando o ponto \\(P = r \\cap s\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-retas-reversas",
+    "href": "06_retas_e_planos.html#exemplo-retas-reversas",
+    "title": "Retas e planos",
+    "section": "Exemplo — retas reversas",
+    "text": "Exemplo — retas reversas\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(4,-2,1)\\) e \\(B=(5,-3,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nVerifique se as retas \\(r\\) e \\(s\\) são paralelas, concorrentes ou reversas.\nDetermine a distância entre \\(r\\) e \\(s\\) exibindo pontos \\(P\\in r\\) e \\(Q\\in s\\) tais que \\(\\operatorname{dist}(r,s) = \\operatorname{dist}(P,Q)\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#retas-reversas-solução",
+    "href": "06_retas_e_planos.html#retas-reversas-solução",
+    "title": "Retas e planos",
+    "section": "Retas reversas – solução",
+    "text": "Retas reversas – solução\nSejam \\(A=(4,-2,1)\\), \\(B=(5,-3,2)\\), \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nEquações paramétricas:\n\n\n\\(r: V_r = B-A = (1,-1,1) ⇒ (x,y,z) = A + t(1,-1,1)\\).\n\\(s: V_s = D-C = (-8,-16,4)=-4(2,4,-1) ⇒ (x,y,z) = C + u(2,4,-1)\\).\n\n\nPosição relativa: \\(V_r \\not ∥ V_s\\), logo não são paralelas. Tentando \\(r ∩ s\\): \\[\\begin{align*}\n4+t &= 1+2u\\\\\n-2-t &= 7+4u \\\\\n1+t &= 4-u\n\\end{align*}\\] Das duas primeiras, \\(u=-1\\) e \\(t=-5\\); na terceira dá \\(1-5 ≠ 5\\). Logo \\(r\\) e \\(s\\) são reversas."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#distância-entre-retas-reversas-1",
+    "href": "06_retas_e_planos.html#distância-entre-retas-reversas-1",
+    "title": "Retas e planos",
+    "section": "Distância entre retas reversas",
+    "text": "Distância entre retas reversas\n\nDistância e pontos de mínima distância: Tomando o segmento \\(PQ\\) perpendicular a \\(r\\) e \\(s\\), com \\(P∈r\\) e \\(Q∈s\\): \\[\\begin{align*}\n(A + tV_r - (C + uV_s))·V_r &= 0\\\\\n(A + tV_r - (C + uV_s))·V_s &= 0\n\\end{align*}\\]\n\nCom \\(A-C=(3,-9,-3)\\), \\(\\left&lt;V_r,V_r\\right&gt;=3\\), \\(\\left&lt;V_s,V_s\\right&gt;=21\\), \\(\\left&lt;V_r,V_s\\right&gt;=-3\\), \\(\\left&lt;V_r,(A-C)\\right&gt;=9\\), \\(\\left&lt;V_s,(A-C)\\right&gt;=-27\\), obtém-se \\(t+u = -3\\) e \\(t+7u = -9\\) ⇒ \\(u=-1, t=-2\\).\nLogo, \\(P = A + tV_r = (2,0,-1)\\), \\(Q = C + uV_s = (-1,3,5)\\), \\(PQ = Q-P = (-3,3,6) ⟂ V_r, V_s\\).\nDistância: \\(‖PQ‖ = \\sqrt{9+9+36} = 3\\sqrt 6\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#planos-no-espaço",
+    "href": "06_retas_e_planos.html#planos-no-espaço",
+    "title": "Retas e planos",
+    "section": "Planos no Espaço",
+    "text": "Planos no Espaço\nUm plano pode ser dado de várias maneiras:\n\nPor 3 pontos não colineares passa um único plano.\nPor uma reta e por um ponto fora da reta.\nDadas duas retas concorrentes.\nDadas duas retas paralelas.\nDado um ponto e uma reta, existe um único plano ortogonal à reta que passa por este ponto.\n\nAlgumas destas situações podem ser caracterizadas pelo produto escalar; outras, pelo produto vetorial.\nVamos começar discutindo a última situação."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal",
+    "href": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal",
+    "title": "Retas e planos",
+    "section": "Planos, dado um ponto e um vetor normal",
+    "text": "Planos, dado um ponto e um vetor normal\nSeja dado um ponto \\(P_0=(x_0,y_0,z_0)\\) e um vetor \\(N\\neq\\vec{0}\\).\nExiste um único plano \\(\\alpha\\) que passa por \\(P_0\\) e que é ortogonal ao vetor \\(N\\).\n\n\n\n\n\nNesta situação \\(N\\) é um vetor normal ao plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal-cont.",
+    "href": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal-cont.",
+    "title": "Retas e planos",
+    "section": "Planos, dado um ponto e um vetor normal (cont.)",
+    "text": "Planos, dado um ponto e um vetor normal (cont.)\n\n\n\n\n\nUm ponto \\(P=(x,y,z)\\) pertence a este plano se os vetores \\(N=(a,b,c)\\) e \\(\\overrightarrow{P_0P}=(x-x_0,\\,y-y_0,\\,z-z_0)\\) são perpendiculares: \\[\n\\langle N,\\overrightarrow{P_0P}\\rangle = 0 \\;\\Longleftrightarrow\\; a(x-x_0)+b(y-y_0)+c(z-z_0)=0.\n\\]\nEquivalente a \\[\nax+by+cz = a x_0 + b y_0 + c z_0.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#equação-geral-do-plano",
+    "href": "06_retas_e_planos.html#equação-geral-do-plano",
+    "title": "Retas e planos",
+    "section": "Equação geral do plano",
+    "text": "Equação geral do plano\n\n\n\n\n\nDo item anterior, o lado direito é uma constante \\(d=a x_0 + b y_0 + c z_0\\). Assim, um ponto \\(P=(x,y,z)\\) pertence ao plano se e somente se\n\\[\\boxed{\\;ax + by + cz = d\\;}\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-plano-por-ponto-e-normal",
+    "href": "06_retas_e_planos.html#exemplo-plano-por-ponto-e-normal",
+    "title": "Retas e planos",
+    "section": "Exemplo: plano por ponto e normal",
+    "text": "Exemplo: plano por ponto e normal\nDetermine a equação geral do plano que passa por \\(P_0=(2,3,-4)\\) e é ortogonal ao vetor \\(N=(5,-2,3)\\).\nSolução. A equação geral do plano é da forma \\(ax+by+cz=d\\), em que os coeficientes \\(a\\), \\(b\\) e \\(c\\) são as coordenadas de um vetor normal ao plano. Neste caso, a equação tem a forma \\(5x-2y+3z=d\\). Substituindo o ponto \\(P_0=(2,3,-4)\\), obtemos \\(d\\):\n\\[5\\cdot 2 - 2\\cdot 3 + 3\\cdot (-4) = d \\;\\Rightarrow\\; d=-8.\\]\nLogo, a equação do plano é \\(\\boxed{\\;5x-2y+3z=-8\\;}.\\)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#observações-sobre-a-equação-geral-do-plano",
+    "href": "06_retas_e_planos.html#observações-sobre-a-equação-geral-do-plano",
+    "title": "Retas e planos",
+    "section": "Observações sobre a equação geral do plano",
+    "text": "Observações sobre a equação geral do plano\n\\[\\boxed{\\;ax+by+cz=d\\;}\\]\n\nPara escrever a equação geral de um plano, precisamos de um vetor \\(N=(a,b,c)\\) ortogonal ao plano (vetor normal), com \\(N\\neq\\vec{0}\\).\nEm muitas situações, o vetor normal será calculado pelo produto vetorial.\nA equação geral do plano não é única: todo múltiplo não nulo de um vetor normal também é vetor normal. Multiplicar a equação \\(ax+by+cz=d\\) por um número não nulo não altera o conjunto solução, apenas muda o vetor normal."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#plano-ponto-e-vetor-normal",
+    "href": "06_retas_e_planos.html#plano-ponto-e-vetor-normal",
+    "title": "Retas e planos",
+    "section": "Plano: ponto e vetor normal",
+    "text": "Plano: ponto e vetor normal\n\n\n\n\n\nSe \\(P_0=(x_0,y_0,z_0)\\) está em um plano e \\(N=(a,b,c)\\neq\\vec{0}\\) é normal ao plano, então para \\(P=(x,y,z)\\) no plano: \\[\n\\langle N,\\overrightarrow{P_0P}\\rangle=0 \\;\\Longleftrightarrow\\; a(x-x_0)+b(y-y_0)+c(z-z_0)=0.\n\\] Equivalente a \\(ax+by+cz = a x_0 + b y_0 + c z_0 = d\\).\nEquação geral do plano: \\(\\boxed{\\;ax+by+cz=d\\;}.\\)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#produto-vetorial-em-mathbbr3",
+    "href": "06_retas_e_planos.html#produto-vetorial-em-mathbbr3",
+    "title": "Retas e planos",
+    "section": "Produto Vetorial em \\(\\mathbb{R}^3\\)",
+    "text": "Produto Vetorial em \\(\\mathbb{R}^3\\)\n\n\n\n\n\nO produto vetorial \\(V\\times W\\) é caracterizado por:\n\nNorma: \\(\\|V\\times W\\|=\\|V\\|\\,\\|W\\|\\,\\operatorname{sen}(\\theta)\\).\nDireção: \\(V\\times W\\) é perpendicular ao plano de \\(V\\) e \\(W\\).\nSentido: \\(V\\), \\(W\\) e \\(V\\times W\\) satisfazem a regra da mão direita."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#produto-vetorial-em-coordenadas",
+    "href": "06_retas_e_planos.html#produto-vetorial-em-coordenadas",
+    "title": "Retas e planos",
+    "section": "Produto vetorial em coordenadas",
+    "text": "Produto vetorial em coordenadas\nSe\n\\[\\begin{aligned}\nV &= (v_1,v_2,v_3) = v_1\\,\\vec{i}+v_2\\,\\vec{j}+v_3\\,\\vec{k},\\\\\nW &= (w_1,w_2,w_3) = w_1\\,\\vec{i}+w_2\\,\\vec{j}+w_3\\,\\vec{k},\n\\end{aligned}\\]\nentão, usando as propriedades do produto vetorial,\n\\[V\\times W=\\big(\\,v_2w_3-v_3w_2\\,,\\; v_3w_1-v_1w_3\\,,\\; v_1w_2-v_2w_1\\,\\big).\\]\nÉ mais fácil memorizar pelo determinante simbólico\n\\[\nV\\times W=\\det\\!\\begin{bmatrix}\n\\vec{i} & \\vec{j} & \\vec{k}\\\\\nv_1 & v_2 & v_3\\\\\nw_1 & w_2 & w_3\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por reta e ponto fora",
+    "text": "Aplicação: plano por reta e ponto fora\nExemplo 1. Determine a equação do plano que passa por \\(A=(-1,2,1)\\) e contém a reta\n\\[(x,y,z)=(2,1,3)+t(-1,3,1).\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-ideia",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-ideia",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por reta e ponto fora (ideia)",
+    "text": "Aplicação: plano por reta e ponto fora (ideia)\nObservações importantes:\n\nPara calcular a equação \\(ax+by+cz=d\\) precisamos de um vetor normal \\(N=(a,b,c)\\) e de um ponto \\(P\\) no plano.\nSe \\(V\\) e \\(W\\) são vetores paralelos ao plano, então \\(N=V\\times W\\) é um vetor normal do plano.\nPara achar \\(N\\), basta identificar quaisquer dois vetores paralelos ao plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-cálculo",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-cálculo",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por reta e ponto fora (cálculo)",
+    "text": "Aplicação: plano por reta e ponto fora (cálculo)\nNo exemplo, \\(A=(-1,2,1)\\) e \\(r:(x,y,z)=(2,1,3)+t(-1,3,1)\\).\n\n\n\n\n\nO ponto \\(B=(2,1,3)\\) pertence a \\(r\\) e os vetores \\(\\overrightarrow{BA}=(-3,1,-2)\\) e \\(V_r=(-1,3,1)\\) são paralelos ao plano. Então\n\\[\nN=\\overrightarrow{AB}\\times V_r=\n\\begin{vmatrix}\n\\vec{i}&\\vec{j}&\\vec{k}\\\\\n-3&1&-2\\\\\n-1&3&1\n\\end{vmatrix}\n=(7,5,-8).\n\\]\nLogo, o plano tem equação \\(7x+5y-8z=d\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-fechamento",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-fechamento",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por reta e ponto fora (fechamento)",
+    "text": "Aplicação: plano por reta e ponto fora (fechamento)\nComo queremos que \\(r\\) esteja contida no plano, todos os pontos de \\(r\\) devem satisfazer a equação do plano. Um ponto genérico de \\(r\\) é dado por\n\\[x=2-t,\\quad y=1+3t,\\quad z=3+t.\\]\nSubstituindo em \\(7x+5y-8z=d\\):\n\\[7(2-t)+5(1+3t)-8(3+t)=d\\;\\Rightarrow\\; d=-5.\\]\nPortanto, o plano é \\(\\boxed{\\;7x+5y-8z=-5\\;}.\\)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-do-exemplo-anterior",
+    "href": "06_retas_e_planos.html#aplicação-plano-do-exemplo-anterior",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano do exemplo anterior",
+    "text": "Aplicação: plano do exemplo anterior\nExemplo 4. Determine a equação geral do plano que contém\n\\[A=(2,3,3),\\quad B=(4,1,3),\\quad C=(2,5,1),\\quad D=(3,3,2).\\]\nUm vetor normal pode ser\n\\[N=\\overrightarrow{AB}\\times\\overrightarrow{AC}=\\begin{vmatrix}\n\\vec{i}&\\vec{j}&\\vec{k}\\\\\n2&-2&0\\\\\n0&2&-2\n\\end{vmatrix}=(4,4,4).\\]\nLogo, a equação é \\(4x+4y+4z=d\\). Substituindo \\(B=(4,1,3)\\), \\(d=16+4+12=32\\), ou seja, \\(4x+4y+4z=32\\), que simplifica para \\(\\boxed{x+y+z=8}\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-dado-por-3-pontos",
+    "href": "06_retas_e_planos.html#aplicação-plano-dado-por-3-pontos",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano dado por 3 pontos",
+    "text": "Aplicação: plano dado por 3 pontos\nExemplo 5. Determine a equação geral do plano que contém\n\\[A=(1,1,1),\\quad B=(-2,3,3),\\quad C=(2,3,1).\\]\nUm ponto \\(P=(x,y,z)\\) pertence ao plano se os vetores são coplanares:\n\\[\\overrightarrow{AP}=(x-1,y-1,z-1),\\quad \\overrightarrow{AB}=(-3,2,2),\\quad \\overrightarrow{AC}=(1,2,0).\\]\nDaí,\n\\[\\det\\!\\begin{bmatrix}\nx-1&y-1&z-1\\\\\n-3&2&2\\\\\n1&2&0\n\\end{bmatrix}=0.\\]\nExpandindo, obtém-se \\(\\boxed{\\;2x-y+4z=5\\;}.\\)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-duas-retas-concorrentes",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-duas-retas-concorrentes",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por duas retas concorrentes",
+    "text": "Aplicação: plano por duas retas concorrentes\nExemplo 6. Verifique se as retas são paralelas, concorrentes ou reversas. Se possível, determine o plano que contém as duas retas.\n\\[\\begin{cases}\nx=3+t\\\\\ny=3+2t\\\\\nz=4+t\n\\end{cases}\n\\qquad\\qquad\n\\begin{cases}\nx=-1+2s\\\\\ny=-2+s\\\\\nz=3-s\n\\end{cases}\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-duas-retas-paralelas",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-duas-retas-paralelas",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por duas retas paralelas",
+    "text": "Aplicação: plano por duas retas paralelas\nExemplo 7.\n\nEncontre a equação paramétrica da reta \\(r\\) que passa por \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s:(x,y,z)=(1,2,3)+t(1,2,1)\\). Verifique se \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nAche, se possível, uma equação geral do plano que contém as retas \\(r\\) e \\(s\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#lista-de-exercícios-5-estudo-de-pontos-retas-e-planos",
+    "href": "06_retas_e_planos.html#lista-de-exercícios-5-estudo-de-pontos-retas-e-planos",
+    "title": "Retas e planos",
+    "section": "Lista de exercícios 5: estudo de pontos, retas e planos",
+    "text": "Lista de exercícios 5: estudo de pontos, retas e planos\n\nNesta aula serão discutidas dúvidas dos exercícios da Lista 8, sobre posições relativas de retas e planos e sobre o cálculo de ângulos e distâncias.\nVai aproveitar mais quem já estudou e tentou resolver esses exercícios.\nNosso foco não é memorizar e aplicar fórmulas. Em cada caso, devemos entender o problema e construir elementos que permitam a sua solução.\n\nTarefa de casa importante:\n\nPasse a limpo todas as soluções.\nFaça ilustrações de todas as situações."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#posições-relativas-de-dois-objetos-ponto-reta-plano",
+    "href": "06_retas_e_planos.html#posições-relativas-de-dois-objetos-ponto-reta-plano",
+    "title": "Retas e planos",
+    "section": "Posições relativas de dois objetos (ponto, reta, plano)",
+    "text": "Posições relativas de dois objetos (ponto, reta, plano)\n\nEx 1. Ponto - Ponto\nEx 2. Ponto - Reta\nEx 3. Ponto - Plano\n\nReta - Reta:\n\nEx 4. Paralelas\nEx 5. Concorrentes\nEx 6. Reversas\n\nReta - Plano:\n\nEx 7. Reta fura o plano num ponto\nEx 8. Reta paralela ao plano\nEx 9. Reta contida no plano\n\nPlano - Plano:\n\nEx 10. Paralelos\nEx 11. Concorrentes"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
+    "href": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
+    "title": "Retas e planos",
+    "section": "Exemplo 1: ponto e ponto",
+    "text": "Exemplo 1: ponto e ponto\nConsidere os pontos \\(A=(-1,3,2)\\) e \\(B=(2,1,6)\\).\n\n\nDetermine a equação paramétrica da reta \\(\\overleftrightarrow{AB}\\).\n\n\nCalcule o ponto médio do segmento \\(AB\\).\n\n\nCalcule \\(\\mathrm{dist}(A,B)\\).\n\n\nDetermine o ponto simétrico \\(A'\\) de \\(A\\) em relação ao ponto \\(B\\).\n\n\nDetermine o ponto simétrico \\(B'\\) de \\(B\\) em relação ao ponto \\(A\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
+    "href": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
+    "title": "Retas e planos",
+    "section": "Exemplo 2: ponto e reta",
+    "text": "Exemplo 2: ponto e reta\nConsidere a reta \\(r\\) de equação paramétrica \\((x,y,z) = (-7,4,9) + t(-2,1,2)\\) e o ponto \\(A=(7,4,5)\\).\n\n\nO ponto \\(A\\) pertence a reta \\(r\\)?\n\n\nDetermine a equação do plano que contém \\(r\\) e \\(A\\).\n\n\nDetermine a reta perpendicular a \\(r\\) que passa por \\(A\\).\n\n\nCalcule \\(\\mathrm{dist}(A,r)\\).\n\n\nDetermine o ponto simétrico de \\(A\\) em relação à reta \\(r\\).\n\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em uma reta."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
+    "href": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 3: ponto e plano",
+    "text": "Exemplo 3: ponto e plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-2y+3z=4\\) e o ponto \\(A=(2,8,-8)\\).\n\n\nO ponto \\(A\\) pertence ao plano \\(\\alpha\\)?\n\n\nDetermine a equação paramétrica da reta que passa por \\(A\\) e é perpendicular ao plano \\(\\alpha\\).\n\n\nCalcule \\(\\mathrm{dist}(A,\\alpha)\\).\n\n\nDetermine o ponto simétrico de \\(A\\) em relação ao plano \\(\\alpha\\).\n\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em um plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
+    "href": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
+    "title": "Retas e planos",
+    "section": "Exemplo 4: duas retas paralelas",
+    "text": "Exemplo 4: duas retas paralelas\nConsidere as retas paralelas\n\\[r:\\ (x,y,z) = (-6,3,-2) + t(3,-1,2)\\]\n\\[s:\\ (x,y,z) = (-3,30,-14) + s(3,-1,2)\\]\n\n\nDetermine a equação do plano \\(\\alpha\\) que contém \\(r\\) e \\(s\\).\n\n\nDê um exemplo de uma reta perpendicular a \\(r\\) e a \\(s\\).\n\n\nCalcule \\(\\mathrm{dist}(r,s)\\).\n\n\nDetermine uma reta contida em \\(\\alpha\\) e que está equidistante de \\(r\\) e de \\(s\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
+    "href": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
+    "title": "Retas e planos",
+    "section": "Exemplo 5: duas retas concorrentes",
+    "text": "Exemplo 5: duas retas concorrentes\nConsidere as retas\n\\[r:\\ (x,y,z) = (7,2,-2) + t(-3,0,1)\\] \\[s:\\ (x,y,z) = (-1,1,2) + s(2,1,-2)\\]\n\n\nMostre que \\(r\\) e \\(s\\) são concorrentes calculando o ponto \\(P= r \\cap s\\).\n\n\nDetermine a equação geral do plano que contém \\(r\\) e \\(s\\).\n\n\nCalcule o ângulo de \\(r\\) e \\(s\\).\n\n\nObs: neste exemplo aprendemos a calcular o ângulo entre duas retas."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
+    "href": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: duas retas reversas",
+    "text": "Exemplo 6: duas retas reversas\nConsidere as retas\n\\[r:\\ (x,y,z) = (-1,-1,4) + t(1,1,-1)\\] \\[s:\\ (x,y,z) = (1,3,7) + s(-2,0,1)\\]\n\n\nMostre que \\(r\\) e \\(s\\) são retas reversas.\n\n\nDetermine a equação da reta perpendicular e concorrente com \\(r\\) e com \\(s\\).\n\n\nCalcule \\(\\mathrm{dist}(r,s)\\) e o ângulo entre \\(r\\) e \\(s\\).\n\n\nDetermine o plano \\(\\alpha\\) que contém \\(r\\) e é paralelo a \\(s\\).\n\n\nDetermine o plano \\(\\beta\\) que contém \\(s\\) e é paralelo a \\(r\\).\n\n\nDetermine o plano \\(\\gamma\\) que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\n\n\nDetermine o plano \\(\\omega\\) que contém \\(s\\) e é perpendicular a \\(\\beta\\).\n\n\nDetermine a reta \\(\\gamma \\cap \\omega\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações",
+    "href": "06_retas_e_planos.html#exemplo-6-ilustrações",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: ilustrações",
+    "text": "Exemplo 6: ilustrações"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.",
+    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: ilustrações (cont.)",
+    "text": "Exemplo 6: ilustrações (cont.)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-1",
+    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-1",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: ilustrações (cont.)",
+    "text": "Exemplo 6: ilustrações (cont.)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-2",
+    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-2",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: ilustrações (cont.)",
+    "text": "Exemplo 6: ilustrações (cont.)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-3",
+    "href": "06_retas_e_planos.html#exemplo-6-ilustrações-cont.-3",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: ilustrações (cont.)",
+    "text": "Exemplo 6: ilustrações (cont.)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
+    "href": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 7: reta furando um plano",
+    "text": "Exemplo 7: reta furando um plano\nConsidere o plano \\(\\alpha\\) de equação \\(2x+y-z=4\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,-4) + t(1,-1,2)\\).\n\n\nDetermine o ponto \\(P = r \\cap \\alpha\\).\n\n\nDetermine o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\n\n\nDetermine a reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\n\n\nCalcule o ângulo entre \\(r\\) e \\(\\alpha\\).\n\n\nDetermine a reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\).\n\n\nObs: neste exemplo aprendemos a calcular o ângulo entre uma reta e um plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
+    "href": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 8: reta paralela a um plano",
+    "text": "Exemplo 8: reta paralela a um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-y+z=1\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,1) + t(2,-1,-3)\\).\n\n\nMostre que a reta \\(r\\) é paralela ao plano \\(\\alpha\\).\n\n\nAche o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\n\n\nAche o plano que contém \\(r\\) e é paralelo a \\(\\alpha\\).\n\n\nDetermine a equação da reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\n\n\nCalcule \\(\\mathrm{dist}(r,\\alpha)\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
+    "href": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 9: reta contida em um plano",
+    "text": "Exemplo 9: reta contida em um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x+2y-z=3\\) e a reta \\(r\\) de equação \\((x,y,z) = (2,1,1) + t(2,1,4)\\).\n\n\nMostre que \\(r \\subset \\alpha\\).\n\n\nDetermine o plano que contém \\(r\\) e que é perpendicular a \\(\\alpha\\).\n\n\nDê um exemplo de uma reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
+    "href": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
+    "title": "Retas e planos",
+    "section": "Exemplo 10: planos paralelos",
+    "text": "Exemplo 10: planos paralelos\nConsidere os planos\n\\[\\alpha:\\ 2x-y+z=1\\] \\[\\beta:\\ 4x-2y+2z=5\\]\n\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) são planos paralelos.\n\n\nDetermine a reta perpendicular a \\(\\alpha\\) e a \\(\\beta\\) que passa pela origem.\n\n\nCalcule \\(\\mathrm{dist}(\\alpha,\\beta)\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
+    "href": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
+    "title": "Retas e planos",
+    "section": "Exemplo 11: planos concorrentes",
+    "text": "Exemplo 11: planos concorrentes\nConsidere os planos\n\\[\\alpha:\\ x-y+3z=1\\] \\[\\beta:\\ 2x-3y-z=2\\]\n\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) não são paralelos.\n\n\nDetermine a equação da reta \\(\\alpha \\cap \\beta\\).\n\n\nCalcule o ângulo entre \\(\\alpha\\) e \\(\\beta\\).\n\n\nDê um exemplo de um plano perpendicular a \\(\\alpha\\) e a \\(\\beta\\)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Geometria Analítica e Álgebra Linear",
+    "section": "",
+    "text": "Geometria Analítica e Álgebra Linear\n\nMatrizes \nSistemas lineares\nA inversa de uma matrix\nO determinante de uma matrix\nVetores\nRetas e planos"
+  },
+  {
+    "objectID": "01_matrizes.html#definição-de-uma-matriz",
+    "href": "01_matrizes.html#definição-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Definição de uma Matriz",
+    "text": "Definição de uma Matriz\n\nDefinition 1 Uma matriz \\(A\\), \\(m \\times n\\) (\\(m\\) por \\(n\\)), é uma tabela de \\(m \\cdot n\\) números dispostos em \\(m\\) linhas e \\(n\\) colunas:\n\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\ldots & a_{1n} \\\\\na_{21} & a_{22} & \\ldots & a_{2n} \\\\\n\\vdots &        & \\ldots & \\vdots \\\\\na_{m1} & a_{m2} & \\ldots & a_{mn}\n\\end{bmatrix}\n\\]\n\nA \\(i\\)-ésima linha de \\(A\\) é \\(\\begin{bmatrix}\na_{i1} & a_{i2} & \\ldots & a_{in}\n\\end{bmatrix}\\) A \\(j\\)-ésima coluna de \\(A\\) é \\(\\begin{bmatrix}\na_{1j} \\\\\na_{2j} \\\\\n\\vdots \\\\\na_{mj}\n\\end{bmatrix}\\).\nNós também usamos a notação \\(A = \\left(a_{ij}\\right)_{m \\times n}\\). Aqui, \\(a_{ij}\\) ou \\([A]_{ij}\\) é o elemento ou entrada na posição \\((i, j)\\) da matriz \\(A\\)."
+  },
+  {
+    "objectID": "01_matrizes.html#exemplos-de-matrizes",
+    "href": "01_matrizes.html#exemplos-de-matrizes",
+    "title": "Matrizes",
+    "section": "Exemplos de Matrizes",
+    "text": "Exemplos de Matrizes\nConsidere as seguintes matrizes:\n\\[\nA = \\begin{bmatrix}\n1/2 & 2/3 \\\\\n3 & 4/5\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3\n\\end{bmatrix}, \\quad\nC = \\begin{bmatrix}\n1 & 3 & 0 \\\\\n2 & 4 & -2\n\\end{bmatrix},\n\\quad D = \\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}, \\quad\nE = \\begin{bmatrix}\n4 \\\\\n5 \\\\\n6\n\\end{bmatrix}.\n\\]\n\nAs matrizes \\(A\\) e \\(B\\) são \\(2 \\times 2\\) (2 linhas e 2 colunas, matriz quadrada).\nA matriz \\(C\\) é \\(2 \\times 3\\) (2 linhas e 3 colunas).\nA matriz \\(D\\) é \\(1 \\times 3\\) (1 linha e 3 colunas, matriz linha, vetor linha).\nA matriz \\(E\\) é \\(3 \\times 1\\) (3 linhas e 1 coluna, matriz coluna, vetor coluna).\n\nDuas matrizes \\(A=(a_{ij})\\) a \\(B=(b_{ij})\\) são iguais, se elas\n\ntêm o mesmo tamanho e\n\\(a_{ij}=b_{ij}\\) para todo \\(i,j\\) (têm as mesmas entradas)"
+  },
+  {
+    "objectID": "01_matrizes.html#soma-de-matrizes",
+    "href": "01_matrizes.html#soma-de-matrizes",
+    "title": "Matrizes",
+    "section": "Soma de Matrizes",
+    "text": "Soma de Matrizes\nA soma de duas matrizes do mesmo tamanho, \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) e \\(B = \\left(b_{ij}\\right)_{m \\times n}\\), é definida como:\n\\[\nC = A + B\\quad \\mbox{onde}\\quad c_{ij} = a_{ij} + b_{ij}.\n\\]\nExemplo\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & -3 \\\\\n3 & 4 & 0\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 & 5 \\\\\n0 & 3 & -4\n\\end{bmatrix}.\n\\]\nA soma de \\(A\\) e \\(B\\) é:\n\\[\nC = A + B = \\begin{bmatrix}\n1 + (-2) & 2 + 1 & -3 + 5 \\\\\n3 + 0 & 4 + 3 & 0 + (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 3 & 2 \\\\\n3 & 7 & -4\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#matriz-nula",
+    "href": "01_matrizes.html#matriz-nula",
+    "title": "Matrizes",
+    "section": "Matriz Nula",
+    "text": "Matriz Nula\nA matriz nula (matriz zero) de tamanho \\(m \\times n\\), denotada por \\(0_{m\\times n}\\) (ou simplesmente \\(0\\) quando o tamanho é claro), é a matriz em que todas as entradas são zero:\n\\[\n0_{2\\times 3} = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix}.\n\\]\nPara qualquer matriz \\(A\\) de tamanho \\(m \\times n\\), vale \\(A + 0_{m\\times n} = A\\).\nExemplo\nSe \\[\nA = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix}, \\quad 0 = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix},\n\\] então \\[\nA + 0 = \\begin{bmatrix}\n1+0 & -2+0 & 3+0 \\\\\n0+0 & 4+0 & -1+0\n\\end{bmatrix} = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix} = A.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#múltiplo-escalar-de-uma-matriz",
+    "href": "01_matrizes.html#múltiplo-escalar-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Múltiplo Escalar de uma Matriz",
+    "text": "Múltiplo Escalar de uma Matriz\nO múltiplo escalar de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) por um escalar \\(\\alpha\\) é definido como:\n\n\\[\nB = \\alpha A\\quad \\mbox{onde}\\quad\nb_{ij} = \\alpha a_{ij}.\n\\]\n\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3 \\\\\n5 & -4\n\\end{bmatrix}.\n\\]\nO múltiplo de \\(A\\) pelo escalar \\(-3\\) é:\n\\[\n-3A = \\begin{bmatrix}\n(-3)\\cdot(-2) & (-3)\\cdot 1 \\\\\n(-3)\\cdot 0 & (-3)\\cdot 3 \\\\\n(-3)\\cdot 5 & (-3)\\cdot (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n6 & -3 \\\\\n0 & -9 \\\\\n-15 & 12\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#simétrica-de-uma-matriz",
+    "href": "01_matrizes.html#simétrica-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Simétrica de uma Matriz",
+    "text": "Simétrica de uma Matriz\nA simétrica/negativa de uma matriz \\(A\\) é definida por \\(-A = (-1)A\\). Em particular, se \\(A = (a_{ij})\\), então \\[\n-A = (-a_{ij}).\n\\]\nExemplo\nConsidere \\[\nA = \\begin{bmatrix}\n2 & -3 \\\\\n1 & 4\n\\end{bmatrix} \\quad \\Rightarrow \\quad\n-A = (-1)A = \\begin{bmatrix}\n-2 & 3 \\\\\n-1 & -4\n\\end{bmatrix}.\n\\]\nAlém disso, vale a propriedade \\(A + (-A) = 0\\). No exemplo acima, \\[\nA + (-A) = \\begin{bmatrix}\n2+(-2) & -3+3 \\\\\n1+(-1) & 4+(-4)\n\\end{bmatrix} = \\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix} = 0_{2\\times 2}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#transposta-de-uma-matriz",
+    "href": "01_matrizes.html#transposta-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Transposta de uma Matriz",
+    "text": "Transposta de uma Matriz\nA transposta de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) é a matriz \\(A^T = \\left(a_{ji}\\right)_{n \\times m}\\) obtida trocando as linhas por colunas.\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}.\n\\]\nA transposta de \\(A\\) é:\n\\[\nA^T = \\begin{bmatrix}\n1 & 4 \\\\\n2 & 5 \\\\\n3 & 6\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-entre-matrizes",
+    "href": "01_matrizes.html#multiplicação-entre-matrizes",
+    "title": "Matrizes",
+    "section": "Multiplicação entre Matrizes",
+    "text": "Multiplicação entre Matrizes\nO produto de duas matrizes \\(A = \\left(a_{ij}\\right)_{m \\times p}\\) e \\(B = \\left(b_{ij}\\right)_{p \\times n}\\) é definido como:\n\\[\nC = AB\n\\]\nonde a matriz resultante \\(C = \\left(c_{ij}\\right)_{m \\times n}\\) tem entradas dadas por:\n\n\\[\nc_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj} = \\sum_{k=1}^{p} a_{ik} b_{kj}.\n\\]\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1p}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\color{red}{a_{i1}} & \\color{red}{a_{i2}} & \\cdots & \\color{red}{a_{ip}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mp}\n\\end{bmatrix},\\quad\nB = \\begin{bmatrix}\nb_{11} & \\cdots & \\color{blue}{b_{1j}} & \\cdots & b_{1n}\\\\\nb_{21} & \\cdots & \\color{blue}{b_{2j}} & \\cdots & b_{2n}\\\\\n\\vdots & \\ddots & \\vdots & \\ddots & \\vdots \\\\\nb_{p1} & \\cdots & \\color{blue}{b_{pj}} & \\cdots & b_{pn}\n\\end{bmatrix},\\quad c_{ij} = \\sum\\limits_{k=1}^{p} \\color{red}{a_{ik}}\\,\\color{blue}{b_{kj}}\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#condições-para-multiplicação-de-matrizes",
+    "href": "01_matrizes.html#condições-para-multiplicação-de-matrizes",
+    "title": "Matrizes",
+    "section": "Condições para Multiplicação de Matrizes",
+    "text": "Condições para Multiplicação de Matrizes\n\nO número de colunas de \\(A\\) deve ser igual ao número de linhas de \\(B\\).\nA matriz resultante \\(C\\) terá dimensões \\(m \\times n\\)."
+  },
+  {
+    "objectID": "01_matrizes.html#exemplo-produto-de-matrizes",
+    "href": "01_matrizes.html#exemplo-produto-de-matrizes",
+    "title": "Matrizes",
+    "section": "Exemplo: Produto de Matrizes",
+    "text": "Exemplo: Produto de Matrizes\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}_{2\\times 3}, \\quad\nB = \\begin{bmatrix}\n7 & {8} \\\\\n9 & {10} \\\\\n11 & {12}\n\\end{bmatrix}_{3\\times 2}.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} c_{11} & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}_{2\\times 2}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{11}\\), multiplicamos a primeira linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{11} = \\color{red}{1}\\cdot \\color{blue}{7} + \\color{red}{2}\\cdot \\color{blue}{9} + \\color{red}{3}\\cdot \\color{blue}{11} = 7 + 18 + 33 = 58.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{12}\\), multiplicamos a primeira linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{12} = \\color{red}{1}\\cdot \\color{blue}{8} + \\color{red}{2}\\cdot \\color{blue}{10} + \\color{red}{3}\\cdot \\color{blue}{12} = 8 + 20 + 36 = 64.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{21}\\), multiplicamos a segunda linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{21} = \\color{red}{4}\\cdot \\color{blue}{7} + \\color{red}{5}\\cdot \\color{blue}{9} + \\color{red}{6}\\cdot \\color{blue}{11} = 28 + 45 + 66 = 139.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{22}\\), multiplicamos a segunda linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{22} = \\color{red}{4}\\cdot \\color{blue}{8} + \\color{red}{5}\\cdot \\color{blue}{10} + \\color{red}{6}\\cdot \\color{blue}{12} = 32 + 50 + 72 = 154.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & 154 \\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#matriz-identidade",
+    "href": "01_matrizes.html#matriz-identidade",
+    "title": "Matrizes",
+    "section": "Matriz Identidade",
+    "text": "Matriz Identidade\nA matriz identidade de ordem \\(n\\), denotada por \\(I_n\\) ou simplesmente por \\(I\\), é a matriz quadrada \\(n \\times n\\) com \\(1\\) na diagonal principal e \\(0\\) fora dela.\nExemplo\n\n\\[\nI_3 = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}.\n\\]\n\nPropriedade\nPara qualquer matriz \\(A\\) \\({m\\times n}\\), a matriz identidade satisfaz:\n\n\\[\nI_m\\,A = A \\quad\\text{e}\\quad A\\,I_n = A.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#exemplo-com-mn2",
+    "href": "01_matrizes.html#exemplo-com-mn2",
+    "title": "Matrizes",
+    "section": "Exemplo (com \\(m=n=2\\)):",
+    "text": "Exemplo (com \\(m=n=2\\)):\n\\[\nI_2 = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix},\\quad\nA = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]\n\\[\nI_2A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}\\!\n\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}\n= \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} = A,\\qquad\nA I_2 = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#propriedades-das-operações-com-matrizes",
+    "href": "01_matrizes.html#propriedades-das-operações-com-matrizes",
+    "title": "Matrizes",
+    "section": "Propriedades das Operações com Matrizes",
+    "text": "Propriedades das Operações com Matrizes"
+  },
+  {
+    "objectID": "01_matrizes.html#adição-de-matrizes",
+    "href": "01_matrizes.html#adição-de-matrizes",
+    "title": "Matrizes",
+    "section": "Adição de Matrizes",
+    "text": "Adição de Matrizes\n\nPropriedade Comutativa: \\(A + B = B + A\\)\nPropriedade Associativa: \\((A + B) + C = A + (B + C)\\)\nIdentidade Aditiva: \\(A + 0 = A\\), onde \\(0\\) é a matriz zero.\nInverso Aditivo: \\(A + (-A) = 0\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-escalar",
+    "href": "01_matrizes.html#multiplicação-escalar",
+    "title": "Matrizes",
+    "section": "Multiplicação Escalar",
+    "text": "Multiplicação Escalar\n\nPropriedade Distributiva: \\(\\alpha(A + B) = \\alpha A + \\alpha B\\)\nPropriedade Associativa: \\((\\alpha \\beta)A = \\alpha(\\beta A)\\)\nIdentidade Multiplicativa: \\(1 \\cdot A = A\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-de-matrizes",
+    "href": "01_matrizes.html#multiplicação-de-matrizes",
+    "title": "Matrizes",
+    "section": "Multiplicação de Matrizes",
+    "text": "Multiplicação de Matrizes\n\nPropriedade Associativa: \\((AB)C = A(BC)\\)\nPropriedade Distributiva: \\(A(B + C) = AB + AC\\) e \\((A + B)C = AC + BC\\)\nCompatibilidade da Multiplicação Escalar: \\(\\alpha(AB) = (\\alpha A)B = A(\\alpha B)\\)\nSe \\(A\\) é matriz \\(m\\times n\\), então \\(I_mA=AI_n=A\\)\nNão-Comutatividade: Em geral, \\(AB \\neq BA\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-não-comutativa",
+    "href": "01_matrizes.html#multiplicação-não-comutativa",
+    "title": "Matrizes",
+    "section": "Multiplicação Não Comutativa",
+    "text": "Multiplicação Não Comutativa\nVamos ilustrar que, em geral, \\(AB \\neq BA\\).\nConsidere \\[\nA = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}.\n\\]\nCalculando \\(AB\\) e \\(BA\\): \\[\nAB = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n         \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n     = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix},\\qquad\nBA = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n         \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n     = \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix}.\n\\]\nConclusão: \\(AB = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix} \\neq \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix} = BA\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#transposta",
+    "href": "01_matrizes.html#transposta",
+    "title": "Matrizes",
+    "section": "Transposta",
+    "text": "Transposta\n\nDupla transposição: \\((A^T)^T = A\\).\nTransposição da soma (mesmas dimensões): \\((A + B)^T = A^T + B^T\\).\nTransposição do produto por escalar: \\((\\alpha A)^T = \\alpha A^T\\).\nTransposição do produto (dimensões compatíveis): \\((AB)^T = B^T A^T\\).\nSimetria: \\(A\\) é simétrica se \\(A^T = A\\) e antissimétrica se \\(A^T = -A\\)."
+  },
+  {
+    "objectID": "01_matrizes.html#propriedade-transposta-do-produto",
+    "href": "01_matrizes.html#propriedade-transposta-do-produto",
+    "title": "Matrizes",
+    "section": "Propriedade: transposta do produto",
+    "text": "Propriedade: transposta do produto\nPara matrizes de tamanhos compatíveis, vale a identidade \\[\n(AB)^{T} = B^{T} A^{T}.\n\\]\nExemplo pequeno (matrizes \\(2\\times 2\\)): \\[\nA = \\begin{bmatrix}1 & 2\\\\ 3 & 0\\end{bmatrix},\\quad\nB = \\begin{bmatrix}0 & 4\\\\ 5 & -1\\end{bmatrix}.\n\\] Então \\[\nAB = \\begin{bmatrix}\n1\\cdot 0 + 2\\cdot 5 & 1\\cdot 4 + 2\\cdot(-1)\\\\\n3\\cdot 0 + 0\\cdot 5 & 3\\cdot 4 + 0\\cdot(-1)\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 2\\\\ 0 & 12\\end{bmatrix},\\quad\n(AB)^{T} = \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nPor outro lado, \\[\nB^{T} = \\begin{bmatrix}0 & 5\\\\ 4 & -1\\end{bmatrix},\\quad\nA^{T} = \\begin{bmatrix}1 & 3\\\\ 2 & 0\\end{bmatrix},\\quad\nB^{T}A^{T} = \\begin{bmatrix}\n0\\cdot 1 + 5\\cdot 2 & 0\\cdot 3 + 5\\cdot 0\\\\\n4\\cdot 1 + (-1)\\cdot 2 & 4\\cdot 3 + (-1)\\cdot 0\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nLogo, \\((AB)^{T} = B^{T}A^{T}\\neq A^TB^T\\)."
+  },
+  {
     "objectID": "05_vetores.html#introdução",
     "href": "05_vetores.html#introdução",
     "title": "Vetores",
@@ -390,152 +922,5 @@
     "title": "Vetores",
     "section": "Aplicação: pontos coplanares",
     "text": "Aplicação: pontos coplanares\nExemplo 3. Verifique se \\(A=(2,3,3)\\), \\(B=(4,1,3)\\), \\(C=(2,5,1)\\), \\(D=(3,3,2)\\) são coplanares.\n\\(\\overrightarrow{AB}=(2,-2,0)\\), \\(\\overrightarrow{AC}=(0,2,-2)\\), \\(\\overrightarrow{AD}=(1,0,-1)\\).\n\\[\\langle \\overrightarrow{AB}, \\overrightarrow{AC} \\times \\overrightarrow{AD}\\rangle =\n\\det\\begin{bmatrix}\n2 & -2 & 0 \\\\\n0 &  2 & -2 \\\\\n1 &  0 & -1\n\\end{bmatrix}=0.\\]\nLogo são coplanares."
-  },
-  {
-    "objectID": "ex1.html",
-    "href": "ex1.html",
-    "title": "Exercícios sobre Matrizes",
-    "section": "",
-    "text": "Exercício 1 Considere as seguintes matrizes \\[\n\\begin{gathered}\nA=\\begin{bmatrix}2 & 0 \\\\ 6 & 7\\end{bmatrix}, \\quad B=\\begin{bmatrix}0 & 4 \\\\ 2 & -8\\end{bmatrix},\\quad C=\\begin{bmatrix}-6 & 9 & -7 \\\\ 7 & -3 & -2\\end{bmatrix}, \\\\ D=\\begin{bmatrix}-6 & 4 & 0 \\\\ 1 & 1 & 4 \\\\ -6 & 0 & 6\\end{bmatrix}, \\quad E=\\begin{bmatrix}6 & 9 & -9 \\\\ -1 & 0 & -4 \\\\ -6 & 0 & -1\\end{bmatrix}.\n\\end{gathered}\n\\] Se for possível calcule:\n\n\\(A B-B A\\),\n\\(2 C-D\\),\n\\(\\left(2 D^{T}-3 E^{T}\\right)^{T}\\),\n\\(D^{2}-D E\\).\n\n\n\nExercício 2 Conhecendo-se somente os produtos \\(A B\\) e \\(A C\\), como podemos calcular \\(A(B+C), B^{T} A^{T}, C^{T} A^{T}\\) e \\((A B A) C\\)?\n\n\nExercício 3 Considere as seguintes matrizes\n\\[\n\\begin{gathered}\nA=\\begin{bmatrix}\n-3 & 2 & 1 \\\\\n1 & 2 & -1\n\\end{bmatrix},\\quad B=\\begin{bmatrix}\n2 & -1 \\\\\n2 & 0 \\\\\n0 & 3\n\\end{bmatrix},\\quad C=\\begin{bmatrix}\n-2 & 1 & -1 \\\\\n0 & 1 & 1 \\\\\n-1 & 0 & 1\n\\end{bmatrix}, \\quad D=\\begin{bmatrix}\nd_{1} & 0 & 0 \\\\\n0 & d_{2} & 0 \\\\\n0 & 0 & d_{3}\n\\end{bmatrix} \\\\\n\\quad E_{1}=\\begin{bmatrix}\n1 \\\\\n0 \\\\\n0\n\\end{bmatrix}, \\quad E_{2}=\\begin{bmatrix}\n0 \\\\\n1 \\\\\n0\n\\end{bmatrix}, \\quad E_{3}=\\begin{bmatrix}\n0 \\\\\n0 \\\\\n1\n\\end{bmatrix}\n\\end{gathered}\n\\]\nVerifique que:\n\n\\(A B\\) é diferente de \\(B A\\).\n\\(A E_{j}\\) é a \\(j\\)-ésima coluna de \\(A\\), para \\(j=1,2,3\\) e \\(E_{i}^{T} B\\) é a \\(i\\)-ésima linha de \\(B\\), para \\(i=1,2,3\\) .\n\\(C D=\\begin{bmatrix} d_{1} C_{1} & d_{2} C_{2} & d_{3} C_{3}\\end{bmatrix}\\), em que \\(C_{1}=\\begin{bmatrix}-2 \\\\ 0 \\\\ -1\\end{bmatrix}, C_{2}=\\begin{bmatrix}1 \\\\ 1 \\\\ 0\\end{bmatrix}\\) e \\(C_{3}=\\begin{bmatrix}-1 \\\\ 1 \\\\ 1\\end{bmatrix}\\), sấo as colunas de \\(C\\).\n\\(D C=\\begin{bmatrix} d_{1} C_{1} \\\\ d_{2} C_{2} \\\\ d_{3} C_{3}\\end{bmatrix}\\), em que \\(C_{1}=\\begin{bmatrix}-2 & 1 & -1\\end{bmatrix}, C_{2}=\\begin{bmatrix}0 & 1 & 1\\end{bmatrix}\\) e \\(C_{3}=\\begin{bmatrix}-1 & 0 & 1\\end{bmatrix}\\) são as linhas de \\(C\\).\nEscrevendo \\(B\\) em termos das suas colunas, \\(B=\\begin{bmatrix}B_{1} & B_{2}\\end{bmatrix}\\), em que \\(B_{1}=\\begin{bmatrix}2 \\\\ 2 \\\\ 0\\end{bmatrix}\\) e \\(B_{2}=\\begin{bmatrix}-1 \\\\ 0 \\\\ 3\\end{bmatrix}\\), o produto \\(A B\\) pode ser escrito como \\(A B=A\\begin{bmatrix}B_{1} & B_{2}\\end{bmatrix}=\\begin{bmatrix}A B_{1} & A B_{2}\\end{bmatrix}\\).\nescrevendo \\(A\\) em termos das suas linhas, \\(A_{1}=\\begin{bmatrix}-3 & 2 & 1\\end{bmatrix}\\) e \\(A_{2}=\\begin{bmatrix}1 & 2 & -1\\end{bmatrix}\\), o produto \\(A B\\) pode ser escrito como \\(A B=\\begin{bmatrix}A_{1} \\\\ A_{2}\\end{bmatrix} B=\\begin{bmatrix}A_{1} B \\\\ A_{2} B\\end{bmatrix}\\).\n\n\n\nExercício 4 \\[\nA=\\begin{bmatrix}\n1 & -3 & 0 \\\\\n0 & 4 & -2\n\\end{bmatrix} \\quad \\text { e } \\quad X=\\begin{bmatrix}\nx \\\\\ny \\\\\nz\n\\end{bmatrix}\n\\]\nVerifique que \\(x A_{1}+y A_{2}+z A_{3}=A X\\), em que \\(A_{j}\\) é a \\(j\\)-ésima coluna de \\(A\\), para \\(j=1,2,3\\).\n\n\nExercício 5 Encontre um valor de \\(x\\) tal que \\(A B^{T}=0\\), em que\n\\[\nA=\\begin{bmatrix}\nx & 4 & -2\n\\end{bmatrix}\\quad \\text {e}\\quad  B=\\begin{bmatrix}\n2 & -3 & 5\n\\end{bmatrix} .\n\\]\n\n\nExercício 6 Mostre que as matrizes \\(A=\\begin{bmatrix}1 & \\frac{1}{y} \\\\ y & 1\\end{bmatrix}\\), em que \\(y\\) é uma número real não nulo, verificam a equação \\(X^{2}=2 X\\).\n\n\nExercício 7 Verifique que \\(A^{3}=\\overline{0}\\), para\n\\[\nA=\\begin{bmatrix}\n0 & 1 & 0 \\\\\n0 & 0 & 1 \\\\\n0 & 0 & 0\n\\end{bmatrix}\n\\]\n\n\nExercício 8 Se \\(A B=B A\\) e \\(p\\) é um inteiro positivo, mostre que \\((A B)^{p}=A^{p} B^{p}\\). Explique porque precisa usar que \\(AB=BA\\).\n\n\nExercício 9 Sejam \\(A, B\\) e \\(C\\) matrizes \\(n \\times n\\).\n\nPode afirmar que \\((A+B)^{2}=A^{2}+2 A B+B^{2}\\)? E se \\(A B=B A\\)? Justifique.\nPode afirmar que \\((A-B)^{2}=A^{2}-2 A B+B^{2}\\)? E se \\(A B=B A\\)? Justifique.\nPode afirmar que \\((A+B)(A-B)=A^{2}-B^{2}\\)? E se \\(A B=B A\\)? Justifique.\n\n\n\nExercício 10 Seja \\[\nA=\\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix}\n\\] Ache todos os valores \\(a,b,c,d\\in\\R\\) tais que \\[\n\\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix}\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}=\n\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}\n\\] e todos os valores \\(e,f,g,h\\) tais que \\[\n\\begin{bmatrix} e & f \\\\ g & h \\end{bmatrix}\\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix}=\n\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}\n\\]\n\n\nExercício 11 Seja \\[\nA=\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}.\n\\] Seja \\(d=ac-bd\\). Assumindo que \\(d\\neq 0\\), verifique que \\[\n\\frac 1d \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix} =\n\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\n\\]\n\n\nExercício 12  \n\nDê exemplo de matrizes \\(A\\) e \\(B\\) (pode ser \\(2\\times 2\\)) não nulos tais que \\(AB=0\\).\nVerifique para seu exemplo se \\(BA=0\\). Decida se a seguinte afirmação é verdadeira para toda matriz \\(A\\) e \\(B\\) \\(n\\times n\\): Se \\(AB=0\\) então \\(BA=0\\).\nAche uma matriz \\(A\\) não nula tal que \\(A^2=0\\). (Dica: veja o Exercício 7.)\n\n\n\nExercício 13 Dizemos que uma matriz \\(A, n \\times n\\), é simétrica se \\(A^{T}=A\\) e é anti-simétrica se \\(A^{T}=-A\\).\n\nMostre que se \\(A\\) é simétrica, então \\(a_{i j}=a_{j i}\\), para \\(i, j=1, \\ldots n\\) e que se \\(A\\) é anti-simétrica, então \\(a_{i j}=-a_{j i}\\), para \\(i, j=1, \\ldots n\\). Portanto, os elementos da diagonal principal de uma matriz antisimétrica são iguais a zero.\nMostre que se \\(A\\) e \\(B\\) são simétricas, então \\(A+B\\) e \\(\\alpha A\\) são simétricas, para todo escalar \\(\\alpha\\).\nMostre que se \\(A\\) e \\(B\\) são simétricas, então \\(A B\\) é simétrica se, e somente se, \\(A B=B A\\).\nMostre que se \\(A\\) e \\(B\\) são anti-simétricas, então \\(A+B\\) e \\(\\alpha A\\) são anti-simétricas, para todo escalar \\(\\alpha\\).\nMostre que para toda matriz \\(A, n \\times n, A+A^{T}\\) é simétrica e \\(A-A^{T}\\) é anti-simétrica.\nMostre que toda matriz quadrada \\(A\\) pode ser escrita como a soma de uma matriz simétrica e uma anti-simétrica. (Sugestão: Observe o resultado da soma de \\(A+A^{T}\\) e \\(\\operatorname{com} A-A^{T}\\).)\n\n\n\nExercício 14 Seja \\(A\\) uma matriz \\(n \\times n\\). Mostre que se \\(A A^{T}=\\overline{0}\\), então \\(A=\\overline{0}\\). (Sugestão: Computa a soma das entradas na diagonal principal (ou seja, o traço) de \\(AA^T\\).) E se a matriz \\(A\\) for \\(m \\times n\\), com \\(m \\neq n\\)?"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Geometria Analítica e Álgebra Linear",
-    "section": "",
-    "text": "Geometria Analítica e Álgebra Linear\n\nMatrizes\nExercícios sobre matrizes\nSistemas lineares\nA inversa de uma matrix\nO determinante de uma matrix\nVetores"
-  },
-  {
-    "objectID": "semana1.html#definição-de-uma-matriz",
-    "href": "semana1.html#definição-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Definição de uma Matriz",
-    "text": "Definição de uma Matriz\n\nDefinition 1 Uma matriz \\(A\\), \\(m \\times n\\) (\\(m\\) por \\(n\\)), é uma tabela de \\(m \\cdot n\\) números dispostos em \\(m\\) linhas e \\(n\\) colunas:\n\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\ldots & a_{1n} \\\\\na_{21} & a_{22} & \\ldots & a_{2n} \\\\\n\\vdots &        & \\ldots & \\vdots \\\\\na_{m1} & a_{m2} & \\ldots & a_{mn}\n\\end{bmatrix}\n\\]\n\nA \\(i\\)-ésima linha de \\(A\\) é \\(\\begin{bmatrix}\na_{i1} & a_{i2} & \\ldots & a_{in}\n\\end{bmatrix}\\) A \\(j\\)-ésima coluna de \\(A\\) é \\(\\begin{bmatrix}\na_{1j} \\\\\na_{2j} \\\\\n\\vdots \\\\\na_{mj}\n\\end{bmatrix}\\).\nNós também usamos a notação \\(A = \\left(a_{ij}\\right)_{m \\times n}\\). Aqui, \\(a_{ij}\\) ou \\([A]_{ij}\\) é o elemento ou entrada na posição \\((i, j)\\) da matriz \\(A\\)."
-  },
-  {
-    "objectID": "semana1.html#exemplos-de-matrizes",
-    "href": "semana1.html#exemplos-de-matrizes",
-    "title": "Matrizes",
-    "section": "Exemplos de Matrizes",
-    "text": "Exemplos de Matrizes\nConsidere as seguintes matrizes:\n\\[\nA = \\begin{bmatrix}\n1/2 & 2/3 \\\\\n3 & 4/5\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3\n\\end{bmatrix}, \\quad\nC = \\begin{bmatrix}\n1 & 3 & 0 \\\\\n2 & 4 & -2\n\\end{bmatrix},\n\\quad D = \\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}, \\quad\nE = \\begin{bmatrix}\n4 \\\\\n5 \\\\\n6\n\\end{bmatrix}.\n\\]\n\nAs matrizes \\(A\\) e \\(B\\) são \\(2 \\times 2\\) (2 linhas e 2 colunas, matriz quadrada).\nA matriz \\(C\\) é \\(2 \\times 3\\) (2 linhas e 3 colunas).\nA matriz \\(D\\) é \\(1 \\times 3\\) (1 linha e 3 colunas, matriz linha, vetor linha).\nA matriz \\(E\\) é \\(3 \\times 1\\) (3 linhas e 1 coluna, matriz coluna, vetor coluna).\n\nDuas matrizes \\(A=(a_{ij})\\) a \\(B=(b_{ij})\\) são iguais, se elas\n\ntêm o mesmo tamanho e\n\\(a_{ij}=b_{ij}\\) para todo \\(i,j\\) (têm as mesmas entradas)"
-  },
-  {
-    "objectID": "semana1.html#soma-de-matrizes",
-    "href": "semana1.html#soma-de-matrizes",
-    "title": "Matrizes",
-    "section": "Soma de Matrizes",
-    "text": "Soma de Matrizes\nA soma de duas matrizes do mesmo tamanho, \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) e \\(B = \\left(b_{ij}\\right)_{m \\times n}\\), é definida como:\n\\[\nC = A + B\\quad \\mbox{onde}\\quad c_{ij} = a_{ij} + b_{ij}.\n\\]\nExemplo\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & -3 \\\\\n3 & 4 & 0\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 & 5 \\\\\n0 & 3 & -4\n\\end{bmatrix}.\n\\]\nA soma de \\(A\\) e \\(B\\) é:\n\\[\nC = A + B = \\begin{bmatrix}\n1 + (-2) & 2 + 1 & -3 + 5 \\\\\n3 + 0 & 4 + 3 & 0 + (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 3 & 2 \\\\\n3 & 7 & -4\n\\end{bmatrix}.\n\\]"
-  },
-  {
-    "objectID": "semana1.html#matriz-nula",
-    "href": "semana1.html#matriz-nula",
-    "title": "Matrizes",
-    "section": "Matriz Nula",
-    "text": "Matriz Nula\nA matriz nula (matriz zero) de tamanho \\(m \\times n\\), denotada por \\(0_{m\\times n}\\) (ou simplesmente \\(0\\) quando o tamanho é claro), é a matriz em que todas as entradas são zero:\n\\[\n0_{2\\times 3} = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix}.\n\\]\nPara qualquer matriz \\(A\\) de tamanho \\(m \\times n\\), vale \\(A + 0_{m\\times n} = A\\).\nExemplo\nSe \\[\nA = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix}, \\quad 0 = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix},\n\\] então \\[\nA + 0 = \\begin{bmatrix}\n1+0 & -2+0 & 3+0 \\\\\n0+0 & 4+0 & -1+0\n\\end{bmatrix} = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix} = A.\n\\]"
-  },
-  {
-    "objectID": "semana1.html#múltiplo-escalar-de-uma-matriz",
-    "href": "semana1.html#múltiplo-escalar-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Múltiplo Escalar de uma Matriz",
-    "text": "Múltiplo Escalar de uma Matriz\nO múltiplo escalar de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) por um escalar \\(\\alpha\\) é definido como:\n\n\\[\nB = \\alpha A\\quad \\mbox{onde}\\quad\nb_{ij} = \\alpha a_{ij}.\n\\]\n\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3 \\\\\n5 & -4\n\\end{bmatrix}.\n\\]\nO múltiplo de \\(A\\) pelo escalar \\(-3\\) é:\n\\[\n-3A = \\begin{bmatrix}\n(-3)\\cdot(-2) & (-3)\\cdot 1 \\\\\n(-3)\\cdot 0 & (-3)\\cdot 3 \\\\\n(-3)\\cdot 5 & (-3)\\cdot (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n6 & -3 \\\\\n0 & -9 \\\\\n-15 & 12\n\\end{bmatrix}.\n\\]"
-  },
-  {
-    "objectID": "semana1.html#simétrica-de-uma-matriz",
-    "href": "semana1.html#simétrica-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Simétrica de uma Matriz",
-    "text": "Simétrica de uma Matriz\nA simétrica/negativa de uma matriz \\(A\\) é definida por \\(-A = (-1)A\\). Em particular, se \\(A = (a_{ij})\\), então \\[\n-A = (-a_{ij}).\n\\]\nExemplo\nConsidere \\[\nA = \\begin{bmatrix}\n2 & -3 \\\\\n1 & 4\n\\end{bmatrix} \\quad \\Rightarrow \\quad\n-A = (-1)A = \\begin{bmatrix}\n-2 & 3 \\\\\n-1 & -4\n\\end{bmatrix}.\n\\]\nAlém disso, vale a propriedade \\(A + (-A) = 0\\). No exemplo acima, \\[\nA + (-A) = \\begin{bmatrix}\n2+(-2) & -3+3 \\\\\n1+(-1) & 4+(-4)\n\\end{bmatrix} = \\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix} = 0_{2\\times 2}.\n\\]"
-  },
-  {
-    "objectID": "semana1.html#transposta-de-uma-matriz",
-    "href": "semana1.html#transposta-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Transposta de uma Matriz",
-    "text": "Transposta de uma Matriz\nA transposta de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) é a matriz \\(A^T = \\left(a_{ji}\\right)_{n \\times m}\\) obtida trocando as linhas por colunas.\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}.\n\\]\nA transposta de \\(A\\) é:\n\\[\nA^T = \\begin{bmatrix}\n1 & 4 \\\\\n2 & 5 \\\\\n3 & 6\n\\end{bmatrix}.\n\\]"
-  },
-  {
-    "objectID": "semana1.html#multiplicação-entre-matrizes",
-    "href": "semana1.html#multiplicação-entre-matrizes",
-    "title": "Matrizes",
-    "section": "Multiplicação entre Matrizes",
-    "text": "Multiplicação entre Matrizes\nO produto de duas matrizes \\(A = \\left(a_{ij}\\right)_{m \\times p}\\) e \\(B = \\left(b_{ij}\\right)_{p \\times n}\\) é definido como:\n\\[\nC = AB\n\\]\nonde a matriz resultante \\(C = \\left(c_{ij}\\right)_{m \\times n}\\) tem entradas dadas por:\n\n\\[\nc_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj} = \\sum_{k=1}^{p} a_{ik} b_{kj}.\n\\]\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1p}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\color{red}{a_{i1}} & \\color{red}{a_{i2}} & \\cdots & \\color{red}{a_{ip}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mp}\n\\end{bmatrix},\\quad\nB = \\begin{bmatrix}\nb_{11} & \\cdots & \\color{blue}{b_{1j}} & \\cdots & b_{1n}\\\\\nb_{21} & \\cdots & \\color{blue}{b_{2j}} & \\cdots & b_{2n}\\\\\n\\vdots & \\ddots & \\vdots & \\ddots & \\vdots \\\\\nb_{p1} & \\cdots & \\color{blue}{b_{pj}} & \\cdots & b_{pn}\n\\end{bmatrix},\\quad c_{ij} = \\sum\\limits_{k=1}^{p} \\color{red}{a_{ik}}\\,\\color{blue}{b_{kj}}\n\\]"
-  },
-  {
-    "objectID": "semana1.html#condições-para-multiplicação-de-matrizes",
-    "href": "semana1.html#condições-para-multiplicação-de-matrizes",
-    "title": "Matrizes",
-    "section": "Condições para Multiplicação de Matrizes",
-    "text": "Condições para Multiplicação de Matrizes\n\nO número de colunas de \\(A\\) deve ser igual ao número de linhas de \\(B\\).\nA matriz resultante \\(C\\) terá dimensões \\(m \\times n\\)."
-  },
-  {
-    "objectID": "semana1.html#exemplo-produto-de-matrizes",
-    "href": "semana1.html#exemplo-produto-de-matrizes",
-    "title": "Matrizes",
-    "section": "Exemplo: Produto de Matrizes",
-    "text": "Exemplo: Produto de Matrizes\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}_{2\\times 3}, \\quad\nB = \\begin{bmatrix}\n7 & {8} \\\\\n9 & {10} \\\\\n11 & {12}\n\\end{bmatrix}_{3\\times 2}.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} c_{11} & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}_{2\\times 2}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{11}\\), multiplicamos a primeira linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{11} = \\color{red}{1}\\cdot \\color{blue}{7} + \\color{red}{2}\\cdot \\color{blue}{9} + \\color{red}{3}\\cdot \\color{blue}{11} = 7 + 18 + 33 = 58.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{12}\\), multiplicamos a primeira linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{12} = \\color{red}{1}\\cdot \\color{blue}{8} + \\color{red}{2}\\cdot \\color{blue}{10} + \\color{red}{3}\\cdot \\color{blue}{12} = 8 + 20 + 36 = 64.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{21}\\), multiplicamos a segunda linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{21} = \\color{red}{4}\\cdot \\color{blue}{7} + \\color{red}{5}\\cdot \\color{blue}{9} + \\color{red}{6}\\cdot \\color{blue}{11} = 28 + 45 + 66 = 139.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{22}\\), multiplicamos a segunda linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{22} = \\color{red}{4}\\cdot \\color{blue}{8} + \\color{red}{5}\\cdot \\color{blue}{10} + \\color{red}{6}\\cdot \\color{blue}{12} = 32 + 50 + 72 = 154.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & 154 \\end{bmatrix}\n\\]"
-  },
-  {
-    "objectID": "semana1.html#matriz-identidade",
-    "href": "semana1.html#matriz-identidade",
-    "title": "Matrizes",
-    "section": "Matriz Identidade",
-    "text": "Matriz Identidade\nA matriz identidade de ordem \\(n\\), denotada por \\(I_n\\) ou simplesmente por \\(I\\), é a matriz quadrada \\(n \\times n\\) com \\(1\\) na diagonal principal e \\(0\\) fora dela.\nExemplo\n\n\\[\nI_3 = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}.\n\\]\n\nPropriedade\nPara qualquer matriz \\(A\\) \\({m\\times n}\\), a matriz identidade satisfaz:\n\n\\[\nI_m\\,A = A \\quad\\text{e}\\quad A\\,I_n = A.\n\\]"
-  },
-  {
-    "objectID": "semana1.html#exemplo-com-mn2",
-    "href": "semana1.html#exemplo-com-mn2",
-    "title": "Matrizes",
-    "section": "Exemplo (com \\(m=n=2\\)):",
-    "text": "Exemplo (com \\(m=n=2\\)):\n\\[\nI_2 = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix},\\quad\nA = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]\n\\[\nI_2A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}\\!\n\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}\n= \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} = A,\\qquad\nA I_2 = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]"
-  },
-  {
-    "objectID": "semana1.html#propriedades-das-operações-com-matrizes",
-    "href": "semana1.html#propriedades-das-operações-com-matrizes",
-    "title": "Matrizes",
-    "section": "Propriedades das Operações com Matrizes",
-    "text": "Propriedades das Operações com Matrizes"
-  },
-  {
-    "objectID": "semana1.html#adição-de-matrizes",
-    "href": "semana1.html#adição-de-matrizes",
-    "title": "Matrizes",
-    "section": "Adição de Matrizes",
-    "text": "Adição de Matrizes\n\nPropriedade Comutativa: \\(A + B = B + A\\)\nPropriedade Associativa: \\((A + B) + C = A + (B + C)\\)\nIdentidade Aditiva: \\(A + 0 = A\\), onde \\(0\\) é a matriz zero.\nInverso Aditivo: \\(A + (-A) = 0\\)"
-  },
-  {
-    "objectID": "semana1.html#multiplicação-escalar",
-    "href": "semana1.html#multiplicação-escalar",
-    "title": "Matrizes",
-    "section": "Multiplicação Escalar",
-    "text": "Multiplicação Escalar\n\nPropriedade Distributiva: \\(\\alpha(A + B) = \\alpha A + \\alpha B\\)\nPropriedade Associativa: \\((\\alpha \\beta)A = \\alpha(\\beta A)\\)\nIdentidade Multiplicativa: \\(1 \\cdot A = A\\)"
-  },
-  {
-    "objectID": "semana1.html#multiplicação-de-matrizes",
-    "href": "semana1.html#multiplicação-de-matrizes",
-    "title": "Matrizes",
-    "section": "Multiplicação de Matrizes",
-    "text": "Multiplicação de Matrizes\n\nPropriedade Associativa: \\((AB)C = A(BC)\\)\nPropriedade Distributiva: \\(A(B + C) = AB + AC\\) e \\((A + B)C = AC + BC\\)\nCompatibilidade da Multiplicação Escalar: \\(\\alpha(AB) = (\\alpha A)B = A(\\alpha B)\\)\nSe \\(A\\) é matriz \\(m\\times n\\), então \\(I_mA=AI_n=A\\)\nNão-Comutatividade: Em geral, \\(AB \\neq BA\\)"
-  },
-  {
-    "objectID": "semana1.html#multiplicação-não-comutativa",
-    "href": "semana1.html#multiplicação-não-comutativa",
-    "title": "Matrizes",
-    "section": "Multiplicação Não Comutativa",
-    "text": "Multiplicação Não Comutativa\nVamos ilustrar que, em geral, \\(AB \\neq BA\\).\nConsidere \\[\nA = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}.\n\\]\nCalculando \\(AB\\) e \\(BA\\): \\[\nAB = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n         \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n     = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix},\\qquad\nBA = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n         \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n     = \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix}.\n\\]\nConclusão: \\(AB = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix} \\neq \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix} = BA\\)"
-  },
-  {
-    "objectID": "semana1.html#transposta",
-    "href": "semana1.html#transposta",
-    "title": "Matrizes",
-    "section": "Transposta",
-    "text": "Transposta\n\nDupla transposição: \\((A^T)^T = A\\).\nTransposição da soma (mesmas dimensões): \\((A + B)^T = A^T + B^T\\).\nTransposição do produto por escalar: \\((\\alpha A)^T = \\alpha A^T\\).\nTransposição do produto (dimensões compatíveis): \\((AB)^T = B^T A^T\\).\nSimetria: \\(A\\) é simétrica se \\(A^T = A\\) e antissimétrica se \\(A^T = -A\\)."
-  },
-  {
-    "objectID": "semana1.html#propriedade-transposta-do-produto",
-    "href": "semana1.html#propriedade-transposta-do-produto",
-    "title": "Matrizes",
-    "section": "Propriedade: transposta do produto",
-    "text": "Propriedade: transposta do produto\nPara matrizes de tamanhos compatíveis, vale a identidade \\[\n(AB)^{T} = B^{T} A^{T}.\n\\]\nExemplo pequeno (matrizes \\(2\\times 2\\)): \\[\nA = \\begin{bmatrix}1 & 2\\\\ 3 & 0\\end{bmatrix},\\quad\nB = \\begin{bmatrix}0 & 4\\\\ 5 & -1\\end{bmatrix}.\n\\] Então \\[\nAB = \\begin{bmatrix}\n1\\cdot 0 + 2\\cdot 5 & 1\\cdot 4 + 2\\cdot(-1)\\\\\n3\\cdot 0 + 0\\cdot 5 & 3\\cdot 4 + 0\\cdot(-1)\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 2\\\\ 0 & 12\\end{bmatrix},\\quad\n(AB)^{T} = \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nPor outro lado, \\[\nB^{T} = \\begin{bmatrix}0 & 5\\\\ 4 & -1\\end{bmatrix},\\quad\nA^{T} = \\begin{bmatrix}1 & 3\\\\ 2 & 0\\end{bmatrix},\\quad\nB^{T}A^{T} = \\begin{bmatrix}\n0\\cdot 1 + 5\\cdot 2 & 0\\cdot 3 + 5\\cdot 0\\\\\n4\\cdot 1 + (-1)\\cdot 2 & 4\\cdot 3 + (-1)\\cdot 0\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nLogo, \\((AB)^{T} = B^{T}A^{T}\\neq A^TB^T\\)."
   }
 ]
