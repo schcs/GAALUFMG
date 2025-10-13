@@ -255,15 +255,21 @@ z = z_0 + tc
 <ol type="1">
 <li>Escreva uma equação paramétrica para a reta que passa por <span class="math inline">\(A=(-1,3,4)\)</span> e que é paralela ao vetor <span class="math inline">\(V=(1,-2,0)\)</span>.</li>
 <li>Escreva uma equação paramétrica para a reta que passa por <span class="math inline">\(M=(5,0,-3)\)</span> e por <span class="math inline">\(N=(3,8,7)\)</span>.</li>
-<li>Considere o ponto <span class="math inline">\(P=(4,-2,11)\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math inline">\((x,y,z) = (1,-1,1) + t(3,1,2)\)</span>. Determine a equação da reta <span class="math inline">\(s\)</span> que passa por <span class="math inline">\(P\)</span> e que é perpendicular e concorrente com <span class="math inline">\(r\)</span>.</li>
+<li>Considere o ponto <span class="math inline">\(P=(4,-2,11)\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math display">\[
+(x,y,z) = (1,-1,1) + t(3,1,2).
+\]</span> Determine a equação da reta <span class="math inline">\(s\)</span> que passa por <span class="math inline">\(P\)</span> e que é perpendicular e concorrente com <span class="math inline">\(r\)</span>.</li>
 </ol>
 </section>
 <section id="exercício-3-solução" class="slide level2">
 <h2>Exercício 3 – solução</h2>
 <div class="exr-">
-<p>Considere o ponto <span class="math inline">\(P=(4,-2,11)\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math inline">\((x,y,z) = (1,-1,1) + t(3,1,2)\)</span>. Determine a equação da reta <span class="math inline">\(s\)</span> que passa por <span class="math inline">\(P\)</span> e que é perpendicular e concorrente com <span class="math inline">\(r\)</span>.</p>
+<p>Considere o ponto <span class="math inline">\(P=(4,-2,11)\)</span> e a reta <span class="math inline">\(r\)</span> de equação <span class="math display">\[
+(x,y,z) = (1,-1,1) + t(3,1,2).
+\]</span> Determine a equação da reta <span class="math inline">\(s\)</span> que passa por <span class="math inline">\(P\)</span> e que é perpendicular e concorrente com <span class="math inline">\(r\)</span>.</p>
 </div>
-<p>O vetor diretor de <span class="math inline">\(r\)</span> é <span class="math inline">\(V=(3,1,2)\)</span>. Procuramos um ponto <span class="math inline">\(Q\in r\)</span> tal que <span class="math inline">\(\vec{PQ}\perp V\)</span>; ou seja, <span class="math inline">\(\vec{PQ}\cdot v=0\)</span>. Tem-se <span class="math inline">\(Q=(1,-1,1)+t(3,1,2)\)</span>: <span class="math display">\[\begin{align*}
+<p>O vetor diretor de <span class="math inline">\(r\)</span> é <span class="math inline">\(V=(3,1,2)\)</span>. Procuramos um ponto <span class="math inline">\(Q\in r\)</span> tal que <span class="math inline">\(\vec{PQ}\perp V\)</span>; ou seja, <span class="math inline">\(\vec{PQ}\cdot v=0\)</span>. Tem-se <span class="math display">\[
+Q=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t).
+\]</span> Logo, <span class="math display">\[\begin{align*}
 (P-(1,-1,1)+t(3,1,2))\cdot v&amp;=0\\
 &amp;⇒ [(4,-2,11)-(1+3t,\,-1+t,\,1+2t)]\cdot(3,1,2)=0\\
 &amp;⇒ (3-3t,\,-1-t,\,10-2t)\cdot(3,1,2)=28-14t=0\\
@@ -403,12 +409,10 @@ z = z_0 + tc
 </section>
 <section id="distância-entre-retas-reversas-1" class="slide level2">
 <h2>Distância entre retas reversas</h2>
-<ol start="3" type="1">
-<li>Distância e pontos de mínima distância: Tomando o segmento <span class="math inline">\(PQ\)</span> perpendicular a <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>, com <span class="math inline">\(P∈r\)</span> e <span class="math inline">\(Q∈s\)</span>: <span class="math display">\[\begin{align*}
+<p><span class="bg-yellow">Distância e pontos de mínima distância:</span> Tomando o segmento <span class="math inline">\(PQ\)</span> perpendicular a <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>, com <span class="math inline">\(P∈r\)</span> e <span class="math inline">\(Q∈s\)</span>: <span class="math display">\[\begin{align*}
 (A + tV_r - (C + uV_s))·V_r &amp;= 0\\
 (A + tV_r - (C + uV_s))·V_s &amp;= 0
-\end{align*}\]</span></li>
-</ol>
+\end{align*}\]</span></p>
 <p>Com <span class="math inline">\(A-C=(3,-9,-3)\)</span>, <span class="math inline">\(\left&lt;V_r,V_r\right&gt;=3\)</span>, <span class="math inline">\(\left&lt;V_s,V_s\right&gt;=21\)</span>, <span class="math inline">\(\left&lt;V_r,V_s\right&gt;=-3\)</span>, <span class="math inline">\(\left&lt;V_r,(A-C)\right&gt;=9\)</span>, <span class="math inline">\(\left&lt;V_s,(A-C)\right&gt;=-27\)</span>, obtém-se <span class="math inline">\(t+u = -3\)</span> e <span class="math inline">\(t+7u = -9\)</span> ⇒ <span class="math inline">\(u=-1, t=-2\)</span>.</p>
 <p>Logo, <span class="math inline">\(P = A + tV_r = (2,0,-1)\)</span>, <span class="math inline">\(Q = C + uV_s = (-1,3,5)\)</span>, <span class="math inline">\(PQ = Q-P = (-3,3,6) ⟂ V_r, V_s\)</span>.</p>
 <p>Distância: <span class="math inline">\(‖PQ‖ = \sqrt{9+9+36} = 3\sqrt 6\)</span>.</p>

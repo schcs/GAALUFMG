@@ -67,14 +67,14 @@
     "href": "06_retas_e_planos.html#exercícios",
     "title": "Retas e planos",
     "section": "Exercícios",
-    "text": "Exercícios\n\nEscreva uma equação paramétrica para a reta que passa por \\(A=(-1,3,4)\\) e que é paralela ao vetor \\(V=(1,-2,0)\\).\nEscreva uma equação paramétrica para a reta que passa por \\(M=(5,0,-3)\\) e por \\(N=(3,8,7)\\).\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\((x,y,z) = (1,-1,1) + t(3,1,2)\\). Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\)."
+    "text": "Exercícios\n\nEscreva uma equação paramétrica para a reta que passa por \\(A=(-1,3,4)\\) e que é paralela ao vetor \\(V=(1,-2,0)\\).\nEscreva uma equação paramétrica para a reta que passa por \\(M=(5,0,-3)\\) e por \\(N=(3,8,7)\\).\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#exercício-3-solução",
     "href": "06_retas_e_planos.html#exercício-3-solução",
     "title": "Retas e planos",
     "section": "Exercício 3 – solução",
-    "text": "Exercício 3 – solução\n\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\((x,y,z) = (1,-1,1) + t(3,1,2)\\). Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\).\n\nO vetor diretor de \\(r\\) é \\(V=(3,1,2)\\). Procuramos um ponto \\(Q\\in r\\) tal que \\(\\vec{PQ}\\perp V\\); ou seja, \\(\\vec{PQ}\\cdot v=0\\). Tem-se \\(Q=(1,-1,1)+t(3,1,2)\\): \\[\\begin{align*}\n(P-(1,-1,1)+t(3,1,2))\\cdot v&=0\\\\\n&⇒ [(4,-2,11)-(1+3t,\\,-1+t,\\,1+2t)]\\cdot(3,1,2)=0\\\\\n&⇒ (3-3t,\\,-1-t,\\,10-2t)\\cdot(3,1,2)=28-14t=0\\\\\n&⇒ t=2.\n\\end{align*}\\]\nLogo \\(Q=(7,1,5)\\) e um vetor diretor de \\(s\\) é \\(QP=(3,3,-6)=3(1,1,-2)\\). Assim, a reta procurada é \\[\n(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,\n\\] com \\(v·(1,1,-2)=3+1-4=0\\) (perpendicular) e concorrente em \\(Q\\)."
+    "text": "Exercício 3 – solução\n\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\).\n\nO vetor diretor de \\(r\\) é \\(V=(3,1,2)\\). Procuramos um ponto \\(Q\\in r\\) tal que \\(\\vec{PQ}\\perp V\\); ou seja, \\(\\vec{PQ}\\cdot v=0\\). Tem-se \\[\nQ=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t).\n\\] Logo, \\[\\begin{align*}\n(P-(1,-1,1)+t(3,1,2))\\cdot v&=0\\\\\n&⇒ [(4,-2,11)-(1+3t,\\,-1+t,\\,1+2t)]\\cdot(3,1,2)=0\\\\\n&⇒ (3-3t,\\,-1-t,\\,10-2t)\\cdot(3,1,2)=28-14t=0\\\\\n&⇒ t=2.\n\\end{align*}\\]\nLogo \\(Q=(7,1,5)\\) e um vetor diretor de \\(s\\) é \\(QP=(3,3,-6)=3(1,1,-2)\\). Assim, a reta procurada é \\[\n(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,\n\\] com \\(v·(1,1,-2)=3+1-4=0\\) (perpendicular) e concorrente em \\(Q\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
@@ -144,7 +144,7 @@
     "href": "06_retas_e_planos.html#distância-entre-retas-reversas-1",
     "title": "Retas e planos",
     "section": "Distância entre retas reversas",
-    "text": "Distância entre retas reversas\n\nDistância e pontos de mínima distância: Tomando o segmento \\(PQ\\) perpendicular a \\(r\\) e \\(s\\), com \\(P∈r\\) e \\(Q∈s\\): \\[\\begin{align*}\n(A + tV_r - (C + uV_s))·V_r &= 0\\\\\n(A + tV_r - (C + uV_s))·V_s &= 0\n\\end{align*}\\]\n\nCom \\(A-C=(3,-9,-3)\\), \\(\\left&lt;V_r,V_r\\right&gt;=3\\), \\(\\left&lt;V_s,V_s\\right&gt;=21\\), \\(\\left&lt;V_r,V_s\\right&gt;=-3\\), \\(\\left&lt;V_r,(A-C)\\right&gt;=9\\), \\(\\left&lt;V_s,(A-C)\\right&gt;=-27\\), obtém-se \\(t+u = -3\\) e \\(t+7u = -9\\) ⇒ \\(u=-1, t=-2\\).\nLogo, \\(P = A + tV_r = (2,0,-1)\\), \\(Q = C + uV_s = (-1,3,5)\\), \\(PQ = Q-P = (-3,3,6) ⟂ V_r, V_s\\).\nDistância: \\(‖PQ‖ = \\sqrt{9+9+36} = 3\\sqrt 6\\)."
+    "text": "Distância entre retas reversas\nDistância e pontos de mínima distância: Tomando o segmento \\(PQ\\) perpendicular a \\(r\\) e \\(s\\), com \\(P∈r\\) e \\(Q∈s\\): \\[\\begin{align*}\n(A + tV_r - (C + uV_s))·V_r &= 0\\\\\n(A + tV_r - (C + uV_s))·V_s &= 0\n\\end{align*}\\]\nCom \\(A-C=(3,-9,-3)\\), \\(\\left&lt;V_r,V_r\\right&gt;=3\\), \\(\\left&lt;V_s,V_s\\right&gt;=21\\), \\(\\left&lt;V_r,V_s\\right&gt;=-3\\), \\(\\left&lt;V_r,(A-C)\\right&gt;=9\\), \\(\\left&lt;V_s,(A-C)\\right&gt;=-27\\), obtém-se \\(t+u = -3\\) e \\(t+7u = -9\\) ⇒ \\(u=-1, t=-2\\).\nLogo, \\(P = A + tV_r = (2,0,-1)\\), \\(Q = C + uV_s = (-1,3,5)\\), \\(PQ = Q-P = (-3,3,6) ⟂ V_r, V_s\\).\nDistância: \\(‖PQ‖ = \\sqrt{9+9+36} = 3\\sqrt 6\\)."
   },
   {
     "objectID": "06_retas_e_planos.html#planos-no-espaço",
