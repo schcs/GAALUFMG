@@ -142,7 +142,7 @@ Determine a reta $s$ que passa por $P$ e que é perpendicular e concorrente com 
 :::
 
 O vetor diretor de $r$ é $V=(3,1,2)$. Procuramos um ponto $Q\in r$ tal que $\vec{PQ}\perp V$; ou seja, 
-$\left<\vec{PQ}, v\right>=0$. 
+$\left<\vec{PQ}, V\right>=0$. 
 
 :::{.r-stack}
 :::{.fragment .current-visible}
