@@ -139,7 +139,7 @@ UFMG
 </div>
 </div>
 
-  <p class="date">14 de outubro de 2025</p>
+  <p class="date">16 de outubro de 2025</p>
 </section>
 <section id="retas-no-plano" class="slide level2">
 <h2>Retas no plano</h2>
@@ -273,7 +273,7 @@ z = z_0 + tc
 <p><span class="math display">\[
 Q=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t) \mbox{ e }\vec{PQ}=(-3+3t,1+t,-10+2t).
 \]</span> Logo, <span class="math display">\[
-0=\left&lt;\vec{PQ}, v\right&gt;=\left&lt;(-3+3t,1+t,-10+2t),(3,1,2)\right&gt;=14t-28.
+0=\left&lt;\vec{PQ}, V\right&gt;=\left&lt;(-3+3t,1+t,-10+2t),(3,1,2)\right&gt;=14t-28.
 \]</span> Daí, <span class="math inline">\(t=2\)</span> e <span class="bg-yellow"><span class="math inline">\(Q=(1,-1,1)+2(3,1,2)=(7,1,5)\)</span></span>.</p>
 </div>
 <div class="fragment current-visible">
@@ -494,9 +494,13 @@ ax+by+cz = a x_0 + b y_0 + c z_0.
 <section id="exemplo-plano-por-ponto-e-normal" class="slide level2">
 <h2>Exemplo: plano por ponto e normal</h2>
 <p>Determine a equação geral do plano que passa por <span class="math inline">\(P_0=(2,3,-4)\)</span> e é ortogonal ao vetor <span class="math inline">\(N=(5,-2,3)\)</span>.</p>
-<p>Solução. A equação geral do plano é da forma <span class="math inline">\(ax+by+cz=d\)</span>, em que os coeficientes <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> são as coordenadas de um vetor normal ao plano. Neste caso, a equação tem a forma <span class="math inline">\(5x-2y+3z=d\)</span>. Substituindo o ponto <span class="math inline">\(P_0=(2,3,-4)\)</span>, obtemos <span class="math inline">\(d\)</span>:</p>
+<p><span class="bg-yellow">Solução.</span> A equação geral do plano é da forma <span class="math inline">\(ax+by+cz=d\)</span>, em que os coeficientes <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> são as coordenadas de um vetor normal ao plano. Neste caso, a equação tem a forma <span class="math display">\[
+5x-2y+3z=d.
+\]</span> Substituindo o ponto <span class="math inline">\(P_0=(2,3,-4)\)</span>, obtemos <span class="math inline">\(d\)</span>:</p>
 <p><span class="math display">\[5\cdot 2 - 2\cdot 3 + 3\cdot (-4) = d \;\Rightarrow\; d=-8.\]</span></p>
-<p>Logo, a equação do plano é <span class="math inline">\(\boxed{\;5x-2y+3z=-8\;}.\)</span></p>
+<p>Logo, a equação do plano é <span class="math display">\[
+\boxed{\;5x-2y+3z=-8\;}.
+\]</span></p>
 </section>
 <section id="observações-sobre-a-equação-geral-do-plano" class="slide level2">
 <h2>Observações sobre a equação geral do plano</h2>
@@ -504,7 +508,9 @@ ax+by+cz = a x_0 + b y_0 + c z_0.
 <ul>
 <li>Para escrever a equação geral de um plano, precisamos de um vetor <span class="math inline">\(N=(a,b,c)\)</span> ortogonal ao plano (vetor normal), com <span class="math inline">\(N\neq\vec{0}\)</span>.</li>
 <li>Em muitas situações, o vetor normal será calculado pelo produto vetorial.</li>
-<li>A equação geral do plano não é única: todo múltiplo não nulo de um vetor normal também é vetor normal. Multiplicar a equação <span class="math inline">\(ax+by+cz=d\)</span> por um número não nulo não altera o conjunto solução, apenas muda o vetor normal.</li>
+<li>A equação geral do plano não é única: todo múltiplo não nulo de um vetor normal também é vetor normal. Multiplicar a equação <span class="math display">\[
+ax+by+cz=d
+\]</span> por um número não nulo não altera o conjunto solução, apenas muda o vetor normal.</li>
 </ul>
 <!-- End of Chico's aula11 -->
 <!-- Chico's Aula12 -->
@@ -573,9 +579,11 @@ w_1 &amp; w_2 &amp; w_3
 <p><img data-src="img/06_retas_e_planos/fig30.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
 </figure>
 </div>
+<div class="r-stack">
+<div class="fragment current-visible">
 <p>O ponto <span class="math inline">\(B=(2,1,3)\)</span> pertence a <span class="math inline">\(r\)</span> e os vetores <span class="math inline">\(\overrightarrow{BA}=(-3,1,-2)\)</span> e <span class="math inline">\(V_r=(-1,3,1)\)</span> são paralelos ao plano. Então</p>
 <p><span class="math display">\[
-N=\overrightarrow{AB}\times V_r=
+N=\overrightarrow{BA}\times V_r=
 \begin{vmatrix}
 \vec{i}&amp;\vec{j}&amp;\vec{k}\\
 -3&amp;1&amp;-2\\
@@ -583,32 +591,49 @@ N=\overrightarrow{AB}\times V_r=
 \end{vmatrix}
 =(7,5,-8).
 \]</span></p>
-<p>Logo, o plano tem equação <span class="math inline">\(7x+5y-8z=d\)</span>.</p>
+<p>Logo, o plano tem equação <span class="math display">\[
+7x+5y-8z=d.
+\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p>Logo, o plano tem equação <span class="math display">\[
+7x+5y-8z=d.
+\]</span> O valor de <span class="math inline">\(d\)</span> é determinado por substitui um ponto do plano na equação. Usando <span class="math inline">\(A\)</span>: <span class="math display">\[
+7x+5y-8z=7\cdot (-1)+5\cdot 2-8\cdot 1=-5.
+\]</span> A resposta final: <span class="math display">\[
+7x+5y-8z=-5.
+\]</span></p>
+</div>
+</div>
 </section>
-<section id="aplicação-plano-por-reta-e-ponto-fora-fechamento" class="slide level2">
-<h2>Aplicação: plano por reta e ponto fora (fechamento)</h2>
-<p>Como queremos que <span class="math inline">\(r\)</span> esteja contida no plano, todos os pontos de <span class="math inline">\(r\)</span> devem satisfazer a equação do plano. Um ponto genérico de <span class="math inline">\(r\)</span> é dado por</p>
-<p><span class="math display">\[x=2-t,\quad y=1+3t,\quad z=3+t.\]</span></p>
-<p>Substituindo em <span class="math inline">\(7x+5y-8z=d\)</span>:</p>
-<p><span class="math display">\[7(2-t)+5(1+3t)-8(3+t)=d\;\Rightarrow\; d=-5.\]</span></p>
-<p>Portanto, o plano é <span class="math inline">\(\boxed{\;7x+5y-8z=-5\;}.\)</span></p>
-</section>
-<section id="aplicação-plano-do-exemplo-anterior" class="slide level2">
-<h2>Aplicação: plano do exemplo anterior</h2>
-<p>Exemplo 4. Determine a equação geral do plano que contém</p>
-<p><span class="math display">\[A=(2,3,3),\quad B=(4,1,3),\quad C=(2,5,1),\quad D=(3,3,2).\]</span></p>
+<section id="exemplo-plano-com-três-pontos" class="slide level2">
+<h2>Exemplo: Plano com três pontos</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 1</strong></span> Determine a equação geral do plano que contém <span class="math display">\[
+A=(2,3,3),\quad B=(4,1,3),\quad C=(2,5,1).
+\]</span></p>
+</div>
 <p>Um vetor normal pode ser</p>
 <p><span class="math display">\[N=\overrightarrow{AB}\times\overrightarrow{AC}=\begin{vmatrix}
 \vec{i}&amp;\vec{j}&amp;\vec{k}\\
 2&amp;-2&amp;0\\
 0&amp;2&amp;-2
 \end{vmatrix}=(4,4,4).\]</span></p>
-<p>Logo, a equação é <span class="math inline">\(4x+4y+4z=d\)</span>. Substituindo <span class="math inline">\(B=(4,1,3)\)</span>, <span class="math inline">\(d=16+4+12=32\)</span>, ou seja, <span class="math inline">\(4x+4y+4z=32\)</span>, que simplifica para <span class="math inline">\(\boxed{x+y+z=8}\)</span>.</p>
+<p>Logo, a equação é <span class="math display">\[
+4x+4y+4z=d.
+\]</span> Substituindo <span class="math inline">\(B=(4,1,3)\)</span>, <span class="math inline">\(d=16+4+12=32\)</span>, ou seja, <span class="math display">\[
+4x+4y+4z=32,
+\]</span> que simplifica para <span class="math display">\[
+\boxed{x+y+z=8}.
+\]</span></p>
 </section>
-<section id="aplicação-plano-dado-por-3-pontos" class="slide level2">
-<h2>Aplicação: plano dado por 3 pontos</h2>
-<p>Exemplo 5. Determine a equação geral do plano que contém</p>
-<p><span class="math display">\[A=(1,1,1),\quad B=(-2,3,3),\quad C=(2,3,1).\]</span></p>
+<section id="exemplo-plano-dado-por-3-pontos" class="slide level2">
+<h2>Exemplo: plano dado por 3 pontos</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 2</strong></span> Determine a equação geral do plano que contém <span class="math display">\[
+A=(1,1,1),\quad B=(-2,3,3),\quad C=(2,3,1).
+\]</span></p>
+</div>
 <p>Um ponto <span class="math inline">\(P=(x,y,z)\)</span> pertence ao plano se os vetores são coplanares:</p>
 <p><span class="math display">\[\overrightarrow{AP}=(x-1,y-1,z-1),\quad \overrightarrow{AB}=(-3,2,2),\quad \overrightarrow{AC}=(1,2,0).\]</span></p>
 <p>Daí,</p>
@@ -619,9 +644,10 @@ x-1&amp;y-1&amp;z-1\\
 \end{bmatrix}=0.\]</span></p>
 <p>Expandindo, obtém-se <span class="math inline">\(\boxed{\;2x-y+4z=5\;}.\)</span></p>
 </section>
-<section id="aplicação-plano-por-duas-retas-concorrentes" class="slide level2">
-<h2>Aplicação: plano por duas retas concorrentes</h2>
-<p>Exemplo 6. Verifique se as retas são paralelas, concorrentes ou reversas. Se possível, determine o plano que contém as duas retas.</p>
+<section id="exemplo-plano-por-duas-retas-concorrentes" class="slide level2">
+<h2>Exemplo: plano por duas retas concorrentes</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 3</strong></span> Verifique se as retas são paralelas, concorrentes ou reversas. Se possível, determine o plano que contém as duas retas.</p>
 <p><span class="math display">\[\begin{cases}
 x=3+t\\
 y=3+2t\\
@@ -633,15 +659,17 @@ x=-1+2s\\
 y=-2+s\\
 z=3-s
 \end{cases}\]</span></p>
+</div>
 </section>
-<section id="aplicação-plano-por-duas-retas-paralelas" class="slide level2">
-<h2>Aplicação: plano por duas retas paralelas</h2>
-<p>Exemplo 7.</p>
+<section id="exemplo-plano-por-duas-retas-paralelas" class="slide level2">
+<h2>Exemplo: plano por duas retas paralelas</h2>
+<div class="{exm-}">
 <ol type="1">
 <li><p>Encontre a equação paramétrica da reta <span class="math inline">\(r\)</span> que passa por <span class="math inline">\(A=(3,5,3)\)</span> e <span class="math inline">\(B=(1,1,1)\)</span>.</p></li>
 <li><p>Considere <span class="math inline">\(s:(x,y,z)=(1,2,3)+t(1,2,1)\)</span>. Verifique se <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são paralelas, reversas ou concorrentes.</p></li>
 <li><p>Ache, se possível, uma equação geral do plano que contém as retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span>.</p></li>
 </ol>
+</div>
 <!-- End of Chico's aula12 -->
 <!-- Begin og Chico's Aula13 -->
 </section>
