@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
+
+  <meta name="author" content="UFMG">
+  <title>O espaço ℝⁿ</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-state="title" class="quarto-title-block center">
+  <h1 class="title">O espaço ℝⁿ</h1>
+  <p class="subtitle">Apostilas</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+UFMG 
+</div>
+</div>
+</div>
+
+  <p class="date">6 de novembro de 2025</p>
+</section>
+<section id="o-espaço-mathbbrn-mathbbr2" class="slide level2">
+<h2>O espaço <span class="math inline">\(\mathbb{R}^n\)</span> — <span class="math inline">\(\mathbb{R}^2\)</span></h2>
+<p><span class="math inline">\(\mathbb{R}^2\)</span> = plano cartesiano</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/07_Rn/fig01.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\mathbb{R}^2 = \{ (x_1,x_2)\mid x_1,x_2\in\mathbb{R} \}.
+\]</span></p>
+</div>
+</section>
+<section id="o-espaço-mathbbrn-mathbbr3" class="slide level2">
+<h2>O espaço <span class="math inline">\(\mathbb{R}^n\)</span> — <span class="math inline">\(\mathbb{R}^3\)</span></h2>
+<p><span class="math inline">\(\mathbb{R}^3\)</span> = espaço tridimensional</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/07_Rn/fig03.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<div class="bg-yellow">
+<p><span class="math display">\[
+\mathbb{R}^3 = \{ (x_1,x_2,x_3)\mid x_1,x_2,x_3\in\mathbb{R} \}.
+\]</span></p>
+</div>
+</section>
+<section id="o-espaço-mathbbrn-definição-geral" class="slide level2">
+<h2>O espaço <span class="math inline">\(\mathbb{R}^n\)</span> — definição geral</h2>
+<p>Generalizando, o espaço <span class="bg-yellow"><span class="math inline">\(\mathbb{R}^n\)</span> é o conjunto formado por todas as coleções ordenadas <span class="math inline">\((x_1,x_2,\ldots,x_n)\)</span></span> de números reais.</p>
+<p><span class="math display">\[
+\mathbb{R}^n = \{ (x_1,x_2,\ldots,x_n)\mid x_1,x_2,\ldots,x_n\in\mathbb{R} \}.
+\]</span></p>
+<p>Um elemento <span class="math inline">\(V=(x_1,x_2,\ldots,x_n)\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span> é um <span class="bg-yellow">vetor</span>.</p>
+<h3 id="operações-com-vetores-de-mathbbrn">Operações com vetores de <span class="math inline">\(\mathbb{R}^n\)</span></h3>
+<p>Se <span class="math inline">\(V=(v_1,\ldots,v_n)\)</span> e <span class="math inline">\(W=(w_1,\ldots,w_n)\)</span> são vetores de <span class="math inline">\(\mathbb{R}^n\)</span> e se <span class="math inline">\(\alpha\in\mathbb{R}\)</span>, então:</p>
+<ul>
+<li>Soma: <span class="bg-yellow"><span class="math inline">\(V+W=(v_1+w_1,\ldots,v_n+w_n)\)</span></span>.</li>
+<li>Multiplicação por escalar: <span class="bg-yellow"><span class="math inline">\(\alpha V=(\alpha v_1,\ldots,\alpha v_n)\)</span></span>.</li>
+</ul>
+<p>Estas operações satisfazem as propriedades já comentadas para o plano e para o espaço.</p>
+</section>
+<section id="operações-com-vetores-forma-matricial" class="slide level2">
+<h2>Operações com vetores — forma matricial</h2>
+<p>Representando os vetores de <span class="math inline">\(\mathbb{R}^n\)</span> como matrizes coluna, as operações viram operações naturais com matrizes:</p>
+<p><span class="math display">\[
+V=\begin{bmatrix}v_1\\ \vdots \\ v_n\end{bmatrix},\quad
+W=\begin{bmatrix}w_1\\ \vdots \\ w_n\end{bmatrix}.
+\]</span></p>
+<p>Soma: <span class="math inline">\(V+W=\begin{bmatrix} v_1+w_1 \\ \vdots \\ v_n+w_n \end{bmatrix}\)</span>.</p>
+<p>Multiplicação por escalar: <span class="math inline">\(\alpha V=\begin{bmatrix} \alpha v_1 \\ \vdots \\ \alpha v_n \end{bmatrix}\)</span>.</p>
+</section>
+<section id="combinação-linear" class="slide level2">
+<h2>Combinação linear</h2>
+<p>Sejam <span class="math inline">\(V_1,\ldots,V_k\in\mathbb{R}^n\)</span>. Uma <span class="bg-yellow">combinação linear</span> destes vetores é um vetor</p>
+<div class="bg-yellow">
+<p><span class="math display">\[
+V = x_1V_1 + x_2V_2 + \cdots + x_kV_k.
+\]</span></p>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 1</strong></span> Se <span class="math inline">\(V_1=(-1,2,1)\)</span> e <span class="math inline">\(V_2=(3,-1,2)\)</span> em <span class="math inline">\(\mathbb{R}^3\)</span> então</p>
+<p><span class="math display">\[\begin{aligned}
+V &amp;= 3V_1 + 5V_2 = 3(-1,2,1) + 5(3,-1,2) = (-3,6,3) + (15,-5,10) = (12,1,13),\\
+W &amp;= 2V_1 - 3V_2 = 2(-1,2,1) - 3(3,-1,2) = (-2,4,2) - (9,-3,6) = (-11,7,-4).
+\end{aligned}\]</span></p>
+</div>
+<h3 id="combinação-linear-vetores-canônicos">Combinação linear — vetores canônicos</h3>
+<p>Em <span class="math inline">\(\mathbb{R}^3\)</span> todo vetor <span class="math inline">\(V=(a,b,c)\)</span> é combinação linear dos vetores canônicos</p>
+<p><span class="math display">\[\vec{i}=(1,0,0),\quad \vec{j}=(0,1,0),\quad \vec{k}=(0,0,1).\]</span></p>
+<p>De fato, <span class="math inline">\(V=(a,b,c)=a\,\vec{i}+b\,\vec{j}+c\,\vec{k}\)</span>.</p>
+</section>
+<section id="combinação-linear-verificação-por-sistema-linear" class="slide level2">
+<h2>Combinação linear — verificação por sistema linear</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 2</strong></span> Verifique se <span class="math inline">\(V=(-10,-3,1)\)</span> é combinação linear de <span class="math inline">\(V_1=(1,-3,5)\)</span> e <span class="math inline">\(V_2=(-4,1,-3)\)</span>.</p>
+<p>Basta analisar se <span class="math inline">\(x_1V_1 + x_2V_2 = V\)</span> tem solução:</p>
+<p><span class="math display">\[
+\begin{aligned}
+x_1(1,-3,5) + x_2(-4,1,-3) &amp;= (-10,-3,1)\\
+(x_1-4x_2,\; -3x_1+x_2,\; 5x_1-3x_2) &amp;= (-10,-3,1)
+\end{aligned}
+\]</span></p>
+<p>Sistema equivalente:</p>
+<p><span class="math display">\[
+\begin{cases}
+x_1 - 4x_2 = -10,\\
+-3x_1 + x_2 = -3,\\
+5x_1 - 3x_2 = 1.
+\end{cases}
+\]</span></p>
+<p>Resolvendo, <span class="math inline">\(x_1=2\)</span> e <span class="math inline">\(x_2=3\)</span>, logo <span class="math inline">\(V=2V_1+3V_2\)</span>.</p>
+</div>
+</section>
+<section id="combinação-linear-forma-matricial-e-proposição" class="slide level2">
+<h2>Combinação linear — forma matricial e proposição</h2>
+<p>No exemplo anterior, o sistema é</p>
+<p><span class="math display">\[
+\begin{bmatrix} 1 &amp; -4 \\ -3 &amp; 1 \\ 5 &amp; -3 \end{bmatrix}
+\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}=
+\begin{bmatrix} -10 \\ -3 \\ 1 \end{bmatrix}.
+\]</span></p>
+<p>Observe que as colunas das matrizes são <span class="math inline">\(V_1\)</span>, <span class="math inline">\(V_2\)</span> e <span class="math inline">\(V\)</span>. Generalizando:</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 1</strong></span> Um vetor <span class="math inline">\(V\)</span> é combinação linear de <span class="math inline">\(V_1,\ldots,V_k\in\mathbb{R}^n\)</span> se o sistema linear <span class="math inline">\(AX=V\)</span> tem solução, onde <span class="math inline">\(A\)</span> é a matriz cujas colunas são <span class="math inline">\(V_1,\ldots,V_k\)</span>.</p>
+</div>
+</section>
+<section id="combinação-linear-exemplo-de-inexistência" class="slide level2">
+<h2>Combinação linear — exemplo de inexistência</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 3</strong></span> Verifique se <span class="math inline">\(V=(0,7,1)\)</span> é combinação linear de <span class="math inline">\(V_1=(2,1,4)\)</span> e <span class="math inline">\(V_2=(3,-2,5)\)</span>.</p>
+<p>Analisar <span class="math inline">\(xV_1 + yV_2 = V\)</span>:</p>
+<p><span class="math display">\[
+\begin{bmatrix} 2 &amp; 3 \\ 1 &amp; -2 \\ 4 &amp; 5 \end{bmatrix}
+\begin{bmatrix} x \\ y \end{bmatrix}=
+\begin{bmatrix} 0 \\ 7 \\ 1 \end{bmatrix}
+\]</span></p>
+<p>Este sistema não tem solução; logo <span class="math inline">\(V\)</span> não é combinação linear de <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span>.</p>
+</div>
+</section>
+<section id="subespaços" class="slide level2">
+<h2>Subespaços</h2>
+<p>Uma coleção <span class="math inline">\(X\)</span> de vetores de <span class="math inline">\(\mathbb R^n\)</span> é dito <span class="bg-yellow">subespaço</span> de <span class="math inline">\(\mathbb R^n\)</span> se <span class="math inline">\(X\)</span> é fechado para soma e múltiplo escalar. Isto é, se para quaisquer <span class="math inline">\(U_1,U_2\in X\)</span> e qualquer escalar <span class="math inline">\(a\in\mathbb{R}\)</span>, os vetores <span class="math display">\[
+U_1 + U_2\quad\mbox{e}\quad a U_1
+\]</span> também pertencem a <span class="math inline">\(X\)</span>.</p>
+<p>Se <span class="math inline">\(X\)</span> é subespaço de <span class="math inline">\(\mathbb R^n\)</span>, então <span class="math inline">\(X\)</span> contém o vetor nulo <span class="math inline">\(\vec{0}\)</span> e é fechado para combinações lineares. Ou seja, se <span class="math inline">\(U_1,\ldots,U_k\in X\)</span> e <span class="math inline">\(a_1,\ldots,a_k\in\mathbb{R}\)</span>, então <span class="math display">\[
+a_1 U_1 + a_2 U_2 + \cdots + a_k U_k \in X.
+\]</span></p>
+</section>
+<section id="exemplos-de-subespaços" class="slide level2">
+<h2>Exemplos de subespaços</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 4</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Uma reta pela origem em <span class="math inline">\(\mathbb R^2\)</span> ou <span class="math inline">\(\mathbb R^3\)</span> é um subespaço de <span class="math inline">\(\mathbb R^2\)</span> ou <span class="math inline">\(\mathbb R^3\)</span>.</li>
+<li>Um plano pela origem em <span class="math inline">\(\mathbb R^3\)</span> é um subespaço de <span class="math inline">\(\mathbb R^3\)</span>.</li>
+<li>O conjunto <span class="math inline">\(\{\vec{0}\}\)</span> é um subespaço de <span class="math inline">\(\mathbb R^n\)</span>.</li>
+<li>O conjunto <span class="math inline">\(\mathbb R^n\)</span> é um subespaço de <span class="math inline">\(\mathbb R^n\)</span>.</li>
+<li>Se <span class="math inline">\(A\)</span> é matriz <span class="math inline">\(m\times n\)</span>, o conjunto das soluções do sistema homogêneo <span class="math inline">\(AX=\vec 0\)</span> é um subespaço de <span class="math inline">\(\mathbb R^n\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="espaço-gerado" class="slide level2">
+<h2>Espaço gerado</h2>
+<p>Sejam <span class="math inline">\(V_1,\ldots,V_k\in\mathbb R^n\)</span>. O <span class="bg-yellow">espaço gerado</span> por <span class="math inline">\(V_1,\ldots,V_k\)</span> é o conjunto de todas as combinações lineares:</p>
+<p><span class="math display">\[
+[V_1,\ldots,V_k] = \{V=x_1V_1+\cdots+x_kV_k\mid x_1,\ldots,x_k\in\mathbb{R}\}.
+\]</span></p>
+<p>O conjunto <span class="math inline">\([V_1,\ldots,V_k]\)</span> é um subespaço de <span class="math inline">\(\mathbb R^n\)</span>.</p>
+<p><span class="bg-yellow">Observações importantes:</span></p>
+<ol type="1">
+<li>Como <span class="math inline">\(\vec{0} = 0V_1+\cdots+0V_k\)</span>, a origem sempre pertence a um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span>;</li>
+<li>Se <span class="math inline">\(V,W\in [V_1,\ldots,V_k]\)</span>, então <span class="math inline">\(V+W\in [V_1,\ldots,V_k]\)</span> (fechado para soma);</li>
+<li>Se <span class="math inline">\(V\in [V_1,\ldots,V_k]\)</span> and <span class="math inline">\(a\in \mathbb R\)</span>, então <span class="math inline">\(a V\in [V_1,\ldots,V_k]\)</span> (fechado para múltiplo escalar).</li>
+</ol>
+</section>
+<section id="exemplos" class="slide level2">
+<h2>Exemplos</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 5</strong></span> &nbsp;</p>
+<ul>
+<li>Gerado por um vetor não nulo: os múltiplos deste vetor (uma reta).</li>
+<li>Gerado por dois vetores não paralelos: o plano que contém estes vetores.</li>
+</ul>
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 6</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Determine a equação do plano <span class="math inline">\(\alpha\)</span> gerado por <span class="math inline">\(V_1=(2,-1,1)\)</span> e <span class="math inline">\(V_2=(3,0,2)\)</span>.</li>
+<li>O vetor <span class="math inline">\(U=(5,-1,3)\)</span> pertence a <span class="math inline">\(\alpha\)</span>? Qual é o espaço gerado por <span class="math inline">\(U,V_1,V_2\)</span>?</li>
+<li>O vetor <span class="math inline">\(W=(3,2,1)\)</span> pertence a <span class="math inline">\(\alpha\)</span>? Qual é o espaço gerado por <span class="math inline">\(W,V_1,V_2\)</span>?</li>
+</ol>
+</div>
+</section>
+<section id="espaço-gerado-proposição-útil" class="slide level2">
+<h2>Espaço gerado — proposição útil</h2>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposição 2</strong></span> Se <span class="math inline">\(V_0\)</span> é combinação linear de <span class="math inline">\(V_1,\ldots,V_k\)</span>, então <span class="math display">\[
+[V_0,V_1,\ldots,V_k] = [V_1,\ldots,V_k].
+\]</span></p>
+</div>
+<p><strong>Demonstração-esboço:</strong> escreva <span class="math inline">\(V_0=\alpha_1V_1+\cdots+\alpha_kV_k\)</span> e substitua em <span class="math inline">\(x_0V_0+x_1V_1+\cdots+x_kV_k\)</span> para ver que qualquer combinação com <span class="math inline">\(V_0\)</span> pode ser reescrita sem <span class="math inline">\(V_0\)</span>.</p>
+<p>Para formar <span class="math inline">\([V_1,\ldots,V_k]\)</span> podemos descartar qualquer vetor que seja combinação linear dos demais. Isso motiva o conceito de dependência linear:</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 1</strong></span> Um conjunto de vetores é <span class="bg-yellow">linearmente dependente</span> se algum deles é combinação linear dos demais. No caso contrário, dizemos que os vetores são <span class="bg-yellow">linearmente independentes</span>.</p>
+</div>
+</section>
+<section id="dependência-linear-questões" class="slide level2">
+<h2>Dependência linear — questões</h2>
+<ul>
+<li>Como saber se um conjunto <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> é linearmente dependente? Tentar cada um por vez é viável?</li>
+<li>Se <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> é dependente, qual vetor é combinação dos demais? Poderiam todos ser combinações dos outros?</li>
+</ul>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 1</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Determine a equação do plano <span class="math inline">\(\alpha\)</span> gerado pelos vetores <span class="math inline">\(V_1=(2,-1,1)\)</span> e <span class="math inline">\(V_2=(3,0,2)\)</span>.</li>
+<li>O vetor <span class="math inline">\(U = (1,-2,0)\)</span> pertence a este plano <span class="math inline">\(\alpha\)</span>? Qual é o espaço gerado por <span class="math inline">\(U\)</span>, <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span>? Neste caso o subespaço <span class="math inline">\([U,V_1,V_2]\)</span> é um plano pela origem.</li>
+<li>O vetor <span class="math inline">\(W = (3,2,1)\)</span> pertence a este plano <span class="math inline">\(\alpha\)</span>? Qual é o espaço gerado por <span class="math inline">\(W\)</span>, <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span>? Neste caso o subespaço <span class="math inline">\([W,V_1,V_2]\)</span> é todo o <span class="math inline">\(\mathbb{R}^3\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="dependência-linear" class="slide level2">
+<h2>Dependência Linear</h2>
+<p>Um conjunto de vetores é linearmente dependente se um deles for uma combinação linear dos demais.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1</strong></span> Um conjunto de vetores <span class="math inline">\(V_1,\ldots,V_k\)</span> é linearmente dependente se e somente se a equação vetorial <span class="math display">\[
+x_1V_1 + x_2V_2 + \cdots + x_kV_k = \vec{0}
+\]</span> possui solução não trivial. Isto é, possui solução em que algum <span class="math inline">\(x_i \neq 0\)</span>.</p>
+</div>
+<p>De fato, por exemplo, se <span class="math inline">\(x_1\neq 0\)</span>, na equação <span class="math inline">\(x_1V_1 + x_2V_2 + \cdots + x_kV_k = \vec{0}\)</span> podemos isolar <span class="math inline">\(V_1\)</span>, escrevendo <span class="math inline">\(V_1\)</span> como uma combinação linear dos demais vetores: <span class="math display">\[
+V_1 = -\dfrac{x_2}{x_1}V_2 - \cdots - \dfrac{x_k}{x_1}V_k.
+\]</span></p>
+</section>
+<section id="dependência-linear-1" class="slide level2">
+<h2>Dependência Linear</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 7</strong></span> Verifique se os vetores <span class="math inline">\(V_1=(1,2,5)\)</span>, <span class="math inline">\(V_2=(7,-1,5)\)</span> e <span class="math inline">\(V_3=(1,-1,-1)\)</span> são LI ou LD.</p>
+<p>Resolvendo a equação <span class="math inline">\(x_1V_1 + x_2V_2 + x_3V_3 = \vec{0}\)</span>, obtemos <span class="math inline">\(2V_1 - V_2 + 5V_3 = \vec{0}\)</span>.</p>
+<p>Neste caso, qualquer um destes vetores pode ser escrito como uma combinação linear dos outros dois.</p>
+<p>Portanto <span class="math inline">\([V_1,V_2,V_3] = [V_1,V_2] = [V_1,V_3] = [V_2,V_3]\)</span>.</p>
+<p>Este espaço gerado é um plano pela origem.</p>
+</div>
+</section>
+<section id="dependência-linear-2" class="slide level2">
+<h2>Dependência Linear</h2>
+<div id="exm">
+<p>Verifique se os vetores <span class="math inline">\(V_1=(3,0,-12)\)</span>, <span class="math inline">\(V_2=(-1,2,1)\)</span> e <span class="math inline">\(V_3=(-2,0,8)\)</span> são LI ou LD.</p>
+<p>Neste exemplo <span class="math inline">\(2V_1+0V_2+3V_3=\vec{0}\)</span>. Portanto</p>
+<ul>
+<li>podemos escrever <span class="math inline">\(V_1\)</span> como combinação linear de <span class="math inline">\(V_2\)</span> e <span class="math inline">\(V_3\)</span>.</li>
+<li>e também podemos escrever <span class="math inline">\(V_3\)</span> como combinação linear de <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span>.</li>
+<li>mas não podemos escrever <span class="math inline">\(V_2\)</span> como combinação linear de <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_3\)</span>.</li>
+</ul>
+<p>Daí <span class="math inline">\([V_1,V_2,V_3] = [V_2,V_3] = [V_1,V_2]\)</span>. Este espaço é um plano.</p>
+<p>Observe que <span class="math inline">\([V_1,V_3]\)</span> é uma reta contida neste plano.</p>
+</div>
+</section>
+<section id="dependência-linear-3" class="slide level2">
+<h2>Dependência Linear</h2>
+<p>Obs: No exemplo anterior vimos que quando um conjunto de vetores é LD então um destes vetores é uma combinação linear dos demais. Entretanto, mesmo o conjunto sendo LD, pode ser que exista um vetor que não seja uma combinação linear dos demais.</p>
+<p>Vimos que se <span class="math inline">\(V_1,V_2,\ldots,V_k\)</span> é um conjunto LD e se, por exemplo, <span class="math inline">\(V_1\)</span> é uma combinação linear dos demais vetores então</p>
+<p><span class="math display">\[[V_1,V_2,\ldots,V_k] = [V_2,\ldots,V_k].\]</span></p>
+<p>Para formar o espaço gerado não precisamos do vetor <span class="math inline">\(V_1\)</span>. Podemos gerar este mesmo espaço com um vetor a menos.</p>
+<p>Podemos continuar o processo, agora com os vetores <span class="math inline">\(V_2,\ldots,V_k\)</span>, eliminando vetores que já são combinações lineares dos demais.</p>
+<p>Após eliminar todos estes vetores, ficamos com um conjunto de vetores linearmente independete e que gera o mesmo espaço.</p>
+<p>Neste momento, obtemos uma base para este subespaço.</p>
+</section>
+<section id="base-e-dimensão" class="slide level2">
+<h2>Base e Dimensão</h2>
+<p>Informalmente: Uma base é um conjunto mínimo de geradores para um subespaço.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 2</strong></span> Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(\mathbb R^n\)</span>. Uma <span class="bg-yellow">base</span> para <span class="math inline">\(W\)</span> é um sistema de geradores linearmente independentes para <span class="math inline">\(W\)</span> (nenhum vetor é combinação linear dos demais vetores).</p>
+</div>
+</section>
+<section id="lema-chave" class="slide level2">
+<h2>Lema chave</h2>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 1</strong></span> Seja <span class="math inline">\(W=[V_1,\ldots,V_k]\)</span> um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span>. Assuma que <span class="math inline">\(m&gt;k\)</span> e sejam <span class="math inline">\(U_1,\ldots,U_m\in W\)</span>. Então os vetores <span class="math inline">\(U_1,\ldots,U_m\)</span> são LD.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Comprovação</em>. </span>Como cada <span class="math inline">\(U_j\in W=[V_1,\ldots,V_k]\)</span>, existem coeficientes <span class="math inline">\(a_{ij}\)</span> tais que <span class="math display">\[
+U_j=\sum_{i=1}^k a_{ij}V_i,\qquad j=1,\ldots,m.
+\]</span> Considere a matriz <span class="math inline">\(A=(a_{ij})\in\mathbb{R}^{k\times m}\)</span>. Como <span class="math inline">\(m&gt;k\)</span>, o sistema homogêneo <span class="math inline">\(A\,x=\vec{0}\)</span> tem solução não trivial. Seja <span class="math inline">\(x=(x_1,\ldots,x_m)\neq\vec{0}\)</span> tal solução. Então <span class="math display">\[
+\sum_{j=1}^m x_j U_j
+=\sum_{j=1}^m x_j\Big(\sum_{i=1}^k a_{ij}V_i\Big)
+=\sum_{i=1}^k\Big(\sum_{j=1}^m a_{ij}x_j\Big)V_i
+=\sum_{i=1}^k 0\cdot V_i=\vec{0}.
+\]</span> Logo, existe uma combinação linear não trivial dos <span class="math inline">\(U_j\)</span> que dá o vetor nulo, isto é, <span class="math inline">\(U_1,\ldots,U_m\)</span> são linearmente dependentes.</p>
+</div>
+</section>
+<section id="a-dimensão" class="slide level2">
+<h2>A dimensão</h2>
+<p>Consequência: Assuma que <span class="math inline">\(W=[V_1,\ldots,V_k]=[U_1,\ldots,U_m]\)</span> e que <span class="math inline">\(V_1,\ldots,V_k\)</span> e <span class="math inline">\(U_1,\ldots,U_m\)</span> são bases de <span class="math inline">\(W\)</span>. Então <span class="math inline">\(k=m\)</span>.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 3</strong></span> Se a base tem <span class="math inline">\(k\)</span> vetores, dizemos que <span class="math inline">\(W\)</span> é um subespaço de <span class="bg-yellow">dimensão</span> <span class="math inline">\(k\)</span>: <span class="math display">\[
+\dim(W)=k.
+\]</span></p>
+</div>
+<p>Se <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> é uma base para o subespaço <span class="math inline">\(W\)</span>, então <span class="math inline">\(W\)</span> é o espaço gerado por estes vetores. Mais ainda, não existem “vetores sobrando”. Não podemos descartar nenhum dos vetores da base. <span class="math display">\[
+W = [V_1,\ldots,V_k].
+\]</span></p>
+</section>
+<section id="base-e-dimensão-1" class="slide level2">
+<h2>Base e Dimensão</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 8</strong></span> &nbsp;</p>
+<ol type="1">
+<li>No plano, <span class="math inline">\(\{\vec{i},\vec{j}\}\)</span> é uma base de <span class="math inline">\(\mathbb{R}^2\)</span>.</li>
+<li>De modo mais geral, quaisquer vetores não paralelos <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span> formam uma base <span class="math inline">\(\{V_1,V_2\}\)</span> de <span class="math inline">\(\mathbb{R}^2\)</span>.</li>
+<li>No espaço, <span class="math inline">\(\{\vec{i},\vec{j},\vec{k}\}\)</span> é uma base de <span class="math inline">\(\mathbb{R}^3\)</span>.</li>
+<li>Se <span class="math inline">\(W\)</span> é uma reta pela origem, e se <span class="math inline">\(V_1\in W\)</span> é um vetor não nulo, então <span class="math inline">\(\{V_1\}\)</span> é uma base para <span class="math inline">\(W\)</span>.</li>
+<li>Se <span class="math inline">\(W\)</span> é um plano pela origem e se <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span> são dois vetores não paralelos em <span class="math inline">\(W\)</span>, então <span class="math inline">\(\{V_1,V_2\}\)</span> é uma base de <span class="math inline">\(W\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="base-e-dimensão-2" class="slide level2">
+<h2>Base e Dimensão</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 9</strong></span> &nbsp;</p>
+<ol start="6" type="1">
+<li>Se <span class="math inline">\(V_1\)</span>, <span class="math inline">\(V_2\)</span> e <span class="math inline">\(V_3\)</span> são vetores não coplanares, então <span class="math inline">\(\{V_1,V_2,V_3\}\)</span> é uma base de <span class="math inline">\(\mathbb{R}^3\)</span>. Observe que este é o caso se, e somente se, <span class="math inline">\(\det[V_1,V_2,V_3] \neq 0\)</span>.</li>
+<li>Determine uma base para o plano de equação <span class="math inline">\(2x+y-3x=0\)</span>. Em seguida complete esta base até uma base de <span class="math inline">\(\mathbb{R}^3\)</span>.</li>
+<li>Determine uma base e a dimensão do seguinte subespaço de <span class="math inline">\(\mathbb{R}^3\)</span> <span class="math display">\[
+W = \{ (a-b,\ b+c,\ 2a-b+c)\in\mathbb{R}^3\mid a,b,c\in\mathbb{R} \}.
+\]</span></li>
+<li>O conjunto solução de um sistema linear homogêneo é um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span>. Por exemplo, determine uma base para o conjunto solução de <span class="math display">\[
+\left\{\begin{array}{rrrrrrrrr}
+x  &amp; + &amp;  y  &amp; - &amp; 2z &amp; - &amp;  w &amp; = &amp;  0 \\
+-x  &amp; - &amp;  y  &amp; + &amp; 2z &amp; + &amp;  w &amp; = &amp;  0 \\
+2x  &amp; + &amp; 2y  &amp; - &amp;  z &amp; + &amp;  w &amp; = &amp;  0 \\
+\end{array}\right.
+\]</span></li>
+</ol>
+</div>
+</section>
+<section id="vetores-li-e-ld-caracterização-via-determinantes" class="slide level2">
+<h2>Vetores LI e LD: caracterização via determinantes</h2>
+<p>Então os vetores <span class="math inline">\(V_1,V_2,\ldots,V_k\)</span> são LD quando o sistema linear <span class="math inline">\(AX=\overline{0}\)</span> tem solução não trivial, em que as colunas de <span class="math inline">\(A\)</span> são os vetores <span class="math inline">\(V_1,V_2,\ldots,V_k\)</span>.</p>
+<p>Se <span class="math inline">\(k=n\)</span>, ou seja, se temos <span class="math inline">\(n\)</span> vetores em <span class="math inline">\(\mathbb{R}^n\)</span>, a matriz <span class="math inline">\(A\)</span> é quadrada. Lembre-se que, neste caso, o sistema homogêneo <span class="math inline">\(AX=\overline{0}\)</span> tem solução não trivial somente quando <span class="math inline">\(\det(A) = 0\)</span> (a matriz <span class="math inline">\(A\)</span> não tem inversa).</p>
+<p>Portanto, em <span class="math inline">\(\mathbb{R}^n\)</span>:</p>
+<ul>
+<li><span class="math inline">\(V_1,V_2,\ldots,V_n\)</span> são LD <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\det(A) = 0\)</span>.</li>
+<li><span class="math inline">\(V_1,V_2,\ldots,V_n\)</span> são LI <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\det(A) \neq 0\)</span>.</li>
+</ul>
+</section>
+<section id="produto-escalar-em-mathbbrn" class="slide level2">
+<h2>Produto escalar em <span class="math inline">\(\mathbb{R}^n\)</span></h2>
+<p>Se <span class="math inline">\(V=(v_1,v_2,\ldots,v_n)\)</span> e <span class="math inline">\(W=(w_1,w_2,\ldots,w_n)\)</span> são vetores em <span class="math inline">\(\mathbb{R}^n\)</span>, o produto escalar entre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é o número real</p>
+<p><span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2 + \cdots + v_nw_n.\]</span></p>
+<p>A norma do vetor <span class="math inline">\(V\)</span> é <span class="math inline">\(\|V\| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2} = \sqrt{\langle V,V\rangle}\)</span>.</p>
+<p>Observe que isto é uma generalização das definições que já foram dadas e interpretadas para <span class="math inline">\(\mathbb{R}^2\)</span> e <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+</section>
+<section id="produto-escalar-em-mathbbrn-propriedades" class="slide level2">
+<h2>Produto escalar em <span class="math inline">\(\mathbb{R}^n\)</span> — propriedades</h2>
+<p>São as mesmas que já foram demonstradas para o <span class="math inline">\(\mathbb{R}^2\)</span> e <span class="math inline">\(\mathbb{R}^3\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(\langle V,W\rangle = \langle W,V\rangle\)</span>.</li>
+<li><span class="math inline">\(\langle U+V,W\rangle = \langle U,W\rangle + \langle V,W\rangle\)</span>.</li>
+<li><span class="math inline">\(\langle \alpha V,W\rangle = \langle V,\alpha W\rangle = \alpha \langle V,W\rangle\)</span>.</li>
+<li><span class="math inline">\(\langle V,V\rangle=\|V\|^2\ \geq\ 0\)</span>. Mais ainda, <span class="math inline">\(\|V\|=0 \Leftrightarrow V=\vec{0}\)</span>.</li>
+<li><span class="math inline">\(|\langle V,W\rangle|\ \leq\ \|V\|\,\|W\|\)</span> (Cauchy–Schwarz).</li>
+<li><span class="math inline">\(\|V+W\|\ \leq\ \|V\| + \|W\|\)</span> (Desigualdade triangular).</li>
+</ol>
+</section>
+<section id="cauchyschwarz-e-ângulo" class="slide level2">
+<h2>Cauchy–Schwarz e ângulo</h2>
+<p>Da desigualdade de Cauchy–Schwarz, para <span class="math inline">\(V,W\neq\vec{0}\)</span>,</p>
+<p><span class="math display">\[\frac{|\langle V,W\rangle|}{\|V\|\,\|W\|}\ \leq\ 1 \quad\Rightarrow\quad -1\ \leq\ \frac{\langle V,W\rangle}{\|V\|\,\|W\|}\ \leq\ 1.\]</span></p>
+<p>Existe um único <span class="math inline">\(\theta\in[0,\pi]\)</span> tal que</p>
+<p><span class="math display">\[\cos\theta\ =\ \frac{\langle V,W\rangle}{\|V\|\,\|W\|}.\]</span></p>
+<p>Chamamos <span class="math inline">\(\theta\)</span> de ângulo entre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span>, e</p>
+<p><span class="math display">\[\langle V,W\rangle = \|V\|\,\|W\|\cos\theta.\]</span></p>
+</section>
+<section id="vetores-ortogonais-em-mathbbrn" class="slide level2">
+<h2>Vetores ortogonais em <span class="math inline">\(\mathbb{R}^n\)</span></h2>
+<p>Para <span class="math inline">\(V,W\neq\vec{0}\)</span> em <span class="math inline">\(\mathbb{R}^n\)</span>,</p>
+<p><span class="math display">\[\langle V,W\rangle = \|V\|\,\|W\|\cos\theta.\]</span></p>
+<p>Assim, <span class="math inline">\(\langle V,W\rangle=0\)</span> se, e somente se, <span class="math inline">\(\theta=90^\circ\)</span>.</p>
+<p>Portanto,</p>
+<p><span class="math display">\[\boxed{\ \langle V,W\rangle=0\ \ \text{caracteriza vetores ortogonais}\ }\]</span></p>
+</section>
+<section id="projeção-ortogonal" class="slide level2">
+<h2>Projeção ortogonal</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/07_Rn/fig04.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
+</div>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>O vetor projeção ortogonal é caracterizado por:</p>
+<ul>
+<li><span class="math inline">\(\operatorname{proj}_V(W) = \alpha V\)</span> é um múltiplo escalar de <span class="math inline">\(V\)</span>.</li>
+<li>A diferença <span class="math inline">\(W - \operatorname{proj}_V(W)\)</span> é um vetor ortogonal a <span class="math inline">\(V\)</span>.</li>
+</ul>
+</div>
+<div class="fragment current-visible">
+<p>Temos <span class="math display">\[
+\langle W - \operatorname{proj}_V(W),V\rangle=0 \Rightarrow \langle W - \alpha V,V\rangle=0 \Rightarrow \langle W,V\rangle - \alpha\langle V,V\rangle=0,
+\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p>logo</p>
+<p><span class="math display">\[
+\alpha = \dfrac{\langle W,V\rangle}{\langle V,V\rangle}, \qquad \boxed{\operatorname{proj}_V(W) = \dfrac{\langle W,V\rangle}{\langle V,V\rangle}\, V}.
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="bases-ortogonais-e-ortonormais" class="slide level2">
+<h2>Bases ortogonais e ortonormais</h2>
+<p>Seja <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> uma base para um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span>:</p>
+<ol type="1">
+<li>A base é ortogonal se quaisquer dois vetores da base são ortogonais (<span class="math inline">\(\langle V_i,V_j\rangle=0\)</span>).</li>
+<li>A base é ortonormal se todos os vetores são unitários e perpendiculares (<span class="math inline">\(\langle V_i,V_j\rangle=0\)</span> e <span class="math inline">\(\langle V_i,V_i\rangle=1\)</span>).</li>
+</ol>
+<p>Exemplos:</p>
+<ul>
+<li><span class="math inline">\(\{\vec{i},\vec{j},\vec{k}\}\)</span> é uma base ortonormal de <span class="math inline">\(\mathbb{R}^3\)</span>.</li>
+<li><span class="math inline">\(V_1=(1,3)\)</span> e <span class="math inline">\(V_2=(-3,1)\)</span> formam uma base ortogonal de <span class="math inline">\(\mathbb{R}^2\)</span>.</li>
+<li><span class="math inline">\(V_1=(\cos\theta,\operatorname{sen}\,\theta)\)</span> e <span class="math inline">\(V_2=(-\operatorname{sen}\,\theta,\cos\theta)\)</span> formam uma base ortonormal de <span class="math inline">\(\mathbb{R}^2\)</span>.</li>
+</ul>
+</section>
+<section id="aplicação-coordenadas-em-base-ortogonal" class="slide level2">
+<h2>Aplicação: coordenadas em base ortogonal</h2>
+<p>Se <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> é uma base ortogonal para um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span> e se <span class="math inline">\(V=x_1V_1+\cdots+x_kV_k\)</span>, então</p>
+<p><span class="math display">\[\langle V,V_j\rangle = x_j\langle V_j,V_j\rangle \quad\Rightarrow\quad \boxed{\ x_j = \dfrac{\langle V,V_j\rangle}{\langle V_j,V_j\rangle},\ j=1,\ldots,k\ }\]</span></p>
+</section>
+<section id="bases-ortogonais-e-ortonormais-exercícios" class="slide level2">
+<h2>Bases ortogonais e ortonormais — exercícios</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 2</strong></span> &nbsp;</p>
+<ol type="1">
+<li><p>Considere a base ortogonal de <span class="math inline">\(\mathbb{R}^2\)</span> formada por <span class="math inline">\(V_1=(3,1)\)</span> e <span class="math inline">\(V_2=(-1,3)\)</span>. Se <span class="math inline">\(V=(5,4)\)</span> determine <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> tais que <span class="math inline">\(V = x_1V_1 + x_2V_2\)</span>.</p></li>
+<li><p>Considere a base ortonormal de <span class="math inline">\(\mathbb{R}^2\)</span> formada por <span class="math inline">\(V_1=(\tfrac{4}{5},\tfrac{3}{5})\)</span> e <span class="math inline">\(V_2=(-\tfrac{3}{5},\tfrac{4}{5})\)</span>. Se <span class="math inline">\(V=(5,4)\)</span> determine <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> tais que <span class="math inline">\(V = x_1V_1 + x_2V_2\)</span>.</p></li>
+<li><p>Considere o subespaço <span class="math inline">\(W\)</span> de <span class="math inline">\(\mathbb{R}^3\)</span> que é o plano de equação <span class="math inline">\(2x+y-3z=0\)</span>.</p>
+<ol type="a">
+<li>Determine uma base de <span class="math inline">\(W\)</span>.</li>
+<li>Determine uma base ortogonal <span class="math inline">\(\{V_1,V_2\}\)</span> de <span class="math inline">\(W\)</span>.</li>
+<li>Determine uma base ortonormal <span class="math inline">\(\{U_1,U_2\}\)</span> de <span class="math inline">\(W\)</span>.</li>
+<li>Se <span class="math inline">\(V=(5,2,4)\)</span>, calcule <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> tais que <span class="math inline">\(V=x_1V_1+x_2V_2\)</span>.</li>
+<li>Se <span class="math inline">\(V=(5,2,4)\)</span>, calcule <span class="math inline">\(c_1\)</span> e <span class="math inline">\(c_2\)</span> tais que <span class="math inline">\(V=c_1U_1+c_2U_2\)</span>.</li>
+</ol></li>
+</ol>
+</div>
+</section>
+<section id="bases-ortogonais-e-ortonormais-exercícios-1" class="slide level2">
+<h2>Bases ortogonais e ortonormais — exercícios</h2>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 3</strong></span> &nbsp;</p>
+<ol start="4" type="1">
+<li><p>Considere o plano <span class="math inline">\(\alpha\)</span> de <span class="math inline">\(\mathbb{R}^3\)</span> de equação <span class="math inline">\(x-2y+z=0\)</span>.</p>
+<ol type="a">
+<li>Determine uma base ortogonal <span class="math inline">\(\{V_1, V_2, V_3\}\)</span> de <span class="math inline">\(\mathbb{R}^3\)</span> tal que <span class="math inline">\(\{V_1,V_2\}\)</span> é uma base ortogonal do plano <span class="math inline">\(\alpha\)</span>.</li>
+<li>Escreva o vetor <span class="math inline">\(V=(10,1,4)\)</span> como uma combinação linear dos vetores da base do item (a): encontre <span class="math inline">\(x,y,z\)</span> tais que <span class="math inline">\(xV_1+yV_2+zV_3=V\)</span>.</li>
+</ol></li>
+<li><p>Sejam <span class="math inline">\(V_1=(1,3,-2,5)\)</span> e <span class="math inline">\(V_2=(1,2,1,3)\)</span> vetores de <span class="math inline">\(\mathbb{R}^4\)</span>. Seja <span class="math inline">\(W\)</span> o conjunto dos vetores de <span class="math inline">\(\mathbb{R}^4\)</span> que são ortogonais a <span class="math inline">\(V_1\)</span> e a <span class="math inline">\(V_2\)</span>.</p>
+<ol type="a">
+<li>Determine uma base de <span class="math inline">\(W\)</span>.</li>
+<li>Determine uma base ortogonal <span class="math inline">\(\{W_1,W_2\}\)</span> de <span class="math inline">\(W\)</span>.</li>
+<li>Se <span class="math inline">\(V=(-9,-4,2,5)\)</span>, mostre que <span class="math inline">\(V\in W\)</span> e calcule <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> tais que <span class="math inline">\(V=x_1V_1+x_2V_2\)</span>.</li>
+</ol></li>
+</ol>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiada");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiada");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/schcs\.github\.io\/GAALUFMG\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
