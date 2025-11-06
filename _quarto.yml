@@ -8,6 +8,7 @@ project:
     - 04_determinant.qmd
     - 05_vetores.qmd
     - 06_retas_e_planos.qmd
+    - 07_Rn.qmd
     
 
 render-on-save: false 
