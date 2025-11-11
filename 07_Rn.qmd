@@ -310,11 +310,25 @@ Neste momento, obtemos uma base para este subespaço.
 
 ## Base e Dimensão
 
-Informalmente: Uma base é um conjunto mínimo de geradores para um subespaço.
+Informalmente: Uma [base é um conjunto mínimo]{.bg-yellow} de geradores para um subespaço.
 
 :::{#def-}
-Seja $W$ um subespaço de $\mathbb R^n$. Uma [base]{.bg-yellow} para $W$ é um sistema de geradores linearmente independentes para $W$ (nenhum vetor é combinação linear dos demais vetores).
+Seja $W$ um subespaço de $\mathbb R^n$. Uma [base]{.bg-yellow} para $W$ é um sistema de vetores 
+$V_1,\ldots,V_k$ tais que 
+
+1. $W = [V_1,\ldots,V_k]$ (ou seja, os vetores geram $W$ são combinações lineares destes vetores); e
+2. $V_1,\ldots,V_k$ são linearmente independentes (ou seja, nenhum vetor é combinação linear dos demais).
 :::
+
+:::{#lem-}
+Se $V_1,\ldots,V_k$ é base de $W$, então todo vetor de $W$ pode ser escrito de forma única como combinação linear de $V_1,\ldots,V_k$.
+:::
+
+Se $V\in W$ e 
+$$
+V=x_1V_1 + x_2V_2 + \cdots + x_kV_k
+$$
+então os escalares $x_1,\ldots,x_k$ são chamadas de [coordenadas]{.bg-yellow} de $V$ na base $V_1,\ldots,V_k$.
 
 ## Lema chave
 
@@ -401,7 +415,7 @@ Portanto, em $\mathbb{R}^n$:
 
 ## Produto escalar em $\mathbb{R}^n$
 
-Se $V=(v_1,v_2,\ldots,v_n)$ e $W=(w_1,w_2,\ldots,w_n)$ são vetores em $\mathbb{R}^n$, o produto escalar entre $V$ e $W$ é o número real
+Se $V=(v_1,v_2,\ldots,v_n)$ e $W=(w_1,w_2,\ldots,w_n)$ são vetores em $\mathbb{R}^n$, o [produto escalar]{.bg-yellow} entre $V$ e $W$ é o número real
 
 $$\langle V,W\rangle = v_1w_1 + v_2w_2 + \cdots + v_nw_n.$$
 
@@ -424,7 +438,7 @@ São as mesmas que já foram demonstradas para o $\mathbb{R}^2$ e $\mathbb{R}^3$
 
 ## Cauchy–Schwarz e ângulo
 
-Da desigualdade de Cauchy–Schwarz, para $V,W\neq\vec{0}$,
+Da [desigualdade de Cauchy–Schwarz]{.bg-yellow}, para $V,W\neq\vec{0}$,
 
 $$\frac{|\langle V,W\rangle|}{\|V\|\,\|W\|}\ \leq\ 1 \quad\Rightarrow\quad -1\ \leq\ \frac{\langle V,W\rangle}{\|V\|\,\|W\|}\ \leq\ 1.$$
 
@@ -482,8 +496,8 @@ $$
 
 Seja $\{V_1,\ldots,V_k\}$ uma base para um subespaço de $\mathbb{R}^n$:
 
-1. A base é ortogonal se quaisquer dois vetores da base são ortogonais ($\langle V_i,V_j\rangle=0$).
-2. A base é ortonormal se todos os vetores são unitários e perpendiculares ($\langle V_i,V_j\rangle=0$ e $\langle V_i,V_i\rangle=1$).
+1. A [base é ortogonal]{.bg-yellow} se quaisquer dois vetores da base são ortogonais ($\langle V_i,V_j\rangle=0$).
+2. A [base é ortonormal]{.bg-yellow} se todos os vetores são unitários e perpendiculares ($\langle V_i,V_j\rangle=0$ e $\langle V_i,V_i\rangle=1$).
 
 Exemplos:
 
@@ -529,3 +543,74 @@ $$\langle V,V_j\rangle = x_j\langle V_j,V_j\rangle \quad\Rightarrow\quad \boxed{
     b. Determine uma base ortogonal $\{W_1,W_2\}$ de $W$.
     c. Se $V=(-9,-4,2,5)$, mostre que $V\in W$ e calcule $x_1$ e $x_2$ tais que $V=x_1V_1+x_2V_2$.
 :::
+
+## Ortogonalização de Gram-Schmidt
+
+Assuma que $V_1,V_2,\ldots,V_k$ são vetores LI em $\mathbb{R}^n$. O processo de [Ortogonalização de Gram-Schmidt]{.bg-yellow} constrói uma base ortogonal $U_1,U_2,\ldots,U_k$ para o mesmo espaço gerado por $V_1,V_2,\ldots,V_k$.
+
+O processo é o seguinte:
+\begin{align*}
+U_1 & = V_1,\\
+U_2 & = V_2 - \operatorname{proj}_{U_1}(V_2),\\
+U_3 & = V_3 - \operatorname{proj}_{U_1}(V_3) - \operatorname{proj}_{U_2}(V_3),\\
+& \ \vdots \\
+U_k & = V_k - \operatorname{proj}_{U_1}(V_k) - \operatorname{proj}_{U_2}(V_k) - \cdots - \operatorname{proj}_{U_{k-1}}(V_k).
+\end{align*}
+Após obter a base ortogonal $U_1,U_2,\ldots,U_k$, podemos obter uma base ortonormal dividindo cada vetor pela sua norma:  
+
+## Exemplo de Ortogonalização de Gram-Schmidt
+
+:::{#exm-}
+Considere os vetores $V_1=(1,1,0,0)$, $V_2=(1,0,1,1)$, $V_3=(0,1,1,0)$ em $\mathbb{R}^4$. Eles são LI. 
+Aplicando Gram-Schmidt:
+\begin{align*}
+U_1 & = V_1 = (1,1,0,0),\\
+U_2 & = V_2 - \operatorname{proj}_{U_1}(V_2) = (1,0,1,1) - \dfrac{\langle V_2,U_1\rangle}{\langle U_1,U_1\rangle} U_1 = (1,0,1,1) - \dfrac{1}{2}(1,1,0,0) = \left(\dfrac{1}{2}, -\dfrac{1}{2}, 1, 1\right),\\
+U_3 & = V_3 - \operatorname{proj}_{U_1}(V_3) - \operatorname{proj}_{U_2}(V_3) \\
+    & = (0,1,1,0) - \dfrac{\langle V_3,U_1\rangle}{\langle U_1,U_1\rangle} U_1 - \dfrac{\langle V_3,U_2\rangle}{\langle U_2,U_2\rangle} U_2 \\
+    & = (0,1,1,0) - \dfrac{1}{2}(1,1,0,0) - \dfrac{1/2}{5/2}\left(\dfrac{1}{2}, -\dfrac{1}{2}, 1, 1\right) = \left(-\dfrac{3}{5}, \dfrac{3}{5}, \dfrac{4}{5}, -\dfrac{1}{5}\right).
+\end{align*}
+A base ortogonal é $\{U_1,U_2,U_3\}$.
+:::
+
+## Mudança de base 
+
+Seja $W$ um subespaço de $\mathbb{R}^n$ de dimensão $k$. Sejam $\mathcal{B}=\{V_1,\ldots,V_k\}$ e $\mathcal{C}=\{U_1,\ldots,U_k\}$ duas bases de $W$. Então, para todo vetor $X \in W$, podemos escrever:
+$$
+X = x_1V_1 + x_2V_2 + \cdots + x_kV_k = c_1U_1 + c_2U_2 + \cdots + c_kU_k.
+$$  
+Os coeficientes $x_1,x_2,\ldots,x_k$ são as coordenadas de $X$ na base $\mathcal{B}$ e os coeficientes $c_1,c_2,\ldots,c_k$ são as coordenadas de $X$ na base $\mathcal{C}$.  
+A matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é a matriz $P$ cujas colunas são as coordenadas dos vetores da base $\mathcal{C}$ na base $\mathcal{B}$:
+$$P = [ [U_1]_{\mathcal{B}} \quad [U_2]_{\mathcal{B}} \quad \cdots \quad [U_k]_{\mathcal{B}} ].$$
+Assim, se $[X]_{\mathcal{B}}$ e $[X]_{\mathcal{C}}$ são as matrizes coluna das coordenadas de $X$ nas bases $\mathcal{B}$ e $\mathcal{C}$, respectivamente, então
+$$[X]_{\mathcal{B}} = P [X]_{\mathcal{C}}.$$
+A matriz $P$ é invertível e sua inversa é a matriz de mudança de base de $\mathcal{C}$ para $\mathcal{B}$.
+
+## Exemplo de mudança de base
+
+:::{#exm-}
+Sejam $W$ o plano de $\mathbb{R}^3$ de equação $x+y+z=0$, $\mathcal{B}=\{V_1=(1,-1,0), V_2=(1,0,-1)\}$ e $\mathcal{C}=\{U_1=(1,2,-3), U_2=(2,-1,-1)\}$ bases de $W$.  
+Determine a matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ e as coordenadas do vetor $X=(1,0,-1)$ na base $\mathcal{C}$.
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Resolvendo o sistema
+$$\begin{cases}
+a(1,-1,0) + b(1,0,-1) = (1,2,-3), \\
+c(1,-1,0) + d(1,0,-1) = (2,-1,-1),
+\end{cases}$$
+obtemos $U_1 = \frac{1}{3}V_1 + \frac{4}{3}V_2$ e $U_2 = \frac{5}{3}V_1 - \frac{2}{3}V_2$. Assim, a matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é 
+$$P = \begin{bmatrix} \frac{1}{3} & \frac{5}{3} \\[6pt] \frac{4}{3} & -\frac{2}{3} \end{bmatrix}.$$
+:::
+
+:::{.fragment .current-visible}
+$$P = \begin{bmatrix} \frac{1}{3} & \frac{5}{3} \\[6pt] \frac{4}{3} & -\frac{2}{3} \end{bmatrix}.$$
+Para encontrar as coordenadas de $X$ na base $\mathcal{C}$, primeiro encontramos as coordenadas de $X$ na base $\mathcal{B}$:
+$$X = 0.5V_1 + 0.5V_2 \Rightarrow [X]_{\mathcal{B}} = \begin{bmatrix} 0.5 \\ 0.5 \end{bmatrix}.$$
+Agora, usando a matriz de mudança de base, temos
+$$[X]_{\mathcal{B}} = P [X]_{\mathcal{C}} \Rightarrow [X]_{\mathcal{C}} = P^{-1} [X]_{\mathcal{B}} = \begin{bmatrix} 1 \\ -0.5 \end{bmatrix}.$$
+Portanto, as coordenadas de $X$ na base $\mathcal{C}$ são $(1, -0.5)$.
+:::
+:::
+:::
+
