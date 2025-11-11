@@ -139,7 +139,7 @@ UFMG
 </div>
 </div>
 
-  <p class="date">6 de novembro de 2025</p>
+  <p class="date">11 de novembro de 2025</p>
 </section>
 <section id="o-espaço-mathbbrn-mathbbr2" class="slide level2">
 <h2>O espaço <span class="math inline">\(\mathbb{R}^n\)</span> — <span class="math inline">\(\mathbb{R}^2\)</span></h2>
@@ -392,15 +392,25 @@ V_1 = -\dfrac{x_2}{x_1}V_2 - \cdots - \dfrac{x_k}{x_1}V_k.
 </section>
 <section id="base-e-dimensão" class="slide level2">
 <h2>Base e Dimensão</h2>
-<p>Informalmente: Uma base é um conjunto mínimo de geradores para um subespaço.</p>
+<p>Informalmente: Uma <span class="bg-yellow">base é um conjunto mínimo</span> de geradores para um subespaço.</p>
 <div id="def-" class="theorem definition">
-<p><span class="theorem-title"><strong>Definição 2</strong></span> Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(\mathbb R^n\)</span>. Uma <span class="bg-yellow">base</span> para <span class="math inline">\(W\)</span> é um sistema de geradores linearmente independentes para <span class="math inline">\(W\)</span> (nenhum vetor é combinação linear dos demais vetores).</p>
+<p><span class="theorem-title"><strong>Definição 2</strong></span> Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(\mathbb R^n\)</span>. Uma <span class="bg-yellow">base</span> para <span class="math inline">\(W\)</span> é um sistema de vetores <span class="math inline">\(V_1,\ldots,V_k\)</span> tais que</p>
+<ol type="1">
+<li><span class="math inline">\(W = [V_1,\ldots,V_k]\)</span> (ou seja, os vetores geram <span class="math inline">\(W\)</span> são combinações lineares destes vetores); e</li>
+<li><span class="math inline">\(V_1,\ldots,V_k\)</span> são linearmente independentes (ou seja, nenhum vetor é combinação linear dos demais).</li>
+</ol>
 </div>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 1</strong></span> Se <span class="math inline">\(V_1,\ldots,V_k\)</span> é base de <span class="math inline">\(W\)</span>, então todo vetor de <span class="math inline">\(W\)</span> pode ser escrito de forma única como combinação linear de <span class="math inline">\(V_1,\ldots,V_k\)</span>.</p>
+</div>
+<p>Se <span class="math inline">\(V\in W\)</span> e <span class="math display">\[
+V=x_1V_1 + x_2V_2 + \cdots + x_kV_k
+\]</span> então os escalares <span class="math inline">\(x_1,\ldots,x_k\)</span> são chamadas de <span class="bg-yellow">coordenadas</span> de <span class="math inline">\(V\)</span> na base <span class="math inline">\(V_1,\ldots,V_k\)</span>.</p>
 </section>
 <section id="lema-chave" class="slide level2">
 <h2>Lema chave</h2>
 <div id="lem-" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lema 1</strong></span> Seja <span class="math inline">\(W=[V_1,\ldots,V_k]\)</span> um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span>. Assuma que <span class="math inline">\(m&gt;k\)</span> e sejam <span class="math inline">\(U_1,\ldots,U_m\in W\)</span>. Então os vetores <span class="math inline">\(U_1,\ldots,U_m\)</span> são LD.</p>
+<p><span class="theorem-title"><strong>Lema 2</strong></span> Seja <span class="math inline">\(W=[V_1,\ldots,V_k]\)</span> um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span>. Assuma que <span class="math inline">\(m&gt;k\)</span> e sejam <span class="math inline">\(U_1,\ldots,U_m\in W\)</span>. Então os vetores <span class="math inline">\(U_1,\ldots,U_m\)</span> são LD.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Comprovação</em>. </span>Como cada <span class="math inline">\(U_j\in W=[V_1,\ldots,V_k]\)</span>, existem coeficientes <span class="math inline">\(a_{ij}\)</span> tais que <span class="math display">\[
@@ -470,7 +480,7 @@ x  &amp; + &amp;  y  &amp; - &amp; 2z &amp; - &amp;  w &amp; = &amp;  0 \\
 </section>
 <section id="produto-escalar-em-mathbbrn" class="slide level2">
 <h2>Produto escalar em <span class="math inline">\(\mathbb{R}^n\)</span></h2>
-<p>Se <span class="math inline">\(V=(v_1,v_2,\ldots,v_n)\)</span> e <span class="math inline">\(W=(w_1,w_2,\ldots,w_n)\)</span> são vetores em <span class="math inline">\(\mathbb{R}^n\)</span>, o produto escalar entre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é o número real</p>
+<p>Se <span class="math inline">\(V=(v_1,v_2,\ldots,v_n)\)</span> e <span class="math inline">\(W=(w_1,w_2,\ldots,w_n)\)</span> são vetores em <span class="math inline">\(\mathbb{R}^n\)</span>, o <span class="bg-yellow">produto escalar</span> entre <span class="math inline">\(V\)</span> e <span class="math inline">\(W\)</span> é o número real</p>
 <p><span class="math display">\[\langle V,W\rangle = v_1w_1 + v_2w_2 + \cdots + v_nw_n.\]</span></p>
 <p>A norma do vetor <span class="math inline">\(V\)</span> é <span class="math inline">\(\|V\| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2} = \sqrt{\langle V,V\rangle}\)</span>.</p>
 <p>Observe que isto é uma generalização das definições que já foram dadas e interpretadas para <span class="math inline">\(\mathbb{R}^2\)</span> e <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
@@ -489,7 +499,7 @@ x  &amp; + &amp;  y  &amp; - &amp; 2z &amp; - &amp;  w &amp; = &amp;  0 \\
 </section>
 <section id="cauchyschwarz-e-ângulo" class="slide level2">
 <h2>Cauchy–Schwarz e ângulo</h2>
-<p>Da desigualdade de Cauchy–Schwarz, para <span class="math inline">\(V,W\neq\vec{0}\)</span>,</p>
+<p>Da <span class="bg-yellow">desigualdade de Cauchy–Schwarz</span>, para <span class="math inline">\(V,W\neq\vec{0}\)</span>,</p>
 <p><span class="math display">\[\frac{|\langle V,W\rangle|}{\|V\|\,\|W\|}\ \leq\ 1 \quad\Rightarrow\quad -1\ \leq\ \frac{\langle V,W\rangle}{\|V\|\,\|W\|}\ \leq\ 1.\]</span></p>
 <p>Existe um único <span class="math inline">\(\theta\in[0,\pi]\)</span> tal que</p>
 <p><span class="math display">\[\cos\theta\ =\ \frac{\langle V,W\rangle}{\|V\|\,\|W\|}.\]</span></p>
@@ -536,8 +546,8 @@ x  &amp; + &amp;  y  &amp; - &amp; 2z &amp; - &amp;  w &amp; = &amp;  0 \\
 <h2>Bases ortogonais e ortonormais</h2>
 <p>Seja <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> uma base para um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span>:</p>
 <ol type="1">
-<li>A base é ortogonal se quaisquer dois vetores da base são ortogonais (<span class="math inline">\(\langle V_i,V_j\rangle=0\)</span>).</li>
-<li>A base é ortonormal se todos os vetores são unitários e perpendiculares (<span class="math inline">\(\langle V_i,V_j\rangle=0\)</span> e <span class="math inline">\(\langle V_i,V_i\rangle=1\)</span>).</li>
+<li>A <span class="bg-yellow">base é ortogonal</span> se quaisquer dois vetores da base são ortogonais (<span class="math inline">\(\langle V_i,V_j\rangle=0\)</span>).</li>
+<li>A <span class="bg-yellow">base é ortonormal</span> se todos os vetores são unitários e perpendiculares (<span class="math inline">\(\langle V_i,V_j\rangle=0\)</span> e <span class="math inline">\(\langle V_i,V_i\rangle=1\)</span>).</li>
 </ol>
 <p>Exemplos:</p>
 <ul>
@@ -586,6 +596,55 @@ x  &amp; + &amp;  y  &amp; - &amp; 2z &amp; - &amp;  w &amp; = &amp;  0 \\
 <li>Se <span class="math inline">\(V=(-9,-4,2,5)\)</span>, mostre que <span class="math inline">\(V\in W\)</span> e calcule <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> tais que <span class="math inline">\(V=x_1V_1+x_2V_2\)</span>.</li>
 </ol></li>
 </ol>
+</div>
+</section>
+<section id="ortogonalização-de-gram-schmidt" class="slide level2">
+<h2>Ortogonalização de Gram-Schmidt</h2>
+<p>Assuma que <span class="math inline">\(V_1,V_2,\ldots,V_k\)</span> são vetores LI em <span class="math inline">\(\mathbb{R}^n\)</span>. O processo de <span class="bg-yellow">Ortogonalização de Gram-Schmidt</span> constrói uma base ortogonal <span class="math inline">\(U_1,U_2,\ldots,U_k\)</span> para o mesmo espaço gerado por <span class="math inline">\(V_1,V_2,\ldots,V_k\)</span>.</p>
+<p>O processo é o seguinte: <span class="math display">\[\begin{align*}
+U_1 &amp; = V_1,\\
+U_2 &amp; = V_2 - \operatorname{proj}_{U_1}(V_2),\\
+U_3 &amp; = V_3 - \operatorname{proj}_{U_1}(V_3) - \operatorname{proj}_{U_2}(V_3),\\
+&amp; \ \vdots \\
+U_k &amp; = V_k - \operatorname{proj}_{U_1}(V_k) - \operatorname{proj}_{U_2}(V_k) - \cdots - \operatorname{proj}_{U_{k-1}}(V_k).
+\end{align*}\]</span> Após obter a base ortogonal <span class="math inline">\(U_1,U_2,\ldots,U_k\)</span>, podemos obter uma base ortonormal dividindo cada vetor pela sua norma:</p>
+</section>
+<section id="exemplo-de-ortogonalização-de-gram-schmidt" class="slide level2">
+<h2>Exemplo de Ortogonalização de Gram-Schmidt</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 10</strong></span> Considere os vetores <span class="math inline">\(V_1=(1,1,0,0)\)</span>, <span class="math inline">\(V_2=(1,0,1,1)\)</span>, <span class="math inline">\(V_3=(0,1,1,0)\)</span> em <span class="math inline">\(\mathbb{R}^4\)</span>. Eles são LI. Aplicando Gram-Schmidt: <span class="math display">\[\begin{align*}
+U_1 &amp; = V_1 = (1,1,0,0),\\
+U_2 &amp; = V_2 - \operatorname{proj}_{U_1}(V_2) = (1,0,1,1) - \dfrac{\langle V_2,U_1\rangle}{\langle U_1,U_1\rangle} U_1 = (1,0,1,1) - \dfrac{1}{2}(1,1,0,0) = \left(\dfrac{1}{2}, -\dfrac{1}{2}, 1, 1\right),\\
+U_3 &amp; = V_3 - \operatorname{proj}_{U_1}(V_3) - \operatorname{proj}_{U_2}(V_3) \\
+    &amp; = (0,1,1,0) - \dfrac{\langle V_3,U_1\rangle}{\langle U_1,U_1\rangle} U_1 - \dfrac{\langle V_3,U_2\rangle}{\langle U_2,U_2\rangle} U_2 \\
+    &amp; = (0,1,1,0) - \dfrac{1}{2}(1,1,0,0) - \dfrac{1/2}{5/2}\left(\dfrac{1}{2}, -\dfrac{1}{2}, 1, 1\right) = \left(-\dfrac{3}{5}, \dfrac{3}{5}, \dfrac{4}{5}, -\dfrac{1}{5}\right).
+\end{align*}\]</span> A base ortogonal é <span class="math inline">\(\{U_1,U_2,U_3\}\)</span>.</p>
+</div>
+</section>
+<section id="mudança-de-base" class="slide level2">
+<h2>Mudança de base</h2>
+<p>Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span> de dimensão <span class="math inline">\(k\)</span>. Sejam <span class="math inline">\(\mathcal{B}=\{V_1,\ldots,V_k\}\)</span> e <span class="math inline">\(\mathcal{C}=\{U_1,\ldots,U_k\}\)</span> duas bases de <span class="math inline">\(W\)</span>. Então, para todo vetor <span class="math inline">\(X \in W\)</span>, podemos escrever: <span class="math display">\[
+X = x_1V_1 + x_2V_2 + \cdots + x_kV_k = c_1U_1 + c_2U_2 + \cdots + c_kU_k.
+\]</span><br>
+Os coeficientes <span class="math inline">\(x_1,x_2,\ldots,x_k\)</span> são as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{B}\)</span> e os coeficientes <span class="math inline">\(c_1,c_2,\ldots,c_k\)</span> são as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>.<br>
+A matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> é a matriz <span class="math inline">\(P\)</span> cujas colunas são as coordenadas dos vetores da base <span class="math inline">\(\mathcal{C}\)</span> na base <span class="math inline">\(\mathcal{B}\)</span>: <span class="math display">\[P = [ [U_1]_{\mathcal{B}} \quad [U_2]_{\mathcal{B}} \quad \cdots \quad [U_k]_{\mathcal{B}} ].\]</span> Assim, se <span class="math inline">\([X]_{\mathcal{B}}\)</span> e <span class="math inline">\([X]_{\mathcal{C}}\)</span> são as matrizes coluna das coordenadas de <span class="math inline">\(X\)</span> nas bases <span class="math inline">\(\mathcal{B}\)</span> e <span class="math inline">\(\mathcal{C}\)</span>, respectivamente, então <span class="math display">\[[X]_{\mathcal{B}} = P [X]_{\mathcal{C}}.\]</span> A matriz <span class="math inline">\(P\)</span> é invertível e sua inversa é a matriz de mudança de base de <span class="math inline">\(\mathcal{C}\)</span> para <span class="math inline">\(\mathcal{B}\)</span>.</p>
+</section>
+<section id="exemplo-de-mudança-de-base" class="slide level2">
+<h2>Exemplo de mudança de base</h2>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 11</strong></span> Sejam <span class="math inline">\(W\)</span> o plano de <span class="math inline">\(\mathbb{R}^3\)</span> de equação <span class="math inline">\(x+y+z=0\)</span>, <span class="math inline">\(\mathcal{B}=\{V_1=(1,-1,0), V_2=(1,0,-1)\}\)</span> e <span class="math inline">\(\mathcal{C}=\{U_1=(1,2,-3), U_2=(2,-1,-1)\}\)</span> bases de <span class="math inline">\(W\)</span>.<br>
+Determine a matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> e as coordenadas do vetor <span class="math inline">\(X=(1,0,-1)\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>.</p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Resolvendo o sistema <span class="math display">\[\begin{cases}
+a(1,-1,0) + b(1,0,-1) = (1,2,-3), \\
+c(1,-1,0) + d(1,0,-1) = (2,-1,-1),
+\end{cases}\]</span> obtemos <span class="math inline">\(U_1 = \frac{1}{3}V_1 + \frac{4}{3}V_2\)</span> e <span class="math inline">\(U_2 = \frac{5}{3}V_1 - \frac{2}{3}V_2\)</span>. Assim, a matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> é <span class="math display">\[P = \begin{bmatrix} \frac{1}{3} &amp; \frac{5}{3} \\[6pt] \frac{4}{3} &amp; -\frac{2}{3} \end{bmatrix}.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><span class="math display">\[P = \begin{bmatrix} \frac{1}{3} &amp; \frac{5}{3} \\[6pt] \frac{4}{3} &amp; -\frac{2}{3} \end{bmatrix}.\]</span> Para encontrar as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>, primeiro encontramos as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{B}\)</span>: <span class="math display">\[X = 0.5V_1 + 0.5V_2 \Rightarrow [X]_{\mathcal{B}} = \begin{bmatrix} 0.5 \\ 0.5 \end{bmatrix}.\]</span> Agora, usando a matriz de mudança de base, temos <span class="math display">\[[X]_{\mathcal{B}} = P [X]_{\mathcal{C}} \Rightarrow [X]_{\mathcal{C}} = P^{-1} [X]_{\mathcal{B}} = \begin{bmatrix} 1 \\ -0.5 \end{bmatrix}.\]</span> Portanto, as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span> são <span class="math inline">\((1, -0.5)\)</span>.</p>
+</div>
+</div>
 </div>
 
 

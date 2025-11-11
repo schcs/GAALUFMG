@@ -130,14 +130,14 @@
     "href": "07_Rn.html#base-e-dimensão",
     "title": "O espaço ℝⁿ",
     "section": "Base e Dimensão",
-    "text": "Base e Dimensão\nInformalmente: Uma base é um conjunto mínimo de geradores para um subespaço.\n\nDefinição 2 Seja \\(W\\) um subespaço de \\(\\mathbb R^n\\). Uma base para \\(W\\) é um sistema de geradores linearmente independentes para \\(W\\) (nenhum vetor é combinação linear dos demais vetores)."
+    "text": "Base e Dimensão\nInformalmente: Uma base é um conjunto mínimo de geradores para um subespaço.\n\nDefinição 2 Seja \\(W\\) um subespaço de \\(\\mathbb R^n\\). Uma base para \\(W\\) é um sistema de vetores \\(V_1,\\ldots,V_k\\) tais que\n\n\\(W = [V_1,\\ldots,V_k]\\) (ou seja, os vetores geram \\(W\\) são combinações lineares destes vetores); e\n\\(V_1,\\ldots,V_k\\) são linearmente independentes (ou seja, nenhum vetor é combinação linear dos demais).\n\n\n\nLema 1 Se \\(V_1,\\ldots,V_k\\) é base de \\(W\\), então todo vetor de \\(W\\) pode ser escrito de forma única como combinação linear de \\(V_1,\\ldots,V_k\\).\n\nSe \\(V\\in W\\) e \\[\nV=x_1V_1 + x_2V_2 + \\cdots + x_kV_k\n\\] então os escalares \\(x_1,\\ldots,x_k\\) são chamadas de coordenadas de \\(V\\) na base \\(V_1,\\ldots,V_k\\)."
   },
   {
     "objectID": "07_Rn.html#lema-chave",
     "href": "07_Rn.html#lema-chave",
     "title": "O espaço ℝⁿ",
     "section": "Lema chave",
-    "text": "Lema chave\n\nLema 1 Seja \\(W=[V_1,\\ldots,V_k]\\) um subespaço de \\(\\mathbb{R}^n\\). Assuma que \\(m&gt;k\\) e sejam \\(U_1,\\ldots,U_m\\in W\\). Então os vetores \\(U_1,\\ldots,U_m\\) são LD.\n\n\nComprovação. Como cada \\(U_j\\in W=[V_1,\\ldots,V_k]\\), existem coeficientes \\(a_{ij}\\) tais que \\[\nU_j=\\sum_{i=1}^k a_{ij}V_i,\\qquad j=1,\\ldots,m.\n\\] Considere a matriz \\(A=(a_{ij})\\in\\mathbb{R}^{k\\times m}\\). Como \\(m&gt;k\\), o sistema homogêneo \\(A\\,x=\\vec{0}\\) tem solução não trivial. Seja \\(x=(x_1,\\ldots,x_m)\\neq\\vec{0}\\) tal solução. Então \\[\n\\sum_{j=1}^m x_j U_j\n=\\sum_{j=1}^m x_j\\Big(\\sum_{i=1}^k a_{ij}V_i\\Big)\n=\\sum_{i=1}^k\\Big(\\sum_{j=1}^m a_{ij}x_j\\Big)V_i\n=\\sum_{i=1}^k 0\\cdot V_i=\\vec{0}.\n\\] Logo, existe uma combinação linear não trivial dos \\(U_j\\) que dá o vetor nulo, isto é, \\(U_1,\\ldots,U_m\\) são linearmente dependentes."
+    "text": "Lema chave\n\nLema 2 Seja \\(W=[V_1,\\ldots,V_k]\\) um subespaço de \\(\\mathbb{R}^n\\). Assuma que \\(m&gt;k\\) e sejam \\(U_1,\\ldots,U_m\\in W\\). Então os vetores \\(U_1,\\ldots,U_m\\) são LD.\n\n\nComprovação. Como cada \\(U_j\\in W=[V_1,\\ldots,V_k]\\), existem coeficientes \\(a_{ij}\\) tais que \\[\nU_j=\\sum_{i=1}^k a_{ij}V_i,\\qquad j=1,\\ldots,m.\n\\] Considere a matriz \\(A=(a_{ij})\\in\\mathbb{R}^{k\\times m}\\). Como \\(m&gt;k\\), o sistema homogêneo \\(A\\,x=\\vec{0}\\) tem solução não trivial. Seja \\(x=(x_1,\\ldots,x_m)\\neq\\vec{0}\\) tal solução. Então \\[\n\\sum_{j=1}^m x_j U_j\n=\\sum_{j=1}^m x_j\\Big(\\sum_{i=1}^k a_{ij}V_i\\Big)\n=\\sum_{i=1}^k\\Big(\\sum_{j=1}^m a_{ij}x_j\\Big)V_i\n=\\sum_{i=1}^k 0\\cdot V_i=\\vec{0}.\n\\] Logo, existe uma combinação linear não trivial dos \\(U_j\\) que dá o vetor nulo, isto é, \\(U_1,\\ldots,U_m\\) são linearmente dependentes."
   },
   {
     "objectID": "07_Rn.html#a-dimensão",
@@ -229,6 +229,34 @@
     "title": "O espaço ℝⁿ",
     "section": "Bases ortogonais e ortonormais — exercícios",
     "text": "Bases ortogonais e ortonormais — exercícios\n\nExercício 3  \n\nConsidere o plano \\(\\alpha\\) de \\(\\mathbb{R}^3\\) de equação \\(x-2y+z=0\\).\n\nDetermine uma base ortogonal \\(\\{V_1, V_2, V_3\\}\\) de \\(\\mathbb{R}^3\\) tal que \\(\\{V_1,V_2\\}\\) é uma base ortogonal do plano \\(\\alpha\\).\nEscreva o vetor \\(V=(10,1,4)\\) como uma combinação linear dos vetores da base do item (a): encontre \\(x,y,z\\) tais que \\(xV_1+yV_2+zV_3=V\\).\n\nSejam \\(V_1=(1,3,-2,5)\\) e \\(V_2=(1,2,1,3)\\) vetores de \\(\\mathbb{R}^4\\). Seja \\(W\\) o conjunto dos vetores de \\(\\mathbb{R}^4\\) que são ortogonais a \\(V_1\\) e a \\(V_2\\).\n\nDetermine uma base de \\(W\\).\nDetermine uma base ortogonal \\(\\{W_1,W_2\\}\\) de \\(W\\).\nSe \\(V=(-9,-4,2,5)\\), mostre que \\(V\\in W\\) e calcule \\(x_1\\) e \\(x_2\\) tais que \\(V=x_1V_1+x_2V_2\\)."
+  },
+  {
+    "objectID": "07_Rn.html#ortogonalização-de-gram-schmidt",
+    "href": "07_Rn.html#ortogonalização-de-gram-schmidt",
+    "title": "O espaço ℝⁿ",
+    "section": "Ortogonalização de Gram-Schmidt",
+    "text": "Ortogonalização de Gram-Schmidt\nAssuma que \\(V_1,V_2,\\ldots,V_k\\) são vetores LI em \\(\\mathbb{R}^n\\). O processo de Ortogonalização de Gram-Schmidt constrói uma base ortogonal \\(U_1,U_2,\\ldots,U_k\\) para o mesmo espaço gerado por \\(V_1,V_2,\\ldots,V_k\\).\nO processo é o seguinte: \\[\\begin{align*}\nU_1 & = V_1,\\\\\nU_2 & = V_2 - \\operatorname{proj}_{U_1}(V_2),\\\\\nU_3 & = V_3 - \\operatorname{proj}_{U_1}(V_3) - \\operatorname{proj}_{U_2}(V_3),\\\\\n& \\ \\vdots \\\\\nU_k & = V_k - \\operatorname{proj}_{U_1}(V_k) - \\operatorname{proj}_{U_2}(V_k) - \\cdots - \\operatorname{proj}_{U_{k-1}}(V_k).\n\\end{align*}\\] Após obter a base ortogonal \\(U_1,U_2,\\ldots,U_k\\), podemos obter uma base ortonormal dividindo cada vetor pela sua norma:"
+  },
+  {
+    "objectID": "07_Rn.html#exemplo-de-ortogonalização-de-gram-schmidt",
+    "href": "07_Rn.html#exemplo-de-ortogonalização-de-gram-schmidt",
+    "title": "O espaço ℝⁿ",
+    "section": "Exemplo de Ortogonalização de Gram-Schmidt",
+    "text": "Exemplo de Ortogonalização de Gram-Schmidt\n\nExemplo 10 Considere os vetores \\(V_1=(1,1,0,0)\\), \\(V_2=(1,0,1,1)\\), \\(V_3=(0,1,1,0)\\) em \\(\\mathbb{R}^4\\). Eles são LI. Aplicando Gram-Schmidt: \\[\\begin{align*}\nU_1 & = V_1 = (1,1,0,0),\\\\\nU_2 & = V_2 - \\operatorname{proj}_{U_1}(V_2) = (1,0,1,1) - \\dfrac{\\langle V_2,U_1\\rangle}{\\langle U_1,U_1\\rangle} U_1 = (1,0,1,1) - \\dfrac{1}{2}(1,1,0,0) = \\left(\\dfrac{1}{2}, -\\dfrac{1}{2}, 1, 1\\right),\\\\\nU_3 & = V_3 - \\operatorname{proj}_{U_1}(V_3) - \\operatorname{proj}_{U_2}(V_3) \\\\\n    & = (0,1,1,0) - \\dfrac{\\langle V_3,U_1\\rangle}{\\langle U_1,U_1\\rangle} U_1 - \\dfrac{\\langle V_3,U_2\\rangle}{\\langle U_2,U_2\\rangle} U_2 \\\\\n    & = (0,1,1,0) - \\dfrac{1}{2}(1,1,0,0) - \\dfrac{1/2}{5/2}\\left(\\dfrac{1}{2}, -\\dfrac{1}{2}, 1, 1\\right) = \\left(-\\dfrac{3}{5}, \\dfrac{3}{5}, \\dfrac{4}{5}, -\\dfrac{1}{5}\\right).\n\\end{align*}\\] A base ortogonal é \\(\\{U_1,U_2,U_3\\}\\)."
+  },
+  {
+    "objectID": "07_Rn.html#mudança-de-base",
+    "href": "07_Rn.html#mudança-de-base",
+    "title": "O espaço ℝⁿ",
+    "section": "Mudança de base",
+    "text": "Mudança de base\nSeja \\(W\\) um subespaço de \\(\\mathbb{R}^n\\) de dimensão \\(k\\). Sejam \\(\\mathcal{B}=\\{V_1,\\ldots,V_k\\}\\) e \\(\\mathcal{C}=\\{U_1,\\ldots,U_k\\}\\) duas bases de \\(W\\). Então, para todo vetor \\(X \\in W\\), podemos escrever: \\[\nX = x_1V_1 + x_2V_2 + \\cdots + x_kV_k = c_1U_1 + c_2U_2 + \\cdots + c_kU_k.\n\\]\nOs coeficientes \\(x_1,x_2,\\ldots,x_k\\) são as coordenadas de \\(X\\) na base \\(\\mathcal{B}\\) e os coeficientes \\(c_1,c_2,\\ldots,c_k\\) são as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\).\nA matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é a matriz \\(P\\) cujas colunas são as coordenadas dos vetores da base \\(\\mathcal{C}\\) na base \\(\\mathcal{B}\\): \\[P = [ [U_1]_{\\mathcal{B}} \\quad [U_2]_{\\mathcal{B}} \\quad \\cdots \\quad [U_k]_{\\mathcal{B}} ].\\] Assim, se \\([X]_{\\mathcal{B}}\\) e \\([X]_{\\mathcal{C}}\\) são as matrizes coluna das coordenadas de \\(X\\) nas bases \\(\\mathcal{B}\\) e \\(\\mathcal{C}\\), respectivamente, então \\[[X]_{\\mathcal{B}} = P [X]_{\\mathcal{C}}.\\] A matriz \\(P\\) é invertível e sua inversa é a matriz de mudança de base de \\(\\mathcal{C}\\) para \\(\\mathcal{B}\\)."
+  },
+  {
+    "objectID": "07_Rn.html#exemplo-de-mudança-de-base",
+    "href": "07_Rn.html#exemplo-de-mudança-de-base",
+    "title": "O espaço ℝⁿ",
+    "section": "Exemplo de mudança de base",
+    "text": "Exemplo de mudança de base\n\nExemplo 11 Sejam \\(W\\) o plano de \\(\\mathbb{R}^3\\) de equação \\(x+y+z=0\\), \\(\\mathcal{B}=\\{V_1=(1,-1,0), V_2=(1,0,-1)\\}\\) e \\(\\mathcal{C}=\\{U_1=(1,2,-3), U_2=(2,-1,-1)\\}\\) bases de \\(W\\).\nDetermine a matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) e as coordenadas do vetor \\(X=(1,0,-1)\\) na base \\(\\mathcal{C}\\).\n\n\nResolvendo o sistema \\[\\begin{cases}\na(1,-1,0) + b(1,0,-1) = (1,2,-3), \\\\\nc(1,-1,0) + d(1,0,-1) = (2,-1,-1),\n\\end{cases}\\] obtemos \\(U_1 = \\frac{1}{3}V_1 + \\frac{4}{3}V_2\\) e \\(U_2 = \\frac{5}{3}V_1 - \\frac{2}{3}V_2\\). Assim, a matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é \\[P = \\begin{bmatrix} \\frac{1}{3} & \\frac{5}{3} \\\\[6pt] \\frac{4}{3} & -\\frac{2}{3} \\end{bmatrix}.\\]\n\n\n\\[P = \\begin{bmatrix} \\frac{1}{3} & \\frac{5}{3} \\\\[6pt] \\frac{4}{3} & -\\frac{2}{3} \\end{bmatrix}.\\] Para encontrar as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\), primeiro encontramos as coordenadas de \\(X\\) na base \\(\\mathcal{B}\\): \\[X = 0.5V_1 + 0.5V_2 \\Rightarrow [X]_{\\mathcal{B}} = \\begin{bmatrix} 0.5 \\\\ 0.5 \\end{bmatrix}.\\] Agora, usando a matriz de mudança de base, temos \\[[X]_{\\mathcal{B}} = P [X]_{\\mathcal{C}} \\Rightarrow [X]_{\\mathcal{C}} = P^{-1} [X]_{\\mathcal{B}} = \\begin{bmatrix} 1 \\\\ -0.5 \\end{bmatrix}.\\] Portanto, as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\) são \\((1, -0.5)\\)."
   },
   {
     "objectID": "05_vetores.html#introdução",
