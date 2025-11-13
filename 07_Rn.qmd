@@ -503,12 +503,16 @@ Exemplos:
 
 - $\{\vec{i},\vec{j},\vec{k}\}$ é uma base ortonormal de $\mathbb{R}^3$.
 - $V_1=(1,3)$ e $V_2=(-3,1)$ formam uma base ortogonal de $\mathbb{R}^2$.
-- $V_1=(\cos\theta,\operatorname{sen}\,\theta)$ e $V_2=(-\operatorname{sen}\,\theta,\cos\theta)$ formam uma base ortonormal de $\mathbb{R}^2$.
+- $V_1=(\cos\theta,\operatorname{sen}\theta)$ e $V_2=(-\operatorname{sen}\theta,\cos\theta)$ formam uma base ortonormal de $\mathbb{R}^2$.
 
 
 ## Aplicação: coordenadas em base ortogonal
 
-Se $\{V_1,\ldots,V_k\}$ é uma base ortogonal para um subespaço de $\mathbb{R}^n$ e se $V=x_1V_1+\cdots+x_kV_k$, então
+Se $\{V_1,\ldots,V_k\}$ é uma base ortogonal para um subespaço de $\mathbb{R}^n$ e se 
+$$
+V=x_1V_1+\cdots+x_kV_k,
+$$ 
+então
 
 $$\langle V,V_j\rangle = x_j\langle V_j,V_j\rangle \quad\Rightarrow\quad \boxed{\ x_j = \dfrac{\langle V,V_j\rangle}{\langle V_j,V_j\rangle},\ j=1,\ldots,k\ }$$
 
@@ -541,7 +545,7 @@ $$\langle V,V_j\rangle = x_j\langle V_j,V_j\rangle \quad\Rightarrow\quad \boxed{
 
     a. Determine uma base de $W$.
     b. Determine uma base ortogonal $\{W_1,W_2\}$ de $W$.
-    c. Se $V=(-9,-4,2,5)$, mostre que $V\in W$ e calcule $x_1$ e $x_2$ tais que $V=x_1V_1+x_2V_2$.
+    c. Se $V=(-9,-4,2,5)$, mostre que $V\in W$ e calcule $x_1$ e $x_2$ tais que $V=x_1W_1+x_2W_2$.
 :::
 
 ## Ortogonalização de Gram-Schmidt
@@ -573,24 +577,64 @@ U_3 & = V_3 - \operatorname{proj}_{U_1}(V_3) - \operatorname{proj}_{U_2}(V_3) \\
 A base ortogonal é $\{U_1,U_2,U_3\}$.
 :::
 
-## Mudança de base 
+## O problema da mudança de base 
 
-Seja $W$ um subespaço de $\mathbb{R}^n$ de dimensão $k$. Sejam $\mathcal{B}=\{V_1,\ldots,V_k\}$ e $\mathcal{C}=\{U_1,\ldots,U_k\}$ duas bases de $W$. Então, para todo vetor $X \in W$, podemos escrever:
+Seja $W$ um subespaço de $\mathbb{R}^n$ de dimensão $k$. Sejam 
+$$
+\mathcal{B}=\{V_1,\ldots,V_k\}\quad\mbox{e}\quad \mathcal{C}=\{U_1,\ldots,U_k\}
+$$ 
+duas bases de $W$. Então, para todo vetor $X \in W$, podemos escrever:
 $$
 X = x_1V_1 + x_2V_2 + \cdots + x_kV_k = c_1U_1 + c_2U_2 + \cdots + c_kU_k.
 $$  
+
 Os coeficientes $x_1,x_2,\ldots,x_k$ são as coordenadas de $X$ na base $\mathcal{B}$ e os coeficientes $c_1,c_2,\ldots,c_k$ são as coordenadas de $X$ na base $\mathcal{C}$.  
-A matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é a matriz $P$ cujas colunas são as coordenadas dos vetores da base $\mathcal{C}$ na base $\mathcal{B}$:
-$$P = [ [U_1]_{\mathcal{B}} \quad [U_2]_{\mathcal{B}} \quad \cdots \quad [U_k]_{\mathcal{B}} ].$$
-Assim, se $[X]_{\mathcal{B}}$ e $[X]_{\mathcal{C}}$ são as matrizes coluna das coordenadas de $X$ nas bases $\mathcal{B}$ e $\mathcal{C}$, respectivamente, então
-$$[X]_{\mathcal{B}} = P [X]_{\mathcal{C}}.$$
-A matriz $P$ é invertível e sua inversa é a matriz de mudança de base de $\mathcal{C}$ para $\mathcal{B}$.
+
+[**Problema:**]{.bg-yellow} Dadas as coordenadas $c_1,c_2,\ldots,c_k$ de $X$ na base $\mathcal{B}$, como encontrar as coordenadas $x_1,x_2,\ldots,x_k$ de $X$ na base $\mathcal{C}$?
+
+## A matriz mudança de base
+
+A matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é a matriz $P$ cujas colunas são as coordenadas dos vetores da base $\mathcal{C}$ na base $\mathcal{B}$
+
+Ou seja, escreva 
+$$
+U_j = a_{1j}V_1 + a_{2j}V_2 + \cdots + a_{kj}V_k,\quad j=1,2,\ldots,k,
+$$
+então 
+$$
+P=\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1k} \\[6pt] a_{21} & a_{22} & \cdots & a_{2k} \\[6pt] \vdots & \vdots & \ddots & \vdots \\[6pt] a_{k1} & a_{k2} & \cdots & a_{kk} \end{bmatrix}.  
+$$
+
+Podemos escrever $P$ de forma compacta como
+$$
+P = [ [U_1]_{\mathcal{B}} \quad [U_2]_{\mathcal{B}} \quad \cdots \quad [U_k]_{\mathcal{B}} ].
+$$
+
+## Mudança de base — fórmula
+
+Assim, se 
+$$
+\begin{bmatrix} 
+x_1 \\ x_2 \\ \vdots \\ x_k\end{bmatrix}=[X]_{\mathcal{B}}\quad\mbox{e} \quad 
+\begin{bmatrix} 
+c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix}=
+[X]_{\mathcal{C}}
+$$
+são as matrizes coluna das coordenadas de $X$ nas bases $\mathcal{B}$ e $\mathcal{C}$, respectivamente, então
+$$
+\begin{bmatrix} 
+x_1 \\ x_2 \\ \vdots \\ x_k\end{bmatrix}
+ = P \begin{bmatrix} 
+c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix}.
+$$
+A matriz $P$ é invertível e sua inversa é a matriz de mudança de base de 
+$\mathcal{C}$ para $\mathcal{B}$.
 
 ## Exemplo de mudança de base
 
 :::{#exm-}
 Sejam $W$ o plano de $\mathbb{R}^3$ de equação $x+y+z=0$, $\mathcal{B}=\{V_1=(1,-1,0), V_2=(1,0,-1)\}$ e $\mathcal{C}=\{U_1=(1,2,-3), U_2=(2,-1,-1)\}$ bases de $W$.  
-Determine a matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ e as coordenadas do vetor $X=(1,0,-1)$ na base $\mathcal{C}$.
+Determine a matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ e as coordenadas do vetor $X=(-1,3,-2)$ na base $\mathcal{C}$.
 
 :::{.r-stack}
 :::{.fragment .current-visible}
@@ -599,18 +643,94 @@ $$\begin{cases}
 a(1,-1,0) + b(1,0,-1) = (1,2,-3), \\
 c(1,-1,0) + d(1,0,-1) = (2,-1,-1),
 \end{cases}$$
-obtemos $U_1 = \frac{1}{3}V_1 + \frac{4}{3}V_2$ e $U_2 = \frac{5}{3}V_1 - \frac{2}{3}V_2$. Assim, a matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é 
-$$P = \begin{bmatrix} \frac{1}{3} & \frac{5}{3} \\[6pt] \frac{4}{3} & -\frac{2}{3} \end{bmatrix}.$$
+obtemos $U_1 = -2V_1 + 3V_2$ e $U_2 = V_1 + V_2$. Assim, a matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é 
+$$P = \begin{bmatrix} -2 & 1 \\[6pt] 3 & 1 \end{bmatrix}.$$
 :::
 
 :::{.fragment .current-visible}
-$$P = \begin{bmatrix} \frac{1}{3} & \frac{5}{3} \\[6pt] \frac{4}{3} & -\frac{2}{3} \end{bmatrix}.$$
-Para encontrar as coordenadas de $X$ na base $\mathcal{C}$, primeiro encontramos as coordenadas de $X$ na base $\mathcal{B}$:
-$$X = 0.5V_1 + 0.5V_2 \Rightarrow [X]_{\mathcal{B}} = \begin{bmatrix} 0.5 \\ 0.5 \end{bmatrix}.$$
+$$P = \begin{bmatrix} -2 & 1 \\[6pt] 3 & 1 \end{bmatrix}.$$
+Para encontrar as coordenadas de $X$ na base $\mathcal{B}$, primeiro encontramos as coordenadas de $X$ na base $\mathcal{C}$:
+$$X = U_1 - U_2 \Rightarrow [X]_{\mathcal{C}} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}.$$
+:::
+:::{.fragment .current-visible}
 Agora, usando a matriz de mudança de base, temos
-$$[X]_{\mathcal{B}} = P [X]_{\mathcal{C}} \Rightarrow [X]_{\mathcal{C}} = P^{-1} [X]_{\mathcal{B}} = \begin{bmatrix} 1 \\ -0.5 \end{bmatrix}.$$
-Portanto, as coordenadas de $X$ na base $\mathcal{C}$ são $(1, -0.5)$.
+$$[X]_{\mathcal{B}} = P [X]_{\mathcal{C}} = \begin{bmatrix} -2 & 1 \\[6pt] 3 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} -2 - 1 \\ 3 - 1 \end{bmatrix} = \begin{bmatrix} -3 \\ 2 \end{bmatrix}.$$
+Portanto, as coordenadas de $X$ na base $\mathcal{C}$ são $\left(-3, 2\right)$.
+:::
+
+:::{.fragment}
+Assim, as coordenadas de $X$ na base $\mathcal{C}$ são $\left(-3, 2\right)$. Ou seja 
+$$
+X=-3V_1 + 2V_2.
+$$
 :::
 :::
 :::
 
+## Mudança de base — Rotação
+
+Considere o plano $\mathbb{R}^2$ com a base canônica $\mathcal{B}=\{\vec{i},\vec{j}\}$ e a base $\mathcal{C}=\{U_1,U_2\}$, em que
+$$
+U_1=(\cos\theta,\sin\theta),\quad U_2=(-\sin\theta,\cos\theta).
+$$
+
+A matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é   
+$$
+\begin{bmatrix}
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+Se $V=(x',y')$ são as coordenadas de um vetor na base $\mathcal{C}$, então as coordenadas $(x,y)$ de $V$ na base $\mathcal{B}$ são dadas por
+$$
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta \end{bmatrix}
+\begin{bmatrix}
+x' \\ y'
+\end{bmatrix}
+$$
+:::
+
+:::{.fragment .current-visible}
+Observe que 
+$$
+\begin{bmatrix}
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta
+\end{bmatrix}^{-1}=
+\begin{bmatrix}
+\cos\theta & \sin\theta \\
+-\sin\theta & \cos\theta
+\end{bmatrix}
+$$
+:::
+
+:::{.fragment}
+Logo, 
+$$
+\begin{bmatrix}
+x' \\ y'
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\theta & \sin\theta \\
+-\sin\theta & \cos\theta
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}=
+\begin{bmatrix}
+x\cos\theta + y\sin\theta \\
+ -x\sin\theta + y\cos\theta
+\end{bmatrix}.
+$$
+:::
+:::
