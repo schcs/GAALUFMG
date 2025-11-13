@@ -6,8 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="UFMG">
   <title>O espaço ℝⁿ</title>
@@ -139,7 +139,7 @@ UFMG
 </div>
 </div>
 
-  <p class="date">11 de novembro de 2025</p>
+  <p class="date">13 de novembro de 2025</p>
 </section>
 <section id="o-espaço-mathbbrn-mathbbr2" class="slide level2">
 <h2>O espaço <span class="math inline">\(\mathbb{R}^n\)</span> — <span class="math inline">\(\mathbb{R}^2\)</span></h2>
@@ -553,12 +553,14 @@ x  &amp; + &amp;  y  &amp; - &amp; 2z &amp; - &amp;  w &amp; = &amp;  0 \\
 <ul>
 <li><span class="math inline">\(\{\vec{i},\vec{j},\vec{k}\}\)</span> é uma base ortonormal de <span class="math inline">\(\mathbb{R}^3\)</span>.</li>
 <li><span class="math inline">\(V_1=(1,3)\)</span> e <span class="math inline">\(V_2=(-3,1)\)</span> formam uma base ortogonal de <span class="math inline">\(\mathbb{R}^2\)</span>.</li>
-<li><span class="math inline">\(V_1=(\cos\theta,\operatorname{sen}\,\theta)\)</span> e <span class="math inline">\(V_2=(-\operatorname{sen}\,\theta,\cos\theta)\)</span> formam uma base ortonormal de <span class="math inline">\(\mathbb{R}^2\)</span>.</li>
+<li><span class="math inline">\(V_1=(\cos\theta,\operatorname{sen}\theta)\)</span> e <span class="math inline">\(V_2=(-\operatorname{sen}\theta,\cos\theta)\)</span> formam uma base ortonormal de <span class="math inline">\(\mathbb{R}^2\)</span>.</li>
 </ul>
 </section>
 <section id="aplicação-coordenadas-em-base-ortogonal" class="slide level2">
 <h2>Aplicação: coordenadas em base ortogonal</h2>
-<p>Se <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> é uma base ortogonal para um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span> e se <span class="math inline">\(V=x_1V_1+\cdots+x_kV_k\)</span>, então</p>
+<p>Se <span class="math inline">\(\{V_1,\ldots,V_k\}\)</span> é uma base ortogonal para um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span> e se <span class="math display">\[
+V=x_1V_1+\cdots+x_kV_k,
+\]</span> então</p>
 <p><span class="math display">\[\langle V,V_j\rangle = x_j\langle V_j,V_j\rangle \quad\Rightarrow\quad \boxed{\ x_j = \dfrac{\langle V,V_j\rangle}{\langle V_j,V_j\rangle},\ j=1,\ldots,k\ }\]</span></p>
 </section>
 <section id="bases-ortogonais-e-ortonormais-exercícios" class="slide level2">
@@ -593,7 +595,7 @@ x  &amp; + &amp;  y  &amp; - &amp; 2z &amp; - &amp;  w &amp; = &amp;  0 \\
 <ol type="a">
 <li>Determine uma base de <span class="math inline">\(W\)</span>.</li>
 <li>Determine uma base ortogonal <span class="math inline">\(\{W_1,W_2\}\)</span> de <span class="math inline">\(W\)</span>.</li>
-<li>Se <span class="math inline">\(V=(-9,-4,2,5)\)</span>, mostre que <span class="math inline">\(V\in W\)</span> e calcule <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> tais que <span class="math inline">\(V=x_1V_1+x_2V_2\)</span>.</li>
+<li>Se <span class="math inline">\(V=(-9,-4,2,5)\)</span>, mostre que <span class="math inline">\(V\in W\)</span> e calcule <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> tais que <span class="math inline">\(V=x_1W_1+x_2W_2\)</span>.</li>
 </ol></li>
 </ol>
 </div>
@@ -621,29 +623,126 @@ U_3 &amp; = V_3 - \operatorname{proj}_{U_1}(V_3) - \operatorname{proj}_{U_2}(V_3
 \end{align*}\]</span> A base ortogonal é <span class="math inline">\(\{U_1,U_2,U_3\}\)</span>.</p>
 </div>
 </section>
-<section id="mudança-de-base" class="slide level2">
-<h2>Mudança de base</h2>
-<p>Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span> de dimensão <span class="math inline">\(k\)</span>. Sejam <span class="math inline">\(\mathcal{B}=\{V_1,\ldots,V_k\}\)</span> e <span class="math inline">\(\mathcal{C}=\{U_1,\ldots,U_k\}\)</span> duas bases de <span class="math inline">\(W\)</span>. Então, para todo vetor <span class="math inline">\(X \in W\)</span>, podemos escrever: <span class="math display">\[
+<section id="o-problema-da-mudança-de-base" class="slide level2">
+<h2>O problema da mudança de base</h2>
+<p>Seja <span class="math inline">\(W\)</span> um subespaço de <span class="math inline">\(\mathbb{R}^n\)</span> de dimensão <span class="math inline">\(k\)</span>. Sejam <span class="math display">\[
+\mathcal{B}=\{V_1,\ldots,V_k\}\quad\mbox{e}\quad \mathcal{C}=\{U_1,\ldots,U_k\}
+\]</span> duas bases de <span class="math inline">\(W\)</span>. Então, para todo vetor <span class="math inline">\(X \in W\)</span>, podemos escrever: <span class="math display">\[
 X = x_1V_1 + x_2V_2 + \cdots + x_kV_k = c_1U_1 + c_2U_2 + \cdots + c_kU_k.
-\]</span><br>
-Os coeficientes <span class="math inline">\(x_1,x_2,\ldots,x_k\)</span> são as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{B}\)</span> e os coeficientes <span class="math inline">\(c_1,c_2,\ldots,c_k\)</span> são as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>.<br>
-A matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> é a matriz <span class="math inline">\(P\)</span> cujas colunas são as coordenadas dos vetores da base <span class="math inline">\(\mathcal{C}\)</span> na base <span class="math inline">\(\mathcal{B}\)</span>: <span class="math display">\[P = [ [U_1]_{\mathcal{B}} \quad [U_2]_{\mathcal{B}} \quad \cdots \quad [U_k]_{\mathcal{B}} ].\]</span> Assim, se <span class="math inline">\([X]_{\mathcal{B}}\)</span> e <span class="math inline">\([X]_{\mathcal{C}}\)</span> são as matrizes coluna das coordenadas de <span class="math inline">\(X\)</span> nas bases <span class="math inline">\(\mathcal{B}\)</span> e <span class="math inline">\(\mathcal{C}\)</span>, respectivamente, então <span class="math display">\[[X]_{\mathcal{B}} = P [X]_{\mathcal{C}}.\]</span> A matriz <span class="math inline">\(P\)</span> é invertível e sua inversa é a matriz de mudança de base de <span class="math inline">\(\mathcal{C}\)</span> para <span class="math inline">\(\mathcal{B}\)</span>.</p>
+\]</span></p>
+<p>Os coeficientes <span class="math inline">\(x_1,x_2,\ldots,x_k\)</span> são as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{B}\)</span> e os coeficientes <span class="math inline">\(c_1,c_2,\ldots,c_k\)</span> são as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>.</p>
+<p><span class="bg-yellow"><strong>Problema:</strong></span> Dadas as coordenadas <span class="math inline">\(c_1,c_2,\ldots,c_k\)</span> de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{B}\)</span>, como encontrar as coordenadas <span class="math inline">\(x_1,x_2,\ldots,x_k\)</span> de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>?</p>
+</section>
+<section id="a-matriz-mudança-de-base" class="slide level2">
+<h2>A matriz mudança de base</h2>
+<p>A matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> é a matriz <span class="math inline">\(P\)</span> cujas colunas são as coordenadas dos vetores da base <span class="math inline">\(\mathcal{C}\)</span> na base <span class="math inline">\(\mathcal{B}\)</span></p>
+<p>Ou seja, escreva <span class="math display">\[
+U_j = a_{1j}V_1 + a_{2j}V_2 + \cdots + a_{kj}V_k,\quad j=1,2,\ldots,k,
+\]</span> então <span class="math display">\[
+P=\begin{bmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1k} \\[6pt] a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2k} \\[6pt] \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\[6pt] a_{k1} &amp; a_{k2} &amp; \cdots &amp; a_{kk} \end{bmatrix}.  
+\]</span></p>
+<p>Podemos escrever <span class="math inline">\(P\)</span> de forma compacta como <span class="math display">\[
+P = [ [U_1]_{\mathcal{B}} \quad [U_2]_{\mathcal{B}} \quad \cdots \quad [U_k]_{\mathcal{B}} ].
+\]</span></p>
+</section>
+<section id="mudança-de-base-fórmula" class="slide level2">
+<h2>Mudança de base — fórmula</h2>
+<p>Assim, se <span class="math display">\[
+\begin{bmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_k\end{bmatrix}=[X]_{\mathcal{B}}\quad\mbox{e} \quad
+\begin{bmatrix}
+c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix}=
+[X]_{\mathcal{C}}
+\]</span> são as matrizes coluna das coordenadas de <span class="math inline">\(X\)</span> nas bases <span class="math inline">\(\mathcal{B}\)</span> e <span class="math inline">\(\mathcal{C}\)</span>, respectivamente, então <span class="math display">\[
+\begin{bmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_k\end{bmatrix}
+= P \begin{bmatrix}
+c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix}.
+\]</span> A matriz <span class="math inline">\(P\)</span> é invertível e sua inversa é a matriz de mudança de base de <span class="math inline">\(\mathcal{C}\)</span> para <span class="math inline">\(\mathcal{B}\)</span>.</p>
 </section>
 <section id="exemplo-de-mudança-de-base" class="slide level2">
 <h2>Exemplo de mudança de base</h2>
 <div id="exm-" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 11</strong></span> Sejam <span class="math inline">\(W\)</span> o plano de <span class="math inline">\(\mathbb{R}^3\)</span> de equação <span class="math inline">\(x+y+z=0\)</span>, <span class="math inline">\(\mathcal{B}=\{V_1=(1,-1,0), V_2=(1,0,-1)\}\)</span> e <span class="math inline">\(\mathcal{C}=\{U_1=(1,2,-3), U_2=(2,-1,-1)\}\)</span> bases de <span class="math inline">\(W\)</span>.<br>
-Determine a matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> e as coordenadas do vetor <span class="math inline">\(X=(1,0,-1)\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>.</p>
+Determine a matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> e as coordenadas do vetor <span class="math inline">\(X=(-1,3,-2)\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>.</p>
 <div class="r-stack">
 <div class="fragment current-visible">
 <p>Resolvendo o sistema <span class="math display">\[\begin{cases}
 a(1,-1,0) + b(1,0,-1) = (1,2,-3), \\
 c(1,-1,0) + d(1,0,-1) = (2,-1,-1),
-\end{cases}\]</span> obtemos <span class="math inline">\(U_1 = \frac{1}{3}V_1 + \frac{4}{3}V_2\)</span> e <span class="math inline">\(U_2 = \frac{5}{3}V_1 - \frac{2}{3}V_2\)</span>. Assim, a matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> é <span class="math display">\[P = \begin{bmatrix} \frac{1}{3} &amp; \frac{5}{3} \\[6pt] \frac{4}{3} &amp; -\frac{2}{3} \end{bmatrix}.\]</span></p>
+\end{cases}\]</span> obtemos <span class="math inline">\(U_1 = -2V_1 + 3V_2\)</span> e <span class="math inline">\(U_2 = V_1 + V_2\)</span>. Assim, a matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> é <span class="math display">\[P = \begin{bmatrix} -2 &amp; 1 \\[6pt] 3 &amp; 1 \end{bmatrix}.\]</span></p>
 </div>
 <div class="fragment current-visible">
-<p><span class="math display">\[P = \begin{bmatrix} \frac{1}{3} &amp; \frac{5}{3} \\[6pt] \frac{4}{3} &amp; -\frac{2}{3} \end{bmatrix}.\]</span> Para encontrar as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>, primeiro encontramos as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{B}\)</span>: <span class="math display">\[X = 0.5V_1 + 0.5V_2 \Rightarrow [X]_{\mathcal{B}} = \begin{bmatrix} 0.5 \\ 0.5 \end{bmatrix}.\]</span> Agora, usando a matriz de mudança de base, temos <span class="math display">\[[X]_{\mathcal{B}} = P [X]_{\mathcal{C}} \Rightarrow [X]_{\mathcal{C}} = P^{-1} [X]_{\mathcal{B}} = \begin{bmatrix} 1 \\ -0.5 \end{bmatrix}.\]</span> Portanto, as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span> são <span class="math inline">\((1, -0.5)\)</span>.</p>
+<p><span class="math display">\[P = \begin{bmatrix} -2 &amp; 1 \\[6pt] 3 &amp; 1 \end{bmatrix}.\]</span> Para encontrar as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{B}\)</span>, primeiro encontramos as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span>: <span class="math display">\[X = U_1 - U_2 \Rightarrow [X]_{\mathcal{C}} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}.\]</span></p>
 </div>
+<div class="fragment current-visible">
+<p>Agora, usando a matriz de mudança de base, temos <span class="math display">\[[X]_{\mathcal{B}} = P [X]_{\mathcal{C}} = \begin{bmatrix} -2 &amp; 1 \\[6pt] 3 &amp; 1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} -2 - 1 \\ 3 - 1 \end{bmatrix} = \begin{bmatrix} -3 \\ 2 \end{bmatrix}.\]</span> Portanto, as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span> são <span class="math inline">\(\left(-3, 2\right)\)</span>.</p>
+</div>
+<div class="fragment">
+<p>Assim, as coordenadas de <span class="math inline">\(X\)</span> na base <span class="math inline">\(\mathcal{C}\)</span> são <span class="math inline">\(\left(-3, 2\right)\)</span>. Ou seja <span class="math display">\[
+X=-3V_1 + 2V_2.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="mudança-de-base-rotação" class="slide level2">
+<h2>Mudança de base — Rotação</h2>
+<p>Considere o plano <span class="math inline">\(\mathbb{R}^2\)</span> com a base canônica <span class="math inline">\(\mathcal{B}=\{\vec{i},\vec{j}\}\)</span> e a base <span class="math inline">\(\mathcal{C}=\{U_1,U_2\}\)</span>, em que <span class="math display">\[
+U_1=(\cos\theta,\sin\theta),\quad U_2=(-\sin\theta,\cos\theta).
+\]</span></p>
+<p>A matriz de mudança de base de <span class="math inline">\(\mathcal{B}\)</span> para <span class="math inline">\(\mathcal{C}\)</span> é<br>
+<span class="math display">\[
+\begin{bmatrix}
+\cos\theta &amp; -\sin\theta \\
+\sin\theta &amp; \cos\theta
+\end{bmatrix}
+\]</span></p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Se <span class="math inline">\(V=(x',y')\)</span> são as coordenadas de um vetor na base <span class="math inline">\(\mathcal{C}\)</span>, então as coordenadas <span class="math inline">\((x,y)\)</span> de <span class="math inline">\(V\)</span> na base <span class="math inline">\(\mathcal{B}\)</span> são dadas por <span class="math display">\[
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\theta &amp; -\sin\theta \\
+\sin\theta &amp; \cos\theta \end{bmatrix}
+\begin{bmatrix}
+x' \\ y'
+\end{bmatrix}
+\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p>Observe que <span class="math display">\[
+\begin{bmatrix}
+\cos\theta &amp; -\sin\theta \\
+\sin\theta &amp; \cos\theta
+\end{bmatrix}^{-1}=
+\begin{bmatrix}
+\cos\theta &amp; \sin\theta \\
+-\sin\theta &amp; \cos\theta
+\end{bmatrix}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Logo, <span class="math display">\[
+\begin{bmatrix}
+x' \\ y'
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\theta &amp; \sin\theta \\
+-\sin\theta &amp; \cos\theta
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}=
+\begin{bmatrix}
+x\cos\theta + y\sin\theta \\
+-x\sin\theta + y\cos\theta
+\end{bmatrix}.
+\]</span></p>
 </div>
 </div>
 
