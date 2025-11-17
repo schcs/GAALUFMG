@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://schcs.github.io/GAALUFMG/07_Rn.html</loc>
-    <lastmod>2025-11-13T13:40:52.340Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/05_vetores.html</loc>
-    <lastmod>2025-11-13T13:40:52.340Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/03_inverse.html</loc>
-    <lastmod>2025-11-13T13:40:52.340Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/01_matrizes.html</loc>
-    <lastmod>2025-11-13T13:40:52.339Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/index.html</loc>
-    <lastmod>2025-11-13T13:40:52.350Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/02_sistemas.html</loc>
-    <lastmod>2025-11-13T13:40:52.339Z</lastmod>
-  </url>
-  <url>
-    <loc>https://schcs.github.io/GAALUFMG/04_determinant.html</loc>
-    <lastmod>2025-11-13T13:40:52.340Z</lastmod>
+    <loc>https://schcs.github.io/GAALUFMG/08_diagonalização.html</loc>
+    <lastmod>2025-11-17T17:50:09.834Z</lastmod>
   </url>
   <url>
     <loc>https://schcs.github.io/GAALUFMG/06_retas_e_planos.html</loc>
-    <lastmod>2025-11-13T13:40:52.340Z</lastmod>
+    <lastmod>2025-11-17T17:50:09.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/04_determinant.html</loc>
+    <lastmod>2025-11-17T17:50:09.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/02_sistemas.html</loc>
+    <lastmod>2025-11-17T17:50:09.833Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/index.html</loc>
+    <lastmod>2025-11-17T17:50:09.844Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/01_matrizes.html</loc>
+    <lastmod>2025-11-17T17:50:09.833Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/03_inverse.html</loc>
+    <lastmod>2025-11-17T17:50:09.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/05_vetores.html</loc>
+    <lastmod>2025-11-17T17:50:09.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://schcs.github.io/GAALUFMG/07_Rn.html</loc>
+    <lastmod>2025-11-17T17:50:09.834Z</lastmod>
   </url>
 </urlset>

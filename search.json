@@ -1,283 +1,633 @@
 [
   {
-    "objectID": "07_Rn.html#o-espaço-mathbbrn-mathbbr2",
-    "href": "07_Rn.html#o-espaço-mathbbrn-mathbbr2",
-    "title": "O espaço ℝⁿ",
-    "section": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^2\\)",
-    "text": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^2\\)\n\\(\\mathbb{R}^2\\) = plano cartesiano\n\n\n\n\n\n\n\\[\n\\mathbb{R}^2 = \\{ (x_1,x_2)\\mid x_1,x_2\\in\\mathbb{R} \\}.\n\\]"
+    "objectID": "08_diagonalização.html#diagonalização",
+    "href": "08_diagonalização.html#diagonalização",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização",
+    "text": "Diagonalização\nA teoria de diagonalização possui várias aplicações:\n\nresolução de sistemas de equações diferenciais.\ncalculo da potência de uma matriz.\ncalculo da exponencial de uma matriz.\nidentificação de cônicas."
   },
   {
-    "objectID": "07_Rn.html#o-espaço-mathbbrn-mathbbr3",
-    "href": "07_Rn.html#o-espaço-mathbbrn-mathbbr3",
-    "title": "O espaço ℝⁿ",
-    "section": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^3\\)",
-    "text": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^3\\)\n\\(\\mathbb{R}^3\\) = espaço tridimensional\n\n\n\n\n\n\n\\[\n\\mathbb{R}^3 = \\{ (x_1,x_2,x_3)\\mid x_1,x_2,x_3\\in\\mathbb{R} \\}.\n\\]"
+    "objectID": "08_diagonalização.html#diagonalização-1",
+    "href": "08_diagonalização.html#diagonalização-1",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização",
+    "text": "Diagonalização\nDefinição: Uma matriz quadrada \\(A\\) é diagonalizável se existir uma matriz invertível \\(P\\) e se existir uma matriz diagonal \\(D\\) tais que\n\\[\\boxed{P^{-1} A P = D}\\]\n\nnem todas as matrizes são diagonalizáveis.\nvamos caracterizar as matrizes \\(P\\) e \\(D\\) em termos de \\(A\\).\nvamos determinar condições para a existência de \\(P\\) invertível.\nvamos caracterizar as matrizes que são diagonalizáveis.\ndepois vamos interpretar a diagonalização no contexto de cônicas no plano."
   },
   {
-    "objectID": "07_Rn.html#o-espaço-mathbbrn-definição-geral",
-    "href": "07_Rn.html#o-espaço-mathbbrn-definição-geral",
-    "title": "O espaço ℝⁿ",
-    "section": "O espaço \\(\\mathbb{R}^n\\) — definição geral",
-    "text": "O espaço \\(\\mathbb{R}^n\\) — definição geral\nGeneralizando, o espaço \\(\\mathbb{R}^n\\) é o conjunto formado por todas as coleções ordenadas \\((x_1,x_2,\\ldots,x_n)\\) de números reais.\n\\[\n\\mathbb{R}^n = \\{ (x_1,x_2,\\ldots,x_n)\\mid x_1,x_2,\\ldots,x_n\\in\\mathbb{R} \\}.\n\\]\nUm elemento \\(V=(x_1,x_2,\\ldots,x_n)\\) de \\(\\mathbb{R}^n\\) é um vetor.\nOperações com vetores de \\(\\mathbb{R}^n\\)\nSe \\(V=(v_1,\\ldots,v_n)\\) e \\(W=(w_1,\\ldots,w_n)\\) são vetores de \\(\\mathbb{R}^n\\) e se \\(\\alpha\\in\\mathbb{R}\\), então:\n\nSoma: \\(V+W=(v_1+w_1,\\ldots,v_n+w_n)\\).\nMultiplicação por escalar: \\(\\alpha V=(\\alpha v_1,\\ldots,\\alpha v_n)\\).\n\nEstas operações satisfazem as propriedades já comentadas para o plano e para o espaço."
+    "objectID": "08_diagonalização.html#diagonalização-2",
+    "href": "08_diagonalização.html#diagonalização-2",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização",
+    "text": "Diagonalização\nSe uma matriz \\(A_{n \\times n}\\) é diagonalizável então existe uma matriz invertível \\(P\\) e existe uma matriz diagonal \\(D\\) tais que\n\\[\\boxed{P^{-1} A P = D}\\]\nMultiplicando por \\(P\\) do lado esquerdo obtemos \\(AP=PD\\).\nFazendo um exemplo \\(2 \\times 2\\) podemos entender que se as colunas de \\(P\\) são \\(X_1,X_2,\\ldots,X_n\\) e se os elementos da diagonal de \\(D\\) são \\(\\lambda_1,\\lambda_2,\\ldots,\\lambda_n\\), então as colunas de \\(AP\\) são \\(AX_1,AX_2,\\ldots,AX_n\\) e as colunas de \\(PD\\) são \\(\\lambda_1 X_1,\\lambda_2 X_2,\\ldots,\\lambda_n X_n\\).\nComo \\(AP=PD\\), igualando as colunas destas duas matrizes vemos que\n\\[AX_1 = \\lambda_1 X_1,\\ AX_2 = \\lambda_2 X_2,\\ \\ldots ,\\ AX_n = \\lambda_n X_n.\\]"
   },
   {
-    "objectID": "07_Rn.html#operações-com-vetores-forma-matricial",
-    "href": "07_Rn.html#operações-com-vetores-forma-matricial",
-    "title": "O espaço ℝⁿ",
-    "section": "Operações com vetores — forma matricial",
-    "text": "Operações com vetores — forma matricial\nRepresentando os vetores de \\(\\mathbb{R}^n\\) como matrizes coluna, as operações viram operações naturais com matrizes:\n\\[\nV=\\begin{bmatrix}v_1\\\\ \\vdots \\\\ v_n\\end{bmatrix},\\quad\nW=\\begin{bmatrix}w_1\\\\ \\vdots \\\\ w_n\\end{bmatrix}.\n\\]\nSoma: \\(V+W=\\begin{bmatrix} v_1+w_1 \\\\ \\vdots \\\\ v_n+w_n \\end{bmatrix}\\).\nMultiplicação por escalar: \\(\\alpha V=\\begin{bmatrix} \\alpha v_1 \\\\ \\vdots \\\\ \\alpha v_n \\end{bmatrix}\\)."
+    "objectID": "08_diagonalização.html#diagonalização-3",
+    "href": "08_diagonalização.html#diagonalização-3",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização",
+    "text": "Diagonalização\nPortanto se \\(X\\) é uma coluna de \\(P\\) e se \\(\\lambda\\) é o correspondente elemento da diagonal de \\(D\\), provamos que \\(X\\) e \\(\\lambda\\) estão relacionados pela equação \\(AX = \\lambda X\\). Como esta equação é válida para todas as colunas, parece interessante dar uma definição para isso.\nDefinição: Seja \\(A\\) uma matriz quadrada. Um número real \\(\\lambda\\) é um autovalor de \\(A\\) se existir um vetor \\(V \\neq \\vec{0}\\) tal que\n\\[AV = \\lambda V.\\]\nNeste caso \\(V\\) é um autovetor associado ao autovalor \\(\\lambda\\).\nObs: o vetor \\(V\\) deve ser diferente de zero, pois estes vetores serão as colunas de \\(P\\). Queremos \\(P\\) invertível. Logo \\(\\det(P) \\neq 0\\). E portanto \\(P\\) não pode possuir uma coluna zerada."
   },
   {
-    "objectID": "07_Rn.html#combinação-linear",
-    "href": "07_Rn.html#combinação-linear",
-    "title": "O espaço ℝⁿ",
-    "section": "Combinação linear",
-    "text": "Combinação linear\nSejam \\(V_1,\\ldots,V_k\\in\\mathbb{R}^n\\). Uma combinação linear destes vetores é um vetor\n\n\\[\nV = x_1V_1 + x_2V_2 + \\cdots + x_kV_k.\n\\]\n\n\nExemplo 1 Se \\(V_1=(-1,2,1)\\) e \\(V_2=(3,-1,2)\\) em \\(\\mathbb{R}^3\\) então\n\\[\\begin{aligned}\nV &= 3V_1 + 5V_2 = 3(-1,2,1) + 5(3,-1,2) = (-3,6,3) + (15,-5,10) = (12,1,13),\\\\\nW &= 2V_1 - 3V_2 = 2(-1,2,1) - 3(3,-1,2) = (-2,4,2) - (9,-3,6) = (-11,7,-4).\n\\end{aligned}\\]\n\nCombinação linear — vetores canônicos\nEm \\(\\mathbb{R}^3\\) todo vetor \\(V=(a,b,c)\\) é combinação linear dos vetores canônicos\n\\[\\vec{i}=(1,0,0),\\quad \\vec{j}=(0,1,0),\\quad \\vec{k}=(0,0,1).\\]\nDe fato, \\(V=(a,b,c)=a\\,\\vec{i}+b\\,\\vec{j}+c\\,\\vec{k}\\)."
+    "objectID": "08_diagonalização.html#diagonalização-4",
+    "href": "08_diagonalização.html#diagonalização-4",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização",
+    "text": "Diagonalização\nAté o momento observamos que se \\(A\\) é diagonalizável com \\(P^{-1}AP=D\\), então \\(P\\) é uma matriz invertível cujas colunas são autovetores, e os elementos da diagonal principal de \\(D\\) são os correspondentes autovalores de \\(A\\).\nEntão para achar \\(P\\) e \\(D\\) devemos calcular autovetores e autovalores.\nComo fazer isso? Boa pergunta, não é mesmo????"
   },
   {
-    "objectID": "07_Rn.html#combinação-linear-verificação-por-sistema-linear",
-    "href": "07_Rn.html#combinação-linear-verificação-por-sistema-linear",
-    "title": "O espaço ℝⁿ",
-    "section": "Combinação linear — verificação por sistema linear",
-    "text": "Combinação linear — verificação por sistema linear\n\nExemplo 2 Verifique se \\(V=(-10,-3,1)\\) é combinação linear de \\(V_1=(1,-3,5)\\) e \\(V_2=(-4,1,-3)\\).\nBasta analisar se \\(x_1V_1 + x_2V_2 = V\\) tem solução:\n\\[\n\\begin{aligned}\nx_1(1,-3,5) + x_2(-4,1,-3) &= (-10,-3,1)\\\\\n(x_1-4x_2,\\; -3x_1+x_2,\\; 5x_1-3x_2) &= (-10,-3,1)\n\\end{aligned}\n\\]\nSistema equivalente:\n\\[\n\\begin{cases}\nx_1 - 4x_2 = -10,\\\\\n-3x_1 + x_2 = -3,\\\\\n5x_1 - 3x_2 = 1.\n\\end{cases}\n\\]\nResolvendo, \\(x_1=2\\) e \\(x_2=3\\), logo \\(V=2V_1+3V_2\\)."
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores",
+    "href": "08_diagonalização.html#autovalores-e-autovetores",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores",
+    "text": "Autovalores e autovetores\nVamos ver como podemos calcular autovalores e autovetores.\nUm autovetor \\(V\\) e o correspondente autovalor \\(\\lambda\\) estão relacionados por \\(AV = \\lambda V\\).\nDaí\n\\[AV - \\lambda V = \\overline{0}\\]\n\\[AV - \\lambda I_n V = \\overline{0}\\]\n\\[(A - \\lambda I_n) V = \\overline{0}\\]\nComo \\(V\\) não é o vetor nulo, concluímos que \\(V\\) é uma solução não trivial do sistema linear homogêneo\n\\[(A - \\lambda I_n) X = \\overline{0}\\]"
   },
   {
-    "objectID": "07_Rn.html#combinação-linear-forma-matricial-e-proposição",
-    "href": "07_Rn.html#combinação-linear-forma-matricial-e-proposição",
-    "title": "O espaço ℝⁿ",
-    "section": "Combinação linear — forma matricial e proposição",
-    "text": "Combinação linear — forma matricial e proposição\nNo exemplo anterior, o sistema é\n\\[\n\\begin{bmatrix} 1 & -4 \\\\ -3 & 1 \\\\ 5 & -3 \\end{bmatrix}\n\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix}=\n\\begin{bmatrix} -10 \\\\ -3 \\\\ 1 \\end{bmatrix}.\n\\]\nObserve que as colunas das matrizes são \\(V_1\\), \\(V_2\\) e \\(V\\). Generalizando:\n\nProposição 1 Um vetor \\(V\\) é combinação linear de \\(V_1,\\ldots,V_k\\in\\mathbb{R}^n\\) se o sistema linear \\(AX=V\\) tem solução, onde \\(A\\) é a matriz cujas colunas são \\(V_1,\\ldots,V_k\\)."
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores-1",
+    "href": "08_diagonalização.html#autovalores-e-autovetores-1",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores",
+    "text": "Autovalores e autovetores\nUm autovetor \\(V\\) é uma solução não nula do sistema linear homogêneo\n\\[\n(A - \\lambda I_n) X = \\overline{0}.\n\\]\nUm sistema homogêneo possui solução não trivial quando a matriz dos coeficientes tem determinante igual a zero.\nPortanto para existir solução não trivial, devemos ter\n\\[\\det(A - \\lambda I_n) = 0.\\]\nAs soluções desta equação são os autovalores \\(\\lambda\\).\nEntão resolvemos tudo de uma vez só: já caracterizamos autovetores e autovalores! Veja:"
   },
   {
-    "objectID": "07_Rn.html#combinação-linear-exemplo-de-inexistência",
-    "href": "07_Rn.html#combinação-linear-exemplo-de-inexistência",
-    "title": "O espaço ℝⁿ",
-    "section": "Combinação linear — exemplo de inexistência",
-    "text": "Combinação linear — exemplo de inexistência\n\nExemplo 3 Verifique se \\(V=(0,7,1)\\) é combinação linear de \\(V_1=(2,1,4)\\) e \\(V_2=(3,-2,5)\\).\nAnalisar \\(xV_1 + yV_2 = V\\):\n\\[\n\\begin{bmatrix} 2 & 3 \\\\ 1 & -2 \\\\ 4 & 5 \\end{bmatrix}\n\\begin{bmatrix} x \\\\ y \\end{bmatrix}=\n\\begin{bmatrix} 0 \\\\ 7 \\\\ 1 \\end{bmatrix}\n\\]\nEste sistema não tem solução; logo \\(V\\) não é combinação linear de \\(V_1\\) e \\(V_2\\)."
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores-2",
+    "href": "08_diagonalização.html#autovalores-e-autovetores-2",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores",
+    "text": "Autovalores e autovetores\nDada uma matriz quadrada \\(A\\):\n\nCalcule as raízes (soluções) da equação \\(\\det(A - \\lambda I_n) = 0\\). Estas raízes são os autovalores de \\(A\\).\nPara cada \\(\\lambda\\) encontrado em (a), o sistema homogêneo \\((A - \\lambda I_n) X = \\overline{0}\\) possui solução não trivial.\nToda solução não trivial deste sistema é um autovetor \\(V\\) associado ao autovalor \\(\\lambda\\).\n\nObservação: se \\(V\\) é um autovetor de \\(A\\), então \\(AV=\\lambda V\\). Multiplicando os dois lados desta equação por um número vemos que todo múltiplo de \\(V\\) também é um autovetor de \\(A\\) associado ao mesmo autovalor. É por este motivo que os autovetores não são únicos. E em um sistema linear homegêneo com determinante zero, sempre existem infinitas soluções."
   },
   {
-    "objectID": "07_Rn.html#subespaços",
-    "href": "07_Rn.html#subespaços",
-    "title": "O espaço ℝⁿ",
-    "section": "Subespaços",
-    "text": "Subespaços\nUma coleção \\(X\\) de vetores de \\(\\mathbb R^n\\) é dito subespaço de \\(\\mathbb R^n\\) se \\(X\\) é fechado para soma e múltiplo escalar. Isto é, se para quaisquer \\(U_1,U_2\\in X\\) e qualquer escalar \\(a\\in\\mathbb{R}\\), os vetores \\[\nU_1 + U_2\\quad\\mbox{e}\\quad a U_1\n\\] também pertencem a \\(X\\).\nSe \\(X\\) é subespaço de \\(\\mathbb R^n\\), então \\(X\\) contém o vetor nulo \\(\\vec{0}\\) e é fechado para combinações lineares. Ou seja, se \\(U_1,\\ldots,U_k\\in X\\) e \\(a_1,\\ldots,a_k\\in\\mathbb{R}\\), então \\[\na_1 U_1 + a_2 U_2 + \\cdots + a_k U_k \\in X.\n\\]"
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores-3",
+    "href": "08_diagonalização.html#autovalores-e-autovetores-3",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores",
+    "text": "Autovalores e autovetores\nDada uma matriz quadrada \\(A\\):\n\nAs raízes da equação \\(\\det(A - \\lambda I_n) = 0\\) são os autovalores.\nPara cada autovalor \\(\\lambda\\), as solução não triviais do sistema linear homogêneo \\((A - \\lambda I_n) X = \\overline{0}\\) são os autovetores.\n\nO polinômio característico de \\(A\\) é \\(p(\\lambda) = \\det(A - \\lambda I_n)\\).\nOs autovalores são as raízes do polinômio característico.\nSe \\(A\\) é uma matriz \\(n \\times n\\), então \\(p(\\lambda)\\) é um polinômio de grau \\(n\\)."
   },
   {
-    "objectID": "07_Rn.html#exemplos-de-subespaços",
-    "href": "07_Rn.html#exemplos-de-subespaços",
-    "title": "O espaço ℝⁿ",
-    "section": "Exemplos de subespaços",
-    "text": "Exemplos de subespaços\n\nExemplo 4  \n\nUma reta pela origem em \\(\\mathbb R^2\\) ou \\(\\mathbb R^3\\) é um subespaço de \\(\\mathbb R^2\\) ou \\(\\mathbb R^3\\).\nUm plano pela origem em \\(\\mathbb R^3\\) é um subespaço de \\(\\mathbb R^3\\).\nO conjunto \\(\\{\\vec{0}\\}\\) é um subespaço de \\(\\mathbb R^n\\).\nO conjunto \\(\\mathbb R^n\\) é um subespaço de \\(\\mathbb R^n\\).\nSe \\(A\\) é matriz \\(m\\times n\\), o conjunto das soluções do sistema homogêneo \\(AX=\\vec 0\\) é um subespaço de \\(\\mathbb R^n\\)."
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores-4",
+    "href": "08_diagonalização.html#autovalores-e-autovetores-4",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores",
+    "text": "Autovalores e autovetores\nExemplo 1:\n\nDetermine os autovalores e os autovetores da matriz \\[A = \\begin{bmatrix} 3 & -1 \\\\ -2 & 2 \\end{bmatrix}.\\]\nExiba uma matriz \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(AP=PD\\).\nExiste uma tal matriz \\(P\\) invertível? Existe uma tal matriz \\(P\\) não invertível?\nA matriz \\(A\\) é diagonalizável? Se for, exiba uma matriz invertível \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\)."
   },
   {
-    "objectID": "07_Rn.html#espaço-gerado",
-    "href": "07_Rn.html#espaço-gerado",
-    "title": "O espaço ℝⁿ",
-    "section": "Espaço gerado",
-    "text": "Espaço gerado\nSejam \\(V_1,\\ldots,V_k\\in\\mathbb R^n\\). O espaço gerado por \\(V_1,\\ldots,V_k\\) é o conjunto de todas as combinações lineares:\n\\[\n[V_1,\\ldots,V_k] = \\{V=x_1V_1+\\cdots+x_kV_k\\mid x_1,\\ldots,x_k\\in\\mathbb{R}\\}.\n\\]\nO conjunto \\([V_1,\\ldots,V_k]\\) é um subespaço de \\(\\mathbb R^n\\).\nObservações importantes:\n\nComo \\(\\vec{0} = 0V_1+\\cdots+0V_k\\), a origem sempre pertence a um subespaço de \\(\\mathbb{R}^n\\);\nSe \\(V,W\\in [V_1,\\ldots,V_k]\\), então \\(V+W\\in [V_1,\\ldots,V_k]\\) (fechado para soma);\nSe \\(V\\in [V_1,\\ldots,V_k]\\) and \\(a\\in \\mathbb R\\), então \\(a V\\in [V_1,\\ldots,V_k]\\) (fechado para múltiplo escalar)."
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores-5",
+    "href": "08_diagonalização.html#autovalores-e-autovetores-5",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores",
+    "text": "Autovalores e autovetores\nExemplo 2:\n\nDetermine os autovalores e os autovetores da matriz \\[A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}.\\]\nExiba uma matriz \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(AP=PD\\).\nExiste uma tal matriz \\(P\\) invertível? Existe uma tal matriz \\(P\\) não invertível?\nA matriz \\(A\\) é diagonalizável? Se for, exiba uma matriz invertível \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\)."
   },
   {
-    "objectID": "07_Rn.html#exemplos",
-    "href": "07_Rn.html#exemplos",
-    "title": "O espaço ℝⁿ",
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores-diagonalização",
+    "href": "08_diagonalização.html#autovalores-e-autovetores-diagonalização",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores — diagonalização",
+    "text": "Autovalores e autovetores — diagonalização\nObservações importantes sobre uma dada matriz quadrada \\(A\\).\n\nSempre existe uma matriz \\(P\\) e sempre existe uma matriz diagonal \\(D\\) tais que \\(AP=PD\\). Basta montar uma matriz \\(P\\) cujas colunas são autovetores e basta colocar na diagonal principal de \\(D\\) os correspondentes autovalores.\nDe modo algum isto significa que \\(A\\) é diagonalizável.\nPara \\(A\\) ser diagonalizável, precisamos achar \\(P\\) invertível e \\(D\\) diagonal tais que \\(P^{-1}AP=D\\).\nSempre podemos passar da igualdade \\(P^{-1}AP=D\\) para a igualdade \\(AP=PD\\).\nMas para passar da igualdade \\(AP=PD\\) para a igualdade \\(P^{-1}AP=D\\) a matriz \\(P\\) deve ser invertível."
+  },
+  {
+    "objectID": "08_diagonalização.html#autovalores-e-autovetores-diagonalização-1",
+    "href": "08_diagonalização.html#autovalores-e-autovetores-diagonalização-1",
+    "title": "Diagonalização e Autovalores",
+    "section": "Autovalores e autovetores — diagonalização",
+    "text": "Autovalores e autovetores — diagonalização\nEntão para \\(A_{n\\times n}\\) ser diagonalizável deve ser possível montar uma matriz invertível \\(P_{n \\times n}\\) com \\(n\\) autovetores de \\(A\\).\nLembre-se que \\(P\\) é invertível se \\(\\det(P) \\neq 0\\) e que isto significa que as colunas de \\(P\\) são vetores LI.\nIsto dá a seguinte caracterização de matrizes diagonalizáveis.\nTeorema: uma matriz quadrada \\(A_{n\\times n}\\) é diagonalizável se \\(A\\) possui \\(n\\) autovetores LI.\nObserve que \\(A\\) sempre possui \\(n\\) autovalores, pois os autovalores são raízes de um polinômio \\(p(\\lambda) = \\det(A - \\lambda I_n)=0\\) de grau \\(n\\), e todo polinômio de grau \\(n\\) possui \\(n\\) raízes. Portanto a caracterização de matrizes diagonalizáveis não pode ser dada em termos de autovalores."
+  },
+  {
+    "objectID": "08_diagonalização.html#exemplos",
+    "href": "08_diagonalização.html#exemplos",
+    "title": "Diagonalização e Autovalores",
     "section": "Exemplos",
-    "text": "Exemplos\n\nExemplo 5  \n\nGerado por um vetor não nulo: os múltiplos deste vetor (uma reta).\nGerado por dois vetores não paralelos: o plano que contém estes vetores.\n\n\n\nExemplo 6  \n\nDetermine a equação do plano \\(\\alpha\\) gerado por \\(V_1=(2,-1,1)\\) e \\(V_2=(3,0,2)\\).\nO vetor \\(U=(5,-1,3)\\) pertence a \\(\\alpha\\)? Qual é o espaço gerado por \\(U,V_1,V_2\\)?\nO vetor \\(W=(3,2,1)\\) pertence a \\(\\alpha\\)? Qual é o espaço gerado por \\(W,V_1,V_2\\)?"
+    "text": "Exemplos\nVerifique se cada uma das seguintes matrizes \\(A\\) é diagonalizável ou não. Quando for, determine uma matriz invertível \\(P\\) e determine uma matiz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\).\n\n\\(A = \\begin{bmatrix} 7 & -8 \\\\ 4 & -5 \\end{bmatrix}\\)\n\\(A = \\begin{bmatrix} 3 & 2 \\\\ -2 & 8 \\end{bmatrix}\\)\n\\(A = \\begin{bmatrix} 4 & 0 & -2 \\\\ 2 & 2 & -2 \\\\ 1 & 0 & 1 \\end{bmatrix}\\)\n\\(A = \\begin{bmatrix} 2 & 0 & 1 \\\\ 0 & -4 & 6 \\\\ 0 & -3 & 5 \\end{bmatrix}\\)"
   },
   {
-    "objectID": "07_Rn.html#espaço-gerado-proposição-útil",
-    "href": "07_Rn.html#espaço-gerado-proposição-útil",
-    "title": "O espaço ℝⁿ",
-    "section": "Espaço gerado — proposição útil",
-    "text": "Espaço gerado — proposição útil\n\nProposição 2 Se \\(V_0\\) é combinação linear de \\(V_1,\\ldots,V_k\\), então \\[\n[V_0,V_1,\\ldots,V_k] = [V_1,\\ldots,V_k].\n\\]\n\nDemonstração-esboço: escreva \\(V_0=\\alpha_1V_1+\\cdots+\\alpha_kV_k\\) e substitua em \\(x_0V_0+x_1V_1+\\cdots+x_kV_k\\) para ver que qualquer combinação com \\(V_0\\) pode ser reescrita sem \\(V_0\\).\nPara formar \\([V_1,\\ldots,V_k]\\) podemos descartar qualquer vetor que seja combinação linear dos demais. Isso motiva o conceito de dependência linear:\n\nDefinição 1 Um conjunto de vetores é linearmente dependente se algum deles é combinação linear dos demais. No caso contrário, dizemos que os vetores são linearmente independentes."
+    "objectID": "08_diagonalização.html#diagonalização-5",
+    "href": "08_diagonalização.html#diagonalização-5",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização",
+    "text": "Diagonalização\nTeorema: uma matriz quadrada \\(A_{n\\times n}\\) é diagonalizável se \\(A\\) possui \\(n\\) autovetores LI.\nPara \\(A\\) não ser diagonalizável tem que faltar autovetores LI.\nTeorema: autovetores associados a autovalores diferentes são LI.\nDeste teorema vemos que na tentativa de construir a matriz \\(P\\) de autovetores para diagonalizar \\(A\\):\n\nnão precisamos nos preocupar com colunas associadas a autovalores diferentes. Elas já nascem LI.\nprecisamos somente pensar nos blocos de autovetores associados a um mesmo autovalor.\npara este bloco ser LI, se o autovalor é uma raíz de multiplicidade \\(k\\) de \\(p(\\lambda)\\), então o autoespaço associado a \\(\\lambda\\) deve ter dimensão \\(k\\). Caso contrário \\(A\\) não é diagonalizável."
   },
   {
-    "objectID": "07_Rn.html#dependência-linear-questões",
-    "href": "07_Rn.html#dependência-linear-questões",
-    "title": "O espaço ℝⁿ",
-    "section": "Dependência linear — questões",
-    "text": "Dependência linear — questões\n\nComo saber se um conjunto \\(\\{V_1,\\ldots,V_k\\}\\) é linearmente dependente? Tentar cada um por vez é viável?\nSe \\(\\{V_1,\\ldots,V_k\\}\\) é dependente, qual vetor é combinação dos demais? Poderiam todos ser combinações dos outros?\n\n\nExercício 1  \n\nDetermine a equação do plano \\(\\alpha\\) gerado pelos vetores \\(V_1=(2,-1,1)\\) e \\(V_2=(3,0,2)\\).\nO vetor \\(U = (1,-2,0)\\) pertence a este plano \\(\\alpha\\)? Qual é o espaço gerado por \\(U\\), \\(V_1\\) e \\(V_2\\)? Neste caso o subespaço \\([U,V_1,V_2]\\) é um plano pela origem.\nO vetor \\(W = (3,2,1)\\) pertence a este plano \\(\\alpha\\)? Qual é o espaço gerado por \\(W\\), \\(V_1\\) e \\(V_2\\)? Neste caso o subespaço \\([W,V_1,V_2]\\) é todo o \\(\\mathbb{R}^3\\)."
+    "objectID": "08_diagonalização.html#aparência-das-matrizes-p-e-d",
+    "href": "08_diagonalização.html#aparência-das-matrizes-p-e-d",
+    "title": "Diagonalização e Autovalores",
+    "section": "Aparência das matrizes \\(P\\) e \\(D\\)",
+    "text": "Aparência das matrizes \\(P\\) e \\(D\\)\nExemplo: Suponhamos que uma matriz \\(A_{7 \\times 7}\\) tenha o seguinte polinômio característico\n\\[p(\\lambda) = (3-\\lambda)(5-\\lambda)^2(9-\\lambda)^4\\]\nOs autovalores são os números \\(3\\), \\(5\\) e \\(9\\), sendo que\n\n\\(3\\) é uma raíz simples.\n\\(5\\) é uma raíz de multiplicidade dois.\n\\(9\\) é uma raiz de multiplicidade quatro.\n\nNeste caso, se \\(A\\) é diagonalizável, a matriz diagonal \\(D\\) e a matriz invertível \\(P\\) possuem as seguintes aparências."
   },
   {
-    "objectID": "07_Rn.html#dependência-linear",
-    "href": "07_Rn.html#dependência-linear",
-    "title": "O espaço ℝⁿ",
-    "section": "Dependência Linear",
-    "text": "Dependência Linear\nUm conjunto de vetores é linearmente dependente se um deles for uma combinação linear dos demais.\n\nTeorema 1 Um conjunto de vetores \\(V_1,\\ldots,V_k\\) é linearmente dependente se e somente se a equação vetorial \\[\nx_1V_1 + x_2V_2 + \\cdots + x_kV_k = \\vec{0}\n\\] possui solução não trivial. Isto é, possui solução em que algum \\(x_i \\neq 0\\).\n\nDe fato, por exemplo, se \\(x_1\\neq 0\\), na equação \\(x_1V_1 + x_2V_2 + \\cdots + x_kV_k = \\vec{0}\\) podemos isolar \\(V_1\\), escrevendo \\(V_1\\) como uma combinação linear dos demais vetores: \\[\nV_1 = -\\dfrac{x_2}{x_1}V_2 - \\cdots - \\dfrac{x_k}{x_1}V_k.\n\\]"
+    "objectID": "08_diagonalização.html#aparência-das-matrizes-p-e-d-1",
+    "href": "08_diagonalização.html#aparência-das-matrizes-p-e-d-1",
+    "title": "Diagonalização e Autovalores",
+    "section": "Aparência das matrizes \\(P\\) e \\(D\\)",
+    "text": "Aparência das matrizes \\(P\\) e \\(D\\)\n\\[\nD = \\left[ \\begin{array}{c|cc|cccc}\n\\ \\mathbf{3}\\  &  0            & 0             & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & \\ \\mathbf{5} \\  & 0             & 0       & 0       & 0       & 0          \\\\\n0           & 0             & \\ \\mathbf{5}\\   & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & 0             & 0             & \\ \\mathbf{9}\\  & 0       & 0       & 0          \\\\\n0           & 0             & 0             & 0       & \\ \\mathbf{9}\\  & 0       & 0          \\\\\n0           & 0             & 0             & 0       & 0       & \\ \\mathbf{9}\\  & 0          \\\\\n0           & 0             & 0             & 0       & 0       & 0       & \\ \\mathbf{9}\\     \\end{array}\\right]\\\nP = \\left[ \\begin{array}{c|cc|cccc}\n    &     &     &     &     &     &     \\\\\nV_1 & V_2 & V_3 & V_4 & V_5 & V_6 & V_7 \\\\\n    &     &     &     &     &     &     \\end{array}\\right]\n\\]\n\n\\(V_1\\) é um autovetor associado ao autovalor \\(\\lambda=3\\).\n\\(\\{V_2,V_3\\}\\) é uma base para o autoespaço associado ao autovalor \\(\\lambda=5\\).\n\\(\\{V_4,V_5,V_6,V_7\\}\\) é uma base para o autoespaço associado ao autovalor \\(\\lambda=9\\).\n\nQuando a dimensão de um autoespaço é menor que a esperada, a matriz \\(A\\) não é diagonalizável."
   },
   {
-    "objectID": "07_Rn.html#dependência-linear-1",
-    "href": "07_Rn.html#dependência-linear-1",
-    "title": "O espaço ℝⁿ",
-    "section": "Dependência Linear",
-    "text": "Dependência Linear\n\nExemplo 7 Verifique se os vetores \\(V_1=(1,2,5)\\), \\(V_2=(7,-1,5)\\) e \\(V_3=(1,-1,-1)\\) são LI ou LD.\nResolvendo a equação \\(x_1V_1 + x_2V_2 + x_3V_3 = \\vec{0}\\), obtemos \\(2V_1 - V_2 + 5V_3 = \\vec{0}\\).\nNeste caso, qualquer um destes vetores pode ser escrito como uma combinação linear dos outros dois.\nPortanto \\([V_1,V_2,V_3] = [V_1,V_2] = [V_1,V_3] = [V_2,V_3]\\).\nEste espaço gerado é um plano pela origem."
+    "objectID": "08_diagonalização.html#aparência-das-matrizes-p-e-d-2",
+    "href": "08_diagonalização.html#aparência-das-matrizes-p-e-d-2",
+    "title": "Diagonalização e Autovalores",
+    "section": "Aparência das matrizes \\(P\\) e \\(D\\)",
+    "text": "Aparência das matrizes \\(P\\) e \\(D\\)\n\\[\nD = \\left[ \\begin{array}{c|cc|cccc}\n\\ \\mathbf{3}\\  &  0            & 0             & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & \\ \\mathbf{5} \\  & 0             & 0       & 0       & 0       & 0          \\\\\n0           & 0             & \\ \\mathbf{5}\\   & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & 0             & 0             & \\ \\mathbf{9}\\  & 0       & 0       & 0          \\\\\n0           & 0             & 0             & 0       & \\ \\mathbf{9}\\  & 0       & 0          \\\\\n0           & 0             & 0             & 0       & 0       & \\ \\mathbf{9}\\  & 0          \\\\\n0           & 0             & 0             & 0       & 0       & 0       & \\ \\mathbf{9}\\     \\end{array}\\right]\n\\]\n\\[\nP = \\left[ \\begin{array}{c|cc|cccc}\n    &     &     &     &     &     &     \\\\\nV_1 & V_2 & V_3 & V_4 & V_5 & V_6 & V_7 \\\\\n    &     &     &     &     &     &     \\end{array}\\right]\n\\]\nQuando a dimensão de um autoespaço é menor que a esperada, a matriz \\(A\\) não é diagonalizável."
   },
   {
-    "objectID": "07_Rn.html#dependência-linear-2",
-    "href": "07_Rn.html#dependência-linear-2",
-    "title": "O espaço ℝⁿ",
-    "section": "Dependência Linear",
-    "text": "Dependência Linear\n\nVerifique se os vetores \\(V_1=(3,0,-12)\\), \\(V_2=(-1,2,1)\\) e \\(V_3=(-2,0,8)\\) são LI ou LD.\nNeste exemplo \\(2V_1+0V_2+3V_3=\\vec{0}\\). Portanto\n\npodemos escrever \\(V_1\\) como combinação linear de \\(V_2\\) e \\(V_3\\).\ne também podemos escrever \\(V_3\\) como combinação linear de \\(V_1\\) e \\(V_2\\).\nmas não podemos escrever \\(V_2\\) como combinação linear de \\(V_1\\) e \\(V_3\\).\n\nDaí \\([V_1,V_2,V_3] = [V_2,V_3] = [V_1,V_2]\\). Este espaço é um plano.\nObserve que \\([V_1,V_3]\\) é uma reta contida neste plano."
+    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas",
+    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização de matrizes simétricas",
+    "text": "Diagonalização de matrizes simétricas\nNas aulas anteriores vimos que existem matrizes que não são diagonalizáveis.\nVamos ver agora que no caso particular de matrizes simétricas isto não ocorre. Isto é, vamos ver que todas as matrizes simétricas são diagonalizáveis.\nDefinição. Uma matriz quadrada \\(A\\) é simétrica se \\(A=A^t\\). Neste caso existe uma simetria em relação à diagonal principal.\n\\[\\begin{bmatrix} 2 & 3 & 1 \\\\ 3 & 5 & 0 \\\\ 1 & 0 & 7 \\end{bmatrix}\\qquad\n\\begin{bmatrix} 1 & 8 & 3 & 5  \\\\ 8 & 0 & 2 & 7  \\\\ 3 & 2 & 3 & 9 \\\\ 5 & 7 & 9 & 4 \\end{bmatrix}\\]\nTeorema. Para uma matriz simétrica \\(A\\), autovetores associados a autovalores diferentes são ortogonais."
   },
   {
-    "objectID": "07_Rn.html#dependência-linear-3",
-    "href": "07_Rn.html#dependência-linear-3",
-    "title": "O espaço ℝⁿ",
-    "section": "Dependência Linear",
-    "text": "Dependência Linear\nObs: No exemplo anterior vimos que quando um conjunto de vetores é LD então um destes vetores é uma combinação linear dos demais. Entretanto, mesmo o conjunto sendo LD, pode ser que exista um vetor que não seja uma combinação linear dos demais.\nVimos que se \\(V_1,V_2,\\ldots,V_k\\) é um conjunto LD e se, por exemplo, \\(V_1\\) é uma combinação linear dos demais vetores então\n\\[[V_1,V_2,\\ldots,V_k] = [V_2,\\ldots,V_k].\\]\nPara formar o espaço gerado não precisamos do vetor \\(V_1\\). Podemos gerar este mesmo espaço com um vetor a menos.\nPodemos continuar o processo, agora com os vetores \\(V_2,\\ldots,V_k\\), eliminando vetores que já são combinações lineares dos demais.\nApós eliminar todos estes vetores, ficamos com um conjunto de vetores linearmente independete e que gera o mesmo espaço.\nNeste momento, obtemos uma base para este subespaço."
+    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-1",
+    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-1",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização de matrizes simétricas",
+    "text": "Diagonalização de matrizes simétricas\nSe \\(A_{n \\times n}\\) é uma matriz simétrica, então autoespaços associados a autovalores diferentes são subespaços ortogonais de \\(\\mathbb{R}^n\\). Considerando bases ortonormais para cada um destes autoespaços, é possível construir uma matriz \\(P\\) para diagonalizar \\(A\\) tal que as colunas de \\(P\\) são vetores ortonormais de \\(\\mathbb{R}^n\\). Como vetores ortogonais são LI, segue que \\(P\\) é invertível.\nTeorema. Toda matriz simétrica \\(A\\) é diagonalizável. Mais ainda, existe uma matriz \\(P\\) cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal \\(D\\) tais que \\(P^{-1} A P = D\\).\nPara ver a demonstração completa desse teorema consulte a apostila."
   },
   {
-    "objectID": "07_Rn.html#base-e-dimensão",
-    "href": "07_Rn.html#base-e-dimensão",
-    "title": "O espaço ℝⁿ",
-    "section": "Base e Dimensão",
-    "text": "Base e Dimensão\nInformalmente: Uma base é um conjunto mínimo de geradores para um subespaço.\n\nDefinição 2 Seja \\(W\\) um subespaço de \\(\\mathbb R^n\\). Uma base para \\(W\\) é um sistema de vetores \\(V_1,\\ldots,V_k\\) tais que\n\n\\(W = [V_1,\\ldots,V_k]\\) (ou seja, os vetores geram \\(W\\) são combinações lineares destes vetores); e\n\\(V_1,\\ldots,V_k\\) são linearmente independentes (ou seja, nenhum vetor é combinação linear dos demais).\n\n\n\nLema 1 Se \\(V_1,\\ldots,V_k\\) é base de \\(W\\), então todo vetor de \\(W\\) pode ser escrito de forma única como combinação linear de \\(V_1,\\ldots,V_k\\).\n\nSe \\(V\\in W\\) e \\[\nV=x_1V_1 + x_2V_2 + \\cdots + x_kV_k\n\\] então os escalares \\(x_1,\\ldots,x_k\\) são chamadas de coordenadas de \\(V\\) na base \\(V_1,\\ldots,V_k\\)."
+    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-2",
+    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-2",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização de matrizes simétricas",
+    "text": "Diagonalização de matrizes simétricas\nExemplos. Para cada uma das matrizes simétricas a seguir, determine matrizes \\(P\\) e \\(D\\) como no teorema anterior: colunas de \\(P\\) são autovetores ortogonais e unitários.\n\n\\(A=\\begin{bmatrix} 4 & -1 \\\\ -1 & 4 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 4 & -\\sqrt{3} \\\\ -\\sqrt{3} & 6 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 9 & 3 \\\\ 3 & 1 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 3 & -1 \\\\ 0 & -1 & 3 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{bmatrix}\\)"
   },
   {
-    "objectID": "07_Rn.html#lema-chave",
-    "href": "07_Rn.html#lema-chave",
-    "title": "O espaço ℝⁿ",
-    "section": "Lema chave",
-    "text": "Lema chave\n\nLema 2 Seja \\(W=[V_1,\\ldots,V_k]\\) um subespaço de \\(\\mathbb{R}^n\\). Assuma que \\(m&gt;k\\) e sejam \\(U_1,\\ldots,U_m\\in W\\). Então os vetores \\(U_1,\\ldots,U_m\\) são LD.\n\n\nComprovação. Como cada \\(U_j\\in W=[V_1,\\ldots,V_k]\\), existem coeficientes \\(a_{ij}\\) tais que \\[\nU_j=\\sum_{i=1}^k a_{ij}V_i,\\qquad j=1,\\ldots,m.\n\\] Considere a matriz \\(A=(a_{ij})\\in\\mathbb{R}^{k\\times m}\\). Como \\(m&gt;k\\), o sistema homogêneo \\(A\\,x=\\vec{0}\\) tem solução não trivial. Seja \\(x=(x_1,\\ldots,x_m)\\neq\\vec{0}\\) tal solução. Então \\[\n\\sum_{j=1}^m x_j U_j\n=\\sum_{j=1}^m x_j\\Big(\\sum_{i=1}^k a_{ij}V_i\\Big)\n=\\sum_{i=1}^k\\Big(\\sum_{j=1}^m a_{ij}x_j\\Big)V_i\n=\\sum_{i=1}^k 0\\cdot V_i=\\vec{0}.\n\\] Logo, existe uma combinação linear não trivial dos \\(U_j\\) que dá o vetor nulo, isto é, \\(U_1,\\ldots,U_m\\) são linearmente dependentes."
+    "objectID": "08_diagonalização.html#matrizes-ortogonais",
+    "href": "08_diagonalização.html#matrizes-ortogonais",
+    "title": "Diagonalização e Autovalores",
+    "section": "Matrizes Ortogonais",
+    "text": "Matrizes Ortogonais\nExercício. Mostre que se \\(P\\) é uma matriz quadrada \\(n\\times n\\) cujas colunas são os vetores \\(V_1, V_2, \\ldots, V_n\\) de \\(\\mathbb{R}^n\\), então a matriz \\(P^t P\\) é a matriz quadrada cujo elemento da linha \\(i\\) e coluna \\(j\\) é o produto escalar \\(\\langle V_i,V_j\\rangle\\).\nDaí segue que as colunas de \\(P\\) são vetores ortogonais e unitários se, e somente se, \\(P^t P = I_n\\). Se esse é o caso, dizemos que \\(P\\) é uma matriz ortogonal. Isto é,\n\\(P\\) é ortogonal se é válida uma das afirmações a seguir:\n\nas colunas de \\(P\\) formam uma base ortonormal de \\(\\mathbb{R}^n\\).\n\\(P^t P = I_n\\).\n\\(P^{-1} = P^t\\)."
   },
   {
-    "objectID": "07_Rn.html#a-dimensão",
-    "href": "07_Rn.html#a-dimensão",
-    "title": "O espaço ℝⁿ",
-    "section": "A dimensão",
-    "text": "A dimensão\nConsequência: Assuma que \\(W=[V_1,\\ldots,V_k]=[U_1,\\ldots,U_m]\\) e que \\(V_1,\\ldots,V_k\\) e \\(U_1,\\ldots,U_m\\) são bases de \\(W\\). Então \\(k=m\\).\n\nDefinição 3 Se a base tem \\(k\\) vetores, dizemos que \\(W\\) é um subespaço de dimensão \\(k\\): \\[\n\\dim(W)=k.\n\\]\n\nSe \\(\\{V_1,\\ldots,V_k\\}\\) é uma base para o subespaço \\(W\\), então \\(W\\) é o espaço gerado por estes vetores. Mais ainda, não existem “vetores sobrando”. Não podemos descartar nenhum dos vetores da base. \\[\nW = [V_1,\\ldots,V_k].\n\\]"
+    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-3",
+    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-3",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização de matrizes simétricas",
+    "text": "Diagonalização de matrizes simétricas\nDo teorema\nTeorema. Toda matriz simétrica \\(A\\) é diagonalizável. Mais ainda, existe uma matriz \\(P\\) cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal \\(D\\) tais que \\(P^{-1} A P = D\\).\nvemos que é possível diagonalizar uma matriz simétrica \\(A\\) com uma matriz ortogonal \\(P\\).\nVamos resumir isto no próximo teorema.\nTeorema. Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que \\(P^{-1} A P = D\\).\nComo \\(P\\) é ortogonal, \\(P^{-1} = P^t\\), e assim obtemos.\nTeorema. Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que \\(P^t A P = D\\)."
   },
   {
-    "objectID": "07_Rn.html#base-e-dimensão-1",
-    "href": "07_Rn.html#base-e-dimensão-1",
-    "title": "O espaço ℝⁿ",
-    "section": "Base e Dimensão",
-    "text": "Base e Dimensão\n\nExemplo 8  \n\nNo plano, \\(\\{\\vec{i},\\vec{j}\\}\\) é uma base de \\(\\mathbb{R}^2\\).\nDe modo mais geral, quaisquer vetores não paralelos \\(V_1\\) e \\(V_2\\) formam uma base \\(\\{V_1,V_2\\}\\) de \\(\\mathbb{R}^2\\).\nNo espaço, \\(\\{\\vec{i},\\vec{j},\\vec{k}\\}\\) é uma base de \\(\\mathbb{R}^3\\).\nSe \\(W\\) é uma reta pela origem, e se \\(V_1\\in W\\) é um vetor não nulo, então \\(\\{V_1\\}\\) é uma base para \\(W\\).\nSe \\(W\\) é um plano pela origem e se \\(V_1\\) e \\(V_2\\) são dois vetores não paralelos em \\(W\\), então \\(\\{V_1,V_2\\}\\) é uma base de \\(W\\)."
+    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-4",
+    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-4",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização de matrizes simétricas",
+    "text": "Diagonalização de matrizes simétricas\nMultiplicando o lado esquerdo da igualdade \\(P^t A P = D\\) por \\(P\\) e multiplicando o lado direito dessa igualdade por \\(P^t\\) obtemos\n\\[P^t A P = D \\Rightarrow P (P^t A P)P^t = P D P^t \\Rightarrow A = P D P^t\\]\nAssim demonstramos o importante teorema.\nTeorema. Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que\n\\[\\boxed{A = P D P^t}\\]\nÉ esta a expressão que será utilizada para resolver o problema de identificação de cônicas enunciado desde a primeira aula."
   },
   {
-    "objectID": "07_Rn.html#base-e-dimensão-2",
-    "href": "07_Rn.html#base-e-dimensão-2",
-    "title": "O espaço ℝⁿ",
-    "section": "Base e Dimensão",
-    "text": "Base e Dimensão\n\nExemplo 9  \n\nSe \\(V_1\\), \\(V_2\\) e \\(V_3\\) são vetores não coplanares, então \\(\\{V_1,V_2,V_3\\}\\) é uma base de \\(\\mathbb{R}^3\\). Observe que este é o caso se, e somente se, \\(\\det[V_1,V_2,V_3] \\neq 0\\).\nDetermine uma base para o plano de equação \\(2x+y-3x=0\\). Em seguida complete esta base até uma base de \\(\\mathbb{R}^3\\).\nDetermine uma base e a dimensão do seguinte subespaço de \\(\\mathbb{R}^3\\) \\[\nW = \\{ (a-b,\\ b+c,\\ 2a-b+c)\\in\\mathbb{R}^3\\mid a,b,c\\in\\mathbb{R} \\}.\n\\]\nO conjunto solução de um sistema linear homogêneo é um subespaço de \\(\\mathbb{R}^n\\). Por exemplo, determine uma base para o conjunto solução de \\[\n\\left\\{\\begin{array}{rrrrrrrrr}\nx  & + &  y  & - & 2z & - &  w & = &  0 \\\\\n-x  & - &  y  & + & 2z & + &  w & = &  0 \\\\\n2x  & + & 2y  & - &  z & + &  w & = &  0 \\\\\n\\end{array}\\right.\n\\]"
+    "objectID": "06_retas_e_planos.html#retas-no-plano",
+    "href": "06_retas_e_planos.html#retas-no-plano",
+    "title": "Retas e planos",
+    "section": "Retas no plano",
+    "text": "Retas no plano\n\n\n\n\n\n\nNo plano cartesiano, toda reta tem equação do tipo \\[\nax+by=c.\n\\]\nJá estamos acostumados com isso."
   },
   {
-    "objectID": "07_Rn.html#vetores-li-e-ld-caracterização-via-determinantes",
-    "href": "07_Rn.html#vetores-li-e-ld-caracterização-via-determinantes",
-    "title": "O espaço ℝⁿ",
-    "section": "Vetores LI e LD: caracterização via determinantes",
-    "text": "Vetores LI e LD: caracterização via determinantes\nEntão os vetores \\(V_1,V_2,\\ldots,V_k\\) são LD quando o sistema linear \\(AX=\\overline{0}\\) tem solução não trivial, em que as colunas de \\(A\\) são os vetores \\(V_1,V_2,\\ldots,V_k\\).\nSe \\(k=n\\), ou seja, se temos \\(n\\) vetores em \\(\\mathbb{R}^n\\), a matriz \\(A\\) é quadrada. Lembre-se que, neste caso, o sistema homogêneo \\(AX=\\overline{0}\\) tem solução não trivial somente quando \\(\\det(A) = 0\\) (a matriz \\(A\\) não tem inversa).\nPortanto, em \\(\\mathbb{R}^n\\):\n\n\\(V_1,V_2,\\ldots,V_n\\) são LD \\(\\Leftrightarrow\\) \\(\\det(A) = 0\\).\n\\(V_1,V_2,\\ldots,V_n\\) são LI \\(\\Leftrightarrow\\) \\(\\det(A) \\neq 0\\)."
+    "objectID": "06_retas_e_planos.html#retas-no-espaço",
+    "href": "06_retas_e_planos.html#retas-no-espaço",
+    "title": "Retas e planos",
+    "section": "Retas no espaço",
+    "text": "Retas no espaço\n\n\n\n\n\nQual é a equação de uma reta no espaço?\nFaz sentido pensar que esta reta poderia ter uma equação do tipo \\(ax+by=c\\) ou, generalizado, do tipo \\(ax+by+cz=d\\).\nNão. Pois uma reta é um objeto 1-dimensional. E cada uma destas equações possuem duas variáveis livres."
   },
   {
-    "objectID": "07_Rn.html#produto-escalar-em-mathbbrn",
-    "href": "07_Rn.html#produto-escalar-em-mathbbrn",
-    "title": "O espaço ℝⁿ",
-    "section": "Produto escalar em \\(\\mathbb{R}^n\\)",
-    "text": "Produto escalar em \\(\\mathbb{R}^n\\)\nSe \\(V=(v_1,v_2,\\ldots,v_n)\\) e \\(W=(w_1,w_2,\\ldots,w_n)\\) são vetores em \\(\\mathbb{R}^n\\), o produto escalar entre \\(V\\) e \\(W\\) é o número real\n\\[\\langle V,W\\rangle = v_1w_1 + v_2w_2 + \\cdots + v_nw_n.\\]\nA norma do vetor \\(V\\) é \\(\\|V\\| = \\sqrt{v_1^2 + v_2^2 + \\cdots + v_n^2} = \\sqrt{\\langle V,V\\rangle}\\).\nObserve que isto é uma generalização das definições que já foram dadas e interpretadas para \\(\\mathbb{R}^2\\) e \\(\\mathbb{R}^3\\)."
+    "objectID": "06_retas_e_planos.html#exemplo",
+    "href": "06_retas_e_planos.html#exemplo",
+    "title": "Retas e planos",
+    "section": "Exemplo",
+    "text": "Exemplo\nNo espaço, no sistema de coordenadas \\(xyz\\), desenhe o conjunto solução da equação \\(x+y=2\\).\n\n\n\n\n\n\n\n\n\n\nComo \\(z\\) é variável livre, \\(x+y=2\\) é um plano paralelo ao eixo \\(z\\)."
   },
   {
-    "objectID": "07_Rn.html#produto-escalar-em-mathbbrn-propriedades",
-    "href": "07_Rn.html#produto-escalar-em-mathbbrn-propriedades",
-    "title": "O espaço ℝⁿ",
-    "section": "Produto escalar em \\(\\mathbb{R}^n\\) — propriedades",
-    "text": "Produto escalar em \\(\\mathbb{R}^n\\) — propriedades\nSão as mesmas que já foram demonstradas para o \\(\\mathbb{R}^2\\) e \\(\\mathbb{R}^3\\):\n\n\\(\\langle V,W\\rangle = \\langle W,V\\rangle\\).\n\\(\\langle U+V,W\\rangle = \\langle U,W\\rangle + \\langle V,W\\rangle\\).\n\\(\\langle \\alpha V,W\\rangle = \\langle V,\\alpha W\\rangle = \\alpha \\langle V,W\\rangle\\).\n\\(\\langle V,V\\rangle=\\|V\\|^2\\ \\geq\\ 0\\). Mais ainda, \\(\\|V\\|=0 \\Leftrightarrow V=\\vec{0}\\).\n\\(|\\langle V,W\\rangle|\\ \\leq\\ \\|V\\|\\,\\|W\\|\\) (Cauchy–Schwarz).\n\\(\\|V+W\\|\\ \\leq\\ \\|V\\| + \\|W\\|\\) (Desigualdade triangular)."
+    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-ideia",
+    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-ideia",
+    "title": "Retas e planos",
+    "section": "A reta que passa por dois pontos — ideia",
+    "text": "A reta que passa por dois pontos — ideia\nSejam \\(P_0=(x_0,y_0,z_0)\\) e \\(P_1=(x_1,y_1,z_1)\\) dois pontos no espaço. Vamos determinar a equação dos pontos \\(P=(x,y,z)\\) que pertencem à reta \\(\\overleftrightarrow{P_0P_1}\\)."
   },
   {
-    "objectID": "07_Rn.html#cauchyschwarz-e-ângulo",
-    "href": "07_Rn.html#cauchyschwarz-e-ângulo",
-    "title": "O espaço ℝⁿ",
-    "section": "Cauchy–Schwarz e ângulo",
-    "text": "Cauchy–Schwarz e ângulo\nDa desigualdade de Cauchy–Schwarz, para \\(V,W\\neq\\vec{0}\\),\n\\[\\frac{|\\langle V,W\\rangle|}{\\|V\\|\\,\\|W\\|}\\ \\leq\\ 1 \\quad\\Rightarrow\\quad -1\\ \\leq\\ \\frac{\\langle V,W\\rangle}{\\|V\\|\\,\\|W\\|}\\ \\leq\\ 1.\\]\nExiste um único \\(\\theta\\in[0,\\pi]\\) tal que\n\\[\\cos\\theta\\ =\\ \\frac{\\langle V,W\\rangle}{\\|V\\|\\,\\|W\\|}.\\]\nChamamos \\(\\theta\\) de ângulo entre \\(V\\) e \\(W\\), e\n\\[\\langle V,W\\rangle = \\|V\\|\\,\\|W\\|\\cos\\theta.\\]"
+    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-paralelismo",
+    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-paralelismo",
+    "title": "Retas e planos",
+    "section": "A reta que passa por dois pontos — paralelismo",
+    "text": "A reta que passa por dois pontos — paralelismo\n\n\n\n\n\n\\(P\\) pertence à reta \\(r\\) se os vetores \\(\\overrightarrow{P_0P}\\) e \\(\\overrightarrow{P_0P_1}\\) são paralelos.\nOu seja, se estes vetores são múltiplos escalares: \\(\\overrightarrow{P_0P} = t\\overrightarrow{P_0P_1}\\) para algum \\(t\\in\\mathbb{R}\\).\nIsto é, \\(P - P_0 = t\\overrightarrow{P_0P_1}\\), ou ainda\n\\[P = P_0  + t\\overrightarrow{P_0P_1}.\\]"
   },
   {
-    "objectID": "07_Rn.html#vetores-ortogonais-em-mathbbrn",
-    "href": "07_Rn.html#vetores-ortogonais-em-mathbbrn",
-    "title": "O espaço ℝⁿ",
-    "section": "Vetores ortogonais em \\(\\mathbb{R}^n\\)",
-    "text": "Vetores ortogonais em \\(\\mathbb{R}^n\\)\nPara \\(V,W\\neq\\vec{0}\\) em \\(\\mathbb{R}^n\\),\n\\[\\langle V,W\\rangle = \\|V\\|\\,\\|W\\|\\cos\\theta.\\]\nAssim, \\(\\langle V,W\\rangle=0\\) se, e somente se, \\(\\theta=90^\\circ\\).\nPortanto,\n\\[\\boxed{\\ \\langle V,W\\rangle=0\\ \\ \\text{caracteriza vetores ortogonais}\\ }\\]"
+    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-notação-vetorial",
+    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-notação-vetorial",
+    "title": "Retas e planos",
+    "section": "A reta que passa por dois pontos — notação vetorial",
+    "text": "A reta que passa por dois pontos — notação vetorial\n\n\n\n\n\nSe \\(V=\\overrightarrow{P_0P_1}\\), então \\(P= P_0 + tV\\) (movimento retilíneo uniforme).\nEsta é a equação paramétrica da reta \\(r\\).\nNeste caso, \\(V\\) é um vetor diretor de \\(r\\)."
   },
   {
-    "objectID": "07_Rn.html#projeção-ortogonal",
-    "href": "07_Rn.html#projeção-ortogonal",
-    "title": "O espaço ℝⁿ",
-    "section": "Projeção ortogonal",
-    "text": "Projeção ortogonal\n\n\n\n\n\n\n\nO vetor projeção ortogonal é caracterizado por:\n\n\\(\\operatorname{proj}_V(W) = \\alpha V\\) é um múltiplo escalar de \\(V\\).\nA diferença \\(W - \\operatorname{proj}_V(W)\\) é um vetor ortogonal a \\(V\\).\n\n\n\nTemos \\[\n\\langle W - \\operatorname{proj}_V(W),V\\rangle=0 \\Rightarrow \\langle W - \\alpha V,V\\rangle=0 \\Rightarrow \\langle W,V\\rangle - \\alpha\\langle V,V\\rangle=0,\n\\]\n\n\nlogo\n\\[\n\\alpha = \\dfrac{\\langle W,V\\rangle}{\\langle V,V\\rangle}, \\qquad \\boxed{\\operatorname{proj}_V(W) = \\dfrac{\\langle W,V\\rangle}{\\langle V,V\\rangle}\\, V}.\n\\]"
+    "objectID": "06_retas_e_planos.html#equação-paramétrica-da-reta-forma-coordenada",
+    "href": "06_retas_e_planos.html#equação-paramétrica-da-reta-forma-coordenada",
+    "title": "Retas e planos",
+    "section": "Equação paramétrica da reta — forma coordenada",
+    "text": "Equação paramétrica da reta — forma coordenada\nSe \\(P=(x,y,z)\\), \\(P_0=(x_0,y_0,z_0)\\) e \\(V=(a,b,c)\\), então\n\\[\\boxed{P= P_0 + tV}\\]\nsignifica que\n\\[(x,y,z) = (x_0,y_0,z_0) + t(a,b,c)\\]\n\\[\\begin{cases}\nx = x_0 + ta\\\\\ny = y_0 + tb\\\\\nz = z_0 + tc\n\\end{cases}\\]"
   },
   {
-    "objectID": "07_Rn.html#bases-ortogonais-e-ortonormais",
-    "href": "07_Rn.html#bases-ortogonais-e-ortonormais",
-    "title": "O espaço ℝⁿ",
-    "section": "Bases ortogonais e ortonormais",
-    "text": "Bases ortogonais e ortonormais\nSeja \\(\\{V_1,\\ldots,V_k\\}\\) uma base para um subespaço de \\(\\mathbb{R}^n\\):\n\nA base é ortogonal se quaisquer dois vetores da base são ortogonais (\\(\\langle V_i,V_j\\rangle=0\\)).\nA base é ortonormal se todos os vetores são unitários e perpendiculares (\\(\\langle V_i,V_j\\rangle=0\\) e \\(\\langle V_i,V_i\\rangle=1\\)).\n\nExemplos:\n\n\\(\\{\\vec{i},\\vec{j},\\vec{k}\\}\\) é uma base ortonormal de \\(\\mathbb{R}^3\\).\n\\(V_1=(1,3)\\) e \\(V_2=(-3,1)\\) formam uma base ortogonal de \\(\\mathbb{R}^2\\).\n\\(V_1=(\\cos\\theta,\\operatorname{sen}\\theta)\\) e \\(V_2=(-\\operatorname{sen}\\theta,\\cos\\theta)\\) formam uma base ortonormal de \\(\\mathbb{R}^2\\)."
+    "objectID": "06_retas_e_planos.html#equação-paramétrica-observações",
+    "href": "06_retas_e_planos.html#equação-paramétrica-observações",
+    "title": "Retas e planos",
+    "section": "Equação paramétrica — observações",
+    "text": "Equação paramétrica — observações\n\\[\\boxed{P= P_0 + tV}\\]\n\\[\\begin{cases}\nx = x_0 + ta\\\\\ny = y_0 + tb\\\\\nz = z_0 + tc\n\\end{cases}\\]\nA equação paramétrica de uma reta não é única.\n\nPodemos trocar o ponto inicial \\(P_0\\) por qualquer outro ponto da reta.\nPodemos trocar o vetor diretor por qualquer múltiplo escalar.\nSempre \\(V\\neq \\vec{0}\\)."
   },
   {
-    "objectID": "07_Rn.html#aplicação-coordenadas-em-base-ortogonal",
-    "href": "07_Rn.html#aplicação-coordenadas-em-base-ortogonal",
-    "title": "O espaço ℝⁿ",
-    "section": "Aplicação: coordenadas em base ortogonal",
-    "text": "Aplicação: coordenadas em base ortogonal\nSe \\(\\{V_1,\\ldots,V_k\\}\\) é uma base ortogonal para um subespaço de \\(\\mathbb{R}^n\\) e se \\[\nV=x_1V_1+\\cdots+x_kV_k,\n\\] então\n\\[\\langle V,V_j\\rangle = x_j\\langle V_j,V_j\\rangle \\quad\\Rightarrow\\quad \\boxed{\\ x_j = \\dfrac{\\langle V,V_j\\rangle}{\\langle V_j,V_j\\rangle},\\ j=1,\\ldots,k\\ }\\]"
+    "objectID": "06_retas_e_planos.html#importante-reta-como-régua-numérica",
+    "href": "06_retas_e_planos.html#importante-reta-como-régua-numérica",
+    "title": "Retas e planos",
+    "section": "Importante — reta como régua numérica",
+    "text": "Importante — reta como régua numérica\nA equação paramétrica de uma reta \\(r\\) faz uma associação biunívoca entre um ponto \\(P\\) da reta e um número real \\(t\\).\n\\[\\boxed{P= P_0 + tV}\\]\n\n\n\n\n\nCom essa equação, podemos ver a reta \\(r\\) como uma régua graduada, uma reta numérica, ou um eixo numérico orientado. O vetor diretor \\(V\\) dá a direção e a unidade de medida dessa reta numérica."
   },
   {
-    "objectID": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios",
-    "href": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios",
-    "title": "O espaço ℝⁿ",
-    "section": "Bases ortogonais e ortonormais — exercícios",
-    "text": "Bases ortogonais e ortonormais — exercícios\n\nExercício 2  \n\nConsidere a base ortogonal de \\(\\mathbb{R}^2\\) formada por \\(V_1=(3,1)\\) e \\(V_2=(-1,3)\\). Se \\(V=(5,4)\\) determine \\(x_1\\) e \\(x_2\\) tais que \\(V = x_1V_1 + x_2V_2\\).\nConsidere a base ortonormal de \\(\\mathbb{R}^2\\) formada por \\(V_1=(\\tfrac{4}{5},\\tfrac{3}{5})\\) e \\(V_2=(-\\tfrac{3}{5},\\tfrac{4}{5})\\). Se \\(V=(5,4)\\) determine \\(x_1\\) e \\(x_2\\) tais que \\(V = x_1V_1 + x_2V_2\\).\nConsidere o subespaço \\(W\\) de \\(\\mathbb{R}^3\\) que é o plano de equação \\(2x+y-3z=0\\).\n\nDetermine uma base de \\(W\\).\nDetermine uma base ortogonal \\(\\{V_1,V_2\\}\\) de \\(W\\).\nDetermine uma base ortonormal \\(\\{U_1,U_2\\}\\) de \\(W\\).\nSe \\(V=(5,2,4)\\), calcule \\(x_1\\) e \\(x_2\\) tais que \\(V=x_1V_1+x_2V_2\\).\nSe \\(V=(5,2,4)\\), calcule \\(c_1\\) e \\(c_2\\) tais que \\(V=c_1U_1+c_2U_2\\)."
+    "objectID": "06_retas_e_planos.html#exercícios",
+    "href": "06_retas_e_planos.html#exercícios",
+    "title": "Retas e planos",
+    "section": "Exercícios",
+    "text": "Exercícios\n\nEscreva uma equação paramétrica para a reta que passa por \\(A=(-1,3,4)\\) e que é paralela ao vetor \\(V=(1,-2,0)\\).\nEscreva uma equação paramétrica para a reta que passa por \\(M=(5,0,-3)\\) e por \\(N=(3,8,7)\\).\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\)."
   },
   {
-    "objectID": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios-1",
-    "href": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios-1",
-    "title": "O espaço ℝⁿ",
-    "section": "Bases ortogonais e ortonormais — exercícios",
-    "text": "Bases ortogonais e ortonormais — exercícios\n\nExercício 3  \n\nConsidere o plano \\(\\alpha\\) de \\(\\mathbb{R}^3\\) de equação \\(x-2y+z=0\\).\n\nDetermine uma base ortogonal \\(\\{V_1, V_2, V_3\\}\\) de \\(\\mathbb{R}^3\\) tal que \\(\\{V_1,V_2\\}\\) é uma base ortogonal do plano \\(\\alpha\\).\nEscreva o vetor \\(V=(10,1,4)\\) como uma combinação linear dos vetores da base do item (a): encontre \\(x,y,z\\) tais que \\(xV_1+yV_2+zV_3=V\\).\n\nSejam \\(V_1=(1,3,-2,5)\\) e \\(V_2=(1,2,1,3)\\) vetores de \\(\\mathbb{R}^4\\). Seja \\(W\\) o conjunto dos vetores de \\(\\mathbb{R}^4\\) que são ortogonais a \\(V_1\\) e a \\(V_2\\).\n\nDetermine uma base de \\(W\\).\nDetermine uma base ortogonal \\(\\{W_1,W_2\\}\\) de \\(W\\).\nSe \\(V=(-9,-4,2,5)\\), mostre que \\(V\\in W\\) e calcule \\(x_1\\) e \\(x_2\\) tais que \\(V=x_1W_1+x_2W_2\\)."
+    "objectID": "06_retas_e_planos.html#exercício-3-solução",
+    "href": "06_retas_e_planos.html#exercício-3-solução",
+    "title": "Retas e planos",
+    "section": "Exercício 3 – solução",
+    "text": "Exercício 3 – solução\n\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\).\n\nO vetor diretor de \\(r\\) é \\(V=(3,1,2)\\). Procuramos um ponto \\(Q\\in r\\) tal que \\(\\vec{PQ}\\perp V\\); ou seja, \\(\\left&lt;\\vec{PQ}, V\\right&gt;=0\\).\n\n\n\\[\nQ=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t) \\mbox{ e }\\vec{PQ}=(-3+3t,1+t,-10+2t).\n\\] Logo, \\[\n0=\\left&lt;\\vec{PQ}, V\\right&gt;=\\left&lt;(-3+3t,1+t,-10+2t),(3,1,2)\\right&gt;=14t-28.\n\\] Daí, \\(t=2\\) e \\(Q=(1,-1,1)+2(3,1,2)=(7,1,5)\\).\n\n\nLogo \\(Q=(7,1,5)\\) e um vetor diretor de \\(s\\) é \\(\\vec{PQ}=(3,3,-6)=3(1,1,-2)\\). Assim, a reta procurada é \\[\n(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,\n\\] com \\(\\left&lt;V,(1,1,-2)\\right&gt;=3+1-4=0\\) (perpendicular) e concorrente em \\(Q\\)."
   },
   {
-    "objectID": "07_Rn.html#ortogonalização-de-gram-schmidt",
-    "href": "07_Rn.html#ortogonalização-de-gram-schmidt",
-    "title": "O espaço ℝⁿ",
-    "section": "Ortogonalização de Gram-Schmidt",
-    "text": "Ortogonalização de Gram-Schmidt\nAssuma que \\(V_1,V_2,\\ldots,V_k\\) são vetores LI em \\(\\mathbb{R}^n\\). O processo de Ortogonalização de Gram-Schmidt constrói uma base ortogonal \\(U_1,U_2,\\ldots,U_k\\) para o mesmo espaço gerado por \\(V_1,V_2,\\ldots,V_k\\).\nO processo é o seguinte: \\[\\begin{align*}\nU_1 & = V_1,\\\\\nU_2 & = V_2 - \\operatorname{proj}_{U_1}(V_2),\\\\\nU_3 & = V_3 - \\operatorname{proj}_{U_1}(V_3) - \\operatorname{proj}_{U_2}(V_3),\\\\\n& \\ \\vdots \\\\\nU_k & = V_k - \\operatorname{proj}_{U_1}(V_k) - \\operatorname{proj}_{U_2}(V_k) - \\cdots - \\operatorname{proj}_{U_{k-1}}(V_k).\n\\end{align*}\\] Após obter a base ortogonal \\(U_1,U_2,\\ldots,U_k\\), podemos obter uma base ortonormal dividindo cada vetor pela sua norma:"
+    "objectID": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
+    "href": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
+    "title": "Retas e planos",
+    "section": "Posição relativa entre duas retas no espaço",
+    "text": "Posição relativa entre duas retas no espaço\n\n\n\n\n\n\nRetas paralelas\n\n\n\n\n\n\n\nRetas concorrentes\n\n\n\n\n\n\n\nRetas reversas\n\n\n\n\n\nRetas paralelas e concorrentes são coplanares.\nRetas reversas sempre moram em planos paralelos distintos \\(\\alpha\\) e \\(\\beta\\) tais que \\(s\\subset\\alpha\\) e \\(r\\subset\\beta\\)."
   },
   {
-    "objectID": "07_Rn.html#exemplo-de-ortogonalização-de-gram-schmidt",
-    "href": "07_Rn.html#exemplo-de-ortogonalização-de-gram-schmidt",
-    "title": "O espaço ℝⁿ",
-    "section": "Exemplo de Ortogonalização de Gram-Schmidt",
-    "text": "Exemplo de Ortogonalização de Gram-Schmidt\n\nExemplo 10 Considere os vetores \\(V_1=(1,1,0,0)\\), \\(V_2=(1,0,1,1)\\), \\(V_3=(0,1,1,0)\\) em \\(\\mathbb{R}^4\\). Eles são LI. Aplicando Gram-Schmidt: \\[\\begin{align*}\nU_1 & = V_1 = (1,1,0,0),\\\\\nU_2 & = V_2 - \\operatorname{proj}_{U_1}(V_2) = (1,0,1,1) - \\dfrac{\\langle V_2,U_1\\rangle}{\\langle U_1,U_1\\rangle} U_1 = (1,0,1,1) - \\dfrac{1}{2}(1,1,0,0) = \\left(\\dfrac{1}{2}, -\\dfrac{1}{2}, 1, 1\\right),\\\\\nU_3 & = V_3 - \\operatorname{proj}_{U_1}(V_3) - \\operatorname{proj}_{U_2}(V_3) \\\\\n    & = (0,1,1,0) - \\dfrac{\\langle V_3,U_1\\rangle}{\\langle U_1,U_1\\rangle} U_1 - \\dfrac{\\langle V_3,U_2\\rangle}{\\langle U_2,U_2\\rangle} U_2 \\\\\n    & = (0,1,1,0) - \\dfrac{1}{2}(1,1,0,0) - \\dfrac{1/2}{5/2}\\left(\\dfrac{1}{2}, -\\dfrac{1}{2}, 1, 1\\right) = \\left(-\\dfrac{3}{5}, \\dfrac{3}{5}, \\dfrac{4}{5}, -\\dfrac{1}{5}\\right).\n\\end{align*}\\] A base ortogonal é \\(\\{U_1,U_2,U_3\\}\\)."
+    "objectID": "06_retas_e_planos.html#retas-reversas-construção-auxiliar",
+    "href": "06_retas_e_planos.html#retas-reversas-construção-auxiliar",
+    "title": "Retas e planos",
+    "section": "Retas reversas — construção auxiliar",
+    "text": "Retas reversas — construção auxiliar\nSempre existe uma reta \\(t\\) perpendicular comum a \\(r\\) e a \\(s\\) interceptando \\(r\\) e \\(s\\).\n\n\n\n\n\nObserve a reta \\(r'\\) paralela a \\(r\\) traçada pelo ponto \\(s \\cap t\\) e também observe a reta \\(s'\\) paralela a \\(s\\) traçada por \\(r \\cap t\\).\n\nO plano \\(\\alpha\\) é o plano que contém as retas concorrentes \\(s\\) e \\(r'\\).\nO plano \\(\\beta\\) é o plano que contém as retas concorrentes \\(r\\) e \\(s'\\)."
   },
   {
-    "objectID": "07_Rn.html#o-problema-da-mudança-de-base",
-    "href": "07_Rn.html#o-problema-da-mudança-de-base",
-    "title": "O espaço ℝⁿ",
-    "section": "O problema da mudança de base",
-    "text": "O problema da mudança de base\nSeja \\(W\\) um subespaço de \\(\\mathbb{R}^n\\) de dimensão \\(k\\). Sejam \\[\n\\mathcal{B}=\\{V_1,\\ldots,V_k\\}\\quad\\mbox{e}\\quad \\mathcal{C}=\\{U_1,\\ldots,U_k\\}\n\\] duas bases de \\(W\\). Então, para todo vetor \\(X \\in W\\), podemos escrever: \\[\nX = x_1V_1 + x_2V_2 + \\cdots + x_kV_k = c_1U_1 + c_2U_2 + \\cdots + c_kU_k.\n\\]\nOs coeficientes \\(x_1,x_2,\\ldots,x_k\\) são as coordenadas de \\(X\\) na base \\(\\mathcal{B}\\) e os coeficientes \\(c_1,c_2,\\ldots,c_k\\) são as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\).\nProblema: Dadas as coordenadas \\(c_1,c_2,\\ldots,c_k\\) de \\(X\\) na base \\(\\mathcal{B}\\), como encontrar as coordenadas \\(x_1,x_2,\\ldots,x_k\\) de \\(X\\) na base \\(\\mathcal{C}\\)?"
+    "objectID": "06_retas_e_planos.html#distância-entre-retas-reversas",
+    "href": "06_retas_e_planos.html#distância-entre-retas-reversas",
+    "title": "Retas e planos",
+    "section": "Distância entre retas reversas",
+    "text": "Distância entre retas reversas\n\n\n\n\n\nSejam \\(r\\) e \\(s\\) retas reversas, seja \\(t\\) a reta perpendicular comum e sejam \\(P = r \\cap t\\) e \\(Q = s \\cap t\\). Então\n\\[\\operatorname{dist}(r,s) = \\operatorname{dist}(P,Q)\\]\nEsta é a menor distância entre um ponto de \\(r\\) e um ponto de \\(s\\)."
   },
   {
-    "objectID": "07_Rn.html#a-matriz-mudança-de-base",
-    "href": "07_Rn.html#a-matriz-mudança-de-base",
-    "title": "O espaço ℝⁿ",
-    "section": "A matriz mudança de base",
-    "text": "A matriz mudança de base\nA matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é a matriz \\(P\\) cujas colunas são as coordenadas dos vetores da base \\(\\mathcal{C}\\) na base \\(\\mathcal{B}\\)\nOu seja, escreva \\[\nU_j = a_{1j}V_1 + a_{2j}V_2 + \\cdots + a_{kj}V_k,\\quad j=1,2,\\ldots,k,\n\\] então \\[\nP=\\begin{bmatrix} a_{11} & a_{12} & \\cdots & a_{1k} \\\\[6pt] a_{21} & a_{22} & \\cdots & a_{2k} \\\\[6pt] \\vdots & \\vdots & \\ddots & \\vdots \\\\[6pt] a_{k1} & a_{k2} & \\cdots & a_{kk} \\end{bmatrix}.  \n\\]\nPodemos escrever \\(P\\) de forma compacta como \\[\nP = [ [U_1]_{\\mathcal{B}} \\quad [U_2]_{\\mathcal{B}} \\quad \\cdots \\quad [U_k]_{\\mathcal{B}} ].\n\\]"
+    "objectID": "06_retas_e_planos.html#exemplo-retas-paralelas",
+    "href": "06_retas_e_planos.html#exemplo-retas-paralelas",
+    "title": "Retas e planos",
+    "section": "Exemplo — retas paralelas",
+    "text": "Exemplo — retas paralelas\n\nEncontre a equação da reta \\(r\\) que passa pelos pontos \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s\\) a reta \\((x,y,z) = (1,2,3)+ t(1,2,1)\\). Verifique se as retas \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nCalcule a distância entre as retas \\(r\\) e \\(s\\)."
   },
   {
-    "objectID": "07_Rn.html#mudança-de-base-fórmula",
-    "href": "07_Rn.html#mudança-de-base-fórmula",
-    "title": "O espaço ℝⁿ",
-    "section": "Mudança de base — fórmula",
-    "text": "Mudança de base — fórmula\nAssim, se \\[\n\\begin{bmatrix}\nx_1 \\\\ x_2 \\\\ \\vdots \\\\ x_k\\end{bmatrix}=[X]_{\\mathcal{B}}\\quad\\mbox{e} \\quad\n\\begin{bmatrix}\nc_1 \\\\ c_2 \\\\ \\vdots \\\\ c_k\\end{bmatrix}=\n[X]_{\\mathcal{C}}\n\\] são as matrizes coluna das coordenadas de \\(X\\) nas bases \\(\\mathcal{B}\\) e \\(\\mathcal{C}\\), respectivamente, então \\[\n\\begin{bmatrix}\nx_1 \\\\ x_2 \\\\ \\vdots \\\\ x_k\\end{bmatrix}\n= P \\begin{bmatrix}\nc_1 \\\\ c_2 \\\\ \\vdots \\\\ c_k\\end{bmatrix}.\n\\] A matriz \\(P\\) é invertível e sua inversa é a matriz de mudança de base de \\(\\mathcal{C}\\) para \\(\\mathcal{B}\\)."
+    "objectID": "06_retas_e_planos.html#exemplo-3-solução",
+    "href": "06_retas_e_planos.html#exemplo-3-solução",
+    "title": "Retas e planos",
+    "section": "Exemplo 3 – solução",
+    "text": "Exemplo 3 – solução\nTemos \\[\nr: (x,y,z) = (3,5,3) + t(1,2,1) \\mbox{ e } s: (x,y,z) = (1,2,3)+ u(1,2,1),\\  t, u ∈ ℝ.\n\\]\nDistância entre duas retas paralelas.\nO vetor diretor das duas retas é \\(V=(1,2,1)\\).\nSeja \\(A=(3,5,3)\\in r\\), \\(C=(1,2,3)\\in s\\) com \\(\\vec{AC}=(-2,-3,0)\\). Por Teorema de Pitágoras: \\[\n\\|\\vec{AC}\\|^2=\\operatorname{dist}(r,s)^2+\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n\\]\n\n\nTemos que \\[\n\\operatorname{proj}_V(\\vec{AC})=\\frac {\\left&lt;V,\\vec{AC}\\right&gt;}{\\|V\\|^2}V=-8/6V=(-4/3,-8/3,-4/3)\n\\Rightarrow \\|\\operatorname{proj}_V(\\vec{AC})\\|^2=32/3.\n\\]\n\n\nLogo \\[\n\\operatorname{dist}(r,s)^2=\\|\\vec{AC}\\|^2-\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n=13-\\frac{32}{3}\n=\\frac{7}3 \\textrm{ e } \\operatorname{dist}(r,s)=\\frac{\\sqrt 7}{\\sqrt 3}.\n\\]"
   },
   {
-    "objectID": "07_Rn.html#exemplo-de-mudança-de-base",
-    "href": "07_Rn.html#exemplo-de-mudança-de-base",
-    "title": "O espaço ℝⁿ",
-    "section": "Exemplo de mudança de base",
-    "text": "Exemplo de mudança de base\n\nExemplo 11 Sejam \\(W\\) o plano de \\(\\mathbb{R}^3\\) de equação \\(x+y+z=0\\), \\(\\mathcal{B}=\\{V_1=(1,-1,0), V_2=(1,0,-1)\\}\\) e \\(\\mathcal{C}=\\{U_1=(1,2,-3), U_2=(2,-1,-1)\\}\\) bases de \\(W\\).\nDetermine a matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) e as coordenadas do vetor \\(X=(-1,3,-2)\\) na base \\(\\mathcal{C}\\).\n\n\nResolvendo o sistema \\[\\begin{cases}\na(1,-1,0) + b(1,0,-1) = (1,2,-3), \\\\\nc(1,-1,0) + d(1,0,-1) = (2,-1,-1),\n\\end{cases}\\] obtemos \\(U_1 = -2V_1 + 3V_2\\) e \\(U_2 = V_1 + V_2\\). Assim, a matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é \\[P = \\begin{bmatrix} -2 & 1 \\\\[6pt] 3 & 1 \\end{bmatrix}.\\]\n\n\n\\[P = \\begin{bmatrix} -2 & 1 \\\\[6pt] 3 & 1 \\end{bmatrix}.\\] Para encontrar as coordenadas de \\(X\\) na base \\(\\mathcal{B}\\), primeiro encontramos as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\): \\[X = U_1 - U_2 \\Rightarrow [X]_{\\mathcal{C}} = \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix}.\\]\n\n\nAgora, usando a matriz de mudança de base, temos \\[[X]_{\\mathcal{B}} = P [X]_{\\mathcal{C}} = \\begin{bmatrix} -2 & 1 \\\\[6pt] 3 & 1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} = \\begin{bmatrix} -2 - 1 \\\\ 3 - 1 \\end{bmatrix} = \\begin{bmatrix} -3 \\\\ 2 \\end{bmatrix}.\\] Portanto, as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\) são \\(\\left(-3, 2\\right)\\).\n\n\nAssim, as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\) são \\(\\left(-3, 2\\right)\\). Ou seja \\[\nX=-3V_1 + 2V_2.\n\\]"
+    "objectID": "06_retas_e_planos.html#exemplo-retas-concorrentes",
+    "href": "06_retas_e_planos.html#exemplo-retas-concorrentes",
+    "title": "Retas e planos",
+    "section": "Exemplo — retas concorrentes",
+    "text": "Exemplo — retas concorrentes\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(5,4,1)\\) e \\(B=(7,5,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(P=(0,1,0)\\) e \\(Q=(-3,-2,3)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nMostre que \\(r\\) e \\(s\\) são retas concorrentes calculando o ponto \\(r \\cap s\\)."
   },
   {
-    "objectID": "07_Rn.html#mudança-de-base-rotação",
-    "href": "07_Rn.html#mudança-de-base-rotação",
-    "title": "O espaço ℝⁿ",
-    "section": "Mudança de base — Rotação",
-    "text": "Mudança de base — Rotação\nConsidere o plano \\(\\mathbb{R}^2\\) com a base canônica \\(\\mathcal{B}=\\{\\vec{i},\\vec{j}\\}\\) e a base \\(\\mathcal{C}=\\{U_1,U_2\\}\\), em que \\[\nU_1=(\\cos\\theta,\\sin\\theta),\\quad U_2=(-\\sin\\theta,\\cos\\theta).\n\\]\nA matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é\n\\[\n\\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta\n\\end{bmatrix}\n\\]\n\n\nSe \\(V=(x',y')\\) são as coordenadas de um vetor na base \\(\\mathcal{C}\\), então as coordenadas \\((x,y)\\) de \\(V\\) na base \\(\\mathcal{B}\\) são dadas por \\[\n\\begin{bmatrix}\nx \\\\ y\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta \\end{bmatrix}\n\\begin{bmatrix}\nx' \\\\ y'\n\\end{bmatrix}\n\\]\n\n\nObserve que \\[\n\\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta\n\\end{bmatrix}^{-1}=\n\\begin{bmatrix}\n\\cos\\theta & \\sin\\theta \\\\\n-\\sin\\theta & \\cos\\theta\n\\end{bmatrix}\n\\]\n\n\nLogo, \\[\n\\begin{bmatrix}\nx' \\\\ y'\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n\\cos\\theta & \\sin\\theta \\\\\n-\\sin\\theta & \\cos\\theta\n\\end{bmatrix}\n\\begin{bmatrix}\nx \\\\ y\n\\end{bmatrix}=\n\\begin{bmatrix}\nx\\cos\\theta + y\\sin\\theta \\\\\n-x\\sin\\theta + y\\cos\\theta\n\\end{bmatrix}.\n\\]"
+    "objectID": "06_retas_e_planos.html#exemplo-retas-reversas",
+    "href": "06_retas_e_planos.html#exemplo-retas-reversas",
+    "title": "Retas e planos",
+    "section": "Exemplo — retas reversas",
+    "text": "Exemplo — retas reversas\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(4,-2,1)\\) e \\(B=(5,-3,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nVerifique se as retas \\(r\\) e \\(s\\) são paralelas, concorrentes ou reversas.\nDetermine a distância entre \\(r\\) e \\(s\\) exibindo pontos \\(P\\in r\\) e \\(Q\\in s\\) tais que \\(\\operatorname{dist}(r,s) = \\operatorname{dist}(P,Q)\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#retas-reversas-solução",
+    "href": "06_retas_e_planos.html#retas-reversas-solução",
+    "title": "Retas e planos",
+    "section": "Retas reversas – solução",
+    "text": "Retas reversas – solução\nSejam \\(A=(4,-2,1)\\), \\(B=(5,-3,2)\\), \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nEquações paramétricas:\n\n\n\\(r: V_r = B-A = (1,-1,1) ⇒ (x,y,z) =  (4,-2,1) + t(1,-1,1)\\).\n\\(s: V_s = D-C = (-8,-16,4)=-4(2,4,-1) ⇒ (x,y,z) = (1,7,4) + u(2,4,-1)\\).\n\n\n\n\nPosição relativa: \\(V_r \\not ∥ V_s\\), logo as retas não são paralelas. Tentando \\(r ∩ s\\): \\[\\begin{align*}\n4+t &= 1+2u\\\\\n-2-t &= 7+4u \\\\\n1+t &= 4-u\n\\end{align*}\\] Das duas primeiras, \\(u=-1\\) e \\(t=-5\\); na terceira dá \\(1-5 ≠ 5\\). Logo \\(r\\) e \\(s\\) são reversas.\n\n\n\nDistância e pontos de mínima distância: Toma pontos genêricos \\(P\\in r\\) e \\(Q\\in s\\): \\[\\begin{align*}\nP&=(4+t,-2-t,1+t)\\\\\nQ&=(1+2u,7+4u,4-u)\\\\\n\\vec{PQ}&=(-3+2u-t,9+4u+t,3-u-t).\n\\end{align*}\\]\n\n\nOra, queremos que \\(\\vec{PQ}\\) seja perpendicular a \\(V_r\\) e a \\(V_s\\): \\[\\begin{align*}\n0&=\\left&lt;\\vec{PQ},V_r\\right&gt;=\\left&lt;(-3+2u-t,9+4u+t,3-u-t),(1,-1,1)\\right&gt;=-9-3u-3t\\\\\n0&=\\left&lt;\\vec{PQ},V_s\\right&gt;=\\left&lt;(-3+2u-t,9+4u+t,3-u-t),(2,4,-1)\\right&gt;=27+21u+3t\n\\end{align*}\\]\n\n\nObtivemos o sistema \\[\\begin{align*}\n0&=-9-3u-3t\\\\\n0&=27+21u+3t\n\\end{align*}\\] A solução do sistema é \\(t=-2\\) e \\(u=-1\\).\n\n\nSubstituindo, \\(t=-2\\) e \\(u=-1\\), \\[\\begin{align*}\nP &= (4+t,-2-t,1+t)=  (2,0,-1)\\\\\nQ &= (1+2u,7+4u,4-u)= (-1,3,5)\\\\\n\\vec{PQ} &= Q-P = (-3,3,6) \\perp V_r, V_s.\n\\end{align*}\\]\nDistância: \\(\\|\\vec{PQ}\\|= \\sqrt{9+9+36} = 3\\sqrt 6\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#planos-no-espaço",
+    "href": "06_retas_e_planos.html#planos-no-espaço",
+    "title": "Retas e planos",
+    "section": "Planos no Espaço",
+    "text": "Planos no Espaço\nUm plano pode ser dado de várias maneiras:\n\nPor 3 pontos não colineares passa um único plano.\nPor uma reta e por um ponto fora da reta.\nDadas duas retas concorrentes.\nDadas duas retas paralelas.\nDado um ponto e uma reta, existe um único plano ortogonal à reta que passa por este ponto.\n\nAlgumas destas situações podem ser caracterizadas pelo produto escalar; outras, pelo produto vetorial.\nVamos começar discutindo a última situação."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal",
+    "href": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal",
+    "title": "Retas e planos",
+    "section": "Planos, dado um ponto e um vetor normal",
+    "text": "Planos, dado um ponto e um vetor normal\nSeja dado um ponto \\(P_0=(x_0,y_0,z_0)\\) e um vetor \\(N\\neq\\vec{0}\\).\nExiste um único plano \\(\\alpha\\) que passa por \\(P_0\\) e que é ortogonal ao vetor \\(N\\).\n\n\n\n\n\nNesta situação \\(N\\) é um vetor normal ao plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal-cont.",
+    "href": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal-cont.",
+    "title": "Retas e planos",
+    "section": "Planos, dado um ponto e um vetor normal (cont.)",
+    "text": "Planos, dado um ponto e um vetor normal (cont.)\n\n\n\n\n\nUm ponto \\(P=(x,y,z)\\) pertence a este plano se os vetores \\(N=(a,b,c)\\) e \\(\\overrightarrow{P_0P}=(x-x_0,\\,y-y_0,\\,z-z_0)\\) são perpendiculares: \\[\n\\langle N,\\overrightarrow{P_0P}\\rangle = 0 \\;\\Longleftrightarrow\\; a(x-x_0)+b(y-y_0)+c(z-z_0)=0.\n\\]\nEquivalente a \\[\nax+by+cz = a x_0 + b y_0 + c z_0.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#equação-geral-do-plano",
+    "href": "06_retas_e_planos.html#equação-geral-do-plano",
+    "title": "Retas e planos",
+    "section": "Equação geral do plano",
+    "text": "Equação geral do plano\n\n\n\n\n\nDo item anterior, o lado direito é uma constante \\(d=a x_0 + b y_0 + c z_0\\). Assim, um ponto \\(P=(x,y,z)\\) pertence ao plano se e somente se\n\\[\\boxed{\\;ax + by + cz = d\\;}\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-plano-por-ponto-e-normal",
+    "href": "06_retas_e_planos.html#exemplo-plano-por-ponto-e-normal",
+    "title": "Retas e planos",
+    "section": "Exemplo: plano por ponto e normal",
+    "text": "Exemplo: plano por ponto e normal\nDetermine a equação geral do plano que passa por \\(P_0=(2,3,-4)\\) e é ortogonal ao vetor \\(N=(5,-2,3)\\).\nSolução. A equação geral do plano é da forma \\(ax+by+cz=d\\), em que os coeficientes \\(a\\), \\(b\\) e \\(c\\) são as coordenadas de um vetor normal ao plano. Neste caso, a equação tem a forma \\[\n5x-2y+3z=d.\n\\] Substituindo o ponto \\(P_0=(2,3,-4)\\), obtemos \\(d\\):\n\\[5\\cdot 2 - 2\\cdot 3 + 3\\cdot (-4) = d \\;\\Rightarrow\\; d=-8.\\]\nLogo, a equação do plano é \\[\n\\boxed{\\;5x-2y+3z=-8\\;}.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#observações-sobre-a-equação-geral-do-plano",
+    "href": "06_retas_e_planos.html#observações-sobre-a-equação-geral-do-plano",
+    "title": "Retas e planos",
+    "section": "Observações sobre a equação geral do plano",
+    "text": "Observações sobre a equação geral do plano\n\\[\\boxed{\\;ax+by+cz=d\\;}\\]\n\nPara escrever a equação geral de um plano, precisamos de um vetor \\(N=(a,b,c)\\) ortogonal ao plano (vetor normal), com \\(N\\neq\\vec{0}\\).\nEm muitas situações, o vetor normal será calculado pelo produto vetorial.\nA equação geral do plano não é única: todo múltiplo não nulo de um vetor normal também é vetor normal. Multiplicar a equação \\[\nax+by+cz=d\n\\] por um número não nulo não altera o conjunto solução, apenas muda o vetor normal."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#produto-vetorial-em-mathbbr3",
+    "href": "06_retas_e_planos.html#produto-vetorial-em-mathbbr3",
+    "title": "Retas e planos",
+    "section": "Produto Vetorial em \\(\\mathbb{R}^3\\)",
+    "text": "Produto Vetorial em \\(\\mathbb{R}^3\\)\n\n\n\n\n\nO produto vetorial \\(V\\times W\\) é caracterizado por:\n\nNorma: \\(\\|V\\times W\\|=\\|V\\|\\,\\|W\\|\\,\\operatorname{sen}(\\theta)\\).\nDireção: \\(V\\times W\\) é perpendicular ao plano de \\(V\\) e \\(W\\).\nSentido: \\(V\\), \\(W\\) e \\(V\\times W\\) satisfazem a regra da mão direita."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#produto-vetorial-em-coordenadas",
+    "href": "06_retas_e_planos.html#produto-vetorial-em-coordenadas",
+    "title": "Retas e planos",
+    "section": "Produto vetorial em coordenadas",
+    "text": "Produto vetorial em coordenadas\nSe\n\\[\\begin{aligned}\nV &= (v_1,v_2,v_3) = v_1\\,\\vec{i}+v_2\\,\\vec{j}+v_3\\,\\vec{k},\\\\\nW &= (w_1,w_2,w_3) = w_1\\,\\vec{i}+w_2\\,\\vec{j}+w_3\\,\\vec{k},\n\\end{aligned}\\]\nentão, usando as propriedades do produto vetorial,\n\\[V\\times W=\\big(\\,v_2w_3-v_3w_2\\,,\\; v_3w_1-v_1w_3\\,,\\; v_1w_2-v_2w_1\\,\\big).\\]\nÉ mais fácil memorizar pelo determinante simbólico\n\\[\nV\\times W=\\det\\!\\begin{bmatrix}\n\\vec{i} & \\vec{j} & \\vec{k}\\\\\nv_1 & v_2 & v_3\\\\\nw_1 & w_2 & w_3\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por reta e ponto fora",
+    "text": "Aplicação: plano por reta e ponto fora\nExemplo 1. Determine a equação do plano que passa por \\(A=(-1,2,1)\\) e contém a reta\n\\[(x,y,z)=(2,1,3)+t(-1,3,1).\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-ideia",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-ideia",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por reta e ponto fora (ideia)",
+    "text": "Aplicação: plano por reta e ponto fora (ideia)\nObservações importantes:\n\nPara calcular a equação \\(ax+by+cz=d\\) precisamos de um vetor normal \\(N=(a,b,c)\\) e de um ponto \\(P\\) no plano.\nSe \\(V\\) e \\(W\\) são vetores paralelos ao plano, então \\(N=V\\times W\\) é um vetor normal do plano.\nPara achar \\(N\\), basta identificar quaisquer dois vetores paralelos ao plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-cálculo",
+    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-cálculo",
+    "title": "Retas e planos",
+    "section": "Aplicação: plano por reta e ponto fora (cálculo)",
+    "text": "Aplicação: plano por reta e ponto fora (cálculo)\nNo exemplo, \\(A=(-1,2,1)\\) e \\(r:(x,y,z)=(2,1,3)+t(-1,3,1)\\).\n\n\n\n\n\n\n\nO ponto \\(B=(2,1,3)\\) pertence a \\(r\\) e os vetores \\(\\overrightarrow{BA}=(-3,1,-2)\\) e \\(V_r=(-1,3,1)\\) são paralelos ao plano. Então\n\\[\nN=\\overrightarrow{BA}\\times V_r=\n\\begin{vmatrix}\n\\vec{i}&\\vec{j}&\\vec{k}\\\\\n-3&1&-2\\\\\n-1&3&1\n\\end{vmatrix}\n=(7,5,-8).\n\\]\nLogo, o plano tem equação \\[\n7x+5y-8z=d.\n\\]\n\n\nLogo, o plano tem equação \\[\n7x+5y-8z=d.\n\\] O valor de \\(d\\) é determinado por substitui um ponto do plano na equação. Usando \\(A\\): \\[\n7x+5y-8z=7\\cdot (-1)+5\\cdot 2-8\\cdot 1=-5.\n\\] A resposta final: \\[\n7x+5y-8z=-5.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-plano-com-três-pontos",
+    "href": "06_retas_e_planos.html#exemplo-plano-com-três-pontos",
+    "title": "Retas e planos",
+    "section": "Exemplo: Plano com três pontos",
+    "text": "Exemplo: Plano com três pontos\n\nExemplo 1 Determine a equação geral do plano que contém \\[\nA=(2,3,3),\\quad B=(4,1,3),\\quad C=(2,5,1).\n\\]\n\nUm vetor normal pode ser\n\\[N=\\overrightarrow{AB}\\times\\overrightarrow{AC}=\\begin{vmatrix}\n\\vec{i}&\\vec{j}&\\vec{k}\\\\\n2&-2&0\\\\\n0&2&-2\n\\end{vmatrix}=(4,4,4).\\]\nLogo, a equação é \\[\n4x+4y+4z=d.\n\\] Substituindo \\(B=(4,1,3)\\), \\(d=16+4+12=32\\), ou seja, \\[\n4x+4y+4z=32,\n\\] que simplifica para \\[\n\\boxed{x+y+z=8}.\n\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-plano-dado-por-3-pontos",
+    "href": "06_retas_e_planos.html#exemplo-plano-dado-por-3-pontos",
+    "title": "Retas e planos",
+    "section": "Exemplo: plano dado por 3 pontos",
+    "text": "Exemplo: plano dado por 3 pontos\n\nExemplo 2 Determine a equação geral do plano que contém \\[\nA=(1,1,1),\\quad B=(-2,3,3),\\quad C=(2,3,1).\n\\]\n\nUm ponto \\(P=(x,y,z)\\) pertence ao plano se os vetores são coplanares:\n\\[\\overrightarrow{AP}=(x-1,y-1,z-1),\\quad \\overrightarrow{AB}=(-3,2,2),\\quad \\overrightarrow{AC}=(1,2,0).\\]\nDaí,\n\\[\\det\\!\\begin{bmatrix}\nx-1&y-1&z-1\\\\\n-3&2&2\\\\\n1&2&0\n\\end{bmatrix}=0.\\]\nExpandindo, obtém-se \\(\\boxed{\\;2x-y+4z=5\\;}.\\)"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-concorrentes",
+    "href": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-concorrentes",
+    "title": "Retas e planos",
+    "section": "Exemplo: plano por duas retas concorrentes",
+    "text": "Exemplo: plano por duas retas concorrentes\n\nExemplo 3 Verifique se as retas são paralelas, concorrentes ou reversas. Se possível, determine o plano que contém as duas retas.\n\\[\\begin{cases}\nx=3+t\\\\\ny=3+2t\\\\\nz=4+t\n\\end{cases}\n\\qquad\\qquad\n\\begin{cases}\nx=-1+2s\\\\\ny=-2+s\\\\\nz=3-s\n\\end{cases}\\]"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-paralelas",
+    "href": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-paralelas",
+    "title": "Retas e planos",
+    "section": "Exemplo: plano por duas retas paralelas",
+    "text": "Exemplo: plano por duas retas paralelas\n\n\nEncontre a equação paramétrica da reta \\(r\\) que passa por \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s:(x,y,z)=(1,2,3)+t(1,2,1)\\). Verifique se \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nAche, se possível, uma equação geral do plano que contém as retas \\(r\\) e \\(s\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
+    "href": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
+    "title": "Retas e planos",
+    "section": "Exemplo 1: ponto e ponto",
+    "text": "Exemplo 1: ponto e ponto\nConsidere os pontos \\(A=(-1,3,2)\\) e \\(B=(2,1,6)\\).\n\nDetermine a equação paramétrica da reta \\(\\overleftrightarrow{AB}\\).\nCalcule o ponto médio do segmento \\(AB\\).\nCalcule \\(\\mathrm{dist}(A,B)\\).\nDetermine o ponto simétrico \\(A'\\) de \\(A\\) em relação ao ponto \\(B\\).\nDetermine o ponto simétrico \\(B'\\) de \\(B\\) em relação ao ponto \\(A\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
+    "href": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
+    "title": "Retas e planos",
+    "section": "Exemplo 2: ponto e reta",
+    "text": "Exemplo 2: ponto e reta\nConsidere a reta \\(r\\) de equação paramétrica \\((x,y,z) = (-7,4,9) + t(-2,1,2)\\) e o ponto \\(A=(7,4,5)\\).\n\nO ponto \\(A\\) pertence a reta \\(r\\)?\nDetermine a equação do plano que contém \\(r\\) e \\(A\\).\nDetermine a reta perpendicular a \\(r\\) que passa por \\(A\\).\nCalcule \\(\\mathrm{dist}(A,r)\\).\nDetermine o ponto simétrico de \\(A\\) em relação à reta \\(r\\).\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em uma reta."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
+    "href": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 3: ponto e plano",
+    "text": "Exemplo 3: ponto e plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-2y+3z=4\\) e o ponto \\(A=(2,8,-8)\\).\n\nO ponto \\(A\\) pertence ao plano \\(\\alpha\\)?\nDetermine a equação paramétrica da reta que passa por \\(A\\) e é perpendicular ao plano \\(\\alpha\\).\nCalcule \\(\\mathrm{dist}(A,\\alpha)\\).\nDetermine o ponto simétrico de \\(A\\) em relação ao plano \\(\\alpha\\).\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em um plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
+    "href": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
+    "title": "Retas e planos",
+    "section": "Exemplo 4: duas retas paralelas",
+    "text": "Exemplo 4: duas retas paralelas\nConsidere as retas paralelas\n\\[r:\\ (x,y,z) = (-6,3,-2) + t(3,-1,2)\\]\n\\[s:\\ (x,y,z) = (-3,30,-14) + s(3,-1,2)\\]\n\nDetermine a equação do plano \\(\\alpha\\) que contém \\(r\\) e \\(s\\).\nDê um exemplo de uma reta perpendicular a \\(r\\) e a \\(s\\).\nCalcule \\(\\mathrm{dist}(r,s)\\).\nDetermine uma reta contida em \\(\\alpha\\) e que está equidistante de \\(r\\) e de \\(s\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
+    "href": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
+    "title": "Retas e planos",
+    "section": "Exemplo 5: duas retas concorrentes",
+    "text": "Exemplo 5: duas retas concorrentes\nConsidere as retas\n\\[r:\\ (x,y,z) = (7,2,-2) + t(-3,0,1)\\] \\[s:\\ (x,y,z) = (-1,1,2) + s(2,1,-2)\\]\n\nMostre que \\(r\\) e \\(s\\) são concorrentes calculando o ponto \\(P= r \\cap s\\).\nDetermine a equação geral do plano que contém \\(r\\) e \\(s\\).\nCalcule o ângulo de \\(r\\) e \\(s\\).\n\nObs: neste exemplo aprendemos a calcular o ângulo entre duas retas."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
+    "href": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: duas retas reversas",
+    "text": "Exemplo 6: duas retas reversas\nConsidere as retas\n\\[r:\\ (x,y,z) = (-1,-1,4) + t(1,1,-1)\\] \\[s:\\ (x,y,z) = (1,3,7) + s(-2,0,1)\\]\n\nMostre que \\(r\\) e \\(s\\) são retas reversas.\nDetermine a equação da reta perpendicular e concorrente com \\(r\\) e com \\(s\\).\nCalcule \\(\\mathrm{dist}(r,s)\\) e o ângulo entre \\(r\\) e \\(s\\).\nDetermine o plano \\(\\alpha\\) que contém \\(r\\) e é paralelo a \\(s\\).\nDetermine o plano \\(\\beta\\) que contém \\(s\\) e é paralelo a \\(r\\).\nDetermine o plano \\(\\gamma\\) que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nDetermine o plano \\(\\omega\\) que contém \\(s\\) e é perpendicular a \\(\\beta\\).\nDetermine a reta \\(\\gamma \\cap \\omega\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações",
+    "href": "06_retas_e_planos.html#exemplo-6-ilustrações",
+    "title": "Retas e planos",
+    "section": "Exemplo 6: ilustrações",
+    "text": "Exemplo 6: ilustrações"
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
+    "href": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 7: reta furando um plano",
+    "text": "Exemplo 7: reta furando um plano\nConsidere o plano \\(\\alpha\\) de equação \\(2x+y-z=4\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,-4) + t(1,-1,2)\\).\n\nDetermine o ponto \\(P = r \\cap \\alpha\\).\nDetermine o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nDetermine a reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\nCalcule o ângulo entre \\(r\\) e \\(\\alpha\\).\nDetermine a reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\).\n\nObs: neste exemplo aprendemos a calcular o ângulo entre uma reta e um plano."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
+    "href": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 8: reta paralela a um plano",
+    "text": "Exemplo 8: reta paralela a um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-y+z=1\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,1) + t(2,-1,-3)\\).\n\nMostre que a reta \\(r\\) é paralela ao plano \\(\\alpha\\).\nAche o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nAche o plano que contém \\(r\\) e é paralelo a \\(\\alpha\\).\nDetermine a equação da reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\nCalcule \\(\\mathrm{dist}(r,\\alpha)\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
+    "href": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
+    "title": "Retas e planos",
+    "section": "Exemplo 9: reta contida em um plano",
+    "text": "Exemplo 9: reta contida em um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x+2y-z=3\\) e a reta \\(r\\) de equação \\((x,y,z) = (2,1,1) + t(2,1,4)\\).\n\nMostre que \\(r \\subset \\alpha\\).\nDetermine o plano que contém \\(r\\) e que é perpendicular a \\(\\alpha\\).\nDê um exemplo de uma reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
+    "href": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
+    "title": "Retas e planos",
+    "section": "Exemplo 10: planos paralelos",
+    "text": "Exemplo 10: planos paralelos\nConsidere os planos\n\\[\\alpha:\\ 2x-y+z=1\\] \\[\\beta:\\ 4x-2y+2z=5\\]\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) são planos paralelos.\nDetermine a reta perpendicular a \\(\\alpha\\) e a \\(\\beta\\) que passa pela origem.\nCalcule \\(\\mathrm{dist}(\\alpha,\\beta)\\)."
+  },
+  {
+    "objectID": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
+    "href": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
+    "title": "Retas e planos",
+    "section": "Exemplo 11: planos concorrentes",
+    "text": "Exemplo 11: planos concorrentes\nConsidere os planos\n\\[\\alpha:\\ x-y+3z=1\\] \\[\\beta:\\ 2x-3y-z=2\\]\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) não são paralelos.\nDetermine a equação da reta \\(\\alpha \\cap \\beta\\).\nCalcule o ângulo entre \\(\\alpha\\) e \\(\\beta\\).\nDê um exemplo de um plano perpendicular a \\(\\alpha\\) e a \\(\\beta\\)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Geometria Analítica e Álgebra Linear",
+    "section": "",
+    "text": "Geometria Analítica e Álgebra Linear\n\nMatrizes \nSistemas lineares\nA inversa de uma matrix\nO determinante de uma matrix\nVetores\nRetas e planos\nO espaço ℝⁿ\nAutovalores e diagonalização"
+  },
+  {
+    "objectID": "01_matrizes.html#definição-de-uma-matriz",
+    "href": "01_matrizes.html#definição-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Definição de uma Matriz",
+    "text": "Definição de uma Matriz\n\nDefinition 1 Uma matriz \\(A\\), \\(m \\times n\\) (\\(m\\) por \\(n\\)), é uma tabela de \\(m \\cdot n\\) números dispostos em \\(m\\) linhas e \\(n\\) colunas:\n\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\ldots & a_{1n} \\\\\na_{21} & a_{22} & \\ldots & a_{2n} \\\\\n\\vdots &        & \\ldots & \\vdots \\\\\na_{m1} & a_{m2} & \\ldots & a_{mn}\n\\end{bmatrix}\n\\]\n\nA \\(i\\)-ésima linha de \\(A\\) é \\(\\begin{bmatrix}\na_{i1} & a_{i2} & \\ldots & a_{in}\n\\end{bmatrix}\\) A \\(j\\)-ésima coluna de \\(A\\) é \\(\\begin{bmatrix}\na_{1j} \\\\\na_{2j} \\\\\n\\vdots \\\\\na_{mj}\n\\end{bmatrix}\\).\nNós também usamos a notação \\(A = \\left(a_{ij}\\right)_{m \\times n}\\). Aqui, \\(a_{ij}\\) ou \\([A]_{ij}\\) é o elemento ou entrada na posição \\((i, j)\\) da matriz \\(A\\)."
+  },
+  {
+    "objectID": "01_matrizes.html#exemplos-de-matrizes",
+    "href": "01_matrizes.html#exemplos-de-matrizes",
+    "title": "Matrizes",
+    "section": "Exemplos de Matrizes",
+    "text": "Exemplos de Matrizes\nConsidere as seguintes matrizes:\n\\[\nA = \\begin{bmatrix}\n1/2 & 2/3 \\\\\n3 & 4/5\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3\n\\end{bmatrix}, \\quad\nC = \\begin{bmatrix}\n1 & 3 & 0 \\\\\n2 & 4 & -2\n\\end{bmatrix},\n\\quad D = \\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}, \\quad\nE = \\begin{bmatrix}\n4 \\\\\n5 \\\\\n6\n\\end{bmatrix}.\n\\]\n\nAs matrizes \\(A\\) e \\(B\\) são \\(2 \\times 2\\) (2 linhas e 2 colunas, matriz quadrada).\nA matriz \\(C\\) é \\(2 \\times 3\\) (2 linhas e 3 colunas).\nA matriz \\(D\\) é \\(1 \\times 3\\) (1 linha e 3 colunas, matriz linha, vetor linha).\nA matriz \\(E\\) é \\(3 \\times 1\\) (3 linhas e 1 coluna, matriz coluna, vetor coluna).\n\nDuas matrizes \\(A=(a_{ij})\\) a \\(B=(b_{ij})\\) são iguais, se elas\n\ntêm o mesmo tamanho e\n\\(a_{ij}=b_{ij}\\) para todo \\(i,j\\) (têm as mesmas entradas)"
+  },
+  {
+    "objectID": "01_matrizes.html#soma-de-matrizes",
+    "href": "01_matrizes.html#soma-de-matrizes",
+    "title": "Matrizes",
+    "section": "Soma de Matrizes",
+    "text": "Soma de Matrizes\nA soma de duas matrizes do mesmo tamanho, \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) e \\(B = \\left(b_{ij}\\right)_{m \\times n}\\), é definida como:\n\\[\nC = A + B\\quad \\mbox{onde}\\quad c_{ij} = a_{ij} + b_{ij}.\n\\]\nExemplo\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & -3 \\\\\n3 & 4 & 0\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 & 5 \\\\\n0 & 3 & -4\n\\end{bmatrix}.\n\\]\nA soma de \\(A\\) e \\(B\\) é:\n\\[\nC = A + B = \\begin{bmatrix}\n1 + (-2) & 2 + 1 & -3 + 5 \\\\\n3 + 0 & 4 + 3 & 0 + (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 3 & 2 \\\\\n3 & 7 & -4\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#matriz-nula",
+    "href": "01_matrizes.html#matriz-nula",
+    "title": "Matrizes",
+    "section": "Matriz Nula",
+    "text": "Matriz Nula\nA matriz nula (matriz zero) de tamanho \\(m \\times n\\), denotada por \\(0_{m\\times n}\\) (ou simplesmente \\(0\\) quando o tamanho é claro), é a matriz em que todas as entradas são zero:\n\\[\n0_{2\\times 3} = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix}.\n\\]\nPara qualquer matriz \\(A\\) de tamanho \\(m \\times n\\), vale \\(A + 0_{m\\times n} = A\\).\nExemplo\nSe \\[\nA = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix}, \\quad 0 = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix},\n\\] então \\[\nA + 0 = \\begin{bmatrix}\n1+0 & -2+0 & 3+0 \\\\\n0+0 & 4+0 & -1+0\n\\end{bmatrix} = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix} = A.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#múltiplo-escalar-de-uma-matriz",
+    "href": "01_matrizes.html#múltiplo-escalar-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Múltiplo Escalar de uma Matriz",
+    "text": "Múltiplo Escalar de uma Matriz\nO múltiplo escalar de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) por um escalar \\(\\alpha\\) é definido como:\n\n\\[\nB = \\alpha A\\quad \\mbox{onde}\\quad\nb_{ij} = \\alpha a_{ij}.\n\\]\n\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3 \\\\\n5 & -4\n\\end{bmatrix}.\n\\]\nO múltiplo de \\(A\\) pelo escalar \\(-3\\) é:\n\\[\n-3A = \\begin{bmatrix}\n(-3)\\cdot(-2) & (-3)\\cdot 1 \\\\\n(-3)\\cdot 0 & (-3)\\cdot 3 \\\\\n(-3)\\cdot 5 & (-3)\\cdot (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n6 & -3 \\\\\n0 & -9 \\\\\n-15 & 12\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#simétrica-de-uma-matriz",
+    "href": "01_matrizes.html#simétrica-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Simétrica de uma Matriz",
+    "text": "Simétrica de uma Matriz\nA simétrica/negativa de uma matriz \\(A\\) é definida por \\(-A = (-1)A\\). Em particular, se \\(A = (a_{ij})\\), então \\[\n-A = (-a_{ij}).\n\\]\nExemplo\nConsidere \\[\nA = \\begin{bmatrix}\n2 & -3 \\\\\n1 & 4\n\\end{bmatrix} \\quad \\Rightarrow \\quad\n-A = (-1)A = \\begin{bmatrix}\n-2 & 3 \\\\\n-1 & -4\n\\end{bmatrix}.\n\\]\nAlém disso, vale a propriedade \\(A + (-A) = 0\\). No exemplo acima, \\[\nA + (-A) = \\begin{bmatrix}\n2+(-2) & -3+3 \\\\\n1+(-1) & 4+(-4)\n\\end{bmatrix} = \\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix} = 0_{2\\times 2}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#transposta-de-uma-matriz",
+    "href": "01_matrizes.html#transposta-de-uma-matriz",
+    "title": "Matrizes",
+    "section": "Transposta de uma Matriz",
+    "text": "Transposta de uma Matriz\nA transposta de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) é a matriz \\(A^T = \\left(a_{ji}\\right)_{n \\times m}\\) obtida trocando as linhas por colunas.\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}.\n\\]\nA transposta de \\(A\\) é:\n\\[\nA^T = \\begin{bmatrix}\n1 & 4 \\\\\n2 & 5 \\\\\n3 & 6\n\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-entre-matrizes",
+    "href": "01_matrizes.html#multiplicação-entre-matrizes",
+    "title": "Matrizes",
+    "section": "Multiplicação entre Matrizes",
+    "text": "Multiplicação entre Matrizes\nO produto de duas matrizes \\(A = \\left(a_{ij}\\right)_{m \\times p}\\) e \\(B = \\left(b_{ij}\\right)_{p \\times n}\\) é definido como:\n\\[\nC = AB\n\\]\nonde a matriz resultante \\(C = \\left(c_{ij}\\right)_{m \\times n}\\) tem entradas dadas por:\n\n\\[\nc_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj} = \\sum_{k=1}^{p} a_{ik} b_{kj}.\n\\]\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1p}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\color{red}{a_{i1}} & \\color{red}{a_{i2}} & \\cdots & \\color{red}{a_{ip}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mp}\n\\end{bmatrix},\\quad\nB = \\begin{bmatrix}\nb_{11} & \\cdots & \\color{blue}{b_{1j}} & \\cdots & b_{1n}\\\\\nb_{21} & \\cdots & \\color{blue}{b_{2j}} & \\cdots & b_{2n}\\\\\n\\vdots & \\ddots & \\vdots & \\ddots & \\vdots \\\\\nb_{p1} & \\cdots & \\color{blue}{b_{pj}} & \\cdots & b_{pn}\n\\end{bmatrix},\\quad c_{ij} = \\sum\\limits_{k=1}^{p} \\color{red}{a_{ik}}\\,\\color{blue}{b_{kj}}\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#condições-para-multiplicação-de-matrizes",
+    "href": "01_matrizes.html#condições-para-multiplicação-de-matrizes",
+    "title": "Matrizes",
+    "section": "Condições para Multiplicação de Matrizes",
+    "text": "Condições para Multiplicação de Matrizes\n\nO número de colunas de \\(A\\) deve ser igual ao número de linhas de \\(B\\).\nA matriz resultante \\(C\\) terá dimensões \\(m \\times n\\)."
+  },
+  {
+    "objectID": "01_matrizes.html#exemplo-produto-de-matrizes",
+    "href": "01_matrizes.html#exemplo-produto-de-matrizes",
+    "title": "Matrizes",
+    "section": "Exemplo: Produto de Matrizes",
+    "text": "Exemplo: Produto de Matrizes\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}_{2\\times 3}, \\quad\nB = \\begin{bmatrix}\n7 & {8} \\\\\n9 & {10} \\\\\n11 & {12}\n\\end{bmatrix}_{3\\times 2}.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} c_{11} & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}_{2\\times 2}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{11}\\), multiplicamos a primeira linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{11} = \\color{red}{1}\\cdot \\color{blue}{7} + \\color{red}{2}\\cdot \\color{blue}{9} + \\color{red}{3}\\cdot \\color{blue}{11} = 7 + 18 + 33 = 58.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{12}\\), multiplicamos a primeira linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{12} = \\color{red}{1}\\cdot \\color{blue}{8} + \\color{red}{2}\\cdot \\color{blue}{10} + \\color{red}{3}\\cdot \\color{blue}{12} = 8 + 20 + 36 = 64.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{21}\\), multiplicamos a segunda linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{21} = \\color{red}{4}\\cdot \\color{blue}{7} + \\color{red}{5}\\cdot \\color{blue}{9} + \\color{red}{6}\\cdot \\color{blue}{11} = 28 + 45 + 66 = 139.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{22}\\), multiplicamos a segunda linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{22} = \\color{red}{4}\\cdot \\color{blue}{8} + \\color{red}{5}\\cdot \\color{blue}{10} + \\color{red}{6}\\cdot \\color{blue}{12} = 32 + 50 + 72 = 154.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & 154 \\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#matriz-identidade",
+    "href": "01_matrizes.html#matriz-identidade",
+    "title": "Matrizes",
+    "section": "Matriz Identidade",
+    "text": "Matriz Identidade\nA matriz identidade de ordem \\(n\\), denotada por \\(I_n\\) ou simplesmente por \\(I\\), é a matriz quadrada \\(n \\times n\\) com \\(1\\) na diagonal principal e \\(0\\) fora dela.\nExemplo\n\n\\[\nI_3 = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}.\n\\]\n\nPropriedade\nPara qualquer matriz \\(A\\) \\({m\\times n}\\), a matriz identidade satisfaz:\n\n\\[\nI_m\\,A = A \\quad\\text{e}\\quad A\\,I_n = A.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#exemplo-com-mn2",
+    "href": "01_matrizes.html#exemplo-com-mn2",
+    "title": "Matrizes",
+    "section": "Exemplo (com \\(m=n=2\\)):",
+    "text": "Exemplo (com \\(m=n=2\\)):\n\\[\nI_2 = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix},\\quad\nA = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]\n\\[\nI_2A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}\\!\n\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}\n= \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} = A,\\qquad\nA I_2 = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]"
+  },
+  {
+    "objectID": "01_matrizes.html#propriedades-das-operações-com-matrizes",
+    "href": "01_matrizes.html#propriedades-das-operações-com-matrizes",
+    "title": "Matrizes",
+    "section": "Propriedades das Operações com Matrizes",
+    "text": "Propriedades das Operações com Matrizes"
+  },
+  {
+    "objectID": "01_matrizes.html#adição-de-matrizes",
+    "href": "01_matrizes.html#adição-de-matrizes",
+    "title": "Matrizes",
+    "section": "Adição de Matrizes",
+    "text": "Adição de Matrizes\n\nPropriedade Comutativa: \\(A + B = B + A\\)\nPropriedade Associativa: \\((A + B) + C = A + (B + C)\\)\nIdentidade Aditiva: \\(A + 0 = A\\), onde \\(0\\) é a matriz zero.\nInverso Aditivo: \\(A + (-A) = 0\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-escalar",
+    "href": "01_matrizes.html#multiplicação-escalar",
+    "title": "Matrizes",
+    "section": "Multiplicação Escalar",
+    "text": "Multiplicação Escalar\n\nPropriedade Distributiva: \\(\\alpha(A + B) = \\alpha A + \\alpha B\\)\nPropriedade Associativa: \\((\\alpha \\beta)A = \\alpha(\\beta A)\\)\nIdentidade Multiplicativa: \\(1 \\cdot A = A\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-de-matrizes",
+    "href": "01_matrizes.html#multiplicação-de-matrizes",
+    "title": "Matrizes",
+    "section": "Multiplicação de Matrizes",
+    "text": "Multiplicação de Matrizes\n\nPropriedade Associativa: \\((AB)C = A(BC)\\)\nPropriedade Distributiva: \\(A(B + C) = AB + AC\\) e \\((A + B)C = AC + BC\\)\nCompatibilidade da Multiplicação Escalar: \\(\\alpha(AB) = (\\alpha A)B = A(\\alpha B)\\)\nSe \\(A\\) é matriz \\(m\\times n\\), então \\(I_mA=AI_n=A\\)\nNão-Comutatividade: Em geral, \\(AB \\neq BA\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#multiplicação-não-comutativa",
+    "href": "01_matrizes.html#multiplicação-não-comutativa",
+    "title": "Matrizes",
+    "section": "Multiplicação Não Comutativa",
+    "text": "Multiplicação Não Comutativa\nVamos ilustrar que, em geral, \\(AB \\neq BA\\).\nConsidere \\[\nA = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}.\n\\]\nCalculando \\(AB\\) e \\(BA\\): \\[\nAB = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n         \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n     = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix},\\qquad\nBA = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n         \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n     = \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix}.\n\\]\nConclusão: \\(AB = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix} \\neq \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix} = BA\\)"
+  },
+  {
+    "objectID": "01_matrizes.html#transposta",
+    "href": "01_matrizes.html#transposta",
+    "title": "Matrizes",
+    "section": "Transposta",
+    "text": "Transposta\n\nDupla transposição: \\((A^T)^T = A\\).\nTransposição da soma (mesmas dimensões): \\((A + B)^T = A^T + B^T\\).\nTransposição do produto por escalar: \\((\\alpha A)^T = \\alpha A^T\\).\nTransposição do produto (dimensões compatíveis): \\((AB)^T = B^T A^T\\).\nSimetria: \\(A\\) é simétrica se \\(A^T = A\\) e antissimétrica se \\(A^T = -A\\)."
+  },
+  {
+    "objectID": "01_matrizes.html#propriedade-transposta-do-produto",
+    "href": "01_matrizes.html#propriedade-transposta-do-produto",
+    "title": "Matrizes",
+    "section": "Propriedade: transposta do produto",
+    "text": "Propriedade: transposta do produto\nPara matrizes de tamanhos compatíveis, vale a identidade \\[\n(AB)^{T} = B^{T} A^{T}.\n\\]\nExemplo pequeno (matrizes \\(2\\times 2\\)): \\[\nA = \\begin{bmatrix}1 & 2\\\\ 3 & 0\\end{bmatrix},\\quad\nB = \\begin{bmatrix}0 & 4\\\\ 5 & -1\\end{bmatrix}.\n\\] Então \\[\nAB = \\begin{bmatrix}\n1\\cdot 0 + 2\\cdot 5 & 1\\cdot 4 + 2\\cdot(-1)\\\\\n3\\cdot 0 + 0\\cdot 5 & 3\\cdot 4 + 0\\cdot(-1)\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 2\\\\ 0 & 12\\end{bmatrix},\\quad\n(AB)^{T} = \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nPor outro lado, \\[\nB^{T} = \\begin{bmatrix}0 & 5\\\\ 4 & -1\\end{bmatrix},\\quad\nA^{T} = \\begin{bmatrix}1 & 3\\\\ 2 & 0\\end{bmatrix},\\quad\nB^{T}A^{T} = \\begin{bmatrix}\n0\\cdot 1 + 5\\cdot 2 & 0\\cdot 3 + 5\\cdot 0\\\\\n4\\cdot 1 + (-1)\\cdot 2 & 4\\cdot 3 + (-1)\\cdot 0\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nLogo, \\((AB)^{T} = B^{T}A^{T}\\neq A^TB^T\\)."
   },
   {
     "objectID": "05_vetores.html#introdução",
@@ -672,465 +1022,283 @@
     "text": "Aplicação: pontos coplanares\nExemplo 3. Verifique se \\(A=(2,3,3)\\), \\(B=(4,1,3)\\), \\(C=(2,5,1)\\), \\(D=(3,3,2)\\) são coplanares.\n\\(\\overrightarrow{AB}=(2,-2,0)\\), \\(\\overrightarrow{AC}=(0,2,-2)\\), \\(\\overrightarrow{AD}=(1,0,-1)\\).\n\\[\\langle \\overrightarrow{AB}, \\overrightarrow{AC} \\times \\overrightarrow{AD}\\rangle =\n\\det\\begin{bmatrix}\n2 & -2 & 0 \\\\\n0 &  2 & -2 \\\\\n1 &  0 & -1\n\\end{bmatrix}=0.\\]\nLogo são coplanares."
   },
   {
-    "objectID": "01_matrizes.html#definição-de-uma-matriz",
-    "href": "01_matrizes.html#definição-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Definição de uma Matriz",
-    "text": "Definição de uma Matriz\n\nDefinition 1 Uma matriz \\(A\\), \\(m \\times n\\) (\\(m\\) por \\(n\\)), é uma tabela de \\(m \\cdot n\\) números dispostos em \\(m\\) linhas e \\(n\\) colunas:\n\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\ldots & a_{1n} \\\\\na_{21} & a_{22} & \\ldots & a_{2n} \\\\\n\\vdots &        & \\ldots & \\vdots \\\\\na_{m1} & a_{m2} & \\ldots & a_{mn}\n\\end{bmatrix}\n\\]\n\nA \\(i\\)-ésima linha de \\(A\\) é \\(\\begin{bmatrix}\na_{i1} & a_{i2} & \\ldots & a_{in}\n\\end{bmatrix}\\) A \\(j\\)-ésima coluna de \\(A\\) é \\(\\begin{bmatrix}\na_{1j} \\\\\na_{2j} \\\\\n\\vdots \\\\\na_{mj}\n\\end{bmatrix}\\).\nNós também usamos a notação \\(A = \\left(a_{ij}\\right)_{m \\times n}\\). Aqui, \\(a_{ij}\\) ou \\([A]_{ij}\\) é o elemento ou entrada na posição \\((i, j)\\) da matriz \\(A\\)."
+    "objectID": "07_Rn.html#o-espaço-mathbbrn-mathbbr2",
+    "href": "07_Rn.html#o-espaço-mathbbrn-mathbbr2",
+    "title": "O espaço ℝⁿ",
+    "section": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^2\\)",
+    "text": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^2\\)\n\\(\\mathbb{R}^2\\) = plano cartesiano\n\n\n\n\n\n\n\\[\n\\mathbb{R}^2 = \\{ (x_1,x_2)\\mid x_1,x_2\\in\\mathbb{R} \\}.\n\\]"
   },
   {
-    "objectID": "01_matrizes.html#exemplos-de-matrizes",
-    "href": "01_matrizes.html#exemplos-de-matrizes",
-    "title": "Matrizes",
-    "section": "Exemplos de Matrizes",
-    "text": "Exemplos de Matrizes\nConsidere as seguintes matrizes:\n\\[\nA = \\begin{bmatrix}\n1/2 & 2/3 \\\\\n3 & 4/5\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3\n\\end{bmatrix}, \\quad\nC = \\begin{bmatrix}\n1 & 3 & 0 \\\\\n2 & 4 & -2\n\\end{bmatrix},\n\\quad D = \\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}, \\quad\nE = \\begin{bmatrix}\n4 \\\\\n5 \\\\\n6\n\\end{bmatrix}.\n\\]\n\nAs matrizes \\(A\\) e \\(B\\) são \\(2 \\times 2\\) (2 linhas e 2 colunas, matriz quadrada).\nA matriz \\(C\\) é \\(2 \\times 3\\) (2 linhas e 3 colunas).\nA matriz \\(D\\) é \\(1 \\times 3\\) (1 linha e 3 colunas, matriz linha, vetor linha).\nA matriz \\(E\\) é \\(3 \\times 1\\) (3 linhas e 1 coluna, matriz coluna, vetor coluna).\n\nDuas matrizes \\(A=(a_{ij})\\) a \\(B=(b_{ij})\\) são iguais, se elas\n\ntêm o mesmo tamanho e\n\\(a_{ij}=b_{ij}\\) para todo \\(i,j\\) (têm as mesmas entradas)"
+    "objectID": "07_Rn.html#o-espaço-mathbbrn-mathbbr3",
+    "href": "07_Rn.html#o-espaço-mathbbrn-mathbbr3",
+    "title": "O espaço ℝⁿ",
+    "section": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^3\\)",
+    "text": "O espaço \\(\\mathbb{R}^n\\) — \\(\\mathbb{R}^3\\)\n\\(\\mathbb{R}^3\\) = espaço tridimensional\n\n\n\n\n\n\n\\[\n\\mathbb{R}^3 = \\{ (x_1,x_2,x_3)\\mid x_1,x_2,x_3\\in\\mathbb{R} \\}.\n\\]"
   },
   {
-    "objectID": "01_matrizes.html#soma-de-matrizes",
-    "href": "01_matrizes.html#soma-de-matrizes",
-    "title": "Matrizes",
-    "section": "Soma de Matrizes",
-    "text": "Soma de Matrizes\nA soma de duas matrizes do mesmo tamanho, \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) e \\(B = \\left(b_{ij}\\right)_{m \\times n}\\), é definida como:\n\\[\nC = A + B\\quad \\mbox{onde}\\quad c_{ij} = a_{ij} + b_{ij}.\n\\]\nExemplo\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & -3 \\\\\n3 & 4 & 0\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n-2 & 1 & 5 \\\\\n0 & 3 & -4\n\\end{bmatrix}.\n\\]\nA soma de \\(A\\) e \\(B\\) é:\n\\[\nC = A + B = \\begin{bmatrix}\n1 + (-2) & 2 + 1 & -3 + 5 \\\\\n3 + 0 & 4 + 3 & 0 + (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 3 & 2 \\\\\n3 & 7 & -4\n\\end{bmatrix}.\n\\]"
+    "objectID": "07_Rn.html#o-espaço-mathbbrn-definição-geral",
+    "href": "07_Rn.html#o-espaço-mathbbrn-definição-geral",
+    "title": "O espaço ℝⁿ",
+    "section": "O espaço \\(\\mathbb{R}^n\\) — definição geral",
+    "text": "O espaço \\(\\mathbb{R}^n\\) — definição geral\nGeneralizando, o espaço \\(\\mathbb{R}^n\\) é o conjunto formado por todas as coleções ordenadas \\((x_1,x_2,\\ldots,x_n)\\) de números reais.\n\\[\n\\mathbb{R}^n = \\{ (x_1,x_2,\\ldots,x_n)\\mid x_1,x_2,\\ldots,x_n\\in\\mathbb{R} \\}.\n\\]\nUm elemento \\(V=(x_1,x_2,\\ldots,x_n)\\) de \\(\\mathbb{R}^n\\) é um vetor.\nOperações com vetores de \\(\\mathbb{R}^n\\)\nSe \\(V=(v_1,\\ldots,v_n)\\) e \\(W=(w_1,\\ldots,w_n)\\) são vetores de \\(\\mathbb{R}^n\\) e se \\(\\alpha\\in\\mathbb{R}\\), então:\n\nSoma: \\(V+W=(v_1+w_1,\\ldots,v_n+w_n)\\).\nMultiplicação por escalar: \\(\\alpha V=(\\alpha v_1,\\ldots,\\alpha v_n)\\).\n\nEstas operações satisfazem as propriedades já comentadas para o plano e para o espaço."
   },
   {
-    "objectID": "01_matrizes.html#matriz-nula",
-    "href": "01_matrizes.html#matriz-nula",
-    "title": "Matrizes",
-    "section": "Matriz Nula",
-    "text": "Matriz Nula\nA matriz nula (matriz zero) de tamanho \\(m \\times n\\), denotada por \\(0_{m\\times n}\\) (ou simplesmente \\(0\\) quando o tamanho é claro), é a matriz em que todas as entradas são zero:\n\\[\n0_{2\\times 3} = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix}.\n\\]\nPara qualquer matriz \\(A\\) de tamanho \\(m \\times n\\), vale \\(A + 0_{m\\times n} = A\\).\nExemplo\nSe \\[\nA = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix}, \\quad 0 = \\begin{bmatrix}\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{bmatrix},\n\\] então \\[\nA + 0 = \\begin{bmatrix}\n1+0 & -2+0 & 3+0 \\\\\n0+0 & 4+0 & -1+0\n\\end{bmatrix} = \\begin{bmatrix}\n1 & -2 & 3 \\\\\n0 & 4 & -1\n\\end{bmatrix} = A.\n\\]"
+    "objectID": "07_Rn.html#operações-com-vetores-forma-matricial",
+    "href": "07_Rn.html#operações-com-vetores-forma-matricial",
+    "title": "O espaço ℝⁿ",
+    "section": "Operações com vetores — forma matricial",
+    "text": "Operações com vetores — forma matricial\nRepresentando os vetores de \\(\\mathbb{R}^n\\) como matrizes coluna, as operações viram operações naturais com matrizes:\n\\[\nV=\\begin{bmatrix}v_1\\\\ \\vdots \\\\ v_n\\end{bmatrix},\\quad\nW=\\begin{bmatrix}w_1\\\\ \\vdots \\\\ w_n\\end{bmatrix}.\n\\]\nSoma: \\(V+W=\\begin{bmatrix} v_1+w_1 \\\\ \\vdots \\\\ v_n+w_n \\end{bmatrix}\\).\nMultiplicação por escalar: \\(\\alpha V=\\begin{bmatrix} \\alpha v_1 \\\\ \\vdots \\\\ \\alpha v_n \\end{bmatrix}\\)."
   },
   {
-    "objectID": "01_matrizes.html#múltiplo-escalar-de-uma-matriz",
-    "href": "01_matrizes.html#múltiplo-escalar-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Múltiplo Escalar de uma Matriz",
-    "text": "Múltiplo Escalar de uma Matriz\nO múltiplo escalar de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) por um escalar \\(\\alpha\\) é definido como:\n\n\\[\nB = \\alpha A\\quad \\mbox{onde}\\quad\nb_{ij} = \\alpha a_{ij}.\n\\]\n\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n-2 & 1 \\\\\n0 & 3 \\\\\n5 & -4\n\\end{bmatrix}.\n\\]\nO múltiplo de \\(A\\) pelo escalar \\(-3\\) é:\n\\[\n-3A = \\begin{bmatrix}\n(-3)\\cdot(-2) & (-3)\\cdot 1 \\\\\n(-3)\\cdot 0 & (-3)\\cdot 3 \\\\\n(-3)\\cdot 5 & (-3)\\cdot (-4)\n\\end{bmatrix} = \\begin{bmatrix}\n6 & -3 \\\\\n0 & -9 \\\\\n-15 & 12\n\\end{bmatrix}.\n\\]"
+    "objectID": "07_Rn.html#combinação-linear",
+    "href": "07_Rn.html#combinação-linear",
+    "title": "O espaço ℝⁿ",
+    "section": "Combinação linear",
+    "text": "Combinação linear\nSejam \\(V_1,\\ldots,V_k\\in\\mathbb{R}^n\\). Uma combinação linear destes vetores é um vetor\n\n\\[\nV = x_1V_1 + x_2V_2 + \\cdots + x_kV_k.\n\\]\n\n\nExemplo 1 Se \\(V_1=(-1,2,1)\\) e \\(V_2=(3,-1,2)\\) em \\(\\mathbb{R}^3\\) então\n\\[\\begin{aligned}\nV &= 3V_1 + 5V_2 = 3(-1,2,1) + 5(3,-1,2) = (-3,6,3) + (15,-5,10) = (12,1,13),\\\\\nW &= 2V_1 - 3V_2 = 2(-1,2,1) - 3(3,-1,2) = (-2,4,2) - (9,-3,6) = (-11,7,-4).\n\\end{aligned}\\]\n\nCombinação linear — vetores canônicos\nEm \\(\\mathbb{R}^3\\) todo vetor \\(V=(a,b,c)\\) é combinação linear dos vetores canônicos\n\\[\\vec{i}=(1,0,0),\\quad \\vec{j}=(0,1,0),\\quad \\vec{k}=(0,0,1).\\]\nDe fato, \\(V=(a,b,c)=a\\,\\vec{i}+b\\,\\vec{j}+c\\,\\vec{k}\\)."
   },
   {
-    "objectID": "01_matrizes.html#simétrica-de-uma-matriz",
-    "href": "01_matrizes.html#simétrica-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Simétrica de uma Matriz",
-    "text": "Simétrica de uma Matriz\nA simétrica/negativa de uma matriz \\(A\\) é definida por \\(-A = (-1)A\\). Em particular, se \\(A = (a_{ij})\\), então \\[\n-A = (-a_{ij}).\n\\]\nExemplo\nConsidere \\[\nA = \\begin{bmatrix}\n2 & -3 \\\\\n1 & 4\n\\end{bmatrix} \\quad \\Rightarrow \\quad\n-A = (-1)A = \\begin{bmatrix}\n-2 & 3 \\\\\n-1 & -4\n\\end{bmatrix}.\n\\]\nAlém disso, vale a propriedade \\(A + (-A) = 0\\). No exemplo acima, \\[\nA + (-A) = \\begin{bmatrix}\n2+(-2) & -3+3 \\\\\n1+(-1) & 4+(-4)\n\\end{bmatrix} = \\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix} = 0_{2\\times 2}.\n\\]"
+    "objectID": "07_Rn.html#combinação-linear-verificação-por-sistema-linear",
+    "href": "07_Rn.html#combinação-linear-verificação-por-sistema-linear",
+    "title": "O espaço ℝⁿ",
+    "section": "Combinação linear — verificação por sistema linear",
+    "text": "Combinação linear — verificação por sistema linear\n\nExemplo 2 Verifique se \\(V=(-10,-3,1)\\) é combinação linear de \\(V_1=(1,-3,5)\\) e \\(V_2=(-4,1,-3)\\).\nBasta analisar se \\(x_1V_1 + x_2V_2 = V\\) tem solução:\n\\[\n\\begin{aligned}\nx_1(1,-3,5) + x_2(-4,1,-3) &= (-10,-3,1)\\\\\n(x_1-4x_2,\\; -3x_1+x_2,\\; 5x_1-3x_2) &= (-10,-3,1)\n\\end{aligned}\n\\]\nSistema equivalente:\n\\[\n\\begin{cases}\nx_1 - 4x_2 = -10,\\\\\n-3x_1 + x_2 = -3,\\\\\n5x_1 - 3x_2 = 1.\n\\end{cases}\n\\]\nResolvendo, \\(x_1=2\\) e \\(x_2=3\\), logo \\(V=2V_1+3V_2\\)."
   },
   {
-    "objectID": "01_matrizes.html#transposta-de-uma-matriz",
-    "href": "01_matrizes.html#transposta-de-uma-matriz",
-    "title": "Matrizes",
-    "section": "Transposta de uma Matriz",
-    "text": "Transposta de uma Matriz\nA transposta de uma matriz \\(A = \\left(a_{ij}\\right)_{m \\times n}\\) é a matriz \\(A^T = \\left(a_{ji}\\right)_{n \\times m}\\) obtida trocando as linhas por colunas.\nExemplo\nConsidere a matriz:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}.\n\\]\nA transposta de \\(A\\) é:\n\\[\nA^T = \\begin{bmatrix}\n1 & 4 \\\\\n2 & 5 \\\\\n3 & 6\n\\end{bmatrix}.\n\\]"
+    "objectID": "07_Rn.html#combinação-linear-forma-matricial-e-proposição",
+    "href": "07_Rn.html#combinação-linear-forma-matricial-e-proposição",
+    "title": "O espaço ℝⁿ",
+    "section": "Combinação linear — forma matricial e proposição",
+    "text": "Combinação linear — forma matricial e proposição\nNo exemplo anterior, o sistema é\n\\[\n\\begin{bmatrix} 1 & -4 \\\\ -3 & 1 \\\\ 5 & -3 \\end{bmatrix}\n\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix}=\n\\begin{bmatrix} -10 \\\\ -3 \\\\ 1 \\end{bmatrix}.\n\\]\nObserve que as colunas das matrizes são \\(V_1\\), \\(V_2\\) e \\(V\\). Generalizando:\n\nProposição 1 Um vetor \\(V\\) é combinação linear de \\(V_1,\\ldots,V_k\\in\\mathbb{R}^n\\) se o sistema linear \\(AX=V\\) tem solução, onde \\(A\\) é a matriz cujas colunas são \\(V_1,\\ldots,V_k\\)."
   },
   {
-    "objectID": "01_matrizes.html#multiplicação-entre-matrizes",
-    "href": "01_matrizes.html#multiplicação-entre-matrizes",
-    "title": "Matrizes",
-    "section": "Multiplicação entre Matrizes",
-    "text": "Multiplicação entre Matrizes\nO produto de duas matrizes \\(A = \\left(a_{ij}\\right)_{m \\times p}\\) e \\(B = \\left(b_{ij}\\right)_{p \\times n}\\) é definido como:\n\\[\nC = AB\n\\]\nonde a matriz resultante \\(C = \\left(c_{ij}\\right)_{m \\times n}\\) tem entradas dadas por:\n\n\\[\nc_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj} = \\sum_{k=1}^{p} a_{ik} b_{kj}.\n\\]\n\n\\[\nA = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1p}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\color{red}{a_{i1}} & \\color{red}{a_{i2}} & \\cdots & \\color{red}{a_{ip}}\\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mp}\n\\end{bmatrix},\\quad\nB = \\begin{bmatrix}\nb_{11} & \\cdots & \\color{blue}{b_{1j}} & \\cdots & b_{1n}\\\\\nb_{21} & \\cdots & \\color{blue}{b_{2j}} & \\cdots & b_{2n}\\\\\n\\vdots & \\ddots & \\vdots & \\ddots & \\vdots \\\\\nb_{p1} & \\cdots & \\color{blue}{b_{pj}} & \\cdots & b_{pn}\n\\end{bmatrix},\\quad c_{ij} = \\sum\\limits_{k=1}^{p} \\color{red}{a_{ik}}\\,\\color{blue}{b_{kj}}\n\\]"
+    "objectID": "07_Rn.html#combinação-linear-exemplo-de-inexistência",
+    "href": "07_Rn.html#combinação-linear-exemplo-de-inexistência",
+    "title": "O espaço ℝⁿ",
+    "section": "Combinação linear — exemplo de inexistência",
+    "text": "Combinação linear — exemplo de inexistência\n\nExemplo 3 Verifique se \\(V=(0,7,1)\\) é combinação linear de \\(V_1=(2,1,4)\\) e \\(V_2=(3,-2,5)\\).\nAnalisar \\(xV_1 + yV_2 = V\\):\n\\[\n\\begin{bmatrix} 2 & 3 \\\\ 1 & -2 \\\\ 4 & 5 \\end{bmatrix}\n\\begin{bmatrix} x \\\\ y \\end{bmatrix}=\n\\begin{bmatrix} 0 \\\\ 7 \\\\ 1 \\end{bmatrix}\n\\]\nEste sistema não tem solução; logo \\(V\\) não é combinação linear de \\(V_1\\) e \\(V_2\\)."
   },
   {
-    "objectID": "01_matrizes.html#condições-para-multiplicação-de-matrizes",
-    "href": "01_matrizes.html#condições-para-multiplicação-de-matrizes",
-    "title": "Matrizes",
-    "section": "Condições para Multiplicação de Matrizes",
-    "text": "Condições para Multiplicação de Matrizes\n\nO número de colunas de \\(A\\) deve ser igual ao número de linhas de \\(B\\).\nA matriz resultante \\(C\\) terá dimensões \\(m \\times n\\)."
+    "objectID": "07_Rn.html#subespaços",
+    "href": "07_Rn.html#subespaços",
+    "title": "O espaço ℝⁿ",
+    "section": "Subespaços",
+    "text": "Subespaços\nUma coleção \\(X\\) de vetores de \\(\\mathbb R^n\\) é dito subespaço de \\(\\mathbb R^n\\) se \\(X\\) é fechado para soma e múltiplo escalar. Isto é, se para quaisquer \\(U_1,U_2\\in X\\) e qualquer escalar \\(a\\in\\mathbb{R}\\), os vetores \\[\nU_1 + U_2\\quad\\mbox{e}\\quad a U_1\n\\] também pertencem a \\(X\\).\nSe \\(X\\) é subespaço de \\(\\mathbb R^n\\), então \\(X\\) contém o vetor nulo \\(\\vec{0}\\) e é fechado para combinações lineares. Ou seja, se \\(U_1,\\ldots,U_k\\in X\\) e \\(a_1,\\ldots,a_k\\in\\mathbb{R}\\), então \\[\na_1 U_1 + a_2 U_2 + \\cdots + a_k U_k \\in X.\n\\]"
   },
   {
-    "objectID": "01_matrizes.html#exemplo-produto-de-matrizes",
-    "href": "01_matrizes.html#exemplo-produto-de-matrizes",
-    "title": "Matrizes",
-    "section": "Exemplo: Produto de Matrizes",
-    "text": "Exemplo: Produto de Matrizes\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{bmatrix}_{2\\times 3}, \\quad\nB = \\begin{bmatrix}\n7 & {8} \\\\\n9 & {10} \\\\\n11 & {12}\n\\end{bmatrix}_{3\\times 2}.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} c_{11} & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}_{2\\times 2}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{11}\\), multiplicamos a primeira linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{11} = \\color{red}{1}\\cdot \\color{blue}{7} + \\color{red}{2}\\cdot \\color{blue}{9} + \\color{red}{3}\\cdot \\color{blue}{11} = 7 + 18 + 33 = 58.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & c_{12} \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n\\color{red}{1} & \\color{red}{2} & \\color{red}{3} \\\\\n4 & 5 & 6\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{12}\\), multiplicamos a primeira linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{12} = \\color{red}{1}\\cdot \\color{blue}{8} + \\color{red}{2}\\cdot \\color{blue}{10} + \\color{red}{3}\\cdot \\color{blue}{12} = 8 + 20 + 36 = 64.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ c_{21} & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n\\color{blue}{7} & 8 \\\\\n\\color{blue}{9} & 10 \\\\\n\\color{blue}{11} & 12\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{21}\\), multiplicamos a segunda linha de \\(A\\) pela primeira coluna de \\(B\\): \\[\nc_{21} = \\color{red}{4}\\cdot \\color{blue}{7} + \\color{red}{5}\\cdot \\color{blue}{9} + \\color{red}{6}\\cdot \\color{blue}{11} = 28 + 45 + 66 = 139.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & c_{22}\\end{bmatrix}\n\\]\n\n\nConsidere as matrizes:\n\\[\nA = \\begin{bmatrix}\n1 & 2 & 3 \\\\\n\\color{red}{4} & \\color{red}{5} & \\color{red}{6}\n\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}\n7 & \\color{blue}{8} \\\\\n9 & \\color{blue}{10} \\\\\n11 & \\color{blue}{12}\n\\end{bmatrix}.\n\\]\nPara calcular \\(c_{22}\\), multiplicamos a segunda linha de \\(A\\) pela segunda coluna de \\(B\\): \\[\nc_{22} = \\color{red}{4}\\cdot \\color{blue}{8} + \\color{red}{5}\\cdot \\color{blue}{10} + \\color{red}{6}\\cdot \\color{blue}{12} = 32 + 50 + 72 = 154.\n\\] O produto vai ser uma matriz \\(2\\times 2\\): \\[\nC=\\begin{bmatrix} 58 & 64 \\\\ 139 & 154 \\end{bmatrix}\n\\]"
+    "objectID": "07_Rn.html#exemplos-de-subespaços",
+    "href": "07_Rn.html#exemplos-de-subespaços",
+    "title": "O espaço ℝⁿ",
+    "section": "Exemplos de subespaços",
+    "text": "Exemplos de subespaços\n\nExemplo 4  \n\nUma reta pela origem em \\(\\mathbb R^2\\) ou \\(\\mathbb R^3\\) é um subespaço de \\(\\mathbb R^2\\) ou \\(\\mathbb R^3\\).\nUm plano pela origem em \\(\\mathbb R^3\\) é um subespaço de \\(\\mathbb R^3\\).\nO conjunto \\(\\{\\vec{0}\\}\\) é um subespaço de \\(\\mathbb R^n\\).\nO conjunto \\(\\mathbb R^n\\) é um subespaço de \\(\\mathbb R^n\\).\nSe \\(A\\) é matriz \\(m\\times n\\), o conjunto das soluções do sistema homogêneo \\(AX=\\vec 0\\) é um subespaço de \\(\\mathbb R^n\\)."
   },
   {
-    "objectID": "01_matrizes.html#matriz-identidade",
-    "href": "01_matrizes.html#matriz-identidade",
-    "title": "Matrizes",
-    "section": "Matriz Identidade",
-    "text": "Matriz Identidade\nA matriz identidade de ordem \\(n\\), denotada por \\(I_n\\) ou simplesmente por \\(I\\), é a matriz quadrada \\(n \\times n\\) com \\(1\\) na diagonal principal e \\(0\\) fora dela.\nExemplo\n\n\\[\nI_3 = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}.\n\\]\n\nPropriedade\nPara qualquer matriz \\(A\\) \\({m\\times n}\\), a matriz identidade satisfaz:\n\n\\[\nI_m\\,A = A \\quad\\text{e}\\quad A\\,I_n = A.\n\\]"
+    "objectID": "07_Rn.html#espaço-gerado",
+    "href": "07_Rn.html#espaço-gerado",
+    "title": "O espaço ℝⁿ",
+    "section": "Espaço gerado",
+    "text": "Espaço gerado\nSejam \\(V_1,\\ldots,V_k\\in\\mathbb R^n\\). O espaço gerado por \\(V_1,\\ldots,V_k\\) é o conjunto de todas as combinações lineares:\n\\[\n[V_1,\\ldots,V_k] = \\{V=x_1V_1+\\cdots+x_kV_k\\mid x_1,\\ldots,x_k\\in\\mathbb{R}\\}.\n\\]\nO conjunto \\([V_1,\\ldots,V_k]\\) é um subespaço de \\(\\mathbb R^n\\).\nObservações importantes:\n\nComo \\(\\vec{0} = 0V_1+\\cdots+0V_k\\), a origem sempre pertence a um subespaço de \\(\\mathbb{R}^n\\);\nSe \\(V,W\\in [V_1,\\ldots,V_k]\\), então \\(V+W\\in [V_1,\\ldots,V_k]\\) (fechado para soma);\nSe \\(V\\in [V_1,\\ldots,V_k]\\) and \\(a\\in \\mathbb R\\), então \\(a V\\in [V_1,\\ldots,V_k]\\) (fechado para múltiplo escalar)."
   },
   {
-    "objectID": "01_matrizes.html#exemplo-com-mn2",
-    "href": "01_matrizes.html#exemplo-com-mn2",
-    "title": "Matrizes",
-    "section": "Exemplo (com \\(m=n=2\\)):",
-    "text": "Exemplo (com \\(m=n=2\\)):\n\\[\nI_2 = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix},\\quad\nA = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]\n\\[\nI_2A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}\\!\n\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}\n= \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} = A,\\qquad\nA I_2 = \\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix}.\n\\]"
+    "objectID": "07_Rn.html#exemplos",
+    "href": "07_Rn.html#exemplos",
+    "title": "O espaço ℝⁿ",
+    "section": "Exemplos",
+    "text": "Exemplos\n\nExemplo 5  \n\nGerado por um vetor não nulo: os múltiplos deste vetor (uma reta).\nGerado por dois vetores não paralelos: o plano que contém estes vetores.\n\n\n\nExemplo 6  \n\nDetermine a equação do plano \\(\\alpha\\) gerado por \\(V_1=(2,-1,1)\\) e \\(V_2=(3,0,2)\\).\nO vetor \\(U=(5,-1,3)\\) pertence a \\(\\alpha\\)? Qual é o espaço gerado por \\(U,V_1,V_2\\)?\nO vetor \\(W=(3,2,1)\\) pertence a \\(\\alpha\\)? Qual é o espaço gerado por \\(W,V_1,V_2\\)?"
   },
   {
-    "objectID": "01_matrizes.html#propriedades-das-operações-com-matrizes",
-    "href": "01_matrizes.html#propriedades-das-operações-com-matrizes",
-    "title": "Matrizes",
-    "section": "Propriedades das Operações com Matrizes",
-    "text": "Propriedades das Operações com Matrizes"
+    "objectID": "07_Rn.html#espaço-gerado-proposição-útil",
+    "href": "07_Rn.html#espaço-gerado-proposição-útil",
+    "title": "O espaço ℝⁿ",
+    "section": "Espaço gerado — proposição útil",
+    "text": "Espaço gerado — proposição útil\n\nProposição 2 Se \\(V_0\\) é combinação linear de \\(V_1,\\ldots,V_k\\), então \\[\n[V_0,V_1,\\ldots,V_k] = [V_1,\\ldots,V_k].\n\\]\n\nDemonstração-esboço: escreva \\(V_0=\\alpha_1V_1+\\cdots+\\alpha_kV_k\\) e substitua em \\(x_0V_0+x_1V_1+\\cdots+x_kV_k\\) para ver que qualquer combinação com \\(V_0\\) pode ser reescrita sem \\(V_0\\).\nPara formar \\([V_1,\\ldots,V_k]\\) podemos descartar qualquer vetor que seja combinação linear dos demais. Isso motiva o conceito de dependência linear:\n\nDefinição 1 Um conjunto de vetores é linearmente dependente se algum deles é combinação linear dos demais. No caso contrário, dizemos que os vetores são linearmente independentes."
   },
   {
-    "objectID": "01_matrizes.html#adição-de-matrizes",
-    "href": "01_matrizes.html#adição-de-matrizes",
-    "title": "Matrizes",
-    "section": "Adição de Matrizes",
-    "text": "Adição de Matrizes\n\nPropriedade Comutativa: \\(A + B = B + A\\)\nPropriedade Associativa: \\((A + B) + C = A + (B + C)\\)\nIdentidade Aditiva: \\(A + 0 = A\\), onde \\(0\\) é a matriz zero.\nInverso Aditivo: \\(A + (-A) = 0\\)"
+    "objectID": "07_Rn.html#dependência-linear-questões",
+    "href": "07_Rn.html#dependência-linear-questões",
+    "title": "O espaço ℝⁿ",
+    "section": "Dependência linear — questões",
+    "text": "Dependência linear — questões\n\nComo saber se um conjunto \\(\\{V_1,\\ldots,V_k\\}\\) é linearmente dependente? Tentar cada um por vez é viável?\nSe \\(\\{V_1,\\ldots,V_k\\}\\) é dependente, qual vetor é combinação dos demais? Poderiam todos ser combinações dos outros?\n\n\nExercício 1  \n\nDetermine a equação do plano \\(\\alpha\\) gerado pelos vetores \\(V_1=(2,-1,1)\\) e \\(V_2=(3,0,2)\\).\nO vetor \\(U = (1,-2,0)\\) pertence a este plano \\(\\alpha\\)? Qual é o espaço gerado por \\(U\\), \\(V_1\\) e \\(V_2\\)? Neste caso o subespaço \\([U,V_1,V_2]\\) é um plano pela origem.\nO vetor \\(W = (3,2,1)\\) pertence a este plano \\(\\alpha\\)? Qual é o espaço gerado por \\(W\\), \\(V_1\\) e \\(V_2\\)? Neste caso o subespaço \\([W,V_1,V_2]\\) é todo o \\(\\mathbb{R}^3\\)."
   },
   {
-    "objectID": "01_matrizes.html#multiplicação-escalar",
-    "href": "01_matrizes.html#multiplicação-escalar",
-    "title": "Matrizes",
-    "section": "Multiplicação Escalar",
-    "text": "Multiplicação Escalar\n\nPropriedade Distributiva: \\(\\alpha(A + B) = \\alpha A + \\alpha B\\)\nPropriedade Associativa: \\((\\alpha \\beta)A = \\alpha(\\beta A)\\)\nIdentidade Multiplicativa: \\(1 \\cdot A = A\\)"
+    "objectID": "07_Rn.html#dependência-linear",
+    "href": "07_Rn.html#dependência-linear",
+    "title": "O espaço ℝⁿ",
+    "section": "Dependência Linear",
+    "text": "Dependência Linear\nUm conjunto de vetores é linearmente dependente se um deles for uma combinação linear dos demais.\n\nTeorema 1 Um conjunto de vetores \\(V_1,\\ldots,V_k\\) é linearmente dependente se e somente se a equação vetorial \\[\nx_1V_1 + x_2V_2 + \\cdots + x_kV_k = \\vec{0}\n\\] possui solução não trivial. Isto é, possui solução em que algum \\(x_i \\neq 0\\).\n\nDe fato, por exemplo, se \\(x_1\\neq 0\\), na equação \\(x_1V_1 + x_2V_2 + \\cdots + x_kV_k = \\vec{0}\\) podemos isolar \\(V_1\\), escrevendo \\(V_1\\) como uma combinação linear dos demais vetores: \\[\nV_1 = -\\dfrac{x_2}{x_1}V_2 - \\cdots - \\dfrac{x_k}{x_1}V_k.\n\\]"
   },
   {
-    "objectID": "01_matrizes.html#multiplicação-de-matrizes",
-    "href": "01_matrizes.html#multiplicação-de-matrizes",
-    "title": "Matrizes",
-    "section": "Multiplicação de Matrizes",
-    "text": "Multiplicação de Matrizes\n\nPropriedade Associativa: \\((AB)C = A(BC)\\)\nPropriedade Distributiva: \\(A(B + C) = AB + AC\\) e \\((A + B)C = AC + BC\\)\nCompatibilidade da Multiplicação Escalar: \\(\\alpha(AB) = (\\alpha A)B = A(\\alpha B)\\)\nSe \\(A\\) é matriz \\(m\\times n\\), então \\(I_mA=AI_n=A\\)\nNão-Comutatividade: Em geral, \\(AB \\neq BA\\)"
+    "objectID": "07_Rn.html#dependência-linear-1",
+    "href": "07_Rn.html#dependência-linear-1",
+    "title": "O espaço ℝⁿ",
+    "section": "Dependência Linear",
+    "text": "Dependência Linear\n\nExemplo 7 Verifique se os vetores \\(V_1=(1,2,5)\\), \\(V_2=(7,-1,5)\\) e \\(V_3=(1,-1,-1)\\) são LI ou LD.\nResolvendo a equação \\(x_1V_1 + x_2V_2 + x_3V_3 = \\vec{0}\\), obtemos \\(2V_1 - V_2 + 5V_3 = \\vec{0}\\).\nNeste caso, qualquer um destes vetores pode ser escrito como uma combinação linear dos outros dois.\nPortanto \\([V_1,V_2,V_3] = [V_1,V_2] = [V_1,V_3] = [V_2,V_3]\\).\nEste espaço gerado é um plano pela origem."
   },
   {
-    "objectID": "01_matrizes.html#multiplicação-não-comutativa",
-    "href": "01_matrizes.html#multiplicação-não-comutativa",
-    "title": "Matrizes",
-    "section": "Multiplicação Não Comutativa",
-    "text": "Multiplicação Não Comutativa\nVamos ilustrar que, em geral, \\(AB \\neq BA\\).\nConsidere \\[\nA = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}, \\quad\nB = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}.\n\\]\nCalculando \\(AB\\) e \\(BA\\): \\[\nAB = \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n         \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n     = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix},\\qquad\nBA = \\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}\n         \\begin{bmatrix}1 & 2 \\\\ 0 & 1\\end{bmatrix}\n     = \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix}.\n\\]\nConclusão: \\(AB = \\begin{bmatrix}2 & 1 \\\\ 1 & 0\\end{bmatrix} \\neq \\begin{bmatrix}0 & 1 \\\\ 1 & 2\\end{bmatrix} = BA\\)"
+    "objectID": "07_Rn.html#dependência-linear-2",
+    "href": "07_Rn.html#dependência-linear-2",
+    "title": "O espaço ℝⁿ",
+    "section": "Dependência Linear",
+    "text": "Dependência Linear\n\nVerifique se os vetores \\(V_1=(3,0,-12)\\), \\(V_2=(-1,2,1)\\) e \\(V_3=(-2,0,8)\\) são LI ou LD.\nNeste exemplo \\(2V_1+0V_2+3V_3=\\vec{0}\\). Portanto\n\npodemos escrever \\(V_1\\) como combinação linear de \\(V_2\\) e \\(V_3\\).\ne também podemos escrever \\(V_3\\) como combinação linear de \\(V_1\\) e \\(V_2\\).\nmas não podemos escrever \\(V_2\\) como combinação linear de \\(V_1\\) e \\(V_3\\).\n\nDaí \\([V_1,V_2,V_3] = [V_2,V_3] = [V_1,V_2]\\). Este espaço é um plano.\nObserve que \\([V_1,V_3]\\) é uma reta contida neste plano."
   },
   {
-    "objectID": "01_matrizes.html#transposta",
-    "href": "01_matrizes.html#transposta",
-    "title": "Matrizes",
-    "section": "Transposta",
-    "text": "Transposta\n\nDupla transposição: \\((A^T)^T = A\\).\nTransposição da soma (mesmas dimensões): \\((A + B)^T = A^T + B^T\\).\nTransposição do produto por escalar: \\((\\alpha A)^T = \\alpha A^T\\).\nTransposição do produto (dimensões compatíveis): \\((AB)^T = B^T A^T\\).\nSimetria: \\(A\\) é simétrica se \\(A^T = A\\) e antissimétrica se \\(A^T = -A\\)."
+    "objectID": "07_Rn.html#dependência-linear-3",
+    "href": "07_Rn.html#dependência-linear-3",
+    "title": "O espaço ℝⁿ",
+    "section": "Dependência Linear",
+    "text": "Dependência Linear\nObs: No exemplo anterior vimos que quando um conjunto de vetores é LD então um destes vetores é uma combinação linear dos demais. Entretanto, mesmo o conjunto sendo LD, pode ser que exista um vetor que não seja uma combinação linear dos demais.\nVimos que se \\(V_1,V_2,\\ldots,V_k\\) é um conjunto LD e se, por exemplo, \\(V_1\\) é uma combinação linear dos demais vetores então\n\\[[V_1,V_2,\\ldots,V_k] = [V_2,\\ldots,V_k].\\]\nPara formar o espaço gerado não precisamos do vetor \\(V_1\\). Podemos gerar este mesmo espaço com um vetor a menos.\nPodemos continuar o processo, agora com os vetores \\(V_2,\\ldots,V_k\\), eliminando vetores que já são combinações lineares dos demais.\nApós eliminar todos estes vetores, ficamos com um conjunto de vetores linearmente independete e que gera o mesmo espaço.\nNeste momento, obtemos uma base para este subespaço."
   },
   {
-    "objectID": "01_matrizes.html#propriedade-transposta-do-produto",
-    "href": "01_matrizes.html#propriedade-transposta-do-produto",
-    "title": "Matrizes",
-    "section": "Propriedade: transposta do produto",
-    "text": "Propriedade: transposta do produto\nPara matrizes de tamanhos compatíveis, vale a identidade \\[\n(AB)^{T} = B^{T} A^{T}.\n\\]\nExemplo pequeno (matrizes \\(2\\times 2\\)): \\[\nA = \\begin{bmatrix}1 & 2\\\\ 3 & 0\\end{bmatrix},\\quad\nB = \\begin{bmatrix}0 & 4\\\\ 5 & -1\\end{bmatrix}.\n\\] Então \\[\nAB = \\begin{bmatrix}\n1\\cdot 0 + 2\\cdot 5 & 1\\cdot 4 + 2\\cdot(-1)\\\\\n3\\cdot 0 + 0\\cdot 5 & 3\\cdot 4 + 0\\cdot(-1)\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 2\\\\ 0 & 12\\end{bmatrix},\\quad\n(AB)^{T} = \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nPor outro lado, \\[\nB^{T} = \\begin{bmatrix}0 & 5\\\\ 4 & -1\\end{bmatrix},\\quad\nA^{T} = \\begin{bmatrix}1 & 3\\\\ 2 & 0\\end{bmatrix},\\quad\nB^{T}A^{T} = \\begin{bmatrix}\n0\\cdot 1 + 5\\cdot 2 & 0\\cdot 3 + 5\\cdot 0\\\\\n4\\cdot 1 + (-1)\\cdot 2 & 4\\cdot 3 + (-1)\\cdot 0\n\\end{bmatrix}\n= \\begin{bmatrix}10 & 0\\\\ 2 & 12\\end{bmatrix}.\n\\]\nLogo, \\((AB)^{T} = B^{T}A^{T}\\neq A^TB^T\\)."
+    "objectID": "07_Rn.html#base-e-dimensão",
+    "href": "07_Rn.html#base-e-dimensão",
+    "title": "O espaço ℝⁿ",
+    "section": "Base e Dimensão",
+    "text": "Base e Dimensão\nInformalmente: Uma base é um conjunto mínimo de geradores para um subespaço.\n\nDefinição 2 Seja \\(W\\) um subespaço de \\(\\mathbb R^n\\). Uma base para \\(W\\) é um sistema de vetores \\(V_1,\\ldots,V_k\\) tais que\n\n\\(W = [V_1,\\ldots,V_k]\\) (ou seja, os vetores geram \\(W\\) são combinações lineares destes vetores); e\n\\(V_1,\\ldots,V_k\\) são linearmente independentes (ou seja, nenhum vetor é combinação linear dos demais).\n\n\n\nLema 1 Se \\(V_1,\\ldots,V_k\\) é base de \\(W\\), então todo vetor de \\(W\\) pode ser escrito de forma única como combinação linear de \\(V_1,\\ldots,V_k\\).\n\nSe \\(V\\in W\\) e \\[\nV=x_1V_1 + x_2V_2 + \\cdots + x_kV_k\n\\] então os escalares \\(x_1,\\ldots,x_k\\) são chamadas de coordenadas de \\(V\\) na base \\(V_1,\\ldots,V_k\\)."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Geometria Analítica e Álgebra Linear",
-    "section": "",
-    "text": "Geometria Analítica e Álgebra Linear\n\nMatrizes \nSistemas lineares\nA inversa de uma matrix\nO determinante de uma matrix\nVetores\nRetas e planos\nO espaço ℝⁿ"
+    "objectID": "07_Rn.html#lema-chave",
+    "href": "07_Rn.html#lema-chave",
+    "title": "O espaço ℝⁿ",
+    "section": "Lema chave",
+    "text": "Lema chave\n\nLema 2 Seja \\(W=[V_1,\\ldots,V_k]\\) um subespaço de \\(\\mathbb{R}^n\\). Assuma que \\(m&gt;k\\) e sejam \\(U_1,\\ldots,U_m\\in W\\). Então os vetores \\(U_1,\\ldots,U_m\\) são LD.\n\n\nComprovação. Como cada \\(U_j\\in W=[V_1,\\ldots,V_k]\\), existem coeficientes \\(a_{ij}\\) tais que \\[\nU_j=\\sum_{i=1}^k a_{ij}V_i,\\qquad j=1,\\ldots,m.\n\\] Considere a matriz \\(A=(a_{ij})\\in\\mathbb{R}^{k\\times m}\\). Como \\(m&gt;k\\), o sistema homogêneo \\(A\\,x=\\vec{0}\\) tem solução não trivial. Seja \\(x=(x_1,\\ldots,x_m)\\neq\\vec{0}\\) tal solução. Então \\[\n\\sum_{j=1}^m x_j U_j\n=\\sum_{j=1}^m x_j\\Big(\\sum_{i=1}^k a_{ij}V_i\\Big)\n=\\sum_{i=1}^k\\Big(\\sum_{j=1}^m a_{ij}x_j\\Big)V_i\n=\\sum_{i=1}^k 0\\cdot V_i=\\vec{0}.\n\\] Logo, existe uma combinação linear não trivial dos \\(U_j\\) que dá o vetor nulo, isto é, \\(U_1,\\ldots,U_m\\) são linearmente dependentes."
   },
   {
-    "objectID": "06_retas_e_planos.html#retas-no-plano",
-    "href": "06_retas_e_planos.html#retas-no-plano",
-    "title": "Retas e planos",
-    "section": "Retas no plano",
-    "text": "Retas no plano\n\n\n\n\n\n\nNo plano cartesiano, toda reta tem equação do tipo \\[\nax+by=c.\n\\]\nJá estamos acostumados com isso."
+    "objectID": "07_Rn.html#a-dimensão",
+    "href": "07_Rn.html#a-dimensão",
+    "title": "O espaço ℝⁿ",
+    "section": "A dimensão",
+    "text": "A dimensão\nConsequência: Assuma que \\(W=[V_1,\\ldots,V_k]=[U_1,\\ldots,U_m]\\) e que \\(V_1,\\ldots,V_k\\) e \\(U_1,\\ldots,U_m\\) são bases de \\(W\\). Então \\(k=m\\).\n\nDefinição 3 Se a base tem \\(k\\) vetores, dizemos que \\(W\\) é um subespaço de dimensão \\(k\\): \\[\n\\dim(W)=k.\n\\]\n\nSe \\(\\{V_1,\\ldots,V_k\\}\\) é uma base para o subespaço \\(W\\), então \\(W\\) é o espaço gerado por estes vetores. Mais ainda, não existem “vetores sobrando”. Não podemos descartar nenhum dos vetores da base. \\[\nW = [V_1,\\ldots,V_k].\n\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#retas-no-espaço",
-    "href": "06_retas_e_planos.html#retas-no-espaço",
-    "title": "Retas e planos",
-    "section": "Retas no espaço",
-    "text": "Retas no espaço\n\n\n\n\n\nQual é a equação de uma reta no espaço?\nFaz sentido pensar que esta reta poderia ter uma equação do tipo \\(ax+by=c\\) ou, generalizado, do tipo \\(ax+by+cz=d\\).\nNão. Pois uma reta é um objeto 1-dimensional. E cada uma destas equações possuem duas variáveis livres."
+    "objectID": "07_Rn.html#base-e-dimensão-1",
+    "href": "07_Rn.html#base-e-dimensão-1",
+    "title": "O espaço ℝⁿ",
+    "section": "Base e Dimensão",
+    "text": "Base e Dimensão\n\nExemplo 8  \n\nNo plano, \\(\\{\\vec{i},\\vec{j}\\}\\) é uma base de \\(\\mathbb{R}^2\\).\nDe modo mais geral, quaisquer vetores não paralelos \\(V_1\\) e \\(V_2\\) formam uma base \\(\\{V_1,V_2\\}\\) de \\(\\mathbb{R}^2\\).\nNo espaço, \\(\\{\\vec{i},\\vec{j},\\vec{k}\\}\\) é uma base de \\(\\mathbb{R}^3\\).\nSe \\(W\\) é uma reta pela origem, e se \\(V_1\\in W\\) é um vetor não nulo, então \\(\\{V_1\\}\\) é uma base para \\(W\\).\nSe \\(W\\) é um plano pela origem e se \\(V_1\\) e \\(V_2\\) são dois vetores não paralelos em \\(W\\), então \\(\\{V_1,V_2\\}\\) é uma base de \\(W\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#exemplo",
-    "href": "06_retas_e_planos.html#exemplo",
-    "title": "Retas e planos",
-    "section": "Exemplo",
-    "text": "Exemplo\nNo espaço, no sistema de coordenadas \\(xyz\\), desenhe o conjunto solução da equação \\(x+y=2\\).\n\n\n\n\n\n\n\n\n\n\nComo \\(z\\) é variável livre, \\(x+y=2\\) é um plano paralelo ao eixo \\(z\\)."
+    "objectID": "07_Rn.html#base-e-dimensão-2",
+    "href": "07_Rn.html#base-e-dimensão-2",
+    "title": "O espaço ℝⁿ",
+    "section": "Base e Dimensão",
+    "text": "Base e Dimensão\n\nExemplo 9  \n\nSe \\(V_1\\), \\(V_2\\) e \\(V_3\\) são vetores não coplanares, então \\(\\{V_1,V_2,V_3\\}\\) é uma base de \\(\\mathbb{R}^3\\). Observe que este é o caso se, e somente se, \\(\\det[V_1,V_2,V_3] \\neq 0\\).\nDetermine uma base para o plano de equação \\(2x+y-3x=0\\). Em seguida complete esta base até uma base de \\(\\mathbb{R}^3\\).\nDetermine uma base e a dimensão do seguinte subespaço de \\(\\mathbb{R}^3\\) \\[\nW = \\{ (a-b,\\ b+c,\\ 2a-b+c)\\in\\mathbb{R}^3\\mid a,b,c\\in\\mathbb{R} \\}.\n\\]\nO conjunto solução de um sistema linear homogêneo é um subespaço de \\(\\mathbb{R}^n\\). Por exemplo, determine uma base para o conjunto solução de \\[\n\\left\\{\\begin{array}{rrrrrrrrr}\nx  & + &  y  & - & 2z & - &  w & = &  0 \\\\\n-x  & - &  y  & + & 2z & + &  w & = &  0 \\\\\n2x  & + & 2y  & - &  z & + &  w & = &  0 \\\\\n\\end{array}\\right.\n\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-ideia",
-    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-ideia",
-    "title": "Retas e planos",
-    "section": "A reta que passa por dois pontos — ideia",
-    "text": "A reta que passa por dois pontos — ideia\nSejam \\(P_0=(x_0,y_0,z_0)\\) e \\(P_1=(x_1,y_1,z_1)\\) dois pontos no espaço. Vamos determinar a equação dos pontos \\(P=(x,y,z)\\) que pertencem à reta \\(\\overleftrightarrow{P_0P_1}\\)."
+    "objectID": "07_Rn.html#vetores-li-e-ld-caracterização-via-determinantes",
+    "href": "07_Rn.html#vetores-li-e-ld-caracterização-via-determinantes",
+    "title": "O espaço ℝⁿ",
+    "section": "Vetores LI e LD: caracterização via determinantes",
+    "text": "Vetores LI e LD: caracterização via determinantes\nEntão os vetores \\(V_1,V_2,\\ldots,V_k\\) são LD quando o sistema linear \\(AX=\\overline{0}\\) tem solução não trivial, em que as colunas de \\(A\\) são os vetores \\(V_1,V_2,\\ldots,V_k\\).\nSe \\(k=n\\), ou seja, se temos \\(n\\) vetores em \\(\\mathbb{R}^n\\), a matriz \\(A\\) é quadrada. Lembre-se que, neste caso, o sistema homogêneo \\(AX=\\overline{0}\\) tem solução não trivial somente quando \\(\\det(A) = 0\\) (a matriz \\(A\\) não tem inversa).\nPortanto, em \\(\\mathbb{R}^n\\):\n\n\\(V_1,V_2,\\ldots,V_n\\) são LD \\(\\Leftrightarrow\\) \\(\\det(A) = 0\\).\n\\(V_1,V_2,\\ldots,V_n\\) são LI \\(\\Leftrightarrow\\) \\(\\det(A) \\neq 0\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-paralelismo",
-    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-paralelismo",
-    "title": "Retas e planos",
-    "section": "A reta que passa por dois pontos — paralelismo",
-    "text": "A reta que passa por dois pontos — paralelismo\n\n\n\n\n\n\\(P\\) pertence à reta \\(r\\) se os vetores \\(\\overrightarrow{P_0P}\\) e \\(\\overrightarrow{P_0P_1}\\) são paralelos.\nOu seja, se estes vetores são múltiplos escalares: \\(\\overrightarrow{P_0P} = t\\overrightarrow{P_0P_1}\\) para algum \\(t\\in\\mathbb{R}\\).\nIsto é, \\(P - P_0 = t\\overrightarrow{P_0P_1}\\), ou ainda\n\\[P = P_0  + t\\overrightarrow{P_0P_1}.\\]"
+    "objectID": "07_Rn.html#produto-escalar-em-mathbbrn",
+    "href": "07_Rn.html#produto-escalar-em-mathbbrn",
+    "title": "O espaço ℝⁿ",
+    "section": "Produto escalar em \\(\\mathbb{R}^n\\)",
+    "text": "Produto escalar em \\(\\mathbb{R}^n\\)\nSe \\(V=(v_1,v_2,\\ldots,v_n)\\) e \\(W=(w_1,w_2,\\ldots,w_n)\\) são vetores em \\(\\mathbb{R}^n\\), o produto escalar entre \\(V\\) e \\(W\\) é o número real\n\\[\\langle V,W\\rangle = v_1w_1 + v_2w_2 + \\cdots + v_nw_n.\\]\nA norma do vetor \\(V\\) é \\(\\|V\\| = \\sqrt{v_1^2 + v_2^2 + \\cdots + v_n^2} = \\sqrt{\\langle V,V\\rangle}\\).\nObserve que isto é uma generalização das definições que já foram dadas e interpretadas para \\(\\mathbb{R}^2\\) e \\(\\mathbb{R}^3\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-notação-vetorial",
-    "href": "06_retas_e_planos.html#a-reta-que-passa-por-dois-pontos-notação-vetorial",
-    "title": "Retas e planos",
-    "section": "A reta que passa por dois pontos — notação vetorial",
-    "text": "A reta que passa por dois pontos — notação vetorial\n\n\n\n\n\nSe \\(V=\\overrightarrow{P_0P_1}\\), então \\(P= P_0 + tV\\) (movimento retilíneo uniforme).\nEsta é a equação paramétrica da reta \\(r\\).\nNeste caso, \\(V\\) é um vetor diretor de \\(r\\)."
+    "objectID": "07_Rn.html#produto-escalar-em-mathbbrn-propriedades",
+    "href": "07_Rn.html#produto-escalar-em-mathbbrn-propriedades",
+    "title": "O espaço ℝⁿ",
+    "section": "Produto escalar em \\(\\mathbb{R}^n\\) — propriedades",
+    "text": "Produto escalar em \\(\\mathbb{R}^n\\) — propriedades\nSão as mesmas que já foram demonstradas para o \\(\\mathbb{R}^2\\) e \\(\\mathbb{R}^3\\):\n\n\\(\\langle V,W\\rangle = \\langle W,V\\rangle\\).\n\\(\\langle U+V,W\\rangle = \\langle U,W\\rangle + \\langle V,W\\rangle\\).\n\\(\\langle \\alpha V,W\\rangle = \\langle V,\\alpha W\\rangle = \\alpha \\langle V,W\\rangle\\).\n\\(\\langle V,V\\rangle=\\|V\\|^2\\ \\geq\\ 0\\). Mais ainda, \\(\\|V\\|=0 \\Leftrightarrow V=\\vec{0}\\).\n\\(|\\langle V,W\\rangle|\\ \\leq\\ \\|V\\|\\,\\|W\\|\\) (Cauchy–Schwarz).\n\\(\\|V+W\\|\\ \\leq\\ \\|V\\| + \\|W\\|\\) (Desigualdade triangular)."
   },
   {
-    "objectID": "06_retas_e_planos.html#equação-paramétrica-da-reta-forma-coordenada",
-    "href": "06_retas_e_planos.html#equação-paramétrica-da-reta-forma-coordenada",
-    "title": "Retas e planos",
-    "section": "Equação paramétrica da reta — forma coordenada",
-    "text": "Equação paramétrica da reta — forma coordenada\nSe \\(P=(x,y,z)\\), \\(P_0=(x_0,y_0,z_0)\\) e \\(V=(a,b,c)\\), então\n\\[\\boxed{P= P_0 + tV}\\]\nsignifica que\n\\[(x,y,z) = (x_0,y_0,z_0) + t(a,b,c)\\]\n\\[\\begin{cases}\nx = x_0 + ta\\\\\ny = y_0 + tb\\\\\nz = z_0 + tc\n\\end{cases}\\]"
+    "objectID": "07_Rn.html#cauchyschwarz-e-ângulo",
+    "href": "07_Rn.html#cauchyschwarz-e-ângulo",
+    "title": "O espaço ℝⁿ",
+    "section": "Cauchy–Schwarz e ângulo",
+    "text": "Cauchy–Schwarz e ângulo\nDa desigualdade de Cauchy–Schwarz, para \\(V,W\\neq\\vec{0}\\),\n\\[\\frac{|\\langle V,W\\rangle|}{\\|V\\|\\,\\|W\\|}\\ \\leq\\ 1 \\quad\\Rightarrow\\quad -1\\ \\leq\\ \\frac{\\langle V,W\\rangle}{\\|V\\|\\,\\|W\\|}\\ \\leq\\ 1.\\]\nExiste um único \\(\\theta\\in[0,\\pi]\\) tal que\n\\[\\cos\\theta\\ =\\ \\frac{\\langle V,W\\rangle}{\\|V\\|\\,\\|W\\|}.\\]\nChamamos \\(\\theta\\) de ângulo entre \\(V\\) e \\(W\\), e\n\\[\\langle V,W\\rangle = \\|V\\|\\,\\|W\\|\\cos\\theta.\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#equação-paramétrica-observações",
-    "href": "06_retas_e_planos.html#equação-paramétrica-observações",
-    "title": "Retas e planos",
-    "section": "Equação paramétrica — observações",
-    "text": "Equação paramétrica — observações\n\\[\\boxed{P= P_0 + tV}\\]\n\\[\\begin{cases}\nx = x_0 + ta\\\\\ny = y_0 + tb\\\\\nz = z_0 + tc\n\\end{cases}\\]\nA equação paramétrica de uma reta não é única.\n\nPodemos trocar o ponto inicial \\(P_0\\) por qualquer outro ponto da reta.\nPodemos trocar o vetor diretor por qualquer múltiplo escalar.\nSempre \\(V\\neq \\vec{0}\\)."
+    "objectID": "07_Rn.html#vetores-ortogonais-em-mathbbrn",
+    "href": "07_Rn.html#vetores-ortogonais-em-mathbbrn",
+    "title": "O espaço ℝⁿ",
+    "section": "Vetores ortogonais em \\(\\mathbb{R}^n\\)",
+    "text": "Vetores ortogonais em \\(\\mathbb{R}^n\\)\nPara \\(V,W\\neq\\vec{0}\\) em \\(\\mathbb{R}^n\\),\n\\[\\langle V,W\\rangle = \\|V\\|\\,\\|W\\|\\cos\\theta.\\]\nAssim, \\(\\langle V,W\\rangle=0\\) se, e somente se, \\(\\theta=90^\\circ\\).\nPortanto,\n\\[\\boxed{\\ \\langle V,W\\rangle=0\\ \\ \\text{caracteriza vetores ortogonais}\\ }\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#importante-reta-como-régua-numérica",
-    "href": "06_retas_e_planos.html#importante-reta-como-régua-numérica",
-    "title": "Retas e planos",
-    "section": "Importante — reta como régua numérica",
-    "text": "Importante — reta como régua numérica\nA equação paramétrica de uma reta \\(r\\) faz uma associação biunívoca entre um ponto \\(P\\) da reta e um número real \\(t\\).\n\\[\\boxed{P= P_0 + tV}\\]\n\n\n\n\n\nCom essa equação, podemos ver a reta \\(r\\) como uma régua graduada, uma reta numérica, ou um eixo numérico orientado. O vetor diretor \\(V\\) dá a direção e a unidade de medida dessa reta numérica."
+    "objectID": "07_Rn.html#projeção-ortogonal",
+    "href": "07_Rn.html#projeção-ortogonal",
+    "title": "O espaço ℝⁿ",
+    "section": "Projeção ortogonal",
+    "text": "Projeção ortogonal\n\n\n\n\n\n\n\nO vetor projeção ortogonal é caracterizado por:\n\n\\(\\operatorname{proj}_V(W) = \\alpha V\\) é um múltiplo escalar de \\(V\\).\nA diferença \\(W - \\operatorname{proj}_V(W)\\) é um vetor ortogonal a \\(V\\).\n\n\n\nTemos \\[\n\\langle W - \\operatorname{proj}_V(W),V\\rangle=0 \\Rightarrow \\langle W - \\alpha V,V\\rangle=0 \\Rightarrow \\langle W,V\\rangle - \\alpha\\langle V,V\\rangle=0,\n\\]\n\n\nlogo\n\\[\n\\alpha = \\dfrac{\\langle W,V\\rangle}{\\langle V,V\\rangle}, \\qquad \\boxed{\\operatorname{proj}_V(W) = \\dfrac{\\langle W,V\\rangle}{\\langle V,V\\rangle}\\, V}.\n\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#exercícios",
-    "href": "06_retas_e_planos.html#exercícios",
-    "title": "Retas e planos",
-    "section": "Exercícios",
-    "text": "Exercícios\n\nEscreva uma equação paramétrica para a reta que passa por \\(A=(-1,3,4)\\) e que é paralela ao vetor \\(V=(1,-2,0)\\).\nEscreva uma equação paramétrica para a reta que passa por \\(M=(5,0,-3)\\) e por \\(N=(3,8,7)\\).\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a equação da reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\)."
+    "objectID": "07_Rn.html#bases-ortogonais-e-ortonormais",
+    "href": "07_Rn.html#bases-ortogonais-e-ortonormais",
+    "title": "O espaço ℝⁿ",
+    "section": "Bases ortogonais e ortonormais",
+    "text": "Bases ortogonais e ortonormais\nSeja \\(\\{V_1,\\ldots,V_k\\}\\) uma base para um subespaço de \\(\\mathbb{R}^n\\):\n\nA base é ortogonal se quaisquer dois vetores da base são ortogonais (\\(\\langle V_i,V_j\\rangle=0\\)).\nA base é ortonormal se todos os vetores são unitários e perpendiculares (\\(\\langle V_i,V_j\\rangle=0\\) e \\(\\langle V_i,V_i\\rangle=1\\)).\n\nExemplos:\n\n\\(\\{\\vec{i},\\vec{j},\\vec{k}\\}\\) é uma base ortonormal de \\(\\mathbb{R}^3\\).\n\\(V_1=(1,3)\\) e \\(V_2=(-3,1)\\) formam uma base ortogonal de \\(\\mathbb{R}^2\\).\n\\(V_1=(\\cos\\theta,\\operatorname{sen}\\theta)\\) e \\(V_2=(-\\operatorname{sen}\\theta,\\cos\\theta)\\) formam uma base ortonormal de \\(\\mathbb{R}^2\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#exercício-3-solução",
-    "href": "06_retas_e_planos.html#exercício-3-solução",
-    "title": "Retas e planos",
-    "section": "Exercício 3 – solução",
-    "text": "Exercício 3 – solução\n\nConsidere o ponto \\(P=(4,-2,11)\\) e a reta \\(r\\) de equação \\[\n(x,y,z) = (1,-1,1) + t(3,1,2).\n\\] Determine a reta \\(s\\) que passa por \\(P\\) e que é perpendicular e concorrente com \\(r\\).\n\nO vetor diretor de \\(r\\) é \\(V=(3,1,2)\\). Procuramos um ponto \\(Q\\in r\\) tal que \\(\\vec{PQ}\\perp V\\); ou seja, \\(\\left&lt;\\vec{PQ}, V\\right&gt;=0\\).\n\n\n\\[\nQ=(1,-1,1)+t(3,1,2)=(1+3t,-1+t,1+2t) \\mbox{ e }\\vec{PQ}=(-3+3t,1+t,-10+2t).\n\\] Logo, \\[\n0=\\left&lt;\\vec{PQ}, V\\right&gt;=\\left&lt;(-3+3t,1+t,-10+2t),(3,1,2)\\right&gt;=14t-28.\n\\] Daí, \\(t=2\\) e \\(Q=(1,-1,1)+2(3,1,2)=(7,1,5)\\).\n\n\nLogo \\(Q=(7,1,5)\\) e um vetor diretor de \\(s\\) é \\(\\vec{PQ}=(3,3,-6)=3(1,1,-2)\\). Assim, a reta procurada é \\[\n(x,y,z)=(4,-2,11)+u(1,1,-2), u∈ℝ,\n\\] com \\(\\left&lt;V,(1,1,-2)\\right&gt;=3+1-4=0\\) (perpendicular) e concorrente em \\(Q\\)."
+    "objectID": "07_Rn.html#aplicação-coordenadas-em-base-ortogonal",
+    "href": "07_Rn.html#aplicação-coordenadas-em-base-ortogonal",
+    "title": "O espaço ℝⁿ",
+    "section": "Aplicação: coordenadas em base ortogonal",
+    "text": "Aplicação: coordenadas em base ortogonal\nSe \\(\\{V_1,\\ldots,V_k\\}\\) é uma base ortogonal para um subespaço de \\(\\mathbb{R}^n\\) e se \\[\nV=x_1V_1+\\cdots+x_kV_k,\n\\] então\n\\[\\langle V,V_j\\rangle = x_j\\langle V_j,V_j\\rangle \\quad\\Rightarrow\\quad \\boxed{\\ x_j = \\dfrac{\\langle V,V_j\\rangle}{\\langle V_j,V_j\\rangle},\\ j=1,\\ldots,k\\ }\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
-    "href": "06_retas_e_planos.html#posição-relativa-entre-duas-retas-no-espaço",
-    "title": "Retas e planos",
-    "section": "Posição relativa entre duas retas no espaço",
-    "text": "Posição relativa entre duas retas no espaço\n\n\n\n\n\n\nRetas paralelas\n\n\n\n\n\n\n\nRetas concorrentes\n\n\n\n\n\n\n\nRetas reversas\n\n\n\n\n\nRetas paralelas e concorrentes são coplanares.\nRetas reversas sempre moram em planos paralelos distintos \\(\\alpha\\) e \\(\\beta\\) tais que \\(s\\subset\\alpha\\) e \\(r\\subset\\beta\\)."
+    "objectID": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios",
+    "href": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios",
+    "title": "O espaço ℝⁿ",
+    "section": "Bases ortogonais e ortonormais — exercícios",
+    "text": "Bases ortogonais e ortonormais — exercícios\n\nExercício 2  \n\nConsidere a base ortogonal de \\(\\mathbb{R}^2\\) formada por \\(V_1=(3,1)\\) e \\(V_2=(-1,3)\\). Se \\(V=(5,4)\\) determine \\(x_1\\) e \\(x_2\\) tais que \\(V = x_1V_1 + x_2V_2\\).\nConsidere a base ortonormal de \\(\\mathbb{R}^2\\) formada por \\(V_1=(\\tfrac{4}{5},\\tfrac{3}{5})\\) e \\(V_2=(-\\tfrac{3}{5},\\tfrac{4}{5})\\). Se \\(V=(5,4)\\) determine \\(x_1\\) e \\(x_2\\) tais que \\(V = x_1V_1 + x_2V_2\\).\nConsidere o subespaço \\(W\\) de \\(\\mathbb{R}^3\\) que é o plano de equação \\(2x+y-3z=0\\).\n\nDetermine uma base de \\(W\\).\nDetermine uma base ortogonal \\(\\{V_1,V_2\\}\\) de \\(W\\).\nDetermine uma base ortonormal \\(\\{U_1,U_2\\}\\) de \\(W\\).\nSe \\(V=(5,2,4)\\), calcule \\(x_1\\) e \\(x_2\\) tais que \\(V=x_1V_1+x_2V_2\\).\nSe \\(V=(5,2,4)\\), calcule \\(c_1\\) e \\(c_2\\) tais que \\(V=c_1U_1+c_2U_2\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#retas-reversas-construção-auxiliar",
-    "href": "06_retas_e_planos.html#retas-reversas-construção-auxiliar",
-    "title": "Retas e planos",
-    "section": "Retas reversas — construção auxiliar",
-    "text": "Retas reversas — construção auxiliar\nSempre existe uma reta \\(t\\) perpendicular comum a \\(r\\) e a \\(s\\) interceptando \\(r\\) e \\(s\\).\n\n\n\n\n\nObserve a reta \\(r'\\) paralela a \\(r\\) traçada pelo ponto \\(s \\cap t\\) e também observe a reta \\(s'\\) paralela a \\(s\\) traçada por \\(r \\cap t\\).\n\nO plano \\(\\alpha\\) é o plano que contém as retas concorrentes \\(s\\) e \\(r'\\).\nO plano \\(\\beta\\) é o plano que contém as retas concorrentes \\(r\\) e \\(s'\\)."
+    "objectID": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios-1",
+    "href": "07_Rn.html#bases-ortogonais-e-ortonormais-exercícios-1",
+    "title": "O espaço ℝⁿ",
+    "section": "Bases ortogonais e ortonormais — exercícios",
+    "text": "Bases ortogonais e ortonormais — exercícios\n\nExercício 3  \n\nConsidere o plano \\(\\alpha\\) de \\(\\mathbb{R}^3\\) de equação \\(x-2y+z=0\\).\n\nDetermine uma base ortogonal \\(\\{V_1, V_2, V_3\\}\\) de \\(\\mathbb{R}^3\\) tal que \\(\\{V_1,V_2\\}\\) é uma base ortogonal do plano \\(\\alpha\\).\nEscreva o vetor \\(V=(10,1,4)\\) como uma combinação linear dos vetores da base do item (a): encontre \\(x,y,z\\) tais que \\(xV_1+yV_2+zV_3=V\\).\n\nSejam \\(V_1=(1,3,-2,5)\\) e \\(V_2=(1,2,1,3)\\) vetores de \\(\\mathbb{R}^4\\). Seja \\(W\\) o conjunto dos vetores de \\(\\mathbb{R}^4\\) que são ortogonais a \\(V_1\\) e a \\(V_2\\).\n\nDetermine uma base de \\(W\\).\nDetermine uma base ortogonal \\(\\{W_1,W_2\\}\\) de \\(W\\).\nSe \\(V=(-9,-4,2,5)\\), mostre que \\(V\\in W\\) e calcule \\(x_1\\) e \\(x_2\\) tais que \\(V=x_1W_1+x_2W_2\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#distância-entre-retas-reversas",
-    "href": "06_retas_e_planos.html#distância-entre-retas-reversas",
-    "title": "Retas e planos",
-    "section": "Distância entre retas reversas",
-    "text": "Distância entre retas reversas\n\n\n\n\n\nSejam \\(r\\) e \\(s\\) retas reversas, seja \\(t\\) a reta perpendicular comum e sejam \\(P = r \\cap t\\) e \\(Q = s \\cap t\\). Então\n\\[\\operatorname{dist}(r,s) = \\operatorname{dist}(P,Q)\\]\nEsta é a menor distância entre um ponto de \\(r\\) e um ponto de \\(s\\)."
+    "objectID": "07_Rn.html#ortogonalização-de-gram-schmidt",
+    "href": "07_Rn.html#ortogonalização-de-gram-schmidt",
+    "title": "O espaço ℝⁿ",
+    "section": "Ortogonalização de Gram-Schmidt",
+    "text": "Ortogonalização de Gram-Schmidt\nAssuma que \\(V_1,V_2,\\ldots,V_k\\) são vetores LI em \\(\\mathbb{R}^n\\). O processo de Ortogonalização de Gram-Schmidt constrói uma base ortogonal \\(U_1,U_2,\\ldots,U_k\\) para o mesmo espaço gerado por \\(V_1,V_2,\\ldots,V_k\\).\nO processo é o seguinte: \\[\\begin{align*}\nU_1 & = V_1,\\\\\nU_2 & = V_2 - \\operatorname{proj}_{U_1}(V_2),\\\\\nU_3 & = V_3 - \\operatorname{proj}_{U_1}(V_3) - \\operatorname{proj}_{U_2}(V_3),\\\\\n& \\ \\vdots \\\\\nU_k & = V_k - \\operatorname{proj}_{U_1}(V_k) - \\operatorname{proj}_{U_2}(V_k) - \\cdots - \\operatorname{proj}_{U_{k-1}}(V_k).\n\\end{align*}\\] Após obter a base ortogonal \\(U_1,U_2,\\ldots,U_k\\), podemos obter uma base ortonormal dividindo cada vetor pela sua norma:"
   },
   {
-    "objectID": "06_retas_e_planos.html#exemplo-retas-paralelas",
-    "href": "06_retas_e_planos.html#exemplo-retas-paralelas",
-    "title": "Retas e planos",
-    "section": "Exemplo — retas paralelas",
-    "text": "Exemplo — retas paralelas\n\nEncontre a equação da reta \\(r\\) que passa pelos pontos \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s\\) a reta \\((x,y,z) = (1,2,3)+ t(1,2,1)\\). Verifique se as retas \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nCalcule a distância entre as retas \\(r\\) e \\(s\\)."
+    "objectID": "07_Rn.html#exemplo-de-ortogonalização-de-gram-schmidt",
+    "href": "07_Rn.html#exemplo-de-ortogonalização-de-gram-schmidt",
+    "title": "O espaço ℝⁿ",
+    "section": "Exemplo de Ortogonalização de Gram-Schmidt",
+    "text": "Exemplo de Ortogonalização de Gram-Schmidt\n\nExemplo 10 Considere os vetores \\(V_1=(1,1,0,0)\\), \\(V_2=(1,0,1,1)\\), \\(V_3=(0,1,1,0)\\) em \\(\\mathbb{R}^4\\). Eles são LI. Aplicando Gram-Schmidt: \\[\\begin{align*}\nU_1 & = V_1 = (1,1,0,0),\\\\\nU_2 & = V_2 - \\operatorname{proj}_{U_1}(V_2) = (1,0,1,1) - \\dfrac{\\langle V_2,U_1\\rangle}{\\langle U_1,U_1\\rangle} U_1 = (1,0,1,1) - \\dfrac{1}{2}(1,1,0,0) = \\left(\\dfrac{1}{2}, -\\dfrac{1}{2}, 1, 1\\right),\\\\\nU_3 & = V_3 - \\operatorname{proj}_{U_1}(V_3) - \\operatorname{proj}_{U_2}(V_3) \\\\\n    & = (0,1,1,0) - \\dfrac{\\langle V_3,U_1\\rangle}{\\langle U_1,U_1\\rangle} U_1 - \\dfrac{\\langle V_3,U_2\\rangle}{\\langle U_2,U_2\\rangle} U_2 \\\\\n    & = (0,1,1,0) - \\dfrac{1}{2}(1,1,0,0) - \\dfrac{1/2}{5/2}\\left(\\dfrac{1}{2}, -\\dfrac{1}{2}, 1, 1\\right) = \\left(-\\dfrac{3}{5}, \\dfrac{3}{5}, \\dfrac{4}{5}, -\\dfrac{1}{5}\\right).\n\\end{align*}\\] A base ortogonal é \\(\\{U_1,U_2,U_3\\}\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#exemplo-3-solução",
-    "href": "06_retas_e_planos.html#exemplo-3-solução",
-    "title": "Retas e planos",
-    "section": "Exemplo 3 – solução",
-    "text": "Exemplo 3 – solução\nTemos \\[\nr: (x,y,z) = (3,5,3) + t(1,2,1) \\mbox{ e } s: (x,y,z) = (1,2,3)+ u(1,2,1),\\  t, u ∈ ℝ.\n\\]\nDistância entre duas retas paralelas.\nO vetor diretor das duas retas é \\(V=(1,2,1)\\).\nSeja \\(A=(3,5,3)\\in r\\), \\(C=(1,2,3)\\in s\\) com \\(\\vec{AC}=(-2,-3,0)\\). Por Teorema de Pitágoras: \\[\n\\|\\vec{AC}\\|^2=\\operatorname{dist}(r,s)^2+\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n\\]\n\n\nTemos que \\[\n\\operatorname{proj}_V(\\vec{AC})=\\frac {\\left&lt;V,\\vec{AC}\\right&gt;}{\\|V\\|^2}V=-8/6V=(-4/3,-8/3,-4/3)\n\\Rightarrow \\|\\operatorname{proj}_V(\\vec{AC})\\|^2=32/3.\n\\]\n\n\nLogo \\[\n\\operatorname{dist}(r,s)^2=\\|\\vec{AC}\\|^2-\\|\\operatorname{proj}_V(\\vec{AC})\\|^2\n=13-\\frac{32}{3}\n=\\frac{7}3 \\textrm{ e } \\operatorname{dist}(r,s)=\\frac{\\sqrt 7}{\\sqrt 3}.\n\\]"
+    "objectID": "07_Rn.html#o-problema-da-mudança-de-base",
+    "href": "07_Rn.html#o-problema-da-mudança-de-base",
+    "title": "O espaço ℝⁿ",
+    "section": "O problema da mudança de base",
+    "text": "O problema da mudança de base\nSeja \\(W\\) um subespaço de \\(\\mathbb{R}^n\\) de dimensão \\(k\\). Sejam \\[\n\\mathcal{B}=\\{V_1,\\ldots,V_k\\}\\quad\\mbox{e}\\quad \\mathcal{C}=\\{U_1,\\ldots,U_k\\}\n\\] duas bases de \\(W\\). Então, para todo vetor \\(X \\in W\\), podemos escrever: \\[\nX = x_1V_1 + x_2V_2 + \\cdots + x_kV_k = c_1U_1 + c_2U_2 + \\cdots + c_kU_k.\n\\]\nOs coeficientes \\(x_1,x_2,\\ldots,x_k\\) são as coordenadas de \\(X\\) na base \\(\\mathcal{B}\\) e os coeficientes \\(c_1,c_2,\\ldots,c_k\\) são as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\).\nProblema: Dadas as coordenadas \\(c_1,c_2,\\ldots,c_k\\) de \\(X\\) na base \\(\\mathcal{B}\\), como encontrar as coordenadas \\(x_1,x_2,\\ldots,x_k\\) de \\(X\\) na base \\(\\mathcal{C}\\)?"
   },
   {
-    "objectID": "06_retas_e_planos.html#exemplo-retas-concorrentes",
-    "href": "06_retas_e_planos.html#exemplo-retas-concorrentes",
-    "title": "Retas e planos",
-    "section": "Exemplo — retas concorrentes",
-    "text": "Exemplo — retas concorrentes\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(5,4,1)\\) e \\(B=(7,5,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(P=(0,1,0)\\) e \\(Q=(-3,-2,3)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nMostre que \\(r\\) e \\(s\\) são retas concorrentes calculando o ponto \\(r \\cap s\\)."
+    "objectID": "07_Rn.html#a-matriz-mudança-de-base",
+    "href": "07_Rn.html#a-matriz-mudança-de-base",
+    "title": "O espaço ℝⁿ",
+    "section": "A matriz mudança de base",
+    "text": "A matriz mudança de base\nA matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é a matriz \\(P\\) cujas colunas são as coordenadas dos vetores da base \\(\\mathcal{C}\\) na base \\(\\mathcal{B}\\)\nOu seja, escreva \\[\nU_j = a_{1j}V_1 + a_{2j}V_2 + \\cdots + a_{kj}V_k,\\quad j=1,2,\\ldots,k,\n\\] então \\[\nP=\\begin{bmatrix} a_{11} & a_{12} & \\cdots & a_{1k} \\\\[6pt] a_{21} & a_{22} & \\cdots & a_{2k} \\\\[6pt] \\vdots & \\vdots & \\ddots & \\vdots \\\\[6pt] a_{k1} & a_{k2} & \\cdots & a_{kk} \\end{bmatrix}.  \n\\]\nPodemos escrever \\(P\\) de forma compacta como \\[\nP = [ [U_1]_{\\mathcal{B}} \\quad [U_2]_{\\mathcal{B}} \\quad \\cdots \\quad [U_k]_{\\mathcal{B}} ].\n\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#exemplo-retas-reversas",
-    "href": "06_retas_e_planos.html#exemplo-retas-reversas",
-    "title": "Retas e planos",
-    "section": "Exemplo — retas reversas",
-    "text": "Exemplo — retas reversas\nConsidere a reta \\(r\\) que passa pelos pontos \\(A=(4,-2,1)\\) e \\(B=(5,-3,2)\\). Também considere a reta \\(s\\) que passa pelos pontos \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nDetermine equações paramétricas das retas \\(r\\) e \\(s\\).\nVerifique se as retas \\(r\\) e \\(s\\) são paralelas, concorrentes ou reversas.\nDetermine a distância entre \\(r\\) e \\(s\\) exibindo pontos \\(P\\in r\\) e \\(Q\\in s\\) tais que \\(\\operatorname{dist}(r,s) = \\operatorname{dist}(P,Q)\\)."
+    "objectID": "07_Rn.html#mudança-de-base-fórmula",
+    "href": "07_Rn.html#mudança-de-base-fórmula",
+    "title": "O espaço ℝⁿ",
+    "section": "Mudança de base — fórmula",
+    "text": "Mudança de base — fórmula\nAssim, se \\[\n\\begin{bmatrix}\nx_1 \\\\ x_2 \\\\ \\vdots \\\\ x_k\\end{bmatrix}=[X]_{\\mathcal{B}}\\quad\\mbox{e} \\quad\n\\begin{bmatrix}\nc_1 \\\\ c_2 \\\\ \\vdots \\\\ c_k\\end{bmatrix}=\n[X]_{\\mathcal{C}}\n\\] são as matrizes coluna das coordenadas de \\(X\\) nas bases \\(\\mathcal{B}\\) e \\(\\mathcal{C}\\), respectivamente, então \\[\n\\begin{bmatrix}\nx_1 \\\\ x_2 \\\\ \\vdots \\\\ x_k\\end{bmatrix}\n= P \\begin{bmatrix}\nc_1 \\\\ c_2 \\\\ \\vdots \\\\ c_k\\end{bmatrix}.\n\\] A matriz \\(P\\) é invertível e sua inversa é a matriz de mudança de base de \\(\\mathcal{C}\\) para \\(\\mathcal{B}\\)."
   },
   {
-    "objectID": "06_retas_e_planos.html#retas-reversas-solução",
-    "href": "06_retas_e_planos.html#retas-reversas-solução",
-    "title": "Retas e planos",
-    "section": "Retas reversas – solução",
-    "text": "Retas reversas – solução\nSejam \\(A=(4,-2,1)\\), \\(B=(5,-3,2)\\), \\(C=(1,7,4)\\) e \\(D=(-7,-9,8)\\).\n\nEquações paramétricas:\n\n\n\\(r: V_r = B-A = (1,-1,1) ⇒ (x,y,z) =  (4,-2,1) + t(1,-1,1)\\).\n\\(s: V_s = D-C = (-8,-16,4)=-4(2,4,-1) ⇒ (x,y,z) = (1,7,4) + u(2,4,-1)\\).\n\n\n\n\nPosição relativa: \\(V_r \\not ∥ V_s\\), logo as retas não são paralelas. Tentando \\(r ∩ s\\): \\[\\begin{align*}\n4+t &= 1+2u\\\\\n-2-t &= 7+4u \\\\\n1+t &= 4-u\n\\end{align*}\\] Das duas primeiras, \\(u=-1\\) e \\(t=-5\\); na terceira dá \\(1-5 ≠ 5\\). Logo \\(r\\) e \\(s\\) são reversas.\n\n\n\nDistância e pontos de mínima distância: Toma pontos genêricos \\(P\\in r\\) e \\(Q\\in s\\): \\[\\begin{align*}\nP&=(4+t,-2-t,1+t)\\\\\nQ&=(1+2u,7+4u,4-u)\\\\\n\\vec{PQ}&=(-3+2u-t,9+4u+t,3-u-t).\n\\end{align*}\\]\n\n\nOra, queremos que \\(\\vec{PQ}\\) seja perpendicular a \\(V_r\\) e a \\(V_s\\): \\[\\begin{align*}\n0&=\\left&lt;\\vec{PQ},V_r\\right&gt;=\\left&lt;(-3+2u-t,9+4u+t,3-u-t),(1,-1,1)\\right&gt;=-9-3u-3t\\\\\n0&=\\left&lt;\\vec{PQ},V_s\\right&gt;=\\left&lt;(-3+2u-t,9+4u+t,3-u-t),(2,4,-1)\\right&gt;=27+21u+3t\n\\end{align*}\\]\n\n\nObtivemos o sistema \\[\\begin{align*}\n0&=-9-3u-3t\\\\\n0&=27+21u+3t\n\\end{align*}\\] A solução do sistema é \\(t=-2\\) e \\(u=-1\\).\n\n\nSubstituindo, \\(t=-2\\) e \\(u=-1\\), \\[\\begin{align*}\nP &= (4+t,-2-t,1+t)=  (2,0,-1)\\\\\nQ &= (1+2u,7+4u,4-u)= (-1,3,5)\\\\\n\\vec{PQ} &= Q-P = (-3,3,6) \\perp V_r, V_s.\n\\end{align*}\\]\nDistância: \\(\\|\\vec{PQ}\\|= \\sqrt{9+9+36} = 3\\sqrt 6\\)."
+    "objectID": "07_Rn.html#exemplo-de-mudança-de-base",
+    "href": "07_Rn.html#exemplo-de-mudança-de-base",
+    "title": "O espaço ℝⁿ",
+    "section": "Exemplo de mudança de base",
+    "text": "Exemplo de mudança de base\n\nExemplo 11 Sejam \\(W\\) o plano de \\(\\mathbb{R}^3\\) de equação \\(x+y+z=0\\), \\(\\mathcal{B}=\\{V_1=(1,-1,0), V_2=(1,0,-1)\\}\\) e \\(\\mathcal{C}=\\{U_1=(1,2,-3), U_2=(2,-1,-1)\\}\\) bases de \\(W\\).\nDetermine a matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) e as coordenadas do vetor \\(X=(-1,3,-2)\\) na base \\(\\mathcal{C}\\).\n\n\nResolvendo o sistema \\[\\begin{cases}\na(1,-1,0) + b(1,0,-1) = (1,2,-3), \\\\\nc(1,-1,0) + d(1,0,-1) = (2,-1,-1),\n\\end{cases}\\] obtemos \\(U_1 = -2V_1 + 3V_2\\) e \\(U_2 = V_1 + V_2\\). Assim, a matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é \\[P = \\begin{bmatrix} -2 & 1 \\\\[6pt] 3 & 1 \\end{bmatrix}.\\]\n\n\n\\[P = \\begin{bmatrix} -2 & 1 \\\\[6pt] 3 & 1 \\end{bmatrix}.\\] Para encontrar as coordenadas de \\(X\\) na base \\(\\mathcal{B}\\), primeiro encontramos as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\): \\[X = U_1 - U_2 \\Rightarrow [X]_{\\mathcal{C}} = \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix}.\\]\n\n\nAgora, usando a matriz de mudança de base, temos \\[[X]_{\\mathcal{B}} = P [X]_{\\mathcal{C}} = \\begin{bmatrix} -2 & 1 \\\\[6pt] 3 & 1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} = \\begin{bmatrix} -2 - 1 \\\\ 3 - 1 \\end{bmatrix} = \\begin{bmatrix} -3 \\\\ 2 \\end{bmatrix}.\\] Portanto, as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\) são \\(\\left(-3, 2\\right)\\).\n\n\nAssim, as coordenadas de \\(X\\) na base \\(\\mathcal{C}\\) são \\(\\left(-3, 2\\right)\\). Ou seja \\[\nX=-3V_1 + 2V_2.\n\\]"
   },
   {
-    "objectID": "06_retas_e_planos.html#planos-no-espaço",
-    "href": "06_retas_e_planos.html#planos-no-espaço",
-    "title": "Retas e planos",
-    "section": "Planos no Espaço",
-    "text": "Planos no Espaço\nUm plano pode ser dado de várias maneiras:\n\nPor 3 pontos não colineares passa um único plano.\nPor uma reta e por um ponto fora da reta.\nDadas duas retas concorrentes.\nDadas duas retas paralelas.\nDado um ponto e uma reta, existe um único plano ortogonal à reta que passa por este ponto.\n\nAlgumas destas situações podem ser caracterizadas pelo produto escalar; outras, pelo produto vetorial.\nVamos começar discutindo a última situação."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal",
-    "href": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal",
-    "title": "Retas e planos",
-    "section": "Planos, dado um ponto e um vetor normal",
-    "text": "Planos, dado um ponto e um vetor normal\nSeja dado um ponto \\(P_0=(x_0,y_0,z_0)\\) e um vetor \\(N\\neq\\vec{0}\\).\nExiste um único plano \\(\\alpha\\) que passa por \\(P_0\\) e que é ortogonal ao vetor \\(N\\).\n\n\n\n\n\nNesta situação \\(N\\) é um vetor normal ao plano."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal-cont.",
-    "href": "06_retas_e_planos.html#planos-dado-um-ponto-e-um-vetor-normal-cont.",
-    "title": "Retas e planos",
-    "section": "Planos, dado um ponto e um vetor normal (cont.)",
-    "text": "Planos, dado um ponto e um vetor normal (cont.)\n\n\n\n\n\nUm ponto \\(P=(x,y,z)\\) pertence a este plano se os vetores \\(N=(a,b,c)\\) e \\(\\overrightarrow{P_0P}=(x-x_0,\\,y-y_0,\\,z-z_0)\\) são perpendiculares: \\[\n\\langle N,\\overrightarrow{P_0P}\\rangle = 0 \\;\\Longleftrightarrow\\; a(x-x_0)+b(y-y_0)+c(z-z_0)=0.\n\\]\nEquivalente a \\[\nax+by+cz = a x_0 + b y_0 + c z_0.\n\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#equação-geral-do-plano",
-    "href": "06_retas_e_planos.html#equação-geral-do-plano",
-    "title": "Retas e planos",
-    "section": "Equação geral do plano",
-    "text": "Equação geral do plano\n\n\n\n\n\nDo item anterior, o lado direito é uma constante \\(d=a x_0 + b y_0 + c z_0\\). Assim, um ponto \\(P=(x,y,z)\\) pertence ao plano se e somente se\n\\[\\boxed{\\;ax + by + cz = d\\;}\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-plano-por-ponto-e-normal",
-    "href": "06_retas_e_planos.html#exemplo-plano-por-ponto-e-normal",
-    "title": "Retas e planos",
-    "section": "Exemplo: plano por ponto e normal",
-    "text": "Exemplo: plano por ponto e normal\nDetermine a equação geral do plano que passa por \\(P_0=(2,3,-4)\\) e é ortogonal ao vetor \\(N=(5,-2,3)\\).\nSolução. A equação geral do plano é da forma \\(ax+by+cz=d\\), em que os coeficientes \\(a\\), \\(b\\) e \\(c\\) são as coordenadas de um vetor normal ao plano. Neste caso, a equação tem a forma \\[\n5x-2y+3z=d.\n\\] Substituindo o ponto \\(P_0=(2,3,-4)\\), obtemos \\(d\\):\n\\[5\\cdot 2 - 2\\cdot 3 + 3\\cdot (-4) = d \\;\\Rightarrow\\; d=-8.\\]\nLogo, a equação do plano é \\[\n\\boxed{\\;5x-2y+3z=-8\\;}.\n\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#observações-sobre-a-equação-geral-do-plano",
-    "href": "06_retas_e_planos.html#observações-sobre-a-equação-geral-do-plano",
-    "title": "Retas e planos",
-    "section": "Observações sobre a equação geral do plano",
-    "text": "Observações sobre a equação geral do plano\n\\[\\boxed{\\;ax+by+cz=d\\;}\\]\n\nPara escrever a equação geral de um plano, precisamos de um vetor \\(N=(a,b,c)\\) ortogonal ao plano (vetor normal), com \\(N\\neq\\vec{0}\\).\nEm muitas situações, o vetor normal será calculado pelo produto vetorial.\nA equação geral do plano não é única: todo múltiplo não nulo de um vetor normal também é vetor normal. Multiplicar a equação \\[\nax+by+cz=d\n\\] por um número não nulo não altera o conjunto solução, apenas muda o vetor normal."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#produto-vetorial-em-mathbbr3",
-    "href": "06_retas_e_planos.html#produto-vetorial-em-mathbbr3",
-    "title": "Retas e planos",
-    "section": "Produto Vetorial em \\(\\mathbb{R}^3\\)",
-    "text": "Produto Vetorial em \\(\\mathbb{R}^3\\)\n\n\n\n\n\nO produto vetorial \\(V\\times W\\) é caracterizado por:\n\nNorma: \\(\\|V\\times W\\|=\\|V\\|\\,\\|W\\|\\,\\operatorname{sen}(\\theta)\\).\nDireção: \\(V\\times W\\) é perpendicular ao plano de \\(V\\) e \\(W\\).\nSentido: \\(V\\), \\(W\\) e \\(V\\times W\\) satisfazem a regra da mão direita."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#produto-vetorial-em-coordenadas",
-    "href": "06_retas_e_planos.html#produto-vetorial-em-coordenadas",
-    "title": "Retas e planos",
-    "section": "Produto vetorial em coordenadas",
-    "text": "Produto vetorial em coordenadas\nSe\n\\[\\begin{aligned}\nV &= (v_1,v_2,v_3) = v_1\\,\\vec{i}+v_2\\,\\vec{j}+v_3\\,\\vec{k},\\\\\nW &= (w_1,w_2,w_3) = w_1\\,\\vec{i}+w_2\\,\\vec{j}+w_3\\,\\vec{k},\n\\end{aligned}\\]\nentão, usando as propriedades do produto vetorial,\n\\[V\\times W=\\big(\\,v_2w_3-v_3w_2\\,,\\; v_3w_1-v_1w_3\\,,\\; v_1w_2-v_2w_1\\,\\big).\\]\nÉ mais fácil memorizar pelo determinante simbólico\n\\[\nV\\times W=\\det\\!\\begin{bmatrix}\n\\vec{i} & \\vec{j} & \\vec{k}\\\\\nv_1 & v_2 & v_3\\\\\nw_1 & w_2 & w_3\n\\end{bmatrix}.\n\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora",
-    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora",
-    "title": "Retas e planos",
-    "section": "Aplicação: plano por reta e ponto fora",
-    "text": "Aplicação: plano por reta e ponto fora\nExemplo 1. Determine a equação do plano que passa por \\(A=(-1,2,1)\\) e contém a reta\n\\[(x,y,z)=(2,1,3)+t(-1,3,1).\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-ideia",
-    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-ideia",
-    "title": "Retas e planos",
-    "section": "Aplicação: plano por reta e ponto fora (ideia)",
-    "text": "Aplicação: plano por reta e ponto fora (ideia)\nObservações importantes:\n\nPara calcular a equação \\(ax+by+cz=d\\) precisamos de um vetor normal \\(N=(a,b,c)\\) e de um ponto \\(P\\) no plano.\nSe \\(V\\) e \\(W\\) são vetores paralelos ao plano, então \\(N=V\\times W\\) é um vetor normal do plano.\nPara achar \\(N\\), basta identificar quaisquer dois vetores paralelos ao plano."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-cálculo",
-    "href": "06_retas_e_planos.html#aplicação-plano-por-reta-e-ponto-fora-cálculo",
-    "title": "Retas e planos",
-    "section": "Aplicação: plano por reta e ponto fora (cálculo)",
-    "text": "Aplicação: plano por reta e ponto fora (cálculo)\nNo exemplo, \\(A=(-1,2,1)\\) e \\(r:(x,y,z)=(2,1,3)+t(-1,3,1)\\).\n\n\n\n\n\n\n\nO ponto \\(B=(2,1,3)\\) pertence a \\(r\\) e os vetores \\(\\overrightarrow{BA}=(-3,1,-2)\\) e \\(V_r=(-1,3,1)\\) são paralelos ao plano. Então\n\\[\nN=\\overrightarrow{BA}\\times V_r=\n\\begin{vmatrix}\n\\vec{i}&\\vec{j}&\\vec{k}\\\\\n-3&1&-2\\\\\n-1&3&1\n\\end{vmatrix}\n=(7,5,-8).\n\\]\nLogo, o plano tem equação \\[\n7x+5y-8z=d.\n\\]\n\n\nLogo, o plano tem equação \\[\n7x+5y-8z=d.\n\\] O valor de \\(d\\) é determinado por substitui um ponto do plano na equação. Usando \\(A\\): \\[\n7x+5y-8z=7\\cdot (-1)+5\\cdot 2-8\\cdot 1=-5.\n\\] A resposta final: \\[\n7x+5y-8z=-5.\n\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-plano-com-três-pontos",
-    "href": "06_retas_e_planos.html#exemplo-plano-com-três-pontos",
-    "title": "Retas e planos",
-    "section": "Exemplo: Plano com três pontos",
-    "text": "Exemplo: Plano com três pontos\n\nExemplo 1 Determine a equação geral do plano que contém \\[\nA=(2,3,3),\\quad B=(4,1,3),\\quad C=(2,5,1).\n\\]\n\nUm vetor normal pode ser\n\\[N=\\overrightarrow{AB}\\times\\overrightarrow{AC}=\\begin{vmatrix}\n\\vec{i}&\\vec{j}&\\vec{k}\\\\\n2&-2&0\\\\\n0&2&-2\n\\end{vmatrix}=(4,4,4).\\]\nLogo, a equação é \\[\n4x+4y+4z=d.\n\\] Substituindo \\(B=(4,1,3)\\), \\(d=16+4+12=32\\), ou seja, \\[\n4x+4y+4z=32,\n\\] que simplifica para \\[\n\\boxed{x+y+z=8}.\n\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-plano-dado-por-3-pontos",
-    "href": "06_retas_e_planos.html#exemplo-plano-dado-por-3-pontos",
-    "title": "Retas e planos",
-    "section": "Exemplo: plano dado por 3 pontos",
-    "text": "Exemplo: plano dado por 3 pontos\n\nExemplo 2 Determine a equação geral do plano que contém \\[\nA=(1,1,1),\\quad B=(-2,3,3),\\quad C=(2,3,1).\n\\]\n\nUm ponto \\(P=(x,y,z)\\) pertence ao plano se os vetores são coplanares:\n\\[\\overrightarrow{AP}=(x-1,y-1,z-1),\\quad \\overrightarrow{AB}=(-3,2,2),\\quad \\overrightarrow{AC}=(1,2,0).\\]\nDaí,\n\\[\\det\\!\\begin{bmatrix}\nx-1&y-1&z-1\\\\\n-3&2&2\\\\\n1&2&0\n\\end{bmatrix}=0.\\]\nExpandindo, obtém-se \\(\\boxed{\\;2x-y+4z=5\\;}.\\)"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-concorrentes",
-    "href": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-concorrentes",
-    "title": "Retas e planos",
-    "section": "Exemplo: plano por duas retas concorrentes",
-    "text": "Exemplo: plano por duas retas concorrentes\n\nExemplo 3 Verifique se as retas são paralelas, concorrentes ou reversas. Se possível, determine o plano que contém as duas retas.\n\\[\\begin{cases}\nx=3+t\\\\\ny=3+2t\\\\\nz=4+t\n\\end{cases}\n\\qquad\\qquad\n\\begin{cases}\nx=-1+2s\\\\\ny=-2+s\\\\\nz=3-s\n\\end{cases}\\]"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-paralelas",
-    "href": "06_retas_e_planos.html#exemplo-plano-por-duas-retas-paralelas",
-    "title": "Retas e planos",
-    "section": "Exemplo: plano por duas retas paralelas",
-    "text": "Exemplo: plano por duas retas paralelas\n\n\nEncontre a equação paramétrica da reta \\(r\\) que passa por \\(A=(3,5,3)\\) e \\(B=(1,1,1)\\).\nConsidere \\(s:(x,y,z)=(1,2,3)+t(1,2,1)\\). Verifique se \\(r\\) e \\(s\\) são paralelas, reversas ou concorrentes.\nAche, se possível, uma equação geral do plano que contém as retas \\(r\\) e \\(s\\)."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
-    "href": "06_retas_e_planos.html#exemplo-1-ponto-e-ponto",
-    "title": "Retas e planos",
-    "section": "Exemplo 1: ponto e ponto",
-    "text": "Exemplo 1: ponto e ponto\nConsidere os pontos \\(A=(-1,3,2)\\) e \\(B=(2,1,6)\\).\n\nDetermine a equação paramétrica da reta \\(\\overleftrightarrow{AB}\\).\nCalcule o ponto médio do segmento \\(AB\\).\nCalcule \\(\\mathrm{dist}(A,B)\\).\nDetermine o ponto simétrico \\(A'\\) de \\(A\\) em relação ao ponto \\(B\\).\nDetermine o ponto simétrico \\(B'\\) de \\(B\\) em relação ao ponto \\(A\\)."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
-    "href": "06_retas_e_planos.html#exemplo-2-ponto-e-reta",
-    "title": "Retas e planos",
-    "section": "Exemplo 2: ponto e reta",
-    "text": "Exemplo 2: ponto e reta\nConsidere a reta \\(r\\) de equação paramétrica \\((x,y,z) = (-7,4,9) + t(-2,1,2)\\) e o ponto \\(A=(7,4,5)\\).\n\nO ponto \\(A\\) pertence a reta \\(r\\)?\nDetermine a equação do plano que contém \\(r\\) e \\(A\\).\nDetermine a reta perpendicular a \\(r\\) que passa por \\(A\\).\nCalcule \\(\\mathrm{dist}(A,r)\\).\nDetermine o ponto simétrico de \\(A\\) em relação à reta \\(r\\).\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em uma reta."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
-    "href": "06_retas_e_planos.html#exemplo-3-ponto-e-plano",
-    "title": "Retas e planos",
-    "section": "Exemplo 3: ponto e plano",
-    "text": "Exemplo 3: ponto e plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-2y+3z=4\\) e o ponto \\(A=(2,8,-8)\\).\n\nO ponto \\(A\\) pertence ao plano \\(\\alpha\\)?\nDetermine a equação paramétrica da reta que passa por \\(A\\) e é perpendicular ao plano \\(\\alpha\\).\nCalcule \\(\\mathrm{dist}(A,\\alpha)\\).\nDetermine o ponto simétrico de \\(A\\) em relação ao plano \\(\\alpha\\).\n\nObs: neste exemplo aprendemos a calcular a projeção ortogonal de um ponto em um plano."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
-    "href": "06_retas_e_planos.html#exemplo-4-duas-retas-paralelas",
-    "title": "Retas e planos",
-    "section": "Exemplo 4: duas retas paralelas",
-    "text": "Exemplo 4: duas retas paralelas\nConsidere as retas paralelas\n\\[r:\\ (x,y,z) = (-6,3,-2) + t(3,-1,2)\\]\n\\[s:\\ (x,y,z) = (-3,30,-14) + s(3,-1,2)\\]\n\nDetermine a equação do plano \\(\\alpha\\) que contém \\(r\\) e \\(s\\).\nDê um exemplo de uma reta perpendicular a \\(r\\) e a \\(s\\).\nCalcule \\(\\mathrm{dist}(r,s)\\).\nDetermine uma reta contida em \\(\\alpha\\) e que está equidistante de \\(r\\) e de \\(s\\)."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
-    "href": "06_retas_e_planos.html#exemplo-5-duas-retas-concorrentes",
-    "title": "Retas e planos",
-    "section": "Exemplo 5: duas retas concorrentes",
-    "text": "Exemplo 5: duas retas concorrentes\nConsidere as retas\n\\[r:\\ (x,y,z) = (7,2,-2) + t(-3,0,1)\\] \\[s:\\ (x,y,z) = (-1,1,2) + s(2,1,-2)\\]\n\nMostre que \\(r\\) e \\(s\\) são concorrentes calculando o ponto \\(P= r \\cap s\\).\nDetermine a equação geral do plano que contém \\(r\\) e \\(s\\).\nCalcule o ângulo de \\(r\\) e \\(s\\).\n\nObs: neste exemplo aprendemos a calcular o ângulo entre duas retas."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
-    "href": "06_retas_e_planos.html#exemplo-6-duas-retas-reversas",
-    "title": "Retas e planos",
-    "section": "Exemplo 6: duas retas reversas",
-    "text": "Exemplo 6: duas retas reversas\nConsidere as retas\n\\[r:\\ (x,y,z) = (-1,-1,4) + t(1,1,-1)\\] \\[s:\\ (x,y,z) = (1,3,7) + s(-2,0,1)\\]\n\nMostre que \\(r\\) e \\(s\\) são retas reversas.\nDetermine a equação da reta perpendicular e concorrente com \\(r\\) e com \\(s\\).\nCalcule \\(\\mathrm{dist}(r,s)\\) e o ângulo entre \\(r\\) e \\(s\\).\nDetermine o plano \\(\\alpha\\) que contém \\(r\\) e é paralelo a \\(s\\).\nDetermine o plano \\(\\beta\\) que contém \\(s\\) e é paralelo a \\(r\\).\nDetermine o plano \\(\\gamma\\) que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nDetermine o plano \\(\\omega\\) que contém \\(s\\) e é perpendicular a \\(\\beta\\).\nDetermine a reta \\(\\gamma \\cap \\omega\\)."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-6-ilustrações",
-    "href": "06_retas_e_planos.html#exemplo-6-ilustrações",
-    "title": "Retas e planos",
-    "section": "Exemplo 6: ilustrações",
-    "text": "Exemplo 6: ilustrações"
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
-    "href": "06_retas_e_planos.html#exemplo-7-reta-furando-um-plano",
-    "title": "Retas e planos",
-    "section": "Exemplo 7: reta furando um plano",
-    "text": "Exemplo 7: reta furando um plano\nConsidere o plano \\(\\alpha\\) de equação \\(2x+y-z=4\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,-4) + t(1,-1,2)\\).\n\nDetermine o ponto \\(P = r \\cap \\alpha\\).\nDetermine o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nDetermine a reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\nCalcule o ângulo entre \\(r\\) e \\(\\alpha\\).\nDetermine a reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\).\n\nObs: neste exemplo aprendemos a calcular o ângulo entre uma reta e um plano."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
-    "href": "06_retas_e_planos.html#exemplo-8-reta-paralela-a-um-plano",
-    "title": "Retas e planos",
-    "section": "Exemplo 8: reta paralela a um plano",
-    "text": "Exemplo 8: reta paralela a um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x-y+z=1\\) e a reta \\(r\\) de equação \\((x,y,z) = (0,3,1) + t(2,-1,-3)\\).\n\nMostre que a reta \\(r\\) é paralela ao plano \\(\\alpha\\).\nAche o plano que contém \\(r\\) e é perpendicular a \\(\\alpha\\).\nAche o plano que contém \\(r\\) e é paralelo a \\(\\alpha\\).\nDetermine a equação da reta que é a projeção ortogonal de \\(r\\) sobre \\(\\alpha\\).\nCalcule \\(\\mathrm{dist}(r,\\alpha)\\)."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
-    "href": "06_retas_e_planos.html#exemplo-9-reta-contida-em-um-plano",
-    "title": "Retas e planos",
-    "section": "Exemplo 9: reta contida em um plano",
-    "text": "Exemplo 9: reta contida em um plano\nConsidere o plano \\(\\alpha\\) de equação \\(x+2y-z=3\\) e a reta \\(r\\) de equação \\((x,y,z) = (2,1,1) + t(2,1,4)\\).\n\nMostre que \\(r \\subset \\alpha\\).\nDetermine o plano que contém \\(r\\) e que é perpendicular a \\(\\alpha\\).\nDê um exemplo de uma reta contida em \\(\\alpha\\) e que é perpendicular a \\(r\\)."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
-    "href": "06_retas_e_planos.html#exemplo-10-planos-paralelos",
-    "title": "Retas e planos",
-    "section": "Exemplo 10: planos paralelos",
-    "text": "Exemplo 10: planos paralelos\nConsidere os planos\n\\[\\alpha:\\ 2x-y+z=1\\] \\[\\beta:\\ 4x-2y+2z=5\\]\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) são planos paralelos.\nDetermine a reta perpendicular a \\(\\alpha\\) e a \\(\\beta\\) que passa pela origem.\nCalcule \\(\\mathrm{dist}(\\alpha,\\beta)\\)."
-  },
-  {
-    "objectID": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
-    "href": "06_retas_e_planos.html#exemplo-11-planos-concorrentes",
-    "title": "Retas e planos",
-    "section": "Exemplo 11: planos concorrentes",
-    "text": "Exemplo 11: planos concorrentes\nConsidere os planos\n\\[\\alpha:\\ x-y+3z=1\\] \\[\\beta:\\ 2x-3y-z=2\\]\n\nMostre que \\(\\alpha\\) e \\(\\beta\\) não são paralelos.\nDetermine a equação da reta \\(\\alpha \\cap \\beta\\).\nCalcule o ângulo entre \\(\\alpha\\) e \\(\\beta\\).\nDê um exemplo de um plano perpendicular a \\(\\alpha\\) e a \\(\\beta\\)."
+    "objectID": "07_Rn.html#mudança-de-base-rotação",
+    "href": "07_Rn.html#mudança-de-base-rotação",
+    "title": "O espaço ℝⁿ",
+    "section": "Mudança de base — Rotação",
+    "text": "Mudança de base — Rotação\nConsidere o plano \\(\\mathbb{R}^2\\) com a base canônica \\(\\mathcal{B}=\\{\\vec{i},\\vec{j}\\}\\) e a base \\(\\mathcal{C}=\\{U_1,U_2\\}\\), em que \\[\nU_1=(\\cos\\theta,\\sin\\theta),\\quad U_2=(-\\sin\\theta,\\cos\\theta).\n\\]\nA matriz de mudança de base de \\(\\mathcal{B}\\) para \\(\\mathcal{C}\\) é\n\\[\n\\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta\n\\end{bmatrix}\n\\]\n\n\nSe \\(V=(x',y')\\) são as coordenadas de um vetor na base \\(\\mathcal{C}\\), então as coordenadas \\((x,y)\\) de \\(V\\) na base \\(\\mathcal{B}\\) são dadas por \\[\n\\begin{bmatrix}\nx \\\\ y\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta \\end{bmatrix}\n\\begin{bmatrix}\nx' \\\\ y'\n\\end{bmatrix}\n\\]\n\n\nObserve que \\[\n\\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta\n\\end{bmatrix}^{-1}=\n\\begin{bmatrix}\n\\cos\\theta & \\sin\\theta \\\\\n-\\sin\\theta & \\cos\\theta\n\\end{bmatrix}\n\\]\n\n\nLogo, \\[\n\\begin{bmatrix}\nx' \\\\ y'\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n\\cos\\theta & \\sin\\theta \\\\\n-\\sin\\theta & \\cos\\theta\n\\end{bmatrix}\n\\begin{bmatrix}\nx \\\\ y\n\\end{bmatrix}=\n\\begin{bmatrix}\nx\\cos\\theta + y\\sin\\theta \\\\\n-x\\sin\\theta + y\\cos\\theta\n\\end{bmatrix}.\n\\]"
   }
 ]
