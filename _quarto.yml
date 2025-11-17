@@ -9,9 +9,9 @@ project:
     - 05_vetores.qmd
     - 06_retas_e_planos.qmd
     - 07_Rn.qmd
-    
+    - 08_diagonalização.qmd
 
-render-on-save: false 
+render-on-save: false
 
 execute:
   freeze: true
