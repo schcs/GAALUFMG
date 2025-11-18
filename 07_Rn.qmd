@@ -594,7 +594,7 @@ Os coeficientes $x_1,x_2,\ldots,x_k$ são as coordenadas de $X$ na base $\mathca
 
 ## A matriz mudança de base
 
-A matriz de mudança de base de $\mathcal{B}$ para $\mathcal{C}$ é a matriz $P$ cujas colunas são as coordenadas dos vetores da base $\mathcal{C}$ na base $\mathcal{B}$
+A [matriz de mudança de base]{.bg-yellow} de $\mathcal{B}$ para $\mathcal{C}$ é a matriz $P$ cujas colunas são as coordenadas dos vetores da base $\mathcal{C}$ na base $\mathcal{B}$
 
 Ou seja, escreva 
 $$
@@ -652,17 +652,10 @@ $$P = \begin{bmatrix} -2 & 1 \\[6pt] 3 & 1 \end{bmatrix}.$$
 Para encontrar as coordenadas de $X$ na base $\mathcal{B}$, primeiro encontramos as coordenadas de $X$ na base $\mathcal{C}$:
 $$X = U_1 - U_2 \Rightarrow [X]_{\mathcal{C}} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}.$$
 :::
-:::{.fragment .current-visible}
+:::{.fragment}
 Agora, usando a matriz de mudança de base, temos
 $$[X]_{\mathcal{B}} = P [X]_{\mathcal{C}} = \begin{bmatrix} -2 & 1 \\[6pt] 3 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} -2 - 1 \\ 3 - 1 \end{bmatrix} = \begin{bmatrix} -3 \\ 2 \end{bmatrix}.$$
-Portanto, as coordenadas de $X$ na base $\mathcal{C}$ são $\left(-3, 2\right)$.
-:::
-
-:::{.fragment}
-Assim, as coordenadas de $X$ na base $\mathcal{C}$ são $\left(-3, 2\right)$. Ou seja 
-$$
-X=-3V_1 + 2V_2.
-$$
+Portanto, as coordenadas de $X$ na base $\mathcal{B}$ são $\left(-3, 2\right)$.
 :::
 :::
 :::
