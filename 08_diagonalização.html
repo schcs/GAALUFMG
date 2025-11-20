@@ -139,7 +139,7 @@ UFMG
 </div>
 </div>
 
-  <p class="date">18 de novembro de 2025</p>
+  <p class="date">20 de novembro de 2025</p>
 </section>
 <section id="diagonalização" class="slide level2">
 <h2>Diagonalização</h2>
@@ -153,8 +153,10 @@ UFMG
 </section>
 <section id="diagonalização-1" class="slide level2">
 <h2>Diagonalização</h2>
-<p>Definição: Uma matriz quadrada <span class="math inline">\(A\)</span> é diagonalizável se existir uma matriz invertível <span class="math inline">\(P\)</span> e se existir uma matriz diagonal <span class="math inline">\(D\)</span> tais que</p>
-<p><span class="math display">\[\boxed{P^{-1} A P = D}\]</span></p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 1</strong></span> Uma matriz quadrada <span class="math inline">\(A\)</span> é <span class="bg-yellow">diagonalizável</span> se existir uma matriz invertível <span class="math inline">\(P\)</span> e se existir uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math display">\[\boxed{P^{-1} A P = D}.\]</span></p>
+</div>
+<p><span class="bg-yellow">Observações:</span></p>
 <ul>
 <li>nem todas as matrizes são diagonalizáveis.</li>
 <li>vamos caracterizar as matrizes <span class="math inline">\(P\)</span> e <span class="math inline">\(D\)</span> em termos de <span class="math inline">\(A\)</span>.</li>
@@ -167,29 +169,35 @@ UFMG
 <h2>Diagonalização</h2>
 <p>Se uma matriz <span class="math inline">\(A_{n \times n}\)</span> é <span class="bg-yellow">diagonalizável</span> então existe uma matriz invertível <span class="math inline">\(P\)</span> e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que</p>
 <p><span class="math display">\[\boxed{P^{-1} A P = D}\]</span></p>
-<p>Multiplicando por <span class="math inline">\(P\)</span> do lado esquerdo obtemos <span class="math inline">\(AP=PD\)</span>.</p>
-<p>Fazendo um exemplo <span class="math inline">\(2 \times 2\)</span> podemos entender que se as colunas de <span class="math inline">\(P\)</span> são <span class="math inline">\(X_1,X_2,\ldots,X_n\)</span> e se os elementos da diagonal de <span class="math inline">\(D\)</span> são <span class="math inline">\(\lambda_1,\lambda_2,\ldots,\lambda_n\)</span>, então as colunas de <span class="math inline">\(AP\)</span> são <span class="math inline">\(AX_1,AX_2,\ldots,AX_n\)</span> e as colunas de <span class="math inline">\(PD\)</span> são <span class="math inline">\(\lambda_1 X_1,\lambda_2 X_2,\ldots,\lambda_n X_n\)</span>.</p>
-<p>Como <span class="math inline">\(AP=PD\)</span>, igualando as colunas destas duas matrizes vemos que</p>
-<p><span class="math display">\[AX_1 = \lambda_1 X_1,\ AX_2 = \lambda_2 X_2,\ \ldots ,\ AX_n = \lambda_n X_n.\]</span></p>
+<p>Multiplicando por <span class="math inline">\(P\)</span> do lado esquerdo obtemos <span class="math display">\[
+AP=PD.
+\]</span></p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Fazendo um exemplo <span class="math inline">\(2 \times 2\)</span> podemos entender que se as colunas de <span class="math inline">\(P\)</span> são <span class="math inline">\(X_1,X_2,\ldots,X_n\)</span> e se os elementos da diagonal de <span class="math inline">\(D\)</span> são <span class="math inline">\(\lambda_1,\lambda_2,\ldots,\lambda_n\)</span>, então as colunas de <span class="math inline">\(AP\)</span> são <span class="math display">\[AX_1,AX_2,\ldots,AX_n\]</span> e as colunas de <span class="math inline">\(PD\)</span> são <span class="math display">\[\lambda_1 X_1,\lambda_2 X_2,\ldots,\lambda_n X_n.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p>Como <span class="math inline">\(AP=PD\)</span>, igualando as colunas destas duas matrizes vemos que <span class="math display">\[AX_1 = \lambda_1 X_1,\ AX_2 = \lambda_2 X_2,\ \ldots ,\ AX_n = \lambda_n X_n.\]</span></p>
+</div>
+</div>
 </section>
 <section id="diagonalização-3" class="slide level2">
 <h2>Diagonalização</h2>
-<p>Portanto se <span class="math inline">\(X\)</span> é uma coluna de <span class="math inline">\(P\)</span> e se <span class="math inline">\(\lambda\)</span> é o correspondente elemento da diagonal de <span class="math inline">\(D\)</span>, provamos que <span class="math inline">\(X\)</span> e <span class="math inline">\(\lambda\)</span> estão relacionados pela equação <span class="math inline">\(AX = \lambda X\)</span>. Como esta equação é válida para todas as colunas, parece interessante dar uma definição para isso.</p>
-<p>Definição: Seja <span class="math inline">\(A\)</span> uma matriz quadrada. Um número real <span class="math inline">\(\lambda\)</span> é um <span class="bg-yellow">autovalor</span> de <span class="math inline">\(A\)</span> se existir um vetor <span class="math inline">\(V \neq \vec{0}\)</span> tal que</p>
-<p><span class="math display">\[AV = \lambda V.\]</span></p>
-<p>Neste caso <span class="math inline">\(V\)</span> é um <span class="bg-yellow">autovetor</span> associado ao autovalor <span class="math inline">\(\lambda\)</span>.</p>
-<p>Obs: o vetor <span class="math inline">\(V\)</span> deve ser diferente de zero, pois estes vetores serão as colunas de <span class="math inline">\(P\)</span>. Queremos <span class="math inline">\(P\)</span> invertível. Logo <span class="math inline">\(\det(P) \neq 0\)</span>. E portanto <span class="math inline">\(P\)</span> não pode possuir uma coluna zerada.</p>
-</section>
-<section id="diagonalização-4" class="slide level2">
-<h2>Diagonalização</h2>
-<p>Até o momento observamos que se <span class="math inline">\(A\)</span> é diagonalizável com <span class="math inline">\(P^{-1}AP=D\)</span>, então <span class="math inline">\(P\)</span> é uma matriz invertível cujas colunas são autovetores, e os elementos da diagonal principal de <span class="math inline">\(D\)</span> são os correspondentes autovalores de <span class="math inline">\(A\)</span>.</p>
+<p>Portanto se <span class="math inline">\(X\)</span> é uma coluna de <span class="math inline">\(P\)</span> e se <span class="math inline">\(\lambda\)</span> é o correspondente elemento da diagonal de <span class="math inline">\(D\)</span>, provamos <span class="math display">\[
+AX = \lambda X.
+\]</span> Como esta equação é válida para todas as colunas, parece interessante dar uma definição para isso.</p>
+<div id="def-" class="theorem definition">
+<p><span class="theorem-title"><strong>Definição 2</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz quadrada. Um número real <span class="math inline">\(\lambda\)</span> é um <span class="bg-yellow">autovalor</span> de <span class="math inline">\(A\)</span> se existir um vetor <span class="math inline">\(V \neq \vec{0}\)</span> tal que <span class="math display">\[AV = \lambda V.\]</span> Neste caso <span class="math inline">\(V\)</span> é um <span class="bg-yellow">autovetor</span> associado ao autovalor <span class="math inline">\(\lambda\)</span>.</p>
+</div>
+<p>Obs: o vetor <span class="math inline">\(V\)</span> deve ser diferente de zero, pois o vetor nulo satisfaz esta equação para todo <span class="math inline">\(\lambda\in\mathbb R\)</span>. Além disso, estes vetores serão as colunas de <span class="math inline">\(P\)</span>. Queremos <span class="math inline">\(P\)</span> invertível. Logo <span class="math inline">\(\det(P) \neq 0\)</span>. E portanto <span class="math inline">\(P\)</span> não pode possuir uma coluna zerada.</p>
 <p>Então para achar <span class="math inline">\(P\)</span> e <span class="math inline">\(D\)</span> devemos calcular autovetores e autovalores.</p>
-<p>Como fazer isso? Boa pergunta, não é mesmo????</p>
 </section>
 <section id="autovalores-e-autovetores" class="slide level2">
 <h2>Autovalores e autovetores</h2>
 <p>Vamos ver como podemos calcular autovalores e autovetores.</p>
-<p>Um autovetor <span class="math inline">\(V\)</span> e o correspondente autovalor <span class="math inline">\(\lambda\)</span> estão relacionados por <span class="math inline">\(AV = \lambda V\)</span>.</p>
+<p>Um autovetor <span class="math inline">\(V\)</span> e o correspondente autovalor <span class="math inline">\(\lambda\)</span> estão relacionados por <span class="math display">\[
+AV = \lambda V.
+\]</span></p>
 <p>Daí</p>
 <p><span class="math display">\[AV - \lambda V = \overline{0}\]</span></p>
 <p><span class="math display">\[AV - \lambda I_n V = \overline{0}\]</span></p>
@@ -214,60 +222,93 @@ UFMG
 <p>Dada uma matriz quadrada <span class="math inline">\(A\)</span>:</p>
 <ol type="1">
 <li>Calcule as raízes (soluções) da equação <span class="math inline">\(\det(A - \lambda I_n) = 0\)</span>. Estas raízes são os autovalores de <span class="math inline">\(A\)</span>.</li>
-<li>Para cada <span class="math inline">\(\lambda\)</span> encontrado em (a), o sistema homogêneo <span class="math inline">\((A - \lambda I_n) X = \overline{0}\)</span> possui solução não trivial.</li>
+<li>Para cada <span class="math inline">\(\lambda\)</span> encontrado em 1., o sistema homogêneo <span class="math inline">\((A - \lambda I_n) X = \overline{0}\)</span> possui solução não trivial.</li>
 <li>Toda solução não trivial deste sistema é um autovetor <span class="math inline">\(V\)</span> associado ao autovalor <span class="math inline">\(\lambda\)</span>.</li>
 </ol>
-<p>Observação: se <span class="math inline">\(V\)</span> é um autovetor de <span class="math inline">\(A\)</span>, então <span class="math inline">\(AV=\lambda V\)</span>. Multiplicando os dois lados desta equação por um número vemos que todo múltiplo de <span class="math inline">\(V\)</span> também é um autovetor de <span class="math inline">\(A\)</span> associado ao mesmo autovalor. É por este motivo que os autovetores não são únicos. E em um sistema linear homegêneo com determinante zero, sempre existem infinitas soluções.</p>
-</section>
-<section id="autovalores-e-autovetores-3" class="slide level2">
-<h2>Autovalores e autovetores</h2>
-<p>Dada uma matriz quadrada <span class="math inline">\(A\)</span>:</p>
-<ol type="1">
-<li>As raízes da equação <span class="math inline">\(\det(A - \lambda I_n) = 0\)</span> são os autovalores.</li>
-<li>Para cada autovalor <span class="math inline">\(\lambda\)</span>, as solução não triviais do sistema linear homogêneo <span class="math inline">\((A - \lambda I_n) X = \overline{0}\)</span> são os autovetores.</li>
-</ol>
-<p>O polinômio característico de <span class="math inline">\(A\)</span> é <span class="math inline">\(p(\lambda) = \det(A - \lambda I_n)\)</span>.</p>
+<p>Observação: E em um sistema linear homegêneo com determinante zero, sempre existem infinitas soluções e assim o autovetor não é único. Na verdade, se <span class="math inline">\(V\)</span> é um autovetor, então qualquer múltiplo escalar de <span class="math inline">\(V\)</span> também é um autovetor associado ao mesmo autovalor.</p>
+<p>O polinômio característico de <span class="math inline">\(A\)</span> é <span class="math display">\[p(\lambda) = \det(A - \lambda I_n).\]</span></p>
 <p>Os autovalores são as raízes do polinômio característico.</p>
 <p>Se <span class="math inline">\(A\)</span> é uma matriz <span class="math inline">\(n \times n\)</span>, então <span class="math inline">\(p(\lambda)\)</span> é um polinômio de grau <span class="math inline">\(n\)</span>.</p>
 </section>
-<section id="autovalores-e-autovetores-4" class="slide level2">
+<section id="autovalores-e-autovetores-3" class="slide level2">
 <h2>Autovalores e autovetores</h2>
-<p>Exemplo 1:</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 1</strong></span> &nbsp;</p>
 <ol type="1">
 <li>Determine os autovalores e os autovetores da matriz <span class="math display">\[A = \begin{bmatrix} 3 &amp; -1 \\ -2 &amp; 2 \end{bmatrix}.\]</span></li>
 <li>Exiba uma matriz <span class="math inline">\(P\)</span> e uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(AP=PD\)</span>.</li>
 <li>Existe uma tal matriz <span class="math inline">\(P\)</span> invertível? Existe uma tal matriz <span class="math inline">\(P\)</span> não invertível?</li>
 <li>A matriz <span class="math inline">\(A\)</span> é diagonalizável? Se for, exiba uma matriz invertível <span class="math inline">\(P\)</span> e uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(P^{-1}AP=D\)</span>.</li>
 </ol>
+</div>
 </section>
-<section id="autovalores-e-autovetores-5" class="slide level2">
+<section id="solução" class="slide level2">
+<h2>Solução</h2>
+<p>Vamos determinar os autovalores e autovetores da matriz <span class="math display">\[A = \begin{bmatrix} 3 &amp; -1 \\ -2 &amp; 2 \end{bmatrix}.\]</span></p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p><strong>Calcule o polinômio característico:</strong> <span class="math display">\[p(\lambda) = \det\begin{bmatrix} 3-\lambda &amp; -1 \\ -2 &amp; 2-\lambda \end{bmatrix} = (3-\lambda)(2-\lambda) - 2 = \lambda^2 - 5\lambda + 4.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Calcule as raízes do polinômio característico:</strong> <span class="math display">\[\lambda^2 - 5\lambda + 4 = 0 \Rightarrow (\lambda - 4)(\lambda - 1) = 0 \Rightarrow \lambda_1 = 4,\ \lambda_2 = 1.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Para cada autovalor, calcule o correspondente autovetor:</strong></p>
+<p>Para <span class="math inline">\(\lambda_1 = 4\)</span>: <span class="math display">\[(A - 4I)X = \begin{bmatrix} -1 &amp; -1 \\ -2 &amp; -2 \end{bmatrix}X = \overline{0}.\]</span> Os autovetores associados a <span class="math inline">\(\lambda_1\)</span> são da forma <span class="math display">\[X_1 = \begin{bmatrix} \alpha \\ -\alpha \end{bmatrix} \mbox{ com } \alpha\in\mathbb R.\]</span> Escolhemos <span class="math inline">\(\alpha = 1\)</span>, então <span class="math inline">\(X_1 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Para cada autovalor, calcule o correspondente autovetor:</strong></p>
+<p>Para <span class="math inline">\(\lambda_2 = 1\)</span>: <span class="math display">\[(A - I)X = \begin{bmatrix} 2 &amp; -1 \\ -2 &amp; 1 \end{bmatrix}X = \overline{0}.\]</span> Os autovetores associados a <span class="math inline">\(\lambda_2\)</span> são da forma <span class="math display">\[X_2 = \begin{bmatrix} \beta \\ 2\beta \end{bmatrix} \mbox{ com } \beta\in\mathbb R.\]</span> Escolhemos <span class="math inline">\(\beta = 1\)</span>, então <span class="math inline">\(X_2 = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Forme a matriz <span class="math inline">\(P\)</span> com os autovetores como colunas e a matriz diagonal <span class="math inline">\(D\)</span> com os autovalores na diagonal: <span class="math display">\[P = \begin{bmatrix} 1 &amp; 1 \\ -1 &amp; 2 \end{bmatrix}, \quad D = \begin{bmatrix} 4 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Verifique se <span class="math inline">\(AP = PD\)</span>:</strong> <span class="math display">\[AP = \begin{bmatrix} 3 &amp; -1 \\ -2 &amp; 2 \end{bmatrix} \begin{bmatrix} 1 &amp; 1 \\ -1 &amp; 2 \end{bmatrix} = \begin{bmatrix} 4 &amp; 1 \\ -4 &amp; 2 \end{bmatrix},\]</span> <span class="math display">\[PD = \begin{bmatrix} 1 &amp; 1 \\ -1 &amp; 2 \end{bmatrix} \begin{bmatrix} 4 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} = \begin{bmatrix} 4 &amp; 1 \\ -4 &amp; 2 \end{bmatrix}.\]</span> Portanto, <span class="math inline">\(AP = PD\)</span>.</p>
+<p>Além disso, <span class="math inline">\(\det(P) = 1 \cdot 2 - (-1) \cdot 1 = 3 \neq 0\)</span>, então <span class="math inline">\(P\)</span> é invertível e <span class="math display">\[
+P^{-1}AP = D.
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="autovalores-e-autovetores-4" class="slide level2">
 <h2>Autovalores e autovetores</h2>
-<p>Exemplo 2:</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 2</strong></span> &nbsp;</p>
 <ol type="1">
 <li>Determine os autovalores e os autovetores da matriz <span class="math display">\[A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}.\]</span></li>
 <li>Exiba uma matriz <span class="math inline">\(P\)</span> e uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(AP=PD\)</span>.</li>
 <li>Existe uma tal matriz <span class="math inline">\(P\)</span> invertível? Existe uma tal matriz <span class="math inline">\(P\)</span> não invertível?</li>
 <li>A matriz <span class="math inline">\(A\)</span> é diagonalizável? Se for, exiba uma matriz invertível <span class="math inline">\(P\)</span> e uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(P^{-1}AP=D\)</span>.</li>
 </ol>
+</div>
+</section>
+<section id="solução-1" class="slide level2">
+<h2>Solução</h2>
+<p>Vamos determinar os autovalores e autovetores da matriz <span class="math display">\[A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}.\]</span></p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p><strong>Calcule o polinômio característico:</strong> <span class="math display">\[p(\lambda) = \det\begin{bmatrix} 1-\lambda &amp; 1 \\ 0 &amp; 1-\lambda \end{bmatrix} = (1-\lambda)^2.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Calcule as raízes do polinômio característico:</strong> <span class="math display">\[(1-\lambda)^2 = 0 \Rightarrow \lambda_1 = 1.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Para o autovalor, calcule o correspondente autovetor:</strong> Para <span class="math inline">\(\lambda_1 = 1\)</span>: <span class="math display">\[(A - I)X = \begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}X = \overline{0}.\]</span> Os autovetores associados a <span class="math inline">\(\lambda_1\)</span> são da forma <span class="math display">\[X_1 = \begin{bmatrix} \alpha \\ 0 \end{bmatrix} \mbox{ com } \alpha\in\mathbb R.\]</span> Note que todos os autovetores são múltiplos de <span class="math inline">\(X_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> e não tem como escolher dois autovetores LI para colocar nas colunas de <span class="math inline">\(P\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Logo esta matriz <span class="math inline">\(A\)</span> <span class="bg-yellow">não é diagonalizável</span>.</p>
+</div>
+</div>
 </section>
 <section id="autovalores-e-autovetores-diagonalização" class="slide level2">
-<h2>Autovalores e autovetores — diagonalização</h2>
-<p>Observações importantes sobre uma dada matriz quadrada <span class="math inline">\(A\)</span>.</p>
-<ul>
-<li>Sempre existe uma matriz <span class="math inline">\(P\)</span> e sempre existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(AP=PD\)</span>. Basta montar uma matriz <span class="math inline">\(P\)</span> cujas colunas são autovetores e basta colocar na diagonal principal de <span class="math inline">\(D\)</span> os correspondentes autovalores.</li>
-<li>De modo algum isto significa que <span class="math inline">\(A\)</span> é diagonalizável.</li>
-<li>Para <span class="math inline">\(A\)</span> ser diagonalizável, precisamos achar <span class="math inline">\(P\)</span> invertível e <span class="math inline">\(D\)</span> diagonal tais que <span class="math inline">\(P^{-1}AP=D\)</span>.</li>
-<li>Sempre podemos passar da igualdade <span class="math inline">\(P^{-1}AP=D\)</span> para a igualdade <span class="math inline">\(AP=PD\)</span>.</li>
-<li>Mas para passar da igualdade <span class="math inline">\(AP=PD\)</span> para a igualdade <span class="math inline">\(P^{-1}AP=D\)</span> a matriz <span class="math inline">\(P\)</span> deve ser invertível.</li>
-</ul>
-</section>
-<section id="autovalores-e-autovetores-diagonalização-1" class="slide level2">
 <h2>Autovalores e autovetores — diagonalização</h2>
 <p>Então para <span class="math inline">\(A_{n\times n}\)</span> ser diagonalizável deve ser possível montar uma matriz invertível <span class="math inline">\(P_{n \times n}\)</span> com <span class="math inline">\(n\)</span> autovetores de <span class="math inline">\(A\)</span>.</p>
 <p>Lembre-se que <span class="math inline">\(P\)</span> é invertível se <span class="math inline">\(\det(P) \neq 0\)</span> e que isto significa que as colunas de <span class="math inline">\(P\)</span> são vetores LI.</p>
 <p>Isto dá a seguinte caracterização de matrizes diagonalizáveis.</p>
-<p>Teorema: uma matriz quadrada <span class="math inline">\(A_{n\times n}\)</span> é diagonalizável se <span class="math inline">\(A\)</span> possui <span class="math inline">\(n\)</span> autovetores LI.</p>
-<p>Observe que <span class="math inline">\(A\)</span> sempre possui <span class="math inline">\(n\)</span> autovalores, pois os autovalores são raízes de um polinômio <span class="math inline">\(p(\lambda) = \det(A - \lambda I_n)=0\)</span> de grau <span class="math inline">\(n\)</span>, e todo polinômio de grau <span class="math inline">\(n\)</span> possui <span class="math inline">\(n\)</span> raízes. Portanto a caracterização de matrizes diagonalizáveis não pode ser dada em termos de autovalores.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1</strong></span> Uma matriz <span class="math inline">\(A_{n\times n}\)</span> é diagonalizável se <span class="math inline">\(A\)</span> possui <span class="math inline">\(n\)</span> autovetores LI.</p>
+</div>
 </section>
 <section id="exemplos" class="slide level2">
 <h2>Exemplos</h2>
@@ -279,11 +320,74 @@ UFMG
 <li><span class="math inline">\(A = \begin{bmatrix} 2 &amp; 0 &amp; 1 \\ 0 &amp; -4 &amp; 6 \\ 0 &amp; -3 &amp; 5 \end{bmatrix}\)</span></li>
 </ol>
 </section>
+<section id="solução-2" class="slide level2">
+<h2>Solução</h2>
+<p>Considere a matriz <span class="math display">\[
+A = \begin{bmatrix} 4 &amp; 0 &amp; -2 \\ 2 &amp; 2 &amp; -2 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}
+\]</span> Vamos determinar os autovalores e autovetores de <span class="math inline">\(A\)</span>.</p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p><strong>Calcule o polinômio característico:</strong> <span class="math display">\[p(\lambda) = \det\begin{bmatrix} 4-\lambda &amp; 0 &amp; -2 \\ 2 &amp; 2-\lambda &amp; -2 \\ 1 &amp; 0 &amp; 1-\lambda \end{bmatrix} = -( \lambda - 2)^2 (\lambda - 3).\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Calcule as raízes do polinômio característico:</strong> <span class="math display">\[-( \lambda - 2)^2 (\lambda - 3) = 0 \Rightarrow \lambda_1 = 2 \mbox{ (multiplicidade 2)},\ \lambda_2 = 3.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Para cada autovalor, calcule o correspondente autovetor:</strong> Para <span class="math inline">\(\lambda_1 = 2\)</span>: <span class="math display">\[(A - 2I)X = \begin{bmatrix} 2 &amp; 0 &amp; -2 \\ 2 &amp; 0 &amp; -2 \\ 1 &amp; 0 &amp; -1 \end{bmatrix}X = \overline{0}.\]</span> A forma escalonada reduzida desta matriz é <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Os autovetores associados a <span class="math inline">\(\lambda_1\)</span> são da forma <span class="math inline">\(X = \begin{bmatrix} \alpha \\ \beta \\ \alpha \end{bmatrix} \mbox{ com } \alpha,\beta\in\mathbb R\)</span>.</p>
+<p><span class="math display">\[
+\alpha = 1\mbox{ e } \beta = 0: X_1 = \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}\quad
+\alpha = 0\mbox{ e }\beta = 1: X_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}.
+\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Para cada autovalor, calcule o correspondente autovetor:</strong> Para <span class="math inline">\(\lambda_2 = 3\)</span>: <span class="math display">\[(A - 3I)X = \begin{bmatrix} 1 &amp; 0 &amp; -2 \\ 2 &amp; -1 &amp; -2 \\ 1 &amp; 0 &amp; -2 \end{bmatrix}X = \overline{0}\]</span>. A forma escalonada reduzida desta matriz é <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; -2 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 0 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Os autovetores associados a <span class="math inline">\(\lambda_2\)</span> são da forma <span class="math inline">\(X_3 = \begin{bmatrix} 2\gamma \\ 2\gamma \\ \gamma \end{bmatrix} \mbox{ com } \gamma\in\mathbb R\)</span>.</p>
+<p>Escolhemos <span class="math inline">\(\gamma = 1\)</span>, então <span class="math inline">\(X_3 = \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Forme a matriz <span class="math inline">\(P\)</span> com os autovetores como colunas e a matriz diagonal <span class="math inline">\(D\)</span> com os autovalores na diagonal: <span class="math display">\[P = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 2 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}, \quad D = \begin{bmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 3 \end{bmatrix}.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Verifique se <span class="math inline">\(AP = PD\)</span>:</strong> Pode-se verificar que para <span class="math display">\[P = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 2 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}, \quad D = \begin{bmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 3 \end{bmatrix}.\]</span> temos <span class="math display">\[
+P^{-1}AP = D.
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="diagonalização-4" class="slide level2">
+<h2>Diagonalização</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 2</strong></span> Uma matriz <span class="math inline">\(A_{n\times n}\)</span> é diagonalizável se <span class="math inline">\(A\)</span> possui <span class="math inline">\(n\)</span> autovetores LI.</p>
+</div>
+<p><span class="bg-yellow">Como garantir que os autovetores são LI?</span></p>
+<p>Assuma que <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span> são autovetores não nulos associados a autovalores diferentes <span class="math inline">\(\lambda_1\)</span> e <span class="math inline">\(\lambda_2\)</span>. Se <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span> forem LD, então existem escalares <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span>, não ambos nulos, tais que <span class="math display">\[
+\alpha V_1 + \beta V_2 = \overline{0}.
+\]</span></p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Multiplicando ambos os lados por <span class="math inline">\(A\)</span> obtemos <span class="math display">\[
+\alpha A V_1 + \beta A V_2 = \overline{0} \Rightarrow \alpha \lambda_1 V_1 + \beta \lambda_2 V_2 = \overline{0}.
+\]</span> Subtraindo <span class="math inline">\(\lambda_2\)</span> vezes a primeira equação da segunda obtemos <span class="math display">\[
+\alpha (\lambda_1 - \lambda_2) V_1 = \overline{0}.
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Como <span class="math inline">\(\lambda_1 \neq \lambda_2\)</span> e <span class="math inline">\(V_1 \neq \overline{0}\)</span>, segue que <span class="math inline">\(\alpha = 0\)</span>. Daí <span class="math inline">\(\beta = 0\)</span> que é uma contradição.</p>
+<p>Logo <span class="math inline">\(V_1\)</span> e <span class="math inline">\(V_2\)</span> são LI.</p>
+</div>
+</div>
+</section>
 <section id="diagonalização-5" class="slide level2">
 <h2>Diagonalização</h2>
-<p>Teorema: uma matriz quadrada <span class="math inline">\(A_{n\times n}\)</span> é diagonalizável se <span class="math inline">\(A\)</span> possui <span class="math inline">\(n\)</span> autovetores LI.</p>
-<p>Para <span class="math inline">\(A\)</span> não ser diagonalizável tem que faltar autovetores LI.</p>
-<p>Teorema: autovetores associados a autovalores diferentes são LI.</p>
+<p>Argumento similar funciona para um número qualquer de autovetores associados a autovalores diferentes.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3</strong></span> Autovetores associados a autovalores diferentes são LI.</p>
+</div>
 <p>Deste teorema vemos que na tentativa de construir a matriz <span class="math inline">\(P\)</span> de autovetores para diagonalizar <span class="math inline">\(A\)</span>:</p>
 <ul>
 <li>não precisamos nos preocupar com colunas associadas a autovalores diferentes. Elas já nascem LI.</li>
@@ -326,26 +430,6 @@ V_1 &amp; V_2 &amp; V_3 &amp; V_4 &amp; V_5 &amp; V_6 &amp; V_7 \\
 </ul>
 <p>Quando a dimensão de um autoespaço é menor que a esperada, a matriz <span class="math inline">\(A\)</span> não é diagonalizável.</p>
 </section>
-<section id="aparência-das-matrizes-p-e-d-2" class="slide level2">
-<h2>Aparência das matrizes <span class="math inline">\(P\)</span> e <span class="math inline">\(D\)</span></h2>
-<p><span class="math display">\[
-D = \left[ \begin{array}{c|cc|cccc}
-\ \mathbf{3}\  &amp;  0            &amp; 0             &amp; 0       &amp; 0       &amp; 0       &amp; 0          \\ \hline
-0           &amp; \ \mathbf{5} \  &amp; 0             &amp; 0       &amp; 0       &amp; 0       &amp; 0          \\
-0           &amp; 0             &amp; \ \mathbf{5}\   &amp; 0       &amp; 0       &amp; 0       &amp; 0          \\ \hline
-0           &amp; 0             &amp; 0             &amp; \ \mathbf{9}\  &amp; 0       &amp; 0       &amp; 0          \\
-0           &amp; 0             &amp; 0             &amp; 0       &amp; \ \mathbf{9}\  &amp; 0       &amp; 0          \\
-0           &amp; 0             &amp; 0             &amp; 0       &amp; 0       &amp; \ \mathbf{9}\  &amp; 0          \\
-0           &amp; 0             &amp; 0             &amp; 0       &amp; 0       &amp; 0       &amp; \ \mathbf{9}\     \end{array}\right]
-\]</span></p>
-<p><span class="math display">\[
-P = \left[ \begin{array}{c|cc|cccc}
-    &amp;     &amp;     &amp;     &amp;     &amp;     &amp;     \\
-V_1 &amp; V_2 &amp; V_3 &amp; V_4 &amp; V_5 &amp; V_6 &amp; V_7 \\
-    &amp;     &amp;     &amp;     &amp;     &amp;     &amp;     \end{array}\right]
-\]</span></p>
-<p>Quando a dimensão de um autoespaço é menor que a esperada, a matriz <span class="math inline">\(A\)</span> não é diagonalizável.</p>
-</section>
 <section id="diagonalização-de-matrizes-simétricas" class="slide level2">
 <h2>Diagonalização de matrizes simétricas</h2>
 <p>Nas aulas anteriores vimos que existem matrizes que não são diagonalizáveis.</p>
@@ -353,15 +437,105 @@ V_1 &amp; V_2 &amp; V_3 &amp; V_4 &amp; V_5 &amp; V_6 &amp; V_7 \\
 <p>Definição. Uma matriz quadrada <span class="math inline">\(A\)</span> é simétrica se <span class="math inline">\(A=A^t\)</span>. Neste caso existe uma simetria em relação à diagonal principal.</p>
 <p><span class="math display">\[\begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 3 &amp; 5 &amp; 0 \\ 1 &amp; 0 &amp; 7 \end{bmatrix}\qquad
 \begin{bmatrix} 1 &amp; 8 &amp; 3 &amp; 5  \\ 8 &amp; 0 &amp; 2 &amp; 7  \\ 3 &amp; 2 &amp; 3 &amp; 9 \\ 5 &amp; 7 &amp; 9 &amp; 4 \end{bmatrix}\]</span></p>
-<p>Teorema. Para uma matriz simétrica <span class="math inline">\(A\)</span>, autovetores associados a autovalores diferentes são ortogonais.</p>
 </section>
-<section id="diagonalização-de-matrizes-simétricas-1" class="slide level2">
-<h2>Diagonalização de matrizes simétricas</h2>
-<p>Se <span class="math inline">\(A_{n \times n}\)</span> é uma matriz simétrica, então autoespaços associados a autovalores diferentes são subespaços ortogonais de <span class="math inline">\(\mathbb{R}^n\)</span>. Considerando bases ortonormais para cada um destes autoespaços, é possível construir uma matriz <span class="math inline">\(P\)</span> para diagonalizar <span class="math inline">\(A\)</span> tal que as colunas de <span class="math inline">\(P\)</span> são vetores ortonormais de <span class="math inline">\(\mathbb{R}^n\)</span>. Como vetores ortogonais são LI, segue que <span class="math inline">\(P\)</span> é invertível.</p>
-<p>Teorema. Toda matriz simétrica <span class="math inline">\(A\)</span> é diagonalizável. Mais ainda, existe uma matriz <span class="math inline">\(P\)</span> cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(P^{-1} A P = D\)</span>.</p>
+<section id="exemplo-matriz-simétrica" class="slide level2">
+<h2>Exemplo – Matriz simétrica</h2>
+<p>Considere a matriz simétrica <span class="math display">\[
+A = \begin{bmatrix} 2 &amp; 1 &amp; 1 \\ 1 &amp; 2 &amp; 1 \\ 1 &amp; 1 &amp; 2 \end{bmatrix} .
+\]</span></p>
+<p>Vamos determinar os autovalores e autovetores de <span class="math inline">\(A\)</span>.</p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p><strong>Calcule o polinômio característico:</strong> <span class="math display">\[p(\lambda) = \det\begin{bmatrix} 2-\lambda &amp; 1 &amp; 1 \\ 1 &amp; 2-\lambda &amp; 1 \\ 1 &amp; 1 &amp; 2-\lambda \end{bmatrix} = -(\lambda - 1)(\lambda - 4)^2.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Calcule as raízes do polinômio característico:</strong> <span class="math display">\[-(\lambda - 1)(\lambda - 4)^2 = 0 \Rightarrow \lambda_1 = 1,\ \lambda_2 = 4 \mbox{ (multiplicidade 2)}.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Para cada autovalor, calcule o correspondente autovetor:</strong> Para <span class="math inline">\(\lambda_1 = 1\)</span>: <span class="math display">\[(A - I)X = \begin{bmatrix} 1 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 1 \end{bmatrix}X = \overline{0}.\]</span> A forma escalonada reduzida desta matriz é <span class="math inline">\(\begin{bmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Os autovetores associados a <span class="math inline">\(\lambda_1\)</span> são da forma <span class="math inline">\(X_1 = \begin{bmatrix} \alpha \\ \beta \\ -\alpha - \beta \end{bmatrix} \mbox{ com } \alpha,\beta\in\mathbb R\)</span>.<br>
+<span class="math display">\[
+\alpha = 1 \mbox{ e } \beta = 0:\ X_1 = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}\quad
+\alpha = 0 \mbox{ e } \beta = 1:\ X_2 = \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix}.
+\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Para cada autovalor, calcule o correspondente autovetor:</strong> Para <span class="math inline">\(\lambda_2 = 4\)</span>: <span class="math display">\[(A - 4I)X = \begin{bmatrix} -2 &amp; 1 &amp; 1 \\ 1 &amp; -2 &amp; 1 \\ 1 &amp; 1 &amp; -2 \end{bmatrix}X = \overline{0}.\]</span> A forma escalonada reduzida desta matriz é <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; -1 \\ 0 &amp; 0 &amp; 0 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Os autovetores associados a <span class="math inline">\(\lambda_2\)</span> são da forma <span class="math inline">\(X_3 = \begin{bmatrix} \gamma \\ \gamma \\ \gamma \end{bmatrix} \mbox{ com } \gamma\in\mathbb R\)</span>.</p>
+<p>Escolhemos <span class="math inline">\(\gamma = 1\)</span>, então <span class="math inline">\(X_3 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Forme a matriz <span class="math inline">\(P\)</span> com os autovetores como colunas e a matriz diagonal <span class="math inline">\(D\)</span> com os autovalores na diagonal: <span class="math display">\[P = \begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ -1 &amp; -1 &amp; 1 \end{bmatrix}, \quad D = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 4 \end{bmatrix}.\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p><strong>Verifique se <span class="math inline">\(AP = PD\)</span>:</strong> Pode-se verificar que para <span class="math display">\[P = \begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ -1 &amp; -1 &amp; 1 \end{bmatrix}, \quad D = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 4 \end{bmatrix}.\]</span> temos <span class="math display">\[
+P^{-1}AP = D.
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="a-ortogonalidade-de-autovetores" class="slide level2">
+<h2>A ortogonalidade de autovetores</h2>
+<p><span class="math display">\[
+A = \begin{bmatrix} 2 &amp; 1 &amp; 1 \\ 1 &amp; 2 &amp; 1 \\ 1 &amp; 1 &amp; 2 \end{bmatrix} .
+\]</span></p>
+<div class="r-stack">
+<div class="fragment current-visible">
+<p>Calculamos os autovetores associados aos autovalores <span class="math inline">\(\lambda=1\)</span> e <span class="math inline">\(\lambda=4\)</span>: <span class="math display">\[
+X_1 = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}\ (\lambda=1),\quad X_2 = \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix}\ (\lambda=1), \quad X_3 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\ (\lambda=4).
+\]</span> Observe que <span class="math inline">\(X_1\perp X_3\)</span> e <span class="math inline">\(X_2\perp X_3\)</span>. Além disso, se trocarmos <span class="math inline">\(X_2\)</span> por <span class="math inline">\(X_2'=X_2 - \frac{1}{2}X_1=\begin{bmatrix} -\frac{1}{2} \\ 1 \\ -\frac{1}{2} \end{bmatrix}\)</span> (que também é um autovetor associado a <span class="math inline">\(\lambda=1\)</span>), então <span class="math inline">\(X_1\perp X_2'\)</span> e <span class="math inline">\(X_2'\perp X_3\)</span>.</p>
+</div>
+<div class="fragment current-visible">
+<p>Ora temos <span class="math inline">\(X_1,X_2',X_3\)</span> são autovetores ortogonais para <span class="math inline">\(A\)</span>: <span class="math display">\[
+X_1 = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix},\quad X_2' = \begin{bmatrix} -\frac{1}{2} \\ 1 \\ -\frac{1}{2} \end{bmatrix}, \quad X_3 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}.
+\]</span> Além disso, podemos normalizá-los para obter autovetores ortonormais: <span class="math display">\[
+U_1 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix},\quad U_2 = \frac{1}{\sqrt{6}}\begin{bmatrix} -1 \\ 2 \\ -1 \end{bmatrix}, \quad U_3 = \frac{1}{\sqrt{3}}\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}.
+\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p>Com estes autovetores ortonormais, podemos formar a matriz <span class="math inline">\(P\)</span> e a matriz diagonal <span class="math inline">\(D\)</span>: <span class="math display">\[P = \begin{bmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ 0 &amp; \frac{2}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \end{bmatrix}, \quad D = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 4 \end{bmatrix}\]</span> tais que <span class="math display">\[
+P^{-1}AP = D.
+\]</span></p>
+</div>
+<div class="fragment current-visible">
+<p>Aqui <span class="math display">\[
+P=\begin{bmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ 0 &amp; \frac{2}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \end{bmatrix}
+\]</span> é uma matriz <span class="bg-green">ortogonal</span>, ou seja, suas colunas são <span class="bg-green">ortonormais</span>. Isso pode ser usado para calcular a inversa de <span class="math inline">\(P\)</span>, pois <span class="math display">\[
+PP^t = I \Rightarrow P^{-1} = P^t.
+\]</span> Ou seja, neste caso temos, <span class="math display">\[
+P^t A P = D.
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="a-ortogonalidade-de-autovetores-1" class="slide level2">
+<h2>A ortogonalidade de autovetores</h2>
+<p>Assuma que <span class="math inline">\(A\)</span> é uma matriz simétrica e sejam <span class="math inline">\(X_1\)</span> e <span class="math inline">\(X_2\)</span> autovetores (colunas) associados a autovalores diferentes <span class="math inline">\(\lambda_1\)</span> e <span class="math inline">\(\lambda_2\)</span>. Vamos ver que <span class="math inline">\(X_1 \perp X_2\)</span>.</p>
+<p>De fato, observe que <span class="math display">\[
+\left&lt;X_1,X_2\right&gt;=X_1^t X_2.
+\]</span> Ora, <span class="math display">\[\begin{align*}
+\lambda_1 \left&lt;X_1,X_2\right&gt; &amp; = \lambda_1 X_1^t X_2 = ( \lambda_1 X_1 )^t X_2 = ( A X_1 )^t X_2 = X_1^t A^t X_2 \\
+&amp; = X_1^t A X_2 = X_1^t ( \lambda_2 X_2 ) = \lambda_2 X_1^t X_2 = \lambda_2 \left&lt;X_1,X_2\right&gt;.
+\end{align*}\]</span> Ou seja, <span class="math display">\[
+\lambda_1 \left&lt;X_1,X_2\right&gt; = \lambda_2 \left&lt;X_1,X_2\right&gt; \Rightarrow (\lambda_1 - \lambda_2) \left&lt;X_1,X_2\right&gt; = 0.
+\]</span></p>
+<p>Como <span class="math inline">\(\lambda_1 \neq \lambda_2\)</span>, segue que <span class="math inline">\(\left&lt;X_1,X_2\right&gt; = 0\)</span>, ou seja, <span class="math inline">\(X_1 \perp X_2\)</span>.</p>
+</section>
+<section id="a-ortogonalidade-de-autovetores-2" class="slide level2">
+<h2>A ortogonalidade de autovetores</h2>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 4</strong></span> Para uma matriz simétrica <span class="math inline">\(A\)</span>, autovetores associados a autovalores diferentes são ortogonais.</p>
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 5</strong></span> Toda matriz simétrica <span class="math inline">\(A\)</span> é diagonalizável. Mais ainda, existe uma matriz <span class="math inline">\(P\)</span> cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(P^{-1} A P = D\)</span>.</p>
+</div>
 <p>Para ver a demonstração completa desse teorema consulte a apostila.</p>
 </section>
-<section id="diagonalização-de-matrizes-simétricas-2" class="slide level2">
+<section id="diagonalização-de-matrizes-simétricas-1" class="slide level2">
 <h2>Diagonalização de matrizes simétricas</h2>
 <p>Exemplos. Para cada uma das matrizes simétricas a seguir, determine matrizes <span class="math inline">\(P\)</span> e <span class="math inline">\(D\)</span> como no teorema anterior: colunas de <span class="math inline">\(P\)</span> são autovetores ortogonais e unitários.</p>
 <ol type="1">
@@ -383,24 +557,28 @@ V_1 &amp; V_2 &amp; V_3 &amp; V_4 &amp; V_5 &amp; V_6 &amp; V_7 \\
 <li><span class="math inline">\(P^{-1} = P^t\)</span>.</li>
 </ul>
 </section>
-<section id="diagonalização-de-matrizes-simétricas-3" class="slide level2">
+<section id="diagonalização-de-matrizes-simétricas-2" class="slide level2">
 <h2>Diagonalização de matrizes simétricas</h2>
-<p>Do teorema</p>
-<p>Teorema. Toda matriz simétrica <span class="math inline">\(A\)</span> é diagonalizável. Mais ainda, existe uma matriz <span class="math inline">\(P\)</span> cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(P^{-1} A P = D\)</span>.</p>
-<p>vemos que é possível diagonalizar uma matriz simétrica <span class="math inline">\(A\)</span> com uma matriz ortogonal <span class="math inline">\(P\)</span>.</p>
-<p>Vamos resumir isto no próximo teorema.</p>
-<p>Teorema. Seja <span class="math inline">\(A\)</span> uma matriz simétrica. Então existe uma matriz ortogonal <span class="math inline">\(P\)</span> e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(P^{-1} A P = D\)</span>.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 6</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz simétrica. Então existe uma matriz ortogonal <span class="math inline">\(P\)</span> e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math display">\[
+P^{-1} A P = D.
+\]</span></p>
+</div>
 <p>Como <span class="math inline">\(P\)</span> é ortogonal, <span class="math inline">\(P^{-1} = P^t\)</span>, e assim obtemos.</p>
-<p>Teorema. Seja <span class="math inline">\(A\)</span> uma matriz simétrica. Então existe uma matriz ortogonal <span class="math inline">\(P\)</span> e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math inline">\(P^t A P = D\)</span>.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 7</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz simétrica. Então existe uma matriz ortogonal <span class="math inline">\(P\)</span> e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math display">\[
+P^t A P = D.
+\]</span></p>
+</div>
 </section>
-<section id="diagonalização-de-matrizes-simétricas-4" class="slide level2">
+<section id="diagonalização-de-matrizes-simétricas-3" class="slide level2">
 <h2>Diagonalização de matrizes simétricas</h2>
 <p>Multiplicando o lado esquerdo da igualdade <span class="math inline">\(P^t A P = D\)</span> por <span class="math inline">\(P\)</span> e multiplicando o lado direito dessa igualdade por <span class="math inline">\(P^t\)</span> obtemos</p>
 <p><span class="math display">\[P^t A P = D \Rightarrow P (P^t A P)P^t = P D P^t \Rightarrow A = P D P^t\]</span></p>
 <p>Assim demonstramos o importante teorema.</p>
-<p>Teorema. Seja <span class="math inline">\(A\)</span> uma matriz simétrica. Então existe uma matriz ortogonal <span class="math inline">\(P\)</span> e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que</p>
-<p><span class="math display">\[\boxed{A = P D P^t}\]</span></p>
-<p>É esta a expressão que será utilizada para resolver o problema de identificação de cônicas enunciado desde a primeira aula.</p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 8</strong></span> Seja <span class="math inline">\(A\)</span> uma matriz simétrica. Então existe uma matriz ortogonal <span class="math inline">\(P\)</span> e existe uma matriz diagonal <span class="math inline">\(D\)</span> tais que <span class="math display">\[\boxed{A = P D P^t}\]</span> É esta a expressão que será utilizada para resolver o problema de identificação de cônicas enunciado na primeira página.</p>
+</div>
 
 
 </section>

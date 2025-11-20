@@ -11,35 +11,28 @@
     "href": "08_diagonalização.html#diagonalização-1",
     "title": "Diagonalização e Autovalores",
     "section": "Diagonalização",
-    "text": "Diagonalização\nDefinição: Uma matriz quadrada \\(A\\) é diagonalizável se existir uma matriz invertível \\(P\\) e se existir uma matriz diagonal \\(D\\) tais que\n\\[\\boxed{P^{-1} A P = D}\\]\n\nnem todas as matrizes são diagonalizáveis.\nvamos caracterizar as matrizes \\(P\\) e \\(D\\) em termos de \\(A\\).\nvamos determinar condições para a existência de \\(P\\) invertível.\nvamos caracterizar as matrizes que são diagonalizáveis.\ndepois vamos interpretar a diagonalização no contexto de cônicas no plano."
+    "text": "Diagonalização\n\nDefinição 1 Uma matriz quadrada \\(A\\) é diagonalizável se existir uma matriz invertível \\(P\\) e se existir uma matriz diagonal \\(D\\) tais que \\[\\boxed{P^{-1} A P = D}.\\]\n\nObservações:\n\nnem todas as matrizes são diagonalizáveis.\nvamos caracterizar as matrizes \\(P\\) e \\(D\\) em termos de \\(A\\).\nvamos determinar condições para a existência de \\(P\\) invertível.\nvamos caracterizar as matrizes que são diagonalizáveis.\ndepois vamos interpretar a diagonalização no contexto de cônicas no plano."
   },
   {
     "objectID": "08_diagonalização.html#diagonalização-2",
     "href": "08_diagonalização.html#diagonalização-2",
     "title": "Diagonalização e Autovalores",
     "section": "Diagonalização",
-    "text": "Diagonalização\nSe uma matriz \\(A_{n \\times n}\\) é diagonalizável então existe uma matriz invertível \\(P\\) e existe uma matriz diagonal \\(D\\) tais que\n\\[\\boxed{P^{-1} A P = D}\\]\nMultiplicando por \\(P\\) do lado esquerdo obtemos \\(AP=PD\\).\nFazendo um exemplo \\(2 \\times 2\\) podemos entender que se as colunas de \\(P\\) são \\(X_1,X_2,\\ldots,X_n\\) e se os elementos da diagonal de \\(D\\) são \\(\\lambda_1,\\lambda_2,\\ldots,\\lambda_n\\), então as colunas de \\(AP\\) são \\(AX_1,AX_2,\\ldots,AX_n\\) e as colunas de \\(PD\\) são \\(\\lambda_1 X_1,\\lambda_2 X_2,\\ldots,\\lambda_n X_n\\).\nComo \\(AP=PD\\), igualando as colunas destas duas matrizes vemos que\n\\[AX_1 = \\lambda_1 X_1,\\ AX_2 = \\lambda_2 X_2,\\ \\ldots ,\\ AX_n = \\lambda_n X_n.\\]"
+    "text": "Diagonalização\nSe uma matriz \\(A_{n \\times n}\\) é diagonalizável então existe uma matriz invertível \\(P\\) e existe uma matriz diagonal \\(D\\) tais que\n\\[\\boxed{P^{-1} A P = D}\\]\nMultiplicando por \\(P\\) do lado esquerdo obtemos \\[\nAP=PD.\n\\]\n\n\nFazendo um exemplo \\(2 \\times 2\\) podemos entender que se as colunas de \\(P\\) são \\(X_1,X_2,\\ldots,X_n\\) e se os elementos da diagonal de \\(D\\) são \\(\\lambda_1,\\lambda_2,\\ldots,\\lambda_n\\), então as colunas de \\(AP\\) são \\[AX_1,AX_2,\\ldots,AX_n\\] e as colunas de \\(PD\\) são \\[\\lambda_1 X_1,\\lambda_2 X_2,\\ldots,\\lambda_n X_n.\\]\n\n\nComo \\(AP=PD\\), igualando as colunas destas duas matrizes vemos que \\[AX_1 = \\lambda_1 X_1,\\ AX_2 = \\lambda_2 X_2,\\ \\ldots ,\\ AX_n = \\lambda_n X_n.\\]"
   },
   {
     "objectID": "08_diagonalização.html#diagonalização-3",
     "href": "08_diagonalização.html#diagonalização-3",
     "title": "Diagonalização e Autovalores",
     "section": "Diagonalização",
-    "text": "Diagonalização\nPortanto se \\(X\\) é uma coluna de \\(P\\) e se \\(\\lambda\\) é o correspondente elemento da diagonal de \\(D\\), provamos que \\(X\\) e \\(\\lambda\\) estão relacionados pela equação \\(AX = \\lambda X\\). Como esta equação é válida para todas as colunas, parece interessante dar uma definição para isso.\nDefinição: Seja \\(A\\) uma matriz quadrada. Um número real \\(\\lambda\\) é um autovalor de \\(A\\) se existir um vetor \\(V \\neq \\vec{0}\\) tal que\n\\[AV = \\lambda V.\\]\nNeste caso \\(V\\) é um autovetor associado ao autovalor \\(\\lambda\\).\nObs: o vetor \\(V\\) deve ser diferente de zero, pois estes vetores serão as colunas de \\(P\\). Queremos \\(P\\) invertível. Logo \\(\\det(P) \\neq 0\\). E portanto \\(P\\) não pode possuir uma coluna zerada."
-  },
-  {
-    "objectID": "08_diagonalização.html#diagonalização-4",
-    "href": "08_diagonalização.html#diagonalização-4",
-    "title": "Diagonalização e Autovalores",
-    "section": "Diagonalização",
-    "text": "Diagonalização\nAté o momento observamos que se \\(A\\) é diagonalizável com \\(P^{-1}AP=D\\), então \\(P\\) é uma matriz invertível cujas colunas são autovetores, e os elementos da diagonal principal de \\(D\\) são os correspondentes autovalores de \\(A\\).\nEntão para achar \\(P\\) e \\(D\\) devemos calcular autovetores e autovalores.\nComo fazer isso? Boa pergunta, não é mesmo????"
+    "text": "Diagonalização\nPortanto se \\(X\\) é uma coluna de \\(P\\) e se \\(\\lambda\\) é o correspondente elemento da diagonal de \\(D\\), provamos \\[\nAX = \\lambda X.\n\\] Como esta equação é válida para todas as colunas, parece interessante dar uma definição para isso.\n\nDefinição 2 Seja \\(A\\) uma matriz quadrada. Um número real \\(\\lambda\\) é um autovalor de \\(A\\) se existir um vetor \\(V \\neq \\vec{0}\\) tal que \\[AV = \\lambda V.\\] Neste caso \\(V\\) é um autovetor associado ao autovalor \\(\\lambda\\).\n\nObs: o vetor \\(V\\) deve ser diferente de zero, pois o vetor nulo satisfaz esta equação para todo \\(\\lambda\\in\\mathbb R\\). Além disso, estes vetores serão as colunas de \\(P\\). Queremos \\(P\\) invertível. Logo \\(\\det(P) \\neq 0\\). E portanto \\(P\\) não pode possuir uma coluna zerada.\nEntão para achar \\(P\\) e \\(D\\) devemos calcular autovetores e autovalores."
   },
   {
     "objectID": "08_diagonalização.html#autovalores-e-autovetores",
     "href": "08_diagonalização.html#autovalores-e-autovetores",
     "title": "Diagonalização e Autovalores",
     "section": "Autovalores e autovetores",
-    "text": "Autovalores e autovetores\nVamos ver como podemos calcular autovalores e autovetores.\nUm autovetor \\(V\\) e o correspondente autovalor \\(\\lambda\\) estão relacionados por \\(AV = \\lambda V\\).\nDaí\n\\[AV - \\lambda V = \\overline{0}\\]\n\\[AV - \\lambda I_n V = \\overline{0}\\]\n\\[(A - \\lambda I_n) V = \\overline{0}\\]\nComo \\(V\\) não é o vetor nulo, concluímos que \\(V\\) é uma solução não trivial do sistema linear homogêneo\n\\[(A - \\lambda I_n) X = \\overline{0}\\]"
+    "text": "Autovalores e autovetores\nVamos ver como podemos calcular autovalores e autovetores.\nUm autovetor \\(V\\) e o correspondente autovalor \\(\\lambda\\) estão relacionados por \\[\nAV = \\lambda V.\n\\]\nDaí\n\\[AV - \\lambda V = \\overline{0}\\]\n\\[AV - \\lambda I_n V = \\overline{0}\\]\n\\[(A - \\lambda I_n) V = \\overline{0}\\]\nComo \\(V\\) não é o vetor nulo, concluímos que \\(V\\) é uma solução não trivial do sistema linear homogêneo\n\\[(A - \\lambda I_n) X = \\overline{0}\\]"
   },
   {
     "objectID": "08_diagonalização.html#autovalores-e-autovetores-1",
@@ -53,42 +46,42 @@
     "href": "08_diagonalização.html#autovalores-e-autovetores-2",
     "title": "Diagonalização e Autovalores",
     "section": "Autovalores e autovetores",
-    "text": "Autovalores e autovetores\nDada uma matriz quadrada \\(A\\):\n\nCalcule as raízes (soluções) da equação \\(\\det(A - \\lambda I_n) = 0\\). Estas raízes são os autovalores de \\(A\\).\nPara cada \\(\\lambda\\) encontrado em (a), o sistema homogêneo \\((A - \\lambda I_n) X = \\overline{0}\\) possui solução não trivial.\nToda solução não trivial deste sistema é um autovetor \\(V\\) associado ao autovalor \\(\\lambda\\).\n\nObservação: se \\(V\\) é um autovetor de \\(A\\), então \\(AV=\\lambda V\\). Multiplicando os dois lados desta equação por um número vemos que todo múltiplo de \\(V\\) também é um autovetor de \\(A\\) associado ao mesmo autovalor. É por este motivo que os autovetores não são únicos. E em um sistema linear homegêneo com determinante zero, sempre existem infinitas soluções."
+    "text": "Autovalores e autovetores\nDada uma matriz quadrada \\(A\\):\n\nCalcule as raízes (soluções) da equação \\(\\det(A - \\lambda I_n) = 0\\). Estas raízes são os autovalores de \\(A\\).\nPara cada \\(\\lambda\\) encontrado em 1., o sistema homogêneo \\((A - \\lambda I_n) X = \\overline{0}\\) possui solução não trivial.\nToda solução não trivial deste sistema é um autovetor \\(V\\) associado ao autovalor \\(\\lambda\\).\n\nObservação: E em um sistema linear homegêneo com determinante zero, sempre existem infinitas soluções e assim o autovetor não é único. Na verdade, se \\(V\\) é um autovetor, então qualquer múltiplo escalar de \\(V\\) também é um autovetor associado ao mesmo autovalor.\nO polinômio característico de \\(A\\) é \\[p(\\lambda) = \\det(A - \\lambda I_n).\\]\nOs autovalores são as raízes do polinômio característico.\nSe \\(A\\) é uma matriz \\(n \\times n\\), então \\(p(\\lambda)\\) é um polinômio de grau \\(n\\)."
   },
   {
     "objectID": "08_diagonalização.html#autovalores-e-autovetores-3",
     "href": "08_diagonalização.html#autovalores-e-autovetores-3",
     "title": "Diagonalização e Autovalores",
     "section": "Autovalores e autovetores",
-    "text": "Autovalores e autovetores\nDada uma matriz quadrada \\(A\\):\n\nAs raízes da equação \\(\\det(A - \\lambda I_n) = 0\\) são os autovalores.\nPara cada autovalor \\(\\lambda\\), as solução não triviais do sistema linear homogêneo \\((A - \\lambda I_n) X = \\overline{0}\\) são os autovetores.\n\nO polinômio característico de \\(A\\) é \\(p(\\lambda) = \\det(A - \\lambda I_n)\\).\nOs autovalores são as raízes do polinômio característico.\nSe \\(A\\) é uma matriz \\(n \\times n\\), então \\(p(\\lambda)\\) é um polinômio de grau \\(n\\)."
+    "text": "Autovalores e autovetores\n\nExemplo 1  \n\nDetermine os autovalores e os autovetores da matriz \\[A = \\begin{bmatrix} 3 & -1 \\\\ -2 & 2 \\end{bmatrix}.\\]\nExiba uma matriz \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(AP=PD\\).\nExiste uma tal matriz \\(P\\) invertível? Existe uma tal matriz \\(P\\) não invertível?\nA matriz \\(A\\) é diagonalizável? Se for, exiba uma matriz invertível \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\)."
+  },
+  {
+    "objectID": "08_diagonalização.html#solução",
+    "href": "08_diagonalização.html#solução",
+    "title": "Diagonalização e Autovalores",
+    "section": "Solução",
+    "text": "Solução\nVamos determinar os autovalores e autovetores da matriz \\[A = \\begin{bmatrix} 3 & -1 \\\\ -2 & 2 \\end{bmatrix}.\\]\n\n\nCalcule o polinômio característico: \\[p(\\lambda) = \\det\\begin{bmatrix} 3-\\lambda & -1 \\\\ -2 & 2-\\lambda \\end{bmatrix} = (3-\\lambda)(2-\\lambda) - 2 = \\lambda^2 - 5\\lambda + 4.\\]\n\n\nCalcule as raízes do polinômio característico: \\[\\lambda^2 - 5\\lambda + 4 = 0 \\Rightarrow (\\lambda - 4)(\\lambda - 1) = 0 \\Rightarrow \\lambda_1 = 4,\\ \\lambda_2 = 1.\\]\n\n\nPara cada autovalor, calcule o correspondente autovetor:\nPara \\(\\lambda_1 = 4\\): \\[(A - 4I)X = \\begin{bmatrix} -1 & -1 \\\\ -2 & -2 \\end{bmatrix}X = \\overline{0}.\\] Os autovetores associados a \\(\\lambda_1\\) são da forma \\[X_1 = \\begin{bmatrix} \\alpha \\\\ -\\alpha \\end{bmatrix} \\mbox{ com } \\alpha\\in\\mathbb R.\\] Escolhemos \\(\\alpha = 1\\), então \\(X_1 = \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix}\\).\n\n\nPara cada autovalor, calcule o correspondente autovetor:\nPara \\(\\lambda_2 = 1\\): \\[(A - I)X = \\begin{bmatrix} 2 & -1 \\\\ -2 & 1 \\end{bmatrix}X = \\overline{0}.\\] Os autovetores associados a \\(\\lambda_2\\) são da forma \\[X_2 = \\begin{bmatrix} \\beta \\\\ 2\\beta \\end{bmatrix} \\mbox{ com } \\beta\\in\\mathbb R.\\] Escolhemos \\(\\beta = 1\\), então \\(X_2 = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}\\).\n\n\nForme a matriz \\(P\\) com os autovetores como colunas e a matriz diagonal \\(D\\) com os autovalores na diagonal: \\[P = \\begin{bmatrix} 1 & 1 \\\\ -1 & 2 \\end{bmatrix}, \\quad D = \\begin{bmatrix} 4 & 0 \\\\ 0 & 1 \\end{bmatrix}.\\]\n\n\nVerifique se \\(AP = PD\\): \\[AP = \\begin{bmatrix} 3 & -1 \\\\ -2 & 2 \\end{bmatrix} \\begin{bmatrix} 1 & 1 \\\\ -1 & 2 \\end{bmatrix} = \\begin{bmatrix} 4 & 1 \\\\ -4 & 2 \\end{bmatrix},\\] \\[PD = \\begin{bmatrix} 1 & 1 \\\\ -1 & 2 \\end{bmatrix} \\begin{bmatrix} 4 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 4 & 1 \\\\ -4 & 2 \\end{bmatrix}.\\] Portanto, \\(AP = PD\\).\nAlém disso, \\(\\det(P) = 1 \\cdot 2 - (-1) \\cdot 1 = 3 \\neq 0\\), então \\(P\\) é invertível e \\[\nP^{-1}AP = D.\n\\]"
   },
   {
     "objectID": "08_diagonalização.html#autovalores-e-autovetores-4",
     "href": "08_diagonalização.html#autovalores-e-autovetores-4",
     "title": "Diagonalização e Autovalores",
     "section": "Autovalores e autovetores",
-    "text": "Autovalores e autovetores\nExemplo 1:\n\nDetermine os autovalores e os autovetores da matriz \\[A = \\begin{bmatrix} 3 & -1 \\\\ -2 & 2 \\end{bmatrix}.\\]\nExiba uma matriz \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(AP=PD\\).\nExiste uma tal matriz \\(P\\) invertível? Existe uma tal matriz \\(P\\) não invertível?\nA matriz \\(A\\) é diagonalizável? Se for, exiba uma matriz invertível \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\)."
+    "text": "Autovalores e autovetores\n\nExemplo 2  \n\nDetermine os autovalores e os autovetores da matriz \\[A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}.\\]\nExiba uma matriz \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(AP=PD\\).\nExiste uma tal matriz \\(P\\) invertível? Existe uma tal matriz \\(P\\) não invertível?\nA matriz \\(A\\) é diagonalizável? Se for, exiba uma matriz invertível \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\)."
   },
   {
-    "objectID": "08_diagonalização.html#autovalores-e-autovetores-5",
-    "href": "08_diagonalização.html#autovalores-e-autovetores-5",
+    "objectID": "08_diagonalização.html#solução-1",
+    "href": "08_diagonalização.html#solução-1",
     "title": "Diagonalização e Autovalores",
-    "section": "Autovalores e autovetores",
-    "text": "Autovalores e autovetores\nExemplo 2:\n\nDetermine os autovalores e os autovetores da matriz \\[A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}.\\]\nExiba uma matriz \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(AP=PD\\).\nExiste uma tal matriz \\(P\\) invertível? Existe uma tal matriz \\(P\\) não invertível?\nA matriz \\(A\\) é diagonalizável? Se for, exiba uma matriz invertível \\(P\\) e uma matriz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\)."
+    "section": "Solução",
+    "text": "Solução\nVamos determinar os autovalores e autovetores da matriz \\[A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}.\\]\n\n\nCalcule o polinômio característico: \\[p(\\lambda) = \\det\\begin{bmatrix} 1-\\lambda & 1 \\\\ 0 & 1-\\lambda \\end{bmatrix} = (1-\\lambda)^2.\\]\n\n\nCalcule as raízes do polinômio característico: \\[(1-\\lambda)^2 = 0 \\Rightarrow \\lambda_1 = 1.\\]\n\n\nPara o autovalor, calcule o correspondente autovetor: Para \\(\\lambda_1 = 1\\): \\[(A - I)X = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix}X = \\overline{0}.\\] Os autovetores associados a \\(\\lambda_1\\) são da forma \\[X_1 = \\begin{bmatrix} \\alpha \\\\ 0 \\end{bmatrix} \\mbox{ com } \\alpha\\in\\mathbb R.\\] Note que todos os autovetores são múltiplos de \\(X_1 = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\\) e não tem como escolher dois autovetores LI para colocar nas colunas de \\(P\\).\n\n\nLogo esta matriz \\(A\\) não é diagonalizável."
   },
   {
     "objectID": "08_diagonalização.html#autovalores-e-autovetores-diagonalização",
     "href": "08_diagonalização.html#autovalores-e-autovetores-diagonalização",
     "title": "Diagonalização e Autovalores",
     "section": "Autovalores e autovetores — diagonalização",
-    "text": "Autovalores e autovetores — diagonalização\nObservações importantes sobre uma dada matriz quadrada \\(A\\).\n\nSempre existe uma matriz \\(P\\) e sempre existe uma matriz diagonal \\(D\\) tais que \\(AP=PD\\). Basta montar uma matriz \\(P\\) cujas colunas são autovetores e basta colocar na diagonal principal de \\(D\\) os correspondentes autovalores.\nDe modo algum isto significa que \\(A\\) é diagonalizável.\nPara \\(A\\) ser diagonalizável, precisamos achar \\(P\\) invertível e \\(D\\) diagonal tais que \\(P^{-1}AP=D\\).\nSempre podemos passar da igualdade \\(P^{-1}AP=D\\) para a igualdade \\(AP=PD\\).\nMas para passar da igualdade \\(AP=PD\\) para a igualdade \\(P^{-1}AP=D\\) a matriz \\(P\\) deve ser invertível."
-  },
-  {
-    "objectID": "08_diagonalização.html#autovalores-e-autovetores-diagonalização-1",
-    "href": "08_diagonalização.html#autovalores-e-autovetores-diagonalização-1",
-    "title": "Diagonalização e Autovalores",
-    "section": "Autovalores e autovetores — diagonalização",
-    "text": "Autovalores e autovetores — diagonalização\nEntão para \\(A_{n\\times n}\\) ser diagonalizável deve ser possível montar uma matriz invertível \\(P_{n \\times n}\\) com \\(n\\) autovetores de \\(A\\).\nLembre-se que \\(P\\) é invertível se \\(\\det(P) \\neq 0\\) e que isto significa que as colunas de \\(P\\) são vetores LI.\nIsto dá a seguinte caracterização de matrizes diagonalizáveis.\nTeorema: uma matriz quadrada \\(A_{n\\times n}\\) é diagonalizável se \\(A\\) possui \\(n\\) autovetores LI.\nObserve que \\(A\\) sempre possui \\(n\\) autovalores, pois os autovalores são raízes de um polinômio \\(p(\\lambda) = \\det(A - \\lambda I_n)=0\\) de grau \\(n\\), e todo polinômio de grau \\(n\\) possui \\(n\\) raízes. Portanto a caracterização de matrizes diagonalizáveis não pode ser dada em termos de autovalores."
+    "text": "Autovalores e autovetores — diagonalização\nEntão para \\(A_{n\\times n}\\) ser diagonalizável deve ser possível montar uma matriz invertível \\(P_{n \\times n}\\) com \\(n\\) autovetores de \\(A\\).\nLembre-se que \\(P\\) é invertível se \\(\\det(P) \\neq 0\\) e que isto significa que as colunas de \\(P\\) são vetores LI.\nIsto dá a seguinte caracterização de matrizes diagonalizáveis.\n\nTeorema 1 Uma matriz \\(A_{n\\times n}\\) é diagonalizável se \\(A\\) possui \\(n\\) autovetores LI."
   },
   {
     "objectID": "08_diagonalização.html#exemplos",
@@ -98,11 +91,25 @@
     "text": "Exemplos\nVerifique se cada uma das seguintes matrizes \\(A\\) é diagonalizável ou não. Quando for, determine uma matriz invertível \\(P\\) e determine uma matiz diagonal \\(D\\) tais que \\(P^{-1}AP=D\\).\n\n\\(A = \\begin{bmatrix} 7 & -8 \\\\ 4 & -5 \\end{bmatrix}\\)\n\\(A = \\begin{bmatrix} 3 & 2 \\\\ -2 & 8 \\end{bmatrix}\\)\n\\(A = \\begin{bmatrix} 4 & 0 & -2 \\\\ 2 & 2 & -2 \\\\ 1 & 0 & 1 \\end{bmatrix}\\)\n\\(A = \\begin{bmatrix} 2 & 0 & 1 \\\\ 0 & -4 & 6 \\\\ 0 & -3 & 5 \\end{bmatrix}\\)"
   },
   {
+    "objectID": "08_diagonalização.html#solução-2",
+    "href": "08_diagonalização.html#solução-2",
+    "title": "Diagonalização e Autovalores",
+    "section": "Solução",
+    "text": "Solução\nConsidere a matriz \\[\nA = \\begin{bmatrix} 4 & 0 & -2 \\\\ 2 & 2 & -2 \\\\ 1 & 0 & 1 \\end{bmatrix}\n\\] Vamos determinar os autovalores e autovetores de \\(A\\).\n\n\nCalcule o polinômio característico: \\[p(\\lambda) = \\det\\begin{bmatrix} 4-\\lambda & 0 & -2 \\\\ 2 & 2-\\lambda & -2 \\\\ 1 & 0 & 1-\\lambda \\end{bmatrix} = -( \\lambda - 2)^2 (\\lambda - 3).\\]\n\n\nCalcule as raízes do polinômio característico: \\[-( \\lambda - 2)^2 (\\lambda - 3) = 0 \\Rightarrow \\lambda_1 = 2 \\mbox{ (multiplicidade 2)},\\ \\lambda_2 = 3.\\]\n\n\nPara cada autovalor, calcule o correspondente autovetor: Para \\(\\lambda_1 = 2\\): \\[(A - 2I)X = \\begin{bmatrix} 2 & 0 & -2 \\\\ 2 & 0 & -2 \\\\ 1 & 0 & -1 \\end{bmatrix}X = \\overline{0}.\\] A forma escalonada reduzida desta matriz é \\(\\begin{bmatrix} 1 & 0 & -1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}\\).\n\n\nOs autovetores associados a \\(\\lambda_1\\) são da forma \\(X = \\begin{bmatrix} \\alpha \\\\ \\beta \\\\ \\alpha \\end{bmatrix} \\mbox{ com } \\alpha,\\beta\\in\\mathbb R\\).\n\\[\n\\alpha = 1\\mbox{ e } \\beta = 0: X_1 = \\begin{bmatrix} 1 \\\\ 0 \\\\ 1 \\end{bmatrix}\\quad\n\\alpha = 0\\mbox{ e }\\beta = 1: X_2 = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}.\n\\]\n\n\nPara cada autovalor, calcule o correspondente autovetor: Para \\(\\lambda_2 = 3\\): \\[(A - 3I)X = \\begin{bmatrix} 1 & 0 & -2 \\\\ 2 & -1 & -2 \\\\ 1 & 0 & -2 \\end{bmatrix}X = \\overline{0}\\]. A forma escalonada reduzida desta matriz é \\(\\begin{bmatrix} 1 & 0 & -2 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 0 \\end{bmatrix}\\).\n\n\nOs autovetores associados a \\(\\lambda_2\\) são da forma \\(X_3 = \\begin{bmatrix} 2\\gamma \\\\ 2\\gamma \\\\ \\gamma \\end{bmatrix} \\mbox{ com } \\gamma\\in\\mathbb R\\).\nEscolhemos \\(\\gamma = 1\\), então \\(X_3 = \\begin{bmatrix} 2 \\\\ 2 \\\\ 1 \\end{bmatrix}\\).\n\n\nForme a matriz \\(P\\) com os autovetores como colunas e a matriz diagonal \\(D\\) com os autovalores na diagonal: \\[P = \\begin{bmatrix} 1 & 0 & 2 \\\\ 0 & 1 & 2 \\\\ 1 & 0 & 1 \\end{bmatrix}, \\quad D = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}.\\]\n\n\nVerifique se \\(AP = PD\\): Pode-se verificar que para \\[P = \\begin{bmatrix} 1 & 0 & 2 \\\\ 0 & 1 & 2 \\\\ 1 & 0 & 1 \\end{bmatrix}, \\quad D = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}.\\] temos \\[\nP^{-1}AP = D.\n\\]"
+  },
+  {
+    "objectID": "08_diagonalização.html#diagonalização-4",
+    "href": "08_diagonalização.html#diagonalização-4",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização",
+    "text": "Diagonalização\n\nTeorema 2 Uma matriz \\(A_{n\\times n}\\) é diagonalizável se \\(A\\) possui \\(n\\) autovetores LI.\n\nComo garantir que os autovetores são LI?\nAssuma que \\(V_1\\) e \\(V_2\\) são autovetores não nulos associados a autovalores diferentes \\(\\lambda_1\\) e \\(\\lambda_2\\). Se \\(V_1\\) e \\(V_2\\) forem LD, então existem escalares \\(\\alpha\\) e \\(\\beta\\), não ambos nulos, tais que \\[\n\\alpha V_1 + \\beta V_2 = \\overline{0}.\n\\]\n\n\nMultiplicando ambos os lados por \\(A\\) obtemos \\[\n\\alpha A V_1 + \\beta A V_2 = \\overline{0} \\Rightarrow \\alpha \\lambda_1 V_1 + \\beta \\lambda_2 V_2 = \\overline{0}.\n\\] Subtraindo \\(\\lambda_2\\) vezes a primeira equação da segunda obtemos \\[\n\\alpha (\\lambda_1 - \\lambda_2) V_1 = \\overline{0}.\n\\]\n\n\nComo \\(\\lambda_1 \\neq \\lambda_2\\) e \\(V_1 \\neq \\overline{0}\\), segue que \\(\\alpha = 0\\). Daí \\(\\beta = 0\\) que é uma contradição.\nLogo \\(V_1\\) e \\(V_2\\) são LI."
+  },
+  {
     "objectID": "08_diagonalização.html#diagonalização-5",
     "href": "08_diagonalização.html#diagonalização-5",
     "title": "Diagonalização e Autovalores",
     "section": "Diagonalização",
-    "text": "Diagonalização\nTeorema: uma matriz quadrada \\(A_{n\\times n}\\) é diagonalizável se \\(A\\) possui \\(n\\) autovetores LI.\nPara \\(A\\) não ser diagonalizável tem que faltar autovetores LI.\nTeorema: autovetores associados a autovalores diferentes são LI.\nDeste teorema vemos que na tentativa de construir a matriz \\(P\\) de autovetores para diagonalizar \\(A\\):\n\nnão precisamos nos preocupar com colunas associadas a autovalores diferentes. Elas já nascem LI.\nprecisamos somente pensar nos blocos de autovetores associados a um mesmo autovalor.\npara este bloco ser LI, se o autovalor é uma raíz de multiplicidade \\(k\\) de \\(p(\\lambda)\\), então o autoespaço associado a \\(\\lambda\\) deve ter dimensão \\(k\\). Caso contrário \\(A\\) não é diagonalizável."
+    "text": "Diagonalização\nArgumento similar funciona para um número qualquer de autovetores associados a autovalores diferentes.\n\nTeorema 3 Autovetores associados a autovalores diferentes são LI.\n\nDeste teorema vemos que na tentativa de construir a matriz \\(P\\) de autovetores para diagonalizar \\(A\\):\n\nnão precisamos nos preocupar com colunas associadas a autovalores diferentes. Elas já nascem LI.\nprecisamos somente pensar nos blocos de autovetores associados a um mesmo autovalor.\npara este bloco ser LI, se o autovalor é uma raíz de multiplicidade \\(k\\) de \\(p(\\lambda)\\), então o autoespaço associado a \\(\\lambda\\) deve ter dimensão \\(k\\). Caso contrário \\(A\\) não é diagonalizável."
   },
   {
     "objectID": "08_diagonalização.html#aparência-das-matrizes-p-e-d",
@@ -119,29 +126,43 @@
     "text": "Aparência das matrizes \\(P\\) e \\(D\\)\n\\[\nD = \\left[ \\begin{array}{c|cc|cccc}\n\\ \\mathbf{3}\\  &  0            & 0             & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & \\ \\mathbf{5} \\  & 0             & 0       & 0       & 0       & 0          \\\\\n0           & 0             & \\ \\mathbf{5}\\   & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & 0             & 0             & \\ \\mathbf{9}\\  & 0       & 0       & 0          \\\\\n0           & 0             & 0             & 0       & \\ \\mathbf{9}\\  & 0       & 0          \\\\\n0           & 0             & 0             & 0       & 0       & \\ \\mathbf{9}\\  & 0          \\\\\n0           & 0             & 0             & 0       & 0       & 0       & \\ \\mathbf{9}\\     \\end{array}\\right]\\\nP = \\left[ \\begin{array}{c|cc|cccc}\n    &     &     &     &     &     &     \\\\\nV_1 & V_2 & V_3 & V_4 & V_5 & V_6 & V_7 \\\\\n    &     &     &     &     &     &     \\end{array}\\right]\n\\]\n\n\\(V_1\\) é um autovetor associado ao autovalor \\(\\lambda=3\\).\n\\(\\{V_2,V_3\\}\\) é uma base para o autoespaço associado ao autovalor \\(\\lambda=5\\).\n\\(\\{V_4,V_5,V_6,V_7\\}\\) é uma base para o autoespaço associado ao autovalor \\(\\lambda=9\\).\n\nQuando a dimensão de um autoespaço é menor que a esperada, a matriz \\(A\\) não é diagonalizável."
   },
   {
-    "objectID": "08_diagonalização.html#aparência-das-matrizes-p-e-d-2",
-    "href": "08_diagonalização.html#aparência-das-matrizes-p-e-d-2",
-    "title": "Diagonalização e Autovalores",
-    "section": "Aparência das matrizes \\(P\\) e \\(D\\)",
-    "text": "Aparência das matrizes \\(P\\) e \\(D\\)\n\\[\nD = \\left[ \\begin{array}{c|cc|cccc}\n\\ \\mathbf{3}\\  &  0            & 0             & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & \\ \\mathbf{5} \\  & 0             & 0       & 0       & 0       & 0          \\\\\n0           & 0             & \\ \\mathbf{5}\\   & 0       & 0       & 0       & 0          \\\\ \\hline\n0           & 0             & 0             & \\ \\mathbf{9}\\  & 0       & 0       & 0          \\\\\n0           & 0             & 0             & 0       & \\ \\mathbf{9}\\  & 0       & 0          \\\\\n0           & 0             & 0             & 0       & 0       & \\ \\mathbf{9}\\  & 0          \\\\\n0           & 0             & 0             & 0       & 0       & 0       & \\ \\mathbf{9}\\     \\end{array}\\right]\n\\]\n\\[\nP = \\left[ \\begin{array}{c|cc|cccc}\n    &     &     &     &     &     &     \\\\\nV_1 & V_2 & V_3 & V_4 & V_5 & V_6 & V_7 \\\\\n    &     &     &     &     &     &     \\end{array}\\right]\n\\]\nQuando a dimensão de um autoespaço é menor que a esperada, a matriz \\(A\\) não é diagonalizável."
-  },
-  {
     "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas",
     "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas",
     "title": "Diagonalização e Autovalores",
     "section": "Diagonalização de matrizes simétricas",
-    "text": "Diagonalização de matrizes simétricas\nNas aulas anteriores vimos que existem matrizes que não são diagonalizáveis.\nVamos ver agora que no caso particular de matrizes simétricas isto não ocorre. Isto é, vamos ver que todas as matrizes simétricas são diagonalizáveis.\nDefinição. Uma matriz quadrada \\(A\\) é simétrica se \\(A=A^t\\). Neste caso existe uma simetria em relação à diagonal principal.\n\\[\\begin{bmatrix} 2 & 3 & 1 \\\\ 3 & 5 & 0 \\\\ 1 & 0 & 7 \\end{bmatrix}\\qquad\n\\begin{bmatrix} 1 & 8 & 3 & 5  \\\\ 8 & 0 & 2 & 7  \\\\ 3 & 2 & 3 & 9 \\\\ 5 & 7 & 9 & 4 \\end{bmatrix}\\]\nTeorema. Para uma matriz simétrica \\(A\\), autovetores associados a autovalores diferentes são ortogonais."
+    "text": "Diagonalização de matrizes simétricas\nNas aulas anteriores vimos que existem matrizes que não são diagonalizáveis.\nVamos ver agora que no caso particular de matrizes simétricas isto não ocorre. Isto é, vamos ver que todas as matrizes simétricas são diagonalizáveis.\nDefinição. Uma matriz quadrada \\(A\\) é simétrica se \\(A=A^t\\). Neste caso existe uma simetria em relação à diagonal principal.\n\\[\\begin{bmatrix} 2 & 3 & 1 \\\\ 3 & 5 & 0 \\\\ 1 & 0 & 7 \\end{bmatrix}\\qquad\n\\begin{bmatrix} 1 & 8 & 3 & 5  \\\\ 8 & 0 & 2 & 7  \\\\ 3 & 2 & 3 & 9 \\\\ 5 & 7 & 9 & 4 \\end{bmatrix}\\]"
+  },
+  {
+    "objectID": "08_diagonalização.html#exemplo-matriz-simétrica",
+    "href": "08_diagonalização.html#exemplo-matriz-simétrica",
+    "title": "Diagonalização e Autovalores",
+    "section": "Exemplo – Matriz simétrica",
+    "text": "Exemplo – Matriz simétrica\nConsidere a matriz simétrica \\[\nA = \\begin{bmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{bmatrix} .\n\\]\nVamos determinar os autovalores e autovetores de \\(A\\).\n\n\nCalcule o polinômio característico: \\[p(\\lambda) = \\det\\begin{bmatrix} 2-\\lambda & 1 & 1 \\\\ 1 & 2-\\lambda & 1 \\\\ 1 & 1 & 2-\\lambda \\end{bmatrix} = -(\\lambda - 1)(\\lambda - 4)^2.\\]\n\n\nCalcule as raízes do polinômio característico: \\[-(\\lambda - 1)(\\lambda - 4)^2 = 0 \\Rightarrow \\lambda_1 = 1,\\ \\lambda_2 = 4 \\mbox{ (multiplicidade 2)}.\\]\n\n\nPara cada autovalor, calcule o correspondente autovetor: Para \\(\\lambda_1 = 1\\): \\[(A - I)X = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{bmatrix}X = \\overline{0}.\\] A forma escalonada reduzida desta matriz é \\(\\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}\\).\n\n\nOs autovetores associados a \\(\\lambda_1\\) são da forma \\(X_1 = \\begin{bmatrix} \\alpha \\\\ \\beta \\\\ -\\alpha - \\beta \\end{bmatrix} \\mbox{ com } \\alpha,\\beta\\in\\mathbb R\\).\n\\[\n\\alpha = 1 \\mbox{ e } \\beta = 0:\\ X_1 = \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix}\\quad\n\\alpha = 0 \\mbox{ e } \\beta = 1:\\ X_2 = \\begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\end{bmatrix}.\n\\]\n\n\nPara cada autovalor, calcule o correspondente autovetor: Para \\(\\lambda_2 = 4\\): \\[(A - 4I)X = \\begin{bmatrix} -2 & 1 & 1 \\\\ 1 & -2 & 1 \\\\ 1 & 1 & -2 \\end{bmatrix}X = \\overline{0}.\\] A forma escalonada reduzida desta matriz é \\(\\begin{bmatrix} 1 & 0 & -1 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 0 \\end{bmatrix}\\).\n\n\nOs autovetores associados a \\(\\lambda_2\\) são da forma \\(X_3 = \\begin{bmatrix} \\gamma \\\\ \\gamma \\\\ \\gamma \\end{bmatrix} \\mbox{ com } \\gamma\\in\\mathbb R\\).\nEscolhemos \\(\\gamma = 1\\), então \\(X_3 = \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\end{bmatrix}\\).\n\n\nForme a matriz \\(P\\) com os autovetores como colunas e a matriz diagonal \\(D\\) com os autovalores na diagonal: \\[P = \\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ -1 & -1 & 1 \\end{bmatrix}, \\quad D = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}.\\]\n\n\nVerifique se \\(AP = PD\\): Pode-se verificar que para \\[P = \\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ -1 & -1 & 1 \\end{bmatrix}, \\quad D = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}.\\] temos \\[\nP^{-1}AP = D.\n\\]"
+  },
+  {
+    "objectID": "08_diagonalização.html#a-ortogonalidade-de-autovetores",
+    "href": "08_diagonalização.html#a-ortogonalidade-de-autovetores",
+    "title": "Diagonalização e Autovalores",
+    "section": "A ortogonalidade de autovetores",
+    "text": "A ortogonalidade de autovetores\n\\[\nA = \\begin{bmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{bmatrix} .\n\\]\n\n\nCalculamos os autovetores associados aos autovalores \\(\\lambda=1\\) e \\(\\lambda=4\\): \\[\nX_1 = \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix}\\ (\\lambda=1),\\quad X_2 = \\begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\end{bmatrix}\\ (\\lambda=1), \\quad X_3 = \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\end{bmatrix}\\ (\\lambda=4).\n\\] Observe que \\(X_1\\perp X_3\\) e \\(X_2\\perp X_3\\). Além disso, se trocarmos \\(X_2\\) por \\(X_2'=X_2 - \\frac{1}{2}X_1=\\begin{bmatrix} -\\frac{1}{2} \\\\ 1 \\\\ -\\frac{1}{2} \\end{bmatrix}\\) (que também é um autovetor associado a \\(\\lambda=1\\)), então \\(X_1\\perp X_2'\\) e \\(X_2'\\perp X_3\\).\n\n\nOra temos \\(X_1,X_2',X_3\\) são autovetores ortogonais para \\(A\\): \\[\nX_1 = \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix},\\quad X_2' = \\begin{bmatrix} -\\frac{1}{2} \\\\ 1 \\\\ -\\frac{1}{2} \\end{bmatrix}, \\quad X_3 = \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\end{bmatrix}.\n\\] Além disso, podemos normalizá-los para obter autovetores ortonormais: \\[\nU_1 = \\frac{1}{\\sqrt{2}}\\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix},\\quad U_2 = \\frac{1}{\\sqrt{6}}\\begin{bmatrix} -1 \\\\ 2 \\\\ -1 \\end{bmatrix}, \\quad U_3 = \\frac{1}{\\sqrt{3}}\\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\end{bmatrix}.\n\\]\n\n\nCom estes autovetores ortonormais, podemos formar a matriz \\(P\\) e a matriz diagonal \\(D\\): \\[P = \\begin{bmatrix} \\frac{1}{\\sqrt{2}} & -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} \\\\ 0 & \\frac{2}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{2}} & -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} \\end{bmatrix}, \\quad D = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}\\] tais que \\[\nP^{-1}AP = D.\n\\]\n\n\nAqui \\[\nP=\\begin{bmatrix} \\frac{1}{\\sqrt{2}} & -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} \\\\ 0 & \\frac{2}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{2}} & -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} \\end{bmatrix}\n\\] é uma matriz ortogonal, ou seja, suas colunas são ortonormais. Isso pode ser usado para calcular a inversa de \\(P\\), pois \\[\nPP^t = I \\Rightarrow P^{-1} = P^t.\n\\] Ou seja, neste caso temos, \\[\nP^t A P = D.\n\\]"
+  },
+  {
+    "objectID": "08_diagonalização.html#a-ortogonalidade-de-autovetores-1",
+    "href": "08_diagonalização.html#a-ortogonalidade-de-autovetores-1",
+    "title": "Diagonalização e Autovalores",
+    "section": "A ortogonalidade de autovetores",
+    "text": "A ortogonalidade de autovetores\nAssuma que \\(A\\) é uma matriz simétrica e sejam \\(X_1\\) e \\(X_2\\) autovetores (colunas) associados a autovalores diferentes \\(\\lambda_1\\) e \\(\\lambda_2\\). Vamos ver que \\(X_1 \\perp X_2\\).\nDe fato, observe que \\[\n\\left&lt;X_1,X_2\\right&gt;=X_1^t X_2.\n\\] Ora, \\[\\begin{align*}\n\\lambda_1 \\left&lt;X_1,X_2\\right&gt; & = \\lambda_1 X_1^t X_2 = ( \\lambda_1 X_1 )^t X_2 = ( A X_1 )^t X_2 = X_1^t A^t X_2 \\\\\n& = X_1^t A X_2 = X_1^t ( \\lambda_2 X_2 ) = \\lambda_2 X_1^t X_2 = \\lambda_2 \\left&lt;X_1,X_2\\right&gt;.\n\\end{align*}\\] Ou seja, \\[\n\\lambda_1 \\left&lt;X_1,X_2\\right&gt; = \\lambda_2 \\left&lt;X_1,X_2\\right&gt; \\Rightarrow (\\lambda_1 - \\lambda_2) \\left&lt;X_1,X_2\\right&gt; = 0.\n\\]\nComo \\(\\lambda_1 \\neq \\lambda_2\\), segue que \\(\\left&lt;X_1,X_2\\right&gt; = 0\\), ou seja, \\(X_1 \\perp X_2\\)."
+  },
+  {
+    "objectID": "08_diagonalização.html#a-ortogonalidade-de-autovetores-2",
+    "href": "08_diagonalização.html#a-ortogonalidade-de-autovetores-2",
+    "title": "Diagonalização e Autovalores",
+    "section": "A ortogonalidade de autovetores",
+    "text": "A ortogonalidade de autovetores\n\nTeorema 4 Para uma matriz simétrica \\(A\\), autovetores associados a autovalores diferentes são ortogonais.\n\n\nTeorema 5 Toda matriz simétrica \\(A\\) é diagonalizável. Mais ainda, existe uma matriz \\(P\\) cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal \\(D\\) tais que \\(P^{-1} A P = D\\).\n\nPara ver a demonstração completa desse teorema consulte a apostila."
   },
   {
     "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-1",
     "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-1",
-    "title": "Diagonalização e Autovalores",
-    "section": "Diagonalização de matrizes simétricas",
-    "text": "Diagonalização de matrizes simétricas\nSe \\(A_{n \\times n}\\) é uma matriz simétrica, então autoespaços associados a autovalores diferentes são subespaços ortogonais de \\(\\mathbb{R}^n\\). Considerando bases ortonormais para cada um destes autoespaços, é possível construir uma matriz \\(P\\) para diagonalizar \\(A\\) tal que as colunas de \\(P\\) são vetores ortonormais de \\(\\mathbb{R}^n\\). Como vetores ortogonais são LI, segue que \\(P\\) é invertível.\nTeorema. Toda matriz simétrica \\(A\\) é diagonalizável. Mais ainda, existe uma matriz \\(P\\) cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal \\(D\\) tais que \\(P^{-1} A P = D\\).\nPara ver a demonstração completa desse teorema consulte a apostila."
-  },
-  {
-    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-2",
-    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-2",
     "title": "Diagonalização e Autovalores",
     "section": "Diagonalização de matrizes simétricas",
     "text": "Diagonalização de matrizes simétricas\nExemplos. Para cada uma das matrizes simétricas a seguir, determine matrizes \\(P\\) e \\(D\\) como no teorema anterior: colunas de \\(P\\) são autovetores ortogonais e unitários.\n\n\\(A=\\begin{bmatrix} 4 & -1 \\\\ -1 & 4 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 4 & -\\sqrt{3} \\\\ -\\sqrt{3} & 6 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 9 & 3 \\\\ 3 & 1 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 3 & -1 \\\\ 0 & -1 & 3 \\end{bmatrix}\\)\n\\(A=\\begin{bmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{bmatrix}\\)"
@@ -154,18 +175,18 @@
     "text": "Matrizes Ortogonais\nExercício. Mostre que se \\(P\\) é uma matriz quadrada \\(n\\times n\\) cujas colunas são os vetores \\(V_1, V_2, \\ldots, V_n\\) de \\(\\mathbb{R}^n\\), então a matriz \\(P^t P\\) é a matriz quadrada cujo elemento da linha \\(i\\) e coluna \\(j\\) é o produto escalar \\(\\langle V_i,V_j\\rangle\\).\nDaí segue que as colunas de \\(P\\) são vetores ortogonais e unitários se, e somente se, \\(P^t P = I_n\\). Se esse é o caso, dizemos que \\(P\\) é uma matriz ortogonal. Isto é,\n\\(P\\) é ortogonal se é válida uma das afirmações a seguir:\n\nas colunas de \\(P\\) formam uma base ortonormal de \\(\\mathbb{R}^n\\).\n\\(P^t P = I_n\\).\n\\(P^{-1} = P^t\\)."
   },
   {
+    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-2",
+    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-2",
+    "title": "Diagonalização e Autovalores",
+    "section": "Diagonalização de matrizes simétricas",
+    "text": "Diagonalização de matrizes simétricas\n\nTeorema 6 Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que \\[\nP^{-1} A P = D.\n\\]\n\nComo \\(P\\) é ortogonal, \\(P^{-1} = P^t\\), e assim obtemos.\n\nTeorema 7 Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que \\[\nP^t A P = D.\n\\]"
+  },
+  {
     "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-3",
     "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-3",
     "title": "Diagonalização e Autovalores",
     "section": "Diagonalização de matrizes simétricas",
-    "text": "Diagonalização de matrizes simétricas\nDo teorema\nTeorema. Toda matriz simétrica \\(A\\) é diagonalizável. Mais ainda, existe uma matriz \\(P\\) cujas colunas são autovetores ortogonais e unitários e existe uma matriz diagonal \\(D\\) tais que \\(P^{-1} A P = D\\).\nvemos que é possível diagonalizar uma matriz simétrica \\(A\\) com uma matriz ortogonal \\(P\\).\nVamos resumir isto no próximo teorema.\nTeorema. Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que \\(P^{-1} A P = D\\).\nComo \\(P\\) é ortogonal, \\(P^{-1} = P^t\\), e assim obtemos.\nTeorema. Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que \\(P^t A P = D\\)."
-  },
-  {
-    "objectID": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-4",
-    "href": "08_diagonalização.html#diagonalização-de-matrizes-simétricas-4",
-    "title": "Diagonalização e Autovalores",
-    "section": "Diagonalização de matrizes simétricas",
-    "text": "Diagonalização de matrizes simétricas\nMultiplicando o lado esquerdo da igualdade \\(P^t A P = D\\) por \\(P\\) e multiplicando o lado direito dessa igualdade por \\(P^t\\) obtemos\n\\[P^t A P = D \\Rightarrow P (P^t A P)P^t = P D P^t \\Rightarrow A = P D P^t\\]\nAssim demonstramos o importante teorema.\nTeorema. Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que\n\\[\\boxed{A = P D P^t}\\]\nÉ esta a expressão que será utilizada para resolver o problema de identificação de cônicas enunciado desde a primeira aula."
+    "text": "Diagonalização de matrizes simétricas\nMultiplicando o lado esquerdo da igualdade \\(P^t A P = D\\) por \\(P\\) e multiplicando o lado direito dessa igualdade por \\(P^t\\) obtemos\n\\[P^t A P = D \\Rightarrow P (P^t A P)P^t = P D P^t \\Rightarrow A = P D P^t\\]\nAssim demonstramos o importante teorema.\n\nTeorema 8 Seja \\(A\\) uma matriz simétrica. Então existe uma matriz ortogonal \\(P\\) e existe uma matriz diagonal \\(D\\) tais que \\[\\boxed{A = P D P^t}\\] É esta a expressão que será utilizada para resolver o problema de identificação de cônicas enunciado na primeira página."
   },
   {
     "objectID": "06_retas_e_planos.html#retas-no-plano",
