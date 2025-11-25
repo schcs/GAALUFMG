@@ -139,7 +139,7 @@ UFMG
 </div>
 </div>
 
-  <p class="date">20 de novembro de 2025</p>
+  <p class="date">25 de novembro de 2025</p>
 </section>
 <section id="diagonalização" class="slide level2">
 <h2>Diagonalização</h2>
@@ -446,7 +446,7 @@ A = \begin{bmatrix} 2 &amp; 1 &amp; 1 \\ 1 &amp; 2 &amp; 1 \\ 1 &amp; 1 &amp; 2 
 <p>Vamos determinar os autovalores e autovetores de <span class="math inline">\(A\)</span>.</p>
 <div class="r-stack">
 <div class="fragment current-visible">
-<p><strong>Calcule o polinômio característico:</strong> <span class="math display">\[p(\lambda) = \det\begin{bmatrix} 2-\lambda &amp; 1 &amp; 1 \\ 1 &amp; 2-\lambda &amp; 1 \\ 1 &amp; 1 &amp; 2-\lambda \end{bmatrix} = -(\lambda - 1)(\lambda - 4)^2.\]</span></p>
+<p><strong>Calcule o polinômio característico:</strong> <span class="math display">\[p(\lambda) = \det\begin{bmatrix} 2-\lambda &amp; 1 &amp; 1 \\ 1 &amp; 2-\lambda &amp; 1 \\ 1 &amp; 1 &amp; 2-\lambda \end{bmatrix} = -(\lambda - 1)^2(\lambda - 4).\]</span></p>
 </div>
 <div class="fragment current-visible">
 <p><strong>Calcule as raízes do polinômio característico:</strong> <span class="math display">\[-(\lambda - 1)(\lambda - 4)^2 = 0 \Rightarrow \lambda_1 = 1,\ \lambda_2 = 4 \mbox{ (multiplicidade 2)}.\]</span></p>
@@ -504,8 +504,16 @@ P^{-1}AP = D.
 <div class="fragment current-visible">
 <p>Aqui <span class="math display">\[
 P=\begin{bmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ 0 &amp; \frac{2}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \end{bmatrix}
-\]</span> é uma matriz <span class="bg-green">ortogonal</span>, ou seja, suas colunas são <span class="bg-green">ortonormais</span>. Isso pode ser usado para calcular a inversa de <span class="math inline">\(P\)</span>, pois <span class="math display">\[
-PP^t = I \Rightarrow P^{-1} = P^t.
+\]</span> é uma matriz <span class="bg-green">ortogonal</span>, ou seja, suas colunas são <span class="bg-green">ortonormais</span>.</p>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 1</strong></span> Mostre que se <span class="math inline">\(P\)</span> é uma matriz quadrada <span class="math inline">\(n\times n\)</span> cujas colunas são os vetores <span class="math inline">\(V_1, V_2, \ldots, V_n\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span>, então a matriz <span class="math inline">\(P^t P\)</span> é a matriz quadrada cujo elemento da linha <span class="math inline">\(i\)</span> e coluna <span class="math inline">\(j\)</span> é o produto escalar <span class="math inline">\(\langle V_i,V_j\rangle\)</span>.</p>
+</div>
+</div>
+<div class="fragment current-visible">
+<p><span class="math display">\[
+P=\begin{bmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ 0 &amp; \frac{2}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{6}} &amp; \frac{1}{\sqrt{3}} \end{bmatrix}
+\]</span> Isso pode ser usado para calcular a inversa de <span class="math inline">\(P\)</span>, pois <span class="math display">\[
+P^tP = I \Rightarrow P^{-1} = P^t.
 \]</span> Ou seja, neste caso temos, <span class="math display">\[
 P^t A P = D.
 \]</span></p>
@@ -545,17 +553,6 @@ P^t A P = D.
 <li><span class="math inline">\(A=\begin{bmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 3 &amp; -1 \\ 0 &amp; -1 &amp; 3 \end{bmatrix}\)</span></li>
 <li><span class="math inline">\(A=\begin{bmatrix} 2 &amp; 1 &amp; 1 \\ 1 &amp; 2 &amp; 1 \\ 1 &amp; 1 &amp; 2 \end{bmatrix}\)</span></li>
 </ol>
-</section>
-<section id="matrizes-ortogonais" class="slide level2">
-<h2>Matrizes Ortogonais</h2>
-<p>Exercício. Mostre que se <span class="math inline">\(P\)</span> é uma matriz quadrada <span class="math inline">\(n\times n\)</span> cujas colunas são os vetores <span class="math inline">\(V_1, V_2, \ldots, V_n\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span>, então a matriz <span class="math inline">\(P^t P\)</span> é a matriz quadrada cujo elemento da linha <span class="math inline">\(i\)</span> e coluna <span class="math inline">\(j\)</span> é o produto escalar <span class="math inline">\(\langle V_i,V_j\rangle\)</span>.</p>
-<p>Daí segue que as colunas de <span class="math inline">\(P\)</span> são vetores ortogonais e unitários se, e somente se, <span class="math inline">\(P^t P = I_n\)</span>. Se esse é o caso, dizemos que <span class="math inline">\(P\)</span> é uma matriz ortogonal. Isto é,</p>
-<p><span class="math inline">\(P\)</span> é ortogonal se é válida uma das afirmações a seguir:</p>
-<ul>
-<li>as colunas de <span class="math inline">\(P\)</span> formam uma base ortonormal de <span class="math inline">\(\mathbb{R}^n\)</span>.</li>
-<li><span class="math inline">\(P^t P = I_n\)</span>.</li>
-<li><span class="math inline">\(P^{-1} = P^t\)</span>.</li>
-</ul>
 </section>
 <section id="diagonalização-de-matrizes-simétricas-2" class="slide level2">
 <h2>Diagonalização de matrizes simétricas</h2>
