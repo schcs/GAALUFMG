@@ -15,3 +15,4 @@ Geometria Analítica e Álgebra Linear
 - [Retas e planos](06_retas_e_planos.qmd)
 - [O espaço ℝⁿ](07_Rn.qmd)
 - [Autovalores e diagonalização](08_diagonalização.qmd)
+- [Cônicas](09_cônicas.qmd)

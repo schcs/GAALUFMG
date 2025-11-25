@@ -10,6 +10,7 @@ project:
     - 06_retas_e_planos.qmd
     - 07_Rn.qmd
     - 08_diagonalização.qmd
+    - 09_cônicas.qmd
 
 render-on-save: false
 

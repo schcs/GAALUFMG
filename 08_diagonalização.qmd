@@ -445,7 +445,7 @@ Vamos determinar os autovalores e autovetores de $A$.
 :::{.r-stack}
 :::{.fragment .current-visible}
 **Calcule o polinômio característico:** 
-$$p(\lambda) = \det\begin{bmatrix} 2-\lambda & 1 & 1 \\ 1 & 2-\lambda & 1 \\ 1 & 1 & 2-\lambda \end{bmatrix} = -(\lambda - 1)(\lambda - 4)^2.$$
+$$p(\lambda) = \det\begin{bmatrix} 2-\lambda & 1 & 1 \\ 1 & 2-\lambda & 1 \\ 1 & 1 & 2-\lambda \end{bmatrix} = -(\lambda - 1)^2(\lambda - 4).$$
 :::
 :::{.fragment .current-visible}
 **Calcule as raízes do polinômio característico:**
@@ -528,10 +528,21 @@ Aqui
 $$
 P=\begin{bmatrix} \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\ 0 & \frac{2}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \end{bmatrix}
 $$
-é uma matriz [ortogonal]{.bg-green}, ou seja, suas colunas são [ortonormais]{.bg-green}. Isso pode ser usado para calcular a 
+é uma matriz [ortogonal]{.bg-green}, ou seja, suas colunas são [ortonormais]{.bg-green}.
+
+:::{#exr-}
+Mostre que se $P$ é uma matriz quadrada $n\times n$ cujas colunas são os vetores $V_1, V_2, \ldots, V_n$ de $\mathbb{R}^n$, então a matriz $P^t P$ é a matriz quadrada cujo elemento da linha $i$ e coluna $j$ é o produto escalar $\langle V_i,V_j\rangle$.
+:::
+:::
+
+:::{.fragment .current-visible}
+$$
+P=\begin{bmatrix} \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\ 0 & \frac{2}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \end{bmatrix}
+$$
+Isso pode ser usado para calcular a 
 inversa de $P$, pois 
 $$
-PP^t = I \Rightarrow P^{-1} = P^t.
+P^tP = I \Rightarrow P^{-1} = P^t.
 $$
 Ou seja, neste caso temos, 
 $$
@@ -585,17 +596,6 @@ Exemplos. Para cada uma das matrizes simétricas a seguir, determine matrizes $P
 4. $A=\begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & -1 \\ 0 & -1 & 3 \end{bmatrix}$
 5. $A=\begin{bmatrix} 2 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 2 \end{bmatrix}$
 
-## Matrizes Ortogonais
-
-Exercício. Mostre que se $P$ é uma matriz quadrada $n\times n$ cujas colunas são os vetores $V_1, V_2, \ldots, V_n$ de $\mathbb{R}^n$, então a matriz $P^t P$ é a matriz quadrada cujo elemento da linha $i$ e coluna $j$ é o produto escalar $\langle V_i,V_j\rangle$.
-
-Daí segue que as colunas de $P$ são vetores ortogonais e unitários se, e somente se, $P^t P = I_n$. Se esse é o caso, dizemos que $P$ é uma matriz ortogonal. Isto é,
-
-$P$ é ortogonal se é válida uma das afirmações a seguir:
-
-- as colunas de $P$ formam uma base ortonormal de $\mathbb{R}^n$.
-- $P^t P = I_n$.
-- $P^{-1} = P^t$.
 
 ## Diagonalização de matrizes simétricas
 
