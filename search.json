@@ -32,7 +32,21 @@
     "href": "09_cônicas.html#equações-do-segundo-grau-em-duas-variáveis",
     "title": "Cônicas",
     "section": "Equações do segundo grau em duas variáveis",
-    "text": "Equações do segundo grau em duas variáveis\nEquações quadráticas em duas variáveis tem a forma geral \\[\nAx^2 + Bxy + Cy^2 + Dx + Ey + F = 0.\n\\]\nEstas equações determinam uma curva no plano \\(xy\\). Exemplos\n\n\\(6x^2+9y^2-4xy-4\\sqrt{5}x-18\\sqrt{5}y-5=0\\)\n\\(9x^2+y^2+6xy-10\\sqrt{10}x+10\\sqrt{10}y+90=0\\)\n\\(x^2-y^2+2\\sqrt{3}xy+6x=0\\)\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Elipse\n\n\n\n\n\n\n\n\n\n\n\n(b) Parábola\n\n\n\n\n\n\n\n\n\n\n\n(c) Hipérbole\n\n\n\n\n\n\n\nFigura 1"
+    "text": "Equações do segundo grau em duas variáveis\nEquações quadráticas em duas variáveis tem a forma geral \\[\nAx^2 + Bxy + Cy^2 + Dx + Ey + F = 0.\n\\]\nEstas equações determinam uma curva no plano \\(xy\\). Exemplos\n\n\n\n\n\n\n\n\n\n\n\n(a) \\(x^2+y^2-1\\)\n\n\n\n\n\n\n\n\n\n\n\n(b) \\(x-y^2=0\\)\n\n\n\n\n\n\n\n\n\n\n\n(c) \\(xy-1=0\\)\n\n\n\n\n\n\n\nFigura 1"
+  },
+  {
+    "objectID": "09_cônicas.html#exemplos-mais-complexos",
+    "href": "09_cônicas.html#exemplos-mais-complexos",
+    "title": "Cônicas",
+    "section": "Exemplos mais complexos",
+    "text": "Exemplos mais complexos\n\n\\(6x^2+9y^2-4xy-4\\sqrt{5}x-18\\sqrt{5}y-5=0\\)\n\\(9x^2+y^2+6xy-10\\sqrt{10}x+10\\sqrt{10}y+90=0\\)\n\\(x^2-y^2+2\\sqrt{3}xy+6x=0\\)\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Elipse\n\n\n\n\n\n\n\n\n\n\n\n(b) Parábola\n\n\n\n\n\n\n\n\n\n\n\n(c) Hipérbole\n\n\n\n\n\n\n\nFigura 2"
+  },
+  {
+    "objectID": "09_cônicas.html#exemplos-degenerados",
+    "href": "09_cônicas.html#exemplos-degenerados",
+    "title": "Cônicas",
+    "section": "Exemplos degenerados",
+    "text": "Exemplos degenerados\n\n\n\n\n\n\n\n\n\n\n\n(a) \\(x^2+y^2+1=0\\)\n\n\n\n\n\n\n\n\n\n\n\n(b) \\(x^2-y^2=0\\)\n\n\n\n\n\n\n\nFigura 3"
   },
   {
     "objectID": "09_cônicas.html#seções-cônicas-e-equações-quadráticas",
