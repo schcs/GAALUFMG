@@ -128,17 +128,38 @@ $$
 
 Estas equações determinam uma curva no plano $xy$. Exemplos
 
+::: {#fig-conics layout-ncol=3}
+![$x^2+y^2-1$](img/09_conicas/circle.png){#fig-surus}
+
+![$x-y^2=0$](img/09_conicas/parabola.png){#fig-hanno}
+
+![$xy-1=0$](img/09_conicas/hyperb.png){#fig-hanno}
+:::
+
+
+## Exemplos mais complexos
+
 1. $6x^2+9y^2-4xy-4\sqrt{5}x-18\sqrt{5}y-5=0$
 2. $9x^2+y^2+6xy-10\sqrt{10}x+10\sqrt{10}y+90=0$
 3. $x^2-y^2+2\sqrt{3}xy+6x=0$
 
-::: {#fig-elephants layout-ncol=3}
+::: {#fig-conics-simple layout-ncol=3}
 ![Elipse](img/09_conicas/img_exam_elipse.png){#fig-surus}
 
 ![Parábola](img/09_conicas/img_exam_parab.png){#fig-hanno}
 
 ![Hipérbole](img/09_conicas/img_exam_hyper.png){#fig-hanno}
 :::
+
+## Exemplos degenerados 
+
+::: {#fig-conics-degen layout-ncol=3}
+![$x^2+y^2+1=0$](img/09_conicas/nothing.png){#fig-surus}
+
+![$x^2-y^2=0$](img/09_conicas/retas.png){#fig-hanno}
+:::
+
+
 
 ## Seções cônicas e equações quadráticas
 
