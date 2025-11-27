@@ -14,15 +14,19 @@
 /* Prevent auto-stretch for specific images */
  .reveal .slides img.nostretch {
   max-width: 30% !important; /* acts as an upper bound */
-  width: auto !important;    /* respect intrinsic width unless width attr given */
+  /* Removed width:auto !important so an explicit width attribute can scale image */
   height: auto !important;
   object-fit: contain;
-}
+ }
 
 /* If width attribute is used with .nostretch, let it control size explicitly */
 .reveal .slides img.nostretch[width] {
-  max-width: unset !important;
+  max-width: unset !important; /* allow explicit width attribute to expand */
 }
+
+/* Utility classes for larger images */
+.reveal .slides img.wide { max-width: 85% !important; width: 85% !important; height: auto !important; }
+.reveal .slides img.full { max-width: 100% !important; width: 100% !important; height: auto !important; }
 
 
 
@@ -131,4 +135,19 @@ content: "Exemplo (" attr(text) ") ";
 
 .reveal.dark [id^="thm-"].theorem > p:first-of-type strong:first-child {
   color: #f3e5f5;
+}
+
+/* --- Ensure Reveal.js fragments span full width --- */
+.reveal .slides .fragment {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Avoid inline shrinking of paragraphs/lists marked as fragments */
+.reveal .slides section p.fragment,
+.reveal .slides section ul.fragment,
+.reveal .slides section ol.fragment,
+.reveal .slides section div.fragment {
+  display: block !important;
 }
