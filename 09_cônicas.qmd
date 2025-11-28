@@ -213,9 +213,10 @@ Circunferência com centro em $A=(-4,3)$ e raio $5$. Passa pela origem.
 :::{.columns}
 :::{.column width=40%}
 A curva
-$$
-y = x^2 + 2x - 3 = (x+3)(x-1) = (x+1)^2 - 4
-$$ é uma parábola côncava para cima, com raízes em $x=-3$ e $x=1$ e vértice em $V=(-1,-4)$.
+\begin{align*}
+y &= x^2 + 2x - 3 = (x+3)(x-1) \\&= (x+1)^2 - 4
+\end{align*}
+é uma parábola côncava para cima, com raízes em $x=-3$ e $x=1$ e vértice em $V=(-1,-4)$.
 :::
 :::{.column width=60%}
 ![](img/09_conicas/Ex03.png){width=80% fig-align="center"}
@@ -240,9 +241,9 @@ $$
 
 :::{.columns}
 :::{.column width=40%}  
-$$
-x = y^2 - 4y + 3 = (y-1)(y-3) = (y-2)^2 - 1.
-$$ 
+\begin{align*}
+x &= y^2 - 4y + 3 = (y-1)(y-3)\\ &= (y-2)^2 - 1.
+\end{align*}
 Considerando $x$ como função de $y$, o gráfico é uma parábola côncava para a direita, com raízes $y=1$, $y=3$ e vértice $V=(-1,2)$.
 :::
 :::{.column width=60%}
@@ -255,7 +256,9 @@ Considerando $x$ como função de $y$, o gráfico é uma parábola côncava para
 
 :::{.columns}
 :::{.column width=40%}
-$$x = -y^2 - 2y + 8 = -(y+4)(y-2) = -(y+1)^2 + 9.$$ 
+\begin{align*}
+x &= -y^2 - 2y + 8 = -(y+4)(y-2) \\&= -(y+1)^2 + 9.
+\end{align*}
 Tomando $x$ como função de $y$, parábola côncava para a esquerda, raízes $y=2$, $y=-4$, vértice $V=(9,-1)$.
 :::
 :::{.column width=60%}
@@ -268,8 +271,10 @@ Tomando $x$ como função de $y$, parábola côncava para a esquerda, raízes $y
 :::{.columns}
 :::{.column width=40%}
 Completando os quadrados em 
-$$
-4x^2 - 8x + y^2 - 4y + 4 = 0 \Rightarrow (x-1)^2 + \frac{(y-2)^2}{4} = 1 $$
+\begin{align*}
+4x^2 - 8x + y^2 - 4y + 4 &= 0\\ 
+(x-1)^2 + \frac{(y-2)^2}{4} &= 1
+\end{align*}
 Elipse centrada em $A=(1,2)$, semieixo horizontal $a=1$ e vertical $b=2$. Está no primeiro quadrante e tangente aos eixos.
 :::
 :::{.column width=60%}
