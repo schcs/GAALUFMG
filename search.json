@@ -74,7 +74,7 @@
     "href": "09_cônicas.html#exemplo-3-parábola",
     "title": "Cônicas",
     "section": "Exemplo 3: Parábola",
-    "text": "Exemplo 3: Parábola\n\n\nA curva \\[\ny = x^2 + 2x - 3 = (x+3)(x-1) = (x+1)^2 - 4\n\\] é uma parábola côncava para cima, com raízes em \\(x=-3\\) e \\(x=1\\) e vértice em \\(V=(-1,-4)\\)."
+    "text": "Exemplo 3: Parábola\n\n\nA curva \\[\\begin{align*}\ny &= x^2 + 2x - 3 = (x+3)(x-1) \\\\&= (x+1)^2 - 4\n\\end{align*}\\] é uma parábola côncava para cima, com raízes em \\(x=-3\\) e \\(x=1\\) e vértice em \\(V=(-1,-4)\\)."
   },
   {
     "objectID": "09_cônicas.html#exemplo-4-parábola",
@@ -88,21 +88,21 @@
     "href": "09_cônicas.html#exemplo-5-parábola",
     "title": "Cônicas",
     "section": "Exemplo 5: Parábola",
-    "text": "Exemplo 5: Parábola\n\n\n\\[\nx = y^2 - 4y + 3 = (y-1)(y-3) = (y-2)^2 - 1.\n\\] Considerando \\(x\\) como função de \\(y\\), o gráfico é uma parábola côncava para a direita, com raízes \\(y=1\\), \\(y=3\\) e vértice \\(V=(-1,2)\\)."
+    "text": "Exemplo 5: Parábola\n\n\n\\[\\begin{align*}\nx &= y^2 - 4y + 3 = (y-1)(y-3)\\\\ &= (y-2)^2 - 1.\n\\end{align*}\\] Considerando \\(x\\) como função de \\(y\\), o gráfico é uma parábola côncava para a direita, com raízes \\(y=1\\), \\(y=3\\) e vértice \\(V=(-1,2)\\)."
   },
   {
     "objectID": "09_cônicas.html#exemplo-6-parábola",
     "href": "09_cônicas.html#exemplo-6-parábola",
     "title": "Cônicas",
     "section": "Exemplo 6: Parábola",
-    "text": "Exemplo 6: Parábola\n\n\n\\[x = -y^2 - 2y + 8 = -(y+4)(y-2) = -(y+1)^2 + 9.\\] Tomando \\(x\\) como função de \\(y\\), parábola côncava para a esquerda, raízes \\(y=2\\), \\(y=-4\\), vértice \\(V=(9,-1)\\)."
+    "text": "Exemplo 6: Parábola\n\n\n\\[\\begin{align*}\nx &= -y^2 - 2y + 8 = -(y+4)(y-2) \\\\&= -(y+1)^2 + 9.\n\\end{align*}\\] Tomando \\(x\\) como função de \\(y\\), parábola côncava para a esquerda, raízes \\(y=2\\), \\(y=-4\\), vértice \\(V=(9,-1)\\)."
   },
   {
     "objectID": "09_cônicas.html#exemplo-7-elipse",
     "href": "09_cônicas.html#exemplo-7-elipse",
     "title": "Cônicas",
     "section": "Exemplo 7: Elipse",
-    "text": "Exemplo 7: Elipse\n\n\nCompletando os quadrados em \\[\n4x^2 - 8x + y^2 - 4y + 4 = 0 \\Rightarrow (x-1)^2 + \\frac{(y-2)^2}{4} = 1 \\] Elipse centrada em \\(A=(1,2)\\), semieixo horizontal \\(a=1\\) e vertical \\(b=2\\). Está no primeiro quadrante e tangente aos eixos."
+    "text": "Exemplo 7: Elipse\n\n\nCompletando os quadrados em \\[\\begin{align*}\n4x^2 - 8x + y^2 - 4y + 4 &= 0\\\\\n(x-1)^2 + \\frac{(y-2)^2}{4} &= 1\n\\end{align*}\\] Elipse centrada em \\(A=(1,2)\\), semieixo horizontal \\(a=1\\) e vertical \\(b=2\\). Está no primeiro quadrante e tangente aos eixos."
   },
   {
     "objectID": "09_cônicas.html#exemplo-8-elipse",
