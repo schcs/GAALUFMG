@@ -245,6 +245,27 @@
     "text": "Segundo exemplo detalhado\n\\(\\bullet\\) Para representar, no sistema de coordenadas \\(xy\\), o conjunto solução da equação dada nessa questão, basta efetuar uma rotação do gráfico dessa elipse\n\\[\\dfrac{(x-2)^2}{4} + y^2 = 1\\]\nDe modo que os eixos fiquem sobre as retas \\(y=x/2\\) e \\(y=-2x\\). Essa rotação é de aproximadamente \\(26^o\\)."
   },
   {
+    "objectID": "09_cônicas.html#os-autovalores-dizem-tudo",
+    "href": "09_cônicas.html#os-autovalores-dizem-tudo",
+    "title": "Cônicas",
+    "section": "Os autovalores dizem tudo!",
+    "text": "Os autovalores dizem tudo!\nConsidere a equação geral do segundo grau em duas variáveis: \\[\\begin{align*}\n0&=ax^2 + bxy + cy^2 + dx + ey + f\n=\\begin{bmatrix} x &  y  \\end{bmatrix} \\begin{bmatrix} a & b/2 \\\\ b/2 & c \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\end{bmatrix} + \\begin{bmatrix} d & e \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\end{bmatrix} + f\\\\\n&=X^t A X + KX + f\n\\end{align*}\\]\nSeja \\(P\\) a matriz ortogonal que diagonaliza a matriz simétrica \\[\nP^t A P = \\begin{pmatrix} \\lambda_1 & 0 \\\\ 0 & \\lambda_2 \\end{pmatrix}\n\\] Onde \\(\\lambda_1\\) e \\(\\lambda_2\\) são os autovalores de \\(A\\).\nIntroduzindo as novas coordenadas \\(X' = P^t X\\), a equação geral do segundo grau pode ser escrita como \\[\n0= \\begin{bmatrix} x' & y'\\end{bmatrix} \\begin{pmatrix} \\lambda_1 & 0 \\\\ 0 & \\lambda_2 \\end{pmatrix}\n\\begin{bmatrix} x' \\\\ y' \\end{bmatrix} + K P X' + f=\\lambda_1 {x'}^2 + \\lambda_2 {y'}^2 + d'x'+ e'y'+ f'.\n\\]"
+  },
+  {
+    "objectID": "09_cônicas.html#os-autovalores-dizem-tudo-1",
+    "href": "09_cônicas.html#os-autovalores-dizem-tudo-1",
+    "title": "Cônicas",
+    "section": "Os autovalores dizem tudo!",
+    "text": "Os autovalores dizem tudo!\nIntroduzindo as novas coordenadas \\(X' = P^t X\\), a equação geral do segundo grau pode ser escrita como \\[\n0= \\begin{bmatrix} x' & y'\\end{bmatrix} \\begin{pmatrix} \\lambda_1 & 0 \\\\ 0 & \\lambda_2 \\end{pmatrix}\n\\begin{bmatrix} x' \\\\ y' \\end{bmatrix} + K P X' + f=\\lambda_1 {x'}^2 + \\lambda_2 {y'}^2 + d'x'+ e'y'+ f'.\n\\] onde \\(\\lambda_1\\) e \\(\\lambda_2\\) são os autovalores de \\(A\\).\nDependendo dos sinais de \\(\\lambda_1\\) e \\(\\lambda_2\\), a equação acima representa diferentes seções cônicas:\n\nSe \\(\\lambda_1&gt;0\\) e \\(\\lambda_2&gt;0\\): elipse.\nSe \\(\\lambda_1&lt;0\\) e \\(\\lambda_2&lt;0\\): elipse.\nSe \\(\\lambda_1&gt;0\\) e \\(\\lambda_2&lt;0\\): hipérbole.\nSe \\(\\lambda_1&lt;0\\) e \\(\\lambda_2&gt;0\\): hipérbole.\nSe \\(\\lambda_1=0\\) ou \\(\\lambda_2=0\\): parábola.\n\nMas tem que cuidado: a equação pode ser degenerada!"
+  },
+  {
+    "objectID": "09_cônicas.html#os-autovalores-dizem-tudo-2",
+    "href": "09_cônicas.html#os-autovalores-dizem-tudo-2",
+    "title": "Cônicas",
+    "section": "Os autovalores dizem tudo!",
+    "text": "Os autovalores dizem tudo!\nObserve que \\[\n\\det A =(\\det P)^{-1}\\cdot \\det P\\cdot \\det A=\\det P^t\\cdot \\det A \\cdot \\det P = \\det D = \\lambda_1 \\lambda_2.\n\\] Portanto o tipo de seção cônica também pode ser determinado pelo sinal do determinante de \\(A\\):\n\nSe \\(\\det A &gt; 0\\): elipse.\nSe \\(\\det A &lt; 0\\): hipérbole.\nSe \\(\\det A = 0\\): parábola.\n\nMas tem que cuidado: a equação pode ser degenerada!\n\nExemplo 1 No exemplo anterior, temos que \\[\n8x^2 - 12xy + 17y^2 - 8\\sqrt{5}x - 4\\sqrt{5}y = 0\n\\] \\(\\det A = \\det \\begin{bmatrix} 8 & -6 \\\\ -6 & 17 \\end{bmatrix} = 8\\cdot 17 - (-6)^2 = 100 &gt; 0\\) e portanto a equação representa uma elipse."
+  },
+  {
     "objectID": "07_Rn.html#o-espaço-mathbbrn-mathbbr2",
     "href": "07_Rn.html#o-espaço-mathbbrn-mathbbr2",
     "title": "O espaço ℝⁿ",

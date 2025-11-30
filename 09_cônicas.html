@@ -139,7 +139,7 @@ UFMG
 </div>
 </div>
 
-  <p class="date">28 de novembro de 2025</p>
+  <p class="date">30 de novembro de 2025</p>
 </section>
 <section id="elipse" class="slide level2">
 <h2>Elipse</h2>
@@ -839,6 +839,54 @@ P = \left[\begin{array}{ccc}
 <figure>
 <p><img data-src="img/09_conicas/fig10b_aula20.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
+</div>
+</section>
+<section id="os-autovalores-dizem-tudo" class="slide level2">
+<h2>Os autovalores dizem tudo!</h2>
+<p>Considere a equação geral do segundo grau em duas variáveis: <span class="math display">\[\begin{align*}
+0&amp;=ax^2 + bxy + cy^2 + dx + ey + f
+=\begin{bmatrix} x &amp;  y  \end{bmatrix} \begin{bmatrix} a &amp; b/2 \\ b/2 &amp; c \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} d &amp; e \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} + f\\
+&amp;=X^t A X + KX + f
+\end{align*}\]</span></p>
+<p>Seja <span class="math inline">\(P\)</span> a matriz ortogonal que diagonaliza a matriz simétrica <span class="math display">\[
+P^t A P = \begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}
+\]</span> Onde <span class="math inline">\(\lambda_1\)</span> e <span class="math inline">\(\lambda_2\)</span> são os autovalores de <span class="math inline">\(A\)</span>.</p>
+<p>Introduzindo as novas coordenadas <span class="math inline">\(X' = P^t X\)</span>, a equação geral do segundo grau pode ser escrita como <span class="math display">\[
+0= \begin{bmatrix} x' &amp; y'\end{bmatrix} \begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}
+\begin{bmatrix} x' \\ y' \end{bmatrix} + K P X' + f=\lambda_1 {x'}^2 + \lambda_2 {y'}^2 + d'x'+ e'y'+ f'.
+\]</span></p>
+</section>
+<section id="os-autovalores-dizem-tudo-1" class="slide level2">
+<h2>Os autovalores dizem tudo!</h2>
+<p>Introduzindo as novas coordenadas <span class="math inline">\(X' = P^t X\)</span>, a equação geral do segundo grau pode ser escrita como <span class="math display">\[
+0= \begin{bmatrix} x' &amp; y'\end{bmatrix} \begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}
+\begin{bmatrix} x' \\ y' \end{bmatrix} + K P X' + f=\lambda_1 {x'}^2 + \lambda_2 {y'}^2 + d'x'+ e'y'+ f'.
+\]</span> onde <span class="math inline">\(\lambda_1\)</span> e <span class="math inline">\(\lambda_2\)</span> são os autovalores de <span class="math inline">\(A\)</span>.</p>
+<p>Dependendo dos sinais de <span class="math inline">\(\lambda_1\)</span> e <span class="math inline">\(\lambda_2\)</span>, a equação acima representa diferentes seções cônicas:</p>
+<ol type="1">
+<li>Se <span class="math inline">\(\lambda_1&gt;0\)</span> e <span class="math inline">\(\lambda_2&gt;0\)</span>: elipse.</li>
+<li>Se <span class="math inline">\(\lambda_1&lt;0\)</span> e <span class="math inline">\(\lambda_2&lt;0\)</span>: elipse.</li>
+<li>Se <span class="math inline">\(\lambda_1&gt;0\)</span> e <span class="math inline">\(\lambda_2&lt;0\)</span>: hipérbole.</li>
+<li>Se <span class="math inline">\(\lambda_1&lt;0\)</span> e <span class="math inline">\(\lambda_2&gt;0\)</span>: hipérbole.</li>
+<li>Se <span class="math inline">\(\lambda_1=0\)</span> ou <span class="math inline">\(\lambda_2=0\)</span>: parábola.</li>
+</ol>
+<p>Mas tem que cuidado: a equação pode ser degenerada!</p>
+</section>
+<section id="os-autovalores-dizem-tudo-2" class="slide level2">
+<h2>Os autovalores dizem tudo!</h2>
+<p>Observe que <span class="math display">\[
+\det A =(\det P)^{-1}\cdot \det P\cdot \det A=\det P^t\cdot \det A \cdot \det P = \det D = \lambda_1 \lambda_2.
+\]</span> Portanto o tipo de seção cônica também pode ser determinado pelo sinal do determinante de <span class="math inline">\(A\)</span>:</p>
+<ol type="1">
+<li>Se <span class="math inline">\(\det A &gt; 0\)</span>: elipse.</li>
+<li>Se <span class="math inline">\(\det A &lt; 0\)</span>: hipérbole.</li>
+<li>Se <span class="math inline">\(\det A = 0\)</span>: parábola.</li>
+</ol>
+<p>Mas tem que cuidado: a equação pode ser degenerada!</p>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 1</strong></span> No exemplo anterior, temos que <span class="math display">\[
+8x^2 - 12xy + 17y^2 - 8\sqrt{5}x - 4\sqrt{5}y = 0
+\]</span> <span class="math inline">\(\det A = \det \begin{bmatrix} 8 &amp; -6 \\ -6 &amp; 17 \end{bmatrix} = 8\cdot 17 - (-6)^2 = 100 &gt; 0\)</span> e portanto a equação representa uma elipse.</p>
 </div>
 <!--## Agora é a sua vez
 
