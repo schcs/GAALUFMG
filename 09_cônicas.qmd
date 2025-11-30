@@ -663,6 +663,71 @@ De modo que os eixos fiquem sobre as retas $y=x/2$ e $y=-2x$. Essa rotação é 
 ![](img/09_conicas/fig10b_aula20.png){.nostretch width=60% fig-align="center"}
 
 
+## Os autovalores dizem tudo!
+
+Considere a equação geral do segundo grau em duas variáveis:
+\begin{align*}
+0&=ax^2 + bxy + cy^2 + dx + ey + f 
+=\begin{bmatrix} x &  y  \end{bmatrix} \begin{bmatrix} a & b/2 \\ b/2 & c \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} d & e \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} + f\\
+&=X^t A X + KX + f
+\end{align*}
+
+
+Seja $P$ a matriz ortogonal que diagonaliza a matriz simétrica
+$$
+P^t A P = \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix} 
+$$
+Onde $\lambda_1$ e $\lambda_2$ são os autovalores de $A$.
+
+Introduzindo as novas coordenadas $X' = P^t X$, a equação geral do segundo grau pode ser escrita como
+$$ 
+0= \begin{bmatrix} x' & y'\end{bmatrix} \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix} 
+\begin{bmatrix} x' \\ y' \end{bmatrix} + K P X' + f=\lambda_1 {x'}^2 + \lambda_2 {y'}^2 + d'x'+ e'y'+ f'.
+$$ 
+
+## Os autovalores dizem tudo!
+
+Introduzindo as novas coordenadas $X' = P^t X$, a equação geral do segundo grau pode ser escrita como
+$$ 
+0= \begin{bmatrix} x' & y'\end{bmatrix} \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix} 
+\begin{bmatrix} x' \\ y' \end{bmatrix} + K P X' + f=\lambda_1 {x'}^2 + \lambda_2 {y'}^2 + d'x'+ e'y'+ f'.
+$$ 
+onde $\lambda_1$ e $\lambda_2$ são os autovalores de $A$.
+
+Dependendo dos sinais de $\lambda_1$ e $\lambda_2$, a equação acima representa diferentes seções cônicas:
+
+1. Se $\lambda_1>0$ e $\lambda_2>0$: elipse.
+2. Se $\lambda_1<0$ e $\lambda_2<0$: elipse. 
+2. Se $\lambda_1>0$ e $\lambda_2<0$: hipérbole.
+3. Se $\lambda_1<0$ e $\lambda_2>0$: hipérbole.
+4. Se $\lambda_1=0$ ou $\lambda_2=0$: parábola.
+
+Mas tem que cuidado: a equação pode ser degenerada!
+
+
+## Os autovalores dizem tudo!
+
+Observe que 
+$$
+\det A =(\det P)^{-1}\cdot \det P\cdot \det A=\det P^t\cdot \det A \cdot \det P = \det D = \lambda_1 \lambda_2.
+$$
+Portanto o tipo de seção cônica também pode ser determinado pelo sinal do determinante de $A$:
+
+1. Se $\det A > 0$: elipse.
+2. Se $\det A < 0$: hipérbole.
+3. Se $\det A = 0$: parábola.
+
+Mas tem que cuidado: a equação pode ser degenerada!
+
+:::{#exm-}
+No exemplo anterior, temos que 
+$$
+8x^2 - 12xy + 17y^2 - 8\sqrt{5}x - 4\sqrt{5}y = 0
+$$
+$\det A = \det \begin{bmatrix} 8 & -6 \\ -6 & 17 \end{bmatrix} = 8\cdot 17 - (-6)^2 = 100 > 0$ e portanto a equação representa uma elipse. 
+:::
+
+
 <!--## Agora é a sua vez
 
 **Exercícios.** Quando necessário, use a teoria de diagonalização para simplificar cada uma das equações a seguir. Faça um esboço do conjunto solução.
