@@ -481,7 +481,7 @@ $$ax^2 + bxy + cy^2 + dx + ey = f$$
 Esta equação pode ser escrita na forma
 
 $$\left[\begin{array}{cc} x & y \end{array}\right]
-\left[\begin{array}{cc} a & \frac{b}{2} \\ \frac{b}{2} & c \end{array}\right]
+\left[\begin{array}{cc} a & b/2 \\ b/2 & c \end{array}\right]
 \left[\begin{array}{c} x \\ y \end{array}\right]\ +\ 
 \left[\begin{array}{cc} d & e \end{array}\right]
 \left[\begin{array}{c} x \\ y \end{array}\right]\ =\ f$$
@@ -496,14 +496,14 @@ $$ax^2 + bxy + cy^2 + dx + ey = f$$
 Pode ser escrita na forma
 
 $$\left[\begin{array}{cc} x & y \end{array}\right]
-\left[\begin{array}{cc} a & \frac{b}{2} \\ \frac{b}{2} & c \end{array}\right]
+\left[\begin{array}{cc} a & b/2 \\ b/2 & c \end{array}\right]
 \left[\begin{array}{c} x \\ y \end{array}\right]\ +\ 
 \left[\begin{array}{cc} d & e \end{array}\right]
 \left[\begin{array}{c} x \\ y \end{array}\right]\ =\ f$$
 
 Chamando
 
-$$A = \left[\begin{array}{cc} a & \frac{b}{2} \\ \frac{b}{2} & c \end{array}\right] \ \ \ \ \ 
+$$A = \left[\begin{array}{cc} a & b/2 \\ b/2 & c \end{array}\right] \ \ \ \ \ 
 X = \left[\begin{array}{c} x \\ y \end{array}\right]  \ \ \ \ \ 
 K = \left[\begin{array}{cc} d & e \end{array}\right]$$
 
